@@ -1,0 +1,236 @@
+{
+  "id": "bigfive25",
+  "name_en": "Big Five Personality Inventory (25 items)",
+  "name_ar": "مقياس السمات الخمس الكبرى للشخصية (٢٥ عبارة)",
+  "scale": [
+    {
+      "value": 1,
+      "label_en": "Strongly disagree",
+      "label_ar": "لا أوافق بشدة"
+    },
+    {
+      "value": 2,
+      "label_en": "Disagree",
+      "label_ar": "لا أوافق"
+    },
+    {
+      "value": 3,
+      "label_en": "Neutral",
+      "label_ar": "محايد"
+    },
+    {
+      "value": 4,
+      "label_en": "Agree",
+      "label_ar": "أوافق"
+    },
+    {
+      "value": 5,
+      "label_en": "Strongly agree",
+      "label_ar": "أوافق بشدة"
+    }
+  ],
+  "dimensions": [
+    {
+      "code": "O",
+      "name_en": "Openness",
+      "name_ar": "الانفتاح على التجربة"
+    },
+    {
+      "code": "C",
+      "name_en": "Conscientiousness",
+      "name_ar": "يقظة الضمير"
+    },
+    {
+      "code": "E",
+      "name_en": "Extraversion",
+      "name_ar": "الانبساط"
+    },
+    {
+      "code": "A",
+      "name_en": "Agreeableness",
+      "name_ar": "المقبولية"
+    },
+    {
+      "code": "N",
+      "name_en": "Neuroticism",
+      "name_ar": "العصابية"
+    }
+  ],
+  "items": [
+    {
+      "id": "bigfive_01",
+      "dimension": "O",
+      "reverse": false,
+      "text_en": "I have a vivid imagination and many ideas.",
+      "text_ar": "لديّ خيال واسع وأفكار كثيرة."
+    },
+    {
+      "id": "bigfive_02",
+      "dimension": "O",
+      "reverse": false,
+      "text_en": "I enjoy learning about subjects far outside my field.",
+      "text_ar": "أستمتع بالتعلّم عن مجالات بعيدة تماماً عن تخصصي."
+    },
+    {
+      "id": "bigfive_03",
+      "dimension": "O",
+      "reverse": false,
+      "text_en": "I like trying things I have never done before.",
+      "text_ar": "أحب تجربة أشياء لم أقم بها من قبل."
+    },
+    {
+      "id": "bigfive_04",
+      "dimension": "O",
+      "reverse": true,
+      "text_en": "I prefer familiar routines to new experiences.",
+      "text_ar": "أفضّل الروتين المألوف على التجارب الجديدة."
+    },
+    {
+      "id": "bigfive_05",
+      "dimension": "O",
+      "reverse": false,
+      "text_en": "Abstract or philosophical questions interest me.",
+      "text_ar": "تثير اهتمامي الأسئلة المجرّدة أو الفلسفية."
+    },
+    {
+      "id": "bigfive_06",
+      "dimension": "C",
+      "reverse": false,
+      "text_en": "I complete my tasks before their deadline.",
+      "text_ar": "أنجز مهامي قبل موعدها النهائي."
+    },
+    {
+      "id": "bigfive_07",
+      "dimension": "C",
+      "reverse": false,
+      "text_en": "I plan my work carefully before starting it.",
+      "text_ar": "أخطّط لعملي بعناية قبل البدء فيه."
+    },
+    {
+      "id": "bigfive_08",
+      "dimension": "C",
+      "reverse": true,
+      "text_en": "I often leave my belongings and work in a mess.",
+      "text_ar": "كثيراً ما أترك أغراضي وأعمالي في حالة فوضى."
+    },
+    {
+      "id": "bigfive_09",
+      "dimension": "C",
+      "reverse": false,
+      "text_en": "I pay close attention to details in what I produce.",
+      "text_ar": "أولي اهتماماً دقيقاً للتفاصيل فيما أنتجه."
+    },
+    {
+      "id": "bigfive_10",
+      "dimension": "C",
+      "reverse": true,
+      "text_en": "I put off difficult tasks until the last moment.",
+      "text_ar": "أؤجّل المهام الصعبة حتى اللحظة الأخيرة."
+    },
+    {
+      "id": "bigfive_11",
+      "dimension": "E",
+      "reverse": false,
+      "text_en": "I feel comfortable starting a conversation with strangers.",
+      "text_ar": "أشعر بالارتياح في بدء حديث مع أشخاص لا أعرفهم."
+    },
+    {
+      "id": "bigfive_12",
+      "dimension": "E",
+      "reverse": false,
+      "text_en": "I gain energy from being around other people.",
+      "text_ar": "أكتسب طاقة من وجودي بين الناس."
+    },
+    {
+      "id": "bigfive_13",
+      "dimension": "E",
+      "reverse": true,
+      "text_en": "I prefer to stay in the background in a group.",
+      "text_ar": "أفضّل البقاء في الخلفية داخل المجموعة."
+    },
+    {
+      "id": "bigfive_14",
+      "dimension": "E",
+      "reverse": false,
+      "text_en": "I enjoy being the person who speaks for the group.",
+      "text_ar": "أستمتع بأن أكون الشخص الذي يتحدث باسم المجموعة."
+    },
+    {
+      "id": "bigfive_15",
+      "dimension": "E",
+      "reverse": true,
+      "text_en": "Large social gatherings tire me quickly.",
+      "text_ar": "تُتعبني التجمعات الاجتماعية الكبيرة بسرعة."
+    },
+    {
+      "id": "bigfive_16",
+      "dimension": "A",
+      "reverse": false,
+      "text_en": "I try to understand a situation from the other person's side.",
+      "text_ar": "أحاول فهم الموقف من وجهة نظر الطرف الآخر."
+    },
+    {
+      "id": "bigfive_17",
+      "dimension": "A",
+      "reverse": false,
+      "text_en": "I go out of my way to help someone in difficulty.",
+      "text_ar": "أبذل جهداً إضافياً لمساعدة من يمر بضائقة."
+    },
+    {
+      "id": "bigfive_18",
+      "dimension": "A",
+      "reverse": true,
+      "text_en": "I am often critical of the way other people work.",
+      "text_ar": "كثيراً ما أنتقد طريقة عمل الآخرين."
+    },
+    {
+      "id": "bigfive_19",
+      "dimension": "A",
+      "reverse": false,
+      "text_en": "I prefer cooperation over competition.",
+      "text_ar": "أفضّل التعاون على المنافسة."
+    },
+    {
+      "id": "bigfive_20",
+      "dimension": "A",
+      "reverse": false,
+      "text_en": "I trust that most people mean well.",
+      "text_ar": "أثق بأن معظم الناس حسنو النية."
+    },
+    {
+      "id": "bigfive_21",
+      "dimension": "N",
+      "reverse": false,
+      "text_en": "I worry about things more than most people do.",
+      "text_ar": "أقلق بشأن الأمور أكثر من معظم الناس."
+    },
+    {
+      "id": "bigfive_22",
+      "dimension": "N",
+      "reverse": false,
+      "text_en": "I become tense before an important exam or presentation.",
+      "text_ar": "أشعر بالتوتر قبل اختبار مهم أو عرض تقديمي."
+    },
+    {
+      "id": "bigfive_23",
+      "dimension": "N",
+      "reverse": true,
+      "text_en": "I stay calm when a plan suddenly changes.",
+      "text_ar": "أبقى هادئاً عندما تتغيّر الخطة فجأة."
+    },
+    {
+      "id": "bigfive_24",
+      "dimension": "N",
+      "reverse": false,
+      "text_en": "My mood changes quite easily.",
+      "text_ar": "تتغيّر حالتي المزاجية بسهولة."
+    },
+    {
+      "id": "bigfive_25",
+      "dimension": "N",
+      "reverse": true,
+      "text_en": "I recover quickly after something goes wrong.",
+      "text_ar": "أتعافى بسرعة بعد حدوث أمر سيّئ."
+    }
+  ]
+}

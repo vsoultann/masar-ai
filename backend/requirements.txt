@@ -1,0 +1,40 @@
+# --- web framework ---------------------------------------------------------
+fastapi==0.118.0
+uvicorn[standard]==0.37.0
+pydantic==2.11.7
+pydantic-settings==2.10.1
+python-multipart==0.0.20
+
+# --- database --------------------------------------------------------------
+SQLAlchemy==2.0.43
+alembic==1.16.4
+psycopg[binary]==3.2.9 ; sys_platform != "win32"
+
+# --- auth ------------------------------------------------------------------
+python-jose[cryptography]==3.5.0
+passlib==1.7.4
+bcrypt==4.2.1
+
+# --- machine learning ------------------------------------------------------
+scikit-learn==1.7.2
+pandas==2.3.2
+numpy==2.3.3
+joblib==1.5.2
+matplotlib==3.10.6
+
+# --- PDF report (Arabic shaping) ------------------------------------------
+reportlab==4.4.4
+arabic-reshaper==3.0.0
+python-bidi==0.6.6
+
+# --- AI mentor (optional; the offline engine runs without it) --------------
+anthropic==0.69.0
+
+# --- misc ------------------------------------------------------------------
+httpx==0.28.1
+python-dotenv==1.1.1
+
+# --- tests / tooling -------------------------------------------------------
+pytest==8.4.2
+pytest-cov==6.2.1
+ruff==0.13.1
