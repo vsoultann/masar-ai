@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Theme: derived from the UAE flag (green, red, black, white) plus a
+   desert-sand neutral and a deep gulf blue for surfaces.
+   Red is an accent only -- it is used for the "very high demand" badge and
+   destructive actions, never as a large surface.
+--------------------------------------------------------------------------- */
+@theme {
+  --color-uae-green: #00732f;
+  --color-uae-green-600: #005f27;
+  --color-uae-green-400: #2e9257;
+  --color-uae-red: #ff0000;
+  --color-uae-red-muted: #c81e1e;
+  --color-sand: #e8dcc4;
+  --color-sand-light: #f6f1e6;
+  --color-gulf: #0b3d5c;
+  --color-gulf-light: #14567e;
+
+  --font-sans: var(--font-latin), "Inter", system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  --font-arabic: var(--font-arabic), "Tajawal", "Noto Naskh Arabic", system-ui,
+    sans-serif;
+
+  --radius-card: 0.875rem;
+}
+
+/* The theme is an explicit choice stored on <html data-theme>, not a media
+   query, so the toggle works regardless of the operating-system setting. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --surface: #ffffff;
+  --surface-2: #f8f7f3;
+  --surface-3: #f1efe8;
+  --ink: #111827;
+  --ink-2: #4b5563;
+  --ink-3: #6b7280;
+  --line: #e5e7eb;
+  --brand: #00732f;
+  --brand-ink: #ffffff;
+  --accent: #0b3d5c;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --surface: #0c1418;
+  --surface-2: #121e24;
+  --surface-3: #182a32;
+  --ink: #f1f5f4;
+  --ink-2: #b6c4c2;
+  --ink-3: #8b9a98;
+  --line: #22343c;
+  --brand: #2e9257;
+  --brand-ink: #05140a;
+  --accent: #7cc4e8;
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Arabic gets its own face and a slightly looser line height: Naskh forms sit
+   taller than Latin and look cramped at the Latin default. */
+html[lang="ar"] body {
+  font-family: var(--font-arabic);
+  line-height: 1.85;
+}
+
+/* --------------------------------------------------------------------------
+   Focus: a single visible ring everywhere. Removing outlines without a
+   replacement is the most common accessibility failure in dashboards.
+-------------------------------------------------------------------------- */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .card {
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+  }
+
+  .field {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+    padding: 0.55rem 0.75rem;
+    color: var(--ink);
+    font-size: 0.9375rem;
+  }
+
+  .field:focus {
+    border-color: var(--brand);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: background-color 120ms ease, opacity 120ms ease;
+  }
+
+  .btn-primary {
+    background: var(--brand);
+    color: var(--brand-ink);
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background: var(--color-uae-green-600);
+  }
+
+  [data-theme="dark"] .btn-primary:hover:not(:disabled) {
+    background: var(--color-uae-green-400);
+    opacity: 0.9;
+  }
+
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--ink);
+  }
+
+  .btn-ghost:hover:not(:disabled) {
+    background: var(--surface-3);
+  }
+
+  .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  .muted {
+    color: var(--ink-2);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   RTL. Logical properties (margin-inline, padding-inline, inset-inline) handle
+   almost everything; these rules cover the cases that cannot be expressed
+   logically -- icons that encode direction, and the Recharts SVG, which is
+   laid out in physical coordinates and must stay LTR inside an RTL page.
+-------------------------------------------------------------------------- */
+[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .recharts-wrapper,
+[dir="rtl"] .recharts-surface {
+  direction: ltr;
+}
+
+/* Numeric cells stay left-to-right even in Arabic so that digits, ranges and
+   percentages are not visually reordered. */
+.ltr-nums {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

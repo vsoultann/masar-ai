@@ -1,0 +1,185 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+
+import { useAuth } from "@/lib/auth";
+import { switchLocalePath, type Locale } from "@/lib/i18n";
+import { useLocale } from "@/lib/locale-context";
+
+function useTheme() {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    const current = document.documentElement.dataset.theme;
+    setTheme(current === "dark" ? "dark" : "light");
+  }, []);
+
+  const toggle = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem("masar.theme", next);
+    } catch {
+      /* storage can be unavailable; the toggle still works for this session */
+    }
+    setTheme(next);
+  };
+
+  return { theme, toggle };
+}
+
+export default function Header() {
+  const { locale, t } = useLocale();
+  const { user, logout } = useAuth();
+  const pathname = usePathname();
+  const router = useRouter();
+  const { theme, toggle } = useTheme();
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => setOpen(false), [pathname]);
+
+  const other = t.meta.otherLocale as Locale;
+  const links: { href: string; label: string }[] = [
+    { href: `/${locale}`, label: t.nav.home },
+    { href: `/${locale}/careers`, label: t.nav.careers },
+    { href: `/${locale}/about`, label: t.nav.about },
+  ];
+  if (user) links.push({ href: `/${locale}/dashboard`, label: t.nav.dashboard });
+  if (user?.role === "admin") links.push({ href: `/${locale}/admin`, label: t.nav.admin });
+
+  const isActive = (href: string) =>
+    href === `/${locale}` ? pathname === href : pathname.startsWith(href);
+
+  return (
+    <header className="sticky top-0 z-40 border-b bg-[var(--surface)]/95 backdrop-blur">
+      <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6">
+        <Link href={`/${locale}`} className="flex items-center gap-2.5 shrink-0">
+          <span
+            aria-hidden="true"
+            className="grid h-9 w-9 place-items-center rounded-lg bg-[var(--brand)] text-[var(--brand-ink)] font-bold"
+          >
+            م
+          </span>
+          <span className="flex flex-col leading-tight">
+            <span className="text-base font-bold">{t.brand.name}</span>
+            <span className="hidden text-[11px] muted sm:block">{t.brand.tagline}</span>
+          </span>
+        </Link>
+
+        <nav aria-label={t.nav.menu} className="hidden md:flex items-center gap-1 mx-auto">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              aria-current={isActive(link.href) ? "page" : undefined}
+              className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                isActive(link.href)
+                  ? "bg-[var(--surface-3)] text-[var(--ink)]"
+                  : "muted hover:bg-[var(--surface-2)]"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="ms-auto flex items-center gap-2 md:ms-0">
+          <button
+            type="button"
+            onClick={toggle}
+            aria-label={t.nav.toggleTheme}
+            className="btn btn-ghost !px-2.5 !py-2"
+          >
+            <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => router.push(switchLocalePath(pathname, other))}
+            aria-label={t.nav.toggleLanguage}
+            className="btn btn-ghost !px-3 !py-2 text-sm"
+            lang={other}
+          >
+            {t.meta.other}
+          </button>
+
+          {user ? (
+            <div className="hidden sm:flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  logout();
+                  router.push(`/${locale}`);
+                }}
+                className="btn btn-ghost !py-2 text-sm"
+              >
+                {t.nav.logout}
+              </button>
+            </div>
+          ) : (
+            <div className="hidden sm:flex items-center gap-2">
+              <Link href={`/${locale}/login`} className="btn btn-ghost !py-2 text-sm">
+                {t.nav.login}
+              </Link>
+              <Link href={`/${locale}/register`} className="btn btn-primary !py-2 text-sm">
+                {t.nav.register}
+              </Link>
+            </div>
+          )}
+
+          <button
+            type="button"
+            onClick={() => setOpen((value) => !value)}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            aria-label={t.nav.menu}
+            className="btn btn-ghost !px-2.5 !py-2 md:hidden"
+          >
+            <span aria-hidden="true">{open ? "✕" : "☰"}</span>
+          </button>
+        </div>
+      </div>
+
+      {open && (
+        <nav id="mobile-nav" aria-label={t.nav.menu} className="border-t md:hidden">
+          <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-[var(--surface-2)]"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="mt-2 flex gap-2 border-t pt-3">
+              {user ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    logout();
+                    router.push(`/${locale}`);
+                  }}
+                  className="btn btn-ghost flex-1"
+                >
+                  {t.nav.logout}
+                </button>
+              ) : (
+                <>
+                  <Link href={`/${locale}/login`} className="btn btn-ghost flex-1">
+                    {t.nav.login}
+                  </Link>
+                  <Link href={`/${locale}/register`} className="btn btn-primary flex-1">
+                    {t.nav.register}
+                  </Link>
+                </>
+              )}
+            </div>
+          </div>
+        </nav>
+      )}
+    </header>
+  );
+}
