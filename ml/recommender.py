@@ -182,13 +182,30 @@ class CareerRecommender:
         }
 
     def _confidence(self, item: dict, all_scored: list[dict]) -> str:
-        """High / moderate / low, from how far ahead this match is."""
+        """How much to trust this individual match: high / moderate / low.
+
+        Two independent signals have to agree before we say "high":
+
+        * ``sector_probability`` -- how sure the classifier is about the sector,
+          expressed as a multiple of chance rather than as an absolute.  With
+          15 sectors chance is 1/15 = 0.067, and a fixed absolute threshold
+          would silently change meaning if a sector were ever added or removed.
+        * ``separation`` -- how far this match sits above the average match
+          across all 60 careers.  A student whose scores are flat across the
+          catalog gets a low label no matter how confident the classifier is,
+          because the ranking itself is not discriminating.
+
+        An earlier version compared the top match against the tenth, which
+        collapsed whenever the top ten came from one sector and were therefore
+        all close together -- exactly the case where confidence should be high.
+        """
         top_probability = item["components"]["sector_probability"]
-        tenth = all_scored[min(9, len(all_scored) - 1)]["match"]
-        margin = item["match"] - tenth
-        if top_probability >= 0.30 and margin >= 4.0:
+        chance = 1.0 / max(1, len(self.labels))
+        mean_match = sum(entry["match"] for entry in all_scored) / len(all_scored)
+        separation = item["match"] - mean_match
+        if top_probability >= 3.0 * chance and separation >= 8.0:
             return "high"
-        if top_probability >= 0.15 or margin >= 2.0:
+        if top_probability >= 1.5 * chance or separation >= 4.0:
             return "moderate"
         return "low"
 
