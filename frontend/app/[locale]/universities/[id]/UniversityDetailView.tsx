@@ -137,6 +137,7 @@ export default function UniversityDetailView() {
           alt={university.name[locale]}
           seed={university.id}
           aspect="16 / 10"
+          art={{ kind: "campus", type: university.type }}
         />
         <UniversityMap universities={[university]} you={you} height={260} />
       </div>

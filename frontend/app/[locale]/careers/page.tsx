@@ -1,7 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { Suspense, useEffect, useMemo, useState } from "react";
 
 import CareerCard from "@/components/CareerCard";
 import { EmptyState, ErrorBox, Skeleton } from "@/components/ui";
@@ -18,15 +19,17 @@ import type { CareerSummary, Demand, Sector } from "@/lib/types";
  * debouncing the search would only add latency — the whole list is already in
  * the browser, and there is no request to throttle.
  */
-export default function CareersPage() {
+function CareersView() {
   const { locale, t } = useLocale();
+  const searchParams = useSearchParams();
 
   const [careers, setCareers] = useState<CareerSummary[] | null>(null);
   const [sectors, setSectors] = useState<Sector[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   const [query, setQuery] = useState("");
-  const [sector, setSector] = useState("");
+  // Seeded from ?sector= so the landing page's sector tiles deep-link here.
+  const [sector, setSector] = useState(searchParams?.get("sector") ?? "");
   const [demand, setDemand] = useState("");
 
   useEffect(() => {
@@ -176,5 +179,17 @@ export default function CareersPage() {
         </motion.div>
       )}
     </div>
+  );
+}
+
+/**
+ * useSearchParams opts a route out of static prerendering unless it is inside a
+ * Suspense boundary, and the export fails outright without one.
+ */
+export default function CareersPage() {
+  return (
+    <Suspense fallback={<div className="mx-auto max-w-6xl px-4 py-16" />}>
+      <CareersView />
+    </Suspense>
   );
 }

@@ -161,23 +161,60 @@ describe("assessment wizard", () => {
     expect(await screen.findByText("Statement 1")).toBeInTheDocument();
   });
 
-  it("blocks submission until every statement is answered", async () => {
+  it("shows one statement at a time and advances after an answer", async () => {
     const user = userEvent.setup();
     seed({ completedSteps: 2 });
     renderWizard();
 
+    // Only the current statement is on screen, not all thirty.
+    expect(await screen.findByText("Statement 1")).toBeInTheDocument();
+    expect(screen.queryByText("Statement 2")).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("radio", { name: "Neutral" }));
+
+    // Selecting auto-advances, so statement 2 replaces statement 1.
+    expect(await screen.findByText("Statement 2")).toBeInTheDocument();
+    expect(screen.queryByText("Statement 1")).not.toBeInTheDocument();
+  });
+
+  it("answers from the keyboard: arrows move, digits pick, Backspace goes back", async () => {
+    const user = userEvent.setup();
+    seed({ completedSteps: 2 });
+    renderWizard();
     await screen.findByText("Statement 1");
+
+    // "2" picks the second scale point directly and advances.
+    await user.keyboard("2");
+    expect(await screen.findByText("Statement 2")).toBeInTheDocument();
+
+    // Backspace returns to the previous statement, with its answer intact.
+    await user.keyboard("{Backspace}");
+    expect(await screen.findByText("Statement 1")).toBeInTheDocument();
+    const scale = useProfile.getState().profile?.riasecAnswers ?? {};
+    expect(scale.riasec_1).toBe(3);   // the fixture's second point
+
+    // Arrow + Enter selects the highlighted option.
+    await user.keyboard("{ArrowRight}{Enter}");
+    await waitFor(() => {
+      expect(useProfile.getState().profile?.riasecAnswers.riasec_1).toBe(5);
+    });
+  });
+
+  it("keeps the finish button disabled until every statement is answered", async () => {
+    const user = userEvent.setup();
+    // 29 of 30 answered: the flow resumes on the one remaining gap.
+    const answers = Object.fromEntries(
+      Array.from({ length: 29 }, (_, i) => [`riasec_${i + 1}`, 3]),
+    );
+    seed({ completedSteps: 2, riasecAnswers: answers });
+    renderWizard();
+
+    expect(await screen.findByText("Statement 30")).toBeInTheDocument();
     const submit = screen.getByRole("button", { name: /save and continue/i });
     expect(submit).toBeDisabled();
 
-    await user.click(screen.getAllByLabelText("Neutral")[0]);
-    expect(
-      screen.getByText(
-        (_, element) =>
-          element?.tagName === "P" && element.textContent?.trim() === "1 / 30 answered",
-      ),
-    ).toBeInTheDocument();
-    expect(submit).toBeDisabled();
+    await user.click(screen.getByRole("radio", { name: "Neutral" }));
+    await waitFor(() => expect(submit).toBeEnabled());
   });
 
   it("never moves completedSteps backwards when an earlier step is revisited", async () => {

@@ -38,6 +38,7 @@ export default function CareerCard({
           seed={career.id}
           aspect="16 / 9"
           rounded={false}
+          art={{ kind: "career", sector: career.sector }}
         />
         <div className="p-4">
           <div className="flex items-start justify-between gap-3">

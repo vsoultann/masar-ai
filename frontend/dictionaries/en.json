@@ -75,7 +75,25 @@
     "teamSubtitle": "Graduation project, 2026.",
     "ctaFinalTitle": "Your path starts with fifteen minutes",
     "ctaFinalBody": "No cost, no commitment. You can stop after any step and come back later.",
-    "viewSector": "View careers"
+    "viewSector": "View careers",
+    "demoTitle": "Try it in three questions",
+    "demoSubtitle": "This runs the real model — the same one behind the full assessment.",
+    "demoQuestions": [
+      "I would rather understand why something works than organise a team around it.",
+      "I would rather build or repair something physical than design how it looks.",
+      "I would rather lead and persuade people than follow a careful procedure."
+    ],
+    "demoYes": "That's me",
+    "demoNo": "Not really",
+    "demoResult": "A taste of your match",
+    "demoAgain": "Try again",
+    "heroLine1": "Your path, guided by data.",
+    "heroLine2": "مسارك، بإرشاد البيانات.",
+    "statsInstitutions": "institutions",
+    "statsLanguages": "languages",
+    "statsMentor": "mentor",
+    "exploreCareers": "Explore all careers",
+    "exploreUniversities": "Browse institutions"
   },
   "about": {
     "title": "About Masar AI",
@@ -159,7 +177,9 @@
     "answered": "answered",
     "remaining": "remaining",
     "mustAnswerAll": "Please answer every statement before continuing.",
-    "questionOf": "Question"
+    "questionOf": "Question",
+    "keyboardHint": "Use ← → to move, 1–5 to choose, Enter to confirm, Backspace to go back.",
+    "firstUnanswered": "Jump to first unanswered"
   },
   "dashboard": {
     "title": "Your dashboard",

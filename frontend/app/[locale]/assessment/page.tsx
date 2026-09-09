@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import LocationPicker from "@/components/LocationPicker";
+import QuestionnaireFlow from "@/components/QuestionnaireFlow";
 import { ErrorBox, Loading } from "@/components/ui";
 import { loadBigFive, loadRiasec } from "@/lib/data/client";
 import { localiseDigits } from "@/lib/i18n";
@@ -107,6 +108,26 @@ export default function AssessmentPage() {
     // Resume where the student stopped rather than restarting at step 1.
     setStep(Math.min(TOTAL_STEPS, (stored.completedSteps ?? 0) + 1));
   }, [hydrated, profileId]);
+
+  /**
+   * Persist questionnaire answers as they are given, not only on submit.
+   *
+   * The brief asks for per-step resumability, but a thirty-item questionnaire
+   * that only saves at the end means closing the tab on item 29 throws away
+   * twenty-nine answers — and the flow's "resume at the first unanswered item"
+   * would be a promise it could not keep. Writing each answer through makes
+   * that promise true. `completedSteps` is untouched here: the step is not
+   * complete until it is submitted.
+   */
+  useEffect(() => {
+    if (!hydrated || Object.keys(riasecAnswers).length === 0) return;
+    updateProfile({ riasecAnswers });
+  }, [riasecAnswers, hydrated, updateProfile]);
+
+  useEffect(() => {
+    if (!hydrated || Object.keys(bigfiveAnswers).length === 0) return;
+    updateProfile({ bigfiveAnswers });
+  }, [bigfiveAnswers, hydrated, updateProfile]);
 
   /**
    * Applies one step's data and advances.
@@ -437,7 +458,7 @@ export default function AssessmentPage() {
 
       {/* --------------------------------------------------------- steps 3 & 4 */}
       {step === 3 && riasec && (
-        <QuestionnaireStep
+        <QuestionnaireFlow
           questionnaire={riasec}
           answers={riasecAnswers}
           setAnswers={setRiasecAnswers}
@@ -461,7 +482,7 @@ export default function AssessmentPage() {
       )}
 
       {step === 4 && bigfive && (
-        <QuestionnaireStep
+        <QuestionnaireFlow
           questionnaire={bigfive}
           answers={bigfiveAnswers}
           setAnswers={setBigfiveAnswers}
@@ -483,113 +504,5 @@ export default function AssessmentPage() {
         />
       )}
     </div>
-  );
-}
-
-/** Steps 3 and 4 differ only in their content, so they share one component. */
-function QuestionnaireStep({
-  questionnaire,
-  answers,
-  setAnswers,
-  legend,
-  help,
-  complete,
-  busy,
-  onBack,
-  onSubmit,
-  submitLabel,
-}: {
-  questionnaire: Questionnaire;
-  answers: Record<string, number>;
-  setAnswers: (updater: (current: Record<string, number>) => Record<string, number>) => void;
-  legend: string;
-  help: string;
-  complete: boolean;
-  busy: boolean;
-  onBack: () => void;
-  onSubmit: () => void;
-  submitLabel: string;
-}) {
-  const { locale, t, pick } = useLocale();
-  const answered = Object.keys(answers).length;
-  const total = questionnaire.items.length;
-
-  return (
-    <form
-      className="card mt-6 space-y-5 p-6"
-      onSubmit={(event) => {
-        event.preventDefault();
-        onSubmit();
-      }}
-    >
-      <fieldset>
-        <legend className="text-sm font-bold">{legend}</legend>
-        <p className="mt-1 text-xs muted">{help}</p>
-
-        <div className="sticky top-16 z-10 -mx-6 mt-4 border-y bg-[var(--surface-2)] px-6 py-2.5">
-          <p className="text-xs font-medium ltr-nums" aria-live="polite">
-            {localiseDigits(answered, locale)} / {localiseDigits(total, locale)}{" "}
-            {t.wizard.answered}
-          </p>
-          <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-[var(--surface-3)]">
-            <div
-              className="h-full rounded-full bg-[var(--brand)] transition-[width] duration-300"
-              style={{ width: `${(answered / total) * 100}%` }}
-            />
-          </div>
-        </div>
-
-        <ol className="mt-5 space-y-5">
-          {questionnaire.items.map((item, index) => (
-            <li key={item.id}>
-              <fieldset>
-                <legend className="text-sm leading-relaxed">
-                  <span className="muted ltr-nums">{localiseDigits(index + 1, locale)}. </span>
-                  {pick(item, "text")}
-                </legend>
-                <div className="mt-2.5 flex flex-wrap gap-1.5">
-                  {questionnaire.scale.map((point) => {
-                    const selected = answers[item.id] === point.value;
-                    return (
-                      <label
-                        key={point.value}
-                        className={`cursor-pointer rounded-lg border px-3 py-1.5 text-xs transition-colors ${
-                          selected
-                            ? "border-[var(--brand)] bg-[var(--brand)] font-semibold text-[var(--brand-ink)]"
-                            : "hover:bg-[var(--surface-3)]"
-                        }`}
-                      >
-                        <input
-                          type="radio"
-                          name={item.id}
-                          value={point.value}
-                          checked={selected}
-                          onChange={() =>
-                            setAnswers((current) => ({ ...current, [item.id]: point.value }))
-                          }
-                          className="sr-only"
-                        />
-                        {pick(point, "label")}
-                      </label>
-                    );
-                  })}
-                </div>
-              </fieldset>
-            </li>
-          ))}
-        </ol>
-      </fieldset>
-
-      {!complete && <p className="text-xs muted">{t.wizard.mustAnswerAll}</p>}
-
-      <div className="flex gap-3">
-        <button type="button" onClick={onBack} className="btn btn-ghost">
-          {t.wizard.back}
-        </button>
-        <button type="submit" disabled={busy || !complete} className="btn btn-primary flex-1">
-          {busy ? t.wizard.saving : submitLabel}
-        </button>
-      </div>
-    </form>
   );
 }

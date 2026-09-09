@@ -171,11 +171,15 @@ export default function CareerDetailView() {
         </motion.div>
       </motion.header>
 
-      {career.media.hero && (
-        <div className="mt-6">
-          <SmartImage src={career.media.hero} alt={career.title[locale]} seed={career.id} aspect="21 / 9" />
-        </div>
-      )}
+      <div className="mt-6">
+        <SmartImage
+          src={career.media.hero}
+          alt={career.title[locale]}
+          seed={career.id}
+          aspect="21 / 9"
+          art={{ kind: "career", sector: career.sector }}
+        />
+      </div>
 
       {/* --- salary and trend ------------------------------------------- */}
       <section className="card mt-6 grid gap-5 p-5 sm:grid-cols-[1fr_auto]">

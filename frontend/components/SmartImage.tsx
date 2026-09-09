@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import CampusArt from "@/components/art/CampusArt";
+import CareerArt from "@/components/art/CareerArt";
 import { asset } from "@/lib/paths";
 
 /**
@@ -44,6 +46,11 @@ function initialsOf(label: string): string {
   return (words[0][0] + words[words.length - 1][0]).toUpperCase();
 }
 
+/** Generated artwork to draw when there is no photograph. */
+export type ArtSpec =
+  | { kind: "career"; sector: string }
+  | { kind: "campus"; type: string };
+
 export default function SmartImage({
   src,
   alt,
@@ -52,6 +59,7 @@ export default function SmartImage({
   aspect = "16 / 10",
   icon,
   rounded = true,
+  art,
 }: {
   /** Path under /public, or null when the team has not supplied a photo. */
   src?: string | null;
@@ -62,10 +70,35 @@ export default function SmartImage({
   aspect?: string;
   icon?: React.ReactNode;
   rounded?: boolean;
+  /**
+   * What to draw when no photo exists. Without this the fallback is the
+   * gradient-and-initials tile, which is fine for an avatar but reads as a
+   * missing image on a card that should show a place or a job.
+   */
+  art?: ArtSpec;
 }) {
   const [failed, setFailed] = useState(false);
   const key = seed ?? alt;
   const showPlaceholder = !src || failed;
+
+  if (showPlaceholder && art) {
+    return (
+      <div
+        role="img"
+        aria-label={alt}
+        className={`relative overflow-hidden ${
+          rounded ? "rounded-[var(--radius-card)]" : ""
+        } ${className}`}
+        style={{ aspectRatio: aspect }}
+      >
+        {art.kind === "career" ? (
+          <CareerArt sector={art.sector} seed={key} className="h-full w-full" />
+        ) : (
+          <CampusArt type={art.type} seed={key} className="h-full w-full" />
+        )}
+      </div>
+    );
+  }
 
   if (showPlaceholder) {
     const h = hash(key);

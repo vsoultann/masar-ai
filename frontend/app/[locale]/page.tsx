@@ -1,31 +1,52 @@
 "use client";
 
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import ArabesquePattern from "@/components/ArabesquePattern";
-import { SectionHeading, Skeleton } from "@/components/ui";
-import { localiseDigits } from "@/lib/i18n";
-import { loadSectors } from "@/lib/data/client";
-import { useProfile } from "@/lib/store/profile";
+import CampusArt from "@/components/art/CampusArt";
+import CareerArt from "@/components/art/CareerArt";
+import CountUp from "@/components/CountUp";
+import MiniDemo from "@/components/MiniDemo";
+import TypedHeadline from "@/components/TypedHeadline";
+import { SectionHeading } from "@/components/ui";
+import { loadCareerIndex, loadSectors } from "@/lib/data/client";
 import { useLocale } from "@/lib/locale-context";
+import { cardHover, revealContainer, revealItem, viewportOnce } from "@/lib/motion";
+import { useProfile } from "@/lib/store/profile";
 import { TEAM } from "@/lib/team";
-import type { Sector } from "@/lib/types";
+import type { CareerSummary, Sector } from "@/lib/types";
 
+/**
+ * The landing page.
+ *
+ * Every figure on it is read from the catalogs rather than typed into the copy,
+ * so the page cannot claim 140 careers after the catalog grows to 184 — which
+ * is exactly the kind of stale marketing number that undermines everything
+ * beside it.
+ */
 export default function LandingPage() {
-  const { locale, t, pick } = useLocale();
+  const { locale, t } = useLocale();
+  const reduced = useReducedMotion();
   const profile = useProfile((state) => state.profile);
+
   const [sectors, setSectors] = useState<Sector[] | null>(null);
+  const [careers, setCareers] = useState<CareerSummary[]>([]);
+
+  const heroRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
+  const heroY = useTransform(scrollYProgress, [0, 1], [0, reduced ? 0 : 90]);
+  const heroFade = useTransform(scrollYProgress, [0, 0.8], [1, reduced ? 1 : 0.25]);
 
   useEffect(() => {
-    loadSectors()
-      .then(setSectors)
+    Promise.all([loadSectors(), loadCareerIndex()])
+      .then(([sectorRows, careerRows]) => {
+        setSectors(sectorRows);
+        setCareers(careerRows);
+      })
       .catch(() => setSectors([]));
   }, []);
 
-  // There is no registration step any more: the assessment creates the local
-  // profile itself, so both the new and returning visitor start in the same
-  // place. A returning student with a finished assessment goes to their results.
   const startHref =
     profile && profile.completedSteps >= 4
       ? `/${locale}/results`
@@ -39,185 +60,311 @@ export default function LandingPage() {
   ];
 
   const features = [
-    { title: t.landing.f1Title, body: t.landing.f1Body, icon: "◎" },
-    { title: t.landing.f2Title, body: t.landing.f2Body, icon: "◑" },
-    { title: t.landing.f3Title, body: t.landing.f3Body, icon: "⌁" },
-    { title: t.landing.f4Title, body: t.landing.f4Body, icon: "✦" },
-    { title: t.landing.f5Title, body: t.landing.f5Body, icon: "⬡" },
-    { title: t.landing.f6Title, body: t.landing.f6Body, icon: "⎙" },
+    { title: t.landing.f1Title, body: t.landing.f1Body },
+    { title: t.landing.f2Title, body: t.landing.f2Body },
+    { title: t.landing.f3Title, body: t.landing.f3Body },
+    { title: t.landing.f4Title, body: t.landing.f4Body },
+    { title: t.landing.f5Title, body: t.landing.f5Body },
+    { title: t.landing.f6Title, body: t.landing.f6Body },
   ];
 
+  // Career count per sector, for the showcase tiles.
+  const bySector = new Map<string, CareerSummary[]>();
+  for (const career of careers) {
+    const bucket = bySector.get(career.sector);
+    if (bucket) bucket.push(career);
+    else bySector.set(career.sector, [career]);
+  }
+
+  // A handful of cards that drift behind the hero.
+  const floaters = careers.length > 0
+    ? ["radiologist", "commercial_pilot", "software_engineer", "architect", "lawyer", "chef"]
+        .map((id) => careers.find((career) => career.id === id))
+        .filter((career): career is CareerSummary => career !== undefined)
+    : [];
+
   return (
-    <>
-      {/* ---------------------------------------------------------------- hero */}
-      <section className="relative overflow-hidden border-b">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 text-[var(--brand)]"
+    <div className="overflow-clip">
+      {/* ------------------------------------------------------------- hero */}
+      <section ref={heroRef} className="relative">
+        <motion.div
+          style={{ y: heroY, opacity: heroFade }}
+          className="mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pt-24"
         >
-          <ArabesquePattern opacity={0.07} />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
-          <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-wider text-[var(--brand)]">
-              {t.landing.eyebrow}
-            </p>
-            <h1 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">
-              {t.landing.title}
-            </h1>
-            <p className="mt-5 text-base leading-relaxed muted sm:text-lg">
-              {t.landing.subtitle}
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href={startHref} className="btn btn-primary !px-6 !py-3">
-                {t.landing.ctaPrimary}
-              </Link>
-              <Link href={`/${locale}/careers`} className="btn btn-ghost !px-6 !py-3">
-                {t.landing.ctaSecondary}
-              </Link>
+          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" aria-hidden />
+                {t.landing.eyebrow}
+              </motion.p>
+
+              <h1 className="mt-5 text-4xl font-black leading-[1.1] sm:text-5xl lg:text-6xl">
+                <TypedHeadline
+                  phrases={[t.landing.heroLine1, t.landing.heroLine2]}
+                  className="inline-flex flex-wrap items-baseline"
+                />
+              </h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0, transition: { delay: 0.15 } }}
+                className="mt-5 max-w-xl text-base leading-relaxed muted sm:text-lg"
+              >
+                {t.landing.subtitle}
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0, transition: { delay: 0.25 } }}
+                className="mt-7 flex flex-wrap gap-3"
+              >
+                <Link href={startHref} className="btn btn-primary px-5 py-2.5">
+                  {t.landing.ctaPrimary}
+                </Link>
+                <Link href={`/${locale}/careers`} className="btn btn-ghost px-5 py-2.5">
+                  {t.landing.exploreCareers}
+                </Link>
+              </motion.div>
             </div>
-            <p className="mt-4 text-xs muted ltr-nums">{t.landing.demoNote}</p>
+
+            {/* Drifting artwork cards. Purely decorative, so they are hidden
+                from assistive technology and frozen under reduced motion. */}
+            <div aria-hidden className="relative hidden h-[26rem] lg:block">
+              {floaters.map((career, index) => {
+                const angle = (index / floaters.length) * Math.PI * 2;
+                const x = Math.cos(angle) * 120;
+                const y = Math.sin(angle) * 140;
+                return (
+                  <motion.div
+                    key={career.id}
+                    className="absolute left-1/2 top-1/2 w-52 overflow-hidden rounded-xl border shadow-xl"
+                    style={{ marginLeft: x - 104, marginTop: y - 66 }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{
+                      opacity: 1,
+                      scale: 1,
+                      y: reduced ? 0 : [0, index % 2 ? 10 : -10, 0],
+                    }}
+                    transition={{
+                      opacity: { delay: 0.1 * index },
+                      scale: { delay: 0.1 * index },
+                      y: { duration: 6 + index, repeat: Infinity, ease: "easeInOut" },
+                    }}
+                  >
+                    <CareerArt sector={career.sector} seed={career.id} className="h-28 w-full" />
+                    <p className="truncate bg-[var(--surface)] px-3 py-2 text-xs font-semibold">
+                      {career.title[locale]}
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
-
-          <dl className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {[
-              { value: 60, label: t.landing.statsCareers },
-              { value: 120, label: t.landing.statsCourses },
-              { value: 15, label: t.landing.statsSectors },
-              { value: 55, label: t.landing.statsQuestions },
-            ].map((stat) => (
-              <div key={stat.label} className="card p-4">
-                <dt className="sr-only">{stat.label}</dt>
-                <dd>
-                  <span className="block text-3xl font-black text-[var(--brand)] ltr-nums">
-                    {localiseDigits(stat.value, locale)}
-                  </span>
-                  <span className="mt-1 block text-sm muted">{stat.label}</span>
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
+        </motion.div>
       </section>
 
-      {/* ------------------------------------------------------------ how it works */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        <SectionHeading title={t.landing.howTitle} subtitle={t.landing.howSubtitle} />
-        <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, index) => (
-            <li key={step.title} className="card p-5">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-[var(--brand)] font-bold text-[var(--brand-ink)] ltr-nums">
-                {localiseDigits(index + 1, locale)}
-              </span>
-              <h3 className="mt-3 font-bold">{step.title}</h3>
-              <p className="mt-1.5 text-sm muted">{step.body}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* -------------------------------------------------------------- features */}
+      {/* ------------------------------------------------------------ stats */}
       <section className="border-y bg-[var(--surface-2)]">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-          <SectionHeading title={t.landing.featuresTitle} />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature) => (
-              <div key={feature.title} className="card bg-[var(--surface)] p-5">
-                <span
-                  aria-hidden="true"
-                  className="grid h-10 w-10 place-items-center rounded-lg bg-[var(--brand)]/12 text-lg text-[var(--brand)]"
-                >
-                  {feature.icon}
-                </span>
-                <h3 className="mt-3 font-bold">{feature.title}</h3>
-                <p className="mt-1.5 text-sm muted">{feature.body}</p>
-              </div>
-            ))}
+        <motion.dl
+          variants={revealContainer(0.08)}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-10 sm:px-6 lg:grid-cols-4"
+        >
+          {[
+            { value: careers.length, label: t.landing.statsCareers },
+            { value: 50, label: t.landing.statsInstitutions },
+            { value: sectors?.length ?? 0, label: t.landing.statsSectors },
+            { value: 2, label: t.landing.statsLanguages },
+          ].map((stat) => (
+            <motion.div key={stat.label} variants={revealItem}>
+              <dt className="text-3xl font-black sm:text-4xl">
+                <CountUp value={stat.value} />
+              </dt>
+              <dd className="mt-1 text-sm muted">{stat.label}</dd>
+            </motion.div>
+          ))}
+        </motion.dl>
+      </section>
+
+      {/* -------------------------------------------------------- try it */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-black sm:text-3xl">{t.landing.demoTitle}</h2>
+            <p className="mt-3 max-w-md leading-relaxed muted">{t.landing.demoSubtitle}</p>
           </div>
+          <MiniDemo />
         </div>
       </section>
 
-      {/* --------------------------------------------------------------- sectors */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        <SectionHeading
-          title={t.landing.sectorsTitle}
-          subtitle={t.landing.sectorsSubtitle}
-        />
-        {sectors === null ? (
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <Skeleton key={index} className="h-24" />
+      {/* ------------------------------------------------------- how it works */}
+      <section className="border-t bg-[var(--surface-2)]">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <SectionHeading title={t.landing.howTitle} />
+          <p className="-mt-2 mb-8 max-w-2xl muted">{t.landing.howSubtitle}</p>
+
+          <motion.ol
+            variants={revealContainer(0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportOnce}
+            className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            {steps.map((step, index) => (
+              <motion.li key={step.title} variants={revealItem} className="card p-5">
+                <span
+                  aria-hidden
+                  className="grid h-9 w-9 place-items-center rounded-full bg-[var(--brand)] text-sm font-black text-[var(--brand-ink)]"
+                >
+                  {index + 1}
+                </span>
+                <h3 className="mt-3 font-bold">{step.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed muted">{step.body}</p>
+              </motion.li>
             ))}
-          </div>
-        ) : (
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {sectors.map((sector) => (
-              <li key={sector.id}>
+          </motion.ol>
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------- sector showcase */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <SectionHeading title={t.landing.sectorsTitle} />
+        <p className="-mt-2 mb-8 max-w-2xl muted">{t.landing.sectorsSubtitle}</p>
+
+        <motion.div
+          variants={revealContainer(0.05)}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {(sectors ?? []).map((sector) => {
+            const count = bySector.get(sector.id)?.length ?? 0;
+            if (count === 0) return null;
+            return (
+              <motion.div key={sector.id} variants={revealItem} {...cardHover}>
                 <Link
                   href={`/${locale}/careers?sector=${sector.id}`}
-                  className="card flex items-center gap-4 p-4 transition-colors hover:border-[var(--brand)]"
+                  className="group block overflow-hidden rounded-[var(--radius-card)] border"
                 >
-                  <span
-                    aria-hidden="true"
-                    className="h-10 w-1.5 shrink-0 rounded-full"
-                    style={{ background: sector.color }}
-                  />
-                  <span className="min-w-0 flex-1">
-                    <span className="block font-semibold">{pick(sector, "name")}</span>
-                    <span className="mt-0.5 block text-xs muted ltr-nums">
-                      {localiseDigits(sector.career_count ?? 0, locale)}{" "}
-                      {t.landing.sectorCareers}
+                  <div className="relative h-32 overflow-hidden">
+                    <div className="h-full w-full transition-transform duration-500 group-hover:scale-110">
+                      <CareerArt sector={sector.id} seed={sector.id} className="h-full w-full" />
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between gap-3 bg-[var(--surface)] p-4">
+                    <h3 className="text-sm font-bold">
+                      {locale === "ar" ? sector.name_ar : sector.name_en}
+                    </h3>
+                    <span className="shrink-0 text-xs font-semibold muted ltr-nums">
+                      <CountUp value={count} /> {t.landing.sectorCareers}
                     </span>
-                  </span>
-                  <span aria-hidden="true" className="muted flip-rtl">
-                    →
-                  </span>
+                  </div>
                 </Link>
-              </li>
-            ))}
-          </ul>
-        )}
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </section>
 
-      {/* ------------------------------------------------------------------ team */}
+      {/* ------------------------------------------------------- universities */}
       <section className="border-y bg-[var(--surface-2)]">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-          <SectionHeading title={t.landing.teamTitle} subtitle={t.landing.teamSubtitle} />
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-            {TEAM.map((member) => (
-              <li key={member.name} className="card bg-[var(--surface)] p-4 text-center">
-                <span
-                  aria-hidden="true"
-                  className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-[var(--brand)]/12 text-lg font-bold text-[var(--brand)]"
-                >
-                  {member.name.charAt(0)}
-                </span>
-                <p className="mt-2.5 text-sm font-semibold leading-snug">{member.name}</p>
-                <p className="mt-1 text-xs muted">{t.about[member.roleKey]}</p>
-              </li>
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2">
+          <div className="grid grid-cols-2 gap-3">
+            {["uaeu", "ku", "aus", "mbru"].map((id, index) => (
+              <motion.div
+                key={id}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0, transition: { delay: index * 0.08 } }}
+                viewport={viewportOnce}
+                className="overflow-hidden rounded-xl border"
+              >
+                <CampusArt
+                  type={index % 2 ? "federal_public" : "private"}
+                  seed={id}
+                  className="h-28 w-full"
+                />
+              </motion.div>
             ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* -------------------------------------------------------------- final cta */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        <div className="card relative overflow-hidden p-8 text-center sm:p-12">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 text-[var(--brand)]"
-          >
-            <ArabesquePattern opacity={0.05} />
           </div>
-          <div className="relative">
-            <h2 className="text-2xl font-black sm:text-3xl">{t.landing.ctaFinalTitle}</h2>
-            <p className="mx-auto mt-3 max-w-xl text-sm muted">{t.landing.ctaFinalBody}</p>
-            <Link href={startHref} className="btn btn-primary mt-6 !px-6 !py-3">
-              {t.landing.ctaPrimary}
+          <div>
+            <h2 className="text-2xl font-black sm:text-3xl">{t.universities.title}</h2>
+            <p className="mt-3 max-w-md leading-relaxed muted">{t.universities.subtitle}</p>
+            <Link href={`/${locale}/universities`} className="btn btn-primary mt-5">
+              {t.landing.exploreUniversities}
             </Link>
           </div>
         </div>
       </section>
-    </>
+
+      {/* ----------------------------------------------------------- features */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <SectionHeading title={t.landing.featuresTitle} />
+        <motion.div
+          variants={revealContainer(0.06)}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {features.map((feature) => (
+            <motion.div key={feature.title} variants={revealItem} className="card p-5">
+              <h3 className="font-bold">{feature.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed muted">{feature.body}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
+
+      {/* --------------------------------------------------------------- team */}
+      <section className="border-t bg-[var(--surface-2)]">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <SectionHeading title={t.landing.teamTitle} />
+          <p className="-mt-2 mb-8 max-w-2xl muted">{t.landing.teamSubtitle}</p>
+
+          <motion.ul
+            variants={revealContainer(0.07)}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportOnce}
+            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5"
+          >
+            {TEAM.map((member) => (
+              <motion.li key={member.name} variants={revealItem} className="card p-5 text-center">
+                <span
+                  aria-hidden
+                  className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[var(--brand)]/12 text-lg font-black text-[var(--brand)]"
+                >
+                  {member.name
+                    .split(" ")
+                    .slice(0, 2)
+                    .map((part) => part[0])
+                    .join("")}
+                </span>
+                <h3 className="mt-3 text-sm font-bold leading-tight">{member.name}</h3>
+                <p className="mt-1 text-xs muted">
+                  {t.about[member.roleKey as keyof typeof t.about] as string}
+                </p>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------------- final CTA */}
+      <section className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
+        <h2 className="text-3xl font-black sm:text-4xl">{t.landing.ctaFinalTitle}</h2>
+        <p className="mx-auto mt-4 max-w-xl leading-relaxed muted">{t.landing.ctaFinalBody}</p>
+        <Link href={startHref} className="btn btn-primary mt-7 px-6 py-3 text-base">
+          {t.landing.ctaPrimary}
+        </Link>
+      </section>
+    </div>
   );
 }

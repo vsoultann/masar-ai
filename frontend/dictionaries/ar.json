@@ -75,7 +75,25 @@
     "teamSubtitle": "مشروع تخرّج، ٢٠٢٦.",
     "ctaFinalTitle": "مسارك يبدأ بخمس عشرة دقيقة",
     "ctaFinalBody": "بلا تكلفة ولا التزام. يمكنك التوقف بعد أي خطوة والعودة لاحقاً.",
-    "viewSector": "عرض المهن"
+    "viewSector": "عرض المهن",
+    "demoTitle": "جرّبه في ثلاثة أسئلة",
+    "demoSubtitle": "يعمل هذا بالنموذج الحقيقي نفسه الذي يقف خلف التقييم الكامل.",
+    "demoQuestions": [
+      "أفضّل أن أفهم سبب عمل الأشياء على أن أنظّم فريقًا حولها.",
+      "أفضّل أن أبني شيئًا ماديًا أو أصلحه على أن أصمّم شكله.",
+      "أفضّل أن أقود الناس وأقنعهم على أن أتبع إجراءً دقيقًا."
+    ],
+    "demoYes": "هذا أنا",
+    "demoNo": "ليس تمامًا",
+    "demoResult": "لمحة عن تطابقك",
+    "demoAgain": "جرّب مرة أخرى",
+    "heroLine1": "مسارك، بإرشاد البيانات.",
+    "heroLine2": "Your path, guided by data.",
+    "statsInstitutions": "مؤسسة",
+    "statsLanguages": "لغتان",
+    "statsMentor": "مرشد",
+    "exploreCareers": "استكشف كل المهن",
+    "exploreUniversities": "تصفّح المؤسسات"
   },
   "about": {
     "title": "عن نظام مسار",
@@ -159,7 +177,9 @@
     "answered": "مُجابة",
     "remaining": "متبقية",
     "mustAnswerAll": "يرجى الإجابة عن كل العبارات قبل المتابعة.",
-    "questionOf": "العبارة"
+    "questionOf": "العبارة",
+    "keyboardHint": "استخدم ← → للتنقل، و١–٥ للاختيار، وEnter للتأكيد، وBackspace للرجوع.",
+    "firstUnanswered": "انتقل إلى أول سؤال بلا إجابة"
   },
   "dashboard": {
     "title": "لوحتك",

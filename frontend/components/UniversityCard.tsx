@@ -52,6 +52,7 @@ export default function UniversityCard({
           seed={institution.id}
           aspect="16 / 9"
           rounded={false}
+          art={{ kind: "campus", type: institution.type }}
         />
       </Link>
 
