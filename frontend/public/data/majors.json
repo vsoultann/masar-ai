@@ -1,0 +1,1046 @@
+[
+  {
+    "id": "medicine",
+    "name": {
+      "en": "Medicine and Surgery",
+      "ar": "الطب والجراحة"
+    },
+    "family": "health",
+    "level": "bachelor_professional"
+  },
+  {
+    "id": "dentistry",
+    "name": {
+      "en": "Dentistry",
+      "ar": "طب الأسنان"
+    },
+    "family": "health",
+    "level": "bachelor_professional"
+  },
+  {
+    "id": "pharmacy",
+    "name": {
+      "en": "Pharmacy",
+      "ar": "الصيدلة"
+    },
+    "family": "health",
+    "level": "bachelor_professional"
+  },
+  {
+    "id": "nursing",
+    "name": {
+      "en": "Nursing",
+      "ar": "التمريض"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "midwifery",
+    "name": {
+      "en": "Midwifery",
+      "ar": "القبالة"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "radiography",
+    "name": {
+      "en": "Medical Imaging and Radiography",
+      "ar": "التصوير الطبي والأشعة"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "radiation_therapy",
+    "name": {
+      "en": "Radiation Therapy",
+      "ar": "العلاج الإشعاعي"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "medical_laboratory",
+    "name": {
+      "en": "Medical Laboratory Sciences",
+      "ar": "علوم المختبرات الطبية"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "physiotherapy",
+    "name": {
+      "en": "Physiotherapy",
+      "ar": "العلاج الطبيعي"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "occupational_therapy",
+    "name": {
+      "en": "Occupational Therapy",
+      "ar": "العلاج الوظيفي"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "speech_therapy",
+    "name": {
+      "en": "Speech and Language Therapy",
+      "ar": "علاج النطق واللغة"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "audiology",
+    "name": {
+      "en": "Audiology",
+      "ar": "علم السمعيات"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "optometry",
+    "name": {
+      "en": "Optometry",
+      "ar": "البصريات"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "nutrition",
+    "name": {
+      "en": "Clinical Nutrition and Dietetics",
+      "ar": "التغذية السريرية والحميات"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "public_health",
+    "name": {
+      "en": "Public Health",
+      "ar": "الصحة العامة"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "health_informatics",
+    "name": {
+      "en": "Health Informatics",
+      "ar": "المعلوماتية الصحية"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "biomedical_sciences",
+    "name": {
+      "en": "Biomedical Sciences",
+      "ar": "العلوم الطبية الحيوية"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "biomedical_engineering",
+    "name": {
+      "en": "Biomedical Engineering",
+      "ar": "الهندسة الطبية الحيوية"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "veterinary",
+    "name": {
+      "en": "Veterinary Medicine",
+      "ar": "الطب البيطري"
+    },
+    "family": "health",
+    "level": "bachelor_professional"
+  },
+  {
+    "id": "paramedic_science",
+    "name": {
+      "en": "Paramedic Science",
+      "ar": "علوم الإسعاف"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "psychology",
+    "name": {
+      "en": "Psychology",
+      "ar": "علم النفس"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "prosthetics_orthotics",
+    "name": {
+      "en": "Prosthetics and Orthotics",
+      "ar": "الأطراف الصناعية والتقويم"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "civil_engineering",
+    "name": {
+      "en": "Civil Engineering",
+      "ar": "الهندسة المدنية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "structural_engineering",
+    "name": {
+      "en": "Structural Engineering",
+      "ar": "الهندسة الإنشائية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "architecture",
+    "name": {
+      "en": "Architecture",
+      "ar": "الهندسة المعمارية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "urban_planning",
+    "name": {
+      "en": "Urban Planning",
+      "ar": "التخطيط العمراني"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "quantity_surveying",
+    "name": {
+      "en": "Quantity Surveying",
+      "ar": "مسح الكميات"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "construction_management",
+    "name": {
+      "en": "Construction Management",
+      "ar": "إدارة التشييد"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "mechanical_engineering",
+    "name": {
+      "en": "Mechanical Engineering",
+      "ar": "الهندسة الميكانيكية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "electrical_engineering",
+    "name": {
+      "en": "Electrical Engineering",
+      "ar": "الهندسة الكهربائية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "mechatronics",
+    "name": {
+      "en": "Mechatronics Engineering",
+      "ar": "هندسة الميكاترونكس"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "chemical_engineering",
+    "name": {
+      "en": "Chemical Engineering",
+      "ar": "الهندسة الكيميائية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "petroleum_engineering",
+    "name": {
+      "en": "Petroleum Engineering",
+      "ar": "هندسة البترول"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "nuclear_engineering",
+    "name": {
+      "en": "Nuclear Engineering",
+      "ar": "الهندسة النووية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "environmental_engineering",
+    "name": {
+      "en": "Environmental Engineering",
+      "ar": "الهندسة البيئية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "water_resources",
+    "name": {
+      "en": "Water Resources Engineering",
+      "ar": "هندسة الموارد المائية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "industrial_engineering",
+    "name": {
+      "en": "Industrial Engineering",
+      "ar": "الهندسة الصناعية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "marine_engineering",
+    "name": {
+      "en": "Marine Engineering",
+      "ar": "الهندسة البحرية"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "geomatics",
+    "name": {
+      "en": "Surveying and Geomatics",
+      "ar": "المساحة والجيوماتكس"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "materials_engineering",
+    "name": {
+      "en": "Materials Engineering",
+      "ar": "هندسة المواد"
+    },
+    "family": "engineering",
+    "level": "bachelor"
+  },
+  {
+    "id": "computer_science",
+    "name": {
+      "en": "Computer Science",
+      "ar": "علوم الحاسوب"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "software_engineering",
+    "name": {
+      "en": "Software Engineering",
+      "ar": "هندسة البرمجيات"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "artificial_intelligence",
+    "name": {
+      "en": "Artificial Intelligence",
+      "ar": "الذكاء الاصطناعي"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "data_science",
+    "name": {
+      "en": "Data Science",
+      "ar": "علم البيانات"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "cybersecurity_major",
+    "name": {
+      "en": "Cybersecurity",
+      "ar": "الأمن السيبراني"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "computer_engineering",
+    "name": {
+      "en": "Computer Engineering",
+      "ar": "هندسة الحاسوب"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "information_systems",
+    "name": {
+      "en": "Information Systems",
+      "ar": "نظم المعلومات"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "network_engineering",
+    "name": {
+      "en": "Network Engineering",
+      "ar": "هندسة الشبكات"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "robotics",
+    "name": {
+      "en": "Robotics",
+      "ar": "الروبوتات"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "game_development",
+    "name": {
+      "en": "Game Development",
+      "ar": "تطوير الألعاب"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "interaction_design",
+    "name": {
+      "en": "Interaction and UX Design",
+      "ar": "تصميم التفاعل وتجربة المستخدم"
+    },
+    "family": "computing",
+    "level": "bachelor"
+  },
+  {
+    "id": "mathematics",
+    "name": {
+      "en": "Mathematics",
+      "ar": "الرياضيات"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "statistics",
+    "name": {
+      "en": "Statistics",
+      "ar": "الإحصاء"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "physics",
+    "name": {
+      "en": "Physics",
+      "ar": "الفيزياء"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "chemistry",
+    "name": {
+      "en": "Chemistry",
+      "ar": "الكيمياء"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "biology",
+    "name": {
+      "en": "Biology",
+      "ar": "الأحياء"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "biotechnology",
+    "name": {
+      "en": "Biotechnology",
+      "ar": "التقنية الحيوية"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "geology",
+    "name": {
+      "en": "Geology and Earth Sciences",
+      "ar": "الجيولوجيا وعلوم الأرض"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "environmental_science",
+    "name": {
+      "en": "Environmental Science",
+      "ar": "العلوم البيئية"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "astronomy",
+    "name": {
+      "en": "Astronomy and Astrophysics",
+      "ar": "علم الفلك والفيزياء الفلكية"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "meteorology",
+    "name": {
+      "en": "Meteorology and Atmospheric Science",
+      "ar": "الأرصاد وعلوم الغلاف الجوي"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "marine_science",
+    "name": {
+      "en": "Marine Science",
+      "ar": "علوم البحار"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "agriculture",
+    "name": {
+      "en": "Agriculture and Food Science",
+      "ar": "الزراعة وعلوم الأغذية"
+    },
+    "family": "science",
+    "level": "bachelor"
+  },
+  {
+    "id": "aerospace_engineering",
+    "name": {
+      "en": "Aerospace Engineering",
+      "ar": "هندسة الطيران والفضاء"
+    },
+    "family": "aerospace",
+    "level": "bachelor"
+  },
+  {
+    "id": "aircraft_maintenance",
+    "name": {
+      "en": "Aircraft Maintenance Engineering",
+      "ar": "هندسة صيانة الطائرات"
+    },
+    "family": "aerospace",
+    "level": "bachelor"
+  },
+  {
+    "id": "pilot_training",
+    "name": {
+      "en": "Professional Pilot Studies",
+      "ar": "دراسات الطيران المهني"
+    },
+    "family": "aerospace",
+    "level": "bachelor"
+  },
+  {
+    "id": "air_traffic_management",
+    "name": {
+      "en": "Air Traffic Management",
+      "ar": "إدارة الحركة الجوية"
+    },
+    "family": "aerospace",
+    "level": "bachelor"
+  },
+  {
+    "id": "aviation_management",
+    "name": {
+      "en": "Aviation Management",
+      "ar": "إدارة الطيران"
+    },
+    "family": "aerospace",
+    "level": "bachelor"
+  },
+  {
+    "id": "space_engineering",
+    "name": {
+      "en": "Space Systems Engineering",
+      "ar": "هندسة الأنظمة الفضائية"
+    },
+    "family": "aerospace",
+    "level": "bachelor"
+  },
+  {
+    "id": "accounting",
+    "name": {
+      "en": "Accounting",
+      "ar": "المحاسبة"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "finance",
+    "name": {
+      "en": "Finance",
+      "ar": "التمويل"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "economics",
+    "name": {
+      "en": "Economics",
+      "ar": "الاقتصاد"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "actuarial_science",
+    "name": {
+      "en": "Actuarial Science",
+      "ar": "العلوم الاكتوارية"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "business_administration",
+    "name": {
+      "en": "Business Administration",
+      "ar": "إدارة الأعمال"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "islamic_finance",
+    "name": {
+      "en": "Islamic Banking and Finance",
+      "ar": "المصرفية والتمويل الإسلامي"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "marketing",
+    "name": {
+      "en": "Marketing",
+      "ar": "التسويق"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "human_resources",
+    "name": {
+      "en": "Human Resource Management",
+      "ar": "إدارة الموارد البشرية"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "supply_chain",
+    "name": {
+      "en": "Supply Chain and Logistics",
+      "ar": "سلاسل الإمداد واللوجستيات"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "maritime_studies",
+    "name": {
+      "en": "Maritime Studies",
+      "ar": "الدراسات البحرية"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "entrepreneurship_major",
+    "name": {
+      "en": "Entrepreneurship and Innovation",
+      "ar": "ريادة الأعمال والابتكار"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "hospitality_management",
+    "name": {
+      "en": "Hospitality Management",
+      "ar": "إدارة الضيافة"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "tourism_management",
+    "name": {
+      "en": "Tourism Management",
+      "ar": "إدارة السياحة"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "event_management",
+    "name": {
+      "en": "Event Management",
+      "ar": "إدارة الفعاليات"
+    },
+    "family": "business",
+    "level": "bachelor"
+  },
+  {
+    "id": "law",
+    "name": {
+      "en": "Law",
+      "ar": "القانون"
+    },
+    "family": "law",
+    "level": "bachelor"
+  },
+  {
+    "id": "sharia_law",
+    "name": {
+      "en": "Sharia and Law",
+      "ar": "الشريعة والقانون"
+    },
+    "family": "law",
+    "level": "bachelor"
+  },
+  {
+    "id": "criminology",
+    "name": {
+      "en": "Criminology and Criminal Justice",
+      "ar": "علم الجريمة والعدالة الجنائية"
+    },
+    "family": "law",
+    "level": "bachelor"
+  },
+  {
+    "id": "public_administration",
+    "name": {
+      "en": "Public Administration",
+      "ar": "الإدارة العامة"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "public_policy",
+    "name": {
+      "en": "Public Policy",
+      "ar": "السياسات العامة"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "international_relations",
+    "name": {
+      "en": "International Relations and Diplomacy",
+      "ar": "العلاقات الدولية والدبلوماسية"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "political_science",
+    "name": {
+      "en": "Political Science",
+      "ar": "العلوم السياسية"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "homeland_security",
+    "name": {
+      "en": "Homeland Security and Emergency Management",
+      "ar": "الأمن الوطني وإدارة الطوارئ"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "military_science",
+    "name": {
+      "en": "Military Science and Defence Studies",
+      "ar": "العلوم العسكرية والدراسات الدفاعية"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "education_primary",
+    "name": {
+      "en": "Primary Education",
+      "ar": "التعليم الابتدائي"
+    },
+    "family": "education",
+    "level": "bachelor"
+  },
+  {
+    "id": "education_secondary",
+    "name": {
+      "en": "Secondary Education",
+      "ar": "التعليم الثانوي"
+    },
+    "family": "education",
+    "level": "bachelor"
+  },
+  {
+    "id": "special_education",
+    "name": {
+      "en": "Special Education",
+      "ar": "التربية الخاصة"
+    },
+    "family": "education",
+    "level": "bachelor"
+  },
+  {
+    "id": "curriculum_design",
+    "name": {
+      "en": "Curriculum and Instruction",
+      "ar": "المناهج وطرق التدريس"
+    },
+    "family": "education",
+    "level": "bachelor"
+  },
+  {
+    "id": "educational_counselling",
+    "name": {
+      "en": "Educational Counselling",
+      "ar": "الإرشاد التربوي"
+    },
+    "family": "education",
+    "level": "bachelor"
+  },
+  {
+    "id": "social_work",
+    "name": {
+      "en": "Social Work",
+      "ar": "الخدمة الاجتماعية"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "sociology",
+    "name": {
+      "en": "Sociology",
+      "ar": "علم الاجتماع"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "islamic_studies",
+    "name": {
+      "en": "Islamic Studies",
+      "ar": "الدراسات الإسلامية"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "library_science",
+    "name": {
+      "en": "Library and Information Science",
+      "ar": "علم المكتبات والمعلومات"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "translation",
+    "name": {
+      "en": "Translation and Interpreting",
+      "ar": "الترجمة والترجمة الفورية"
+    },
+    "family": "public",
+    "level": "bachelor"
+  },
+  {
+    "id": "journalism",
+    "name": {
+      "en": "Journalism",
+      "ar": "الصحافة"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "mass_communication",
+    "name": {
+      "en": "Mass Communication",
+      "ar": "الاتصال الجماهيري"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "film_production",
+    "name": {
+      "en": "Film and Television Production",
+      "ar": "إنتاج الأفلام والتلفزيون"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "photography",
+    "name": {
+      "en": "Photography",
+      "ar": "التصوير الفوتوغرافي"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "graphic_design",
+    "name": {
+      "en": "Graphic Design",
+      "ar": "التصميم الجرافيكي"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "animation",
+    "name": {
+      "en": "Animation and Motion Graphics",
+      "ar": "الرسوم المتحركة والموشن جرافيك"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "industrial_design",
+    "name": {
+      "en": "Industrial and Product Design",
+      "ar": "التصميم الصناعي وتصميم المنتجات"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "interior_design",
+    "name": {
+      "en": "Interior Design",
+      "ar": "التصميم الداخلي"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "fashion_design",
+    "name": {
+      "en": "Fashion Design",
+      "ar": "تصميم الأزياء"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "sound_engineering",
+    "name": {
+      "en": "Sound Engineering",
+      "ar": "هندسة الصوت"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "museum_studies",
+    "name": {
+      "en": "Museum and Heritage Studies",
+      "ar": "دراسات المتاحف والتراث"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "digital_media",
+    "name": {
+      "en": "Digital Media",
+      "ar": "الإعلام الرقمي"
+    },
+    "family": "media",
+    "level": "bachelor"
+  },
+  {
+    "id": "sports_science",
+    "name": {
+      "en": "Sports Science and Coaching",
+      "ar": "علوم الرياضة والتدريب"
+    },
+    "family": "health",
+    "level": "bachelor"
+  },
+  {
+    "id": "culinary_arts",
+    "name": {
+      "en": "Culinary Arts",
+      "ar": "فنون الطهي"
+    },
+    "family": "business",
+    "level": "bachelor"
+  }
+]

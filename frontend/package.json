@@ -5,14 +5,15 @@
   "description": "Masar AI - bilingual career guidance for UAE students",
   "scripts": {
     "dev": "next dev -p 3000",
-    "build": "next build && node scripts/predeploy-check.mjs --out",
+    "build": "node scripts/validate-data.mjs && next build && node scripts/predeploy-check.mjs --out",
     "start": "node scripts/serve-out.mjs",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "predeploy:check": "node scripts/predeploy-check.mjs",
     "verify:out": "node scripts/predeploy-check.mjs --out",
-    "preview": "npm run build && node scripts/serve-out.mjs"
+    "preview": "npm run build && node scripts/serve-out.mjs",
+    "validate:data": "node scripts/validate-data.mjs"
   },
   "dependencies": {
     "framer-motion": "^13.2.0",

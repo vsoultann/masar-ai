@@ -238,5 +238,185 @@
     "name_en": "Geospatial & GIS",
     "name_ar": "نظم المعلومات الجغرافية",
     "family": "technical"
+  },
+  {
+    "id": "patient_care",
+    "name_en": "Patient Care",
+    "name_ar": "رعاية المرضى",
+    "family": "domain"
+  },
+  {
+    "id": "diagnostic_imaging",
+    "name_en": "Diagnostic Imaging",
+    "name_ar": "التصوير التشخيصي",
+    "family": "technical"
+  },
+  {
+    "id": "surgical_skills",
+    "name_en": "Surgical Technique",
+    "name_ar": "التقنية الجراحية",
+    "family": "domain"
+  },
+  {
+    "id": "pharmacology",
+    "name_en": "Pharmacology",
+    "name_ar": "علم الأدوية",
+    "family": "domain"
+  },
+  {
+    "id": "dental_skills",
+    "name_en": "Dental Practice",
+    "name_ar": "ممارسة طب الأسنان",
+    "family": "domain"
+  },
+  {
+    "id": "lab_diagnostics",
+    "name_en": "Laboratory Diagnostics",
+    "name_ar": "التشخيص المخبري",
+    "family": "technical"
+  },
+  {
+    "id": "rehabilitation",
+    "name_en": "Rehabilitation Therapy",
+    "name_ar": "العلاج التأهيلي",
+    "family": "domain"
+  },
+  {
+    "id": "counselling",
+    "name_en": "Counselling & Psychological Support",
+    "name_ar": "الإرشاد والدعم النفسي",
+    "family": "professional"
+  },
+  {
+    "id": "nutrition_diet",
+    "name_en": "Nutrition & Dietetics",
+    "name_ar": "التغذية والحميات",
+    "family": "domain"
+  },
+  {
+    "id": "veterinary_care",
+    "name_en": "Veterinary Care",
+    "name_ar": "الرعاية البيطرية",
+    "family": "domain"
+  },
+  {
+    "id": "emergency_response",
+    "name_en": "Emergency Response",
+    "name_ar": "الاستجابة للطوارئ",
+    "family": "domain"
+  },
+  {
+    "id": "child_development",
+    "name_en": "Child Development",
+    "name_ar": "نمو الطفل",
+    "family": "domain"
+  },
+  {
+    "id": "manufacturing_ops",
+    "name_en": "Manufacturing Operations",
+    "name_ar": "عمليات التصنيع",
+    "family": "domain"
+  },
+  {
+    "id": "quality_control",
+    "name_en": "Quality Control",
+    "name_ar": "ضبط الجودة",
+    "family": "technical"
+  },
+  {
+    "id": "hr_people",
+    "name_en": "People & HR Management",
+    "name_ar": "إدارة الأفراد والموارد البشرية",
+    "family": "professional"
+  },
+  {
+    "id": "sales_negotiation",
+    "name_en": "Sales & Negotiation",
+    "name_ar": "المبيعات والتفاوض",
+    "family": "professional"
+  },
+  {
+    "id": "journalism_reporting",
+    "name_en": "Reporting & Investigation",
+    "name_ar": "التحرير والتحقيق الصحفي",
+    "family": "professional"
+  },
+  {
+    "id": "photography_video",
+    "name_en": "Photography & Videography",
+    "name_ar": "التصوير الفوتوغرافي والفيديو",
+    "family": "technical"
+  },
+  {
+    "id": "animation_3d",
+    "name_en": "Animation & 3D",
+    "name_ar": "الرسوم المتحركة والتصميم ثلاثي الأبعاد",
+    "family": "technical"
+  },
+  {
+    "id": "sound_audio",
+    "name_en": "Sound & Audio",
+    "name_ar": "الصوت والهندسة الصوتية",
+    "family": "technical"
+  },
+  {
+    "id": "translation_skill",
+    "name_en": "Translation & Interpreting",
+    "name_ar": "الترجمة والترجمة الفورية",
+    "family": "language"
+  },
+  {
+    "id": "hospitality_ops",
+    "name_en": "Hospitality Operations",
+    "name_ar": "عمليات الضيافة",
+    "family": "domain"
+  },
+  {
+    "id": "culinary",
+    "name_en": "Culinary Practice",
+    "name_ar": "الممارسة الطهوية",
+    "family": "domain"
+  },
+  {
+    "id": "sports_coaching",
+    "name_en": "Sports Coaching",
+    "name_ar": "التدريب الرياضي",
+    "family": "domain"
+  },
+  {
+    "id": "curation_heritage",
+    "name_en": "Curation & Heritage",
+    "name_ar": "التنسيق المتحفي والتراث",
+    "family": "domain"
+  },
+  {
+    "id": "islamic_studies_skill",
+    "name_en": "Islamic Studies",
+    "name_ar": "الدراسات الإسلامية",
+    "family": "domain"
+  },
+  {
+    "id": "fashion_textiles",
+    "name_en": "Fashion & Textiles",
+    "name_ar": "الأزياء والمنسوجات",
+    "family": "technical"
+  },
+  {
+    "id": "spatial_design",
+    "name_en": "Spatial & Interior Design",
+    "name_ar": "التصميم المكاني والداخلي",
+    "family": "technical"
+  },
+  {
+    "id": "maritime_ops",
+    "name_en": "Maritime Operations",
+    "name_ar": "العمليات البحرية",
+    "family": "domain"
+  },
+  {
+    "id": "agriculture_food",
+    "name_en": "Agriculture & Food Systems",
+    "name_ar": "الزراعة والنظم الغذائية",
+    "family": "domain"
   }
 ]

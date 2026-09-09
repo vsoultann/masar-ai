@@ -1,0 +1,3835 @@
+[
+  {
+    "id": "uaeu",
+    "name": {
+      "en": "United Arab Emirates University",
+      "ar": "جامعة الإمارات العربية المتحدة"
+    },
+    "shortName": {
+      "en": "UAEU",
+      "ar": "جامعة الإمارات"
+    },
+    "type": "federal_public",
+    "emirate": "abu_dhabi",
+    "city": "al_ain",
+    "coordinates": {
+      "lat": 24.2039,
+      "lng": 55.6764
+    },
+    "address": {
+      "en": "Sheikh Khalifa Bin Zayed Street, Al Ain",
+      "ar": "شارع الشيخ خليفة بن زايد، العين"
+    },
+    "website": "https://www.uaeu.ac.ae",
+    "established": 1976,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "agriculture",
+      "architecture",
+      "artificial_intelligence",
+      "biology",
+      "biomedical_sciences",
+      "business_administration",
+      "chemical_engineering",
+      "chemistry",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "curriculum_design",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "economics",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "electrical_engineering",
+      "environmental_engineering",
+      "environmental_science",
+      "finance",
+      "geology",
+      "human_resources",
+      "industrial_engineering",
+      "information_systems",
+      "islamic_studies",
+      "law",
+      "marketing",
+      "materials_engineering",
+      "mathematics",
+      "mechanical_engineering",
+      "mechatronics",
+      "medical_laboratory",
+      "medicine",
+      "nursing",
+      "nutrition",
+      "pharmacy",
+      "physics",
+      "psychology",
+      "public_health",
+      "sharia_law",
+      "sociology",
+      "software_engineering",
+      "special_education",
+      "statistics",
+      "structural_engineering",
+      "translation",
+      "urban_planning",
+      "veterinary"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 80,
+      "emsatRequirements": {
+        "english": 1250,
+        "math": 900,
+        "physics": 900
+      },
+      "trackRequired": [
+        "advanced",
+        "elite",
+        "general"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "The country's oldest federal university, on a large purpose-built campus in Al Ain with separate men's and women's colleges, extensive laboratories and a teaching hospital link.",
+      "ar": "أقدم جامعة اتحادية في الدولة، في حرم جامعي واسع بمدينة العين يضم كليات منفصلة للطلاب والطالبات ومختبرات واسعة وارتباطًا بمستشفى تعليمي."
+    },
+    "media": {
+      "hero": "/images/universities/uaeu.jpg",
+      "thumbnail": "/images/universities/uaeu-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "ku",
+    "name": {
+      "en": "Khalifa University of Science and Technology",
+      "ar": "جامعة خليفة للعلوم والتكنولوجيا"
+    },
+    "shortName": {
+      "en": "Khalifa University",
+      "ar": "جامعة خليفة"
+    },
+    "type": "federal_public",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.4419,
+      "lng": 54.6103
+    },
+    "address": {
+      "en": "Zone 1, Abu Dhabi",
+      "ar": "المنطقة الأولى، أبوظبي"
+    },
+    "website": "https://www.ku.ac.ae",
+    "established": 2007,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "aerospace_engineering",
+      "architecture",
+      "artificial_intelligence",
+      "biology",
+      "biomedical_engineering",
+      "chemical_engineering",
+      "chemistry",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "electrical_engineering",
+      "environmental_engineering",
+      "industrial_engineering",
+      "information_systems",
+      "materials_engineering",
+      "mathematics",
+      "mechanical_engineering",
+      "mechatronics",
+      "medicine",
+      "nuclear_engineering",
+      "petroleum_engineering",
+      "physics",
+      "robotics",
+      "software_engineering",
+      "space_engineering",
+      "statistics",
+      "structural_engineering",
+      "urban_planning"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 85,
+      "emsatRequirements": {
+        "english": 1400,
+        "math": 1100,
+        "physics": 1100
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Research-intensive and heavily engineering-weighted, with laboratories in robotics, nuclear energy and space systems, and strong graduate-research pathways.",
+      "ar": "جامعة بحثية ذات ثقل هندسي كبير، تضم مختبرات في الروبوتات والطاقة النووية وأنظمة الفضاء، ومسارات قوية للدراسات العليا."
+    },
+    "media": {
+      "hero": "/images/universities/ku.jpg",
+      "thumbnail": "/images/universities/ku-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "mbzuai",
+    "name": {
+      "en": "Mohamed bin Zayed University of Artificial Intelligence",
+      "ar": "جامعة محمد بن زايد للذكاء الاصطناعي"
+    },
+    "shortName": {
+      "en": "MBZUAI",
+      "ar": "جامعة محمد بن زايد"
+    },
+    "type": "federal_public",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.4231,
+      "lng": 54.6156
+    },
+    "address": {
+      "en": "Masdar City, Abu Dhabi",
+      "ar": "مدينة مصدر، أبوظبي"
+    },
+    "website": "https://mbzuai.ac.ae",
+    "established": 2019,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "artificial_intelligence",
+      "computer_science",
+      "data_science",
+      "mathematics",
+      "robotics",
+      "statistics"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 90,
+      "emsatRequirements": {
+        "english": 1400,
+        "math": 1250
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "free_for_nationals",
+    "campusLife": {
+      "en": "A graduate-focused AI institute; undergraduates normally enter after a first degree elsewhere, but its outreach and research programmes are open to strong school leavers.",
+      "ar": "معهد متخصص في الذكاء الاصطناعي يركز على الدراسات العليا؛ يلتحق به الطلبة عادةً بعد درجة جامعية أولى، مع برامج تواصل وبحث متاحة للمتفوقين."
+    },
+    "media": {
+      "hero": "/images/universities/mbzuai.jpg",
+      "thumbnail": "/images/universities/mbzuai-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "zu_ad",
+    "name": {
+      "en": "Zayed University — Abu Dhabi",
+      "ar": "جامعة زايد — أبوظبي"
+    },
+    "shortName": {
+      "en": "Zayed University",
+      "ar": "جامعة زايد"
+    },
+    "type": "federal_public",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.4093,
+      "lng": 54.5089
+    },
+    "address": {
+      "en": "Khalifa City, Abu Dhabi",
+      "ar": "مدينة خليفة، أبوظبي"
+    },
+    "website": "https://www.zu.ac.ae",
+    "established": 1998,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "curriculum_design",
+      "cybersecurity_major",
+      "data_science",
+      "digital_media",
+      "economics",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "information_systems",
+      "interior_design",
+      "international_relations",
+      "journalism",
+      "marketing",
+      "mass_communication",
+      "psychology",
+      "public_administration",
+      "sociology",
+      "software_engineering",
+      "special_education",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 75,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Federal university with a strong communication, business and education profile, and a well-known emphasis on graduate employability.",
+      "ar": "جامعة اتحادية ذات حضور قوي في الاتصال وإدارة الأعمال والتربية، مع تركيز معروف على تأهيل الخريجين لسوق العمل."
+    },
+    "media": {
+      "hero": "/images/universities/zu_ad.jpg",
+      "thumbnail": "/images/universities/zu_ad-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "adu",
+    "name": {
+      "en": "Abu Dhabi University",
+      "ar": "جامعة أبوظبي"
+    },
+    "shortName": {
+      "en": "ADU",
+      "ar": "جامعة أبوظبي"
+    },
+    "type": "private",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.3006,
+      "lng": 54.5322
+    },
+    "address": {
+      "en": "Al Ain Road, Abu Dhabi",
+      "ar": "طريق العين، أبوظبي"
+    },
+    "website": "https://www.adu.ac.ae",
+    "established": 2003,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "architecture",
+      "artificial_intelligence",
+      "aviation_management",
+      "biotechnology",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "electrical_engineering",
+      "environmental_engineering",
+      "finance",
+      "human_resources",
+      "industrial_engineering",
+      "information_systems",
+      "law",
+      "marketing",
+      "materials_engineering",
+      "mechanical_engineering",
+      "mechatronics",
+      "medical_laboratory",
+      "nursing",
+      "pharmacy",
+      "psychology",
+      "public_health",
+      "sharia_law",
+      "software_engineering",
+      "structural_engineering",
+      "urban_planning"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 800
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Large private university with campuses in Abu Dhabi, Al Ain and Dubai and a broad professional-degree portfolio.",
+      "ar": "جامعة خاصة كبيرة لها فروع في أبوظبي والعين ودبي، وتقدّم مجموعة واسعة من البرامج المهنية."
+    },
+    "media": {
+      "hero": "/images/universities/adu.jpg",
+      "thumbnail": "/images/universities/adu-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "nyuad",
+    "name": {
+      "en": "New York University Abu Dhabi",
+      "ar": "جامعة نيويورك أبوظبي"
+    },
+    "shortName": {
+      "en": "NYUAD",
+      "ar": "نيويورك أبوظبي"
+    },
+    "type": "international_branch",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.5238,
+      "lng": 54.4348
+    },
+    "address": {
+      "en": "Saadiyat Island, Abu Dhabi",
+      "ar": "جزيرة السعديات، أبوظبي"
+    },
+    "website": "https://nyuad.nyu.edu",
+    "established": 2010,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "biology",
+      "business_administration",
+      "chemistry",
+      "civil_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "electrical_engineering",
+      "environmental_science",
+      "film_production",
+      "finance",
+      "human_resources",
+      "information_systems",
+      "international_relations",
+      "marketing",
+      "mathematics",
+      "mechanical_engineering",
+      "physics",
+      "political_science",
+      "psychology",
+      "software_engineering",
+      "statistics"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 90,
+      "emsatRequirements": {
+        "english": 1400,
+        "math": 1100
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "premium",
+    "campusLife": {
+      "en": "Highly selective liberal-arts and sciences campus on Saadiyat Island, with need-based aid and a strongly international student body.",
+      "ar": "حرم جامعي شديد الانتقائية للعلوم والفنون الحرة في جزيرة السعديات، يقدّم مساعدات مالية قائمة على الحاجة ويضم طلبة من جنسيات متعددة."
+    },
+    "media": {
+      "hero": "/images/universities/nyuad.jpg",
+      "thumbnail": "/images/universities/nyuad-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "sorbonne_ad",
+    "name": {
+      "en": "Sorbonne University Abu Dhabi",
+      "ar": "جامعة السوربون أبوظبي"
+    },
+    "shortName": {
+      "en": "Sorbonne AD",
+      "ar": "السوربون أبوظبي"
+    },
+    "type": "international_branch",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.4672,
+      "lng": 54.3266
+    },
+    "address": {
+      "en": "Al Reem Island, Abu Dhabi",
+      "ar": "جزيرة الريم، أبوظبي"
+    },
+    "website": "https://www.sorbonne.ae",
+    "established": 2006,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "business_administration",
+      "economics",
+      "finance",
+      "human_resources",
+      "international_relations",
+      "law",
+      "marketing",
+      "museum_studies",
+      "photography",
+      "political_science",
+      "sharia_law",
+      "sociology",
+      "translation"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 75,
+      "emsatRequirements": {
+        "english": 1100
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "premium",
+    "campusLife": {
+      "en": "French-model humanities, law and management degrees taught on Al Reem Island, with French language study built into most programmes.",
+      "ar": "برامج في العلوم الإنسانية والقانون والإدارة وفق النموذج الفرنسي في جزيرة الريم، مع دراسة اللغة الفرنسية ضمن معظم البرامج."
+    },
+    "media": {
+      "hero": "/images/universities/sorbonne_ad.jpg",
+      "thumbnail": "/images/universities/sorbonne_ad-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "rabdan",
+    "name": {
+      "en": "Rabdan Academy",
+      "ar": "أكاديمية ربدان"
+    },
+    "shortName": {
+      "en": "Rabdan",
+      "ar": "ربدان"
+    },
+    "type": "local_public",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.4008,
+      "lng": 54.5695
+    },
+    "address": {
+      "en": "Al Dhafra, Abu Dhabi",
+      "ar": "الظفرة، أبوظبي"
+    },
+    "website": "https://www.ra.ac.ae",
+    "established": 2013,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "business_administration",
+      "criminology",
+      "homeland_security",
+      "military_science",
+      "paramedic_science",
+      "public_administration",
+      "public_policy"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Specialises in safety, security, defence and emergency preparedness, with programmes designed around serving professionals as well as school leavers.",
+      "ar": "متخصصة في السلامة والأمن والدفاع والتأهب للطوارئ، ببرامج مصمّمة للمهنيين العاملين وخريجي الثانوية على حد سواء."
+    },
+    "media": {
+      "hero": "/images/universities/rabdan.jpg",
+      "thumbnail": "/images/universities/rabdan-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "adnoc_academy",
+    "name": {
+      "en": "ADNOC Technical Academy",
+      "ar": "أكاديمية أدنوك التقنية"
+    },
+    "shortName": {
+      "en": "ATA",
+      "ar": "أكاديمية أدنوك"
+    },
+    "type": "technical",
+    "emirate": "abu_dhabi",
+    "city": "ruwais",
+    "coordinates": {
+      "lat": 24.1103,
+      "lng": 52.7306
+    },
+    "address": {
+      "en": "Ruwais, Al Dhafra",
+      "ar": "الرويس، الظفرة"
+    },
+    "website": "https://www.adnoc.ae",
+    "established": 1978,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "chemical_engineering",
+      "electrical_engineering",
+      "industrial_engineering",
+      "mechanical_engineering",
+      "petroleum_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1000,
+        "math": 800,
+        "physics": 800
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "free_for_nationals",
+    "campusLife": {
+      "en": "Technical academy feeding the national energy sector, combining classroom study with plant-based training and a strong employment pathway.",
+      "ar": "أكاديمية تقنية تغذّي قطاع الطاقة الوطني، تجمع بين الدراسة النظرية والتدريب داخل المنشآت مع مسار توظيف قوي."
+    },
+    "media": {
+      "hero": "/images/universities/adnoc_academy.jpg",
+      "thumbnail": "/images/universities/adnoc_academy-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "ecae",
+    "name": {
+      "en": "Emirates College for Advanced Education",
+      "ar": "كلية الإمارات للتطوير التربوي"
+    },
+    "shortName": {
+      "en": "ECAE",
+      "ar": "كلية الإمارات"
+    },
+    "type": "local_public",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.4112,
+      "lng": 54.5478
+    },
+    "address": {
+      "en": "Al Muroor, Abu Dhabi",
+      "ar": "المرور، أبوظبي"
+    },
+    "website": "https://www.ecae.ac.ae",
+    "established": 2007,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "curriculum_design",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "islamic_studies",
+      "psychology",
+      "special_education"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Dedicated teacher-education college with classroom placements from the first year.",
+      "ar": "كلية متخصصة في إعداد المعلمين مع تدريب ميداني في المدارس منذ السنة الأولى."
+    },
+    "media": {
+      "hero": "/images/universities/ecae.jpg",
+      "thumbnail": "/images/universities/ecae-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "kic",
+    "name": {
+      "en": "Khawarizmi International College",
+      "ar": "كلية الخوارزمي الدولية"
+    },
+    "shortName": {
+      "en": "KIC",
+      "ar": "الخوارزمي"
+    },
+    "type": "private",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.4275,
+      "lng": 54.4453
+    },
+    "address": {
+      "en": "Al Zahiyah, Abu Dhabi",
+      "ar": "الزاهية، أبوظبي"
+    },
+    "website": "https://www.khawarizmi.com",
+    "established": 1985,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "human_resources",
+      "information_systems",
+      "interior_design",
+      "marketing",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 65,
+      "emsatRequirements": {
+        "english": 1000
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Applied college with small cohorts and a vocational, employment-first emphasis.",
+      "ar": "كلية تطبيقية بأعداد طلابية صغيرة وتركيز مهني موجّه نحو التوظيف."
+    },
+    "media": {
+      "hero": "/images/universities/kic.jpg",
+      "thumbnail": "/images/universities/kic-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "aau_alain",
+    "name": {
+      "en": "Al Ain University",
+      "ar": "جامعة العين"
+    },
+    "shortName": {
+      "en": "AAU",
+      "ar": "جامعة العين"
+    },
+    "type": "private",
+    "emirate": "abu_dhabi",
+    "city": "al_ain",
+    "coordinates": {
+      "lat": 24.1985,
+      "lng": 55.7186
+    },
+    "address": {
+      "en": "Al Ain University Street, Al Ain",
+      "ar": "شارع جامعة العين، العين"
+    },
+    "website": "https://www.aau.ac.ae",
+    "established": 1999,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "finance",
+      "human_resources",
+      "industrial_engineering",
+      "information_systems",
+      "law",
+      "marketing",
+      "mass_communication",
+      "mechanical_engineering",
+      "pharmacy",
+      "psychology",
+      "sharia_law",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 65,
+      "emsatRequirements": {
+        "english": 1000,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Private university with campuses in Al Ain and Abu Dhabi and a well-established pharmacy and law profile.",
+      "ar": "جامعة خاصة لها حرمان في العين وأبوظبي، وتشتهر ببرامج الصيدلة والقانون."
+    },
+    "media": {
+      "hero": "/images/universities/aau_alain.jpg",
+      "thumbnail": "/images/universities/aau_alain-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "hct_abu_dhabi",
+    "name": {
+      "en": "Higher Colleges of Technology — Abu Dhabi",
+      "ar": "كليات التقنية العليا — أبوظبي"
+    },
+    "shortName": {
+      "en": "HCT Abu Dhabi",
+      "ar": "كليات التقنية — أبوظبي"
+    },
+    "type": "federal_public",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.4256,
+      "lng": 54.4451
+    },
+    "address": {
+      "en": "Abu Dhabi Campus",
+      "ar": "حرم أبوظبي"
+    },
+    "website": "https://www.hct.ac.ae",
+    "established": 1988,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "aviation_management",
+      "business_administration",
+      "civil_engineering",
+      "computer_science",
+      "culinary_arts",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "event_management",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "hospitality_management",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "mechanical_engineering",
+      "nursing",
+      "paramedic_science",
+      "radiography",
+      "software_engineering",
+      "supply_chain",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Applied, employment-focused federal college. Programmes are built around work placements, and the campus network means most students can study close to home.",
+      "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
+    },
+    "media": {
+      "hero": "/images/universities/hct_abu_dhabi.jpg",
+      "thumbnail": "/images/universities/hct_abu_dhabi-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "hct_al_ain",
+    "name": {
+      "en": "Higher Colleges of Technology — Al Ain",
+      "ar": "كليات التقنية العليا — العين"
+    },
+    "shortName": {
+      "en": "HCT Al Ain",
+      "ar": "كليات التقنية — العين"
+    },
+    "type": "federal_public",
+    "emirate": "abu_dhabi",
+    "city": "al_ain",
+    "coordinates": {
+      "lat": 24.2075,
+      "lng": 55.7447
+    },
+    "address": {
+      "en": "Al Ain Campus",
+      "ar": "حرم العين"
+    },
+    "website": "https://www.hct.ac.ae",
+    "established": 1988,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "aviation_management",
+      "business_administration",
+      "civil_engineering",
+      "computer_science",
+      "culinary_arts",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "event_management",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "hospitality_management",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "mechanical_engineering",
+      "nursing",
+      "paramedic_science",
+      "radiography",
+      "software_engineering",
+      "supply_chain",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Applied, employment-focused federal college. Programmes are built around work placements, and the campus network means most students can study close to home.",
+      "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
+    },
+    "media": {
+      "hero": "/images/universities/hct_al_ain.jpg",
+      "thumbnail": "/images/universities/hct_al_ain-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "hct_madinat_zayed",
+    "name": {
+      "en": "Higher Colleges of Technology — Madinat Zayed",
+      "ar": "كليات التقنية العليا — مدينة زايد"
+    },
+    "shortName": {
+      "en": "HCT Madinat Zayed",
+      "ar": "كليات التقنية — مدينة زايد"
+    },
+    "type": "federal_public",
+    "emirate": "abu_dhabi",
+    "city": "al_dhafra",
+    "coordinates": {
+      "lat": 23.6503,
+      "lng": 53.7006
+    },
+    "address": {
+      "en": "Madinat Zayed Campus",
+      "ar": "حرم مدينة زايد"
+    },
+    "website": "https://www.hct.ac.ae",
+    "established": 1988,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "aviation_management",
+      "business_administration",
+      "civil_engineering",
+      "computer_science",
+      "culinary_arts",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "event_management",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "hospitality_management",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "mechanical_engineering",
+      "nursing",
+      "paramedic_science",
+      "radiography",
+      "software_engineering",
+      "supply_chain",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Applied, employment-focused federal college. Programmes are built around work placements, and the campus network means most students can study close to home.",
+      "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
+    },
+    "media": {
+      "hero": "/images/universities/hct_madinat_zayed.jpg",
+      "thumbnail": "/images/universities/hct_madinat_zayed-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "hct_ruwais",
+    "name": {
+      "en": "Higher Colleges of Technology — Ruwais",
+      "ar": "كليات التقنية العليا — الرويس"
+    },
+    "shortName": {
+      "en": "HCT Ruwais",
+      "ar": "كليات التقنية — الرويس"
+    },
+    "type": "federal_public",
+    "emirate": "abu_dhabi",
+    "city": "al_dhafra",
+    "coordinates": {
+      "lat": 24.0906,
+      "lng": 52.73
+    },
+    "address": {
+      "en": "Ruwais Campus",
+      "ar": "حرم الرويس"
+    },
+    "website": "https://www.hct.ac.ae",
+    "established": 1988,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "aviation_management",
+      "business_administration",
+      "civil_engineering",
+      "computer_science",
+      "culinary_arts",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "event_management",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "hospitality_management",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "mechanical_engineering",
+      "nursing",
+      "paramedic_science",
+      "radiography",
+      "software_engineering",
+      "supply_chain",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Applied, employment-focused federal college. Programmes are built around work placements, and the campus network means most students can study close to home.",
+      "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
+    },
+    "media": {
+      "hero": "/images/universities/hct_ruwais.jpg",
+      "thumbnail": "/images/universities/hct_ruwais-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "hct_dubai",
+    "name": {
+      "en": "Higher Colleges of Technology — Dubai",
+      "ar": "كليات التقنية العليا — دبي"
+    },
+    "shortName": {
+      "en": "HCT Dubai",
+      "ar": "كليات التقنية — دبي"
+    },
+    "type": "federal_public",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.2166,
+      "lng": 55.3647
+    },
+    "address": {
+      "en": "Dubai Campus",
+      "ar": "حرم دبي"
+    },
+    "website": "https://www.hct.ac.ae",
+    "established": 1988,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "aviation_management",
+      "business_administration",
+      "civil_engineering",
+      "computer_science",
+      "culinary_arts",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "event_management",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "hospitality_management",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "mechanical_engineering",
+      "nursing",
+      "paramedic_science",
+      "radiography",
+      "software_engineering",
+      "supply_chain",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Applied, employment-focused federal college. Programmes are built around work placements, and the campus network means most students can study close to home.",
+      "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
+    },
+    "media": {
+      "hero": "/images/universities/hct_dubai.jpg",
+      "thumbnail": "/images/universities/hct_dubai-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "hct_sharjah",
+    "name": {
+      "en": "Higher Colleges of Technology — Sharjah",
+      "ar": "كليات التقنية العليا — الشارقة"
+    },
+    "shortName": {
+      "en": "HCT Sharjah",
+      "ar": "كليات التقنية — الشارقة"
+    },
+    "type": "federal_public",
+    "emirate": "sharjah",
+    "city": "sharjah_city",
+    "coordinates": {
+      "lat": 25.2937,
+      "lng": 55.4756
+    },
+    "address": {
+      "en": "Sharjah Campus",
+      "ar": "حرم الشارقة"
+    },
+    "website": "https://www.hct.ac.ae",
+    "established": 1988,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "aviation_management",
+      "business_administration",
+      "civil_engineering",
+      "computer_science",
+      "culinary_arts",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "event_management",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "hospitality_management",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "mechanical_engineering",
+      "nursing",
+      "paramedic_science",
+      "radiography",
+      "software_engineering",
+      "supply_chain",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Applied, employment-focused federal college. Programmes are built around work placements, and the campus network means most students can study close to home.",
+      "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
+    },
+    "media": {
+      "hero": "/images/universities/hct_sharjah.jpg",
+      "thumbnail": "/images/universities/hct_sharjah-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "hct_fujairah",
+    "name": {
+      "en": "Higher Colleges of Technology — Fujairah",
+      "ar": "كليات التقنية العليا — الفجيرة"
+    },
+    "shortName": {
+      "en": "HCT Fujairah",
+      "ar": "كليات التقنية — الفجيرة"
+    },
+    "type": "federal_public",
+    "emirate": "fujairah",
+    "city": "fujairah_city",
+    "coordinates": {
+      "lat": 25.1288,
+      "lng": 56.3265
+    },
+    "address": {
+      "en": "Fujairah Campus",
+      "ar": "حرم الفجيرة"
+    },
+    "website": "https://www.hct.ac.ae",
+    "established": 1988,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "aviation_management",
+      "business_administration",
+      "civil_engineering",
+      "computer_science",
+      "culinary_arts",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "event_management",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "hospitality_management",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "mechanical_engineering",
+      "nursing",
+      "paramedic_science",
+      "radiography",
+      "software_engineering",
+      "supply_chain",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Applied, employment-focused federal college. Programmes are built around work placements, and the campus network means most students can study close to home.",
+      "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
+    },
+    "media": {
+      "hero": "/images/universities/hct_fujairah.jpg",
+      "thumbnail": "/images/universities/hct_fujairah-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "hct_ras_al_khaimah",
+    "name": {
+      "en": "Higher Colleges of Technology — Ras Al Khaimah",
+      "ar": "كليات التقنية العليا — رأس الخيمة"
+    },
+    "shortName": {
+      "en": "HCT Ras Al Khaimah",
+      "ar": "كليات التقنية — رأس الخيمة"
+    },
+    "type": "federal_public",
+    "emirate": "ras_al_khaimah",
+    "city": "rak_city",
+    "coordinates": {
+      "lat": 25.6741,
+      "lng": 55.9804
+    },
+    "address": {
+      "en": "Ras Al Khaimah Campus",
+      "ar": "حرم رأس الخيمة"
+    },
+    "website": "https://www.hct.ac.ae",
+    "established": 1988,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "aviation_management",
+      "business_administration",
+      "civil_engineering",
+      "computer_science",
+      "culinary_arts",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "event_management",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "hospitality_management",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "mechanical_engineering",
+      "nursing",
+      "paramedic_science",
+      "radiography",
+      "software_engineering",
+      "supply_chain",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Applied, employment-focused federal college. Programmes are built around work placements, and the campus network means most students can study close to home.",
+      "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
+    },
+    "media": {
+      "hero": "/images/universities/hct_ras_al_khaimah.jpg",
+      "thumbnail": "/images/universities/hct_ras_al_khaimah-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "zu_dubai",
+    "name": {
+      "en": "Zayed University — Dubai",
+      "ar": "جامعة زايد — دبي"
+    },
+    "shortName": {
+      "en": "Zayed University",
+      "ar": "جامعة زايد"
+    },
+    "type": "federal_public",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.1195,
+      "lng": 55.3903
+    },
+    "address": {
+      "en": "Academic City, Dubai",
+      "ar": "المدينة الأكاديمية، دبي"
+    },
+    "website": "https://www.zu.ac.ae",
+    "established": 1998,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "curriculum_design",
+      "cybersecurity_major",
+      "data_science",
+      "digital_media",
+      "economics",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "information_systems",
+      "interior_design",
+      "journalism",
+      "marketing",
+      "mass_communication",
+      "psychology",
+      "public_administration",
+      "software_engineering",
+      "special_education",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 75,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "The Dubai campus of the federal university, in Academic City, with the same communication, business and education strengths.",
+      "ar": "الحرم الجامعي في دبي التابع للجامعة الاتحادية، في المدينة الأكاديمية، بالتخصصات ذاتها في الاتصال والأعمال والتربية."
+    },
+    "media": {
+      "hero": "/images/universities/zu_dubai.jpg",
+      "thumbnail": "/images/universities/zu_dubai-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "mbru",
+    "name": {
+      "en": "Mohammed Bin Rashid University of Medicine and Health Sciences",
+      "ar": "جامعة محمد بن راشد للطب والعلوم الصحية"
+    },
+    "shortName": {
+      "en": "MBRU",
+      "ar": "جامعة محمد بن راشد"
+    },
+    "type": "local_public",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.1279,
+      "lng": 55.2444
+    },
+    "address": {
+      "en": "Dubai Healthcare City",
+      "ar": "مدينة دبي الطبية"
+    },
+    "website": "https://www.mbru.ac.ae",
+    "established": 2016,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "audiology",
+      "biomedical_sciences",
+      "dentistry",
+      "health_informatics",
+      "medical_laboratory",
+      "medicine",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "physiotherapy",
+      "psychology",
+      "public_health",
+      "radiation_therapy",
+      "radiography",
+      "speech_therapy"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 88,
+      "emsatRequirements": {
+        "english": 1400,
+        "math": 900,
+        "physics": 900
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "premium",
+    "campusLife": {
+      "en": "Dedicated medical and health-sciences university in Dubai Healthcare City, with teaching hospital placements from early in the programme.",
+      "ar": "جامعة متخصصة في الطب والعلوم الصحية في مدينة دبي الطبية، مع تدريب في المستشفيات التعليمية منذ مراحل مبكرة من البرنامج."
+    },
+    "media": {
+      "hero": "/images/universities/mbru.jpg",
+      "thumbnail": "/images/universities/mbru-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "aud",
+    "name": {
+      "en": "American University in Dubai",
+      "ar": "الجامعة الأمريكية في دبي"
+    },
+    "shortName": {
+      "en": "AUD",
+      "ar": "الأمريكية في دبي"
+    },
+    "type": "private",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.0964,
+      "lng": 55.1631
+    },
+    "address": {
+      "en": "Al Sufouh, Dubai",
+      "ar": "الصفوح، دبي"
+    },
+    "website": "https://www.aud.edu",
+    "established": 1995,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "architecture",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "digital_media",
+      "economics",
+      "electrical_engineering",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "information_systems",
+      "interior_design",
+      "international_relations",
+      "journalism",
+      "marketing",
+      "mass_communication",
+      "mechanical_engineering",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "premium",
+    "campusLife": {
+      "en": "American-curriculum private university in Al Sufouh, known for architecture, design and communication.",
+      "ar": "جامعة خاصة تتبع المنهج الأمريكي في الصفوح، معروفة ببرامج العمارة والتصميم والاتصال."
+    },
+    "media": {
+      "hero": "/images/universities/aud.jpg",
+      "thumbnail": "/images/universities/aud-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "ud",
+    "name": {
+      "en": "University of Dubai",
+      "ar": "جامعة دبي"
+    },
+    "shortName": {
+      "en": "UD",
+      "ar": "جامعة دبي"
+    },
+    "type": "private",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.2285,
+      "lng": 55.3906
+    },
+    "address": {
+      "en": "Academic City, Dubai",
+      "ar": "المدينة الأكاديمية، دبي"
+    },
+    "website": "https://www.ud.ac.ae",
+    "established": 1997,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "finance",
+      "human_resources",
+      "information_systems",
+      "law",
+      "marketing",
+      "sharia_law",
+      "software_engineering",
+      "supply_chain"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Business and IT focused university beside Dubai Academic City, with accredited business programmes.",
+      "ar": "جامعة تركّز على الأعمال وتقنية المعلومات بجوار المدينة الأكاديمية بدبي، ببرامج أعمال معتمدة."
+    },
+    "media": {
+      "hero": "/images/universities/ud.jpg",
+      "thumbnail": "/images/universities/ud-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "hw_dubai",
+    "name": {
+      "en": "Heriot-Watt University Dubai",
+      "ar": "جامعة هيريوت وات دبي"
+    },
+    "shortName": {
+      "en": "Heriot-Watt Dubai",
+      "ar": "هيريوت وات"
+    },
+    "type": "international_branch",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.0966,
+      "lng": 55.1607
+    },
+    "address": {
+      "en": "Dubai Knowledge Park",
+      "ar": "مجمع دبي للمعرفة"
+    },
+    "website": "https://www.hw.ac.uk/dubai",
+    "established": 2005,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "actuarial_science",
+      "architecture",
+      "artificial_intelligence",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "construction_management",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "electrical_engineering",
+      "finance",
+      "human_resources",
+      "industrial_engineering",
+      "information_systems",
+      "interior_design",
+      "marketing",
+      "mechanical_engineering",
+      "psychology",
+      "quantity_surveying",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 800
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "premium",
+    "campusLife": {
+      "en": "Dubai campus of the Scottish university, strongest in the built environment, engineering and actuarial subjects.",
+      "ar": "الحرم الجامعي في دبي للجامعة الاسكتلندية، وأقوى برامجه في البيئة العمرانية والهندسة والعلوم الاكتوارية."
+    },
+    "media": {
+      "hero": "/images/universities/hw_dubai.jpg",
+      "thumbnail": "/images/universities/hw_dubai-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "middlesex_dubai",
+    "name": {
+      "en": "Middlesex University Dubai",
+      "ar": "جامعة ميدلسكس دبي"
+    },
+    "shortName": {
+      "en": "Middlesex Dubai",
+      "ar": "ميدلسكس"
+    },
+    "type": "international_branch",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.1122,
+      "lng": 55.3865
+    },
+    "address": {
+      "en": "Dubai Knowledge Park",
+      "ar": "مجمع دبي للمعرفة"
+    },
+    "website": "https://www.mdx.ac.ae",
+    "established": 2005,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "animation",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "digital_media",
+      "economics",
+      "electrical_engineering",
+      "film_production",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "information_systems",
+      "journalism",
+      "law",
+      "marketing",
+      "mass_communication",
+      "mechanical_engineering",
+      "psychology",
+      "software_engineering",
+      "sports_science"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 65,
+      "emsatRequirements": {
+        "english": 1000
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Broad British-curriculum campus in Dubai Knowledge Park, with a wide spread of humanities and creative programmes.",
+      "ar": "حرم جامعي بريطاني المنهج في مجمع دبي للمعرفة، بتنوع واسع في البرامج الإنسانية والإبداعية."
+    },
+    "media": {
+      "hero": "/images/universities/middlesex_dubai.jpg",
+      "thumbnail": "/images/universities/middlesex_dubai-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "bits_dubai",
+    "name": {
+      "en": "BITS Pilani Dubai Campus",
+      "ar": "بيتس بيلاني دبي"
+    },
+    "shortName": {
+      "en": "BITS Dubai",
+      "ar": "بيتس دبي"
+    },
+    "type": "international_branch",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.129,
+      "lng": 55.4131
+    },
+    "address": {
+      "en": "Dubai International Academic City",
+      "ar": "المدينة الأكاديمية الدولية، دبي"
+    },
+    "website": "https://www.bits-pilani.ac.in/dubai",
+    "established": 2000,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "artificial_intelligence",
+      "biotechnology",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "electrical_engineering",
+      "industrial_engineering",
+      "information_systems",
+      "mechanical_engineering",
+      "mechatronics",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 75,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 900,
+        "physics": 900
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Engineering-focused Indian institute campus in Dubai International Academic City, with a competitive entrance route.",
+      "ar": "فرع لمعهد هندسي هندي في المدينة الأكاديمية الدولية بدبي، بمسار قبول تنافسي."
+    },
+    "media": {
+      "hero": "/images/universities/bits_dubai.jpg",
+      "thumbnail": "/images/universities/bits_dubai-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "cud",
+    "name": {
+      "en": "Canadian University Dubai",
+      "ar": "الجامعة الكندية في دبي"
+    },
+    "shortName": {
+      "en": "CUD",
+      "ar": "الكندية في دبي"
+    },
+    "type": "international_branch",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.2048,
+      "lng": 55.2708
+    },
+    "address": {
+      "en": "City Walk, Sheikh Zayed Road, Dubai",
+      "ar": "سيتي ووك، شارع الشيخ زايد، دبي"
+    },
+    "website": "https://www.cud.ac.ae",
+    "established": 2006,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "architecture",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "digital_media",
+      "economics",
+      "electrical_engineering",
+      "environmental_science",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "information_systems",
+      "interior_design",
+      "journalism",
+      "marketing",
+      "mass_communication",
+      "psychology",
+      "public_health",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 65,
+      "emsatRequirements": {
+        "english": 1000
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Canadian-curriculum university on Sheikh Zayed Road, with design, business and health programmes.",
+      "ar": "جامعة كندية المنهج على شارع الشيخ زايد، تقدّم برامج في التصميم والأعمال والصحة."
+    },
+    "media": {
+      "hero": "/images/universities/cud.jpg",
+      "thumbnail": "/images/universities/cud-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "amity_dubai",
+    "name": {
+      "en": "Amity University Dubai",
+      "ar": "جامعة أميتي دبي"
+    },
+    "shortName": {
+      "en": "Amity Dubai",
+      "ar": "أميتي"
+    },
+    "type": "international_branch",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.1178,
+      "lng": 55.409
+    },
+    "address": {
+      "en": "Dubai International Academic City",
+      "ar": "المدينة الأكاديمية الدولية، دبي"
+    },
+    "website": "https://www.amityuniversity.ae",
+    "established": 2011,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "biotechnology",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "fashion_design",
+      "finance",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "mass_communication",
+      "mechanical_engineering",
+      "psychology",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 65,
+      "emsatRequirements": {
+        "english": 1000
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Indian-founded campus in Dubai International Academic City with business, IT and biotechnology programmes.",
+      "ar": "حرم جامعي هندي النشأة في المدينة الأكاديمية الدولية بدبي، ببرامج في الأعمال وتقنية المعلومات والتقنية الحيوية."
+    },
+    "media": {
+      "hero": "/images/universities/amity_dubai.jpg",
+      "thumbnail": "/images/universities/amity_dubai-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "manipal_dubai",
+    "name": {
+      "en": "Manipal Academy of Higher Education Dubai",
+      "ar": "جامعة مانيبال دبي"
+    },
+    "shortName": {
+      "en": "Manipal Dubai",
+      "ar": "مانيبال"
+    },
+    "type": "international_branch",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.1245,
+      "lng": 55.4045
+    },
+    "address": {
+      "en": "Dubai International Academic City",
+      "ar": "المدينة الأكاديمية الدولية، دبي"
+    },
+    "website": "https://www.manipaldubai.com",
+    "established": 2000,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "biotechnology",
+      "business_administration",
+      "civil_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "electrical_engineering",
+      "fashion_design",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "information_systems",
+      "interior_design",
+      "marketing",
+      "mass_communication",
+      "mechanical_engineering",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 65,
+      "emsatRequirements": {
+        "english": 1000,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Broad campus in Dubai International Academic City covering engineering, design and media.",
+      "ar": "حرم جامعي واسع في المدينة الأكاديمية الدولية بدبي يغطي الهندسة والتصميم والإعلام."
+    },
+    "media": {
+      "hero": "/images/universities/manipal_dubai.jpg",
+      "thumbnail": "/images/universities/manipal_dubai-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "birmingham_dubai",
+    "name": {
+      "en": "University of Birmingham Dubai",
+      "ar": "جامعة برمنغهام دبي"
+    },
+    "shortName": {
+      "en": "Birmingham Dubai",
+      "ar": "برمنغهام"
+    },
+    "type": "international_branch",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.1078,
+      "lng": 55.3805
+    },
+    "address": {
+      "en": "Dubai International Academic City",
+      "ar": "المدينة الأكاديمية الدولية، دبي"
+    },
+    "website": "https://www.birmingham.ac.uk/dubai",
+    "established": 2018,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "biology",
+      "business_administration",
+      "chemistry",
+      "civil_engineering",
+      "computer_science",
+      "curriculum_design",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "electrical_engineering",
+      "finance",
+      "human_resources",
+      "information_systems",
+      "international_relations",
+      "marketing",
+      "mathematics",
+      "mechanical_engineering",
+      "physics",
+      "psychology",
+      "software_engineering",
+      "special_education",
+      "statistics"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 75,
+      "emsatRequirements": {
+        "english": 1250,
+        "math": 900
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "premium",
+    "campusLife": {
+      "en": "Russell Group campus in Dubai International Academic City, teaching the same degrees as the UK parent.",
+      "ar": "حرم جامعي لمجموعة راسل في المدينة الأكاديمية الدولية بدبي، يمنح الدرجات ذاتها الممنوحة في الجامعة الأم بالمملكة المتحدة."
+    },
+    "media": {
+      "hero": "/images/universities/birmingham_dubai.jpg",
+      "thumbnail": "/images/universities/birmingham_dubai-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "eau",
+    "name": {
+      "en": "Emirates Aviation University",
+      "ar": "جامعة الإمارات للطيران"
+    },
+    "shortName": {
+      "en": "EAU",
+      "ar": "الإمارات للطيران"
+    },
+    "type": "private",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.2532,
+      "lng": 55.3657
+    },
+    "address": {
+      "en": "Dubai International Airport area",
+      "ar": "منطقة مطار دبي الدولي"
+    },
+    "website": "https://www.eau.ac.ae",
+    "established": 1991,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "aerospace_engineering",
+      "air_traffic_management",
+      "aircraft_maintenance",
+      "aviation_management",
+      "business_administration",
+      "mechanical_engineering",
+      "pilot_training",
+      "supply_chain"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 800,
+        "physics": 800
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Aviation-specialist university linked to the Dubai aviation sector, covering engineering, operations and flight training pathways.",
+      "ar": "جامعة متخصصة في الطيران مرتبطة بقطاع الطيران في دبي، تغطي الهندسة والعمليات ومسارات التدريب على الطيران."
+    },
+    "media": {
+      "hero": "/images/universities/eau.jpg",
+      "thumbnail": "/images/universities/eau-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "hbmsu",
+    "name": {
+      "en": "Hamdan Bin Mohammed Smart University",
+      "ar": "جامعة حمدان بن محمد الذكية"
+    },
+    "shortName": {
+      "en": "HBMSU",
+      "ar": "الجامعة الذكية"
+    },
+    "type": "local_public",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.1006,
+      "lng": 55.1739
+    },
+    "address": {
+      "en": "Dubai Academic City",
+      "ar": "المدينة الأكاديمية، دبي"
+    },
+    "website": "https://www.hbmsu.ac.ae",
+    "established": 2002,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "finance",
+      "health_informatics",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "public_administration",
+      "public_health",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1000
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Blended and online-first university, useful for students who need to study alongside work or family commitments.",
+      "ar": "جامعة تعتمد التعلّم المدمج والإلكتروني أولًا، ومناسبة للطلبة الذين يجمعون بين الدراسة والعمل أو الالتزامات الأسرية."
+    },
+    "media": {
+      "hero": "/images/universities/hbmsu.jpg",
+      "thumbnail": "/images/universities/hbmsu-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "aus",
+    "name": {
+      "en": "American University of Sharjah",
+      "ar": "الجامعة الأمريكية في الشارقة"
+    },
+    "shortName": {
+      "en": "AUS",
+      "ar": "الأمريكية بالشارقة"
+    },
+    "type": "private",
+    "emirate": "sharjah",
+    "city": "sharjah_city",
+    "coordinates": {
+      "lat": 25.3113,
+      "lng": 55.4919
+    },
+    "address": {
+      "en": "University City, Sharjah",
+      "ar": "المدينة الجامعية، الشارقة"
+    },
+    "website": "https://www.aus.edu",
+    "established": 1997,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "architecture",
+      "artificial_intelligence",
+      "biology",
+      "business_administration",
+      "chemical_engineering",
+      "chemistry",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "digital_media",
+      "economics",
+      "electrical_engineering",
+      "environmental_engineering",
+      "environmental_science",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "industrial_engineering",
+      "information_systems",
+      "interior_design",
+      "international_relations",
+      "journalism",
+      "marketing",
+      "mass_communication",
+      "materials_engineering",
+      "mathematics",
+      "mechanical_engineering",
+      "mechatronics",
+      "physics",
+      "psychology",
+      "software_engineering",
+      "statistics",
+      "structural_engineering",
+      "translation",
+      "urban_planning"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 80,
+      "emsatRequirements": {
+        "english": 1250,
+        "math": 900,
+        "physics": 900
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "premium",
+    "campusLife": {
+      "en": "Selective American-curriculum university in University City, consistently strong in engineering, architecture and business.",
+      "ar": "جامعة انتقائية تتبع المنهج الأمريكي في المدينة الجامعية، وتتميّز باستمرار في الهندسة والعمارة وإدارة الأعمال."
+    },
+    "media": {
+      "hero": "/images/universities/aus.jpg",
+      "thumbnail": "/images/universities/aus-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "sharjah_univ",
+    "name": {
+      "en": "University of Sharjah",
+      "ar": "جامعة الشارقة"
+    },
+    "shortName": {
+      "en": "UoS",
+      "ar": "جامعة الشارقة"
+    },
+    "type": "local_public",
+    "emirate": "sharjah",
+    "city": "sharjah_city",
+    "coordinates": {
+      "lat": 25.2903,
+      "lng": 55.483
+    },
+    "address": {
+      "en": "University City, Sharjah",
+      "ar": "المدينة الجامعية، الشارقة"
+    },
+    "website": "https://www.sharjah.ac.ae",
+    "established": 1997,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "architecture",
+      "artificial_intelligence",
+      "audiology",
+      "biology",
+      "business_administration",
+      "chemical_engineering",
+      "chemistry",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "curriculum_design",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "digital_media",
+      "economics",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "electrical_engineering",
+      "environmental_engineering",
+      "finance",
+      "geology",
+      "graphic_design",
+      "health_informatics",
+      "human_resources",
+      "industrial_engineering",
+      "information_systems",
+      "islamic_studies",
+      "journalism",
+      "law",
+      "marketing",
+      "mass_communication",
+      "materials_engineering",
+      "mathematics",
+      "mechanical_engineering",
+      "mechatronics",
+      "medical_laboratory",
+      "medicine",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "pharmacy",
+      "physics",
+      "physiotherapy",
+      "psychology",
+      "public_health",
+      "radiography",
+      "sharia_law",
+      "sociology",
+      "software_engineering",
+      "special_education",
+      "speech_therapy",
+      "statistics",
+      "structural_engineering",
+      "translation",
+      "urban_planning"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 75,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 800
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Large comprehensive university with medical, dental and health colleges alongside engineering, sharia and humanities faculties.",
+      "ar": "جامعة شاملة كبيرة تضم كليات الطب وطب الأسنان والعلوم الصحية إلى جانب الهندسة والشريعة والعلوم الإنسانية."
+    },
+    "media": {
+      "hero": "/images/universities/sharjah_univ.jpg",
+      "thumbnail": "/images/universities/sharjah_univ-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "alqasimia",
+    "name": {
+      "en": "Al Qasimia University",
+      "ar": "جامعة القاسمية"
+    },
+    "shortName": {
+      "en": "AQU",
+      "ar": "القاسمية"
+    },
+    "type": "local_public",
+    "emirate": "sharjah",
+    "city": "sharjah_city",
+    "coordinates": {
+      "lat": 25.2951,
+      "lng": 55.4735
+    },
+    "address": {
+      "en": "Al Rahmaniya, Sharjah",
+      "ar": "الرحمانية، الشارقة"
+    },
+    "website": "https://alqasimia.ac.ae",
+    "established": 2013,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "ar",
+      "en"
+    ],
+    "majorsOffered": [
+      "business_administration",
+      "education_primary",
+      "islamic_studies",
+      "law",
+      "sharia_law",
+      "translation"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 900
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "free_for_nationals",
+    "campusLife": {
+      "en": "Arabic-first university focused on Islamic studies, sharia and Arabic language, with a strongly international student body.",
+      "ar": "جامعة تعتمد العربية أولًا وتركّز على الدراسات الإسلامية والشريعة واللغة العربية، وتضم طلبة من جنسيات متعددة."
+    },
+    "media": {
+      "hero": "/images/universities/alqasimia.jpg",
+      "thumbnail": "/images/universities/alqasimia-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "skyline",
+    "name": {
+      "en": "Skyline University College",
+      "ar": "كلية سكاي لاين الجامعية"
+    },
+    "shortName": {
+      "en": "Skyline",
+      "ar": "سكاي لاين"
+    },
+    "type": "private",
+    "emirate": "sharjah",
+    "city": "sharjah_city",
+    "coordinates": {
+      "lat": 25.2874,
+      "lng": 55.4692
+    },
+    "address": {
+      "en": "University City Road, Sharjah",
+      "ar": "شارع المدينة الجامعية، الشارقة"
+    },
+    "website": "https://www.skylineuniversity.ac.ae",
+    "established": 1990,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "business_administration",
+      "digital_media",
+      "economics",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "information_systems",
+      "marketing",
+      "supply_chain"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 60,
+      "emsatRequirements": {
+        "english": 1000
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Business-focused college with small classes and a practical, industry-linked teaching style.",
+      "ar": "كلية تركّز على إدارة الأعمال بأعداد صغيرة في الصفوف وأسلوب تدريس عملي مرتبط بالقطاع."
+    },
+    "media": {
+      "hero": "/images/universities/skyline.jpg",
+      "thumbnail": "/images/universities/skyline-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "ajman_univ",
+    "name": {
+      "en": "Ajman University",
+      "ar": "جامعة عجمان"
+    },
+    "shortName": {
+      "en": "AU",
+      "ar": "جامعة عجمان"
+    },
+    "type": "private",
+    "emirate": "ajman",
+    "city": "ajman_city",
+    "coordinates": {
+      "lat": 25.396,
+      "lng": 55.4795
+    },
+    "address": {
+      "en": "University Street, Ajman",
+      "ar": "شارع الجامعة، عجمان"
+    },
+    "website": "https://www.ajman.ac.ae",
+    "established": 1988,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "architecture",
+      "artificial_intelligence",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "digital_media",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "industrial_engineering",
+      "information_systems",
+      "interior_design",
+      "journalism",
+      "law",
+      "marketing",
+      "mass_communication",
+      "mechanical_engineering",
+      "pharmacy",
+      "physiotherapy",
+      "sharia_law",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Long-established private university with dentistry, pharmacy and engineering colleges and a compact single campus.",
+      "ar": "جامعة خاصة عريقة تضم كليات طب الأسنان والصيدلة والهندسة في حرم جامعي واحد متقارب."
+    },
+    "media": {
+      "hero": "/images/universities/ajman_univ.jpg",
+      "thumbnail": "/images/universities/ajman_univ-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "gmu",
+    "name": {
+      "en": "Gulf Medical University",
+      "ar": "جامعة الخليج الطبية"
+    },
+    "shortName": {
+      "en": "GMU",
+      "ar": "الخليج الطبية"
+    },
+    "type": "private",
+    "emirate": "ajman",
+    "city": "ajman_city",
+    "coordinates": {
+      "lat": 25.4051,
+      "lng": 55.5136
+    },
+    "address": {
+      "en": "Al Jurf, Ajman",
+      "ar": "الجرف، عجمان"
+    },
+    "website": "https://www.gmu.ac.ae",
+    "established": 1998,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "audiology",
+      "biomedical_sciences",
+      "dentistry",
+      "health_informatics",
+      "medical_laboratory",
+      "medicine",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "pharmacy",
+      "physiotherapy",
+      "prosthetics_orthotics",
+      "psychology",
+      "public_health",
+      "radiation_therapy",
+      "radiography",
+      "speech_therapy"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 80,
+      "emsatRequirements": {
+        "english": 1250,
+        "math": 800,
+        "physics": 800
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "premium",
+    "campusLife": {
+      "en": "Private health-sciences university with its own teaching hospital network across the northern emirates.",
+      "ar": "جامعة خاصة للعلوم الصحية لها شبكة مستشفيات تعليمية خاصة بها في الإمارات الشمالية."
+    },
+    "media": {
+      "hero": "/images/universities/gmu.jpg",
+      "thumbnail": "/images/universities/gmu-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "cua",
+    "name": {
+      "en": "City University Ajman",
+      "ar": "جامعة المدينة عجمان"
+    },
+    "shortName": {
+      "en": "CUA",
+      "ar": "المدينة عجمان"
+    },
+    "type": "private",
+    "emirate": "ajman",
+    "city": "ajman_city",
+    "coordinates": {
+      "lat": 25.3873,
+      "lng": 55.4451
+    },
+    "address": {
+      "en": "Al Tallah 2, Ajman",
+      "ar": "الطلة 2، عجمان"
+    },
+    "website": "https://www.cua.ac.ae",
+    "established": 2005,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "architecture",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "finance",
+      "human_resources",
+      "information_systems",
+      "interior_design",
+      "law",
+      "marketing",
+      "mass_communication",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 60,
+      "emsatRequirements": {
+        "english": 1000
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Small private university offering business, IT and design degrees at accessible fee levels.",
+      "ar": "جامعة خاصة صغيرة تقدّم برامج في الأعمال وتقنية المعلومات والتصميم برسوم في المتناول."
+    },
+    "media": {
+      "hero": "/images/universities/cua.jpg",
+      "thumbnail": "/images/universities/cua-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "uaq_univ",
+    "name": {
+      "en": "University of Umm Al Quwain",
+      "ar": "جامعة أم القيوين"
+    },
+    "shortName": {
+      "en": "UAQU",
+      "ar": "أم القيوين"
+    },
+    "type": "private",
+    "emirate": "umm_al_quwain",
+    "city": "uaq_city",
+    "coordinates": {
+      "lat": 25.5514,
+      "lng": 55.553
+    },
+    "address": {
+      "en": "Umm Al Quwain",
+      "ar": "أم القيوين"
+    },
+    "website": "https://uaqu.ac.ae",
+    "established": 2013,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "finance",
+      "human_resources",
+      "information_systems",
+      "interior_design",
+      "law",
+      "marketing",
+      "mass_communication",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 60,
+      "emsatRequirements": {
+        "english": 1000
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "The emirate's own university, small and locally focused, serving students in the northern emirates.",
+      "ar": "جامعة الإمارة، صغيرة الحجم وذات توجّه محلي، تخدم طلبة الإمارات الشمالية."
+    },
+    "media": {
+      "hero": "/images/universities/uaq_univ.jpg",
+      "thumbnail": "/images/universities/uaq_univ-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "rakmhsu",
+    "name": {
+      "en": "RAK Medical and Health Sciences University",
+      "ar": "جامعة رأس الخيمة للطب والعلوم الصحية"
+    },
+    "shortName": {
+      "en": "RAKMHSU",
+      "ar": "رأس الخيمة الطبية"
+    },
+    "type": "private",
+    "emirate": "ras_al_khaimah",
+    "city": "rak_city",
+    "coordinates": {
+      "lat": 25.6741,
+      "lng": 55.9432
+    },
+    "address": {
+      "en": "Al Juwais, Ras Al Khaimah",
+      "ar": "الجويس، رأس الخيمة"
+    },
+    "website": "https://www.rakmhsu.ac.ae",
+    "established": 2006,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "audiology",
+      "biomedical_sciences",
+      "dentistry",
+      "health_informatics",
+      "medical_laboratory",
+      "medicine",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "pharmacy",
+      "physiotherapy",
+      "public_health",
+      "radiography",
+      "speech_therapy"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 78,
+      "emsatRequirements": {
+        "english": 1250,
+        "math": 800,
+        "physics": 800
+      },
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "premium",
+    "campusLife": {
+      "en": "Health-sciences university in the northern emirates, with clinical placements in RAK hospitals.",
+      "ar": "جامعة للعلوم الصحية في الإمارات الشمالية، مع تدريب سريري في مستشفيات رأس الخيمة."
+    },
+    "media": {
+      "hero": "/images/universities/rakmhsu.jpg",
+      "thumbnail": "/images/universities/rakmhsu-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "aurak",
+    "name": {
+      "en": "American University of Ras Al Khaimah",
+      "ar": "الجامعة الأمريكية في رأس الخيمة"
+    },
+    "shortName": {
+      "en": "AURAK",
+      "ar": "الأمريكية برأس الخيمة"
+    },
+    "type": "private",
+    "emirate": "ras_al_khaimah",
+    "city": "rak_city",
+    "coordinates": {
+      "lat": 25.7433,
+      "lng": 55.9231
+    },
+    "address": {
+      "en": "Al Jazeerah Al Hamra, Ras Al Khaimah",
+      "ar": "الجزيرة الحمراء، رأس الخيمة"
+    },
+    "website": "https://aurak.ac.ae",
+    "established": 2009,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "architecture",
+      "artificial_intelligence",
+      "biotechnology",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "electrical_engineering",
+      "finance",
+      "human_resources",
+      "industrial_engineering",
+      "information_systems",
+      "international_relations",
+      "marketing",
+      "mass_communication",
+      "mechanical_engineering",
+      "petroleum_engineering",
+      "psychology",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100,
+        "math": 800
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "American-curriculum university with engineering, business and arts programmes and a quiet campus setting.",
+      "ar": "جامعة تتبع المنهج الأمريكي ببرامج في الهندسة والأعمال والآداب في حرم جامعي هادئ."
+    },
+    "media": {
+      "hero": "/images/universities/aurak.jpg",
+      "thumbnail": "/images/universities/aurak-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "uof",
+    "name": {
+      "en": "University of Fujairah",
+      "ar": "جامعة الفجيرة"
+    },
+    "shortName": {
+      "en": "UoF",
+      "ar": "جامعة الفجيرة"
+    },
+    "type": "private",
+    "emirate": "fujairah",
+    "city": "fujairah_city",
+    "coordinates": {
+      "lat": 25.1279,
+      "lng": 56.3264
+    },
+    "address": {
+      "en": "Fujairah City",
+      "ar": "مدينة الفجيرة"
+    },
+    "website": "https://uof.ac.ae",
+    "established": 2006,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "environmental_science",
+      "finance",
+      "human_resources",
+      "information_systems",
+      "law",
+      "marketing",
+      "mass_communication",
+      "software_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 60,
+      "emsatRequirements": {
+        "english": 1000
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "The emirate's university on the east coast, giving Fujairah students a local option across business, IT and law.",
+      "ar": "جامعة الإمارة على الساحل الشرقي، تتيح لطلبة الفجيرة خيارًا محليًا في الأعمال وتقنية المعلومات والقانون."
+    },
+    "media": {
+      "hero": "/images/universities/uof.jpg",
+      "thumbnail": "/images/universities/uof-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "eif",
+    "name": {
+      "en": "Emirates Institute of Finance",
+      "ar": "معهد الإمارات للتمويل"
+    },
+    "shortName": {
+      "en": "EIF",
+      "ar": "معهد التمويل"
+    },
+    "type": "technical",
+    "emirate": "sharjah",
+    "city": "sharjah_city",
+    "coordinates": {
+      "lat": 25.3462,
+      "lng": 55.4209
+    },
+    "address": {
+      "en": "Al Nahda, Sharjah",
+      "ar": "النهدة، الشارقة"
+    },
+    "website": "https://www.eibfs.ae",
+    "established": 1983,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "accounting",
+      "business_administration",
+      "economics",
+      "finance",
+      "information_systems",
+      "islamic_finance"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 65,
+      "emsatRequirements": {
+        "english": 1000,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Banking and finance institute training much of the sector's national workforce, with campuses in Sharjah, Abu Dhabi and Dubai.",
+      "ar": "معهد للمصارف والتمويل يدرّب جزءًا كبيرًا من الكوادر الوطنية في القطاع، وله فروع في الشارقة وأبوظبي ودبي."
+    },
+    "media": {
+      "hero": "/images/universities/eif.jpg",
+      "thumbnail": "/images/universities/eif-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "etisalat_academy",
+    "name": {
+      "en": "Etisalat Academy",
+      "ar": "أكاديمية اتصالات"
+    },
+    "shortName": {
+      "en": "Etisalat Academy",
+      "ar": "أكاديمية اتصالات"
+    },
+    "type": "technical",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.1786,
+      "lng": 55.3862
+    },
+    "address": {
+      "en": "Muhaisnah, Dubai",
+      "ar": "محيصنة، دبي"
+    },
+    "website": "https://www.etisalatacademy.ae",
+    "established": 1983,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "information_systems",
+      "network_engineering"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 65,
+      "emsatRequirements": {
+        "english": 1000,
+        "math": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Telecommunications and ICT training institute, oriented to professional certification and sector entry rather than long degrees.",
+      "ar": "معهد تدريب في الاتصالات وتقنية المعلومات، موجّه نحو الشهادات المهنية ودخول القطاع أكثر من الدرجات الطويلة."
+    },
+    "media": {
+      "hero": "/images/universities/etisalat_academy.jpg",
+      "thumbnail": "/images/universities/etisalat_academy-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "adsg",
+    "name": {
+      "en": "Abu Dhabi School of Government",
+      "ar": "مدرسة أبوظبي للحكومة"
+    },
+    "shortName": {
+      "en": "ADSG",
+      "ar": "أبوظبي للحكومة"
+    },
+    "type": "technical",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.4539,
+      "lng": 54.3773
+    },
+    "address": {
+      "en": "Abu Dhabi",
+      "ar": "أبوظبي"
+    },
+    "website": "https://www.adsg.abudhabi.ae",
+    "established": 2019,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en",
+      "ar"
+    ],
+    "majorsOffered": [
+      "business_administration",
+      "data_science",
+      "human_resources",
+      "public_administration",
+      "public_policy"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 65,
+      "emsatRequirements": {
+        "english": 1000
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "free_for_nationals",
+    "campusLife": {
+      "en": "Government-sector training school rather than a degree university: short professional programmes for public-service careers.",
+      "ar": "مدرسة تدريب للقطاع الحكومي وليست جامعة تمنح درجات: برامج مهنية قصيرة لمهن الخدمة العامة."
+    },
+    "media": {
+      "hero": "/images/universities/adsg.jpg",
+      "thumbnail": "/images/universities/adsg-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "khalifa_maritime",
+    "name": {
+      "en": "Abu Dhabi Maritime Academy",
+      "ar": "أكاديمية أبوظبي البحرية"
+    },
+    "shortName": {
+      "en": "ADMA",
+      "ar": "البحرية"
+    },
+    "type": "technical",
+    "emirate": "abu_dhabi",
+    "city": "abu_dhabi_city",
+    "coordinates": {
+      "lat": 24.5028,
+      "lng": 54.3826
+    },
+    "address": {
+      "en": "Mina Zayed, Abu Dhabi",
+      "ar": "ميناء زايد، أبوظبي"
+    },
+    "website": "https://www.ports.ae",
+    "established": 2010,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "marine_engineering",
+      "marine_science",
+      "maritime_studies",
+      "supply_chain"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 65,
+      "emsatRequirements": {
+        "english": 1000,
+        "math": 700,
+        "physics": 700
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "public_subsidised",
+    "campusLife": {
+      "en": "Maritime training academy covering deck, engineering and port-operations pathways, with sea-time placements.",
+      "ar": "أكاديمية تدريب بحري تغطي مسارات الملاحة والهندسة وعمليات الموانئ، مع تدريب بحري ميداني."
+    },
+    "media": {
+      "hero": "/images/universities/khalifa_maritime.jpg",
+      "thumbnail": "/images/universities/khalifa_maritime-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "eahm",
+    "name": {
+      "en": "The Emirates Academy of Hospitality Management",
+      "ar": "أكاديمية الإمارات للضيافة"
+    },
+    "shortName": {
+      "en": "EAHM",
+      "ar": "أكاديمية الضيافة"
+    },
+    "type": "private",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.1305,
+      "lng": 55.1908
+    },
+    "address": {
+      "en": "Umm Suqeim, Dubai",
+      "ar": "أم سقيم، دبي"
+    },
+    "website": "https://www.emiratesacademy.edu",
+    "established": 2001,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "business_administration",
+      "culinary_arts",
+      "event_management",
+      "hospitality_management",
+      "marketing",
+      "tourism_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 70,
+      "emsatRequirements": {
+        "english": 1100
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "premium",
+    "campusLife": {
+      "en": "Specialist hospitality school with industry placements built into every year of the programme.",
+      "ar": "مدرسة متخصصة في الضيافة يتضمن برنامجها تدريبًا عمليًا في القطاع كل سنة دراسية."
+    },
+    "media": {
+      "hero": "/images/universities/eahm.jpg",
+      "thumbnail": "/images/universities/eahm-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  },
+  {
+    "id": "ecc_culinary",
+    "name": {
+      "en": "International Centre for Culinary Arts",
+      "ar": "المركز الدولي لفنون الطهي"
+    },
+    "shortName": {
+      "en": "ICCA",
+      "ar": "فنون الطهي"
+    },
+    "type": "technical",
+    "emirate": "dubai",
+    "city": "dubai_city",
+    "coordinates": {
+      "lat": 25.1867,
+      "lng": 55.2635
+    },
+    "address": {
+      "en": "Al Quoz, Dubai",
+      "ar": "القوز، دبي"
+    },
+    "website": "https://www.iccadubai.ae",
+    "established": 2005,
+    "accreditation": "CAA licensed",
+    "languageOfInstruction": [
+      "en"
+    ],
+    "majorsOffered": [
+      "culinary_arts",
+      "hospitality_management"
+    ],
+    "admission": {
+      "minHighSchoolPercent": 60,
+      "emsatRequirements": {
+        "english": 900
+      },
+      "trackRequired": [
+        "general",
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — confirm current requirements with the university.",
+        "ar": "إرشادي فقط — يُرجى تأكيد المتطلبات الحالية مع الجامعة."
+      }
+    },
+    "tuitionBand": "mid",
+    "campusLife": {
+      "en": "Vocational culinary school running professional kitchen programmes and apprenticeship routes.",
+      "ar": "مدرسة مهنية لفنون الطهي تقدّم برامج المطبخ الاحترافي ومسارات التلمذة الصناعية."
+    },
+    "media": {
+      "hero": "/images/universities/ecc_culinary.jpg",
+      "thumbnail": "/images/universities/ecc_culinary-thumb.jpg",
+      "gallery": [],
+      "credit": null
+    }
+  }
+]

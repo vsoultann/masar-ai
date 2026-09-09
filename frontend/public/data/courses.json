@@ -2235,5 +2235,783 @@
     "description_en": "Automating geospatial workflows with open-source Python libraries.",
     "description_ar": "أتمتة تدفقات العمل الجغرافية المكانية باستخدام مكتبات بايثون مفتوحة المصدر.",
     "search_query": "Spatial Analysis with Python Udacity"
+  },
+  {
+    "id": "anatomy_physiology",
+    "title_en": "Human Anatomy and Physiology",
+    "title_ar": "التشريح ووظائف الأعضاء",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "life_sciences": 45,
+      "patient_care": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 10,
+    "cost": "free",
+    "language": "en",
+    "description_en": "The body's structure and how its systems work — the prerequisite for every clinical programme.",
+    "description_ar": "بنية الجسم وكيفية عمل أجهزته، وهو المتطلب الأساسي لكل برنامج سريري.",
+    "search_query": "Human Anatomy and Physiology edX"
+  },
+  {
+    "id": "intro_patient_care",
+    "title_en": "Foundations of Patient Care",
+    "title_ar": "أساسيات رعاية المرضى",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "patient_care": 45,
+      "clinical_skills": 20,
+      "counselling": 15
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Communication, dignity, infection control and the basics of caring for a patient safely.",
+    "description_ar": "التواصل والحفاظ على الكرامة ومكافحة العدوى وأساسيات رعاية المريض بأمان.",
+    "search_query": "Foundations of Patient Care Coursera"
+  },
+  {
+    "id": "medical_terminology",
+    "title_en": "Medical Terminology",
+    "title_ar": "المصطلحات الطبية",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "clinical_skills": 30,
+      "attention_detail": 20,
+      "english_language": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "both",
+    "description_en": "The vocabulary clinical work is documented in, including the Latin and Greek roots behind it.",
+    "description_ar": "المفردات التي يُوثَّق بها العمل السريري، بما في ذلك جذورها اللاتينية واليونانية.",
+    "search_query": "Medical Terminology Coursera"
+  },
+  {
+    "id": "radiography_physics",
+    "title_en": "Radiographic Physics and Imaging",
+    "title_ar": "فيزياء الأشعة والتصوير",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "diagnostic_imaging": 50,
+      "physics_reasoning": 30,
+      "attention_detail": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 10,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "How X-ray, CT, MRI and ultrasound images are formed, and what makes one diagnostic and another useless.",
+    "description_ar": "كيفية تكوّن صور الأشعة السينية والمقطعية والرنين والموجات فوق الصوتية، وما يجعل صورة تشخيصية وأخرى عديمة الفائدة.",
+    "search_query": "Radiographic Physics and Imaging edX"
+  },
+  {
+    "id": "ultrasound_fundamentals",
+    "title_en": "Ultrasound Fundamentals",
+    "title_ar": "أساسيات التصوير بالموجات فوق الصوتية",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "diagnostic_imaging": 45,
+      "patient_care": 20,
+      "attention_detail": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Probe handling, standard views and the real-time judgement that scanning requires.",
+    "description_ar": "التعامل مع المسبار والمقاطع القياسية والحكم الآني الذي يتطلبه الفحص.",
+    "search_query": "Ultrasound Fundamentals Coursera"
+  },
+  {
+    "id": "radiation_safety",
+    "title_en": "Radiation Protection and Safety",
+    "title_ar": "الوقاية من الإشعاع والسلامة",
+    "provider": "IAEA open learning",
+    "provider_type": "global",
+    "skills": {
+      "quality_control": 40,
+      "attention_detail": 35,
+      "diagnostic_imaging": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Dose limits, shielding and the justification principle behind every imaging request.",
+    "description_ar": "حدود الجرعات والتدريع ومبدأ التبرير الذي يقوم عليه كل طلب تصوير.",
+    "search_query": "Radiation Protection and Safety IAEA open learning"
+  },
+  {
+    "id": "pharmacology_basics",
+    "title_en": "Principles of Pharmacology",
+    "title_ar": "مبادئ علم الأدوية",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "pharmacology": 50,
+      "life_sciences": 25,
+      "attention_detail": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "en",
+    "description_en": "How drugs act, interact and are cleared — and where the dangerous interactions are.",
+    "description_ar": "كيف تعمل الأدوية وتتفاعل وتُطرح من الجسم، وأين تكمن التداخلات الخطرة.",
+    "search_query": "Principles of Pharmacology edX"
+  },
+  {
+    "id": "clinical_lab_methods",
+    "title_en": "Clinical Laboratory Methods",
+    "title_ar": "طرق المختبرات السريرية",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "lab_diagnostics": 50,
+      "chemistry_lab": 30,
+      "quality_control": 30
+    },
+    "level": "intermediate",
+    "duration_weeks": 9,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Sample handling, assay principles and the quality control that decides whether a result can be released.",
+    "description_ar": "التعامل مع العينات ومبادئ الفحوصات وضبط الجودة الذي يحدّد إمكانية اعتماد النتيجة.",
+    "search_query": "Clinical Laboratory Methods Coursera"
+  },
+  {
+    "id": "emergency_first_response",
+    "title_en": "Emergency Response and Life Support",
+    "title_ar": "الاستجابة للطوارئ ودعم الحياة",
+    "provider": "Red Crescent training",
+    "provider_type": "uae",
+    "skills": {
+      "emergency_response": 50,
+      "patient_care": 25,
+      "teamwork": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 3,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Basic and advanced life support, trauma assessment and working as part of a response team.",
+    "description_ar": "دعم الحياة الأساسي والمتقدم وتقييم الإصابات والعمل ضمن فريق استجابة.",
+    "search_query": "Emergency Response and Life Support Red Crescent training"
+  },
+  {
+    "id": "rehab_principles",
+    "title_en": "Principles of Rehabilitation",
+    "title_ar": "مبادئ إعادة التأهيل",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "rehabilitation": 50,
+      "patient_care": 25,
+      "life_sciences": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Assessment, goal setting and exercise prescription for recovery after injury or illness.",
+    "description_ar": "التقييم وتحديد الأهداف ووصف التمارين للتعافي بعد الإصابة أو المرض.",
+    "search_query": "Principles of Rehabilitation edX"
+  },
+  {
+    "id": "nutrition_science",
+    "title_en": "Nutrition Science and Dietetics",
+    "title_ar": "علوم التغذية والحميات",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "nutrition_diet": 50,
+      "life_sciences": 25,
+      "counselling": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 7,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Macronutrients, metabolic disease and how to build a diet plan a person will actually follow.",
+    "description_ar": "المغذيات الكبرى وأمراض الأيض وكيفية بناء خطة غذائية يمكن للشخص الالتزام بها فعلًا.",
+    "search_query": "Nutrition Science and Dietetics Coursera"
+  },
+  {
+    "id": "counselling_skills",
+    "title_en": "Counselling Skills and Practice",
+    "title_ar": "مهارات الإرشاد والممارسة",
+    "provider": "FutureLearn",
+    "provider_type": "global",
+    "skills": {
+      "counselling": 50,
+      "patient_care": 20,
+      "arabic_language": 15
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Active listening, boundaries and structured therapeutic conversation.",
+    "description_ar": "الإصغاء الفعّال وحدود العلاقة المهنية والمحادثة العلاجية المنظمة.",
+    "search_query": "Counselling Skills and Practice FutureLearn"
+  },
+  {
+    "id": "child_development_course",
+    "title_en": "Child Development",
+    "title_ar": "نمو الطفل",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "child_development": 50,
+      "counselling": 20,
+      "teaching": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Physical, cognitive and social development, and how to spot when it is not following the expected path.",
+    "description_ar": "النمو الجسدي والمعرفي والاجتماعي، وكيفية ملاحظة خروجه عن المسار المتوقع.",
+    "search_query": "Child Development Coursera"
+  },
+  {
+    "id": "dental_assisting",
+    "title_en": "Dental Assisting Fundamentals",
+    "title_ar": "أساسيات مساعدة طب الأسنان",
+    "provider": "Alison",
+    "provider_type": "global",
+    "skills": {
+      "dental_skills": 45,
+      "patient_care": 25,
+      "attention_detail": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Chairside procedure, instrument handling and oral-health education for patients.",
+    "description_ar": "الإجراءات بجانب الكرسي والتعامل مع الأدوات وتثقيف المرضى بصحة الفم.",
+    "search_query": "Dental Assisting Fundamentals Alison"
+  },
+  {
+    "id": "veterinary_intro",
+    "title_en": "Introduction to Veterinary Practice",
+    "title_ar": "مدخل إلى الممارسة البيطرية",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "veterinary_care": 45,
+      "life_sciences": 30,
+      "clinical_skills": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 7,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Animal handling, common conditions and the differences between species in clinical work.",
+    "description_ar": "التعامل مع الحيوان والحالات الشائعة والفروق بين الأنواع في العمل السريري.",
+    "search_query": "Introduction to Veterinary Practice edX"
+  },
+  {
+    "id": "uae_legal_system",
+    "title_en": "The UAE Legal System",
+    "title_ar": "النظام القانوني الإماراتي",
+    "provider": "UAE university open programme",
+    "provider_type": "uae",
+    "skills": {
+      "law_policy": 50,
+      "arabic_language": 25,
+      "writing_docs": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Federal law, emirate law and free-zone regimes, and how they interact in practice.",
+    "description_ar": "القوانين الاتحادية وقوانين الإمارات وأنظمة المناطق الحرة، وكيفية تفاعلها عمليًا.",
+    "search_query": "The UAE Legal System UAE university open programme"
+  },
+  {
+    "id": "contract_drafting",
+    "title_en": "Contract Drafting and Negotiation",
+    "title_ar": "صياغة العقود والتفاوض",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "law_policy": 40,
+      "writing_docs": 40,
+      "sales_negotiation": 30
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Writing terms that survive a dispute, and negotiating the ones that matter.",
+    "description_ar": "صياغة بنود تصمد أمام النزاع، والتفاوض على ما يهم منها فعلًا.",
+    "search_query": "Contract Drafting and Negotiation Coursera"
+  },
+  {
+    "id": "islamic_finance_course",
+    "title_en": "Islamic Banking and Finance",
+    "title_ar": "المصرفية والتمويل الإسلامي",
+    "provider": "Emirates Institute of Finance",
+    "provider_type": "uae",
+    "skills": {
+      "finance_accounting": 40,
+      "islamic_studies_skill": 45,
+      "law_policy": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Sharia-compliant structures — murabaha, ijara, sukuk — and the governance around them.",
+    "description_ar": "الهياكل المتوافقة مع الشريعة من مرابحة وإجارة وصكوك، والحوكمة المحيطة بها.",
+    "search_query": "Islamic Banking and Finance Emirates Institute of Finance"
+  },
+  {
+    "id": "audit_fundamentals",
+    "title_en": "Audit and Assurance Fundamentals",
+    "title_ar": "أساسيات التدقيق والتأكيد",
+    "provider": "ACCA open resources",
+    "provider_type": "global",
+    "skills": {
+      "finance_accounting": 45,
+      "attention_detail": 35,
+      "law_policy": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Audit planning, evidence and the professional scepticism the role depends on.",
+    "description_ar": "تخطيط التدقيق والأدلة والشك المهني الذي يقوم عليه هذا الدور.",
+    "search_query": "Audit and Assurance Fundamentals ACCA open resources"
+  },
+  {
+    "id": "hr_management",
+    "title_en": "Human Resource Management",
+    "title_ar": "إدارة الموارد البشرية",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "hr_people": 50,
+      "leadership": 25,
+      "law_policy": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Recruitment, performance management and the employment-law basics an HR role needs.",
+    "description_ar": "التوظيف وإدارة الأداء وأساسيات قانون العمل التي يحتاجها دور الموارد البشرية.",
+    "search_query": "Human Resource Management Coursera"
+  },
+  {
+    "id": "negotiation_skills",
+    "title_en": "Negotiation and Persuasion",
+    "title_ar": "مهارات التفاوض والإقناع",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "sales_negotiation": 50,
+      "public_speaking": 25,
+      "business_strategy": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Preparation, anchoring and closing — negotiation as a process rather than a personality trait.",
+    "description_ar": "التحضير والتثبيت والإغلاق، بوصف التفاوض عملية منظمة لا سمة شخصية.",
+    "search_query": "Negotiation and Persuasion edX"
+  },
+  {
+    "id": "photography_fundamentals",
+    "title_en": "Photography Fundamentals",
+    "title_ar": "أساسيات التصوير الفوتوغرافي",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "photography_video": 50,
+      "creativity": 25,
+      "visual_design": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Exposure, composition and light — the three things every other technique rests on.",
+    "description_ar": "التعريض والتكوين والضوء، وهي الأسس التي تقوم عليها بقية التقنيات.",
+    "search_query": "Photography Fundamentals Coursera"
+  },
+  {
+    "id": "video_editing_pro",
+    "title_en": "Video Editing and Post-Production",
+    "title_ar": "المونتاج والإنتاج اللاحق",
+    "provider": "Udemy",
+    "provider_type": "global",
+    "skills": {
+      "photography_video": 45,
+      "creativity": 30,
+      "attention_detail": 30
+    },
+    "level": "intermediate",
+    "duration_weeks": 7,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Cutting for pace and story, colour grading and delivering to broadcast specification.",
+    "description_ar": "المونتاج لضبط الإيقاع والسرد، وتصحيح الألوان، والتسليم وفق مواصفات البث.",
+    "search_query": "Video Editing and Post-Production Udemy"
+  },
+  {
+    "id": "motion_graphics_course",
+    "title_en": "Motion Graphics and Animation",
+    "title_ar": "الموشن جرافيك والتحريك",
+    "provider": "Udemy",
+    "provider_type": "global",
+    "skills": {
+      "animation_3d": 45,
+      "visual_design": 35,
+      "creativity": 30
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Keyframing, easing and type in motion for broadcast and advertising work.",
+    "description_ar": "الإطارات المفتاحية والتنعيم وتحريك النصوص لأعمال البث والإعلان.",
+    "search_query": "Motion Graphics and Animation Udemy"
+  },
+  {
+    "id": "blender_3d",
+    "title_en": "3D Modelling and Rendering",
+    "title_ar": "النمذجة والإخراج ثلاثي الأبعاد",
+    "provider": "Blender open courseware",
+    "provider_type": "global",
+    "skills": {
+      "animation_3d": 50,
+      "visual_design": 30,
+      "creativity": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 9,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Modelling, texturing, lighting and rendering, using entirely free software.",
+    "description_ar": "النمذجة والكساء والإضاءة والإخراج، باستخدام برمجيات مجانية بالكامل.",
+    "search_query": "3D Modelling and Rendering Blender open courseware"
+  },
+  {
+    "id": "arabic_bilingual_layout",
+    "title_en": "Arabic Typography and Bilingual Layout",
+    "title_ar": "الطباعة العربية والتصميم ثنائي اللغة",
+    "provider": "Regional design school programme",
+    "provider_type": "uae",
+    "skills": {
+      "visual_design": 45,
+      "arabic_language": 35,
+      "creativity": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Setting Arabic type well, and making it sit correctly alongside Latin in one layout.",
+    "description_ar": "إتقان تنضيد الخط العربي وجعله ينسجم مع اللاتيني في تصميم واحد.",
+    "search_query": "Arabic Typography and Bilingual Layout Regional design school programme"
+  },
+  {
+    "id": "sound_production",
+    "title_en": "Sound Recording and Mixing",
+    "title_ar": "تسجيل الصوت والمزج",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "sound_audio": 50,
+      "attention_detail": 30,
+      "creativity": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 7,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Microphone technique, signal flow and mixing for music, film and live sound.",
+    "description_ar": "تقنيات الميكروفون ومسار الإشارة والمزج للموسيقى والأفلام والصوت المباشر.",
+    "search_query": "Sound Recording and Mixing Coursera"
+  },
+  {
+    "id": "interior_design_intro",
+    "title_en": "Interior Design Principles",
+    "title_ar": "مبادئ التصميم الداخلي",
+    "provider": "Alison",
+    "provider_type": "global",
+    "skills": {
+      "spatial_design": 50,
+      "visual_design": 30,
+      "creativity": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Space planning, materials and lighting, and how a drawing becomes a buildable scheme.",
+    "description_ar": "تخطيط الفراغ والمواد والإضاءة، وكيف يتحول الرسم إلى تصميم قابل للتنفيذ.",
+    "search_query": "Interior Design Principles Alison"
+  },
+  {
+    "id": "fashion_design_intro",
+    "title_en": "Fashion Design and Pattern Making",
+    "title_ar": "تصميم الأزياء وإعداد الباترون",
+    "provider": "FutureLearn",
+    "provider_type": "global",
+    "skills": {
+      "fashion_textiles": 50,
+      "creativity": 30,
+      "visual_design": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 7,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "From sketch to pattern to toile, including fabric behaviour and fit.",
+    "description_ar": "من الرسم إلى الباترون إلى النموذج الأولي، بما يشمل سلوك الأقمشة والقَصّة.",
+    "search_query": "Fashion Design and Pattern Making FutureLearn"
+  },
+  {
+    "id": "museum_curation",
+    "title_en": "Curating and Collections Management",
+    "title_ar": "التنسيق المتحفي وإدارة المقتنيات",
+    "provider": "FutureLearn",
+    "provider_type": "global",
+    "skills": {
+      "curation_heritage": 50,
+      "research_methods": 30,
+      "writing_docs": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Cataloguing, interpretation and the ethics of display and acquisition.",
+    "description_ar": "الفهرسة والتفسير وأخلاقيات العرض والاقتناء.",
+    "search_query": "Curating and Collections Management FutureLearn"
+  },
+  {
+    "id": "investigative_reporting",
+    "title_en": "Investigative Reporting",
+    "title_ar": "التحقيق الصحفي",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "journalism_reporting": 50,
+      "research_methods": 30,
+      "writing_docs": 30
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Sourcing, verification and structuring a story that will survive scrutiny.",
+    "description_ar": "المصادر والتحقق وبناء قصة تصمد أمام التدقيق.",
+    "search_query": "Investigative Reporting Coursera"
+  },
+  {
+    "id": "lean_manufacturing",
+    "title_en": "Lean Manufacturing and Operations",
+    "title_ar": "التصنيع الرشيق والعمليات",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "manufacturing_ops": 50,
+      "quality_control": 35,
+      "logistics_ops": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Flow, waste elimination and the measurement discipline that keeps improvement real.",
+    "description_ar": "انسياب العمل وإزالة الهدر وانضباط القياس الذي يجعل التحسين حقيقيًا.",
+    "search_query": "Lean Manufacturing and Operations edX"
+  },
+  {
+    "id": "quality_six_sigma",
+    "title_en": "Quality Management and Six Sigma",
+    "title_ar": "إدارة الجودة وستة سيجما",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "quality_control": 50,
+      "statistics": 30,
+      "data_analysis": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Process capability, control charts and structured problem solving.",
+    "description_ar": "قدرة العملية وخرائط الضبط وحل المشكلات بمنهجية.",
+    "search_query": "Quality Management and Six Sigma Coursera"
+  },
+  {
+    "id": "culinary_foundations",
+    "title_en": "Culinary Foundations",
+    "title_ar": "أساسيات فنون الطهي",
+    "provider": "Regional hospitality academy",
+    "provider_type": "uae",
+    "skills": {
+      "culinary": 50,
+      "quality_control": 25,
+      "teamwork": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Knife skills, stocks and sauces, food safety and working a station under service pressure.",
+    "description_ar": "مهارات السكين والمرق والصلصات وسلامة الغذاء والعمل في محطة تحت ضغط الخدمة.",
+    "search_query": "Culinary Foundations Regional hospitality academy"
+  },
+  {
+    "id": "hospitality_operations",
+    "title_en": "Hotel and Hospitality Operations",
+    "title_ar": "عمليات الفنادق والضيافة",
+    "provider": "Regional hospitality academy",
+    "provider_type": "uae",
+    "skills": {
+      "hospitality_ops": 50,
+      "customer_service": 35,
+      "leadership": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Front office, housekeeping and food-and-beverage operations, and how they interlock.",
+    "description_ar": "المكتب الأمامي والإشراف الداخلي وعمليات الأغذية والمشروبات، وكيفية ترابطها.",
+    "search_query": "Hotel and Hospitality Operations Regional hospitality academy"
+  },
+  {
+    "id": "sports_coaching_course",
+    "title_en": "Coaching Science and Practice",
+    "title_ar": "علوم التدريب الرياضي وممارسته",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "sports_coaching": 50,
+      "teaching": 30,
+      "rehabilitation": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Training design, load management and coaching communication with athletes.",
+    "description_ar": "تصميم التدريب وإدارة الأحمال والتواصل التدريبي مع الرياضيين.",
+    "search_query": "Coaching Science and Practice Coursera"
+  },
+  {
+    "id": "controlled_ag",
+    "title_en": "Controlled Environment Agriculture",
+    "title_ar": "الزراعة في البيئات المحكومة",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "agriculture_food": 50,
+      "sustainability": 30,
+      "life_sciences": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 7,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Hydroponics, greenhouse control and growing food where the outdoor climate will not allow it.",
+    "description_ar": "الزراعة المائية والتحكم في البيوت المحمية وإنتاج الغذاء حيث لا يسمح المناخ الخارجي بذلك.",
+    "search_query": "Controlled Environment Agriculture edX"
+  },
+  {
+    "id": "aquaculture_course",
+    "title_en": "Aquaculture Systems",
+    "title_ar": "أنظمة الاستزراع المائي",
+    "provider": "FAO open learning",
+    "provider_type": "global",
+    "skills": {
+      "agriculture_food": 45,
+      "life_sciences": 35,
+      "quality_control": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Recirculating systems, water quality and stock health management.",
+    "description_ar": "أنظمة إعادة التدوير وجودة المياه وإدارة صحة المخزون.",
+    "search_query": "Aquaculture Systems FAO open learning"
+  },
+  {
+    "id": "maritime_operations",
+    "title_en": "Maritime and Port Operations",
+    "title_ar": "العمليات البحرية وعمليات الموانئ",
+    "provider": "Abu Dhabi maritime training",
+    "provider_type": "uae",
+    "skills": {
+      "maritime_ops": 50,
+      "logistics_ops": 35,
+      "emergency_response": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 7,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Vessel handling, port procedure and the safety regime that governs both.",
+    "description_ar": "إدارة السفن وإجراءات الموانئ ونظام السلامة الذي يحكمهما.",
+    "search_query": "Maritime and Port Operations Abu Dhabi maritime training"
+  },
+  {
+    "id": "arabic_translation_prof",
+    "title_en": "Professional Arabic-English Translation",
+    "title_ar": "الترجمة الاحترافية بين العربية والإنجليزية",
+    "provider": "Regional translation institute",
+    "provider_type": "uae",
+    "skills": {
+      "translation_skill": 50,
+      "arabic_language": 40,
+      "english_language": 35
+    },
+    "level": "advanced",
+    "duration_weeks": 10,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Legal, medical and official translation, including the conventions each field expects.",
+    "description_ar": "الترجمة القانونية والطبية والرسمية، بما يشمل الأعراف التي يتوقعها كل مجال.",
+    "search_query": "Professional Arabic-English Translation Regional translation institute"
+  },
+  {
+    "id": "emergency_management",
+    "title_en": "Emergency and Disaster Management",
+    "title_ar": "إدارة الطوارئ والكوارث",
+    "provider": "Rabdan open programme",
+    "provider_type": "uae",
+    "skills": {
+      "emergency_response": 45,
+      "project_management": 30,
+      "law_policy": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Preparedness planning, incident command and multi-agency coordination.",
+    "description_ar": "التخطيط للتأهب وقيادة الحوادث والتنسيق بين الجهات المتعددة.",
+    "search_query": "Emergency and Disaster Management Rabdan open programme"
   }
 ]

@@ -37,8 +37,8 @@
   },
   {
     "id": "healthcare",
-    "name_en": "Healthcare",
-    "name_ar": "الرعاية الصحية",
+    "name_en": "Healthcare & Medicine",
+    "name_ar": "الرعاية الصحية والطب",
     "color": "#0E7490"
   },
   {
@@ -55,27 +55,27 @@
   },
   {
     "id": "construction",
-    "name_en": "Civil & Construction",
-    "name_ar": "الهندسة المدنية والإنشاءات",
-    "color": "#6B4E2E"
+    "name_en": "Civil & Built Environment",
+    "name_ar": "الهندسة المدنية والبيئة العمرانية",
+    "color": "#7C5E10"
   },
   {
     "id": "logistics",
     "name_en": "Logistics & Maritime",
-    "name_ar": "اللوجستيات والملاحة",
-    "color": "#374151"
+    "name_ar": "الخدمات اللوجستية والبحرية",
+    "color": "#1D4E6F"
   },
   {
     "id": "government",
     "name_en": "Government & Public Policy",
     "name_ar": "الحكومة والسياسات العامة",
-    "color": "#111827"
+    "color": "#0F5132"
   },
   {
     "id": "education",
     "name_en": "Education",
     "name_ar": "التعليم",
-    "color": "#7C2D12"
+    "color": "#6D28D9"
   },
   {
     "id": "media",
@@ -88,5 +88,23 @@
     "name_en": "Entrepreneurship",
     "name_ar": "ريادة الأعمال",
     "color": "#B91C1C"
+  },
+  {
+    "id": "engineering",
+    "name_en": "Engineering & Industry",
+    "name_ar": "الهندسة والصناعة",
+    "color": "#374151"
+  },
+  {
+    "id": "law",
+    "name_en": "Law & Compliance",
+    "name_ar": "القانون والامتثال",
+    "color": "#4C1D95"
+  },
+  {
+    "id": "social",
+    "name_en": "Social & Community",
+    "name_ar": "الخدمة الاجتماعية والمجتمع",
+    "color": "#065F46"
   }
 ]
