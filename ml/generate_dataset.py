@@ -180,7 +180,11 @@ def main() -> None:
     args.out.parent.mkdir(parents=True, exist_ok=True)
     frame.to_csv(args.out, index=False)
 
-    print(f"wrote {args.out.relative_to(ROOT)}  rows={len(frame)}  cols={frame.shape[1]}")
+    try:
+        shown = args.out.resolve().relative_to(ROOT)
+    except ValueError:
+        shown = args.out
+    print(f"wrote {shown}  rows={len(frame)}  cols={frame.shape[1]}")
     print(f"seed={args.seed}  label noise={LABEL_NOISE:.0%}  "
           f"EmSAT missing={frame['emsat_math'].isna().mean():.1%}")
     print("\nsector distribution:")
