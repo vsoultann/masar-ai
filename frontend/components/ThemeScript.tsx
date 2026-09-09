@@ -20,9 +20,15 @@ export default function ThemeScript() {
     var known = ["uae", "gulf", "sand", "royal", "sunset", "teal"];
     document.documentElement.dataset.scheme =
       known.indexOf(scheme) !== -1 ? scheme : "uae";
+
+    var ui = localStorage.getItem("masar.ui");
+    var styles = ["default", "glass", "minimal"];
+    document.documentElement.dataset.ui =
+      styles.indexOf(ui) !== -1 ? ui : "default";
   } catch (e) {
     document.documentElement.dataset.theme = "light";
     document.documentElement.dataset.scheme = "uae";
+    document.documentElement.dataset.ui = "default";
   }
 })();`.trim();
 

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import Logo from "@/components/Logo";
 import SchemePicker from "@/components/SchemePicker";
 import { useProfile } from "@/lib/store/profile";
 import { switchLocalePath, type Locale } from "@/lib/i18n";
@@ -68,12 +69,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b bg-[var(--surface-translucent)] backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6">
         <Link href={`/${locale}`} className="flex items-center gap-2.5 shrink-0">
-          <span
-            aria-hidden="true"
-            className="grid h-9 w-9 place-items-center rounded-lg bg-[var(--brand)] text-[var(--brand-ink)] font-bold"
-          >
-            م
-          </span>
+          <Logo size={36} />
           <span className="flex flex-col leading-tight">
             <span className="text-base font-bold">{t.brand.name}</span>
             <span className="hidden text-[11px] muted sm:block">{t.brand.tagline}</span>

@@ -209,8 +209,13 @@ export default function LivingBackground({
     const ctx = canvas.getContext("2d", { alpha: false });
     if (!ctx) return;
 
-    const lowPower = (navigator.hardwareConcurrency ?? 8) <= 4;
-    const minFrameMs = lowPower ? 1000 / 30 : 1000 / 60;
+    // Everything targets 60fps, phones included. The previous 30fps cap on
+    // low-core devices bought smoothness by halving it, which is the wrong
+    // trade for a background people look at constantly. The frame budget is
+    // met by drawing *less* instead: modest devices get roughly half the
+    // particles and links, at full frame rate.
+    const modest = (navigator.hardwareConcurrency ?? 8) <= 4;
+    const minFrameMs = 1000 / 60;
 
     let width = 0;
     let height = 0;
@@ -234,9 +239,9 @@ export default function LivingBackground({
       const density = kind === "constellation" ? 15000 : 7000;
       const count =
         kind === "aurora"
-          ? (lowPower ? 4 : 6)
+          ? (modest ? 4 : 6)
           : Math.round(
-              Math.min(area / density, lowPower ? 40 : kind === "constellation" ? 110 : 160),
+              Math.min(area / density, modest ? 55 : kind === "constellation" ? 110 : 160),
             );
 
       const particles: Particle[] = Array.from({ length: count }, () => ({
@@ -667,10 +672,9 @@ export default function LivingBackground({
       window.removeEventListener("pointermove", onPointer);
       window.removeEventListener("pointerleave", onPointerLeave);
     };
-    // The scene and mode are read through refs inside the loop, so they are
-    // deliberately not dependencies: changing either must not restart the
-    // canvas, which is the flash this rewrite removes.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // `theme` and `mode` are read through refs inside the loop rather than
+    // listed here on purpose: making them dependencies would restart the canvas
+    // on every navigation, which is the flash this rewrite exists to remove.
   }, [reduced]);
 
   const palette =

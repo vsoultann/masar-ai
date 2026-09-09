@@ -70,6 +70,10 @@ export default function UniversitiesPage() {
     () => new Map(majors.map((major) => [major.id, major])),
     [majors],
   );
+  const majorNames = useMemo(
+    () => new Map(majors.map((major) => [major.id, major.name[locale]])),
+    [majors, locale],
+  );
 
   const filtered = useMemo(() => {
     if (!universities) return [];
@@ -249,6 +253,7 @@ export default function UniversitiesPage() {
           <UniversityMap
             universities={filtered.map((row) => row.university)}
             you={you}
+            majorNames={majorNames}
           />
         </div>
       ) : (
@@ -263,6 +268,7 @@ export default function UniversitiesPage() {
             <motion.div key={university.id} variants={revealItem}>
               <UniversityCard
                 university={university}
+                majorNames={majorNames}
                 action={
                   <button
                     type="button"

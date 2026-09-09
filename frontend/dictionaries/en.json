@@ -33,7 +33,8 @@
     "mentor": "Mentor",
     "model": "The model",
     "createProfile": "Create profile",
-    "colourScheme": "Colour scheme"
+    "colourScheme": "Colour scheme",
+    "uiStyle": "Interface style"
   },
   "landing": {
     "eyebrow": "AI Career Guidance System",
@@ -654,5 +655,16 @@
     "royal": "Royal Violet",
     "sunset": "Sunset",
     "teal": "Oasis Teal"
+  },
+  "uiStyles": {
+    "default": "Standard",
+    "glass": "Liquid glass",
+    "minimal": "Minimalist"
+  },
+  "install": {
+    "title": "Add Masar to your Home Screen",
+    "body": "Install it as an app: full screen, and your profile stays on this device.",
+    "step1": "Tap the Share button in Safari",
+    "step2": "Choose “Add to Home Screen”"
   }
 }

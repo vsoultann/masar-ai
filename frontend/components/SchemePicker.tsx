@@ -6,13 +6,17 @@ import { useEffect, useRef, useState } from "react";
 
 import { useLocale } from "@/lib/locale-context";
 import { spring } from "@/lib/motion";
-import { SCHEME_SWATCH, SCHEMES, useScheme, type Scheme } from "@/lib/store/scheme";
+import {
+  SCHEME_SWATCH, SCHEMES, UI_STYLES, useScheme, type Scheme, type UiStyle,
+} from "@/lib/store/scheme";
 
 /** Accent-colour picker. Sits beside the theme toggle in the header. */
 export default function SchemePicker() {
   const { t, lookup } = useLocale();
   const scheme = useScheme((state) => state.scheme);
   const setScheme = useScheme((state) => state.setScheme);
+  const ui = useScheme((state) => state.ui);
+  const setUi = useScheme((state) => state.setUi);
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -55,8 +59,11 @@ export default function SchemePicker() {
             initial={{ opacity: 0, y: -6, scale: 0.97 }}
             animate={{ opacity: 1, y: 0, scale: 1, transition: spring }}
             exit={{ opacity: 0, y: -6, scale: 0.97 }}
-            className="absolute end-0 z-50 mt-2 w-44 rounded-xl border bg-[var(--surface)] p-2 shadow-xl"
+            className="absolute end-0 z-50 mt-2 w-52 rounded-xl border bg-[var(--surface)] p-2 shadow-xl"
           >
+            <p className="px-2.5 pb-1 pt-1 text-[11px] font-semibold uppercase tracking-wide muted">
+              {t.nav.colourScheme}
+            </p>
             {SCHEMES.map((option) => (
               <button
                 key={option}
@@ -78,6 +85,37 @@ export default function SchemePicker() {
                 />
                 {lookup(t.schemes, option)}
                 {scheme === option && (
+                  <span aria-hidden className="ms-auto text-[var(--brand)]">✓</span>
+                )}
+              </button>
+            ))}
+
+            <p className="mt-2 border-t px-2.5 pb-1 pt-2 text-[11px] font-semibold uppercase tracking-wide muted">
+              {t.nav.uiStyle}
+            </p>
+            {UI_STYLES.map((option) => (
+              <button
+                key={option}
+                type="button"
+                role="menuitemradio"
+                aria-checked={ui === option}
+                onClick={() => setUi(option as UiStyle)}
+                className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-start text-sm transition-colors ${
+                  ui === option ? "bg-[var(--surface-2)] font-semibold" : "hover:bg-[var(--surface-2)]"
+                }`}
+              >
+                <span
+                  aria-hidden
+                  className={`h-4 w-4 shrink-0 rounded ${
+                    option === "glass"
+                      ? "border border-white/60 bg-white/40 backdrop-blur"
+                      : option === "minimal"
+                        ? "border border-[var(--line)]"
+                        : "bg-[var(--brand)]"
+                  }`}
+                />
+                {lookup(t.uiStyles, option)}
+                {ui === option && (
                   <span aria-hidden className="ms-auto text-[var(--brand)]">✓</span>
                 )}
               </button>

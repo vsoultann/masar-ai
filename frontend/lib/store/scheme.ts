@@ -18,9 +18,14 @@ export const SCHEME_SWATCH: Record<Scheme, string> = {
   teal: "#0f766e",
 };
 
+export const UI_STYLES = ["default", "glass", "minimal"] as const;
+export type UiStyle = (typeof UI_STYLES)[number];
+
 interface SchemeState {
   scheme: Scheme;
+  ui: UiStyle;
   setScheme: (scheme: Scheme) => void;
+  setUi: (ui: UiStyle) => void;
 }
 
 /**
@@ -35,6 +40,7 @@ export const useScheme = create<SchemeState>()(
   persist(
     (set) => ({
       scheme: "uae",
+      ui: "default",
       setScheme: (scheme) => {
         set({ scheme });
         if (typeof document !== "undefined") {
@@ -44,6 +50,17 @@ export const useScheme = create<SchemeState>()(
           window.localStorage.setItem("masar.scheme", scheme);
         } catch {
           /* storage can be unavailable; the scheme still applies this session */
+        }
+      },
+      setUi: (ui) => {
+        set({ ui });
+        if (typeof document !== "undefined") {
+          document.documentElement.dataset.ui = ui;
+        }
+        try {
+          window.localStorage.setItem("masar.ui", ui);
+        } catch {
+          /* storage can be unavailable; the style still applies this session */
         }
       },
     }),

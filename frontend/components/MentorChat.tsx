@@ -7,11 +7,9 @@ import { useEffect, useRef, useState } from "react";
 import { Chip } from "@/components/ui";
 import { useLocale } from "@/lib/locale-context";
 import { answer as offlineAnswer, type Citation } from "@/lib/mentor/engine";
-import { askAnthropic } from "@/lib/mentor/anthropic";
-import { loadModel, recommend } from "@/lib/ml/inference";
+import { loadModel } from "@/lib/ml/inference";
 import { popIn } from "@/lib/motion";
 import { estimateSkills } from "@/lib/scoring";
-import { useMentorSettings } from "@/lib/store/mentor";
 import { isComplete, useProfile } from "@/lib/store/profile";
 
 interface Message {
@@ -24,14 +22,14 @@ interface Message {
 /**
  * The mentor conversation.
  *
- * Offline by default. When the visitor has supplied their own API key it is
- * tried first and the offline engine is the fallback, so a bad key or a rate
- * limit degrades to a worse answer rather than to an error.
+ * Answers come from a retrieval engine over the catalogs already loaded in the
+ * page — no network call, no key, no per-question cost, and identical
+ * behaviour for every visitor. Every answer cites the catalog entries it drew
+ * on, so a student can click through and check it rather than trust it.
  */
 export default function MentorChat({ compact = false }: { compact?: boolean }) {
   const { locale, t } = useLocale();
   const profile = useProfile((state) => state.profile);
-  const apiKey = useMentorSettings((state) => state.apiKey);
 
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -57,7 +55,6 @@ export default function MentorChat({ compact = false }: { compact?: boolean }) {
       // Skill estimates are only needed for gap questions, but computing them
       // is cheap and local, so they are always available to the engine.
       let estimates: Record<string, number> | null = null;
-      let topCareers: { title: string; match: number }[] = [];
 
       if (profile && isComplete(profile)) {
         const bundle = await loadModel();
@@ -75,36 +72,18 @@ export default function MentorChat({ compact = false }: { compact?: boolean }) {
           bundle.skillMap.weights,
           bundle.skillMap.invertedFeatures,
         );
-        topCareers = recommend(
-          {
-            grades: profile.grades, emsat: profile.emsat, riasec: profile.riasec,
-            bigfive: profile.bigfive, track: profile.track, emirate: profile.emirate,
-          },
-          bundle,
-          3,
-        ).recommendations.map((item) => ({ title: item.careerId, match: item.match }));
       }
 
-      let text: string | null = null;
-      let citations: Citation[] = [];
-
-      if (apiKey) {
-        try {
-          text = await askAnthropic(trimmed, apiKey, { profile, topCareers, locale });
-        } catch {
-          text = null;   // fall through to the offline engine
-        }
-      }
-
-      if (text === null) {
-        const result = await offlineAnswer(trimmed, locale, profile, estimates);
-        text = result.text;
-        citations = result.citations;
-      }
+      const result = await offlineAnswer(trimmed, locale, profile, estimates);
 
       setMessages((current) => [
         ...current,
-        { id: `m-${Date.now()}`, role: "mentor", text, citations },
+        {
+          id: `m-${Date.now()}`,
+          role: "mentor",
+          text: result.text,
+          citations: result.citations,
+        },
       ]);
     } catch {
       setMessages((current) => [
@@ -125,9 +104,7 @@ export default function MentorChat({ compact = false }: { compact?: boolean }) {
 
   return (
     <div className="flex h-full flex-col">
-      <p className="text-xs muted">
-        {apiKey ? t.mentor.onlineMode : t.mentor.offlineMode}
-      </p>
+      <p className="text-xs muted">{t.mentor.offlineMode}</p>
 
       <div
         className={`mt-3 flex-1 space-y-3 overflow-y-auto ${compact ? "max-h-80" : "min-h-[40vh]"}`}

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 import UniversityCard from "@/components/UniversityCard";
 import { EmptyState, Skeleton } from "@/components/ui";
-import { loadUniversities } from "@/lib/data/client";
+import { indexBy, loadMajors, loadUniversities } from "@/lib/data/client";
 import {
   groupMatches, matchUniversities, type UniversityMatch,
 } from "@/lib/matching/universities";
@@ -32,12 +32,17 @@ export default function UniversityMatches({
   const { locale, t } = useLocale();
   const profile = useProfile((state) => state.profile);
   const [matches, setMatches] = useState<UniversityMatch[] | null>(null);
+  const [majorNames, setMajorNames] = useState<Map<string, string>>(new Map());
 
   useEffect(() => {
     let cancelled = false;
-    loadUniversities()
-      .then((universities) => {
-        if (!cancelled) setMatches(matchUniversities(career, universities, profile));
+    Promise.all([loadUniversities(), loadMajors()])
+      .then(([universities, majors]) => {
+        if (cancelled) return;
+        setMatches(matchUniversities(career, universities, profile));
+        setMajorNames(
+          new Map([...indexBy(majors)].map(([id, major]) => [id, major.name[locale]])),
+        );
       })
       .catch(() => {
         if (!cancelled) setMatches([]);
@@ -45,7 +50,7 @@ export default function UniversityMatches({
     return () => {
       cancelled = true;
     };
-  }, [career, profile]);
+  }, [career, profile, locale]);
 
   if (matches === null) {
     return (
@@ -91,7 +96,7 @@ export default function UniversityMatches({
             >
               {visible.map((match) => (
                 <motion.div key={match.university.id} variants={revealItem}>
-                  <UniversityCard match={match} />
+                  <UniversityCard match={match} majorNames={majorNames} />
                 </motion.div>
               ))}
             </motion.div>

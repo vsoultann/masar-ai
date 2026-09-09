@@ -23,10 +23,13 @@ export default function UniversityCard({
   match,
   university,
   action,
+  majorNames,
 }: {
   match?: UniversityMatch;
   university?: University;
   action?: React.ReactNode;
+  /** major id -> display name. Without it the card can only show a count. */
+  majorNames?: Map<string, string>;
 }) {
   const { locale, t, lookup } = useLocale();
   const institution = match?.university ?? university;
@@ -76,11 +79,38 @@ export default function UniversityCard({
             <Chip tone={eligibilityTone[match.eligibility]}>
               {eligibilityLabel[match.eligibility]}
             </Chip>
-            <Chip>
-              {localiseDigits(match.matchedMajors.length, locale)} {t.universities.majorsMatched}
-            </Chip>
           </div>
         )}
+
+        {/* Which majors, named. The card used to show only "3 majors matched",
+            which is the least useful part of the answer: a student wants to
+            know whether this institution teaches *medicine*, not that it
+            teaches three things. */}
+        {(() => {
+          const ids = match ? match.matchedMajors : (institution.majorsOffered ?? []);
+          if (ids.length === 0 || !majorNames) return null;
+          const shown = ids.slice(0, 3);
+          const rest = ids.length - shown.length;
+          return (
+            <div className="mt-3">
+              <p className="text-[11px] font-semibold muted">
+                {match ? t.universities.majorsMatched : t.universities.allMajors}
+              </p>
+              <ul className="mt-1 flex flex-wrap gap-1.5">
+                {shown.map((id) => (
+                  <li key={id}>
+                    <Chip tone="brand">{majorNames.get(id) ?? id}</Chip>
+                  </li>
+                ))}
+                {rest > 0 && (
+                  <li>
+                    <Chip>+{localiseDigits(rest, locale)}</Chip>
+                  </li>
+                )}
+              </ul>
+            </div>
+          );
+        })()}
 
         <div className="mt-auto flex items-center gap-2 pt-4">
           <Link
