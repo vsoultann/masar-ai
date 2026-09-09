@@ -1,38 +1,60 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
-# Vercel and Render both watch the repository themselves once connected, so
-# this workflow only fires their deploy hooks for the cases where automatic
-# deploys are switched off. It is a no-op until the secrets are added, rather
-# than a red X on every push.
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-jobs:
-  deploy:
-    name: Trigger hosted deploys
-    runs-on: ubuntu-latest
-    steps:
-      - name: Backend (Render)
-        env:
-          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
-        run: |
-          if [ -z "$HOOK" ]; then
-            echo "RENDER_DEPLOY_HOOK_URL is not set - skipping."
-            echo "Add it in Settings > Secrets and variables > Actions."
-            exit 0
-          fi
-          curl --fail --silent --show-error -X POST "$HOOK"
-          echo "Render deploy triggered."
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-      - name: Frontend (Vercel)
-        env:
-          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
-        run: |
-          if [ -z "$HOOK" ]; then
-            echo "VERCEL_DEPLOY_HOOK_URL is not set - skipping."
-            exit 0
-          fi
-          curl --fail --silent --show-error -X POST "$HOOK"
-          echo "Vercel deploy triggered."
+# One deploy at a time. `cancel-in-progress: false` because cancelling a
+# half-finished Pages deployment can leave the site serving a partial build.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build static export
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - run: npm ci
+
+      # `npm run build` already chains validate-data and predeploy:check, so a
+      # broken catalog reference or an unprefixed asset path fails here rather
+      # than shipping.
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/out
+
+  deploy:
+    name: Publish
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

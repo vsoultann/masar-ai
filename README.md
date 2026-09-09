@@ -9,7 +9,7 @@
 An AI career-guidance system for students in the United Arab Emirates.
 Graduation project, 2026.
 
-[![CI](https://github.com/vsoultann/masar-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/vsoultann/masar-ai/actions/workflows/ci.yml)
+[![CI](https://github.com/vsoultann/masar-ai/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/vsoultann/masar-ai/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-00732F.svg)](LICENSE)
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-0B3D5C.svg)](https://www.python.org/)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-000000.svg)](https://nextjs.org/)
