@@ -1,0 +1,2239 @@
+[
+  {
+    "id": "py_for_everybody",
+    "title_en": "Python for Everybody",
+    "title_ar": "بايثون للجميع",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "programming": 45,
+      "problem_solving": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "en",
+    "description_en": "A gentle first programming course covering variables, loops, functions and working with data files.",
+    "description_ar": "مقرّر أول لطيف في البرمجة يغطي المتغيّرات والحلقات والدوال والتعامل مع ملفات البيانات.",
+    "search_query": "Python for Everybody Coursera"
+  },
+  {
+    "id": "cs50x",
+    "title_en": "CS50: Introduction to Computer Science",
+    "title_ar": "مقدمة في علوم الحاسوب CS50",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "programming": 55,
+      "problem_solving": 35,
+      "systems_design": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 12,
+    "cost": "free",
+    "language": "en",
+    "description_en": "A demanding introduction to computer science through C, Python, SQL and web programming.",
+    "description_ar": "مقدمة صارمة في علوم الحاسوب عبر لغات C وبايثون وSQL وبرمجة الويب.",
+    "search_query": "CS50: Introduction to Computer Science edX"
+  },
+  {
+    "id": "java_oop_ar",
+    "title_en": "Object-Oriented Programming in Java (Arabic)",
+    "title_ar": "البرمجة كائنية التوجّه بلغة جافا",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "programming": 45,
+      "systems_design": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Classes, inheritance and interfaces taught fully in Arabic with practical exercises.",
+    "description_ar": "الأصناف والوراثة والواجهات مشروحة بالكامل بالعربية مع تمارين تطبيقية.",
+    "search_query": "Object-Oriented Programming in Java (Arabic) Rwaq"
+  },
+  {
+    "id": "google_data_analytics",
+    "title_en": "Google Data Analytics Certificate",
+    "title_ar": "شهادة تحليل البيانات من جوجل",
+    "provider": "Google",
+    "provider_type": "global",
+    "skills": {
+      "data_analysis": 50,
+      "statistics": 25,
+      "writing_docs": 15
+    },
+    "level": "beginner",
+    "duration_weeks": 24,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "An end-to-end analytics certificate covering spreadsheets, SQL, R and dashboard storytelling.",
+    "description_ar": "شهادة تحليلية متكاملة تغطي الجداول الحسابية وSQL ولغة R وسرد البيانات في لوحات المعلومات.",
+    "search_query": "Google Data Analytics Certificate Google"
+  },
+  {
+    "id": "excel_to_powerbi",
+    "title_en": "From Excel to Power BI",
+    "title_ar": "من إكسل إلى Power BI",
+    "provider": "Microsoft",
+    "provider_type": "global",
+    "skills": {
+      "data_analysis": 40,
+      "attention_detail": 15
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Turns spreadsheet skills into proper data models and interactive business dashboards.",
+    "description_ar": "يحوّل مهارات الجداول الحسابية إلى نماذج بيانات صحيحة ولوحات معلومات تفاعلية للأعمال.",
+    "search_query": "From Excel to Power BI Microsoft"
+  },
+  {
+    "id": "sql_for_data",
+    "title_en": "SQL for Data Analysis",
+    "title_ar": "لغة SQL لتحليل البيانات",
+    "provider": "Udacity",
+    "provider_type": "global",
+    "skills": {
+      "data_analysis": 45,
+      "programming": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 4,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Query design, joins, aggregation and window functions on realistic business datasets.",
+    "description_ar": "تصميم الاستعلامات والربط والتجميع ودوال النوافذ على مجموعات بيانات واقعية.",
+    "search_query": "SQL for Data Analysis Udacity"
+  },
+  {
+    "id": "ml_specialization",
+    "title_en": "Machine Learning Specialization",
+    "title_ar": "تخصص تعلّم الآلة",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "machine_learning": 55,
+      "mathematics": 20,
+      "programming": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 12,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Supervised and unsupervised learning from the ground up, with hands-on model building.",
+    "description_ar": "التعلّم الموجّه وغير الموجّه من الأساس، مع بناء عملي للنماذج.",
+    "search_query": "Machine Learning Specialization Coursera"
+  },
+  {
+    "id": "deep_learning_ar",
+    "title_en": "Introduction to Deep Learning (Arabic)",
+    "title_ar": "مقدمة في التعلّم العميق",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "machine_learning": 45,
+      "mathematics": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Neural networks, training dynamics and common architectures explained in Arabic.",
+    "description_ar": "الشبكات العصبية وديناميكيات التدريب والبنى الشائعة مشروحة بالعربية.",
+    "search_query": "Introduction to Deep Learning (Arabic) Rwaq"
+  },
+  {
+    "id": "mbzuai_ai_foundations",
+    "title_en": "AI Foundations Programme",
+    "title_ar": "برنامج أسس الذكاء الاصطناعي",
+    "provider": "MBZUAI",
+    "provider_type": "uae",
+    "skills": {
+      "machine_learning": 50,
+      "mathematics": 25,
+      "research_methods": 20
+    },
+    "level": "advanced",
+    "duration_weeks": 16,
+    "cost": "free",
+    "language": "en",
+    "description_en": "A university-run programme in modern AI methods aimed at strong STEM students in the UAE.",
+    "description_ar": "برنامج جامعي في أساليب الذكاء الاصطناعي الحديثة موجّه لطلبة العلوم المتميّزين في الإمارات.",
+    "search_query": "AI Foundations Programme MBZUAI"
+  },
+  {
+    "id": "khan_calculus",
+    "title_en": "Calculus I & II",
+    "title_ar": "التفاضل والتكامل ١ و٢",
+    "provider": "Khan Academy",
+    "provider_type": "global",
+    "skills": {
+      "mathematics": 45,
+      "problem_solving": 15
+    },
+    "level": "intermediate",
+    "duration_weeks": 16,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Limits, derivatives, integrals and series with thousands of practice problems.",
+    "description_ar": "النهايات والمشتقات والتكاملات والمتسلسلات مع آلاف التمارين التطبيقية.",
+    "search_query": "Calculus I & II Khan Academy"
+  },
+  {
+    "id": "linear_algebra_ml",
+    "title_en": "Linear Algebra for Machine Learning",
+    "title_ar": "الجبر الخطي لتعلّم الآلة",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "mathematics": 45,
+      "machine_learning": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Vectors, matrices and eigen-decomposition taught through their use in data problems.",
+    "description_ar": "المتجهات والمصفوفات والتحليل الذاتي مشروحة من خلال استخدامها في مسائل البيانات.",
+    "search_query": "Linear Algebra for Machine Learning Coursera"
+  },
+  {
+    "id": "emsat_math_prep",
+    "title_en": "EmSAT Mathematics Preparation",
+    "title_ar": "التحضير لاختبار إمسات رياضيات",
+    "provider": "HCT",
+    "provider_type": "uae",
+    "skills": {
+      "mathematics": 40,
+      "attention_detail": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Targeted revision of the algebra, functions and geometry assessed in the EmSAT maths test.",
+    "description_ar": "مراجعة موجّهة للجبر والدوال والهندسة التي يقيسها اختبار إمسات في الرياضيات.",
+    "search_query": "EmSAT Mathematics Preparation HCT"
+  },
+  {
+    "id": "stats_with_r",
+    "title_en": "Statistics with R",
+    "title_ar": "الإحصاء باستخدام R",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "statistics": 50,
+      "data_analysis": 25,
+      "programming": 15
+    },
+    "level": "intermediate",
+    "duration_weeks": 12,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Inference, regression and experimental design with a full statistical computing toolkit.",
+    "description_ar": "الاستدلال والانحدار وتصميم التجارب مع حزمة كاملة لأدوات الحوسبة الإحصائية.",
+    "search_query": "Statistics with R Coursera"
+  },
+  {
+    "id": "intro_probability",
+    "title_en": "Introduction to Probability",
+    "title_ar": "مقدمة في الاحتمالات",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "statistics": 45,
+      "mathematics": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 10,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Random variables, distributions and Bayesian reasoning built from first principles.",
+    "description_ar": "المتغيّرات العشوائية والتوزيعات والاستدلال البايزي مبنية من المبادئ الأولى.",
+    "search_query": "Introduction to Probability edX"
+  },
+  {
+    "id": "stats_arabic",
+    "title_en": "Descriptive and Inferential Statistics (Arabic)",
+    "title_ar": "الإحصاء الوصفي والاستدلالي",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "statistics": 40,
+      "data_analysis": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Core statistical concepts and hypothesis testing presented entirely in Arabic.",
+    "description_ar": "المفاهيم الإحصائية الأساسية واختبار الفرضيات مقدّمة بالكامل بالعربية.",
+    "search_query": "Descriptive and Inferential Statistics (Arabic) Edraak"
+  },
+  {
+    "id": "mechanics_mit",
+    "title_en": "Classical Mechanics",
+    "title_ar": "الميكانيكا الكلاسيكية",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "physics_reasoning": 50,
+      "mathematics": 25,
+      "problem_solving": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 14,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Newtonian mechanics at university level, heavy on problem solving and modelling.",
+    "description_ar": "الميكانيكا النيوتونية بمستوى جامعي، مع تركيز كبير على حل المسائل والنمذجة.",
+    "search_query": "Classical Mechanics edX"
+  },
+  {
+    "id": "emsat_physics_prep",
+    "title_en": "EmSAT Physics Preparation",
+    "title_ar": "التحضير لاختبار إمسات فيزياء",
+    "provider": "HCT",
+    "provider_type": "uae",
+    "skills": {
+      "physics_reasoning": 40,
+      "mathematics": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Structured revision of mechanics, electricity and waves for the EmSAT physics test.",
+    "description_ar": "مراجعة منظّمة للميكانيكا والكهرباء والموجات استعداداً لاختبار إمسات في الفيزياء.",
+    "search_query": "EmSAT Physics Preparation HCT"
+  },
+  {
+    "id": "thermo_energy",
+    "title_en": "Thermodynamics and Energy Transfer",
+    "title_ar": "الديناميكا الحرارية وانتقال الطاقة",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "physics_reasoning": 45,
+      "energy_systems": 30
+    },
+    "level": "advanced",
+    "duration_weeks": 10,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Energy, entropy and heat transfer applied to engines, plants and building systems.",
+    "description_ar": "الطاقة والإنتروبيا وانتقال الحرارة مطبّقة على المحركات والمحطات وأنظمة المباني.",
+    "search_query": "Thermodynamics and Energy Transfer Coursera"
+  },
+  {
+    "id": "general_chemistry",
+    "title_en": "General Chemistry",
+    "title_ar": "الكيمياء العامة",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "chemistry_lab": 50,
+      "attention_detail": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 12,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Atomic structure, bonding, stoichiometry and reaction kinetics with virtual labs.",
+    "description_ar": "التركيب الذري والروابط والحسابات الكيميائية وحركية التفاعلات مع مختبرات افتراضية.",
+    "search_query": "General Chemistry edX"
+  },
+  {
+    "id": "organic_chem",
+    "title_en": "Organic Chemistry Essentials",
+    "title_ar": "أساسيات الكيمياء العضوية",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "chemistry_lab": 45,
+      "life_sciences": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 10,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Functional groups, mechanisms and synthesis routes for pre-medical and engineering students.",
+    "description_ar": "المجموعات الوظيفية والآليات ومسارات التخليق لطلبة الطب التمهيدي والهندسة.",
+    "search_query": "Organic Chemistry Essentials Coursera"
+  },
+  {
+    "id": "lab_safety",
+    "title_en": "Laboratory Safety and Technique",
+    "title_ar": "السلامة والتقنيات المخبرية",
+    "provider": "IBM SkillsBuild",
+    "provider_type": "global",
+    "skills": {
+      "chemistry_lab": 30,
+      "attention_detail": 35
+    },
+    "level": "beginner",
+    "duration_weeks": 3,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Handling, measurement and documentation discipline expected in any professional laboratory.",
+    "description_ar": "انضباط المناولة والقياس والتوثيق المتوقّع في أي مختبر مهني.",
+    "search_query": "Laboratory Safety and Technique IBM SkillsBuild"
+  },
+  {
+    "id": "intro_biology",
+    "title_en": "Introduction to Biology",
+    "title_ar": "مقدمة في علم الأحياء",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "life_sciences": 50,
+      "research_methods": 15
+    },
+    "level": "beginner",
+    "duration_weeks": 12,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Cell biology, genetics and molecular processes as a foundation for health careers.",
+    "description_ar": "بيولوجيا الخلية وعلم الوراثة والعمليات الجزيئية كأساس للمهن الصحية.",
+    "search_query": "Introduction to Biology edX"
+  },
+  {
+    "id": "human_anatomy",
+    "title_en": "Human Anatomy and Physiology",
+    "title_ar": "التشريح ووظائف الأعضاء",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "life_sciences": 45,
+      "clinical_skills": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 14,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Body systems and their function, structured for nursing and pre-medical students.",
+    "description_ar": "أجهزة الجسم ووظائفها، منظّمة لطلبة التمريض والطب التمهيدي.",
+    "search_query": "Human Anatomy and Physiology Coursera"
+  },
+  {
+    "id": "genetics_ar",
+    "title_en": "Principles of Genetics (Arabic)",
+    "title_ar": "مبادئ علم الوراثة",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "life_sciences": 40,
+      "research_methods": 15
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Inheritance, DNA and modern genomics explained in Arabic for secondary graduates.",
+    "description_ar": "الوراثة والحمض النووي وعلم الجينوم الحديث مشروحة بالعربية لخريجي الثانوية.",
+    "search_query": "Principles of Genetics (Arabic) Edraak"
+  },
+  {
+    "id": "google_cybersecurity",
+    "title_en": "Google Cybersecurity Certificate",
+    "title_ar": "شهادة الأمن السيبراني من جوجل",
+    "provider": "Google",
+    "provider_type": "global",
+    "skills": {
+      "cybersecurity": 50,
+      "networking": 25,
+      "attention_detail": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 24,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "A career-entry certificate covering threats, SIEM tooling, Linux and incident response.",
+    "description_ar": "شهادة لدخول المجال تغطي التهديدات وأدوات SIEM ولينكس والاستجابة للحوادث.",
+    "search_query": "Google Cybersecurity Certificate Google"
+  },
+  {
+    "id": "cisco_cyberops",
+    "title_en": "Cisco CyberOps Associate",
+    "title_ar": "شهادة سيسكو CyberOps",
+    "provider": "Cisco",
+    "provider_type": "global",
+    "skills": {
+      "cybersecurity": 50,
+      "networking": 35
+    },
+    "level": "intermediate",
+    "duration_weeks": 16,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Security operations centre skills: monitoring, analysis and structured incident handling.",
+    "description_ar": "مهارات مركز العمليات الأمنية: المراقبة والتحليل والتعامل المنظّم مع الحوادث.",
+    "search_query": "Cisco CyberOps Associate Cisco"
+  },
+  {
+    "id": "web_app_security",
+    "title_en": "Web Application Security",
+    "title_ar": "أمن تطبيقات الويب",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "cybersecurity": 45,
+      "programming": 25,
+      "problem_solving": 20
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Common web vulnerability classes, secure coding practice and hands-on exploitation labs.",
+    "description_ar": "أصناف الثغرات الشائعة في الويب وممارسات البرمجة الآمنة ومختبرات تطبيقية للاستغلال.",
+    "search_query": "Web Application Security Coursera"
+  },
+  {
+    "id": "ccna",
+    "title_en": "Cisco CCNA: Networking Essentials",
+    "title_ar": "أساسيات الشبكات CCNA",
+    "provider": "Cisco",
+    "provider_type": "global",
+    "skills": {
+      "networking": 55,
+      "systems_design": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 20,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Routing, switching, addressing and troubleshooting — the industry standard entry point.",
+    "description_ar": "التوجيه والتبديل والعنونة واستكشاف الأعطال — المدخل المعياري في هذا المجال.",
+    "search_query": "Cisco CCNA: Networking Essentials Cisco"
+  },
+  {
+    "id": "network_fundamentals_ar",
+    "title_en": "Computer Networks Fundamentals (Arabic)",
+    "title_ar": "أساسيات شبكات الحاسوب",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "networking": 45
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "The OSI model, protocols and basic network configuration taught in Arabic.",
+    "description_ar": "نموذج OSI والبروتوكولات وإعدادات الشبكة الأساسية مشروحة بالعربية.",
+    "search_query": "Computer Networks Fundamentals (Arabic) Rwaq"
+  },
+  {
+    "id": "wireless_5g",
+    "title_en": "Wireless and 5G Networks",
+    "title_ar": "الشبكات اللاسلكية والجيل الخامس",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "networking": 45,
+      "electronics": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Radio access, spectrum and mobile core architecture for modern telecom networks.",
+    "description_ar": "الوصول الراديوي والطيف الترددي وبنية النواة المتنقلة لشبكات الاتصالات الحديثة.",
+    "search_query": "Wireless and 5G Networks edX"
+  },
+  {
+    "id": "aws_cloud_practitioner",
+    "title_en": "AWS Cloud Practitioner Essentials",
+    "title_ar": "أساسيات الحوسبة السحابية AWS",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "cloud_infrastructure": 45,
+      "systems_design": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Cloud service models, core AWS services, pricing and the shared-responsibility model.",
+    "description_ar": "نماذج الخدمات السحابية وخدمات AWS الأساسية والتسعير ونموذج المسؤولية المشتركة.",
+    "search_query": "AWS Cloud Practitioner Essentials Coursera"
+  },
+  {
+    "id": "azure_fundamentals",
+    "title_en": "Microsoft Azure Fundamentals",
+    "title_ar": "أساسيات مايكروسوفت أزور",
+    "provider": "Microsoft",
+    "provider_type": "global",
+    "skills": {
+      "cloud_infrastructure": 45,
+      "networking": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Compute, storage, identity and governance on Azure, with free hands-on sandboxes.",
+    "description_ar": "الحوسبة والتخزين والهوية والحوكمة في أزور، مع بيئات تجريبية مجانية.",
+    "search_query": "Microsoft Azure Fundamentals Microsoft"
+  },
+  {
+    "id": "k8s_docker",
+    "title_en": "Docker and Kubernetes in Practice",
+    "title_ar": "دوكر وكوبرنيتيس عملياً",
+    "provider": "Udacity",
+    "provider_type": "global",
+    "skills": {
+      "cloud_infrastructure": 50,
+      "systems_design": 30,
+      "programming": 20
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Containerising applications and running them reliably on an orchestrated cluster.",
+    "description_ar": "تحويل التطبيقات إلى حاويات وتشغيلها بموثوقية على عنقود مُدار.",
+    "search_query": "Docker and Kubernetes in Practice Udacity"
+  },
+  {
+    "id": "software_architecture",
+    "title_en": "Software Architecture and Design",
+    "title_ar": "معمارية البرمجيات وتصميمها",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "systems_design": 50,
+      "programming": 25,
+      "writing_docs": 20
+    },
+    "level": "advanced",
+    "duration_weeks": 10,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Architectural styles, trade-off analysis and documenting decisions for large systems.",
+    "description_ar": "الأنماط المعمارية وتحليل المفاضلات وتوثيق القرارات في الأنظمة الكبيرة.",
+    "search_query": "Software Architecture and Design edX"
+  },
+  {
+    "id": "system_design_interview",
+    "title_en": "Scalable System Design",
+    "title_ar": "تصميم الأنظمة القابلة للتوسّع",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "systems_design": 45,
+      "cloud_infrastructure": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Caching, sharding, queues and consistency choices behind high-traffic services.",
+    "description_ar": "التخزين المؤقت والتجزئة والطوابير وخيارات الاتساق خلف الخدمات عالية الحمل.",
+    "search_query": "Scalable System Design Coursera"
+  },
+  {
+    "id": "db_design",
+    "title_en": "Database Design and Modelling",
+    "title_ar": "تصميم قواعد البيانات ونمذجتها",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "systems_design": 35,
+      "data_analysis": 25,
+      "programming": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Normalisation, relational modelling and indexing taught in Arabic with SQL practice.",
+    "description_ar": "التطبيع والنمذجة العلائقية والفهرسة بالعربية مع تمارين على SQL.",
+    "search_query": "Database Design and Modelling Rwaq"
+  },
+  {
+    "id": "circuits_basics",
+    "title_en": "Electric Circuits Fundamentals",
+    "title_ar": "أساسيات الدوائر الكهربائية",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "electronics": 50,
+      "physics_reasoning": 30,
+      "mathematics": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 10,
+    "cost": "free",
+    "language": "en",
+    "description_en": "DC and AC circuit analysis, components and measurement with simulated laboratories.",
+    "description_ar": "تحليل دوائر التيار المستمر والمتردد والمكوّنات والقياس عبر مختبرات محاكاة.",
+    "search_query": "Electric Circuits Fundamentals edX"
+  },
+  {
+    "id": "embedded_arduino",
+    "title_en": "Embedded Systems with Arduino",
+    "title_ar": "الأنظمة المدمجة باستخدام أردوينو",
+    "provider": "Udacity",
+    "provider_type": "global",
+    "skills": {
+      "electronics": 45,
+      "programming": 35,
+      "problem_solving": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Microcontrollers, sensors and actuators built into working hardware projects.",
+    "description_ar": "المتحكّمات الدقيقة والمستشعرات والمشغّلات ضمن مشاريع عتاد عاملة.",
+    "search_query": "Embedded Systems with Arduino Udacity"
+  },
+  {
+    "id": "control_systems",
+    "title_en": "Control Systems Engineering",
+    "title_ar": "هندسة أنظمة التحكم",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "electronics": 40,
+      "mathematics": 35,
+      "physics_reasoning": 30
+    },
+    "level": "advanced",
+    "duration_weeks": 10,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Feedback control, stability and PID tuning for industrial and aerospace systems.",
+    "description_ar": "التحكم بالتغذية الراجعة والاستقرار وضبط PID لأنظمة صناعية وفضائية.",
+    "search_query": "Control Systems Engineering Coursera"
+  },
+  {
+    "id": "cad_solidworks",
+    "title_en": "Mechanical CAD with SolidWorks",
+    "title_ar": "التصميم الميكانيكي باستخدام سوليدووركس",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "mechanical_design": 50,
+      "attention_detail": 25,
+      "visual_design": 15
+    },
+    "level": "beginner",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Parametric part and assembly modelling with proper engineering drawing practice.",
+    "description_ar": "نمذجة القطع والتجميعات بارامترياً مع ممارسة سليمة للرسم الهندسي.",
+    "search_query": "Mechanical CAD with SolidWorks Coursera"
+  },
+  {
+    "id": "materials_science",
+    "title_en": "Materials Science for Engineers",
+    "title_ar": "علم المواد للمهندسين",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "mechanical_design": 35,
+      "chemistry_lab": 30,
+      "physics_reasoning": 30
+    },
+    "level": "intermediate",
+    "duration_weeks": 10,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Why materials fail: stress, fatigue, corrosion and selection for desert conditions.",
+    "description_ar": "لماذا تفشل المواد: الإجهاد والكلال والتآكل واختيار المواد لظروف صحراوية.",
+    "search_query": "Materials Science for Engineers edX"
+  },
+  {
+    "id": "fea_intro",
+    "title_en": "Introduction to Finite Element Analysis",
+    "title_ar": "مقدمة في تحليل العناصر المحدودة",
+    "provider": "Udacity",
+    "provider_type": "global",
+    "skills": {
+      "mechanical_design": 45,
+      "mathematics": 35,
+      "physics_reasoning": 30
+    },
+    "level": "advanced",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Meshing, boundary conditions and interpreting simulation results without trusting them blindly.",
+    "description_ar": "التشبيك والشروط الحدّية وتفسير نتائج المحاكاة دون الوثوق بها عمياً.",
+    "search_query": "Introduction to Finite Element Analysis Udacity"
+  },
+  {
+    "id": "structural_analysis",
+    "title_en": "Structural Analysis I",
+    "title_ar": "تحليل الإنشاءات ١",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "civil_structures": 50,
+      "physics_reasoning": 35,
+      "mathematics": 30
+    },
+    "level": "intermediate",
+    "duration_weeks": 12,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Beams, frames and trusses: internal forces, deflection and load-path reasoning.",
+    "description_ar": "الجسور والإطارات والجمالونات: القوى الداخلية والانحراف وتتبّع مسار الأحمال.",
+    "search_query": "Structural Analysis I edX"
+  },
+  {
+    "id": "concrete_design",
+    "title_en": "Reinforced Concrete Design",
+    "title_ar": "تصميم الخرسانة المسلحة",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "civil_structures": 50,
+      "mathematics": 25,
+      "attention_detail": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 10,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Code-based design of slabs, beams and columns for regional construction practice.",
+    "description_ar": "تصميم البلاطات والجسور والأعمدة وفق الأكواد بما يناسب ممارسات البناء الإقليمية.",
+    "search_query": "Reinforced Concrete Design Coursera"
+  },
+  {
+    "id": "bim_revit",
+    "title_en": "BIM and Revit for Construction",
+    "title_ar": "نمذجة معلومات البناء وريفيت",
+    "provider": "HCT",
+    "provider_type": "uae",
+    "skills": {
+      "civil_structures": 35,
+      "visual_design": 30,
+      "project_management": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Building information modelling as used by UAE consultants and main contractors.",
+    "description_ar": "نمذجة معلومات البناء كما تُستخدم لدى الاستشاريين والمقاولين الرئيسيين في الإمارات.",
+    "search_query": "BIM and Revit for Construction HCT"
+  },
+  {
+    "id": "solar_pv_design",
+    "title_en": "Solar PV System Design",
+    "title_ar": "تصميم أنظمة الطاقة الشمسية",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "energy_systems": 55,
+      "sustainability": 30,
+      "physics_reasoning": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Sizing, yield modelling and grid connection for photovoltaic plants in hot climates.",
+    "description_ar": "تحديد الأحجام ونمذجة الإنتاجية والربط بالشبكة لمحطات كهروضوئية في المناخات الحارة.",
+    "search_query": "Solar PV System Design Coursera"
+  },
+  {
+    "id": "power_systems",
+    "title_en": "Electric Power Systems",
+    "title_ar": "أنظمة القدرة الكهربائية",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "energy_systems": 50,
+      "electronics": 30,
+      "mathematics": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 10,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Generation, transmission and grid stability, including renewable integration challenges.",
+    "description_ar": "التوليد والنقل واستقرار الشبكة، بما في ذلك تحديات دمج مصادر الطاقة المتجددة.",
+    "search_query": "Electric Power Systems edX"
+  },
+  {
+    "id": "energy_efficiency_uae",
+    "title_en": "Energy Efficiency in Buildings",
+    "title_ar": "كفاءة الطاقة في المباني",
+    "provider": "Abu Dhabi School of Government",
+    "provider_type": "uae",
+    "skills": {
+      "energy_systems": 35,
+      "sustainability": 45
+    },
+    "level": "beginner",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Practical demand-reduction measures for buildings operating under Gulf cooling loads.",
+    "description_ar": "إجراءات عملية لخفض الطلب في المباني العاملة تحت أحمال التبريد الخليجية.",
+    "search_query": "Energy Efficiency in Buildings Abu Dhabi School of Government"
+  },
+  {
+    "id": "carbon_accounting",
+    "title_en": "Carbon Accounting and Reporting",
+    "title_ar": "حساب الكربون وإعداد التقارير",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "sustainability": 55,
+      "data_analysis": 25,
+      "writing_docs": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Measuring scope 1, 2 and 3 emissions and producing a report an auditor accepts.",
+    "description_ar": "قياس الانبعاثات ضمن النطاقات الأول والثاني والثالث وإعداد تقرير يقبله المدقّق.",
+    "search_query": "Carbon Accounting and Reporting Coursera"
+  },
+  {
+    "id": "sustainable_dev_ar",
+    "title_en": "Sustainable Development (Arabic)",
+    "title_ar": "التنمية المستدامة",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "sustainability": 45,
+      "economics": 20,
+      "law_policy": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "The environmental, social and economic pillars of sustainability, taught in Arabic.",
+    "description_ar": "الركائز البيئية والاجتماعية والاقتصادية للاستدامة، مشروحة بالعربية.",
+    "search_query": "Sustainable Development (Arabic) Edraak"
+  },
+  {
+    "id": "circular_economy",
+    "title_en": "Circular Economy and Waste",
+    "title_ar": "الاقتصاد الدائري وإدارة النفايات",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "sustainability": 45,
+      "business_strategy": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Designing products and supply chains that keep materials in use rather than in landfill.",
+    "description_ar": "تصميم المنتجات وسلاسل الإمداد لإبقاء المواد في الاستخدام بدل مكبّات النفايات.",
+    "search_query": "Circular Economy and Waste edX"
+  },
+  {
+    "id": "google_pm",
+    "title_en": "Google Project Management Certificate",
+    "title_ar": "شهادة إدارة المشاريع من جوجل",
+    "provider": "Google",
+    "provider_type": "global",
+    "skills": {
+      "project_management": 55,
+      "leadership": 25,
+      "writing_docs": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 24,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Planning, risk, stakeholders and agile delivery, taught through realistic project artefacts.",
+    "description_ar": "التخطيط والمخاطر وأصحاب المصلحة والتسليم الرشيق، عبر مخرجات مشاريع واقعية.",
+    "search_query": "Google Project Management Certificate Google"
+  },
+  {
+    "id": "pmp_prep_ar",
+    "title_en": "PMP Preparation (Arabic)",
+    "title_ar": "التحضير لشهادة PMP",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "project_management": 50,
+      "leadership": 20
+    },
+    "level": "advanced",
+    "duration_weeks": 10,
+    "cost": "paid",
+    "language": "ar",
+    "description_en": "Full coverage of the project management body of knowledge in Arabic, with mock exams.",
+    "description_ar": "تغطية كاملة لدليل معرفة إدارة المشاريع بالعربية مع اختبارات تجريبية.",
+    "search_query": "PMP Preparation (Arabic) Rwaq"
+  },
+  {
+    "id": "agile_scrum",
+    "title_en": "Agile and Scrum in Practice",
+    "title_ar": "الأجايل والسكرَم عملياً",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "project_management": 45,
+      "teamwork": 30,
+      "leadership": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Sprints, backlogs and the facilitation habits that make agile teams actually deliver.",
+    "description_ar": "السباقات وقوائم الأعمال وعادات التيسير التي تجعل الفرق الرشيقة تُنجز فعلاً.",
+    "search_query": "Agile and Scrum in Practice edX"
+  },
+  {
+    "id": "business_strategy_intro",
+    "title_en": "Foundations of Business Strategy",
+    "title_ar": "أسس استراتيجية الأعمال",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "business_strategy": 55,
+      "economics": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Competitive analysis, positioning and how firms build a defensible advantage.",
+    "description_ar": "تحليل المنافسة والتموضع وكيف تبني الشركات ميزة قابلة للدفاع عنها.",
+    "search_query": "Foundations of Business Strategy Coursera"
+  },
+  {
+    "id": "innovation_management",
+    "title_en": "Innovation and Growth Management",
+    "title_ar": "إدارة الابتكار والنمو",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "business_strategy": 45,
+      "creativity": 30,
+      "leadership": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Portfolio thinking, experimentation and scaling new products inside established firms.",
+    "description_ar": "التفكير بمنطق المحفظة والتجريب وتوسيع المنتجات الجديدة داخل الشركات القائمة.",
+    "search_query": "Innovation and Growth Management edX"
+  },
+  {
+    "id": "gov_strategy_uae",
+    "title_en": "Strategic Planning in Government",
+    "title_ar": "التخطيط الاستراتيجي في العمل الحكومي",
+    "provider": "Abu Dhabi School of Government",
+    "provider_type": "uae",
+    "skills": {
+      "business_strategy": 45,
+      "law_policy": 30,
+      "project_management": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Translating national strategy into departmental objectives and measurable indicators.",
+    "description_ar": "ترجمة الاستراتيجية الوطنية إلى أهداف على مستوى الدوائر ومؤشرات قابلة للقياس.",
+    "search_query": "Strategic Planning in Government Abu Dhabi School of Government"
+  },
+  {
+    "id": "financial_accounting",
+    "title_en": "Financial Accounting Fundamentals",
+    "title_ar": "أساسيات المحاسبة المالية",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "finance_accounting": 55,
+      "attention_detail": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "en",
+    "description_en": "The three financial statements and how transactions flow through them.",
+    "description_ar": "القوائم المالية الثلاث وكيف تنتقل العمليات المحاسبية خلالها.",
+    "search_query": "Financial Accounting Fundamentals Coursera"
+  },
+  {
+    "id": "financial_modelling",
+    "title_en": "Financial Modelling and Valuation",
+    "title_ar": "النمذجة المالية والتقييم",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "finance_accounting": 50,
+      "data_analysis": 30,
+      "mathematics": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Building a three-statement model and valuing a company with DCF and comparables.",
+    "description_ar": "بناء نموذج ثلاثي القوائم وتقييم الشركة بالتدفقات النقدية المخصومة والنظائر.",
+    "search_query": "Financial Modelling and Valuation edX"
+  },
+  {
+    "id": "islamic_finance",
+    "title_en": "Principles of Islamic Finance",
+    "title_ar": "مبادئ التمويل الإسلامي",
+    "provider": "Emirates Institute of Finance",
+    "provider_type": "uae",
+    "skills": {
+      "finance_accounting": 45,
+      "law_policy": 25,
+      "economics": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Sharia-compliant instruments and how they differ structurally from conventional products.",
+    "description_ar": "الأدوات المتوافقة مع الشريعة وكيف تختلف هيكلياً عن المنتجات التقليدية.",
+    "search_query": "Principles of Islamic Finance Emirates Institute of Finance"
+  },
+  {
+    "id": "micro_econ",
+    "title_en": "Principles of Microeconomics",
+    "title_ar": "مبادئ الاقتصاد الجزئي",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "economics": 55,
+      "mathematics": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 10,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Supply, demand, market structure and the logic behind everyday pricing decisions.",
+    "description_ar": "العرض والطلب وهياكل السوق والمنطق وراء قرارات التسعير اليومية.",
+    "search_query": "Principles of Microeconomics edX"
+  },
+  {
+    "id": "macro_econ_ar",
+    "title_en": "Macroeconomics (Arabic)",
+    "title_ar": "الاقتصاد الكلي",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "economics": 50,
+      "data_analysis": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Growth, inflation, monetary and fiscal policy explained in Arabic with Gulf examples.",
+    "description_ar": "النمو والتضخم والسياستان النقدية والمالية بالعربية مع أمثلة خليجية.",
+    "search_query": "Macroeconomics (Arabic) Edraak"
+  },
+  {
+    "id": "econometrics",
+    "title_en": "Applied Econometrics",
+    "title_ar": "الاقتصاد القياسي التطبيقي",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "economics": 45,
+      "statistics": 40,
+      "data_analysis": 30
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Regression for causal questions, with attention to what the data cannot tell you.",
+    "description_ar": "الانحدار للأسئلة السببية، مع الانتباه إلى ما لا تستطيع البيانات إخبارك به.",
+    "search_query": "Applied Econometrics Coursera"
+  },
+  {
+    "id": "digital_marketing_google",
+    "title_en": "Fundamentals of Digital Marketing",
+    "title_ar": "أساسيات التسويق الرقمي",
+    "provider": "Google",
+    "provider_type": "global",
+    "skills": {
+      "marketing_comm": 50,
+      "data_analysis": 20,
+      "creativity": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Search, social, email and analytics as one coherent customer-acquisition system.",
+    "description_ar": "البحث ومنصّات التواصل والبريد والتحليلات كمنظومة متكاملة لجذب العملاء.",
+    "search_query": "Fundamentals of Digital Marketing Google"
+  },
+  {
+    "id": "brand_storytelling",
+    "title_en": "Brand Strategy and Storytelling",
+    "title_ar": "استراتيجية العلامة وسرد قصتها",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "marketing_comm": 45,
+      "creativity": 35,
+      "writing_docs": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Positioning a brand and building a narrative that survives contact with an audience.",
+    "description_ar": "تموضع العلامة التجارية وبناء سردية تصمد عند مواجهة الجمهور.",
+    "search_query": "Brand Strategy and Storytelling edX"
+  },
+  {
+    "id": "social_media_ar",
+    "title_en": "Social Media Marketing (Arabic)",
+    "title_ar": "التسويق عبر وسائل التواصل الاجتماعي",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "marketing_comm": 45,
+      "arabic_language": 25,
+      "creativity": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Content planning, paid campaigns and analytics for Arabic-speaking audiences.",
+    "description_ar": "تخطيط المحتوى والحملات المدفوعة والتحليلات لجمهور ناطق بالعربية.",
+    "search_query": "Social Media Marketing (Arabic) Rwaq"
+  },
+  {
+    "id": "technical_writing",
+    "title_en": "Technical Writing",
+    "title_ar": "الكتابة التقنية",
+    "provider": "Google",
+    "provider_type": "global",
+    "skills": {
+      "writing_docs": 55,
+      "attention_detail": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 3,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Writing documentation people can follow: structure, clarity and ruthless editing.",
+    "description_ar": "كتابة توثيق يمكن اتّباعه: البنية والوضوح والتحرير الحازم.",
+    "search_query": "Technical Writing Google"
+  },
+  {
+    "id": "academic_writing_ar",
+    "title_en": "Academic Writing in Arabic",
+    "title_ar": "الكتابة الأكاديمية بالعربية",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "writing_docs": 50,
+      "arabic_language": 40,
+      "research_methods": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Structuring a research paper in formal Arabic, with citation and argument discipline.",
+    "description_ar": "بناء الورقة البحثية بالعربية الفصحى مع انضباط في التوثيق وبناء الحجّة.",
+    "search_query": "Academic Writing in Arabic Edraak"
+  },
+  {
+    "id": "business_report_writing",
+    "title_en": "Business and Policy Report Writing",
+    "title_ar": "كتابة تقارير الأعمال والسياسات",
+    "provider": "Abu Dhabi School of Government",
+    "provider_type": "uae",
+    "skills": {
+      "writing_docs": 50,
+      "law_policy": 25,
+      "public_speaking": 15
+    },
+    "level": "intermediate",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Producing briefs and reports that a busy decision-maker can act on in ten minutes.",
+    "description_ar": "إعداد مذكرات وتقارير يستطيع صانع قرار مشغول التصرّف بناءً عليها في عشر دقائق.",
+    "search_query": "Business and Policy Report Writing Abu Dhabi School of Government"
+  },
+  {
+    "id": "public_speaking_intro",
+    "title_en": "Introduction to Public Speaking",
+    "title_ar": "مقدمة في التحدّث أمام الجمهور",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "public_speaking": 55,
+      "writing_docs": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Structure, delivery and nerves — practised through recorded and peer-reviewed talks.",
+    "description_ar": "البناء والإلقاء والتعامل مع التوتر — بالتدريب عبر عروض مسجّلة ومراجعة الأقران.",
+    "search_query": "Introduction to Public Speaking Coursera"
+  },
+  {
+    "id": "presentation_ar",
+    "title_en": "Effective Presentation Skills (Arabic)",
+    "title_ar": "مهارات العرض الفعّال",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "public_speaking": 50,
+      "arabic_language": 30,
+      "visual_design": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 3,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Designing and delivering a persuasive presentation in Modern Standard Arabic.",
+    "description_ar": "تصميم عرض مقنع وإلقاؤه بالعربية الفصحى.",
+    "search_query": "Effective Presentation Skills (Arabic) Rwaq"
+  },
+  {
+    "id": "negotiation",
+    "title_en": "Negotiation and Persuasion",
+    "title_ar": "التفاوض والإقناع",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "public_speaking": 45,
+      "leadership": 30,
+      "business_strategy": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Preparation, framing and concession strategy in commercial and workplace negotiations.",
+    "description_ar": "التحضير والتأطير واستراتيجية التنازلات في المفاوضات التجارية والمهنية.",
+    "search_query": "Negotiation and Persuasion edX"
+  },
+  {
+    "id": "arabic_grammar",
+    "title_en": "Advanced Arabic Grammar",
+    "title_ar": "النحو العربي المتقدم",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "arabic_language": 55,
+      "writing_docs": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Syntax and morphology at the level expected of professional Arabic writing.",
+    "description_ar": "النحو والصرف بالمستوى المتوقّع في الكتابة العربية المهنية.",
+    "search_query": "Advanced Arabic Grammar Edraak"
+  },
+  {
+    "id": "arabic_media_language",
+    "title_en": "Media Arabic",
+    "title_ar": "لغة الإعلام العربية",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "arabic_language": 45,
+      "marketing_comm": 25,
+      "writing_docs": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "The register, vocabulary and conventions of news and institutional Arabic.",
+    "description_ar": "المستوى اللغوي والمفردات والأعراف في اللغة الإخبارية والمؤسسية العربية.",
+    "search_query": "Media Arabic Rwaq"
+  },
+  {
+    "id": "translation_ar_en",
+    "title_en": "Arabic-English Translation",
+    "title_ar": "الترجمة من العربية إلى الإنجليزية",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "arabic_language": 40,
+      "english_language": 40,
+      "writing_docs": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Practical translation between the two languages without losing register or meaning.",
+    "description_ar": "ترجمة عملية بين اللغتين دون فقدان المستوى اللغوي أو المعنى.",
+    "search_query": "Arabic-English Translation Edraak"
+  },
+  {
+    "id": "ielts_prep",
+    "title_en": "IELTS Academic Preparation",
+    "title_ar": "التحضير لاختبار الآيلتس الأكاديمي",
+    "provider": "HCT",
+    "provider_type": "uae",
+    "skills": {
+      "english_language": 55,
+      "writing_docs": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "The four IELTS skills with band-descriptor practice and timed mock tests.",
+    "description_ar": "مهارات الآيلتس الأربع مع تدريب على معايير النطاقات واختبارات محاكاة موقوتة.",
+    "search_query": "IELTS Academic Preparation HCT"
+  },
+  {
+    "id": "emsat_english_prep",
+    "title_en": "EmSAT English Preparation",
+    "title_ar": "التحضير لاختبار إمسات إنجليزي",
+    "provider": "HCT",
+    "provider_type": "uae",
+    "skills": {
+      "english_language": 45,
+      "attention_detail": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Reading, grammar and vocabulary practice mapped to the EmSAT English test format.",
+    "description_ar": "تدريب على القراءة والقواعد والمفردات وفق صيغة اختبار إمسات في الإنجليزية.",
+    "search_query": "EmSAT English Preparation HCT"
+  },
+  {
+    "id": "business_english",
+    "title_en": "English for Professional Communication",
+    "title_ar": "الإنجليزية للتواصل المهني",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "english_language": 50,
+      "writing_docs": 30,
+      "public_speaking": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Emails, meetings and presentations in the English used in Gulf workplaces.",
+    "description_ar": "الرسائل والاجتماعات والعروض بالإنجليزية المستخدمة في بيئات العمل الخليجية.",
+    "search_query": "English for Professional Communication Coursera"
+  },
+  {
+    "id": "teamwork_collab",
+    "title_en": "Teamwork and Collaboration Skills",
+    "title_ar": "مهارات العمل الجماعي والتعاون",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "teamwork": 55,
+      "leadership": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Roles, conflict and feedback in teams, practised through structured group tasks.",
+    "description_ar": "الأدوار والخلافات والتغذية الراجعة في الفرق، بالتدريب عبر مهام جماعية منظّمة.",
+    "search_query": "Teamwork and Collaboration Skills edX"
+  },
+  {
+    "id": "remote_collaboration",
+    "title_en": "Collaborating in Distributed Teams",
+    "title_ar": "التعاون في الفرق الموزّعة",
+    "provider": "Microsoft",
+    "provider_type": "global",
+    "skills": {
+      "teamwork": 45,
+      "writing_docs": 25,
+      "project_management": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 3,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Working well across time zones with written communication and shared tooling.",
+    "description_ar": "العمل بكفاءة عبر المناطق الزمنية بالاعتماد على التواصل المكتوب والأدوات المشتركة.",
+    "search_query": "Collaborating in Distributed Teams Microsoft"
+  },
+  {
+    "id": "emotional_intelligence",
+    "title_en": "Emotional Intelligence at Work",
+    "title_ar": "الذكاء العاطفي في بيئة العمل",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "teamwork": 45,
+      "leadership": 30,
+      "customer_service": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Self-awareness, empathy and handling difficult conversations professionally.",
+    "description_ar": "الوعي بالذات والتعاطف وإدارة المحادثات الصعبة باحترافية.",
+    "search_query": "Emotional Intelligence at Work Coursera"
+  },
+  {
+    "id": "leading_teams",
+    "title_en": "Leading People and Teams",
+    "title_ar": "قيادة الأفراد والفرق",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "leadership": 55,
+      "teamwork": 30,
+      "public_speaking": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Motivation, delegation and performance conversations for first-time managers.",
+    "description_ar": "التحفيز والتفويض ومحادثات الأداء للمديرين الجدد.",
+    "search_query": "Leading People and Teams Coursera"
+  },
+  {
+    "id": "gov_leadership_uae",
+    "title_en": "Public Sector Leadership Programme",
+    "title_ar": "برنامج القيادة في القطاع العام",
+    "provider": "Abu Dhabi School of Government",
+    "provider_type": "uae",
+    "skills": {
+      "leadership": 50,
+      "law_policy": 25,
+      "business_strategy": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Leading change inside government entities, with UAE public-service case studies.",
+    "description_ar": "قيادة التغيير داخل الجهات الحكومية، مع دراسات حالة من الخدمة العامة الإماراتية.",
+    "search_query": "Public Sector Leadership Programme Abu Dhabi School of Government"
+  },
+  {
+    "id": "nafis_career_readiness",
+    "title_en": "Career Readiness Programme",
+    "title_ar": "برنامج الجاهزية الوظيفية",
+    "provider": "NAFIS",
+    "provider_type": "uae",
+    "skills": {
+      "leadership": 30,
+      "public_speaking": 30,
+      "teamwork": 30,
+      "customer_service": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Interview technique, workplace expectations and professional conduct for new graduates.",
+    "description_ar": "مهارات المقابلات وتوقّعات بيئة العمل والسلوك المهني للخريجين الجدد.",
+    "search_query": "Career Readiness Programme NAFIS"
+  },
+  {
+    "id": "design_thinking",
+    "title_en": "Design Thinking for Innovation",
+    "title_ar": "التفكير التصميمي للابتكار",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "creativity": 55,
+      "problem_solving": 30,
+      "visual_design": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Empathy, ideation and prototyping used to solve problems people actually have.",
+    "description_ar": "التعاطف وتوليد الأفكار والنمذجة الأولية لحل مشكلات حقيقية يعيشها الناس.",
+    "search_query": "Design Thinking for Innovation Coursera"
+  },
+  {
+    "id": "creative_problem_ar",
+    "title_en": "Creative Thinking Skills (Arabic)",
+    "title_ar": "مهارات التفكير الإبداعي",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "creativity": 50,
+      "problem_solving": 30
+    },
+    "level": "beginner",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Structured ideation techniques and breaking fixed thinking patterns, in Arabic.",
+    "description_ar": "تقنيات منظّمة لتوليد الأفكار وكسر أنماط التفكير الجامدة، بالعربية.",
+    "search_query": "Creative Thinking Skills (Arabic) Edraak"
+  },
+  {
+    "id": "storytelling_media",
+    "title_en": "Visual Storytelling",
+    "title_ar": "السرد البصري",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "creativity": 45,
+      "visual_design": 35,
+      "marketing_comm": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Shaping narrative through image, sequence and pacing across visual media.",
+    "description_ar": "تشكيل السرد عبر الصورة والتسلسل والإيقاع في الوسائط البصرية.",
+    "search_query": "Visual Storytelling edX"
+  },
+  {
+    "id": "ux_design_google",
+    "title_en": "Google UX Design Certificate",
+    "title_ar": "شهادة تصميم تجربة المستخدم من جوجل",
+    "provider": "Google",
+    "provider_type": "global",
+    "skills": {
+      "visual_design": 55,
+      "creativity": 30,
+      "research_methods": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 24,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Research, wireframing, prototyping and usability testing across three portfolio projects.",
+    "description_ar": "البحث والتخطيط الهيكلي والنمذجة واختبار قابلية الاستخدام عبر ثلاثة مشاريع لملف الأعمال.",
+    "search_query": "Google UX Design Certificate Google"
+  },
+  {
+    "id": "figma_ui",
+    "title_en": "Interface Design with Figma",
+    "title_ar": "تصميم الواجهات باستخدام فيغما",
+    "provider": "Udacity",
+    "provider_type": "global",
+    "skills": {
+      "visual_design": 50,
+      "creativity": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Components, layout systems and building a design system that supports RTL layouts.",
+    "description_ar": "المكوّنات وأنظمة التخطيط وبناء نظام تصميم يدعم الاتجاه من اليمين إلى اليسار.",
+    "search_query": "Interface Design with Figma Udacity"
+  },
+  {
+    "id": "arabic_typography",
+    "title_en": "Arabic Typography and Layout",
+    "title_ar": "الطباعة والتنسيق بالخط العربي",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "visual_design": 45,
+      "arabic_language": 30,
+      "creativity": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Type selection, spacing and bilingual composition for Arabic-first design work.",
+    "description_ar": "اختيار الخطوط والتباعد والتركيب ثنائي اللغة في التصميم العربي أولاً.",
+    "search_query": "Arabic Typography and Layout Rwaq"
+  },
+  {
+    "id": "teaching_foundations",
+    "title_en": "Foundations of Teaching and Learning",
+    "title_ar": "أسس التعليم والتعلّم",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "teaching": 55,
+      "public_speaking": 25,
+      "writing_docs": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "en",
+    "description_en": "How learning works and how to plan a lesson that produces measurable understanding.",
+    "description_ar": "كيف يحدث التعلّم وكيف تُخطَّط حصّة تنتج فهماً قابلاً للقياس.",
+    "search_query": "Foundations of Teaching and Learning Coursera"
+  },
+  {
+    "id": "assessment_design",
+    "title_en": "Assessment and Feedback Design",
+    "title_ar": "تصميم التقويم والتغذية الراجعة",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "teaching": 50,
+      "attention_detail": 25,
+      "writing_docs": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Writing assessments that measure what you intended, and feedback students act on.",
+    "description_ar": "صياغة تقويمات تقيس ما قُصد قياسه، وتغذية راجعة يتصرّف الطلبة بناءً عليها.",
+    "search_query": "Assessment and Feedback Design edX"
+  },
+  {
+    "id": "edtech_classroom_ar",
+    "title_en": "Educational Technology in the Classroom (Arabic)",
+    "title_ar": "تقنيات التعليم في الصف",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "teaching": 45,
+      "visual_design": 20,
+      "arabic_language": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Practical digital tools for Arabic-medium classrooms and blended teaching.",
+    "description_ar": "أدوات رقمية عملية للصفوف الناطقة بالعربية والتعليم المدمج.",
+    "search_query": "Educational Technology in the Classroom (Arabic) Edraak"
+  },
+  {
+    "id": "first_aid_bls",
+    "title_en": "First Aid and Basic Life Support",
+    "title_ar": "الإسعافات الأولية ودعم الحياة الأساسي",
+    "provider": "IBM SkillsBuild",
+    "provider_type": "global",
+    "skills": {
+      "clinical_skills": 45,
+      "attention_detail": 25,
+      "teamwork": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 2,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Certified basic life support technique, including CPR and emergency assessment.",
+    "description_ar": "تقنيات دعم الحياة الأساسي المعتمدة، وتشمل الإنعاش القلبي الرئوي وتقييم الطوارئ.",
+    "search_query": "First Aid and Basic Life Support IBM SkillsBuild"
+  },
+  {
+    "id": "clinical_reasoning",
+    "title_en": "Introduction to Clinical Reasoning",
+    "title_ar": "مقدمة في الاستدلال السريري",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "clinical_skills": 55,
+      "life_sciences": 30,
+      "problem_solving": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Working from symptoms to differential diagnosis using structured clinical thinking.",
+    "description_ar": "الانتقال من الأعراض إلى التشخيص التفريقي عبر تفكير سريري منظّم.",
+    "search_query": "Introduction to Clinical Reasoning Coursera"
+  },
+  {
+    "id": "patient_communication",
+    "title_en": "Patient Communication Skills",
+    "title_ar": "مهارات التواصل مع المرضى",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "clinical_skills": 35,
+      "customer_service": 35,
+      "arabic_language": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Explaining a diagnosis, breaking difficult news and consulting across languages.",
+    "description_ar": "شرح التشخيص ونقل الأخبار الصعبة والتواصل عبر لغات مختلفة.",
+    "search_query": "Patient Communication Skills edX"
+  },
+  {
+    "id": "customer_experience",
+    "title_en": "Customer Experience Management",
+    "title_ar": "إدارة تجربة العملاء",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "customer_service": 55,
+      "data_analysis": 20,
+      "marketing_comm": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Journey mapping, service recovery and measuring satisfaction that actually predicts loyalty.",
+    "description_ar": "رسم رحلة العميل واستعادة الخدمة وقياس رضا يتنبأ فعلاً بالولاء.",
+    "search_query": "Customer Experience Management Coursera"
+  },
+  {
+    "id": "hospitality_service_uae",
+    "title_en": "Guest Service Excellence",
+    "title_ar": "التميّز في خدمة الضيوف",
+    "provider": "HCT",
+    "provider_type": "uae",
+    "skills": {
+      "customer_service": 50,
+      "english_language": 25,
+      "teamwork": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Service standards for UAE hospitality, including cultural expectations of guests.",
+    "description_ar": "معايير الخدمة في ضيافة الإمارات، بما فيها التوقّعات الثقافية للضيوف.",
+    "search_query": "Guest Service Excellence HCT"
+  },
+  {
+    "id": "call_center_ar",
+    "title_en": "Professional Client Handling (Arabic)",
+    "title_ar": "التعامل الاحترافي مع المتعاملين",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "customer_service": 45,
+      "arabic_language": 30,
+      "public_speaking": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 3,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Handling complaints and difficult callers professionally in Arabic.",
+    "description_ar": "التعامل مع الشكاوى والمتصلين الصعبين باحترافية بالعربية.",
+    "search_query": "Professional Client Handling (Arabic) Rwaq"
+  },
+  {
+    "id": "supply_chain_intro",
+    "title_en": "Supply Chain Management Fundamentals",
+    "title_ar": "أساسيات إدارة سلاسل الإمداد",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "logistics_ops": 55,
+      "data_analysis": 25,
+      "business_strategy": 20
+    },
+    "level": "beginner",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Sourcing, inventory, transport and the trade-offs between cost and service level.",
+    "description_ar": "التوريد والمخزون والنقل والمفاضلات بين التكلفة ومستوى الخدمة.",
+    "search_query": "Supply Chain Management Fundamentals edX"
+  },
+  {
+    "id": "logistics_analytics",
+    "title_en": "Logistics Analytics and Optimisation",
+    "title_ar": "تحليلات وتحسين اللوجستيات",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "logistics_ops": 50,
+      "data_analysis": 40,
+      "mathematics": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Forecasting, routing and network design using optimisation and simulation tools.",
+    "description_ar": "التنبؤ وتحديد المسارات وتصميم الشبكات باستخدام أدوات التحسين والمحاكاة.",
+    "search_query": "Logistics Analytics and Optimisation Coursera"
+  },
+  {
+    "id": "ports_trade_uae",
+    "title_en": "Ports, Free Zones and Trade Operations",
+    "title_ar": "الموانئ والمناطق الحرة وعمليات التجارة",
+    "provider": "HCT",
+    "provider_type": "uae",
+    "skills": {
+      "logistics_ops": 50,
+      "law_policy": 25,
+      "english_language": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "both",
+    "description_en": "How goods actually move through UAE ports, free zones and customs procedures.",
+    "description_ar": "كيف تتحرك البضائع فعلياً عبر موانئ الإمارات والمناطق الحرة والإجراءات الجمركية.",
+    "search_query": "Ports, Free Zones and Trade Operations HCT"
+  },
+  {
+    "id": "intro_law_ar",
+    "title_en": "Introduction to Law (Arabic)",
+    "title_ar": "مدخل إلى القانون",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "law_policy": 55,
+      "writing_docs": 25,
+      "arabic_language": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Legal systems, sources of law and how a statute is read and applied, in Arabic.",
+    "description_ar": "الأنظمة القانونية ومصادر القانون وكيفية قراءة النص التشريعي وتطبيقه، بالعربية.",
+    "search_query": "Introduction to Law (Arabic) Edraak"
+  },
+  {
+    "id": "public_policy_analysis",
+    "title_en": "Public Policy Analysis",
+    "title_ar": "تحليل السياسات العامة",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "law_policy": 50,
+      "research_methods": 35,
+      "economics": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Framing a policy problem, comparing options and writing a defensible recommendation.",
+    "description_ar": "تأطير مشكلة السياسة ومقارنة الخيارات وكتابة توصية قابلة للدفاع عنها.",
+    "search_query": "Public Policy Analysis edX"
+  },
+  {
+    "id": "data_protection_law",
+    "title_en": "Data Protection and Privacy Law",
+    "title_ar": "قانون حماية البيانات والخصوصية",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "law_policy": 45,
+      "cybersecurity": 25,
+      "writing_docs": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Personal-data obligations, consent and cross-border transfer rules for organisations.",
+    "description_ar": "التزامات البيانات الشخصية والموافقة وقواعد النقل عبر الحدود للمؤسسات.",
+    "search_query": "Data Protection and Privacy Law Coursera"
+  },
+  {
+    "id": "research_methods_intro",
+    "title_en": "Research Methods and Design",
+    "title_ar": "مناهج البحث وتصميمه",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "research_methods": 55,
+      "statistics": 25,
+      "writing_docs": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Question formulation, sampling, validity and choosing a design that answers the question.",
+    "description_ar": "صياغة السؤال وأخذ العيّنات والصدق واختيار تصميم يجيب عن السؤال فعلاً.",
+    "search_query": "Research Methods and Design Coursera"
+  },
+  {
+    "id": "scientific_writing_ar",
+    "title_en": "Scientific Research Skills (Arabic)",
+    "title_ar": "مهارات البحث العلمي",
+    "provider": "Rwaq",
+    "provider_type": "global",
+    "skills": {
+      "research_methods": 50,
+      "writing_docs": 35,
+      "arabic_language": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Literature review, methodology and referencing for Arabic-language research work.",
+    "description_ar": "مراجعة الأدبيات والمنهجية والتوثيق للأعمال البحثية باللغة العربية.",
+    "search_query": "Scientific Research Skills (Arabic) Rwaq"
+  },
+  {
+    "id": "survey_design",
+    "title_en": "Survey Design and Field Data Collection",
+    "title_ar": "تصميم المسوح وجمع البيانات الميدانية",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "research_methods": 45,
+      "statistics": 30,
+      "attention_detail": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 5,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Writing unbiased questions, sampling frames and managing real field data quality.",
+    "description_ar": "صياغة أسئلة غير منحازة وأُطر المعاينة وإدارة جودة البيانات الميدانية.",
+    "search_query": "Survey Design and Field Data Collection edX"
+  },
+  {
+    "id": "quality_management",
+    "title_en": "Quality Management and Six Sigma",
+    "title_ar": "إدارة الجودة وستة سيغما",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "attention_detail": 50,
+      "project_management": 30,
+      "statistics": 30
+    },
+    "level": "intermediate",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Process control, defect reduction and the statistics behind continuous improvement.",
+    "description_ar": "ضبط العمليات وخفض العيوب والإحصاء الكامن خلف التحسين المستمر.",
+    "search_query": "Quality Management and Six Sigma Coursera"
+  },
+  {
+    "id": "data_quality",
+    "title_en": "Data Quality and Validation",
+    "title_ar": "جودة البيانات والتحقق منها",
+    "provider": "Microsoft",
+    "provider_type": "global",
+    "skills": {
+      "attention_detail": 50,
+      "data_analysis": 35
+    },
+    "level": "beginner",
+    "duration_weeks": 3,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Profiling, cleaning and validating datasets before anyone builds a decision on them.",
+    "description_ar": "توصيف البيانات وتنظيفها والتحقق منها قبل أن يبني أحد قراراً عليها.",
+    "search_query": "Data Quality and Validation Microsoft"
+  },
+  {
+    "id": "auditing_basics",
+    "title_en": "Internal Auditing Basics",
+    "title_ar": "أساسيات التدقيق الداخلي",
+    "provider": "Emirates Institute of Finance",
+    "provider_type": "uae",
+    "skills": {
+      "attention_detail": 50,
+      "finance_accounting": 35,
+      "law_policy": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "both",
+    "description_en": "Evidence, sampling and documenting an audit finding that withstands challenge.",
+    "description_ar": "الأدلة والمعاينة وتوثيق ملاحظة تدقيقية تصمد أمام الاعتراض.",
+    "search_query": "Internal Auditing Basics Emirates Institute of Finance"
+  },
+  {
+    "id": "problem_solving_ds",
+    "title_en": "Algorithmic Problem Solving",
+    "title_ar": "حل المشكلات الخوارزمي",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "problem_solving": 55,
+      "programming": 35,
+      "mathematics": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 10,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Data structures and algorithm design practised on progressively harder problems.",
+    "description_ar": "هياكل البيانات وتصميم الخوارزميات بالتدريب على مسائل متدرّجة الصعوبة.",
+    "search_query": "Algorithmic Problem Solving edX"
+  },
+  {
+    "id": "critical_thinking_ar",
+    "title_en": "Critical Thinking (Arabic)",
+    "title_ar": "التفكير الناقد",
+    "provider": "Edraak",
+    "provider_type": "global",
+    "skills": {
+      "problem_solving": 50,
+      "research_methods": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 4,
+    "cost": "free",
+    "language": "ar",
+    "description_en": "Argument analysis, logical fallacies and evidence evaluation, taught in Arabic.",
+    "description_ar": "تحليل الحجج والمغالطات المنطقية وتقييم الأدلة، مشروحة بالعربية.",
+    "search_query": "Critical Thinking (Arabic) Edraak"
+  },
+  {
+    "id": "root_cause_analysis",
+    "title_en": "Root Cause Analysis",
+    "title_ar": "تحليل الأسباب الجذرية",
+    "provider": "IBM SkillsBuild",
+    "provider_type": "global",
+    "skills": {
+      "problem_solving": 50,
+      "attention_detail": 30,
+      "project_management": 20
+    },
+    "level": "intermediate",
+    "duration_weeks": 3,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Structured techniques for finding why something failed rather than what failed.",
+    "description_ar": "تقنيات منظّمة لاكتشاف سبب الفشل لا مجرّد تحديد ما الذي فشل.",
+    "search_query": "Root Cause Analysis IBM SkillsBuild"
+  },
+  {
+    "id": "private_pilot_ground",
+    "title_en": "Private Pilot Ground School",
+    "title_ar": "الدراسة الأرضية لرخصة الطيران الخاص",
+    "provider": "HCT",
+    "provider_type": "uae",
+    "skills": {
+      "aviation_ops": 55,
+      "physics_reasoning": 30,
+      "english_language": 25
+    },
+    "level": "intermediate",
+    "duration_weeks": 16,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Air law, navigation, meteorology and principles of flight up to written-exam standard.",
+    "description_ar": "قانون الجو والملاحة والأرصاد ومبادئ الطيران حتى مستوى الاختبار التحريري.",
+    "search_query": "Private Pilot Ground School HCT"
+  },
+  {
+    "id": "aviation_safety",
+    "title_en": "Aviation Safety and Human Factors",
+    "title_ar": "سلامة الطيران والعوامل البشرية",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "aviation_ops": 50,
+      "teamwork": 30,
+      "attention_detail": 35
+    },
+    "level": "intermediate",
+    "duration_weeks": 5,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Why aviation accidents happen and the crew-resource-management practices that prevent them.",
+    "description_ar": "لماذا تقع حوادث الطيران وممارسات إدارة موارد الطاقم التي تمنعها.",
+    "search_query": "Aviation Safety and Human Factors Coursera"
+  },
+  {
+    "id": "airport_operations",
+    "title_en": "Airport Operations Management",
+    "title_ar": "إدارة عمليات المطارات",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "aviation_ops": 50,
+      "logistics_ops": 30,
+      "customer_service": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "both",
+    "description_en": "Ground handling, terminal flow and the coordination behind an on-time departure.",
+    "description_ar": "الخدمات الأرضية وانسياب حركة المبنى والتنسيق الكامن خلف إقلاع في موعده.",
+    "search_query": "Airport Operations Management edX"
+  },
+  {
+    "id": "gis_fundamentals",
+    "title_en": "GIS Fundamentals",
+    "title_ar": "أساسيات نظم المعلومات الجغرافية",
+    "provider": "Coursera",
+    "provider_type": "global",
+    "skills": {
+      "geospatial_gis": 55,
+      "data_analysis": 25
+    },
+    "level": "beginner",
+    "duration_weeks": 6,
+    "cost": "free",
+    "language": "en",
+    "description_en": "Coordinate systems, spatial data and producing a map that answers a real question.",
+    "description_ar": "أنظمة الإحداثيات والبيانات المكانية وإنتاج خريطة تجيب عن سؤال حقيقي.",
+    "search_query": "GIS Fundamentals Coursera"
+  },
+  {
+    "id": "remote_sensing",
+    "title_en": "Remote Sensing and Image Analysis",
+    "title_ar": "الاستشعار عن بُعد وتحليل الصور",
+    "provider": "edX",
+    "provider_type": "global",
+    "skills": {
+      "geospatial_gis": 50,
+      "data_analysis": 35,
+      "physics_reasoning": 25
+    },
+    "level": "advanced",
+    "duration_weeks": 8,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Satellite imagery, spectral indices and change detection over time series.",
+    "description_ar": "صور الأقمار الصناعية والمؤشرات الطيفية وكشف التغيّر عبر السلاسل الزمنية.",
+    "search_query": "Remote Sensing and Image Analysis edX"
+  },
+  {
+    "id": "spatial_python",
+    "title_en": "Spatial Analysis with Python",
+    "title_ar": "التحليل المكاني باستخدام بايثون",
+    "provider": "Udacity",
+    "provider_type": "global",
+    "skills": {
+      "geospatial_gis": 50,
+      "programming": 40,
+      "data_analysis": 30
+    },
+    "level": "advanced",
+    "duration_weeks": 6,
+    "cost": "paid",
+    "language": "en",
+    "description_en": "Automating geospatial workflows with open-source Python libraries.",
+    "description_ar": "أتمتة تدفقات العمل الجغرافية المكانية باستخدام مكتبات بايثون مفتوحة المصدر.",
+    "search_query": "Spatial Analysis with Python Udacity"
+  }
+]

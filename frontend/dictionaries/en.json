@@ -23,7 +23,8 @@
     "menu": "Menu",
     "skipToContent": "Skip to main content",
     "toggleTheme": "Switch between light and dark mode",
-    "toggleLanguage": "Switch language"
+    "toggleLanguage": "Switch language",
+    "backToTop": "Back to top"
   },
   "landing": {
     "eyebrow": "AI Career Guidance System",

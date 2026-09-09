@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Masar AI — Your path, guided by data</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="alternate" hreflang="en" href="en/" />
+    <link rel="alternate" hreflang="ar" href="ar/" />
+    <!--
+      This file replaces the Next.js middleware that used to pick a locale on
+      the way in. Static export has no server, so the choice has to happen in
+      the browser.
+
+      Every URL here is RELATIVE ("en/", not "/en/"). That is deliberate: the
+      site is served from / in development and from /masar-ai/ on GitHub Pages,
+      and a relative target is correct under both without knowing the base path.
+
+      The meta refresh is the no-JavaScript fallback; the script overrides it
+      immediately when scripting is available, so an Arabic speaker lands on the
+      Arabic site rather than bouncing through the English one.
+    -->
+    <meta http-equiv="refresh" content="0; url=en/" />
+    <script>
+      (function () {
+        try {
+          var supported = ["en", "ar"];
+          var wanted = null;
+          try {
+            var stored = window.localStorage.getItem("masar.v2.locale");
+            if (stored && supported.indexOf(stored) !== -1) wanted = stored;
+          } catch (e) {}
+          if (!wanted) {
+            var langs = navigator.languages || [navigator.language || ""];
+            for (var i = 0; i < langs.length && !wanted; i++) {
+              var code = String(langs[i]).slice(0, 2).toLowerCase();
+              if (supported.indexOf(code) !== -1) wanted = code;
+            }
+          }
+          window.location.replace((wanted || "en") + "/");
+        } catch (e) {
+          window.location.replace("en/");
+        }
+      })();
+    </script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #fff;
+        color: #111827;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      a { color: #00732f; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #0c1418; color: #f1f5f4; }
+        a { color: #2e9257; }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <p style="text-align: center; line-height: 2">
+        <a href="en/">Continue in English</a><br />
+        <a href="ar/">المتابعة بالعربية</a>
+      </p>
+    </noscript>
+  </body>
+</html>
