@@ -3,11 +3,13 @@
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
+import LocationPicker from "@/components/LocationPicker";
 import { ErrorBox, Loading } from "@/components/ui";
-import { api, ApiError } from "@/lib/api";
-import { useAuth } from "@/lib/auth";
+import { loadBigFive, loadRiasec } from "@/lib/data/client";
 import { localiseDigits } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
+import { scoreQuestionnaire } from "@/lib/scoring";
+import { emptyProfile, useProfile } from "@/lib/store/profile";
 import type { Profile, Questionnaire } from "@/lib/types";
 
 const SUBJECTS = [
@@ -22,12 +24,26 @@ const EMIRATES = [
 const TRACKS = ["general", "advanced", "elite"] as const;
 const TOTAL_STEPS = 4;
 
-export default function OnboardingPage() {
+/**
+ * The four-step assessment.
+ *
+ * Everything persists to localStorage as the student advances, so they can
+ * close the tab and come back — the brief asks for resumable progress, and
+ * with no account that has to be the device's job.
+ *
+ * There is no sign-in step. Entering a name in step 1 creates the local
+ * profile; asking someone to register an account before an anonymous,
+ * device-local questionnaire would be friction with nothing behind it.
+ */
+export default function AssessmentPage() {
   const { locale, t } = useLocale();
-  const { user, loading: authLoading } = useAuth();
   const router = useRouter();
 
-  const [profile, setProfile] = useState<Profile | null>(null);
+  const profile = useProfile((state) => state.profile);
+  const hydrated = useProfile((state) => state.hydrated);
+  const createProfile = useProfile((state) => state.create);
+  const updateProfile = useProfile((state) => state.update);
+
   const [step, setStep] = useState(1);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -36,6 +52,11 @@ export default function OnboardingPage() {
   // step 1
   const [fullName, setFullName] = useState("");
   const [emirate, setEmirate] = useState("");
+  const [city, setCity] = useState("");
+  const [coordinates, setCoordinates] =
+    useState<{ lat: number; lng: number } | null>(null);
+  const [locationSource, setLocationSource] =
+    useState<Profile["locationSource"]>(null);
   const [school, setSchool] = useState("");
   const [gradeLevel, setGradeLevel] = useState("12");
   const [track, setTrack] = useState("general");
@@ -49,70 +70,81 @@ export default function OnboardingPage() {
   const [bigfiveAnswers, setBigfiveAnswers] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    if (!authLoading && !user) router.replace(`/${locale}/login`);
-  }, [authLoading, user, router, locale]);
-
-  // Depends on user.id, not on `user`: re-running this effect resets every
-  // field to the last saved value, so it must fire when the account changes and
-  // never merely because the auth context handed back a new object identity.
-  const userId = user?.id;
-  const userName = user?.full_name;
-
-  useEffect(() => {
-    if (!userId) return;
-    Promise.all([
-      api.get<Profile>("/api/profile"),
-      api.get<Questionnaire>("/api/profile/questionnaires/riasec"),
-      api.get<Questionnaire>("/api/profile/questionnaires/bigfive"),
-    ])
-      .then(([loaded, riasecQuestionnaire, bigfiveQuestionnaire]) => {
-        setProfile(loaded);
+    Promise.all([loadRiasec(), loadBigFive()])
+      .then(([riasecQuestionnaire, bigfiveQuestionnaire]) => {
         setRiasec(riasecQuestionnaire);
         setBigfive(bigfiveQuestionnaire);
-
-        setFullName(loaded.full_name || userName || "");
-        setEmirate(loaded.emirate ?? "");
-        setSchool(loaded.school ?? "");
-        setGradeLevel(loaded.grade_level ?? "12");
-        setTrack(loaded.track ?? "general");
-        setGrades(
-          Object.fromEntries(Object.entries(loaded.grades ?? {}).map(([k, v]) => [k, String(v)])),
-        );
-        setEmsat(
-          Object.fromEntries(Object.entries(loaded.emsat ?? {}).map(([k, v]) => [k, String(v)])),
-        );
-        setRiasecAnswers(loaded.riasec_answers ?? {});
-        setBigfiveAnswers(loaded.bigfive_answers ?? {});
-        // Resume where the student stopped rather than at step 1.
-        setStep(Math.min(TOTAL_STEPS, (loaded.completed_steps ?? 0) + 1));
       })
-      .catch((caught) =>
-        setError(caught instanceof ApiError ? caught.localised(locale) : t.common.error),
-      );
-  }, [userId, userName, locale, t.common.error]);
+      .catch(() => setError(t.common.error));
+  }, [t.common.error]);
 
+  // Keyed on the profile id, not the profile object: this effect seeds the form
+  // from stored values, and re-running it on every store write would overwrite
+  // whatever the student is currently typing.
+  const profileId = profile?.id;
+
+  useEffect(() => {
+    if (!hydrated) return;
+    const stored = useProfile.getState().profile;
+    if (!stored) return;
+
+    setFullName(stored.fullName);
+    setEmirate(stored.emirate ?? "");
+    setCity(stored.city ?? "");
+    setCoordinates(stored.coordinates);
+    setLocationSource(stored.locationSource);
+    setSchool(stored.school ?? "");
+    setGradeLevel(stored.gradeLevel ?? "12");
+    setTrack(stored.track ?? "general");
+    setGrades(
+      Object.fromEntries(Object.entries(stored.grades ?? {}).map(([k, v]) => [k, String(v)])),
+    );
+    setEmsat(
+      Object.fromEntries(Object.entries(stored.emsat ?? {}).map(([k, v]) => [k, String(v)])),
+    );
+    setRiasecAnswers(stored.riasecAnswers ?? {});
+    setBigfiveAnswers(stored.bigfiveAnswers ?? {});
+    // Resume where the student stopped rather than restarting at step 1.
+    setStep(Math.min(TOTAL_STEPS, (stored.completedSteps ?? 0) + 1));
+  }, [hydrated, profileId]);
+
+  /**
+   * Applies one step's data and advances.
+   *
+   * `completedSteps` only ever moves forward: a student revisiting step 2 to
+   * correct a grade must not lose the questionnaires they already finished.
+   */
   const save = useCallback(
-    async (path: string, body: Record<string, unknown>, nextStep: number) => {
+    (patch: Partial<Profile>, nextStep: number) => {
       setBusy(true);
       setError(null);
       try {
-        const updated = await api.put<Profile>(`/api/profile/${path}`, body);
-        setProfile(updated);
+        const existing = useProfile.getState().profile;
+        if (!existing) {
+          const name = typeof patch.fullName === "string" ? patch.fullName : "";
+          createProfile(name || emptyProfile("").fullName);
+        }
+        const current = useProfile.getState().profile;
+        updateProfile({
+          ...patch,
+          completedSteps: Math.max(current?.completedSteps ?? 0, nextStep - 1),
+        });
         setNotice(t.wizard.saved);
         window.setTimeout(() => setNotice(null), 1800);
+
         if (nextStep > TOTAL_STEPS) {
-          router.push(`/${locale}/dashboard`);
+          router.push(`/${locale}/results`);
           return;
         }
         setStep(nextStep);
         window.scrollTo({ top: 0, behavior: "smooth" });
-      } catch (caught) {
-        setError(caught instanceof ApiError ? caught.localised(locale) : t.common.error);
+      } catch {
+        setError(t.common.error);
       } finally {
         setBusy(false);
       }
     },
-    [locale, router, t.common.error, t.wizard.saved],
+    [createProfile, updateProfile, locale, router, t.common.error, t.wizard.saved],
   );
 
   const riasecDone = riasec ? Object.keys(riasecAnswers).length >= riasec.items.length : false;
@@ -123,7 +155,7 @@ export default function OnboardingPage() {
     [t],
   );
 
-  if (authLoading || (!profile && !error)) {
+  if (!hydrated || (!riasec && !error)) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         <Loading />
@@ -140,7 +172,7 @@ export default function OnboardingPage() {
       <ol className="mt-6 grid grid-cols-4 gap-2" aria-label={t.wizard.title}>
         {stepTitles.map((title, index) => {
           const number = index + 1;
-          const done = (profile?.completed_steps ?? 0) >= number;
+          const done = (profile?.completedSteps ?? 0) >= number;
           const active = step === number;
           return (
             <li key={title}>
@@ -192,12 +224,14 @@ export default function OnboardingPage() {
           onSubmit={(event) => {
             event.preventDefault();
             void save(
-              "step1",
               {
-                full_name: fullName.trim(),
-                emirate,
-                school: school.trim(),
-                grade_level: gradeLevel,
+                fullName: fullName.trim(),
+                emirate: emirate || null,
+                city: city || null,
+                coordinates,
+                locationSource,
+                school: school.trim() || null,
+                gradeLevel,
                 track,
               },
               2,
@@ -243,6 +277,20 @@ export default function OnboardingPage() {
                   ))}
                 </select>
               </div>
+
+              {/* City, and the optional geolocation shortcut. Both feed the
+                  distance ranking on the university matching page. */}
+              {emirate && (
+                <LocationPicker
+                  emirate={emirate}
+                  city={city}
+                  onCityChange={setCity}
+                  onCoordinates={(next, source) => {
+                    setCoordinates(next);
+                    setLocationSource(source);
+                  }}
+                />
+              )}
 
               <div>
                 <label htmlFor="wiz-school" className="mb-1 block text-sm font-medium">
@@ -317,7 +365,7 @@ export default function OnboardingPage() {
                 .filter(([, value]) => value !== "")
                 .map(([key, value]) => [key, Number(value)]),
             );
-            void save("step2", { grades: numericGrades, emsat: numericEmsat }, 3);
+            void save({ grades: numericGrades, emsat: numericEmsat }, 3);
           }}
         >
           <fieldset>
@@ -398,7 +446,16 @@ export default function OnboardingPage() {
           complete={riasecDone}
           busy={busy}
           onBack={() => setStep(2)}
-          onSubmit={() => void save("step3", { answers: riasecAnswers }, 4)}
+          onSubmit={() =>
+            void save(
+              {
+                riasecAnswers,
+                // Scored here because there is no server to score it.
+                riasec: riasec ? scoreQuestionnaire(riasecAnswers, riasec.items) : {},
+              },
+              4,
+            )
+          }
           submitLabel={t.wizard.next}
         />
       )}
@@ -413,7 +470,15 @@ export default function OnboardingPage() {
           complete={bigfiveDone}
           busy={busy}
           onBack={() => setStep(3)}
-          onSubmit={() => void save("step4", { answers: bigfiveAnswers }, 5)}
+          onSubmit={() =>
+            void save(
+              {
+                bigfiveAnswers,
+                bigfive: bigfive ? scoreQuestionnaire(bigfiveAnswers, bigfive.items) : {},
+              },
+              5,
+            )
+          }
           submitLabel={t.wizard.finish}
         />
       )}

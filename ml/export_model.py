@@ -49,6 +49,7 @@ from recommender import (  # noqa: E402
     DEMAND_SCORE, FEATURE_LABELS, WEIGHT_DEMAND, WEIGHT_SECTOR,
     WEIGHT_SIMILARITY, career_vector,
 )
+from skill_map import INVERTED_FEATURES, SKILL_WEIGHTS  # noqa: E402
 
 ARTIFACTS = HERE / "artifacts"
 DATA_DIR = ROOT / "frontend" / "public" / "data"
@@ -152,6 +153,15 @@ def main() -> None:
             "similarity": WEIGHT_SIMILARITY,
             "demand": WEIGHT_DEMAND,
             "demandScores": DEMAND_SCORE,
+        },
+
+        # --- skill estimation ------------------------------------------------
+        # Shipped rather than duplicated in TypeScript: these 70 weight vectors
+        # are the whole skill-gap model, and a second hand-maintained copy would
+        # drift from the documented table the moment either side was edited.
+        "skillMap": {
+            "weights": SKILL_WEIGHTS,
+            "invertedFeatures": sorted(INVERTED_FEATURES),
         },
 
         # --- explanation labels --------------------------------------------

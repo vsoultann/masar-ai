@@ -1,19 +1,23 @@
 "use client";
 
 import { asset } from "@/lib/paths";
-import type { Career, Course } from "@/lib/types";
+import type {
+  Career, CareerSummary, Course, Initiative, Major, Questionnaire,
+  Sector, Skill, University,
+} from "@/lib/types";
 
 /**
  * Runtime catalog access for the browser.
  *
- * There is no API server any more, so the catalogs are plain JSON files served
- * as static assets. Each file is fetched at most once per page load and then
- * held in a module-level cache -- several components on the results page want
- * the career catalog, and refetching it per component would be wasteful even
- * though the browser would serve it from its own cache.
+ * There is no API server, so the catalogs are static JSON. Two things matter:
  *
- * In-flight requests are cached too, not just settled ones, so five components
- * mounting in the same tick share one request rather than starting five.
+ *  1. **Fetch the index, not the catalog.** careers-index.json is 39 KB
+ *     gzipped and carries what a card renders; careers.json is 139 KB and
+ *     carries every long description in both languages. A grid must never pull
+ *     the second one.
+ *  2. **Share in-flight requests.** The cache holds the promise, not just the
+ *     settled value, so five components mounting in the same tick issue one
+ *     request between them rather than five.
  */
 
 const cache = new Map<string, Promise<unknown>>();
@@ -25,14 +29,12 @@ function loadJson<T>(file: string): Promise<T> {
 
   const request = fetch(url)
     .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Could not load ${file} (${response.status})`);
-      }
+      if (!response.ok) throw new Error(`Could not load ${file} (${response.status})`);
       return response.json() as Promise<T>;
     })
     .catch((error) => {
-      // Drop the rejected promise so a later attempt can retry rather than
-      // replaying the same failure forever.
+      // Drop the rejected promise so a retry is possible rather than replaying
+      // the same failure for the rest of the session.
       cache.delete(url);
       throw error;
     });
@@ -41,87 +43,68 @@ function loadJson<T>(file: string): Promise<T> {
   return request;
 }
 
+export const loadCareerIndex = () => loadJson<CareerSummary[]>("careers-index.json");
 export const loadCareers = () => loadJson<Career[]>("careers.json");
 export const loadCourses = () => loadJson<Course[]>("courses.json");
+export const loadUniversities = () => loadJson<University[]>("universities.json");
+export const loadMajors = () => loadJson<Major[]>("majors.json");
+export const loadSectors = () => loadJson<Sector[]>("sectors.json");
+export const loadSkills = () => loadJson<Skill[]>("skills.json");
+export const loadInitiatives = () => loadJson<Initiative[]>("initiatives.json");
+export const loadRiasec = () => loadJson<Questionnaire>("questionnaire_riasec.json");
+export const loadBigFive = () => loadJson<Questionnaire>("questionnaire_bigfive.json");
 
 export async function loadCareer(id: string): Promise<Career | null> {
   const careers = await loadCareers();
   return careers.find((career) => career.id === id) ?? null;
 }
 
-export async function loadCoursesForSkills(
-  skills: string[],
-  perSkill = 3,
-): Promise<Course[]> {
-  const courses = await loadCourses();
-  const seen = new Set<string>();
-  const picked: Course[] = [];
-
-  for (const skill of skills) {
-    const matches = courses
-      .filter((course) => skill in (course.skills ?? {}))
-      .sort((a, b) => (b.skills[skill] ?? 0) - (a.skills[skill] ?? 0))
-      .slice(0, perSkill);
-    for (const course of matches) {
-      if (seen.has(course.id)) continue;
-      seen.add(course.id);
-      picked.push(course);
-    }
-  }
-
-  return picked;
+export async function loadUniversity(id: string): Promise<University | null> {
+  const universities = await loadUniversities();
+  return universities.find((university) => university.id === id) ?? null;
 }
 
-/* -------------------------------------------------------------------------
-   Joins
-   -------------------------------------------------------------------------
-   The FastAPI backend used to expand a career's sector, skill and initiative
-   ids into full objects before sending it. With the server gone, that join
-   moves here so the presentation components keep the shape they already
-   expect and did not need rewriting.
-   ------------------------------------------------------------------------- */
-
-import type { Initiative, Sector, Skill } from "@/lib/types";
-
-export const loadSectors = () => loadJson<Sector[]>("sectors.json");
-export const loadSkills = () => loadJson<Skill[]>("skills.json");
-export const loadInitiatives = () => loadJson<Initiative[]>("initiatives.json");
-
-function byId<T extends { id: string }>(rows: T[]): Map<string, T> {
+/** id -> row, for the many places that need to resolve a reference. */
+export function indexBy<T extends { id: string }>(rows: T[]): Map<string, T> {
   return new Map(rows.map((row) => [row.id, row]));
 }
 
-/** Attaches sector_detail, skill_detail and initiative_detail to a career. */
-export async function hydrateCareer(career: Career): Promise<Career> {
-  const [sectors, skills, initiatives] = await Promise.all([
-    loadSectors(),
-    loadSkills(),
-    loadInitiatives(),
-  ]);
-
-  const skillsById = byId(skills);
-  const initiativesById = byId(initiatives);
-
-  return {
-    ...career,
-    sector_detail: byId(sectors).get(career.sector),
-    // Heaviest requirement first: the detail page renders these as a list of
-    // meters, and an unsorted list buries what actually matters for the role.
-    skill_detail: Object.entries(career.skills)
-      .sort((a, b) => b[1] - a[1])
-      .map(([id, weight]) => {
-        const skill = skillsById.get(id);
-        return skill ? { ...skill, weight } : null;
-      })
-      .filter((row): row is Skill & { weight: number } => row !== null),
-    initiative_detail: career.initiatives
-      .map((id) => initiativesById.get(id))
-      .filter((row): row is Initiative => row !== undefined),
-  };
+export async function loadCoursesByIds(ids: string[]): Promise<Course[]> {
+  const courses = indexBy(await loadCourses());
+  return ids.map((id) => courses.get(id)).filter((c): c is Course => c !== undefined);
 }
 
-/** The detail page's one call: fetch, join, done. */
-export async function loadCareerDetail(id: string): Promise<Career | null> {
-  const career = await loadCareer(id);
-  return career ? hydrateCareer(career) : null;
+export async function loadCareersByIds(ids: string[]): Promise<CareerSummary[]> {
+  const careers = indexBy(await loadCareerIndex());
+  return ids
+    .map((id) => careers.get(id))
+    .filter((c): c is CareerSummary => c !== undefined);
+}
+
+/**
+ * Courses that teach the given skills, best first.
+ *
+ * Ranked by the course's proficiency gain weighted by how large the student's
+ * gap in that skill is, so a strong course in a skill they already have never
+ * outranks a decent course in one they lack.
+ */
+export async function loadCoursesForGaps(
+  gaps: { skill: string; gap: number }[],
+  limit = 8,
+): Promise<Course[]> {
+  const courses = await loadCourses();
+  const weights = new Map(gaps.map((g) => [g.skill, g.gap]));
+
+  return courses
+    .map((course) => {
+      let score = 0;
+      for (const [skill, gain] of Object.entries(course.skills)) {
+        score += gain * (weights.get(skill) ?? 0);
+      }
+      return { course, score };
+    })
+    .filter((row) => row.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((row) => row.course);
 }

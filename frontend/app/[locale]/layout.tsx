@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Cairo, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 
-import { AuthProvider } from "@/lib/auth";
 import BackgroundForRoute from "@/components/background/BackgroundForRoute";
 import BackToTop from "@/components/BackToTop";
 import MotionProvider from "@/components/MotionProvider";
@@ -71,7 +70,6 @@ export default async function LocaleLayout({
         <ThemeScript />
         <LocaleProvider locale={typed} dictionary={dictionary}>
           <MotionProvider>
-            <AuthProvider>
               <BackgroundForRoute />
               <ScrollProgress rtl={dir === "rtl"} />
               <a
@@ -89,7 +87,6 @@ export default async function LocaleLayout({
               </div>
               <MentorPanel />
               <BackToTop label={dictionary.nav.backToTop} />
-            </AuthProvider>
           </MotionProvider>
         </LocaleProvider>
       </body>

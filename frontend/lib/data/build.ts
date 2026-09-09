@@ -1,6 +1,7 @@
 import careers from "@/public/data/careers.json";
 import courses from "@/public/data/courses.json";
 import sectors from "@/public/data/sectors.json";
+import universities from "@/public/data/universities.json";
 
 /**
  * Build-time catalog access, for generateStaticParams only.
@@ -27,11 +28,16 @@ export function courseIds(): string[] {
   return (courses as IdOnly[]).map((course) => course.id);
 }
 
+export function universityIds(): string[] {
+  return (universities as IdOnly[]).map((university) => university.id);
+}
+
 export function sectorIds(): string[] {
   return (sectors as IdOnly[]).map((sector) => sector.id);
 }
 
 export const catalogCounts = {
+  universities: (universities as IdOnly[]).length,
   careers: (careers as IdOnly[]).length,
   courses: (courses as IdOnly[]).length,
   sectors: (sectors as IdOnly[]).length,

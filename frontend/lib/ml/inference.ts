@@ -98,8 +98,15 @@ interface ModelBundle {
     demandScores: Record<string, number>;
   };
   featureLabels: Record<string, { en: string; ar: string }>;
+  /** Weights for estimating current skill level; mirrors ml/skill_map.py. */
+  skillMap: {
+    weights: Record<string, Record<string, number>>;
+    invertedFeatures: string[];
+  };
   metrics: Record<string, unknown>;
 }
+
+export type { ModelBundle };
 
 const SUPPORTED_CONTRACT = 1;
 

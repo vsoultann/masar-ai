@@ -1,178 +1,180 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useMemo, useState } from "react";
 
 import CareerCard from "@/components/CareerCard";
-import { EmptyState, ErrorBox, Loading, SectionHeading } from "@/components/ui";
-import { api, ApiError } from "@/lib/api";
+import { EmptyState, ErrorBox, Skeleton } from "@/components/ui";
+import { indexBy, loadCareerIndex, loadSectors } from "@/lib/data/client";
 import { localiseDigits } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
-import type { Career, Sector } from "@/lib/types";
+import { revealContainer, viewportOnce } from "@/lib/motion";
+import type { CareerSummary, Demand, Sector } from "@/lib/types";
 
-function CareersExplorer() {
-  const { locale, t, pick } = useLocale();
-  const searchParams = useSearchParams();
+/**
+ * The careers explorer: browsable without a profile, as the brief requires.
+ *
+ * Filtering runs over the 184-entry index in memory. That is fast enough that
+ * debouncing the search would only add latency — the whole list is already in
+ * the browser, and there is no request to throttle.
+ */
+export default function CareersPage() {
+  const { locale, t } = useLocale();
 
-  const [careers, setCareers] = useState<Career[] | null>(null);
+  const [careers, setCareers] = useState<CareerSummary[] | null>(null);
   const [sectors, setSectors] = useState<Sector[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   const [query, setQuery] = useState("");
-  const [sector, setSector] = useState(searchParams.get("sector") ?? "");
+  const [sector, setSector] = useState("");
   const [demand, setDemand] = useState("");
 
   useEffect(() => {
-    api
-      .get<{ sectors: Sector[] }>("/api/sectors", false)
-      .then((body) => setSectors(body.sectors))
-      .catch(() => undefined);
-  }, []);
-
-  useEffect(() => {
     let cancelled = false;
-    setError(null);
-    api
-      .get<{ careers: Career[] }>("/api/careers?limit=200", false)
-      .then((body) => {
-        if (!cancelled) setCareers(body.careers);
-      })
-      .catch((caught) => {
+    Promise.all([loadCareerIndex(), loadSectors()])
+      .then(([careerRows, sectorRows]) => {
         if (cancelled) return;
-        setError(caught instanceof ApiError ? caught.localised(locale) : t.common.error);
-        setCareers([]);
+        setCareers(careerRows);
+        setSectors(sectorRows);
+      })
+      .catch(() => {
+        if (!cancelled) setError(t.common.error);
       });
     return () => {
       cancelled = true;
     };
-  }, [locale, t.common.error]);
+  }, [t.common.error]);
 
-  const sectorNames = useMemo(
-    () => Object.fromEntries(sectors.map((entry) => [entry.id, entry])),
-    [sectors],
-  );
+  const sectorsById = useMemo(() => indexBy(sectors), [sectors]);
 
-  // Filtering runs in the browser: the whole catalog is 60 rows, so a round
-  // trip per keystroke would be slower and would make the Arabic search feel
-  // laggy for no benefit.
   const filtered = useMemo(() => {
     if (!careers) return [];
     const needle = query.trim().toLowerCase();
     return careers.filter((career) => {
       if (sector && career.sector !== sector) return false;
-      if (demand && career.demand !== demand) return false;
+      if (demand && career.demandOutlook !== demand) return false;
       if (!needle) return true;
+      // Search both languages regardless of the active one: students often
+      // know a career's name in English but are reading the Arabic site.
       return (
-        career.title_en.toLowerCase().includes(needle) ||
-        career.title_ar.includes(query.trim()) ||
-        career.description_en.toLowerCase().includes(needle) ||
-        career.description_ar.includes(query.trim())
+        career.title.en.toLowerCase().includes(needle)
+        || career.title.ar.includes(needle)
+        || career.shortDescription.en.toLowerCase().includes(needle)
+        || career.shortDescription.ar.includes(needle)
       );
     });
   }, [careers, query, sector, demand]);
 
   const hasFilters = Boolean(query || sector || demand);
 
-  return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
-      <SectionHeading title={t.careers.title} subtitle={t.careers.subtitle} />
+  if (error) {
+    return (
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+        <ErrorBox message={error} onRetry={() => window.location.reload()} />
+      </div>
+    );
+  }
 
-      <div className="card mb-6 grid gap-3 p-4 sm:grid-cols-3">
-        <div className="sm:col-span-1">
-          <label htmlFor="career-search" className="mb-1 block text-xs font-medium">
-            {t.careers.search}
-          </label>
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+      <header>
+        <h1 className="text-2xl font-black sm:text-3xl">{t.careers.title}</h1>
+        <p className="mt-2 max-w-2xl muted">{t.careers.subtitle}</p>
+      </header>
+
+      <div className="card mt-6 grid gap-3 p-4 sm:grid-cols-[2fr_1fr_1fr]">
+        <label className="block">
+          <span className="mb-1 block text-xs font-semibold">{t.careers.search}</span>
           <input
-            id="career-search"
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder={t.careers.searchPlaceholder}
-            className="field"
+            className="w-full rounded-lg border bg-[var(--surface)] px-3 py-2 text-sm"
           />
-        </div>
-        <div>
-          <label htmlFor="career-sector" className="mb-1 block text-xs font-medium">
-            {t.careers.sector}
-          </label>
+        </label>
+
+        <label className="block">
+          <span className="mb-1 block text-xs font-semibold">{t.careers.sector}</span>
           <select
-            id="career-sector"
             value={sector}
             onChange={(event) => setSector(event.target.value)}
-            className="field"
+            className="w-full rounded-lg border bg-[var(--surface)] px-3 py-2 text-sm"
           >
             <option value="">{t.careers.allSectors}</option>
-            {sectors.map((entry) => (
-              <option key={entry.id} value={entry.id}>
-                {pick(entry, "name")}
+            {sectors.map((row) => (
+              <option key={row.id} value={row.id}>
+                {locale === "ar" ? row.name_ar : row.name_en}
               </option>
             ))}
           </select>
-        </div>
-        <div>
-          <label htmlFor="career-demand" className="mb-1 block text-xs font-medium">
-            {t.careers.demand}
-          </label>
+        </label>
+
+        <label className="block">
+          <span className="mb-1 block text-xs font-semibold">{t.careers.demand}</span>
           <select
-            id="career-demand"
             value={demand}
-            onChange={(event) => setDemand(event.target.value)}
-            className="field"
+            onChange={(event) => setDemand(event.target.value as Demand | "")}
+            className="w-full rounded-lg border bg-[var(--surface)] px-3 py-2 text-sm"
           >
             <option value="">{t.careers.allDemand}</option>
             <option value="very_high">{t.common.veryHigh}</option>
             <option value="high">{t.common.high}</option>
             <option value="moderate">{t.common.moderate}</option>
           </select>
-        </div>
+        </label>
       </div>
 
-      <div className="mb-4 flex items-center justify-between gap-3">
-        <p aria-live="polite" className="text-sm muted ltr-nums">
-          {localiseDigits(filtered.length, locale)} {t.careers.resultsCount}
+      <div className="mt-4 flex items-center justify-between gap-3">
+        <p className="text-sm muted" aria-live="polite">
+          {careers === null
+            ? t.common.loading
+            : `${localiseDigits(filtered.length, locale)} ${t.careers.resultsCount}`}
         </p>
         {hasFilters && (
           <button
             type="button"
+            className="btn btn-ghost text-sm"
             onClick={() => {
               setQuery("");
               setSector("");
               setDemand("");
             }}
-            className="btn btn-ghost !py-1.5 text-sm"
           >
             {t.careers.clearFilters}
           </button>
         )}
       </div>
 
-      {error && <ErrorBox message={error} />}
-      {careers === null && !error && <Loading />}
-      {careers !== null && filtered.length === 0 && !error && (
-        <EmptyState message={t.careers.noResults} />
+      {careers === null ? (
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {Array.from({ length: 6 }, (_, index) => (
+            <Skeleton key={index} className="h-72" />
+          ))}
+        </div>
+      ) : filtered.length === 0 ? (
+        <div className="mt-6">
+          <EmptyState message={t.careers.noResults} />
+        </div>
+      ) : (
+        <motion.div
+          variants={revealContainer(0.04)}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          <AnimatePresence mode="popLayout">
+            {filtered.map((career) => (
+              <CareerCard
+                key={career.id}
+                career={career}
+                sector={sectorsById.get(career.sector)}
+              />
+            ))}
+          </AnimatePresence>
+        </motion.div>
       )}
-
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((career) => (
-          <CareerCard
-            key={career.id}
-            career={career}
-            sectorName={
-              sectorNames[career.sector] ? pick(sectorNames[career.sector], "name") : undefined
-            }
-            sectorColor={sectorNames[career.sector]?.color}
-          />
-        ))}
-      </div>
     </div>
-  );
-}
-
-export default function CareersPage() {
-  // useSearchParams needs a Suspense boundary in the App Router.
-  return (
-    <Suspense fallback={<div className="mx-auto max-w-7xl px-4 py-10 sm:px-6" />}>
-      <CareersExplorer />
-    </Suspense>
   );
 }

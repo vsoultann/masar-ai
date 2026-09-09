@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { useAuth } from "@/lib/auth";
+import { useProfile } from "@/lib/store/profile";
 import { switchLocalePath, type Locale } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
 
@@ -32,7 +32,14 @@ function useTheme() {
 
 export default function Header() {
   const { locale, t } = useLocale();
-  const { user, logout } = useAuth();
+  // There is no account in v2: "signed in" means a profile exists in this
+  // browser's storage. `hydrated` distinguishes "no profile" from "not read
+  // from storage yet", so the header does not flash the signed-out nav on
+  // every load for a student who has a profile.
+  const profile = useProfile((state) => state.profile);
+  const hydrated = useProfile((state) => state.hydrated);
+  const clearProfile = useProfile((state) => state.clear);
+  const user = hydrated ? profile : null;
   const pathname = usePathname();
   const router = useRouter();
   const { theme, toggle } = useTheme();
@@ -46,7 +53,12 @@ export default function Header() {
     { href: `/${locale}/careers`, label: t.nav.careers },
     { href: `/${locale}/about`, label: t.nav.about },
   ];
-  if (user) links.push({ href: `/${locale}/dashboard`, label: t.nav.dashboard });
+  links.push({ href: `/${locale}/universities`, label: t.nav.universities });
+  links.push({ href: `/${locale}/mentor`, label: t.nav.mentor });
+  if (user) {
+    links.push({ href: `/${locale}/results`, label: t.nav.results });
+    links.push({ href: `/${locale}/dashboard`, label: t.nav.dashboard });
+  }
   if (user?.role === "admin") links.push({ href: `/${locale}/admin`, label: t.nav.admin });
 
   const isActive = (href: string) =>
@@ -110,7 +122,7 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => {
-                  logout();
+                  clearProfile();
                   router.push(`/${locale}`);
                 }}
                 className="btn btn-ghost !py-2 text-sm"
@@ -159,7 +171,7 @@ export default function Header() {
                 <button
                   type="button"
                   onClick={() => {
-                    logout();
+                    clearProfile();
                     router.push(`/${locale}`);
                   }}
                   className="btn btn-ghost flex-1"

@@ -78,12 +78,15 @@ export function Chip({
   tone = "neutral",
 }: {
   children: React.ReactNode;
-  tone?: "neutral" | "brand" | "accent";
+  tone?: "neutral" | "brand" | "accent" | "warn";
 }) {
   const tones = {
     neutral: "bg-[var(--surface-3)] text-[var(--ink-2)]",
     brand: "bg-[var(--brand)]/12 text-[var(--brand)]",
     accent: "bg-[var(--accent)]/12 text-[var(--accent)]",
+    // Amber rather than red: "warn" is used for an indicative eligibility
+    // shortfall, and red would read as a rejection the data cannot support.
+    warn: "bg-amber-500/15 text-amber-700 dark:text-amber-400",
   };
   return (
     <span

@@ -3,6 +3,8 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
+import { safeStorageJson } from "@/lib/store/profile";
+
 import type { BackgroundTheme } from "@/components/background/LivingBackground";
 
 /**
@@ -27,6 +29,6 @@ export const useSettings = create<SettingsState>()(
       background: "auto",
       setBackground: (background) => set({ background }),
     }),
-    { name: "masar.v2.settings" },
+    { name: "masar.v2.settings", storage: safeStorageJson() },
   ),
 );

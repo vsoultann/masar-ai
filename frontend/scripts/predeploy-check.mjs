@@ -77,7 +77,14 @@ function checkSource(file) {
     if (isComment(line)) return;
 
     // 1. Absolute asset paths not wrapped in asset().
-    if (!SELF_EXEMPT.has(rel)) for (const prefix of PUBLIC_PREFIXES) {
+    //
+    // `asset-ok` is a deliberate, greppable opt-out for the one legitimate
+    // case: a literal handed to <SmartImage>, which applies asset() itself
+    // because most of its inputs are catalog paths arriving at runtime rather
+    // than literals in code. Wrapping such a literal here would double the
+    // prefix and produce /masar-ai/masar-ai/images/...
+    const optedOut = line.includes("asset-ok");
+    if (!optedOut && !SELF_EXEMPT.has(rel)) for (const prefix of PUBLIC_PREFIXES) {
       const quoted = new RegExp(`["'\`]${prefix.replace("/", "\\/")}`);
       if (quoted.test(line) && !line.includes("asset(")) {
         problems.push(
