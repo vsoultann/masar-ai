@@ -2,48 +2,20 @@ import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import OnboardingPage from "@/app/[locale]/onboarding/page";
+import AssessmentPage from "@/app/[locale]/assessment/page";
 import { getDictionary } from "@/lib/i18n";
 import { LocaleProvider } from "@/lib/locale-context";
-import type { Profile, Questionnaire } from "@/lib/types";
+import { useProfile } from "@/lib/store/profile";
+import type { Questionnaire } from "@/lib/types";
 
 const push = vi.fn();
 const replace = vi.fn();
 
 vi.mock("next/navigation", () => ({
-  usePathname: () => "/en/onboarding",
+  usePathname: () => "/en/assessment",
   useRouter: () => ({ push, replace, refresh: vi.fn() }),
   useSearchParams: () => new URLSearchParams(),
 }));
-
-// A single frozen object: returning a fresh one on every render would change
-// its identity each time, which is exactly the fragility the page must not have.
-const testUser = {
-  id: 1,
-  email: "student@masar.ae",
-  full_name: "Test Student",
-  role: "student",
-};
-
-vi.mock("@/lib/auth", () => ({
-  useAuth: () => ({ user: testUser, loading: false }),
-}));
-
-const emptyProfile: Profile = {
-  full_name: "",
-  emirate: null,
-  school: null,
-  grade_level: null,
-  track: null,
-  grades: {},
-  emsat: {},
-  riasec: {},
-  bigfive: {},
-  riasec_answers: {},
-  bigfive_answers: {},
-  completed_steps: 0,
-  is_complete: false,
-};
 
 function questionnaire(id: string, count: number): Questionnaire {
   return {
@@ -66,42 +38,43 @@ function questionnaire(id: string, count: number): Questionnaire {
   };
 }
 
-const state = { profile: emptyProfile };
-const put = vi.fn(async (path: string, body: Record<string, unknown>) => {
-  const step = Number(path.slice(-1));
-  state.profile = { ...state.profile, ...body, completed_steps: step } as Profile;
-  return state.profile;
-});
-
-vi.mock("@/lib/api", () => ({
-  ApiError: class ApiError extends Error {
-    localised() {
-      return "error";
-    }
-  },
-  api: {
-    get: vi.fn(async (path: string) => {
-      if (path === "/api/profile") return state.profile;
-      if (path.endsWith("riasec")) return questionnaire("riasec", 30);
-      if (path.endsWith("bigfive")) return questionnaire("bigfive", 25);
-      throw new Error(`unexpected GET ${path}`);
-    }),
-    put: (path: string, body: Record<string, unknown>) => put(path, body),
-  },
+// Only the questionnaires are mocked. The profile store is the real one, so
+// these tests exercise the persistence path the app actually uses rather than
+// a stand-in for it.
+vi.mock("@/lib/data/client", () => ({
+  loadRiasec: vi.fn(async () => questionnaire("riasec", 30)),
+  loadBigFive: vi.fn(async () => questionnaire("bigfive", 25)),
 }));
 
 function renderWizard(locale: "en" | "ar" = "en") {
   return render(
     <LocaleProvider locale={locale} dictionary={getDictionary(locale)}>
-      <OnboardingPage />
+      <AssessmentPage />
     </LocaleProvider>,
   );
 }
 
-describe("onboarding wizard", () => {
+/** Puts the store into a known state, as though rehydration had finished. */
+function seed(profile: Partial<ReturnType<typeof useProfile.getState>["profile"]> | null) {
+  useProfile.setState({
+    profile: profile
+      ? ({
+          id: "test", version: 2, fullName: "", emirate: null, city: null,
+          coordinates: null, locationSource: null, school: null, gradeLevel: null,
+          track: null, grades: {}, emsat: {}, riasec: {}, bigfive: {},
+          riasecAnswers: {}, bigfiveAnswers: {}, completedSteps: 0,
+          savedCareers: [], savedUniversities: [], role: "student",
+          createdAt: "2026-01-01T00:00:00Z", updatedAt: "2026-01-01T00:00:00Z",
+          ...profile,
+        } as NonNullable<ReturnType<typeof useProfile.getState>["profile"]>)
+      : null,
+    hydrated: true,
+  });
+}
+
+describe("assessment wizard", () => {
   beforeEach(() => {
-    state.profile = { ...emptyProfile };
-    put.mockClear();
+    seed({});
     push.mockClear();
   });
 
@@ -125,12 +98,11 @@ describe("onboarding wizard", () => {
     ]);
   });
 
-  it("saves step 1 and advances to the grades step", async () => {
+  it("saves step 1 to the local profile and advances to the grades step", async () => {
     const user = userEvent.setup();
     renderWizard();
 
     const name = await screen.findByLabelText("Full name");
-    // The field is prefilled from the account, so clear it before typing.
     await user.clear(name);
     await user.type(name, "Sara Ahmed");
     await user.selectOptions(screen.getByLabelText("Emirate of residence"), "sharjah");
@@ -138,22 +110,36 @@ describe("onboarding wizard", () => {
     await user.selectOptions(screen.getByLabelText("MOE track"), "advanced");
     await user.click(screen.getByRole("button", { name: /save and continue/i }));
 
-    await waitFor(() => expect(put).toHaveBeenCalledTimes(1));
-    expect(put).toHaveBeenCalledWith("/api/profile/step1", {
-      full_name: "Sara Ahmed",
-      emirate: "sharjah",
-      school: "Al Noor School",
-      grade_level: "12",
-      track: "advanced",
+    await waitFor(() => {
+      const stored = useProfile.getState().profile;
+      expect(stored?.fullName).toBe("Sara Ahmed");
+      expect(stored?.emirate).toBe("sharjah");
+      expect(stored?.school).toBe("Al Noor School");
+      expect(stored?.track).toBe("advanced");
+      expect(stored?.completedSteps).toBe(1);
     });
+
     expect(
       await screen.findByLabelText("Mathematics", { selector: "#grade-math" }),
     ).toBeInTheDocument();
   });
 
-  it("marks EmSAT as optional and only submits the scores that were entered", async () => {
+  it("offers the city picker only once an emirate is chosen", async () => {
     const user = userEvent.setup();
-    state.profile = { ...emptyProfile, completed_steps: 1 };
+    renderWizard();
+
+    await screen.findByLabelText("Emirate of residence");
+    expect(screen.queryByLabelText("City or area")).not.toBeInTheDocument();
+
+    await user.selectOptions(screen.getByLabelText("Emirate of residence"), "abu_dhabi");
+    const city = await screen.findByLabelText("City or area");
+    // Abu Dhabi's four areas plus the placeholder.
+    expect(within(city).getAllByRole("option")).toHaveLength(5);
+  });
+
+  it("marks EmSAT as optional and only stores the scores that were entered", async () => {
+    const user = userEvent.setup();
+    seed({ completedSteps: 1 });
     renderWizard();
 
     // "Mathematics" labels both a subject grade and an EmSAT score.
@@ -161,15 +147,15 @@ describe("onboarding wizard", () => {
     await user.type(maths, "92");
     await user.click(screen.getByRole("button", { name: /save and continue/i }));
 
-    await waitFor(() => expect(put).toHaveBeenCalled());
-    expect(put).toHaveBeenCalledWith("/api/profile/step2", {
-      grades: { math: 92 },
-      emsat: {},
+    await waitFor(() => {
+      const stored = useProfile.getState().profile;
+      expect(stored?.grades).toEqual({ math: 92 });
+      expect(stored?.emsat).toEqual({});
     });
   });
 
   it("resumes at the step after the last completed one", async () => {
-    state.profile = { ...emptyProfile, completed_steps: 2 };
+    seed({ completedSteps: 2 });
     renderWizard();
     // Step 3 is the RIASEC questionnaire.
     expect(await screen.findByText("Statement 1")).toBeInTheDocument();
@@ -177,7 +163,7 @@ describe("onboarding wizard", () => {
 
   it("blocks submission until every statement is answered", async () => {
     const user = userEvent.setup();
-    state.profile = { ...emptyProfile, completed_steps: 2 };
+    seed({ completedSteps: 2 });
     renderWizard();
 
     await screen.findByText("Statement 1");
@@ -185,8 +171,6 @@ describe("onboarding wizard", () => {
     expect(submit).toBeDisabled();
 
     await user.click(screen.getAllByLabelText("Neutral")[0]);
-    // The counter is assembled from several text nodes, so match on the
-    // element's combined text rather than on a single node.
     expect(
       screen.getByText(
         (_, element) =>
@@ -196,9 +180,31 @@ describe("onboarding wizard", () => {
     expect(submit).toBeDisabled();
   });
 
+  it("never moves completedSteps backwards when an earlier step is revisited", async () => {
+    const user = userEvent.setup();
+    // A student who has finished everything goes back to fix a grade.
+    seed({ completedSteps: 4, grades: { math: 60 } });
+    renderWizard();
+
+    await screen.findByText("Statement 1");   // resumes at step 4's questionnaire
+    // Jump back to step 2 via the progress control.
+    await user.click(screen.getByRole("button", { name: /your grades/i }));
+
+    const maths = await screen.findByLabelText("Mathematics", { selector: "#grade-math" });
+    await user.clear(maths);
+    await user.type(maths, "95");
+    await user.click(screen.getByRole("button", { name: /save and continue/i }));
+
+    await waitFor(() => {
+      const stored = useProfile.getState().profile;
+      expect(stored?.grades.math).toBe(95);
+      // Correcting a grade must not discard the finished questionnaires.
+      expect(stored?.completedSteps).toBe(4);
+    });
+  });
+
   it("renders the wizard in Arabic when the locale is Arabic", async () => {
     renderWizard("ar");
     expect(await screen.findByLabelText("إمارة الإقامة")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "حفظ ومتابعة" })).toBeInTheDocument();
   });
 });

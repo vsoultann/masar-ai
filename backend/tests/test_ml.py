@@ -7,6 +7,11 @@ import pathlib
 import pytest
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
+DATA = ROOT / "frontend" / "public" / "data"
+
+# Read the sector list rather than hardcoding its length: the label space grew
+# from 15 to 18 in v2 and will move again if the catalog does.
+SECTORS = json.loads((DATA / "sectors.json").read_text(encoding="utf-8"))
 
 
 def test_dataset_generation_is_deterministic():
@@ -52,16 +57,20 @@ def test_committed_dataset_matches_the_generator():
 def test_model_bundle_loads_with_its_metadata():
     from app import ml_loader
     bundle = ml_loader.load_bundle()
-    assert bundle["model_name"] == "random_forest"
-    assert len(bundle["labels"]) == 15
+    # v2 selects the logistic regression: on the 18-sector label space it beats
+    # the forest on both CV macro-F1 and held-out accuracy. See the note in
+    # ml/train.py.
+    assert bundle["model_name"] == "logistic_regression"
+    assert len(bundle["labels"]) == len(SECTORS)
     from pipeline import FEATURE_COLUMNS
     assert bundle["feature_columns"] == FEATURE_COLUMNS
 
 
 def test_metrics_file_is_present_and_coherent():
     metrics = json.loads((ROOT / "ml" / "artifacts" / "metrics.json").read_text())
-    assert metrics["dataset"]["rows"] == 5000
-    assert set(metrics["model_comparison"]) == {"random_forest", "logistic_regression", "knn"}
+    assert metrics["dataset"]["rows"] == 8000
+    assert set(metrics["model_comparison"]) == {
+        "random_forest", "logistic_regression", "knn", "gradient_boosting"}
     accuracy = metrics["selected_model"]["test"]["accuracy"]
     # 15 classes with 8% label noise: chance is 0.067, the achievable ceiling
     # is about 0.92. Anything outside this band means something is wrong.
@@ -70,7 +79,7 @@ def test_metrics_file_is_present_and_coherent():
 
 def test_every_taxonomy_skill_has_a_documented_mapping():
     from skill_map import SKILL_WEIGHTS, validate
-    catalog = json.loads((ROOT / "data" / "skills.json").read_text())
+    catalog = json.loads((DATA / "skills.json").read_text(encoding="utf-8"))
     assert {skill["id"] for skill in catalog} == set(SKILL_WEIGHTS)
     validate()
 
@@ -115,8 +124,8 @@ def test_a_stem_profile_and_a_social_profile_get_different_sectors(client, admin
 
     from app import ml_loader
     from recommender import CareerRecommender
-    careers = json.loads((ROOT / "data" / "careers.json").read_text())
-    courses = json.loads((ROOT / "data" / "courses.json").read_text())
+    careers = json.loads((DATA / "careers.json").read_text(encoding="utf-8"))
+    courses = json.loads((DATA / "courses.json").read_text(encoding="utf-8"))
     engine = CareerRecommender(joblib.load(ml_loader.MODEL_PATH), careers, courses,
                                ml_loader.load_skills())
 

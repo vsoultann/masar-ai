@@ -2,7 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { Cairo, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 
-import { AuthProvider } from "@/lib/auth";
+import BackgroundForRoute from "@/components/background/BackgroundForRoute";
+import BackToTop from "@/components/BackToTop";
+import MotionProvider from "@/components/MotionProvider";
+import ScrollProgress from "@/components/ScrollProgress";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
 import { LocaleProvider } from "@/lib/locale-context";
 import Footer from "@/components/Footer";
@@ -66,22 +69,25 @@ export default async function LocaleLayout({
       <body className={`${inter.variable} ${cairo.variable}`}>
         <ThemeScript />
         <LocaleProvider locale={typed} dictionary={dictionary}>
-          <AuthProvider>
-            <a
-              href="#main"
-              className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded focus:bg-[var(--brand)] focus:px-4 focus:py-2 focus:text-[var(--brand-ink)]"
-            >
-              {dictionary.nav.skipToContent}
-            </a>
-            <div className="flex min-h-screen flex-col">
-              <Header />
-              <main id="main" className="flex-1">
-                {children}
-              </main>
-              <Footer />
-            </div>
-            <MentorPanel />
-          </AuthProvider>
+          <MotionProvider>
+              <BackgroundForRoute />
+              <ScrollProgress rtl={dir === "rtl"} />
+              <a
+                href="#main"
+                className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded focus:bg-[var(--brand)] focus:px-4 focus:py-2 focus:text-[var(--brand-ink)]"
+              >
+                {dictionary.nav.skipToContent}
+              </a>
+              <div className="flex min-h-screen flex-col">
+                <Header />
+                <main id="main" className="flex-1">
+                  {children}
+                </main>
+                <Footer />
+              </div>
+              <MentorPanel />
+              <BackToTop label={dictionary.nav.backToTop} />
+          </MotionProvider>
         </LocaleProvider>
       </body>
     </html>

@@ -92,7 +92,9 @@ PHASES = [
 
 
 def career_vector(career: dict) -> np.ndarray:
-    profile = career["profile"]
+    # v2 renamed this field to idealProfile; the fallback keeps the function
+    # working against a v1 catalog, which the backend still serves.
+    profile = career.get("idealProfile") or career["profile"]
     values = (
         [profile["riasec"][k] for k in "RIASEC"]
         + [profile["bigfive"][k] for k in "OCEAN"]
@@ -227,7 +229,15 @@ class CareerRecommender:
         career_deviation = ideal - ideal.mean()
         contributions = student_deviation * career_deviation
 
-        order = np.argsort(contributions)[::-1]
+        # Explicit tiebreak on dimension index. np.argsort defaults to an
+        # unstable quicksort, so equal contributions -- which happen whenever a
+        # profile is flat, and a flat profile is a real input -- came out in an
+        # order that depended on the sort implementation. The TypeScript port
+        # uses a stable sort and disagreed. Ordering ties by index makes both
+        # sides deterministic and identical, rather than making one imitate an
+        # unspecified behaviour of the other.
+        order = sorted(range(len(contributions)),
+                       key=lambda i: (-contributions[i], i))
         reasons: list[dict[str, Any]] = []
         for index in order:
             if len(reasons) >= top_k:

@@ -6,25 +6,30 @@ import { useEffect, useState } from "react";
 import ArabesquePattern from "@/components/ArabesquePattern";
 import { SectionHeading, Skeleton } from "@/components/ui";
 import { localiseDigits } from "@/lib/i18n";
-import { api } from "@/lib/api";
-import { useAuth } from "@/lib/auth";
+import { loadSectors } from "@/lib/data/client";
+import { useProfile } from "@/lib/store/profile";
 import { useLocale } from "@/lib/locale-context";
 import { TEAM } from "@/lib/team";
 import type { Sector } from "@/lib/types";
 
 export default function LandingPage() {
   const { locale, t, pick } = useLocale();
-  const { user } = useAuth();
+  const profile = useProfile((state) => state.profile);
   const [sectors, setSectors] = useState<Sector[] | null>(null);
 
   useEffect(() => {
-    api
-      .get<{ sectors: Sector[] }>("/api/sectors", false)
-      .then((body) => setSectors(body.sectors))
+    loadSectors()
+      .then(setSectors)
       .catch(() => setSectors([]));
   }, []);
 
-  const startHref = user ? `/${locale}/onboarding` : `/${locale}/register`;
+  // There is no registration step any more: the assessment creates the local
+  // profile itself, so both the new and returning visitor start in the same
+  // place. A returning student with a finished assessment goes to their results.
+  const startHref =
+    profile && profile.completedSteps >= 4
+      ? `/${locale}/results`
+      : `/${locale}/assessment`;
 
   const steps = [
     { title: t.landing.step1Title, body: t.landing.step1Body },

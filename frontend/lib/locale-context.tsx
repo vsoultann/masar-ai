@@ -16,6 +16,16 @@ interface LocaleValue {
    * signature, so the stricter parameter type rejects all of them.
    */
   pick: (record: object, base: string) => string;
+  /**
+   * Looks up a dictionary map keyed by a catalog id (work environments,
+   * institution types, and so on).
+   *
+   * These maps are typed from en.json as exact object literals, so indexing
+   * them with a `string` from the data is a type error even though every key
+   * is present. The lookup is centralised here with one cast and a fallback,
+   * rather than casting at each of the dozen call sites.
+   */
+  lookup: (map: object, key: string) => string;
 }
 
 const LocaleContext = createContext<LocaleValue | null>(null);
@@ -33,6 +43,8 @@ export function LocaleProvider({
     locale,
     dir: locale === "ar" ? "rtl" : "ltr",
     t: dictionary,
+    lookup: (map, key) =>
+      (map as Record<string, string>)[key] ?? key,
     pick: (record, base) => {
       const fields = record as Record<string, unknown>;
       return String(fields[`${base}_${locale}`] ?? fields[`${base}_en`] ?? "");

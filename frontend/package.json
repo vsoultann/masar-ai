@@ -5,23 +5,35 @@
   "description": "Masar AI - bilingual career guidance for UAE students",
   "scripts": {
     "dev": "next dev -p 3000",
-    "build": "next build",
-    "start": "next start -p 3000",
+    "build": "node scripts/validate-data.mjs && next build && node scripts/predeploy-check.mjs --out",
+    "start": "node scripts/serve-out.mjs",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "predeploy:check": "node scripts/predeploy-check.mjs",
+    "verify:out": "node scripts/predeploy-check.mjs --out",
+    "preview": "npm run build && node scripts/serve-out.mjs",
+    "validate:data": "node scripts/validate-data.mjs"
   },
   "dependencies": {
+    "framer-motion": "^13.2.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^1.43.0",
     "next": "15.5.4",
     "react": "19.1.1",
     "react-dom": "19.1.1",
-    "recharts": "2.15.4"
+    "react-leaflet": "^5.0.0",
+    "recharts": "2.15.4",
+    "zustand": "^5.0.15"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.1.13",
     "@testing-library/jest-dom": "6.8.0",
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "^14.6.7",
+    "@types/leaflet": "^1.9.22",
     "@types/node": "22.18.1",
     "@types/react": "19.1.13",
     "@types/react-dom": "19.1.9",

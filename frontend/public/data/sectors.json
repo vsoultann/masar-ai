@@ -1,0 +1,110 @@
+[
+  {
+    "id": "ai_data",
+    "name_en": "Artificial Intelligence & Data",
+    "name_ar": "الذكاء الاصطناعي والبيانات",
+    "color": "#00732F"
+  },
+  {
+    "id": "cybersecurity",
+    "name_en": "Cybersecurity",
+    "name_ar": "الأمن السيبراني",
+    "color": "#0B3D5C"
+  },
+  {
+    "id": "software",
+    "name_en": "Software Engineering",
+    "name_ar": "هندسة البرمجيات",
+    "color": "#1B7F5A"
+  },
+  {
+    "id": "energy",
+    "name_en": "Energy & Sustainability",
+    "name_ar": "الطاقة والاستدامة",
+    "color": "#2E7D32"
+  },
+  {
+    "id": "aviation",
+    "name_en": "Aviation & Aerospace",
+    "name_ar": "الطيران والفضاء الجوي",
+    "color": "#155E75"
+  },
+  {
+    "id": "space",
+    "name_en": "Space Technology",
+    "name_ar": "تقنيات الفضاء",
+    "color": "#3F3D8F"
+  },
+  {
+    "id": "healthcare",
+    "name_en": "Healthcare & Medicine",
+    "name_ar": "الرعاية الصحية والطب",
+    "color": "#0E7490"
+  },
+  {
+    "id": "finance",
+    "name_en": "Finance & Fintech",
+    "name_ar": "المالية والتقنية المالية",
+    "color": "#8A6D1F"
+  },
+  {
+    "id": "tourism",
+    "name_en": "Tourism & Hospitality",
+    "name_ar": "السياحة والضيافة",
+    "color": "#B45309"
+  },
+  {
+    "id": "construction",
+    "name_en": "Civil & Built Environment",
+    "name_ar": "الهندسة المدنية والبيئة العمرانية",
+    "color": "#7C5E10"
+  },
+  {
+    "id": "logistics",
+    "name_en": "Logistics & Maritime",
+    "name_ar": "الخدمات اللوجستية والبحرية",
+    "color": "#1D4E6F"
+  },
+  {
+    "id": "government",
+    "name_en": "Government & Public Policy",
+    "name_ar": "الحكومة والسياسات العامة",
+    "color": "#0F5132"
+  },
+  {
+    "id": "education",
+    "name_en": "Education",
+    "name_ar": "التعليم",
+    "color": "#6D28D9"
+  },
+  {
+    "id": "media",
+    "name_en": "Media & Creative Industries",
+    "name_ar": "الإعلام والصناعات الإبداعية",
+    "color": "#9D174D"
+  },
+  {
+    "id": "entrepreneurship",
+    "name_en": "Entrepreneurship",
+    "name_ar": "ريادة الأعمال",
+    "color": "#B91C1C"
+  },
+  {
+    "id": "engineering",
+    "name_en": "Engineering & Industry",
+    "name_ar": "الهندسة والصناعة",
+    "color": "#374151"
+  },
+  {
+    "id": "law",
+    "name_en": "Law & Compliance",
+    "name_ar": "القانون والامتثال",
+    "color": "#4C1D95"
+  },
+  {
+    "id": "social",
+    "name_en": "Social & Community",
+    "name_ar": "الخدمة الاجتماعية والمجتمع",
+    "color": "#065F46"
+  }
+]

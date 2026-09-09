@@ -1,56 +1,20 @@
-/** Shapes returned by the FastAPI backend. Kept in one place so a change to
- *  the API surfaces as a type error rather than a runtime undefined. */
+/**
+ * Shapes of the static catalogs in public/data, plus the client-side profile.
+ *
+ * v1 typed the FastAPI responses. v2 has no API: these describe the JSON files
+ * the browser fetches directly, so a change to data/v2/build.py surfaces here
+ * as a type error rather than as an undefined at runtime.
+ */
 
 export type Lang = "en" | "ar";
 
-export interface User {
-  id: number;
-  email: string;
-  full_name: string;
-  role: "student" | "admin";
-  preferred_language: Lang;
-  created_at: string;
+/** Every user-facing string in the catalogs is a bilingual pair. */
+export interface Bilingual {
+  en: string;
+  ar: string;
 }
 
-export interface TokenResponse {
-  access_token: string;
-  token_type: string;
-  expires_in_minutes: number;
-  user: User;
-}
-
-export interface Profile {
-  full_name: string;
-  emirate: string | null;
-  school: string | null;
-  grade_level: string | null;
-  track: string | null;
-  grades: Record<string, number>;
-  emsat: Record<string, number>;
-  riasec: Record<string, number>;
-  bigfive: Record<string, number>;
-  riasec_answers: Record<string, number>;
-  bigfive_answers: Record<string, number>;
-  completed_steps: number;
-  is_complete: boolean;
-}
-
-export interface QuestionnaireItem {
-  id: string;
-  dimension: string;
-  reverse: boolean;
-  text_en: string;
-  text_ar: string;
-}
-
-export interface Questionnaire {
-  id: string;
-  name_en: string;
-  name_ar: string;
-  scale: { value: number; label_en: string; label_ar: string }[];
-  dimensions: { code: string; name_en: string; name_ar: string }[];
-  items: QuestionnaireItem[];
-}
+export type Demand = "very_high" | "high" | "moderate";
 
 export interface Sector {
   id: string;
@@ -75,24 +39,81 @@ export interface Initiative {
   summary_ar: string;
 }
 
+export interface Major {
+  id: string;
+  name: Bilingual;
+  family: string;
+  level: string;
+}
+
+export interface RequiredSkill {
+  skill: string;
+  weight: number;
+  requiredLevel: number;
+}
+
+export interface IdealProfile {
+  riasec: Record<string, number>;
+  bigfive: Record<string, number>;
+  subjects: Record<string, number>;
+}
+
 export interface Career {
   id: string;
-  title_en: string;
-  title_ar: string;
+  title: Bilingual;
   sector: string;
-  demand: "very_high" | "high" | "moderate";
-  description_en: string;
-  description_ar: string;
+  shortDescription: Bilingual;
+  longDescription: Bilingual;
+  dayInTheLife: Bilingual;
+  requiredSkills: RequiredSkill[];
+  idealProfile: IdealProfile;
+  educationPath: {
+    minimumQualification: Bilingual;
+    typicalYears: number;
+    relatedMajors: string[];
+    licensingBodies: Bilingual[];
+  };
+  salaryAED: {
+    entry: number;
+    mid: number;
+    senior: number;
+    period: string;
+    currency: string;
+    note: Bilingual;
+  };
+  demandOutlook: Demand;
+  growthTrend: number[];
+  workEnvironment: string[];
+  uaeRelevance: Bilingual;
+  strategicInitiatives: string[];
+  employers: { en: string[]; ar: string[] };
+  media: {
+    hero: string | null;
+    thumbnail: string | null;
+    icon: string;
+    video: string | null;
+    credit: { source: string; license: string; url: string } | null;
+  };
+  relatedCareers: string[];
+  topCourses: string[];
+  /** Flat skill weights, kept for the ML pipeline. */
   skills: Record<string, number>;
-  salary_aed: { min: number; max: number; note_en: string; note_ar: string };
-  degrees_en: string[];
-  degrees_ar: string[];
-  employers_en: string[];
-  employers_ar: string[];
-  initiatives: string[];
-  sector_detail?: Sector;
-  skill_detail?: (Skill & { weight: number })[];
-  initiative_detail?: Initiative[];
+  demand: Demand;
+}
+
+/** The lightweight record card grids use, from careers-index.json. */
+export interface CareerSummary {
+  id: string;
+  title: Bilingual;
+  sector: string;
+  shortDescription: Bilingual;
+  demandOutlook: Demand;
+  salary: { entry: number; senior: number };
+  growthTrend: number[];
+  icon: string;
+  thumbnail: string | null;
+  majors: string[];
+  topSkills: string[];
 }
 
 export interface Course {
@@ -103,7 +124,7 @@ export interface Course {
   provider_type: "global" | "uae";
   level: "beginner" | "intermediate" | "advanced";
   cost: "free" | "paid";
-  language: "en" | "ar" | "both";
+  language: Lang | "both";
   duration_weeks: number;
   skills: Record<string, number>;
   description_en: string;
@@ -111,183 +132,88 @@ export interface Course {
   search_query: string;
 }
 
-export interface Reason {
-  factor: string;
-  label_en: string;
-  label_ar: string;
-  student_value: number;
-  career_ideal: number;
-  contribution: number;
-}
+export type InstitutionType =
+  | "federal_public"
+  | "local_public"
+  | "private"
+  | "international_branch"
+  | "technical";
 
-export interface Recommendation {
-  rank: number;
-  career_id: string;
-  sector: string;
-  match: number;
-  confidence: "high" | "moderate" | "low";
-  components: {
-    sector_probability: number;
-    sector_score: number;
-    similarity: number;
-    demand: number;
+export type TuitionBand =
+  | "free_for_nationals"
+  | "public_subsidised"
+  | "mid"
+  | "premium";
+
+export interface University {
+  id: string;
+  name: Bilingual;
+  shortName: Bilingual;
+  type: InstitutionType;
+  emirate: string;
+  city: string;
+  coordinates: { lat: number; lng: number };
+  address: Bilingual;
+  website: string;
+  established: number;
+  accreditation: string;
+  languageOfInstruction: Lang[];
+  majorsOffered: string[];
+  admission: {
+    minHighSchoolPercent: number;
+    emsatRequirements: Record<string, number>;
+    trackRequired: string[];
+    notes: Bilingual;
   };
-  reasons: Reason[];
-  career: Career;
-  sector_name_en: string;
-  sector_name_ar: string;
-  sector_color: string;
+  tuitionBand: TuitionBand;
+  campusLife: Bilingual;
+  media: {
+    hero: string | null;
+    thumbnail: string | null;
+    gallery: string[];
+    credit: { source: string; license: string; url: string } | null;
+  };
 }
 
-export interface RecommendationResponse {
-  recommendations: Recommendation[];
-  sector_probabilities: {
-    sector: string;
-    name_en: string;
-    name_ar: string;
-    color: string;
-    probability: number;
-  }[];
-  model: { name: string; trained_at: string; weights: Record<string, number> };
+export interface QuestionnaireItem {
+  id: string;
+  dimension: string;
+  reverse: boolean;
+  text_en: string;
+  text_ar: string;
 }
 
-export interface GapEntry {
-  skill_id: string;
+export interface Questionnaire {
+  id: string;
   name_en: string;
   name_ar: string;
-  current: number;
-  required: number;
-  gap: number;
-  priority: number;
+  scale: { value: number; label_en: string; label_ar: string }[];
+  dimensions: { code: string; name_en: string; name_ar: string }[];
+  items: QuestionnaireItem[];
 }
 
-export interface SkillGap {
-  career_id: string;
-  career_title_en: string;
-  career_title_ar: string;
-  skills: GapEntry[];
-  readiness: number;
-  strengths: string[];
-  top_gaps: string[];
-}
-
-export interface RoadmapCourse extends Course {
-  for_skill: string;
-  skill_name_en: string;
-  skill_name_ar: string;
-  kind: "close_gap" | "strengthen";
-}
-
-export interface Roadmap {
-  career_id: string;
-  career_title_en: string;
-  career_title_ar: string;
-  readiness: number;
-  total_courses: number;
-  total_weeks: number;
-  free_courses: number;
-  phases: {
-    id: string;
-    label_en: string;
-    label_ar: string;
-    focus_skills: string[];
-    courses: RoadmapCourse[];
-  }[];
-}
-
-export interface EstimatedSkill {
-  skill_id: string;
-  name_en: string;
-  name_ar: string;
-  family: string;
-  value: number;
-}
-
-export interface ChatMessage {
-  id: number;
-  role: "user" | "assistant";
-  content: string;
-  language: Lang;
-  mode: string;
-  created_at: string;
-}
-
-export interface ChatReply {
-  reply: string;
-  language: Lang;
-  mode: string;
-  suggestions: string[];
-}
-
-export interface AdminStats {
-  users: {
-    total: number;
-    students: number;
-    admins: number;
-    profiles_completed: number;
-    completion_rate: number;
-  };
-  activity: { recommendation_runs: number; saved_careers: number; chat_messages: number };
-  catalog: { careers: number; courses: number; skills: number; sectors: number };
-  most_recommended: { career_id: string; count: number; title_en: string; title_ar: string }[];
-  sector_distribution: {
-    sector: string;
-    count: number;
-    name_en: string;
-    name_ar: string;
-    color: string;
-  }[];
-  mentor_mode: string;
-}
-
-export interface AdminStudent {
-  reference: string;
+/** The locally stored student profile. There is no server account in v2. */
+export interface Profile {
+  id: string;
+  version: 2;
+  fullName: string;
   emirate: string | null;
+  city: string | null;
+  coordinates: { lat: number; lng: number } | null;
+  locationSource: "manual" | "geolocation" | null;
+  school: string | null;
+  gradeLevel: string | null;
   track: string | null;
-  grade_level: string | null;
-  completed_steps: number;
-  is_complete: boolean;
-  registered_at: string;
-  last_top_career: string | null;
-  last_top_sector: string | null;
-}
-
-export interface ModelMetrics {
-  available: boolean;
-  generated_at?: string;
-  dataset?: { rows: number; features: number; classes: string[] };
-  protocol?: { split: string; cross_validation: string; seed: number };
-  model_comparison?: Record<
-    string,
-    {
-      cv_accuracy_mean: number;
-      cv_accuracy_std: number;
-      cv_macro_f1_mean: number;
-      test: { accuracy: number; macro_f1: number };
-    }
-  >;
-  selected_model?: {
-    name: string;
-    reason: string;
-    test: {
-      accuracy: number;
-      macro_f1: number;
-      per_sector: Record<
-        string,
-        { precision: number; recall: number; f1: number; support: number }
-      >;
-    };
-  };
-}
-
-export interface ModelInfo {
-  available: boolean;
-  name?: string;
-  trained_at?: string;
-  labels?: string[];
-  features?: number;
-  dataset_rows?: number;
-  seed?: number;
-  sklearn_version?: string;
-  skills_mapped?: number;
+  grades: Record<string, number>;
+  emsat: Record<string, number>;
+  riasec: Record<string, number>;
+  bigfive: Record<string, number>;
+  riasecAnswers: Record<string, number>;
+  bigfiveAnswers: Record<string, number>;
+  completedSteps: number;
+  savedCareers: string[];
+  savedUniversities: string[];
+  role: "student" | "admin";
+  createdAt: string;
+  updatedAt: string;
 }

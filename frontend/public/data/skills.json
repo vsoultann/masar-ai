@@ -1,0 +1,422 @@
+[
+  {
+    "id": "programming",
+    "name_en": "Programming",
+    "name_ar": "البرمجة",
+    "family": "technical"
+  },
+  {
+    "id": "data_analysis",
+    "name_en": "Data Analysis",
+    "name_ar": "تحليل البيانات",
+    "family": "technical"
+  },
+  {
+    "id": "machine_learning",
+    "name_en": "Machine Learning",
+    "name_ar": "تعلّم الآلة",
+    "family": "technical"
+  },
+  {
+    "id": "mathematics",
+    "name_en": "Mathematics",
+    "name_ar": "الرياضيات",
+    "family": "analytical"
+  },
+  {
+    "id": "statistics",
+    "name_en": "Statistics",
+    "name_ar": "الإحصاء",
+    "family": "analytical"
+  },
+  {
+    "id": "physics_reasoning",
+    "name_en": "Physical Reasoning",
+    "name_ar": "الاستدلال الفيزيائي",
+    "family": "analytical"
+  },
+  {
+    "id": "chemistry_lab",
+    "name_en": "Chemistry & Laboratory Work",
+    "name_ar": "الكيمياء والعمل المخبري",
+    "family": "analytical"
+  },
+  {
+    "id": "life_sciences",
+    "name_en": "Life Sciences",
+    "name_ar": "علوم الحياة",
+    "family": "analytical"
+  },
+  {
+    "id": "cybersecurity",
+    "name_en": "Cybersecurity",
+    "name_ar": "الأمن السيبراني",
+    "family": "technical"
+  },
+  {
+    "id": "networking",
+    "name_en": "Computer Networking",
+    "name_ar": "شبكات الحاسوب",
+    "family": "technical"
+  },
+  {
+    "id": "cloud_infrastructure",
+    "name_en": "Cloud Infrastructure",
+    "name_ar": "البنية التحتية السحابية",
+    "family": "technical"
+  },
+  {
+    "id": "systems_design",
+    "name_en": "Systems Design",
+    "name_ar": "تصميم الأنظمة",
+    "family": "technical"
+  },
+  {
+    "id": "electronics",
+    "name_en": "Electronics & Control",
+    "name_ar": "الإلكترونيات والتحكم",
+    "family": "technical"
+  },
+  {
+    "id": "mechanical_design",
+    "name_en": "Mechanical Design",
+    "name_ar": "التصميم الميكانيكي",
+    "family": "technical"
+  },
+  {
+    "id": "civil_structures",
+    "name_en": "Civil & Structural Engineering",
+    "name_ar": "الهندسة المدنية والإنشائية",
+    "family": "technical"
+  },
+  {
+    "id": "energy_systems",
+    "name_en": "Energy Systems",
+    "name_ar": "أنظمة الطاقة",
+    "family": "technical"
+  },
+  {
+    "id": "sustainability",
+    "name_en": "Sustainability & Environment",
+    "name_ar": "الاستدامة والبيئة",
+    "family": "domain"
+  },
+  {
+    "id": "project_management",
+    "name_en": "Project Management",
+    "name_ar": "إدارة المشاريع",
+    "family": "professional"
+  },
+  {
+    "id": "business_strategy",
+    "name_en": "Business Strategy",
+    "name_ar": "استراتيجية الأعمال",
+    "family": "professional"
+  },
+  {
+    "id": "finance_accounting",
+    "name_en": "Finance & Accounting",
+    "name_ar": "المالية والمحاسبة",
+    "family": "domain"
+  },
+  {
+    "id": "economics",
+    "name_en": "Economics",
+    "name_ar": "الاقتصاد",
+    "family": "domain"
+  },
+  {
+    "id": "marketing_comm",
+    "name_en": "Marketing & Communication",
+    "name_ar": "التسويق والاتصال",
+    "family": "professional"
+  },
+  {
+    "id": "writing_docs",
+    "name_en": "Writing & Documentation",
+    "name_ar": "الكتابة والتوثيق",
+    "family": "professional"
+  },
+  {
+    "id": "public_speaking",
+    "name_en": "Public Speaking",
+    "name_ar": "التحدّث أمام الجمهور",
+    "family": "professional"
+  },
+  {
+    "id": "arabic_language",
+    "name_en": "Arabic Language",
+    "name_ar": "اللغة العربية",
+    "family": "language"
+  },
+  {
+    "id": "english_language",
+    "name_en": "English Language",
+    "name_ar": "اللغة الإنجليزية",
+    "family": "language"
+  },
+  {
+    "id": "teamwork",
+    "name_en": "Teamwork & Collaboration",
+    "name_ar": "العمل الجماعي والتعاون",
+    "family": "personal"
+  },
+  {
+    "id": "leadership",
+    "name_en": "Leadership",
+    "name_ar": "القيادة",
+    "family": "personal"
+  },
+  {
+    "id": "creativity",
+    "name_en": "Creativity & Ideation",
+    "name_ar": "الإبداع وتوليد الأفكار",
+    "family": "personal"
+  },
+  {
+    "id": "visual_design",
+    "name_en": "Visual & UX Design",
+    "name_ar": "التصميم المرئي وتجربة المستخدم",
+    "family": "technical"
+  },
+  {
+    "id": "teaching",
+    "name_en": "Teaching & Mentoring",
+    "name_ar": "التعليم والإرشاد",
+    "family": "professional"
+  },
+  {
+    "id": "clinical_skills",
+    "name_en": "Clinical Skills",
+    "name_ar": "المهارات السريرية",
+    "family": "domain"
+  },
+  {
+    "id": "customer_service",
+    "name_en": "Customer & Guest Service",
+    "name_ar": "خدمة العملاء والضيوف",
+    "family": "professional"
+  },
+  {
+    "id": "logistics_ops",
+    "name_en": "Logistics & Operations",
+    "name_ar": "اللوجستيات والعمليات",
+    "family": "domain"
+  },
+  {
+    "id": "law_policy",
+    "name_en": "Law & Public Policy",
+    "name_ar": "القانون والسياسات العامة",
+    "family": "domain"
+  },
+  {
+    "id": "research_methods",
+    "name_en": "Research Methods",
+    "name_ar": "مناهج البحث",
+    "family": "analytical"
+  },
+  {
+    "id": "attention_detail",
+    "name_en": "Attention to Detail",
+    "name_ar": "الدقّة والانتباه للتفاصيل",
+    "family": "personal"
+  },
+  {
+    "id": "problem_solving",
+    "name_en": "Problem Solving",
+    "name_ar": "حل المشكلات",
+    "family": "personal"
+  },
+  {
+    "id": "aviation_ops",
+    "name_en": "Aviation Operations",
+    "name_ar": "عمليات الطيران",
+    "family": "domain"
+  },
+  {
+    "id": "geospatial_gis",
+    "name_en": "Geospatial & GIS",
+    "name_ar": "نظم المعلومات الجغرافية",
+    "family": "technical"
+  },
+  {
+    "id": "patient_care",
+    "name_en": "Patient Care",
+    "name_ar": "رعاية المرضى",
+    "family": "domain"
+  },
+  {
+    "id": "diagnostic_imaging",
+    "name_en": "Diagnostic Imaging",
+    "name_ar": "التصوير التشخيصي",
+    "family": "technical"
+  },
+  {
+    "id": "surgical_skills",
+    "name_en": "Surgical Technique",
+    "name_ar": "التقنية الجراحية",
+    "family": "domain"
+  },
+  {
+    "id": "pharmacology",
+    "name_en": "Pharmacology",
+    "name_ar": "علم الأدوية",
+    "family": "domain"
+  },
+  {
+    "id": "dental_skills",
+    "name_en": "Dental Practice",
+    "name_ar": "ممارسة طب الأسنان",
+    "family": "domain"
+  },
+  {
+    "id": "lab_diagnostics",
+    "name_en": "Laboratory Diagnostics",
+    "name_ar": "التشخيص المخبري",
+    "family": "technical"
+  },
+  {
+    "id": "rehabilitation",
+    "name_en": "Rehabilitation Therapy",
+    "name_ar": "العلاج التأهيلي",
+    "family": "domain"
+  },
+  {
+    "id": "counselling",
+    "name_en": "Counselling & Psychological Support",
+    "name_ar": "الإرشاد والدعم النفسي",
+    "family": "professional"
+  },
+  {
+    "id": "nutrition_diet",
+    "name_en": "Nutrition & Dietetics",
+    "name_ar": "التغذية والحميات",
+    "family": "domain"
+  },
+  {
+    "id": "veterinary_care",
+    "name_en": "Veterinary Care",
+    "name_ar": "الرعاية البيطرية",
+    "family": "domain"
+  },
+  {
+    "id": "emergency_response",
+    "name_en": "Emergency Response",
+    "name_ar": "الاستجابة للطوارئ",
+    "family": "domain"
+  },
+  {
+    "id": "child_development",
+    "name_en": "Child Development",
+    "name_ar": "نمو الطفل",
+    "family": "domain"
+  },
+  {
+    "id": "manufacturing_ops",
+    "name_en": "Manufacturing Operations",
+    "name_ar": "عمليات التصنيع",
+    "family": "domain"
+  },
+  {
+    "id": "quality_control",
+    "name_en": "Quality Control",
+    "name_ar": "ضبط الجودة",
+    "family": "technical"
+  },
+  {
+    "id": "hr_people",
+    "name_en": "People & HR Management",
+    "name_ar": "إدارة الأفراد والموارد البشرية",
+    "family": "professional"
+  },
+  {
+    "id": "sales_negotiation",
+    "name_en": "Sales & Negotiation",
+    "name_ar": "المبيعات والتفاوض",
+    "family": "professional"
+  },
+  {
+    "id": "journalism_reporting",
+    "name_en": "Reporting & Investigation",
+    "name_ar": "التحرير والتحقيق الصحفي",
+    "family": "professional"
+  },
+  {
+    "id": "photography_video",
+    "name_en": "Photography & Videography",
+    "name_ar": "التصوير الفوتوغرافي والفيديو",
+    "family": "technical"
+  },
+  {
+    "id": "animation_3d",
+    "name_en": "Animation & 3D",
+    "name_ar": "الرسوم المتحركة والتصميم ثلاثي الأبعاد",
+    "family": "technical"
+  },
+  {
+    "id": "sound_audio",
+    "name_en": "Sound & Audio",
+    "name_ar": "الصوت والهندسة الصوتية",
+    "family": "technical"
+  },
+  {
+    "id": "translation_skill",
+    "name_en": "Translation & Interpreting",
+    "name_ar": "الترجمة والترجمة الفورية",
+    "family": "language"
+  },
+  {
+    "id": "hospitality_ops",
+    "name_en": "Hospitality Operations",
+    "name_ar": "عمليات الضيافة",
+    "family": "domain"
+  },
+  {
+    "id": "culinary",
+    "name_en": "Culinary Practice",
+    "name_ar": "الممارسة الطهوية",
+    "family": "domain"
+  },
+  {
+    "id": "sports_coaching",
+    "name_en": "Sports Coaching",
+    "name_ar": "التدريب الرياضي",
+    "family": "domain"
+  },
+  {
+    "id": "curation_heritage",
+    "name_en": "Curation & Heritage",
+    "name_ar": "التنسيق المتحفي والتراث",
+    "family": "domain"
+  },
+  {
+    "id": "islamic_studies_skill",
+    "name_en": "Islamic Studies",
+    "name_ar": "الدراسات الإسلامية",
+    "family": "domain"
+  },
+  {
+    "id": "fashion_textiles",
+    "name_en": "Fashion & Textiles",
+    "name_ar": "الأزياء والمنسوجات",
+    "family": "technical"
+  },
+  {
+    "id": "spatial_design",
+    "name_en": "Spatial & Interior Design",
+    "name_ar": "التصميم المكاني والداخلي",
+    "family": "technical"
+  },
+  {
+    "id": "maritime_ops",
+    "name_en": "Maritime Operations",
+    "name_ar": "العمليات البحرية",
+    "family": "domain"
+  },
+  {
+    "id": "agriculture_food",
+    "name_en": "Agriculture & Food Systems",
+    "name_ar": "الزراعة والنظم الغذائية",
+    "family": "domain"
+  }
+]

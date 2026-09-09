@@ -7,7 +7,11 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BACKEND_DIR = pathlib.Path(__file__).resolve().parents[2]
 ROOT_DIR = BACKEND_DIR.parent
-DATA_DIR = ROOT_DIR / "data"
+# The catalogs moved into the app's public directory in v2, where the static
+# export serves them straight to the browser. The backend is no longer the
+# runtime (see docs/DECISIONS.md D-05) but it must not read a stale second copy,
+# so it points at the same files.
+DATA_DIR = ROOT_DIR / "frontend" / "public" / "data"
 ML_DIR = ROOT_DIR / "ml"
 ARTIFACTS_DIR = ML_DIR / "artifacts"
 

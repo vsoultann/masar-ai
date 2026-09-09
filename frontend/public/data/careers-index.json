@@ -1,0 +1,6665 @@
+[
+  {
+    "id": "machine_learning_engineer",
+    "title": {
+      "en": "Machine Learning Engineer",
+      "ar": "مهندس تعلّم الآلة"
+    },
+    "sector": "ai_data",
+    "shortDescription": {
+      "en": "Designs, trains and deploys machine-learning models that turn data into working products, from recommendation systems to Arabic language models, and keeps them reliable in production.",
+      "ar": "يصمّم نماذج تعلّم الآلة ويدرّبها وينشرها لتحويل البيانات إلى منتجات عاملة، من أنظمة التوصية إلى النماذج اللغوية العربية، ويحافظ على موثوقيتها في بيئة التشغيل."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 18000,
+      "senior": 38000
+    },
+    "growthTrend": [
+      108,
+      115,
+      123,
+      131,
+      139
+    ],
+    "icon": "brain-circuit",
+    "thumbnail": "/images/careers/machine_learning_engineer-thumb.jpg",
+    "majors": [
+      "computer_science",
+      "artificial_intelligence",
+      "data_science",
+      "mathematics"
+    ],
+    "topSkills": [
+      "machine_learning",
+      "programming",
+      "mathematics",
+      "statistics"
+    ]
+  },
+  {
+    "id": "data_scientist",
+    "title": {
+      "en": "Data Scientist",
+      "ar": "عالم بيانات"
+    },
+    "sector": "ai_data",
+    "shortDescription": {
+      "en": "Answers business and policy questions with statistics and modelling: frames the question, cleans the data, builds the model and explains the result to decision-makers.",
+      "ar": "يجيب عن أسئلة الأعمال والسياسات باستخدام الإحصاء والنمذجة: يصوغ السؤال، وينظّف البيانات، ويبني النموذج، ثم يشرح النتيجة لصنّاع القرار."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 16000,
+      "senior": 34000
+    },
+    "growthTrend": [
+      106,
+      113,
+      121,
+      130,
+      138
+    ],
+    "icon": "brain-circuit",
+    "thumbnail": "/images/careers/data_scientist-thumb.jpg",
+    "majors": [
+      "data_science",
+      "statistics",
+      "computer_science",
+      "economics"
+    ],
+    "topSkills": [
+      "statistics",
+      "data_analysis",
+      "programming",
+      "mathematics"
+    ]
+  },
+  {
+    "id": "data_engineer",
+    "title": {
+      "en": "Data Engineer",
+      "ar": "مهندس بيانات"
+    },
+    "sector": "ai_data",
+    "shortDescription": {
+      "en": "Builds the pipelines and storage that make data usable: ingestion, transformation, quality checks and the platforms that analysts and ML teams depend on every day.",
+      "ar": "يبني خطوط نقل البيانات وأنظمة تخزينها لتصبح قابلة للاستخدام: الاستقبال والتحويل وفحوص الجودة والمنصّات التي يعتمد عليها المحللون وفرق تعلّم الآلة يومياً."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 15000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      107,
+      115,
+      122,
+      130,
+      139
+    ],
+    "icon": "brain-circuit",
+    "thumbnail": "/images/careers/data_engineer-thumb.jpg",
+    "majors": [
+      "computer_engineering",
+      "computer_science",
+      "information_systems"
+    ],
+    "topSkills": [
+      "programming",
+      "cloud_infrastructure",
+      "systems_design",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "ai_ethics_policy_analyst",
+    "title": {
+      "en": "AI Policy & Ethics Analyst",
+      "ar": "محلل سياسات وأخلاقيات الذكاء الاصطناعي"
+    },
+    "sector": "ai_data",
+    "shortDescription": {
+      "en": "Studies how AI systems affect people and writes the rules that govern them: risk assessment, fairness review, and guidance that regulators and organisations can actually apply.",
+      "ar": "يدرس أثر أنظمة الذكاء الاصطناعي في الناس ويضع القواعد الحاكمة لها: تقييم المخاطر، ومراجعة العدالة، وإرشادات قابلة للتطبيق لدى الجهات التنظيمية والمؤسسات."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      105,
+      110,
+      115,
+      121,
+      126
+    ],
+    "icon": "brain-circuit",
+    "thumbnail": "/images/careers/ai_ethics_policy_analyst-thumb.jpg",
+    "majors": [
+      "public_policy",
+      "law",
+      "political_science",
+      "computer_science"
+    ],
+    "topSkills": [
+      "law_policy",
+      "research_methods",
+      "writing_docs",
+      "english_language"
+    ]
+  },
+  {
+    "id": "security_analyst",
+    "title": {
+      "en": "Cybersecurity Analyst",
+      "ar": "محلل أمن سيبراني"
+    },
+    "sector": "cybersecurity",
+    "shortDescription": {
+      "en": "Monitors networks and systems for attacks, investigates alerts, and responds to incidents before they become breaches in banks, utilities and government platforms.",
+      "ar": "يراقب الشبكات والأنظمة بحثاً عن الهجمات، ويحقّق في التنبيهات، ويستجيب للحوادث قبل أن تتحوّل إلى اختراقات في المصارف والمرافق والمنصّات الحكومية."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 14000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      108,
+      115,
+      122,
+      128,
+      137
+    ],
+    "icon": "shield-check",
+    "thumbnail": "/images/careers/security_analyst-thumb.jpg",
+    "majors": [
+      "cybersecurity_major",
+      "computer_science",
+      "network_engineering"
+    ],
+    "topSkills": [
+      "cybersecurity",
+      "attention_detail",
+      "networking",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "penetration_tester",
+    "title": {
+      "en": "Penetration Tester",
+      "ar": "مختبِر اختراق"
+    },
+    "sector": "cybersecurity",
+    "shortDescription": {
+      "en": "Attacks systems with permission in order to defend them: finds weaknesses in applications and networks, proves the impact, and writes the report that gets them fixed.",
+      "ar": "يهاجم الأنظمة بتفويض رسمي بهدف حمايتها: يكتشف نقاط الضعف في التطبيقات والشبكات، ويثبت أثرها، ويكتب التقرير الذي يؤدي إلى معالجتها."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 15000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      105,
+      111,
+      115,
+      118,
+      124
+    ],
+    "icon": "shield-check",
+    "thumbnail": "/images/careers/penetration_tester-thumb.jpg",
+    "majors": [
+      "cybersecurity_major",
+      "computer_science"
+    ],
+    "topSkills": [
+      "cybersecurity",
+      "problem_solving",
+      "networking",
+      "programming"
+    ]
+  },
+  {
+    "id": "security_architect",
+    "title": {
+      "en": "Security Architect",
+      "ar": "مهندس معماري للأمن"
+    },
+    "sector": "cybersecurity",
+    "shortDescription": {
+      "en": "Designs how an organisation's whole technology estate stays secure — identity, networks, cloud and data — and sets the standards that engineering teams build against.",
+      "ar": "يصمّم منظومة الحماية لكامل البنية التقنية للمؤسسة — الهوية والشبكات والسحابة والبيانات — ويضع المعايير التي تبني عليها الفرق الهندسية."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 22000,
+      "senior": 45000
+    },
+    "growthTrend": [
+      104,
+      108,
+      112,
+      115,
+      118
+    ],
+    "icon": "shield-check",
+    "thumbnail": "/images/careers/security_architect-thumb.jpg",
+    "majors": [
+      "cybersecurity_major",
+      "computer_engineering",
+      "information_systems"
+    ],
+    "topSkills": [
+      "cybersecurity",
+      "systems_design",
+      "cloud_infrastructure",
+      "networking"
+    ]
+  },
+  {
+    "id": "digital_forensics_investigator",
+    "title": {
+      "en": "Digital Forensics Investigator",
+      "ar": "محقّق أدلة رقمية"
+    },
+    "sector": "cybersecurity",
+    "shortDescription": {
+      "en": "Recovers and analyses digital evidence after an incident or a crime, reconstructs what happened, and presents findings that stand up in a legal process.",
+      "ar": "يستعيد الأدلة الرقمية ويحلّلها بعد وقوع حادثة أو جريمة، ويعيد بناء تسلسل الأحداث، ويقدّم نتائج تصمد أمام الإجراءات القانونية."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 13000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      101,
+      103,
+      106,
+      109,
+      110
+    ],
+    "icon": "shield-check",
+    "thumbnail": "/images/careers/digital_forensics_investigator-thumb.jpg",
+    "majors": [
+      "cybersecurity_major",
+      "criminology"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "cybersecurity",
+      "writing_docs",
+      "research_methods"
+    ]
+  },
+  {
+    "id": "software_engineer",
+    "title": {
+      "en": "Software Engineer",
+      "ar": "مهندس برمجيات"
+    },
+    "sector": "software",
+    "shortDescription": {
+      "en": "Builds and maintains the applications and services people use every day, from government portals to banking apps, and is responsible for their correctness and performance.",
+      "ar": "يبني التطبيقات والخدمات التي يستخدمها الناس يومياً ويصونها، من البوّابات الحكومية إلى تطبيقات المصارف، ويتحمّل مسؤولية صحّتها وأدائها."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 14000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      107,
+      114,
+      120,
+      128,
+      136
+    ],
+    "icon": "code",
+    "thumbnail": "/images/careers/software_engineer-thumb.jpg",
+    "majors": [
+      "computer_science",
+      "software_engineering",
+      "computer_engineering"
+    ],
+    "topSkills": [
+      "programming",
+      "problem_solving",
+      "systems_design",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "cloud_devops_engineer",
+    "title": {
+      "en": "Cloud & DevOps Engineer",
+      "ar": "مهندس سحابة وعمليات تطوير"
+    },
+    "sector": "software",
+    "shortDescription": {
+      "en": "Runs the infrastructure that software lives on: automates deployment, keeps systems available and scalable, and shortens the path from code to production.",
+      "ar": "يدير البنية التي تعمل عليها البرمجيات: يؤتمت النشر، ويحافظ على جاهزية الأنظمة وقابليتها للتوسّع، ويختصر المسافة بين كتابة الشيفرة وتشغيلها."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 16000,
+      "senior": 34000
+    },
+    "growthTrend": [
+      109,
+      117,
+      126,
+      132,
+      139
+    ],
+    "icon": "code",
+    "thumbnail": "/images/careers/cloud_devops_engineer-thumb.jpg",
+    "majors": [
+      "computer_engineering",
+      "computer_science",
+      "information_systems"
+    ],
+    "topSkills": [
+      "cloud_infrastructure",
+      "programming",
+      "systems_design",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "mobile_app_developer",
+    "title": {
+      "en": "Mobile Application Developer",
+      "ar": "مطوّر تطبيقات الهواتف"
+    },
+    "sector": "software",
+    "shortDescription": {
+      "en": "Designs and ships mobile applications for iOS and Android, working closely with designers to make bilingual, right-to-left-aware experiences that feel native.",
+      "ar": "يصمّم تطبيقات الهواتف لنظامَي iOS وأندرويد ويطلقها، بالتعاون الوثيق مع المصمّمين لإنتاج تجارب ثنائية اللغة تدعم الاتجاه من اليمين إلى اليسار وتبدو أصيلة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      104,
+      109,
+      115,
+      120,
+      125
+    ],
+    "icon": "code",
+    "thumbnail": "/images/careers/mobile_app_developer-thumb.jpg",
+    "majors": [
+      "computer_science",
+      "software_engineering",
+      "digital_media"
+    ],
+    "topSkills": [
+      "programming",
+      "problem_solving",
+      "attention_detail",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "qa_automation_engineer",
+    "title": {
+      "en": "QA Automation Engineer",
+      "ar": "مهندس ضمان جودة وأتمتة اختبارات"
+    },
+    "sector": "software",
+    "shortDescription": {
+      "en": "Protects quality by designing test strategies and automated suites that catch defects before users do, and by measuring reliability release after release.",
+      "ar": "يحمي الجودة عبر تصميم استراتيجيات الاختبار والمجموعات الآلية التي تكتشف العيوب قبل المستخدمين، وقياس الموثوقية إصداراً بعد إصدار."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 11000,
+      "senior": 22000
+    },
+    "growthTrend": [
+      104,
+      109,
+      114,
+      118,
+      123
+    ],
+    "icon": "code",
+    "thumbnail": "/images/careers/qa_automation_engineer-thumb.jpg",
+    "majors": [
+      "software_engineering",
+      "computer_science",
+      "information_systems"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "programming",
+      "problem_solving",
+      "writing_docs"
+    ]
+  },
+  {
+    "id": "renewable_energy_engineer",
+    "title": {
+      "en": "Renewable Energy Engineer",
+      "ar": "مهندس طاقة متجددة"
+    },
+    "sector": "energy",
+    "shortDescription": {
+      "en": "Plans and engineers solar and other clean-energy projects, from yield modelling and grid connection to commissioning large plants in the desert climate.",
+      "ar": "يخطّط لمشاريع الطاقة الشمسية والطاقة النظيفة ويهندسها، من نمذجة الإنتاجية والربط بالشبكة إلى تشغيل المحطات الكبيرة في المناخ الصحراوي."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 15000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      109,
+      117,
+      124,
+      130,
+      139
+    ],
+    "icon": "zap",
+    "thumbnail": "/images/careers/renewable_energy_engineer-thumb.jpg",
+    "majors": [
+      "electrical_engineering",
+      "environmental_engineering",
+      "mechanical_engineering"
+    ],
+    "topSkills": [
+      "energy_systems",
+      "physics_reasoning",
+      "sustainability",
+      "mathematics"
+    ]
+  },
+  {
+    "id": "petroleum_engineer",
+    "title": {
+      "en": "Petroleum Engineer",
+      "ar": "مهندس بترول"
+    },
+    "sector": "energy",
+    "shortDescription": {
+      "en": "Works on how oil and gas are extracted safely and efficiently — reservoir behaviour, well design and production optimisation — increasingly alongside emissions-reduction targets.",
+      "ar": "يعمل على استخراج النفط والغاز بأمان وكفاءة — سلوك المكامن وتصميم الآبار وتحسين الإنتاج — بالتوازي المتزايد مع أهداف خفض الانبعاثات."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 20000,
+      "senior": 45000
+    },
+    "growthTrend": [
+      105,
+      111,
+      117,
+      122,
+      126
+    ],
+    "icon": "zap",
+    "thumbnail": "/images/careers/petroleum_engineer-thumb.jpg",
+    "majors": [
+      "petroleum_engineering",
+      "chemical_engineering",
+      "mechanical_engineering",
+      "geology"
+    ],
+    "topSkills": [
+      "physics_reasoning",
+      "mathematics",
+      "energy_systems",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "nuclear_engineer",
+    "title": {
+      "en": "Nuclear Engineer",
+      "ar": "مهندس نووي"
+    },
+    "sector": "energy",
+    "shortDescription": {
+      "en": "Supports the safe operation of peaceful nuclear power: reactor systems, radiation protection, fuel handling and the strict safety culture the sector requires.",
+      "ar": "يدعم التشغيل الآمن للطاقة النووية السلمية: أنظمة المفاعل، والوقاية من الإشعاع، ومناولة الوقود، وثقافة السلامة الصارمة التي يتطلبها القطاع."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 20000,
+      "senior": 42000
+    },
+    "growthTrend": [
+      102,
+      106,
+      107,
+      108,
+      109
+    ],
+    "icon": "zap",
+    "thumbnail": "/images/careers/nuclear_engineer-thumb.jpg",
+    "majors": [
+      "nuclear_engineering",
+      "mechanical_engineering",
+      "physics"
+    ],
+    "topSkills": [
+      "physics_reasoning",
+      "attention_detail",
+      "mathematics",
+      "energy_systems"
+    ]
+  },
+  {
+    "id": "sustainability_consultant",
+    "title": {
+      "en": "Sustainability Consultant",
+      "ar": "استشاري استدامة"
+    },
+    "sector": "energy",
+    "shortDescription": {
+      "en": "Helps organisations measure and reduce their environmental footprint: carbon accounting, green-building certification, reporting and practical decarbonisation roadmaps.",
+      "ar": "يساعد المؤسسات على قياس أثرها البيئي وخفضه: حساب البصمة الكربونية، وشهادات الأبنية الخضراء، وإعداد التقارير، وخرائط طريق عملية لخفض الكربون."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 13000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      104,
+      109,
+      114,
+      119,
+      124
+    ],
+    "icon": "zap",
+    "thumbnail": "/images/careers/sustainability_consultant-thumb.jpg",
+    "majors": [
+      "environmental_science",
+      "environmental_engineering"
+    ],
+    "topSkills": [
+      "sustainability",
+      "writing_docs",
+      "data_analysis",
+      "business_strategy"
+    ]
+  },
+  {
+    "id": "commercial_pilot",
+    "title": {
+      "en": "Commercial Pilot",
+      "ar": "طيّار تجاري"
+    },
+    "sector": "aviation",
+    "shortDescription": {
+      "en": "Flies passengers and cargo on scheduled routes, applying strict procedures, weather and navigation judgement, and crew coordination on every sector.",
+      "ar": "يقود الرحلات المجدولة لنقل الركاب والبضائع، مطبّقاً إجراءات صارمة وحسن تقدير للأحوال الجوية والملاحة، والتنسيق مع الطاقم في كل رحلة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 25000,
+      "senior": 60000
+    },
+    "growthTrend": [
+      103,
+      109,
+      112,
+      117,
+      121
+    ],
+    "icon": "plane",
+    "thumbnail": "/images/careers/commercial_pilot-thumb.jpg",
+    "majors": [
+      "pilot_training",
+      "aerospace_engineering",
+      "aviation_management"
+    ],
+    "topSkills": [
+      "aviation_ops",
+      "attention_detail",
+      "english_language",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "aeronautical_engineer",
+    "title": {
+      "en": "Aeronautical Engineer",
+      "ar": "مهندس طيران"
+    },
+    "sector": "aviation",
+    "shortDescription": {
+      "en": "Designs, tests and certifies aircraft structures and systems, and supports airworthiness through analysis, maintenance engineering and continuous improvement.",
+      "ar": "يصمّم هياكل الطائرات وأنظمتها ويختبرها ويعتمدها، ويدعم صلاحية الطيران عبر التحليل وهندسة الصيانة والتحسين المستمر."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 16000,
+      "senior": 34000
+    },
+    "growthTrend": [
+      105,
+      109,
+      112,
+      116,
+      120
+    ],
+    "icon": "plane",
+    "thumbnail": "/images/careers/aeronautical_engineer-thumb.jpg",
+    "majors": [
+      "aerospace_engineering",
+      "mechanical_engineering"
+    ],
+    "topSkills": [
+      "physics_reasoning",
+      "mechanical_design",
+      "mathematics",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "air_traffic_controller",
+    "title": {
+      "en": "Air Traffic Controller",
+      "ar": "مراقب حركة جوية"
+    },
+    "sector": "aviation",
+    "shortDescription": {
+      "en": "Keeps aircraft safely separated in some of the world's busiest airspace, issuing clearances under time pressure with total procedural discipline.",
+      "ar": "يحافظ على الفصل الآمن بين الطائرات في واحد من أكثر الأجواء ازدحاماً في العالم، ويصدر التصاريح تحت ضغط الوقت بانضباط إجرائي كامل."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 18000,
+      "senior": 38000
+    },
+    "growthTrend": [
+      103,
+      106,
+      108,
+      109,
+      112
+    ],
+    "icon": "plane",
+    "thumbnail": "/images/careers/air_traffic_controller-thumb.jpg",
+    "majors": [
+      "air_traffic_management",
+      "aviation_management",
+      "aerospace_engineering"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "aviation_ops",
+      "english_language",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "avionics_technician",
+    "title": {
+      "en": "Avionics Engineer / Technician",
+      "ar": "مهندس أو فني إلكترونيات طيران"
+    },
+    "sector": "aviation",
+    "shortDescription": {
+      "en": "Installs, tests and repairs the electronic systems that fly and navigate an aircraft — instruments, communications, radar and autopilot.",
+      "ar": "يركّب الأنظمة الإلكترونية التي تقود الطائرة وتوجّهها ويختبرها ويصلحها — الأجهزة والاتصالات والرادار والطيار الآلي."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 10000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      104,
+      107,
+      113,
+      118,
+      123
+    ],
+    "icon": "plane",
+    "thumbnail": "/images/careers/avionics_technician-thumb.jpg",
+    "majors": [
+      "aerospace_engineering",
+      "electrical_engineering",
+      "aircraft_maintenance"
+    ],
+    "topSkills": [
+      "electronics",
+      "attention_detail",
+      "problem_solving",
+      "aviation_ops"
+    ]
+  },
+  {
+    "id": "satellite_systems_engineer",
+    "title": {
+      "en": "Satellite Systems Engineer",
+      "ar": "مهندس أنظمة أقمار صناعية"
+    },
+    "sector": "space",
+    "shortDescription": {
+      "en": "Designs and integrates the subsystems of a satellite — power, thermal, communications and attitude control — and verifies that they survive launch and orbit.",
+      "ar": "يصمّم أنظمة القمر الصناعي الفرعية ويدمجها — الطاقة والحرارة والاتصالات والتحكّم في الاتجاه — ويتحقق من قدرتها على تحمّل الإطلاق والمدار."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 18000,
+      "senior": 38000
+    },
+    "growthTrend": [
+      104,
+      107,
+      112,
+      117,
+      123
+    ],
+    "icon": "rocket",
+    "thumbnail": "/images/careers/satellite_systems_engineer-thumb.jpg",
+    "majors": [
+      "aerospace_engineering",
+      "electrical_engineering",
+      "physics",
+      "space_engineering"
+    ],
+    "topSkills": [
+      "systems_design",
+      "physics_reasoning",
+      "mathematics",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "space_mission_analyst",
+    "title": {
+      "en": "Space Mission Analyst",
+      "ar": "محلل بعثات فضائية"
+    },
+    "sector": "space",
+    "shortDescription": {
+      "en": "Plans orbits, trajectories and mission timelines, and analyses the data a mission returns so that scientific and operational goals are actually met.",
+      "ar": "يخطّط المدارات والمسارات والجداول الزمنية للبعثات، ويحلّل البيانات العائدة منها لضمان تحقيق الأهداف العلمية والتشغيلية فعلياً."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 16000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      101,
+      102,
+      105,
+      108,
+      110
+    ],
+    "icon": "rocket",
+    "thumbnail": "/images/careers/space_mission_analyst-thumb.jpg",
+    "majors": [
+      "astronomy",
+      "aerospace_engineering",
+      "mathematics"
+    ],
+    "topSkills": [
+      "mathematics",
+      "physics_reasoning",
+      "data_analysis",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "remote_sensing_specialist",
+    "title": {
+      "en": "Remote Sensing & GIS Specialist",
+      "ar": "أخصائي استشعار عن بُعد ونظم معلومات جغرافية"
+    },
+    "sector": "space",
+    "shortDescription": {
+      "en": "Turns satellite and drone imagery into decisions: mapping urban growth, monitoring vegetation and coastlines, and supporting planning with spatial analysis.",
+      "ar": "يحوّل صور الأقمار الصناعية والطائرات المسيّرة إلى قرارات: رسم خرائط النمو العمراني، ومراقبة الغطاء النباتي والسواحل، ودعم التخطيط بالتحليل المكاني."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      104,
+      108,
+      113,
+      118,
+      123
+    ],
+    "icon": "rocket",
+    "thumbnail": "/images/careers/remote_sensing_specialist-thumb.jpg",
+    "majors": [
+      "geomatics",
+      "environmental_science",
+      "civil_engineering"
+    ],
+    "topSkills": [
+      "geospatial_gis",
+      "data_analysis",
+      "attention_detail",
+      "research_methods"
+    ]
+  },
+  {
+    "id": "space_robotics_engineer",
+    "title": {
+      "en": "Space Robotics Engineer",
+      "ar": "مهندس روبوتات فضائية"
+    },
+    "sector": "space",
+    "shortDescription": {
+      "en": "Builds robotic arms, rovers and autonomous systems that operate where humans cannot, and makes them reliable under extreme temperature, dust and radiation.",
+      "ar": "يبني الأذرع الروبوتية والمركبات الجوّالة والأنظمة ذاتية التشغيل التي تعمل حيث لا يستطيع الإنسان، ويجعلها موثوقة في درجات حرارة وغبار وإشعاع قاسية."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 18000,
+      "senior": 36000
+    },
+    "growthTrend": [
+      102,
+      103,
+      104,
+      107,
+      110
+    ],
+    "icon": "rocket",
+    "thumbnail": "/images/careers/space_robotics_engineer-thumb.jpg",
+    "majors": [
+      "robotics",
+      "mechatronics",
+      "aerospace_engineering",
+      "space_engineering"
+    ],
+    "topSkills": [
+      "electronics",
+      "mechanical_design",
+      "programming",
+      "physics_reasoning"
+    ]
+  },
+  {
+    "id": "physician",
+    "title": {
+      "en": "Physician (General Medicine)",
+      "ar": "طبيب (الطب العام)"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Diagnoses and treats patients, coordinates their care across specialities, and combines scientific reasoning with the communication skill that patients rely on.",
+      "ar": "يشخّص المرضى ويعالجهم، وينسّق رعايتهم بين التخصصات، ويجمع بين الاستدلال العلمي ومهارة التواصل التي يعتمد عليها المريض."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 25000,
+      "senior": 60000
+    },
+    "growthTrend": [
+      109,
+      116,
+      124,
+      132,
+      141
+    ],
+    "icon": "stethoscope",
+    "thumbnail": "/images/careers/physician-thumb.jpg",
+    "majors": [
+      "medicine",
+      "biomedical_sciences"
+    ],
+    "topSkills": [
+      "life_sciences",
+      "clinical_skills",
+      "attention_detail",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "registered_nurse",
+    "title": {
+      "en": "Registered Nurse",
+      "ar": "ممرّض مسجّل"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Delivers and coordinates day-to-day patient care, monitors condition changes, and is often the professional a patient and family speak with most.",
+      "ar": "يقدّم الرعاية اليومية للمرضى وينسّقها، ويراقب تغيّر حالاتهم، وغالباً ما يكون الشخص الذي يتواصل معه المريض وأسرته أكثر من غيره."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 10000,
+      "senior": 22000
+    },
+    "growthTrend": [
+      108,
+      116,
+      124,
+      131,
+      138
+    ],
+    "icon": "stethoscope",
+    "thumbnail": "/images/careers/registered_nurse-thumb.jpg",
+    "majors": [
+      "nursing",
+      "public_health"
+    ],
+    "topSkills": [
+      "clinical_skills",
+      "teamwork",
+      "attention_detail",
+      "life_sciences"
+    ]
+  },
+  {
+    "id": "pharmacist",
+    "title": {
+      "en": "Pharmacist",
+      "ar": "صيدلاني"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Dispenses and reviews medication, checks for interactions and dosing errors, and advises patients and clinicians on safe and effective drug therapy.",
+      "ar": "يصرف الأدوية ويراجعها، ويتحقق من التداخلات وأخطاء الجرعات، ويقدّم المشورة للمرضى والأطباء بشأن العلاج الدوائي الآمن والفعّال."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      106,
+      111,
+      115,
+      118,
+      123
+    ],
+    "icon": "stethoscope",
+    "thumbnail": "/images/careers/pharmacist-thumb.jpg",
+    "majors": [
+      "pharmacy"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "chemistry_lab",
+      "life_sciences",
+      "clinical_skills"
+    ]
+  },
+  {
+    "id": "health_informatics_specialist",
+    "title": {
+      "en": "Health Informatics Specialist",
+      "ar": "أخصائي معلوماتية صحية"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Sits between clinicians and technology: designs electronic health records, protects patient data, and turns hospital data into measurable improvements in care.",
+      "ar": "يعمل بين الأطباء والتقنية: يصمّم السجلات الصحية الإلكترونية، ويحمي بيانات المرضى، ويحوّل بيانات المستشفى إلى تحسينات قابلة للقياس في الرعاية."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      103,
+      107,
+      112,
+      118,
+      122
+    ],
+    "icon": "stethoscope",
+    "thumbnail": "/images/careers/health_informatics_specialist-thumb.jpg",
+    "majors": [
+      "health_informatics",
+      "computer_science",
+      "public_health"
+    ],
+    "topSkills": [
+      "data_analysis",
+      "systems_design",
+      "programming",
+      "life_sciences"
+    ]
+  },
+  {
+    "id": "financial_analyst",
+    "title": {
+      "en": "Financial Analyst",
+      "ar": "محلل مالي"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Evaluates investments and company performance through financial modelling, valuation and reporting, and makes a clear recommendation from an unclear set of numbers.",
+      "ar": "يقيّم الاستثمارات وأداء الشركات عبر النمذجة المالية والتقييم وإعداد التقارير، ويصوغ توصية واضحة انطلاقاً من أرقام غير واضحة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 13000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      104,
+      110,
+      115,
+      120,
+      124
+    ],
+    "icon": "line-chart",
+    "thumbnail": "/images/careers/financial_analyst-thumb.jpg",
+    "majors": [
+      "finance",
+      "accounting",
+      "economics",
+      "business_administration"
+    ],
+    "topSkills": [
+      "finance_accounting",
+      "data_analysis",
+      "attention_detail",
+      "economics"
+    ]
+  },
+  {
+    "id": "fintech_product_manager",
+    "title": {
+      "en": "Fintech Product Manager",
+      "ar": "مدير منتجات التقنية المالية"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Owns a digital financial product end to end — payments, lending or wealth — balancing user needs, regulation and engineering effort to decide what ships next.",
+      "ar": "يتولّى منتجاً مالياً رقمياً من طرف إلى طرف — المدفوعات أو الإقراض أو إدارة الثروات — موازناً بين احتياجات المستخدمين والتشريعات وجهد التطوير لتحديد ما يُطلق تالياً."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 18000,
+      "senior": 40000
+    },
+    "growthTrend": [
+      104,
+      108,
+      112,
+      116,
+      119
+    ],
+    "icon": "line-chart",
+    "thumbnail": "/images/careers/fintech_product_manager-thumb.jpg",
+    "majors": [
+      "business_administration",
+      "finance",
+      "information_systems"
+    ],
+    "topSkills": [
+      "business_strategy",
+      "project_management",
+      "finance_accounting",
+      "marketing_comm"
+    ]
+  },
+  {
+    "id": "actuary",
+    "title": {
+      "en": "Actuary",
+      "ar": "خبير اكتواري"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Prices risk with mathematics and statistics — insurance, pensions and capital adequacy — and defends the assumptions behind every number.",
+      "ar": "يسعّر المخاطر بالرياضيات والإحصاء — التأمين والمعاشات وكفاية رأس المال — ويدافع عن الافتراضات الكامنة خلف كل رقم."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 18000,
+      "senior": 40000
+    },
+    "growthTrend": [
+      102,
+      105,
+      107,
+      109,
+      112
+    ],
+    "icon": "line-chart",
+    "thumbnail": "/images/careers/actuary-thumb.jpg",
+    "majors": [
+      "actuarial_science",
+      "mathematics",
+      "statistics",
+      "finance"
+    ],
+    "topSkills": [
+      "mathematics",
+      "statistics",
+      "attention_detail",
+      "finance_accounting"
+    ]
+  },
+  {
+    "id": "compliance_officer",
+    "title": {
+      "en": "Compliance & AML Officer",
+      "ar": "مسؤول امتثال ومكافحة غسل الأموال"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Keeps a financial institution inside the rules: monitors transactions, investigates suspicious activity, and maintains the controls regulators inspect.",
+      "ar": "يبقي المؤسسة المالية ضمن الأنظمة: يراقب المعاملات، ويحقّق في الأنشطة المشبوهة، ويحافظ على الضوابط التي تفحصها الجهات الرقابية."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      104,
+      109,
+      114,
+      120,
+      124
+    ],
+    "icon": "line-chart",
+    "thumbnail": "/images/careers/compliance_officer-thumb.jpg",
+    "majors": [
+      "law",
+      "finance",
+      "business_administration",
+      "criminology"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "law_policy",
+      "finance_accounting",
+      "writing_docs"
+    ]
+  },
+  {
+    "id": "hotel_operations_manager",
+    "title": {
+      "en": "Hotel Operations Manager",
+      "ar": "مدير عمليات فندقية"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Runs the daily operation of a hotel — rooms, service standards, staffing and budget — and is accountable for both guest experience and profitability.",
+      "ar": "يدير التشغيل اليومي للفندق — الغرف ومعايير الخدمة والكوادر والميزانية — ويكون مسؤولاً عن تجربة الضيف والربحية معاً."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      106,
+      111,
+      116,
+      119,
+      122
+    ],
+    "icon": "palmtree",
+    "thumbnail": "/images/careers/hotel_operations_manager-thumb.jpg",
+    "majors": [
+      "hospitality_management",
+      "tourism_management",
+      "business_administration"
+    ],
+    "topSkills": [
+      "customer_service",
+      "leadership",
+      "teamwork",
+      "project_management"
+    ]
+  },
+  {
+    "id": "tourism_experience_designer",
+    "title": {
+      "en": "Tourism Experience Designer",
+      "ar": "مصمّم تجارب سياحية"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Creates the itineraries, cultural programmes and destination experiences that make visitors choose the UAE, blending heritage, storytelling and logistics.",
+      "ar": "يبتكر البرامج السياحية والثقافية وتجارب الوجهات التي تدفع الزائر لاختيار الإمارات، بمزج التراث وسرد القصص والتنظيم اللوجستي."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 11000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      103,
+      106,
+      107,
+      110,
+      114
+    ],
+    "icon": "palmtree",
+    "thumbnail": "/images/careers/tourism_experience_designer-thumb.jpg",
+    "majors": [
+      "tourism_management",
+      "museum_studies",
+      "marketing"
+    ],
+    "topSkills": [
+      "creativity",
+      "marketing_comm",
+      "customer_service",
+      "arabic_language"
+    ]
+  },
+  {
+    "id": "events_manager",
+    "title": {
+      "en": "Events & Exhibitions Manager",
+      "ar": "مدير فعاليات ومعارض"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Delivers conferences, exhibitions and large public events on time and on budget, coordinating venues, suppliers, permits and hundreds of moving parts.",
+      "ar": "ينفّذ المؤتمرات والمعارض والفعاليات الجماهيرية الكبرى في الوقت والميزانية المحدّدين، منسّقاً المواقع والمورّدين والتصاريح ومئات التفاصيل المتحرّكة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      104,
+      109,
+      114,
+      119,
+      125
+    ],
+    "icon": "palmtree",
+    "thumbnail": "/images/careers/events_manager-thumb.jpg",
+    "majors": [
+      "event_management",
+      "hospitality_management",
+      "marketing"
+    ],
+    "topSkills": [
+      "project_management",
+      "teamwork",
+      "leadership",
+      "marketing_comm"
+    ]
+  },
+  {
+    "id": "airline_customer_experience",
+    "title": {
+      "en": "Airline Customer Experience Specialist",
+      "ar": "أخصائي تجربة عملاء الطيران"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Improves every touchpoint of a passenger's journey, from booking to arrival, using service data and direct feedback to redesign what is not working.",
+      "ar": "يحسّن كل نقطة تماس في رحلة المسافر، من الحجز حتى الوصول، مستخدماً بيانات الخدمة والملاحظات المباشرة لإعادة تصميم ما لا يعمل جيداً."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 9000,
+      "senior": 20000
+    },
+    "growthTrend": [
+      101,
+      103,
+      104,
+      106,
+      107
+    ],
+    "icon": "palmtree",
+    "thumbnail": "/images/careers/airline_customer_experience-thumb.jpg",
+    "majors": [
+      "aviation_management",
+      "hospitality_management",
+      "marketing"
+    ],
+    "topSkills": [
+      "customer_service",
+      "english_language",
+      "teamwork",
+      "marketing_comm"
+    ]
+  },
+  {
+    "id": "civil_engineer",
+    "title": {
+      "en": "Civil Engineer",
+      "ar": "مهندس مدني"
+    },
+    "sector": "construction",
+    "shortDescription": {
+      "en": "Designs and supervises the roads, bridges, water networks and buildings a growing country runs on, balancing safety codes, cost and desert-climate conditions.",
+      "ar": "يصمّم الطرق والجسور وشبكات المياه والمباني التي تقوم عليها دولة نامية ويشرف عليها، موازناً بين أكواد السلامة والتكلفة وظروف المناخ الصحراوي."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      106,
+      111,
+      115,
+      118,
+      122
+    ],
+    "icon": "hard-hat",
+    "thumbnail": "/images/careers/civil_engineer-thumb.jpg",
+    "majors": [
+      "civil_engineering",
+      "structural_engineering",
+      "construction_management"
+    ],
+    "topSkills": [
+      "civil_structures",
+      "physics_reasoning",
+      "mathematics",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "architect",
+    "title": {
+      "en": "Architect",
+      "ar": "مهندس معماري"
+    },
+    "sector": "construction",
+    "shortDescription": {
+      "en": "Turns a brief into a building: form, light, circulation and materials, resolved into drawings that a contractor can build and a client wants to inhabit.",
+      "ar": "يحوّل المتطلبات إلى مبنى: الشكل والضوء والحركة والمواد، مترجمة إلى مخططات ينفّذها المقاول ويرغب العميل في السكن فيها."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 12000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      103,
+      106,
+      109,
+      112,
+      114
+    ],
+    "icon": "hard-hat",
+    "thumbnail": "/images/careers/architect-thumb.jpg",
+    "majors": [
+      "architecture",
+      "interior_design",
+      "urban_planning"
+    ],
+    "topSkills": [
+      "visual_design",
+      "creativity",
+      "attention_detail",
+      "mathematics"
+    ]
+  },
+  {
+    "id": "quantity_surveyor",
+    "title": {
+      "en": "Quantity Surveyor",
+      "ar": "مساح كميات"
+    },
+    "sector": "construction",
+    "shortDescription": {
+      "en": "Controls the money on a construction project: measures work, prices variations, manages contracts and keeps a large build financially honest.",
+      "ar": "يضبط الجانب المالي في مشروع الإنشاء: يقيس الأعمال، ويسعّر التغييرات، ويدير العقود، ويحافظ على انضباط مالي في مشروع كبير."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 11000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      101,
+      104,
+      107,
+      108,
+      111
+    ],
+    "icon": "hard-hat",
+    "thumbnail": "/images/careers/quantity_surveyor-thumb.jpg",
+    "majors": [
+      "quantity_surveying",
+      "construction_management",
+      "civil_engineering"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "finance_accounting",
+      "mathematics",
+      "writing_docs"
+    ]
+  },
+  {
+    "id": "urban_planner",
+    "title": {
+      "en": "Urban Planner",
+      "ar": "مخطّط حضري"
+    },
+    "sector": "construction",
+    "shortDescription": {
+      "en": "Plans how cities grow — land use, transport, density and public space — so that new districts remain liveable, walkable and sustainable decades later.",
+      "ar": "يخطّط لنمو المدن — استعمالات الأراضي والنقل والكثافة والفضاء العام — لتبقى الأحياء الجديدة صالحة للعيش وقابلة للمشي ومستدامة بعد عقود."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 13000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      103,
+      106,
+      109,
+      112,
+      114
+    ],
+    "icon": "hard-hat",
+    "thumbnail": "/images/careers/urban_planner-thumb.jpg",
+    "majors": [
+      "urban_planning",
+      "architecture",
+      "geomatics"
+    ],
+    "topSkills": [
+      "geospatial_gis",
+      "sustainability",
+      "research_methods",
+      "law_policy"
+    ]
+  },
+  {
+    "id": "supply_chain_analyst",
+    "title": {
+      "en": "Supply Chain Analyst",
+      "ar": "محلل سلاسل الإمداد"
+    },
+    "sector": "logistics",
+    "shortDescription": {
+      "en": "Uses data to keep goods moving: forecasts demand, optimises inventory and routes, and finds the bottleneck that is costing a distribution network money.",
+      "ar": "يستخدم البيانات لإبقاء البضائع في حركة: يتنبأ بالطلب، ويحسّن المخزون والمسارات، ويكتشف الاختناق الذي يكلّف شبكة التوزيع أموالاً."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 11000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      106,
+      110,
+      114,
+      117,
+      120
+    ],
+    "icon": "ship",
+    "thumbnail": "/images/careers/supply_chain_analyst-thumb.jpg",
+    "majors": [
+      "supply_chain",
+      "industrial_engineering",
+      "data_science"
+    ],
+    "topSkills": [
+      "logistics_ops",
+      "data_analysis",
+      "problem_solving",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "port_operations_manager",
+    "title": {
+      "en": "Port & Terminal Operations Manager",
+      "ar": "مدير عمليات موانئ ومحطات"
+    },
+    "sector": "logistics",
+    "shortDescription": {
+      "en": "Directs the movement of vessels, containers and equipment across a terminal, balancing safety, berth scheduling and throughput targets around the clock.",
+      "ar": "يوجّه حركة السفن والحاويات والمعدات داخل المحطة، موازناً بين السلامة وجدولة الأرصفة وأهداف الإنتاجية على مدار الساعة."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 16000,
+      "senior": 34000
+    },
+    "growthTrend": [
+      102,
+      105,
+      106,
+      110,
+      113
+    ],
+    "icon": "ship",
+    "thumbnail": "/images/careers/port_operations_manager-thumb.jpg",
+    "majors": [
+      "maritime_studies",
+      "supply_chain",
+      "industrial_engineering"
+    ],
+    "topSkills": [
+      "logistics_ops",
+      "maritime_ops",
+      "leadership",
+      "project_management"
+    ]
+  },
+  {
+    "id": "marine_engineer",
+    "title": {
+      "en": "Marine Engineer",
+      "ar": "مهندس بحري"
+    },
+    "sector": "logistics",
+    "shortDescription": {
+      "en": "Keeps ships running: propulsion, power generation and onboard systems, maintained and repaired far from any workshop.",
+      "ar": "يحافظ على تشغيل السفن: أنظمة الدفع وتوليد الطاقة والأنظمة على متن السفينة، صيانةً وإصلاحاً بعيداً عن أي ورشة."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 15000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      103,
+      105,
+      106,
+      109,
+      110
+    ],
+    "icon": "ship",
+    "thumbnail": "/images/careers/marine_engineer-thumb.jpg",
+    "majors": [
+      "marine_engineering",
+      "mechanical_engineering",
+      "maritime_studies"
+    ],
+    "topSkills": [
+      "mechanical_design",
+      "physics_reasoning",
+      "attention_detail",
+      "maritime_ops"
+    ]
+  },
+  {
+    "id": "customs_trade_specialist",
+    "title": {
+      "en": "Customs & Trade Compliance Specialist",
+      "ar": "أخصائي جمارك وامتثال تجاري"
+    },
+    "sector": "logistics",
+    "shortDescription": {
+      "en": "Makes cross-border trade legal and fast: classifies goods, applies tariff and sanctions rules, and clears shipments without costly delays.",
+      "ar": "يجعل التجارة عبر الحدود قانونية وسريعة: يصنّف البضائع، ويطبّق قواعد التعرفة والعقوبات، ويخلّص الشحنات دون تأخير مكلف."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 9000,
+      "senior": 20000
+    },
+    "growthTrend": [
+      101,
+      102,
+      102,
+      105,
+      106
+    ],
+    "icon": "ship",
+    "thumbnail": "/images/careers/customs_trade_specialist-thumb.jpg",
+    "majors": [
+      "economics",
+      "supply_chain",
+      "law"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "law_policy",
+      "logistics_ops",
+      "english_language"
+    ]
+  },
+  {
+    "id": "public_policy_analyst",
+    "title": {
+      "en": "Public Policy Analyst",
+      "ar": "محلل سياسات عامة"
+    },
+    "sector": "government",
+    "shortDescription": {
+      "en": "Researches social and economic problems, evaluates options with evidence, and drafts the policy papers that ministries use to decide.",
+      "ar": "يبحث المشكلات الاجتماعية والاقتصادية، ويقيّم الخيارات بالأدلة، ويصوغ أوراق السياسات التي تستند إليها الوزارات في اتخاذ القرار."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 13000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      104,
+      110,
+      114,
+      117,
+      121
+    ],
+    "icon": "landmark",
+    "thumbnail": "/images/careers/public_policy_analyst-thumb.jpg",
+    "majors": [
+      "public_policy",
+      "political_science",
+      "economics"
+    ],
+    "topSkills": [
+      "law_policy",
+      "research_methods",
+      "writing_docs",
+      "arabic_language"
+    ]
+  },
+  {
+    "id": "government_digital_services",
+    "title": {
+      "en": "Government Digital Services Officer",
+      "ar": "مسؤول خدمات حكومية رقمية"
+    },
+    "sector": "government",
+    "shortDescription": {
+      "en": "Redesigns public services so residents can complete them online in minutes, coordinating technology teams, legal requirements and Arabic-first user experience.",
+      "ar": "يعيد تصميم الخدمات العامة ليتمكّن المتعاملون من إنجازها إلكترونياً خلال دقائق، منسّقاً بين الفرق التقنية والمتطلبات القانونية وتجربة استخدام عربية أولاً."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      104,
+      107,
+      112,
+      116,
+      121
+    ],
+    "icon": "landmark",
+    "thumbnail": "/images/careers/government_digital_services-thumb.jpg",
+    "majors": [
+      "information_systems",
+      "public_administration",
+      "business_administration"
+    ],
+    "topSkills": [
+      "project_management",
+      "arabic_language",
+      "customer_service",
+      "writing_docs"
+    ]
+  },
+  {
+    "id": "diplomat",
+    "title": {
+      "en": "Diplomat / Foreign Service Officer",
+      "ar": "دبلوماسي"
+    },
+    "sector": "government",
+    "shortDescription": {
+      "en": "Represents the country abroad: negotiates agreements, reports on political developments, and supports citizens and national interests in another state.",
+      "ar": "يمثّل الدولة في الخارج: يتفاوض على الاتفاقيات، ويرفع التقارير عن التطورات السياسية، ويخدم المواطنين والمصالح الوطنية في دولة أخرى."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 15000,
+      "senior": 35000
+    },
+    "growthTrend": [
+      101,
+      104,
+      106,
+      108,
+      110
+    ],
+    "icon": "landmark",
+    "thumbnail": "/images/careers/diplomat-thumb.jpg",
+    "majors": [
+      "international_relations",
+      "political_science",
+      "law"
+    ],
+    "topSkills": [
+      "public_speaking",
+      "arabic_language",
+      "english_language",
+      "law_policy"
+    ]
+  },
+  {
+    "id": "statistician_gov",
+    "title": {
+      "en": "Government Statistician",
+      "ar": "إحصائي حكومي"
+    },
+    "sector": "government",
+    "shortDescription": {
+      "en": "Designs surveys and produces the official statistics a country plans with — population, labour, prices — with defensible methodology and clear publication.",
+      "ar": "يصمّم المسوح وينتج الإحصاءات الرسمية التي تُخطط بها الدولة — السكان والعمل والأسعار — بمنهجية قابلة للدفاع ونشر واضح."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 12000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      101,
+      104,
+      106,
+      109,
+      111
+    ],
+    "icon": "landmark",
+    "thumbnail": "/images/careers/statistician_gov-thumb.jpg",
+    "majors": [
+      "statistics",
+      "economics",
+      "data_science"
+    ],
+    "topSkills": [
+      "statistics",
+      "data_analysis",
+      "research_methods",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "secondary_teacher_stem",
+    "title": {
+      "en": "Secondary STEM Teacher",
+      "ar": "معلّم علوم ورياضيات للمرحلة الثانوية"
+    },
+    "sector": "education",
+    "shortDescription": {
+      "en": "Teaches mathematics or science to secondary students, designs assessment, and turns an abstract syllabus into something a sixteen-year-old can actually use.",
+      "ar": "يدرّس الرياضيات أو العلوم لطلبة المرحلة الثانوية، ويصمّم التقويم، ويحوّل منهجاً مجرّداً إلى معرفة يستطيع طالب في السادسة عشرة استخدامها فعلاً."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 9000,
+      "senior": 20000
+    },
+    "growthTrend": [
+      104,
+      107,
+      111,
+      115,
+      119
+    ],
+    "icon": "graduation-cap",
+    "thumbnail": "/images/careers/secondary_teacher_stem-thumb.jpg",
+    "majors": [
+      "education_secondary",
+      "physics",
+      "mathematics"
+    ],
+    "topSkills": [
+      "teaching",
+      "public_speaking",
+      "mathematics",
+      "arabic_language"
+    ]
+  },
+  {
+    "id": "special_education_specialist",
+    "title": {
+      "en": "Special Education Specialist",
+      "ar": "أخصائي تربية خاصة"
+    },
+    "sector": "education",
+    "shortDescription": {
+      "en": "Supports students with additional learning needs through individual plans, adapted materials and close work with families and therapists.",
+      "ar": "يدعم الطلبة ذوي الاحتياجات التعليمية الإضافية عبر الخطط الفردية والمواد المكيّفة والعمل الوثيق مع الأسر والمعالجين."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 10000,
+      "senior": 22000
+    },
+    "growthTrend": [
+      105,
+      109,
+      115,
+      120,
+      126
+    ],
+    "icon": "graduation-cap",
+    "thumbnail": "/images/careers/special_education_specialist-thumb.jpg",
+    "majors": [
+      "special_education",
+      "psychology",
+      "education_secondary",
+      "educational_counselling"
+    ],
+    "topSkills": [
+      "teaching",
+      "teamwork",
+      "attention_detail",
+      "arabic_language"
+    ]
+  },
+  {
+    "id": "instructional_designer",
+    "title": {
+      "en": "Instructional Designer",
+      "ar": "مصمّم تعليمي"
+    },
+    "sector": "education",
+    "shortDescription": {
+      "en": "Builds digital courses that work: defines learning outcomes, structures content and assessment, and produces bilingual material for online delivery.",
+      "ar": "يبني مقررات رقمية فعّالة: يحدّد نواتج التعلّم، وينظّم المحتوى والتقويم، وينتج مواد ثنائية اللغة للتعليم عبر الإنترنت."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 11000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      104,
+      107,
+      112,
+      117,
+      122
+    ],
+    "icon": "graduation-cap",
+    "thumbnail": "/images/careers/instructional_designer-thumb.jpg",
+    "majors": [
+      "curriculum_design",
+      "education_secondary",
+      "mass_communication"
+    ],
+    "topSkills": [
+      "writing_docs",
+      "teaching",
+      "arabic_language",
+      "creativity"
+    ]
+  },
+  {
+    "id": "academic_career_counsellor",
+    "title": {
+      "en": "Academic & Career Counsellor",
+      "ar": "مرشد أكاديمي ومهني"
+    },
+    "sector": "education",
+    "shortDescription": {
+      "en": "Guides students through subject choice, university applications and career direction, combining assessment tools with one-to-one conversation.",
+      "ar": "يرشد الطلبة في اختيار المواد والتقديم الجامعي والاتجاه المهني، جامعاً بين أدوات التقييم والحوار الفردي."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 9000,
+      "senior": 20000
+    },
+    "growthTrend": [
+      101,
+      103,
+      104,
+      107,
+      108
+    ],
+    "icon": "graduation-cap",
+    "thumbnail": "/images/careers/academic_career_counsellor-thumb.jpg",
+    "majors": [
+      "psychology",
+      "education_secondary",
+      "sociology",
+      "educational_counselling"
+    ],
+    "topSkills": [
+      "arabic_language",
+      "teaching",
+      "public_speaking",
+      "customer_service"
+    ]
+  },
+  {
+    "id": "ux_ui_designer",
+    "title": {
+      "en": "UX/UI Designer",
+      "ar": "مصمّم تجربة وواجهة المستخدم"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Designs how a product feels to use: research, flows, interface and design systems that work in both Arabic right-to-left and English layouts.",
+      "ar": "يصمّم شعور استخدام المنتج: البحث، ومسارات الاستخدام، والواجهة، وأنظمة التصميم التي تعمل في التخطيط العربي من اليمين إلى اليسار والإنجليزي معاً."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      104,
+      109,
+      115,
+      118,
+      122
+    ],
+    "icon": "clapperboard",
+    "thumbnail": "/images/careers/ux_ui_designer-thumb.jpg",
+    "majors": [
+      "interaction_design",
+      "graphic_design",
+      "computer_science"
+    ],
+    "topSkills": [
+      "visual_design",
+      "creativity",
+      "teamwork",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "digital_content_producer",
+    "title": {
+      "en": "Digital Content Producer",
+      "ar": "منتج محتوى رقمي"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Plans, shoots and edits video and social content in Arabic and English, and measures what actually reaches an audience rather than what looks impressive.",
+      "ar": "يخطّط للمحتوى المرئي ومحتوى منصّات التواصل ويصوّره ويحرّره بالعربية والإنجليزية، ويقيس ما يصل فعلاً إلى الجمهور لا ما يبدو مبهراً فحسب."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 9000,
+      "senior": 22000
+    },
+    "growthTrend": [
+      104,
+      109,
+      114,
+      118,
+      122
+    ],
+    "icon": "clapperboard",
+    "thumbnail": "/images/careers/digital_content_producer-thumb.jpg",
+    "majors": [
+      "film_production",
+      "mass_communication",
+      "digital_media"
+    ],
+    "topSkills": [
+      "creativity",
+      "marketing_comm",
+      "arabic_language",
+      "visual_design"
+    ]
+  },
+  {
+    "id": "journalist_editor",
+    "title": {
+      "en": "Journalist / Editor",
+      "ar": "صحفي أو محرّر"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Reports and edits accurate stories under deadline, verifies sources, and writes clearly in Modern Standard Arabic and English for very different audiences.",
+      "ar": "يعدّ الأخبار ويحرّرها بدقّة ضمن مواعيد ضاغطة، ويتحقّق من المصادر، ويكتب بوضوح بالعربية الفصحى والإنجليزية لجمهورين مختلفين تماماً."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 9000,
+      "senior": 20000
+    },
+    "growthTrend": [
+      101,
+      102,
+      105,
+      107,
+      110
+    ],
+    "icon": "clapperboard",
+    "thumbnail": "/images/careers/journalist_editor-thumb.jpg",
+    "majors": [
+      "journalism",
+      "mass_communication",
+      "translation"
+    ],
+    "topSkills": [
+      "writing_docs",
+      "arabic_language",
+      "english_language",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "game_developer",
+    "title": {
+      "en": "Game Developer",
+      "ar": "مطوّر ألعاب"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Programmes interactive experiences — gameplay systems, graphics and performance — often in small teams where one person owns several disciplines.",
+      "ar": "يبرمج التجارب التفاعلية — أنظمة اللعب والرسوميات والأداء — غالباً ضمن فرق صغيرة يتولّى فيها الشخص الواحد أكثر من تخصص."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 12000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      101,
+      104,
+      106,
+      108,
+      109
+    ],
+    "icon": "clapperboard",
+    "thumbnail": "/images/careers/game_developer-thumb.jpg",
+    "majors": [
+      "game_development",
+      "computer_science",
+      "digital_media"
+    ],
+    "topSkills": [
+      "programming",
+      "creativity",
+      "problem_solving",
+      "mathematics"
+    ]
+  },
+  {
+    "id": "startup_founder",
+    "title": {
+      "en": "Startup Founder",
+      "ar": "مؤسّس شركة ناشئة"
+    },
+    "sector": "entrepreneurship",
+    "shortDescription": {
+      "en": "Identifies a real problem, builds a first version, finds the customers who will pay for it, and raises the funding to keep going — with all the risk that implies.",
+      "ar": "يحدّد مشكلة حقيقية، ويبني نسخة أولى، ويجد العملاء المستعدين للدفع، ويجمع التمويل لمواصلة العمل — بكل ما يحمله ذلك من مخاطرة."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 8000,
+      "senior": 50000
+    },
+    "growthTrend": [
+      103,
+      106,
+      107,
+      110,
+      111
+    ],
+    "icon": "lightbulb",
+    "thumbnail": "/images/careers/startup_founder-thumb.jpg",
+    "majors": [
+      "entrepreneurship_major",
+      "business_administration"
+    ],
+    "topSkills": [
+      "business_strategy",
+      "leadership",
+      "problem_solving",
+      "marketing_comm"
+    ]
+  },
+  {
+    "id": "product_manager",
+    "title": {
+      "en": "Product Manager",
+      "ar": "مدير منتج"
+    },
+    "sector": "entrepreneurship",
+    "shortDescription": {
+      "en": "Decides what a product should do and why, working between users, engineers and business goals, and is measured on outcomes rather than output.",
+      "ar": "يقرّر ما ينبغي أن يفعله المنتج ولماذا، عاملاً بين المستخدمين والمهندسين وأهداف العمل، ويُقاس بالنتائج لا بحجم ما يُنتَج."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 18000,
+      "senior": 40000
+    },
+    "growthTrend": [
+      106,
+      111,
+      117,
+      121,
+      125
+    ],
+    "icon": "lightbulb",
+    "thumbnail": "/images/careers/product_manager-thumb.jpg",
+    "majors": [
+      "business_administration",
+      "information_systems",
+      "computer_science"
+    ],
+    "topSkills": [
+      "business_strategy",
+      "project_management",
+      "leadership",
+      "data_analysis"
+    ]
+  },
+  {
+    "id": "digital_marketing_specialist",
+    "title": {
+      "en": "Digital Marketing Specialist",
+      "ar": "أخصائي تسويق رقمي"
+    },
+    "sector": "entrepreneurship",
+    "shortDescription": {
+      "en": "Grows an audience and a customer base through search, social and paid channels, and proves the return on every dirham spent with analytics.",
+      "ar": "ينمّي الجمهور وقاعدة العملاء عبر محرّكات البحث ومنصّات التواصل والقنوات المدفوعة، ويثبت العائد على كل درهم يُنفق باستخدام التحليلات."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 9000,
+      "senior": 22000
+    },
+    "growthTrend": [
+      104,
+      109,
+      115,
+      120,
+      125
+    ],
+    "icon": "lightbulb",
+    "thumbnail": "/images/careers/digital_marketing_specialist-thumb.jpg",
+    "majors": [
+      "marketing",
+      "business_administration",
+      "mass_communication"
+    ],
+    "topSkills": [
+      "marketing_comm",
+      "creativity",
+      "arabic_language",
+      "english_language"
+    ]
+  },
+  {
+    "id": "business_analyst",
+    "title": {
+      "en": "Business Analyst",
+      "ar": "محلل أعمال"
+    },
+    "sector": "entrepreneurship",
+    "shortDescription": {
+      "en": "Translates between business and technology: documents processes, defines requirements, and makes sure the system that gets built is the one that was needed.",
+      "ar": "يترجم بين لغة الأعمال ولغة التقنية: يوثّق العمليات، ويحدّد المتطلبات، ويضمن أن يكون النظام الذي يُبنى هو النظام المطلوب فعلاً."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      104,
+      110,
+      116,
+      120,
+      124
+    ],
+    "icon": "lightbulb",
+    "thumbnail": "/images/careers/business_analyst-thumb.jpg",
+    "majors": [
+      "business_administration",
+      "information_systems",
+      "industrial_engineering"
+    ],
+    "topSkills": [
+      "writing_docs",
+      "data_analysis",
+      "business_strategy",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "radiologist",
+    "title": {
+      "en": "Radiologist",
+      "ar": "أخصائي الأشعة"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Reads medical images — X-ray, CT, MRI and ultrasound — to identify disease, and writes the report that other doctors act on.",
+      "ar": "يقرأ الصور الطبية من أشعة سينية ومقطعية ورنين مغناطيسي وموجات فوق صوتية لتحديد المرض، ويكتب التقرير الذي يبني عليه بقية الأطباء قرارهم."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 25000,
+      "senior": 80000
+    },
+    "growthTrend": [
+      104,
+      107,
+      110,
+      114,
+      118
+    ],
+    "icon": "scan-line",
+    "thumbnail": "/images/careers/radiologist-thumb.jpg",
+    "majors": [
+      "medicine",
+      "biomedical_sciences"
+    ],
+    "topSkills": [
+      "diagnostic_imaging",
+      "attention_detail",
+      "clinical_skills",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "radiographer",
+    "title": {
+      "en": "Radiologic Technologist",
+      "ar": "فني الأشعة"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Operates the imaging equipment and positions patients so the radiologist receives a picture that can actually be read.",
+      "ar": "يشغّل أجهزة التصوير ويهيّئ وضعية المريض ليصل إلى أخصائي الأشعة صورة قابلة للقراءة فعلًا."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 9000,
+      "senior": 22000
+    },
+    "growthTrend": [
+      107,
+      113,
+      120,
+      126,
+      135
+    ],
+    "icon": "scan",
+    "thumbnail": "/images/careers/radiographer-thumb.jpg",
+    "majors": [
+      "radiography"
+    ],
+    "topSkills": [
+      "diagnostic_imaging",
+      "attention_detail",
+      "patient_care",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "sonographer",
+    "title": {
+      "en": "Diagnostic Medical Sonographer",
+      "ar": "أخصائي التصوير بالموجات فوق الصوتية"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Performs ultrasound scans in real time, deciding while scanning which views will answer the clinical question.",
+      "ar": "يجري فحوصات الموجات فوق الصوتية في الوقت الحقيقي، ويقرّر أثناء الفحص أي المقاطع تجيب عن السؤال السريري."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 10000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      108,
+      116,
+      123,
+      130,
+      137
+    ],
+    "icon": "activity",
+    "thumbnail": "/images/careers/sonographer-thumb.jpg",
+    "majors": [
+      "radiography",
+      "biomedical_sciences"
+    ],
+    "topSkills": [
+      "diagnostic_imaging",
+      "attention_detail",
+      "patient_care",
+      "life_sciences"
+    ]
+  },
+  {
+    "id": "nuclear_medicine_technologist",
+    "title": {
+      "en": "Nuclear Medicine Technologist",
+      "ar": "فني الطب النووي"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Prepares and administers radioactive tracers, then images how they move through the body to show organ function rather than structure.",
+      "ar": "يحضّر النظائر المشعة ويعطيها للمريض، ثم يصوّر انتقالها في الجسم لإظهار وظيفة الأعضاء لا بنيتها فحسب."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 11000,
+      "senior": 25000
+    },
+    "growthTrend": [
+      104,
+      107,
+      112,
+      117,
+      121
+    ],
+    "icon": "atom",
+    "thumbnail": "/images/careers/nuclear_medicine_technologist-thumb.jpg",
+    "majors": [
+      "radiography",
+      "biomedical_sciences"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "diagnostic_imaging",
+      "chemistry_lab",
+      "physics_reasoning"
+    ]
+  },
+  {
+    "id": "radiation_therapist",
+    "title": {
+      "en": "Radiation Therapist",
+      "ar": "أخصائي العلاج الإشعاعي"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Delivers precisely targeted radiation to treat cancer, working to a plan where millimetres and repetition both matter.",
+      "ar": "يقدّم جرعات إشعاعية دقيقة الاستهداف لعلاج السرطان، وفق خطة تُحسب فيها المليمترات ويُعتمد فيها على الاتساق في التكرار."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 27000
+    },
+    "growthTrend": [
+      104,
+      109,
+      113,
+      116,
+      119
+    ],
+    "icon": "target",
+    "thumbnail": "/images/careers/radiation_therapist-thumb.jpg",
+    "majors": [
+      "radiation_therapy",
+      "radiography"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "patient_care",
+      "quality_control",
+      "diagnostic_imaging"
+    ]
+  },
+  {
+    "id": "interventional_radiologist",
+    "title": {
+      "en": "Interventional Radiologist",
+      "ar": "أخصائي الأشعة التداخلية"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Treats disease through tiny incisions guided by live imaging, replacing operations that once needed open surgery.",
+      "ar": "يعالج الأمراض عبر شقوق صغيرة موجّهة بالتصوير الحيّ، فيغني عن عمليات كانت تتطلب جراحة مفتوحة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 30000,
+      "senior": 85000
+    },
+    "growthTrend": [
+      105,
+      109,
+      112,
+      117,
+      122
+    ],
+    "icon": "git-branch",
+    "thumbnail": "/images/careers/interventional_radiologist-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "diagnostic_imaging",
+      "attention_detail",
+      "clinical_skills",
+      "surgical_skills"
+    ]
+  },
+  {
+    "id": "general_surgeon",
+    "title": {
+      "en": "General Surgeon",
+      "ar": "الجراح العام"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Operates across the abdomen and soft tissue, and carries the decision of whether an operation is the right answer at all.",
+      "ar": "يجري العمليات في البطن والأنسجة الرخوة، ويتحمّل قرار ما إذا كانت الجراحة هي الخيار الصحيح أصلًا."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 30000,
+      "senior": 80000
+    },
+    "growthTrend": [
+      104,
+      108,
+      112,
+      117,
+      123
+    ],
+    "icon": "scissors",
+    "thumbnail": "/images/careers/general_surgeon-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "surgical_skills",
+      "clinical_skills",
+      "attention_detail",
+      "emergency_response"
+    ]
+  },
+  {
+    "id": "cardiac_surgeon",
+    "title": {
+      "en": "Cardiac Surgeon",
+      "ar": "جراح القلب"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Operates on the heart and great vessels, in a specialty where the margin between a good and a poor outcome is measured in minutes.",
+      "ar": "يجري عمليات القلب والأوعية الكبرى، في تخصص يُقاس فيه الفارق بين نتيجة جيدة وأخرى سيئة بالدقائق."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 40000,
+      "senior": 110000
+    },
+    "growthTrend": [
+      102,
+      102,
+      104,
+      105,
+      107
+    ],
+    "icon": "heart-pulse",
+    "thumbnail": "/images/careers/cardiac_surgeon-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "surgical_skills",
+      "attention_detail",
+      "clinical_skills",
+      "emergency_response"
+    ]
+  },
+  {
+    "id": "orthopedic_surgeon",
+    "title": {
+      "en": "Orthopedic Surgeon",
+      "ar": "جراح العظام"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Repairs bones, joints and the soft tissue around them — a specialty that is as much mechanical reasoning as it is medicine.",
+      "ar": "يعالج العظام والمفاصل والأنسجة المحيطة بها، في تخصص يجمع بين التفكير الميكانيكي والطب بقدر متساوٍ."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 32000,
+      "senior": 85000
+    },
+    "growthTrend": [
+      104,
+      108,
+      111,
+      116,
+      119
+    ],
+    "icon": "bone",
+    "thumbnail": "/images/careers/orthopedic_surgeon-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "surgical_skills",
+      "clinical_skills",
+      "attention_detail",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "neurosurgeon",
+    "title": {
+      "en": "Neurosurgeon",
+      "ar": "جراح المخ والأعصاب"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Operates on the brain, spine and nervous system, where the tolerance for error is the smallest in medicine.",
+      "ar": "يجري جراحات الدماغ والعمود الفقري والجهاز العصبي، حيث هامش الخطأ هو الأضيق في الطب."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 42000,
+      "senior": 115000
+    },
+    "growthTrend": [
+      102,
+      104,
+      106,
+      107,
+      109
+    ],
+    "icon": "brain",
+    "thumbnail": "/images/careers/neurosurgeon-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "surgical_skills",
+      "attention_detail",
+      "clinical_skills",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "anesthesiologist",
+    "title": {
+      "en": "Anesthesiologist",
+      "ar": "طبيب التخدير"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Keeps the patient safe and unconscious through surgery, managing the body's systems minute by minute while someone else operates.",
+      "ar": "يحافظ على سلامة المريض وفقدانه للوعي أثناء الجراحة، ويدير أجهزة الجسم دقيقةً بدقيقة بينما يجري غيره العملية."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 30000,
+      "senior": 78000
+    },
+    "growthTrend": [
+      108,
+      116,
+      123,
+      130,
+      139
+    ],
+    "icon": "syringe",
+    "thumbnail": "/images/careers/anesthesiologist-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "clinical_skills",
+      "emergency_response",
+      "pharmacology"
+    ]
+  },
+  {
+    "id": "cardiologist",
+    "title": {
+      "en": "Cardiologist",
+      "ar": "طبيب القلب"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Diagnoses and treats heart disease, combining bedside assessment with imaging and long-term management of chronic conditions.",
+      "ar": "يشخّص أمراض القلب ويعالجها، جامعًا بين الفحص السريري والتصوير والإدارة طويلة الأمد للحالات المزمنة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 32000,
+      "senior": 85000
+    },
+    "growthTrend": [
+      103,
+      107,
+      111,
+      114,
+      120
+    ],
+    "icon": "heart",
+    "thumbnail": "/images/careers/cardiologist-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "clinical_skills",
+      "attention_detail",
+      "problem_solving",
+      "pharmacology"
+    ]
+  },
+  {
+    "id": "neurologist",
+    "title": {
+      "en": "Neurologist",
+      "ar": "طبيب الأعصاب"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Diagnoses disorders of the brain and nervous system, a specialty that rewards careful history-taking more than any single test.",
+      "ar": "يشخّص اضطرابات الدماغ والجهاز العصبي، وهو تخصص يعتمد على دقة أخذ التاريخ المرضي أكثر من اعتماده على أي فحص منفرد."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 30000,
+      "senior": 78000
+    },
+    "growthTrend": [
+      104,
+      108,
+      113,
+      117,
+      122
+    ],
+    "icon": "brain",
+    "thumbnail": "/images/careers/neurologist-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "clinical_skills",
+      "problem_solving",
+      "attention_detail",
+      "life_sciences"
+    ]
+  },
+  {
+    "id": "emergency_physician",
+    "title": {
+      "en": "Emergency Medicine Physician",
+      "ar": "طبيب الطوارئ"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Stabilises whatever comes through the door, making decisions with incomplete information and limited time.",
+      "ar": "يثبّت حالة كل ما يصل إلى قسم الطوارئ، ويتخذ قراراته بمعلومات ناقصة ووقت محدود."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 28000,
+      "senior": 70000
+    },
+    "growthTrend": [
+      107,
+      113,
+      121,
+      128,
+      135
+    ],
+    "icon": "siren",
+    "thumbnail": "/images/careers/emergency_physician-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "emergency_response",
+      "clinical_skills",
+      "problem_solving",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "general_practitioner",
+    "title": {
+      "en": "General Practitioner",
+      "ar": "طبيب الأسرة"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "The first doctor most people see: handles the broad range of everyday illness and decides what needs a specialist.",
+      "ar": "الطبيب الأول الذي يقصده معظم الناس: يتعامل مع الطيف الواسع من الأمراض اليومية ويحدّد ما يحتاج إلى تخصص أدق."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 22000,
+      "senior": 55000
+    },
+    "growthTrend": [
+      106,
+      113,
+      120,
+      128,
+      136
+    ],
+    "icon": "stethoscope",
+    "thumbnail": "/images/careers/general_practitioner-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "clinical_skills",
+      "patient_care",
+      "counselling",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "pediatrician",
+    "title": {
+      "en": "Pediatrician",
+      "ar": "طبيب الأطفال"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Treats children from birth through adolescence, where the patient often cannot describe the problem and the parent is part of the consultation.",
+      "ar": "يعالج الأطفال من الولادة حتى المراهقة، حيث لا يستطيع المريض غالبًا وصف مشكلته ويكون أحد الوالدين جزءًا من الاستشارة."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 25000,
+      "senior": 62000
+    },
+    "growthTrend": [
+      109,
+      117,
+      126,
+      134,
+      142
+    ],
+    "icon": "baby",
+    "thumbnail": "/images/careers/pediatrician-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "clinical_skills",
+      "patient_care",
+      "child_development",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "obgyn",
+    "title": {
+      "en": "Obstetrician and Gynecologist",
+      "ar": "طبيب النساء والتوليد"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Cares for women through pregnancy, birth and gynaecological conditions, combining clinic work with unpredictable delivery-room hours.",
+      "ar": "يرعى المرأة خلال الحمل والولادة والحالات النسائية، جامعًا بين عمل العيادة وساعات غير متوقعة في غرفة الولادة."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 28000,
+      "senior": 75000
+    },
+    "growthTrend": [
+      108,
+      116,
+      122,
+      129,
+      136
+    ],
+    "icon": "baby",
+    "thumbnail": "/images/careers/obgyn-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "clinical_skills",
+      "patient_care",
+      "attention_detail",
+      "surgical_skills"
+    ]
+  },
+  {
+    "id": "dermatologist",
+    "title": {
+      "en": "Dermatologist",
+      "ar": "طبيب الجلدية"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Diagnoses and treats skin, hair and nail conditions — a highly visual specialty with a large cosmetic and laser component in this region.",
+      "ar": "يشخّص أمراض الجلد والشعر والأظافر ويعالجها، وهو تخصص بصري بامتياز وله في هذه المنطقة جانب تجميلي وليزري كبير."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 28000,
+      "senior": 75000
+    },
+    "growthTrend": [
+      103,
+      107,
+      113,
+      116,
+      122
+    ],
+    "icon": "sparkles",
+    "thumbnail": "/images/careers/dermatologist-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "clinical_skills",
+      "patient_care",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "ophthalmologist",
+    "title": {
+      "en": "Ophthalmologist",
+      "ar": "طبيب العيون"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Treats eye disease medically and surgically, including some of the most delicate microsurgery performed anywhere in medicine.",
+      "ar": "يعالج أمراض العين دوائيًا وجراحيًا، بما يشمل بعضًا من أدق الجراحات المجهرية في الطب."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 30000,
+      "senior": 80000
+    },
+    "growthTrend": [
+      104,
+      107,
+      111,
+      114,
+      118
+    ],
+    "icon": "eye",
+    "thumbnail": "/images/careers/ophthalmologist-thumb.jpg",
+    "majors": [
+      "medicine"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "surgical_skills",
+      "clinical_skills",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "optometrist",
+    "title": {
+      "en": "Optometrist",
+      "ar": "أخصائي البصريات"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Tests sight, prescribes correction and screens for eye disease — usually the first professional to spot a problem the patient has not noticed.",
+      "ar": "يفحص البصر ويصف وسائل التصحيح ويكشف مبكرًا عن أمراض العين، وهو غالبًا أول من يلاحظ مشكلة لم ينتبه لها المريض."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      106,
+      110,
+      114,
+      119,
+      125
+    ],
+    "icon": "glasses",
+    "thumbnail": "/images/careers/optometrist-thumb.jpg",
+    "majors": [
+      "optometry"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "patient_care",
+      "clinical_skills",
+      "customer_service"
+    ]
+  },
+  {
+    "id": "psychiatrist",
+    "title": {
+      "en": "Psychiatrist",
+      "ar": "الطبيب النفسي"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Diagnoses and treats mental illness as a medical doctor, combining therapy with medication and long-term follow-up.",
+      "ar": "يشخّص الأمراض النفسية ويعالجها بصفته طبيبًا، جامعًا بين العلاج النفسي والدواء والمتابعة طويلة الأمد."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 28000,
+      "senior": 72000
+    },
+    "growthTrend": [
+      108,
+      116,
+      122,
+      130,
+      137
+    ],
+    "icon": "brain",
+    "thumbnail": "/images/careers/psychiatrist-thumb.jpg",
+    "majors": [
+      "medicine",
+      "psychology"
+    ],
+    "topSkills": [
+      "counselling",
+      "clinical_skills",
+      "pharmacology",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "clinical_psychologist",
+    "title": {
+      "en": "Clinical Psychologist",
+      "ar": "الأخصائي النفسي السريري"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Assesses and treats psychological difficulty through structured therapy rather than medication.",
+      "ar": "يقيّم الصعوبات النفسية ويعالجها عبر جلسات علاجية منظمة لا عبر الدواء."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 15000,
+      "senior": 38000
+    },
+    "growthTrend": [
+      107,
+      115,
+      122,
+      129,
+      137
+    ],
+    "icon": "messages-square",
+    "thumbnail": "/images/careers/clinical_psychologist-thumb.jpg",
+    "majors": [
+      "psychology"
+    ],
+    "topSkills": [
+      "counselling",
+      "patient_care",
+      "research_methods",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "dentist",
+    "title": {
+      "en": "Dentist",
+      "ar": "طبيب الأسنان"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Diagnoses and treats disease of the teeth, gums and mouth, doing precise manual work in a very small field of view.",
+      "ar": "يشخّص أمراض الأسنان واللثة والفم ويعالجها، بعمل يدوي دقيق في مجال رؤية ضيّق جدًا."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 18000,
+      "senior": 55000
+    },
+    "growthTrend": [
+      109,
+      117,
+      126,
+      132,
+      139
+    ],
+    "icon": "smile",
+    "thumbnail": "/images/careers/dentist-thumb.jpg",
+    "majors": [
+      "dentistry"
+    ],
+    "topSkills": [
+      "dental_skills",
+      "attention_detail",
+      "patient_care",
+      "surgical_skills"
+    ]
+  },
+  {
+    "id": "orthodontist",
+    "title": {
+      "en": "Orthodontist",
+      "ar": "أخصائي تقويم الأسنان"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Moves teeth and jaws into alignment over months and years, planning a result long before it becomes visible.",
+      "ar": "ينقل الأسنان والفكين إلى وضعها الصحيح عبر أشهر وسنوات، ويخطط للنتيجة قبل أن تظهر بوقت طويل."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 25000,
+      "senior": 70000
+    },
+    "growthTrend": [
+      104,
+      108,
+      112,
+      116,
+      122
+    ],
+    "icon": "align-center",
+    "thumbnail": "/images/careers/orthodontist-thumb.jpg",
+    "majors": [
+      "dentistry"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "dental_skills",
+      "patient_care",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "dental_hygienist",
+    "title": {
+      "en": "Dental Hygienist",
+      "ar": "أخصائي صحة الأسنان"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Cleans and maintains oral health and teaches patients how to keep it, preventing most of what a dentist would otherwise have to treat.",
+      "ar": "ينظّف الفم ويحافظ على صحته ويعلّم المرضى كيفية العناية به، فيمنع معظم ما كان سيضطر طبيب الأسنان إلى علاجه."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 8000,
+      "senior": 18000
+    },
+    "growthTrend": [
+      105,
+      111,
+      115,
+      119,
+      122
+    ],
+    "icon": "sparkles",
+    "thumbnail": "/images/careers/dental_hygienist-thumb.jpg",
+    "majors": [
+      "dentistry",
+      "nursing"
+    ],
+    "topSkills": [
+      "patient_care",
+      "attention_detail",
+      "dental_skills",
+      "customer_service"
+    ]
+  },
+  {
+    "id": "nurse_practitioner",
+    "title": {
+      "en": "Nurse Practitioner",
+      "ar": "ممارس التمريض المتقدّم"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "An experienced nurse with advanced training who assesses, diagnoses and manages patients independently within an agreed scope.",
+      "ar": "ممرض ذو خبرة وتدريب متقدم يقيّم الحالات ويشخّصها ويديرها باستقلالية ضمن نطاق متفق عليه."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 16000,
+      "senior": 35000
+    },
+    "growthTrend": [
+      109,
+      117,
+      124,
+      130,
+      138
+    ],
+    "icon": "user-plus",
+    "thumbnail": "/images/careers/nurse_practitioner-thumb.jpg",
+    "majors": [
+      "nursing"
+    ],
+    "topSkills": [
+      "patient_care",
+      "clinical_skills",
+      "attention_detail",
+      "pharmacology"
+    ]
+  },
+  {
+    "id": "midwife",
+    "title": {
+      "en": "Midwife",
+      "ar": "القابلة"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Supports women through pregnancy and birth, providing continuous care and recognising the moment a normal labour stops being normal.",
+      "ar": "ترافق المرأة خلال الحمل والولادة، وتقدّم رعاية متصلة وتدرك اللحظة التي تتوقف فيها الولادة الطبيعية عن كونها طبيعية."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      105,
+      110,
+      115,
+      118,
+      124
+    ],
+    "icon": "heart",
+    "thumbnail": "/images/careers/midwife-thumb.jpg",
+    "majors": [
+      "midwifery",
+      "nursing"
+    ],
+    "topSkills": [
+      "patient_care",
+      "clinical_skills",
+      "attention_detail",
+      "counselling"
+    ]
+  },
+  {
+    "id": "paramedic",
+    "title": {
+      "en": "Paramedic",
+      "ar": "المسعف"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Delivers emergency care where the patient is — roadside, home or workplace — and keeps them alive on the way to hospital.",
+      "ar": "يقدّم الرعاية الطارئة في مكان وجود المريض، على الطريق أو في المنزل أو في موقع العمل، ويحافظ على حياته في الطريق إلى المستشفى."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 9000,
+      "senior": 20000
+    },
+    "growthTrend": [
+      107,
+      113,
+      122,
+      130,
+      137
+    ],
+    "icon": "ambulance",
+    "thumbnail": "/images/careers/paramedic-thumb.jpg",
+    "majors": [
+      "paramedic_science",
+      "nursing"
+    ],
+    "topSkills": [
+      "emergency_response",
+      "teamwork",
+      "patient_care",
+      "clinical_skills"
+    ]
+  },
+  {
+    "id": "physiotherapist",
+    "title": {
+      "en": "Physiotherapist",
+      "ar": "أخصائي العلاج الطبيعي"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Restores movement after injury, surgery or illness, through assessment and a programme the patient has to be persuaded to keep doing.",
+      "ar": "يستعيد للمريض قدرته على الحركة بعد الإصابة أو الجراحة أو المرض، عبر التقييم وبرنامج علاجي يحتاج إلى إقناع المريض بالمواظبة عليه."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 12000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      108,
+      117,
+      125,
+      133,
+      140
+    ],
+    "icon": "activity",
+    "thumbnail": "/images/careers/physiotherapist-thumb.jpg",
+    "majors": [
+      "physiotherapy"
+    ],
+    "topSkills": [
+      "rehabilitation",
+      "patient_care",
+      "attention_detail",
+      "life_sciences"
+    ]
+  },
+  {
+    "id": "occupational_therapist",
+    "title": {
+      "en": "Occupational Therapist",
+      "ar": "أخصائي العلاج الوظيفي"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Helps people do the ordinary activities their condition has taken away — dressing, working, writing — by adapting the task or the person.",
+      "ar": "يساعد الناس على استعادة الأنشطة اليومية التي سلبها المرض، كارتداء الملابس والعمل والكتابة، عبر تكييف المهمة أو تكييف الشخص معها."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 27000
+    },
+    "growthTrend": [
+      106,
+      111,
+      115,
+      118,
+      124
+    ],
+    "icon": "hand",
+    "thumbnail": "/images/careers/occupational_therapist-thumb.jpg",
+    "majors": [
+      "occupational_therapy"
+    ],
+    "topSkills": [
+      "rehabilitation",
+      "patient_care",
+      "counselling",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "speech_therapist",
+    "title": {
+      "en": "Speech and Language Therapist",
+      "ar": "أخصائي علاج النطق واللغة"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Treats difficulty with speech, language and swallowing — work that in this country often means assessing a child across two languages at once.",
+      "ar": "يعالج صعوبات النطق واللغة والبلع، وهو عمل يعني في هذه الدولة غالبًا تقييم الطفل بلغتين في آنٍ واحد."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 12000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      107,
+      113,
+      120,
+      128,
+      134
+    ],
+    "icon": "ear",
+    "thumbnail": "/images/careers/speech_therapist-thumb.jpg",
+    "majors": [
+      "speech_therapy"
+    ],
+    "topSkills": [
+      "arabic_language",
+      "rehabilitation",
+      "patient_care",
+      "counselling"
+    ]
+  },
+  {
+    "id": "audiologist",
+    "title": {
+      "en": "Audiologist",
+      "ar": "أخصائي السمعيات"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Tests hearing and balance and fits the devices that correct them, from newborn screening through to adult hearing loss.",
+      "ar": "يفحص السمع والاتزان ويركّب الأجهزة المصحّحة لهما، من فحص حديثي الولادة إلى ضعف السمع لدى البالغين."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 27000
+    },
+    "growthTrend": [
+      105,
+      109,
+      113,
+      117,
+      121
+    ],
+    "icon": "ear",
+    "thumbnail": "/images/careers/audiologist-thumb.jpg",
+    "majors": [
+      "audiology"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "patient_care",
+      "rehabilitation",
+      "physics_reasoning"
+    ]
+  },
+  {
+    "id": "medical_lab_scientist",
+    "title": {
+      "en": "Medical Laboratory Scientist",
+      "ar": "أخصائي المختبرات الطبية"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Runs the tests that most diagnoses actually rest on, and is responsible for knowing when a result is wrong rather than merely abnormal.",
+      "ar": "يجري الفحوصات التي يستند إليها معظم التشخيص فعليًا، ويتحمّل مسؤولية تمييز النتيجة الخاطئة عن النتيجة غير الطبيعية."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 10000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      106,
+      115,
+      124,
+      130,
+      138
+    ],
+    "icon": "test-tube",
+    "thumbnail": "/images/careers/medical_lab_scientist-thumb.jpg",
+    "majors": [
+      "medical_laboratory",
+      "biomedical_sciences",
+      "chemistry"
+    ],
+    "topSkills": [
+      "lab_diagnostics",
+      "attention_detail",
+      "chemistry_lab",
+      "quality_control"
+    ]
+  },
+  {
+    "id": "pathologist",
+    "title": {
+      "en": "Pathologist",
+      "ar": "أخصائي علم الأمراض"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Examines tissue and fluid to establish what a disease actually is — the doctor whose report decides the treatment other doctors give.",
+      "ar": "يفحص الأنسجة والسوائل ليحدّد ماهية المرض فعلًا، وهو الطبيب الذي يحدّد تقريرُه العلاجَ الذي يقدّمه بقية الأطباء."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 30000,
+      "senior": 78000
+    },
+    "growthTrend": [
+      104,
+      109,
+      113,
+      116,
+      120
+    ],
+    "icon": "microscope",
+    "thumbnail": "/images/careers/pathologist-thumb.jpg",
+    "majors": [
+      "medicine",
+      "biomedical_sciences"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "lab_diagnostics",
+      "life_sciences",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "genetic_counselor",
+    "title": {
+      "en": "Genetic Counselor",
+      "ar": "المستشار الوراثي"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Explains inherited risk to families and helps them decide what to do with it — a role with particular weight where consanguineous marriage is common.",
+      "ar": "يشرح للأسر مخاطر الأمراض الوراثية ويساعدها على اتخاذ القرار بشأنها، وهو دور ذو أهمية خاصة حيث ينتشر زواج الأقارب."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      104,
+      107,
+      113,
+      117,
+      122
+    ],
+    "icon": "dna",
+    "thumbnail": "/images/careers/genetic_counselor-thumb.jpg",
+    "majors": [
+      "biomedical_sciences",
+      "medicine"
+    ],
+    "topSkills": [
+      "counselling",
+      "life_sciences",
+      "attention_detail",
+      "research_methods"
+    ]
+  },
+  {
+    "id": "dietitian",
+    "title": {
+      "en": "Clinical Dietitian",
+      "ar": "أخصائي التغذية السريرية"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Translates medical conditions into what a person can actually eat — central in a country with high rates of diabetes and obesity.",
+      "ar": "يترجم الحالة الطبية إلى نظام غذائي قابل للتطبيق فعلًا، وهو دور محوري في دولة ترتفع فيها معدلات السكري والسمنة."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 10000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      107,
+      115,
+      124,
+      131,
+      138
+    ],
+    "icon": "apple",
+    "thumbnail": "/images/careers/dietitian-thumb.jpg",
+    "majors": [
+      "nutrition"
+    ],
+    "topSkills": [
+      "nutrition_diet",
+      "counselling",
+      "life_sciences",
+      "teaching"
+    ]
+  },
+  {
+    "id": "epidemiologist",
+    "title": {
+      "en": "Epidemiologist",
+      "ar": "أخصائي الوبائيات"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Studies how disease moves through populations and turns that into the advice that shapes public-health policy.",
+      "ar": "يدرس انتشار الأمراض بين السكان ويحوّل ذلك إلى توصيات تشكّل سياسات الصحة العامة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 16000,
+      "senior": 40000
+    },
+    "growthTrend": [
+      103,
+      107,
+      112,
+      116,
+      120
+    ],
+    "icon": "line-chart",
+    "thumbnail": "/images/careers/epidemiologist-thumb.jpg",
+    "majors": [
+      "public_health"
+    ],
+    "topSkills": [
+      "research_methods",
+      "statistics",
+      "data_analysis",
+      "life_sciences"
+    ]
+  },
+  {
+    "id": "clinical_pharmacologist",
+    "title": {
+      "en": "Clinical Pharmacologist",
+      "ar": "أخصائي علم الأدوية السريري"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Studies how drugs behave in the body and advises on dosing and interactions in the difficult cases where the standard answer does not apply.",
+      "ar": "يدرس سلوك الأدوية في الجسم ويقدّم المشورة في الجرعات والتداخلات الدوائية في الحالات المعقّدة التي لا تنفع فيها الإجابة القياسية."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 18000,
+      "senior": 45000
+    },
+    "growthTrend": [
+      103,
+      105,
+      106,
+      108,
+      110
+    ],
+    "icon": "pill",
+    "thumbnail": "/images/careers/clinical_pharmacologist-thumb.jpg",
+    "majors": [
+      "pharmacy",
+      "medicine"
+    ],
+    "topSkills": [
+      "pharmacology",
+      "attention_detail",
+      "research_methods",
+      "life_sciences"
+    ]
+  },
+  {
+    "id": "biomedical_engineer",
+    "title": {
+      "en": "Biomedical Engineer",
+      "ar": "المهندس الطبي الحيوي"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Designs and maintains the equipment clinical care depends on, and is the person who works out why a device is giving an impossible reading.",
+      "ar": "يصمّم الأجهزة التي تعتمد عليها الرعاية السريرية ويصونها، وهو من يكتشف سبب إعطاء الجهاز قراءة مستحيلة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 34000
+    },
+    "growthTrend": [
+      104,
+      110,
+      113,
+      117,
+      121
+    ],
+    "icon": "cpu",
+    "thumbnail": "/images/careers/biomedical_engineer-thumb.jpg",
+    "majors": [
+      "biomedical_engineering"
+    ],
+    "topSkills": [
+      "electronics",
+      "problem_solving",
+      "life_sciences",
+      "quality_control"
+    ]
+  },
+  {
+    "id": "prosthetist",
+    "title": {
+      "en": "Prosthetist and Orthotist",
+      "ar": "أخصائي الأطراف الصناعية والتقويم"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Designs and fits artificial limbs and supportive braces, fitting a mechanical solution to one specific body.",
+      "ar": "يصمّم الأطراف الصناعية والدعامات ويركّبها، فيلائم حلًا ميكانيكيًا مع جسد بعينه."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 11000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      101,
+      103,
+      105,
+      108,
+      111
+    ],
+    "icon": "wrench",
+    "thumbnail": "/images/careers/prosthetist-thumb.jpg",
+    "majors": [
+      "prosthetics_orthotics",
+      "biomedical_engineering"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "rehabilitation",
+      "patient_care",
+      "mechanical_design"
+    ]
+  },
+  {
+    "id": "veterinarian",
+    "title": {
+      "en": "Veterinarian",
+      "ar": "الطبيب البيطري"
+    },
+    "sector": "healthcare",
+    "shortDescription": {
+      "en": "Treats animals across pets, livestock, camels and equine work — a broad practice in a country with a significant racing and farming sector.",
+      "ar": "يعالج الحيوانات من حيوانات أليفة وماشية وإبل وخيول، وهي ممارسة واسعة في دولة ذات قطاع سباقات وزراعة معتبر."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 15000,
+      "senior": 40000
+    },
+    "growthTrend": [
+      104,
+      109,
+      112,
+      115,
+      120
+    ],
+    "icon": "paw-print",
+    "thumbnail": "/images/careers/veterinarian-thumb.jpg",
+    "majors": [
+      "veterinary"
+    ],
+    "topSkills": [
+      "veterinary_care",
+      "clinical_skills",
+      "life_sciences",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "structural_engineer",
+    "title": {
+      "en": "Structural Engineer",
+      "ar": "المهندس الإنشائي"
+    },
+    "sector": "construction",
+    "shortDescription": {
+      "en": "Calculates whether a building will stand up, and designs the frame that makes sure it does under wind, load and time.",
+      "ar": "يحسب ما إذا كان المبنى سيصمد، ويصمّم الهيكل الذي يضمن ذلك تحت تأثير الرياح والأحمال والزمن."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 38000
+    },
+    "growthTrend": [
+      104,
+      108,
+      111,
+      116,
+      119
+    ],
+    "icon": "frame",
+    "thumbnail": "/images/careers/structural_engineer-thumb.jpg",
+    "majors": [
+      "structural_engineering",
+      "civil_engineering"
+    ],
+    "topSkills": [
+      "civil_structures",
+      "attention_detail",
+      "physics_reasoning",
+      "mathematics"
+    ]
+  },
+  {
+    "id": "construction_project_manager",
+    "title": {
+      "en": "Construction Project Manager",
+      "ar": "مدير مشاريع الإنشاءات"
+    },
+    "sector": "construction",
+    "shortDescription": {
+      "en": "Holds a build together across budget, schedule, subcontractors and safety, and is the person answerable when any one of them slips.",
+      "ar": "يمسك بخيوط المشروع من ميزانية وجدول زمني ومقاولين من الباطن وسلامة، وهو المسؤول عن الإجابة حين يتعثّر أي منها."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 18000,
+      "senior": 48000
+    },
+    "growthTrend": [
+      106,
+      114,
+      122,
+      130,
+      137
+    ],
+    "icon": "clipboard-list",
+    "thumbnail": "/images/careers/construction_project_manager-thumb.jpg",
+    "majors": [
+      "construction_management",
+      "civil_engineering"
+    ],
+    "topSkills": [
+      "project_management",
+      "leadership",
+      "teamwork",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "mechanical_engineer",
+    "title": {
+      "en": "Mechanical Engineer",
+      "ar": "المهندس الميكانيكي"
+    },
+    "sector": "engineering",
+    "shortDescription": {
+      "en": "Designs and tests machines and moving systems, from building services to manufacturing lines.",
+      "ar": "يصمّم الآلات والأنظمة المتحركة ويختبرها، من الأنظمة الميكانيكية للمباني إلى خطوط التصنيع."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 13000,
+      "senior": 35000
+    },
+    "growthTrend": [
+      108,
+      115,
+      122,
+      130,
+      138
+    ],
+    "icon": "cog",
+    "thumbnail": "/images/careers/mechanical_engineer-thumb.jpg",
+    "majors": [
+      "mechanical_engineering",
+      "materials_engineering"
+    ],
+    "topSkills": [
+      "mechanical_design",
+      "physics_reasoning",
+      "problem_solving",
+      "mathematics"
+    ]
+  },
+  {
+    "id": "electrical_engineer",
+    "title": {
+      "en": "Electrical Engineer",
+      "ar": "المهندس الكهربائي"
+    },
+    "sector": "engineering",
+    "shortDescription": {
+      "en": "Designs power and control systems and is responsible for the distribution that everything else silently assumes will work.",
+      "ar": "يصمّم أنظمة الطاقة والتحكم، ويتحمّل مسؤولية التوزيع الذي تفترض بقية الأنظمة ضمنًا أنه سيعمل دائمًا."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 13000,
+      "senior": 36000
+    },
+    "growthTrend": [
+      107,
+      114,
+      123,
+      132,
+      138
+    ],
+    "icon": "zap",
+    "thumbnail": "/images/careers/electrical_engineer-thumb.jpg",
+    "majors": [
+      "electrical_engineering"
+    ],
+    "topSkills": [
+      "electronics",
+      "physics_reasoning",
+      "mathematics",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "mechatronics_engineer",
+    "title": {
+      "en": "Mechatronics Engineer",
+      "ar": "مهندس الميكاترونكس"
+    },
+    "sector": "engineering",
+    "shortDescription": {
+      "en": "Works where mechanical, electrical and software systems meet — the discipline behind automated production and robotics.",
+      "ar": "يعمل عند تقاطع الأنظمة الميكانيكية والكهربائية والبرمجية، وهو التخصص الذي يقف خلف الإنتاج المؤتمت والروبوتات."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 36000
+    },
+    "growthTrend": [
+      104,
+      109,
+      113,
+      119,
+      125
+    ],
+    "icon": "bot",
+    "thumbnail": "/images/careers/mechatronics_engineer-thumb.jpg",
+    "majors": [
+      "mechatronics",
+      "robotics"
+    ],
+    "topSkills": [
+      "electronics",
+      "mechanical_design",
+      "problem_solving",
+      "systems_design"
+    ]
+  },
+  {
+    "id": "chemical_engineer",
+    "title": {
+      "en": "Chemical Engineer",
+      "ar": "المهندس الكيميائي"
+    },
+    "sector": "engineering",
+    "shortDescription": {
+      "en": "Scales chemical processes from a laboratory result to a plant that runs safely and economically at industrial volume.",
+      "ar": "ينقل العمليات الكيميائية من نتيجة مخبرية إلى منشأة تعمل بأمان واقتصادية على نطاق صناعي."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 15000,
+      "senior": 40000
+    },
+    "growthTrend": [
+      106,
+      109,
+      115,
+      120,
+      125
+    ],
+    "icon": "flask-conical",
+    "thumbnail": "/images/careers/chemical_engineer-thumb.jpg",
+    "majors": [
+      "chemical_engineering",
+      "chemistry",
+      "materials_engineering"
+    ],
+    "topSkills": [
+      "chemistry_lab",
+      "problem_solving",
+      "physics_reasoning",
+      "mathematics"
+    ]
+  },
+  {
+    "id": "industrial_engineer",
+    "title": {
+      "en": "Industrial Engineer",
+      "ar": "المهندس الصناعي"
+    },
+    "sector": "engineering",
+    "shortDescription": {
+      "en": "Makes production systems faster, cheaper and less wasteful by studying how work actually flows rather than how it is supposed to.",
+      "ar": "يجعل أنظمة الإنتاج أسرع وأقل كلفة وهدرًا، بدراسة كيفية سير العمل فعليًا لا كما يُفترض أن يسير."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 13000,
+      "senior": 34000
+    },
+    "growthTrend": [
+      105,
+      109,
+      112,
+      116,
+      121
+    ],
+    "icon": "factory",
+    "thumbnail": "/images/careers/industrial_engineer-thumb.jpg",
+    "majors": [
+      "industrial_engineering"
+    ],
+    "topSkills": [
+      "manufacturing_ops",
+      "quality_control",
+      "problem_solving",
+      "data_analysis"
+    ]
+  },
+  {
+    "id": "environmental_engineer",
+    "title": {
+      "en": "Environmental Engineer",
+      "ar": "المهندس البيئي"
+    },
+    "sector": "engineering",
+    "shortDescription": {
+      "en": "Designs the systems that keep industry within environmental limits — waste, emissions, contamination and remediation.",
+      "ar": "يصمّم الأنظمة التي تُبقي الصناعة ضمن الحدود البيئية، من النفايات والانبعاثات إلى التلوث ومعالجته."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 13000,
+      "senior": 33000
+    },
+    "growthTrend": [
+      106,
+      109,
+      113,
+      118,
+      122
+    ],
+    "icon": "leaf",
+    "thumbnail": "/images/careers/environmental_engineer-thumb.jpg",
+    "majors": [
+      "environmental_engineering",
+      "environmental_science"
+    ],
+    "topSkills": [
+      "sustainability",
+      "problem_solving",
+      "chemistry_lab",
+      "data_analysis"
+    ]
+  },
+  {
+    "id": "water_resources_engineer",
+    "title": {
+      "en": "Water Resources Engineer",
+      "ar": "مهندس الموارد المائية"
+    },
+    "sector": "engineering",
+    "shortDescription": {
+      "en": "Designs desalination, distribution and reuse systems — arguably the most consequential engineering discipline in a desert country.",
+      "ar": "يصمّم أنظمة التحلية والتوزيع وإعادة الاستخدام، وهو قد يكون أكثر التخصصات الهندسية أثرًا في دولة صحراوية."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 14000,
+      "senior": 36000
+    },
+    "growthTrend": [
+      108,
+      115,
+      123,
+      130,
+      137
+    ],
+    "icon": "droplets",
+    "thumbnail": "/images/careers/water_resources_engineer-thumb.jpg",
+    "majors": [
+      "water_resources",
+      "civil_engineering"
+    ],
+    "topSkills": [
+      "sustainability",
+      "problem_solving",
+      "civil_structures",
+      "physics_reasoning"
+    ]
+  },
+  {
+    "id": "hvac_engineer",
+    "title": {
+      "en": "HVAC Engineer",
+      "ar": "مهندس التكييف والتبريد"
+    },
+    "sector": "engineering",
+    "shortDescription": {
+      "en": "Designs cooling and air systems for buildings — in this climate a primary engineering discipline rather than a building service.",
+      "ar": "يصمّم أنظمة التبريد والهواء للمباني، وهو في هذا المناخ تخصص هندسي أساسي لا خدمة ثانوية من خدمات المبنى."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 12000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      106,
+      114,
+      121,
+      127,
+      136
+    ],
+    "icon": "wind",
+    "thumbnail": "/images/careers/hvac_engineer-thumb.jpg",
+    "majors": [
+      "mechanical_engineering"
+    ],
+    "topSkills": [
+      "mechanical_design",
+      "energy_systems",
+      "physics_reasoning",
+      "quality_control"
+    ]
+  },
+  {
+    "id": "geomatics_engineer",
+    "title": {
+      "en": "Surveying and Geomatics Engineer",
+      "ar": "مهندس المساحة والجيوماتكس"
+    },
+    "sector": "construction",
+    "shortDescription": {
+      "en": "Measures and maps land precisely enough that a building ends up where the drawing said it would.",
+      "ar": "يقيس الأرض ويرسم خرائطها بدقة تكفي لأن يقع المبنى في الموضع الذي حدّده المخطط تمامًا."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      104,
+      107,
+      113,
+      117,
+      122
+    ],
+    "icon": "map",
+    "thumbnail": "/images/careers/geomatics_engineer-thumb.jpg",
+    "majors": [
+      "geomatics",
+      "civil_engineering"
+    ],
+    "topSkills": [
+      "geospatial_gis",
+      "attention_detail",
+      "mathematics",
+      "data_analysis"
+    ]
+  },
+  {
+    "id": "ai_research_scientist",
+    "title": {
+      "en": "AI Research Scientist",
+      "ar": "عالم أبحاث الذكاء الاصطناعي"
+    },
+    "sector": "ai_data",
+    "shortDescription": {
+      "en": "Develops new machine-learning methods rather than applying existing ones, and publishes the results.",
+      "ar": "يطوّر أساليب جديدة في تعلّم الآلة بدل تطبيق الموجود منها، وينشر نتائج أبحاثه."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 25000,
+      "senior": 65000
+    },
+    "growthTrend": [
+      105,
+      110,
+      115,
+      118,
+      123
+    ],
+    "icon": "flask-conical",
+    "thumbnail": "/images/careers/ai_research_scientist-thumb.jpg",
+    "majors": [
+      "artificial_intelligence",
+      "computer_science",
+      "mathematics"
+    ],
+    "topSkills": [
+      "machine_learning",
+      "mathematics",
+      "research_methods",
+      "statistics"
+    ]
+  },
+  {
+    "id": "computer_vision_engineer",
+    "title": {
+      "en": "Computer Vision Engineer",
+      "ar": "مهندس الرؤية الحاسوبية"
+    },
+    "sector": "ai_data",
+    "shortDescription": {
+      "en": "Builds systems that interpret images and video — inspection, security, medical imaging and autonomous navigation.",
+      "ar": "يبني أنظمة تفسّر الصور والفيديو، في التفتيش والأمن والتصوير الطبي والملاحة الذاتية."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 18000,
+      "senior": 45000
+    },
+    "growthTrend": [
+      104,
+      109,
+      113,
+      118,
+      122
+    ],
+    "icon": "eye",
+    "thumbnail": "/images/careers/computer_vision_engineer-thumb.jpg",
+    "majors": [
+      "artificial_intelligence",
+      "computer_science"
+    ],
+    "topSkills": [
+      "machine_learning",
+      "programming",
+      "mathematics",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "nlp_engineer",
+    "title": {
+      "en": "NLP Engineer",
+      "ar": "مهندس معالجة اللغة الطبيعية"
+    },
+    "sector": "ai_data",
+    "shortDescription": {
+      "en": "Builds systems that process human language, with Arabic presenting harder problems than English in morphology, dialect and script.",
+      "ar": "يبني أنظمة تعالج اللغة البشرية، وتطرح العربية فيها تحديات أصعب من الإنجليزية في الصرف واللهجات والكتابة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 18000,
+      "senior": 46000
+    },
+    "growthTrend": [
+      103,
+      107,
+      112,
+      116,
+      119
+    ],
+    "icon": "languages",
+    "thumbnail": "/images/careers/nlp_engineer-thumb.jpg",
+    "majors": [
+      "artificial_intelligence",
+      "computer_science"
+    ],
+    "topSkills": [
+      "machine_learning",
+      "programming",
+      "arabic_language",
+      "mathematics"
+    ]
+  },
+  {
+    "id": "robotics_engineer",
+    "title": {
+      "en": "Robotics Engineer",
+      "ar": "مهندس الروبوتات"
+    },
+    "sector": "ai_data",
+    "shortDescription": {
+      "en": "Builds machines that sense and act in the physical world, where software bugs become mechanical accidents.",
+      "ar": "يبني آلات تستشعر محيطها وتتحرك فيه، حيث تتحول أخطاء البرمجة إلى حوادث ميكانيكية."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 16000,
+      "senior": 42000
+    },
+    "growthTrend": [
+      103,
+      108,
+      112,
+      117,
+      122
+    ],
+    "icon": "bot",
+    "thumbnail": "/images/careers/robotics_engineer-thumb.jpg",
+    "majors": [
+      "robotics",
+      "mechatronics"
+    ],
+    "topSkills": [
+      "electronics",
+      "problem_solving",
+      "programming",
+      "mechanical_design"
+    ]
+  },
+  {
+    "id": "cloud_architect",
+    "title": {
+      "en": "Cloud Solutions Architect",
+      "ar": "مهندس الحلول السحابية"
+    },
+    "sector": "software",
+    "shortDescription": {
+      "en": "Designs how an organisation's systems are structured in the cloud, balancing cost, resilience and the constraints of data-residency rules.",
+      "ar": "يصمّم بنية أنظمة المؤسسة في السحابة، موازنًا بين الكلفة والمرونة وقيود قواعد الإقامة المحلية للبيانات."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 22000,
+      "senior": 55000
+    },
+    "growthTrend": [
+      107,
+      115,
+      124,
+      131,
+      139
+    ],
+    "icon": "cloud",
+    "thumbnail": "/images/careers/cloud_architect-thumb.jpg",
+    "majors": [
+      "computer_science",
+      "information_systems"
+    ],
+    "topSkills": [
+      "cloud_infrastructure",
+      "systems_design",
+      "problem_solving",
+      "networking"
+    ]
+  },
+  {
+    "id": "network_engineer",
+    "title": {
+      "en": "Network Engineer",
+      "ar": "مهندس الشبكات"
+    },
+    "sector": "software",
+    "shortDescription": {
+      "en": "Designs and keeps running the networks everything else depends on, and is first to be called when 'the internet is down'.",
+      "ar": "يصمّم الشبكات التي يعتمد عليها كل شيء آخر ويحافظ على تشغيلها، وهو أول من يُستدعى حين «ينقطع الإنترنت»."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 13000,
+      "senior": 34000
+    },
+    "growthTrend": [
+      105,
+      110,
+      114,
+      118,
+      122
+    ],
+    "icon": "network",
+    "thumbnail": "/images/careers/network_engineer-thumb.jpg",
+    "majors": [
+      "network_engineering",
+      "computer_engineering"
+    ],
+    "topSkills": [
+      "networking",
+      "problem_solving",
+      "attention_detail",
+      "systems_design"
+    ]
+  },
+  {
+    "id": "database_administrator",
+    "title": {
+      "en": "Database Administrator",
+      "ar": "مسؤول قواعد البيانات"
+    },
+    "sector": "software",
+    "shortDescription": {
+      "en": "Keeps organisational data correct, fast and recoverable — the role where the worst mistakes are silent ones.",
+      "ar": "يحافظ على صحة بيانات المؤسسة وسرعتها وقابليتها للاسترجاع، وهو الدور الذي تكون فيه أسوأ الأخطاء صامتة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 35000
+    },
+    "growthTrend": [
+      104,
+      107,
+      111,
+      115,
+      118
+    ],
+    "icon": "database",
+    "thumbnail": "/images/careers/database_administrator-thumb.jpg",
+    "majors": [
+      "information_systems",
+      "computer_science"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "systems_design",
+      "problem_solving",
+      "data_analysis"
+    ]
+  },
+  {
+    "id": "blockchain_developer",
+    "title": {
+      "en": "Blockchain Developer",
+      "ar": "مطوّر البلوكتشين"
+    },
+    "sector": "software",
+    "shortDescription": {
+      "en": "Builds distributed-ledger applications, mostly in payments, trade documentation and government record-keeping.",
+      "ar": "يبني تطبيقات السجلات الموزعة، غالبًا في المدفوعات ووثائق التجارة وحفظ السجلات الحكومية."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 16000,
+      "senior": 42000
+    },
+    "growthTrend": [
+      103,
+      106,
+      107,
+      109,
+      111
+    ],
+    "icon": "link",
+    "thumbnail": "/images/careers/blockchain_developer-thumb.jpg",
+    "majors": [
+      "computer_science",
+      "software_engineering"
+    ],
+    "topSkills": [
+      "programming",
+      "problem_solving",
+      "systems_design",
+      "cybersecurity"
+    ]
+  },
+  {
+    "id": "it_support_specialist",
+    "title": {
+      "en": "IT Support Specialist",
+      "ar": "أخصائي الدعم التقني"
+    },
+    "sector": "software",
+    "shortDescription": {
+      "en": "Resolves the daily technology problems of an organisation, and is the most common entry point into an IT career.",
+      "ar": "يحلّ المشكلات التقنية اليومية في المؤسسة، وهو أكثر نقاط الدخول شيوعًا إلى مهن تقنية المعلومات."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 7000,
+      "senior": 18000
+    },
+    "growthTrend": [
+      109,
+      117,
+      123,
+      130,
+      137
+    ],
+    "icon": "headphones",
+    "thumbnail": "/images/careers/it_support_specialist-thumb.jpg",
+    "majors": [
+      "information_systems"
+    ],
+    "topSkills": [
+      "customer_service",
+      "problem_solving",
+      "teamwork",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "systems_analyst",
+    "title": {
+      "en": "Systems Analyst",
+      "ar": "محلل النظم"
+    },
+    "sector": "software",
+    "shortDescription": {
+      "en": "Sits between the people who need a system and the people who build it, and turns vague requirements into a specification.",
+      "ar": "يقف بين من يحتاجون النظام ومن يبنونه، ويحوّل المتطلبات الغامضة إلى مواصفات محددة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 36000
+    },
+    "growthTrend": [
+      105,
+      109,
+      114,
+      118,
+      123
+    ],
+    "icon": "workflow",
+    "thumbnail": "/images/careers/systems_analyst-thumb.jpg",
+    "majors": [
+      "information_systems",
+      "computer_science"
+    ],
+    "topSkills": [
+      "systems_design",
+      "writing_docs",
+      "teamwork",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "solar_engineer",
+    "title": {
+      "en": "Solar Systems Engineer",
+      "ar": "مهندس الأنظمة الشمسية"
+    },
+    "sector": "energy",
+    "shortDescription": {
+      "en": "Designs and commissions photovoltaic installations, from rooftop systems to utility-scale plants in high-dust, high-heat conditions.",
+      "ar": "يصمّم منشآت الطاقة الشمسية ويشغّلها، من الأنظمة على أسطح المباني إلى المحطات الكبرى في ظروف شديدة الغبار والحرارة."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 14000,
+      "senior": 36000
+    },
+    "growthTrend": [
+      106,
+      113,
+      120,
+      126,
+      135
+    ],
+    "icon": "sun",
+    "thumbnail": "/images/careers/solar_engineer-thumb.jpg",
+    "majors": [
+      "electrical_engineering",
+      "environmental_engineering"
+    ],
+    "topSkills": [
+      "energy_systems",
+      "sustainability",
+      "electronics",
+      "physics_reasoning"
+    ]
+  },
+  {
+    "id": "nuclear_plant_operator",
+    "title": {
+      "en": "Nuclear Plant Operator",
+      "ar": "مشغّل المحطة النووية"
+    },
+    "sector": "energy",
+    "shortDescription": {
+      "en": "Runs reactor systems from the control room under procedures where deviation is never improvised.",
+      "ar": "يشغّل أنظمة المفاعل من غرفة التحكم وفق إجراءات لا يُرتجل فيها أي خروج عن المسار."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 16000,
+      "senior": 42000
+    },
+    "growthTrend": [
+      106,
+      111,
+      115,
+      120,
+      125
+    ],
+    "icon": "atom",
+    "thumbnail": "/images/careers/nuclear_plant_operator-thumb.jpg",
+    "majors": [
+      "nuclear_engineering",
+      "electrical_engineering"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "energy_systems",
+      "quality_control",
+      "emergency_response"
+    ]
+  },
+  {
+    "id": "process_engineer_oil_gas",
+    "title": {
+      "en": "Oil and Gas Process Engineer",
+      "ar": "مهندس عمليات النفط والغاز"
+    },
+    "sector": "energy",
+    "shortDescription": {
+      "en": "Optimises the processes that separate, refine and move hydrocarbons, balancing throughput against safety and emissions limits.",
+      "ar": "يحسّن العمليات التي تفصل الهيدروكربونات وتكرّرها وتنقلها، موازنًا بين معدل الإنتاج وحدود السلامة والانبعاثات."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 18000,
+      "senior": 48000
+    },
+    "growthTrend": [
+      105,
+      110,
+      116,
+      120,
+      123
+    ],
+    "icon": "fuel",
+    "thumbnail": "/images/careers/process_engineer_oil_gas-thumb.jpg",
+    "majors": [
+      "chemical_engineering",
+      "petroleum_engineering"
+    ],
+    "topSkills": [
+      "energy_systems",
+      "chemistry_lab",
+      "problem_solving",
+      "quality_control"
+    ]
+  },
+  {
+    "id": "aircraft_maintenance_engineer",
+    "title": {
+      "en": "Aircraft Maintenance Engineer",
+      "ar": "مهندس صيانة الطائرات"
+    },
+    "sector": "aviation",
+    "shortDescription": {
+      "en": "Certifies that an aircraft is fit to fly — a role where the signature carries personal legal responsibility.",
+      "ar": "يشهد بصلاحية الطائرة للطيران، وهو دور تحمل فيه التوقيعُ مسؤوليةً قانونية شخصية."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 12000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      108,
+      115,
+      124,
+      131,
+      138
+    ],
+    "icon": "wrench",
+    "thumbnail": "/images/careers/aircraft_maintenance_engineer-thumb.jpg",
+    "majors": [
+      "aircraft_maintenance",
+      "aerospace_engineering"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "quality_control",
+      "aviation_ops",
+      "mechanical_design"
+    ]
+  },
+  {
+    "id": "aviation_operations_manager",
+    "title": {
+      "en": "Aviation Operations Manager",
+      "ar": "مدير عمليات الطيران"
+    },
+    "sector": "aviation",
+    "shortDescription": {
+      "en": "Coordinates the ground side of flying — turnarounds, crew, slots and disruption recovery — against a clock that does not pause.",
+      "ar": "ينسّق الجانب الأرضي من الطيران، من دورات المناولة والطواقم والفترات الزمنية إلى التعافي من الاضطرابات، أمام ساعة لا تتوقف."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 18000,
+      "senior": 45000
+    },
+    "growthTrend": [
+      104,
+      109,
+      114,
+      119,
+      124
+    ],
+    "icon": "plane-takeoff",
+    "thumbnail": "/images/careers/aviation_operations_manager-thumb.jpg",
+    "majors": [
+      "aviation_management",
+      "supply_chain"
+    ],
+    "topSkills": [
+      "aviation_ops",
+      "project_management",
+      "leadership",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "astrophysicist",
+    "title": {
+      "en": "Astrophysicist",
+      "ar": "الفيزيائي الفلكي"
+    },
+    "sector": "space",
+    "shortDescription": {
+      "en": "Studies the physics of stars, planets and the wider universe, mostly through modelling and analysis of observational data.",
+      "ar": "يدرس فيزياء النجوم والكواكب والكون الأوسع، غالبًا عبر النمذجة وتحليل بيانات الرصد."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 16000,
+      "senior": 42000
+    },
+    "growthTrend": [
+      103,
+      105,
+      106,
+      109,
+      111
+    ],
+    "icon": "telescope",
+    "thumbnail": "/images/careers/astrophysicist-thumb.jpg",
+    "majors": [
+      "astronomy",
+      "physics"
+    ],
+    "topSkills": [
+      "physics_reasoning",
+      "mathematics",
+      "research_methods",
+      "data_analysis"
+    ]
+  },
+  {
+    "id": "meteorologist",
+    "title": {
+      "en": "Meteorologist",
+      "ar": "خبير الأرصاد الجوية"
+    },
+    "sector": "space",
+    "shortDescription": {
+      "en": "Forecasts and models the atmosphere, including the dust, heat and rare extreme rainfall that matter most in this region.",
+      "ar": "يتنبأ بحالة الغلاف الجوي وينمذجها، بما يشمل الغبار والحرارة والأمطار الشديدة النادرة التي تهم هذه المنطقة أكثر من غيرها."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 35000
+    },
+    "growthTrend": [
+      103,
+      108,
+      112,
+      118,
+      123
+    ],
+    "icon": "cloud-sun",
+    "thumbnail": "/images/careers/meteorologist-thumb.jpg",
+    "majors": [
+      "meteorology",
+      "physics"
+    ],
+    "topSkills": [
+      "physics_reasoning",
+      "data_analysis",
+      "statistics",
+      "research_methods"
+    ]
+  },
+  {
+    "id": "accountant",
+    "title": {
+      "en": "Accountant",
+      "ar": "المحاسب"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Records and reports an organisation's financial position accurately and on time, under rules that leave little room for interpretation.",
+      "ar": "يسجّل الوضع المالي للمؤسسة ويعرضه بدقة وفي موعده، وفق قواعد لا تترك مساحة كبيرة للاجتهاد."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 9000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      106,
+      113,
+      121,
+      130,
+      137
+    ],
+    "icon": "calculator",
+    "thumbnail": "/images/careers/accountant-thumb.jpg",
+    "majors": [
+      "accounting"
+    ],
+    "topSkills": [
+      "finance_accounting",
+      "attention_detail",
+      "english_language",
+      "data_analysis"
+    ]
+  },
+  {
+    "id": "auditor",
+    "title": {
+      "en": "Auditor",
+      "ar": "المدقّق"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Independently checks whether financial statements tell the truth, and has to be willing to say so when they do not.",
+      "ar": "يتحقق باستقلالية مما إذا كانت القوائم المالية تعبّر عن الحقيقة، وعليه أن يملك الجرأة على قول ذلك حين لا تكون كذلك."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 11000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      107,
+      115,
+      122,
+      130,
+      139
+    ],
+    "icon": "search-check",
+    "thumbnail": "/images/careers/auditor-thumb.jpg",
+    "majors": [
+      "accounting",
+      "finance"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "finance_accounting",
+      "writing_docs",
+      "research_methods"
+    ]
+  },
+  {
+    "id": "forensic_accountant",
+    "title": {
+      "en": "Forensic Accountant",
+      "ar": "المحاسب الجنائي"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Traces money through deliberately confusing records to establish what actually happened, often for use as evidence.",
+      "ar": "يتتبّع الأموال عبر سجلات صُمّمت لتكون مربكة ليثبت ما جرى فعلًا، غالبًا لتقديمه كدليل."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 16000,
+      "senior": 42000
+    },
+    "growthTrend": [
+      105,
+      110,
+      114,
+      117,
+      121
+    ],
+    "icon": "file-search",
+    "thumbnail": "/images/careers/forensic_accountant-thumb.jpg",
+    "majors": [
+      "accounting",
+      "criminology"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "finance_accounting",
+      "research_methods",
+      "data_analysis"
+    ]
+  },
+  {
+    "id": "investment_banker",
+    "title": {
+      "en": "Investment Banker",
+      "ar": "المصرفي الاستثماري"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Advises on raising capital and on mergers and acquisitions, in a role known for both its compensation and its hours.",
+      "ar": "يقدّم المشورة في جمع رؤوس الأموال وفي عمليات الاندماج والاستحواذ، في مهنة تشتهر بأجورها وبساعات عملها معًا."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 20000,
+      "senior": 70000
+    },
+    "growthTrend": [
+      104,
+      109,
+      113,
+      118,
+      121
+    ],
+    "icon": "trending-up",
+    "thumbnail": "/images/careers/investment_banker-thumb.jpg",
+    "majors": [
+      "finance",
+      "economics"
+    ],
+    "topSkills": [
+      "finance_accounting",
+      "business_strategy",
+      "economics",
+      "sales_negotiation"
+    ]
+  },
+  {
+    "id": "insurance_underwriter",
+    "title": {
+      "en": "Insurance Underwriter",
+      "ar": "مكتتب التأمين"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Decides which risks the insurer will accept and at what price — judgement supported by data rather than replaced by it.",
+      "ar": "يقرّر أي المخاطر تقبلها شركة التأمين وبأي سعر، في حكم تسنده البيانات ولا تحلّ محله."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      105,
+      111,
+      116,
+      119,
+      124
+    ],
+    "icon": "shield",
+    "thumbnail": "/images/careers/insurance_underwriter-thumb.jpg",
+    "majors": [
+      "finance",
+      "actuarial_science"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "statistics",
+      "data_analysis",
+      "finance_accounting"
+    ]
+  },
+  {
+    "id": "islamic_banking_specialist",
+    "title": {
+      "en": "Islamic Banking Specialist",
+      "ar": "أخصائي المصرفية الإسلامية"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Structures financial products that comply with Sharia principles, which requires fluency in both finance and Islamic jurisprudence.",
+      "ar": "يهيكل المنتجات المالية المتوافقة مع أحكام الشريعة، وهو ما يتطلب تمكّنًا من التمويل والفقه الإسلامي معًا."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 13000,
+      "senior": 38000
+    },
+    "growthTrend": [
+      109,
+      117,
+      124,
+      132,
+      140
+    ],
+    "icon": "landmark",
+    "thumbnail": "/images/careers/islamic_banking_specialist-thumb.jpg",
+    "majors": [
+      "islamic_finance",
+      "finance",
+      "sharia_law"
+    ],
+    "topSkills": [
+      "finance_accounting",
+      "islamic_studies_skill",
+      "attention_detail",
+      "arabic_language"
+    ]
+  },
+  {
+    "id": "economist",
+    "title": {
+      "en": "Economist",
+      "ar": "الاقتصادي"
+    },
+    "sector": "finance",
+    "shortDescription": {
+      "en": "Analyses how markets and policy interact, and produces the forecasts that governments and banks plan against.",
+      "ar": "يحلّل تفاعل الأسواق مع السياسات، وينتج التوقعات التي تخطط على أساسها الحكومات والمصارف."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 16000,
+      "senior": 45000
+    },
+    "growthTrend": [
+      103,
+      106,
+      107,
+      110,
+      113
+    ],
+    "icon": "line-chart",
+    "thumbnail": "/images/careers/economist-thumb.jpg",
+    "majors": [
+      "economics",
+      "statistics"
+    ],
+    "topSkills": [
+      "economics",
+      "statistics",
+      "data_analysis",
+      "research_methods"
+    ]
+  },
+  {
+    "id": "management_consultant",
+    "title": {
+      "en": "Management Consultant",
+      "ar": "المستشار الإداري"
+    },
+    "sector": "entrepreneurship",
+    "shortDescription": {
+      "en": "Is brought in to diagnose an organisational problem and recommend a change, then to persuade people to accept it.",
+      "ar": "يُستقدم لتشخيص مشكلة تنظيمية واقتراح تغيير، ثم لإقناع الناس بقبوله."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 18000,
+      "senior": 55000
+    },
+    "growthTrend": [
+      104,
+      107,
+      111,
+      117,
+      121
+    ],
+    "icon": "presentation",
+    "thumbnail": "/images/careers/management_consultant-thumb.jpg",
+    "majors": [
+      "business_administration",
+      "economics"
+    ],
+    "topSkills": [
+      "business_strategy",
+      "problem_solving",
+      "public_speaking",
+      "writing_docs"
+    ]
+  },
+  {
+    "id": "hr_specialist",
+    "title": {
+      "en": "Human Resources Specialist",
+      "ar": "أخصائي الموارد البشرية"
+    },
+    "sector": "entrepreneurship",
+    "shortDescription": {
+      "en": "Handles recruitment, employment law and the people side of an organisation — including Emiratisation targets and workforce planning.",
+      "ar": "يتولى التوظيف وقانون العمل والجانب البشري في المؤسسة، بما يشمل مستهدفات التوطين وتخطيط القوى العاملة."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 10000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      107,
+      114,
+      120,
+      127,
+      134
+    ],
+    "icon": "users",
+    "thumbnail": "/images/careers/hr_specialist-thumb.jpg",
+    "majors": [
+      "human_resources",
+      "business_administration",
+      "psychology"
+    ],
+    "topSkills": [
+      "hr_people",
+      "teamwork",
+      "law_policy",
+      "writing_docs"
+    ]
+  },
+  {
+    "id": "marketing_manager",
+    "title": {
+      "en": "Marketing Manager",
+      "ar": "مدير التسويق"
+    },
+    "sector": "entrepreneurship",
+    "shortDescription": {
+      "en": "Owns how a product is positioned and sold, and is accountable for whether the spending produced anything.",
+      "ar": "يتولى تحديد موقع المنتج وطريقة تسويقه، وهو المسؤول عمّا إذا كان الإنفاق قد أثمر شيئًا."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 40000
+    },
+    "growthTrend": [
+      105,
+      111,
+      116,
+      120,
+      126
+    ],
+    "icon": "megaphone",
+    "thumbnail": "/images/careers/marketing_manager-thumb.jpg",
+    "majors": [
+      "marketing",
+      "business_administration"
+    ],
+    "topSkills": [
+      "marketing_comm",
+      "business_strategy",
+      "creativity",
+      "leadership"
+    ]
+  },
+  {
+    "id": "supply_chain_manager",
+    "title": {
+      "en": "Supply Chain Manager",
+      "ar": "مدير سلسلة الإمداد"
+    },
+    "sector": "logistics",
+    "shortDescription": {
+      "en": "Runs the end-to-end movement of goods, and is judged on what happens when part of the chain fails.",
+      "ar": "يدير حركة البضائع من طرف السلسلة إلى طرفها، ويُحكم على أدائه بما يحدث حين يتعطّل جزء منها."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 16000,
+      "senior": 45000
+    },
+    "growthTrend": [
+      109,
+      116,
+      123,
+      131,
+      138
+    ],
+    "icon": "truck",
+    "thumbnail": "/images/careers/supply_chain_manager-thumb.jpg",
+    "majors": [
+      "supply_chain",
+      "business_administration"
+    ],
+    "topSkills": [
+      "logistics_ops",
+      "project_management",
+      "leadership",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "lawyer",
+    "title": {
+      "en": "Lawyer / Advocate",
+      "ar": "المحامي"
+    },
+    "sector": "law",
+    "shortDescription": {
+      "en": "Advises and represents clients, working across a system where federal law, emirate law and free-zone regimes all apply.",
+      "ar": "يقدّم المشورة للموكلين ويمثّلهم، ضمن نظام تتداخل فيه القوانين الاتحادية وقوانين الإمارات وأنظمة المناطق الحرة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 45000
+    },
+    "growthTrend": [
+      104,
+      109,
+      114,
+      119,
+      123
+    ],
+    "icon": "scale",
+    "thumbnail": "/images/careers/lawyer-thumb.jpg",
+    "majors": [
+      "law",
+      "sharia_law"
+    ],
+    "topSkills": [
+      "law_policy",
+      "writing_docs",
+      "arabic_language",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "legal_counsel",
+    "title": {
+      "en": "Corporate Legal Counsel",
+      "ar": "المستشار القانوني للشركات"
+    },
+    "sector": "law",
+    "shortDescription": {
+      "en": "The lawyer inside a company: drafts and negotiates contracts and keeps the business on the right side of regulation before a dispute exists.",
+      "ar": "المحامي داخل الشركة: يصوغ العقود ويتفاوض عليها ويُبقي العمل ضمن حدود التنظيم قبل نشوء أي نزاع."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 18000,
+      "senior": 50000
+    },
+    "growthTrend": [
+      106,
+      113,
+      120,
+      129,
+      135
+    ],
+    "icon": "file-text",
+    "thumbnail": "/images/careers/legal_counsel-thumb.jpg",
+    "majors": [
+      "law"
+    ],
+    "topSkills": [
+      "law_policy",
+      "attention_detail",
+      "writing_docs",
+      "english_language"
+    ]
+  },
+  {
+    "id": "judge",
+    "title": {
+      "en": "Judge",
+      "ar": "القاضي"
+    },
+    "sector": "law",
+    "shortDescription": {
+      "en": "Hears cases and delivers reasoned judgments, normally after substantial prior experience in prosecution or practice.",
+      "ar": "ينظر في القضايا ويصدر أحكامًا مسبَّبة، عادةً بعد خبرة طويلة في النيابة أو المحاماة."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 30000,
+      "senior": 70000
+    },
+    "growthTrend": [
+      103,
+      104,
+      106,
+      107,
+      109
+    ],
+    "icon": "gavel",
+    "thumbnail": "/images/careers/judge-thumb.jpg",
+    "majors": [
+      "law",
+      "sharia_law"
+    ],
+    "topSkills": [
+      "law_policy",
+      "attention_detail",
+      "arabic_language",
+      "writing_docs"
+    ]
+  },
+  {
+    "id": "paralegal",
+    "title": {
+      "en": "Paralegal",
+      "ar": "المساعد القانوني"
+    },
+    "sector": "law",
+    "shortDescription": {
+      "en": "Prepares case files, research and documentation that lawyers rely on, and is a common route into the profession.",
+      "ar": "يعدّ ملفات القضايا والبحوث والمستندات التي يعتمد عليها المحامون، وهو مسار شائع للدخول إلى المهنة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 8000,
+      "senior": 20000
+    },
+    "growthTrend": [
+      103,
+      109,
+      114,
+      120,
+      124
+    ],
+    "icon": "folder-open",
+    "thumbnail": "/images/careers/paralegal-thumb.jpg",
+    "majors": [
+      "law",
+      "criminology"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "writing_docs",
+      "law_policy",
+      "arabic_language"
+    ]
+  },
+  {
+    "id": "police_officer",
+    "title": {
+      "en": "Police Officer",
+      "ar": "ضابط الشرطة"
+    },
+    "sector": "government",
+    "shortDescription": {
+      "en": "Maintains public safety and investigates crime, in a service that combines shift work with substantial community contact.",
+      "ar": "يحافظ على الأمن العام ويحقق في الجرائم، في سلك يجمع بين العمل بنظام الورديات والتواصل الواسع مع المجتمع."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 10000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      107,
+      113,
+      122,
+      128,
+      135
+    ],
+    "icon": "shield",
+    "thumbnail": "/images/careers/police_officer-thumb.jpg",
+    "majors": [
+      "criminology",
+      "homeland_security",
+      "law"
+    ],
+    "topSkills": [
+      "emergency_response",
+      "teamwork",
+      "arabic_language",
+      "law_policy"
+    ]
+  },
+  {
+    "id": "firefighter",
+    "title": {
+      "en": "Firefighter",
+      "ar": "رجل الإطفاء"
+    },
+    "sector": "government",
+    "shortDescription": {
+      "en": "Responds to fire, rescue and hazardous-material incidents, with training and physical readiness that must be maintained continuously.",
+      "ar": "يستجيب لحوادث الحريق والإنقاذ والمواد الخطرة، بتدريب وجاهزية بدنية يجب الحفاظ عليهما باستمرار."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 9000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      105,
+      109,
+      114,
+      118,
+      122
+    ],
+    "icon": "flame",
+    "thumbnail": "/images/careers/firefighter-thumb.jpg",
+    "majors": [
+      "homeland_security",
+      "paramedic_science"
+    ],
+    "topSkills": [
+      "emergency_response",
+      "teamwork",
+      "attention_detail",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "civil_defence_specialist",
+    "title": {
+      "en": "Civil Defence Specialist",
+      "ar": "أخصائي الدفاع المدني"
+    },
+    "sector": "government",
+    "shortDescription": {
+      "en": "Plans for emergencies before they happen: inspects buildings, writes safety requirements and coordinates multi-agency response.",
+      "ar": "يخطط للطوارئ قبل وقوعها: يفتّش المباني ويضع اشتراطات السلامة وينسّق الاستجابة بين الجهات المختلفة."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 12000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      103,
+      107,
+      111,
+      117,
+      121
+    ],
+    "icon": "siren",
+    "thumbnail": "/images/careers/civil_defence_specialist-thumb.jpg",
+    "majors": [
+      "homeland_security",
+      "environmental_engineering"
+    ],
+    "topSkills": [
+      "emergency_response",
+      "attention_detail",
+      "teamwork",
+      "law_policy"
+    ]
+  },
+  {
+    "id": "military_officer",
+    "title": {
+      "en": "Military Officer",
+      "ar": "الضابط العسكري"
+    },
+    "sector": "government",
+    "shortDescription": {
+      "en": "Leads and trains personnel and plans operations, following a structured commissioning and progression path.",
+      "ar": "يقود الأفراد ويدرّبهم ويخطط للعمليات، وفق مسار منظّم للترقّي والتأهيل."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 14000,
+      "senior": 45000
+    },
+    "growthTrend": [
+      104,
+      108,
+      112,
+      116,
+      121
+    ],
+    "icon": "medal",
+    "thumbnail": "/images/careers/military_officer-thumb.jpg",
+    "majors": [
+      "military_science",
+      "homeland_security"
+    ],
+    "topSkills": [
+      "leadership",
+      "teamwork",
+      "emergency_response",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "customs_officer",
+    "title": {
+      "en": "Customs Officer",
+      "ar": "ضابط الجمارك"
+    },
+    "sector": "government",
+    "shortDescription": {
+      "en": "Inspects and clears goods crossing the border, applying trade rules and spotting what does not match its paperwork.",
+      "ar": "يفتّش البضائع العابرة للحدود ويفسح عنها، مطبّقًا قواعد التجارة وملاحظًا ما لا يطابق مستنداته."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 9000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      104,
+      108,
+      113,
+      116,
+      121
+    ],
+    "icon": "package-search",
+    "thumbnail": "/images/careers/customs_officer-thumb.jpg",
+    "majors": [
+      "criminology",
+      "supply_chain",
+      "law"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "law_policy",
+      "arabic_language",
+      "logistics_ops"
+    ]
+  },
+  {
+    "id": "urban_governance_specialist",
+    "title": {
+      "en": "Urban Governance Specialist",
+      "ar": "أخصائي الحوكمة الحضرية"
+    },
+    "sector": "government",
+    "shortDescription": {
+      "en": "Works on how cities are regulated and serviced — housing, mobility and land use — translating policy into local rules.",
+      "ar": "يعمل على كيفية تنظيم المدن وخدمتها، من الإسكان والتنقل واستخدامات الأراضي، فيترجم السياسات إلى أنظمة محلية."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 15000,
+      "senior": 40000
+    },
+    "growthTrend": [
+      103,
+      104,
+      105,
+      106,
+      108
+    ],
+    "icon": "building-2",
+    "thumbnail": "/images/careers/urban_governance_specialist-thumb.jpg",
+    "majors": [
+      "urban_planning",
+      "public_policy",
+      "public_administration"
+    ],
+    "topSkills": [
+      "law_policy",
+      "writing_docs",
+      "data_analysis",
+      "public_speaking"
+    ]
+  },
+  {
+    "id": "primary_teacher",
+    "title": {
+      "en": "Primary School Teacher",
+      "ar": "معلم المرحلة الابتدائية"
+    },
+    "sector": "education",
+    "shortDescription": {
+      "en": "Teaches the full curriculum to one class of young children, and is often the adult who first notices a learning difficulty.",
+      "ar": "يدرّس المنهج كاملًا لصف واحد من صغار الطلبة، وهو غالبًا أول بالغ يلاحظ وجود صعوبة تعلّم لدى الطفل."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 9000,
+      "senior": 22000
+    },
+    "growthTrend": [
+      107,
+      115,
+      124,
+      132,
+      139
+    ],
+    "icon": "school",
+    "thumbnail": "/images/careers/primary_teacher-thumb.jpg",
+    "majors": [
+      "education_primary"
+    ],
+    "topSkills": [
+      "teaching",
+      "child_development",
+      "arabic_language",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "university_lecturer",
+    "title": {
+      "en": "University Lecturer",
+      "ar": "المحاضر الجامعي"
+    },
+    "sector": "education",
+    "shortDescription": {
+      "en": "Teaches and researches within a discipline, normally after a doctorate, and is assessed on publication as well as teaching.",
+      "ar": "يدرّس ويبحث في تخصصه، عادةً بعد الدكتوراه، ويُقيَّم على النشر العلمي إلى جانب التدريس."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 18000,
+      "senior": 48000
+    },
+    "growthTrend": [
+      103,
+      105,
+      107,
+      110,
+      113
+    ],
+    "icon": "graduation-cap",
+    "thumbnail": "/images/careers/university_lecturer-thumb.jpg",
+    "majors": [
+      "curriculum_design",
+      "education_secondary"
+    ],
+    "topSkills": [
+      "research_methods",
+      "teaching",
+      "writing_docs",
+      "public_speaking"
+    ]
+  },
+  {
+    "id": "curriculum_designer",
+    "title": {
+      "en": "Curriculum Designer",
+      "ar": "مصمّم المناهج"
+    },
+    "sector": "education",
+    "shortDescription": {
+      "en": "Designs what gets taught and in what order, and how learning will be assessed — including building the Arabic and English versions in parallel.",
+      "ar": "يصمّم ما يُدرَّس وترتيبه وطريقة تقييم التعلّم، بما يشمل بناء النسختين العربية والإنجليزية بالتوازي."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 13000,
+      "senior": 34000
+    },
+    "growthTrend": [
+      105,
+      108,
+      114,
+      119,
+      123
+    ],
+    "icon": "book-open",
+    "thumbnail": "/images/careers/curriculum_designer-thumb.jpg",
+    "majors": [
+      "curriculum_design",
+      "education_secondary"
+    ],
+    "topSkills": [
+      "writing_docs",
+      "teaching",
+      "creativity",
+      "arabic_language"
+    ]
+  },
+  {
+    "id": "social_worker",
+    "title": {
+      "en": "Social Worker",
+      "ar": "الأخصائي الاجتماعي"
+    },
+    "sector": "social",
+    "shortDescription": {
+      "en": "Supports families and individuals through crisis, and coordinates the services they need across several agencies at once.",
+      "ar": "يدعم الأسر والأفراد خلال الأزمات، وينسّق الخدمات التي يحتاجونها بين عدة جهات في آنٍ واحد."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 9000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      107,
+      115,
+      121,
+      128,
+      135
+    ],
+    "icon": "heart-handshake",
+    "thumbnail": "/images/careers/social_worker-thumb.jpg",
+    "majors": [
+      "social_work",
+      "sociology",
+      "psychology"
+    ],
+    "topSkills": [
+      "counselling",
+      "arabic_language",
+      "teamwork",
+      "writing_docs"
+    ]
+  },
+  {
+    "id": "translator",
+    "title": {
+      "en": "Translator and Interpreter",
+      "ar": "المترجم"
+    },
+    "sector": "social",
+    "shortDescription": {
+      "en": "Moves meaning between Arabic and other languages in legal, medical and official settings, where a mistranslation has consequences.",
+      "ar": "ينقل المعنى بين العربية وغيرها في السياقات القانونية والطبية والرسمية، حيث تترتب على الخطأ في الترجمة عواقب."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 10000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      103,
+      107,
+      112,
+      116,
+      120
+    ],
+    "icon": "languages",
+    "thumbnail": "/images/careers/translator-thumb.jpg",
+    "majors": [
+      "translation"
+    ],
+    "topSkills": [
+      "translation_skill",
+      "arabic_language",
+      "english_language",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "librarian",
+    "title": {
+      "en": "Librarian and Information Specialist",
+      "ar": "أخصائي المكتبات والمعلومات"
+    },
+    "sector": "social",
+    "shortDescription": {
+      "en": "Organises information so it can be found again, and increasingly manages digital collections and archives rather than only shelves.",
+      "ar": "ينظّم المعلومات ليمكن العثور عليها لاحقًا، ويدير على نحو متزايد المجموعات والأرشيفات الرقمية لا الرفوف وحدها."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 9000,
+      "senior": 22000
+    },
+    "growthTrend": [
+      102,
+      105,
+      107,
+      109,
+      111
+    ],
+    "icon": "library",
+    "thumbnail": "/images/careers/librarian-thumb.jpg",
+    "majors": [
+      "library_science",
+      "museum_studies"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "research_methods",
+      "curation_heritage",
+      "arabic_language"
+    ]
+  },
+  {
+    "id": "islamic_scholar",
+    "title": {
+      "en": "Islamic Studies Scholar",
+      "ar": "الباحث في الدراسات الإسلامية"
+    },
+    "sector": "social",
+    "shortDescription": {
+      "en": "Studies and teaches Islamic jurisprudence and its sources, advising on religious rulings in institutional settings.",
+      "ar": "يدرس الفقه الإسلامي ومصادره ويعلّمه، ويقدّم المشورة في المسائل الشرعية ضمن الأطر المؤسسية."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 10000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      101,
+      102,
+      103,
+      106,
+      108
+    ],
+    "icon": "book-marked",
+    "thumbnail": "/images/careers/islamic_scholar-thumb.jpg",
+    "majors": [
+      "islamic_studies",
+      "sharia_law"
+    ],
+    "topSkills": [
+      "islamic_studies_skill",
+      "arabic_language",
+      "writing_docs",
+      "research_methods"
+    ]
+  },
+  {
+    "id": "broadcast_presenter",
+    "title": {
+      "en": "Broadcast Presenter",
+      "ar": "مقدّم البرامج"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Presents news or programming live, holding an audience while working to the second and absorbing changes as they happen.",
+      "ar": "يقدّم الأخبار أو البرامج على الهواء، محافظًا على انتباه الجمهور بينما يعمل وفق توقيت بالثانية ويستوعب التغييرات فور حدوثها."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 12000,
+      "senior": 40000
+    },
+    "growthTrend": [
+      103,
+      106,
+      107,
+      110,
+      113
+    ],
+    "icon": "mic",
+    "thumbnail": "/images/careers/broadcast_presenter-thumb.jpg",
+    "majors": [
+      "mass_communication",
+      "journalism"
+    ],
+    "topSkills": [
+      "public_speaking",
+      "arabic_language",
+      "english_language",
+      "journalism_reporting"
+    ]
+  },
+  {
+    "id": "content_creator",
+    "title": {
+      "en": "Content Creator",
+      "ar": "صانع المحتوى"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Produces and distributes original content across platforms, and is responsible for both the making and the audience.",
+      "ar": "ينتج محتوى أصليًا ويوزّعه عبر المنصات، وهو مسؤول عن الصناعة والجمهور معًا."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 8000,
+      "senior": 35000
+    },
+    "growthTrend": [
+      107,
+      114,
+      121,
+      128,
+      134
+    ],
+    "icon": "video",
+    "thumbnail": "/images/careers/content_creator-thumb.jpg",
+    "majors": [
+      "digital_media",
+      "mass_communication"
+    ],
+    "topSkills": [
+      "creativity",
+      "marketing_comm",
+      "photography_video",
+      "writing_docs"
+    ]
+  },
+  {
+    "id": "video_editor",
+    "title": {
+      "en": "Video Editor",
+      "ar": "محرّر الفيديو"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Assembles raw footage into a finished piece, making the pacing and structure decisions that determine whether it holds attention.",
+      "ar": "يجمع اللقطات الخام في عمل نهائي، متخذًا قرارات الإيقاع والبنية التي تحدّد قدرته على شدّ الانتباه."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 9000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      104,
+      107,
+      113,
+      116,
+      119
+    ],
+    "icon": "film",
+    "thumbnail": "/images/careers/video_editor-thumb.jpg",
+    "majors": [
+      "film_production",
+      "digital_media"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "photography_video",
+      "creativity",
+      "sound_audio"
+    ]
+  },
+  {
+    "id": "cinematographer",
+    "title": {
+      "en": "Cinematographer",
+      "ar": "مدير التصوير"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Designs how a film looks — camera, lens and lighting — translating a director's intent into images.",
+      "ar": "يصمّم الشكل البصري للفيلم من كاميرا وعدسة وإضاءة، فيترجم رؤية المخرج إلى صور."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 12000,
+      "senior": 38000
+    },
+    "growthTrend": [
+      102,
+      105,
+      106,
+      108,
+      109
+    ],
+    "icon": "camera",
+    "thumbnail": "/images/careers/cinematographer-thumb.jpg",
+    "majors": [
+      "film_production",
+      "photography"
+    ],
+    "topSkills": [
+      "photography_video",
+      "creativity",
+      "attention_detail",
+      "visual_design"
+    ]
+  },
+  {
+    "id": "film_director",
+    "title": {
+      "en": "Film Director",
+      "ar": "المخرج"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Makes the creative decisions across a production and directs everyone delivering them, from script through to final cut.",
+      "ar": "يتخذ القرارات الإبداعية في العمل ويوجّه كل من ينفّذها، من النص حتى المونتاج النهائي."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 14000,
+      "senior": 50000
+    },
+    "growthTrend": [
+      101,
+      102,
+      105,
+      108,
+      109
+    ],
+    "icon": "clapperboard",
+    "thumbnail": "/images/careers/film_director-thumb.jpg",
+    "majors": [
+      "film_production",
+      "mass_communication"
+    ],
+    "topSkills": [
+      "creativity",
+      "leadership",
+      "photography_video",
+      "project_management"
+    ]
+  },
+  {
+    "id": "photographer",
+    "title": {
+      "en": "Photographer",
+      "ar": "المصوّر الفوتوغرافي"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Makes images to a brief across editorial, commercial and event work, handling both the shoot and the post-production.",
+      "ar": "ينتج الصور وفق متطلبات محددة في العمل الصحفي والتجاري والفعاليات، ويتولى التصوير والمعالجة اللاحقة معًا."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 8000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      103,
+      105,
+      106,
+      108,
+      110
+    ],
+    "icon": "camera",
+    "thumbnail": "/images/careers/photographer-thumb.jpg",
+    "majors": [
+      "photography",
+      "digital_media"
+    ],
+    "topSkills": [
+      "photography_video",
+      "creativity",
+      "attention_detail",
+      "visual_design"
+    ]
+  },
+  {
+    "id": "graphic_designer",
+    "title": {
+      "en": "Graphic Designer",
+      "ar": "المصمّم الجرافيكي"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Designs visual communication across print and screen — and in this market must make Arabic and Latin type work together in one layout.",
+      "ar": "يصمّم الاتصال البصري للمطبوع والشاشة، وعليه في هذا السوق أن يجعل الخطوط العربية واللاتينية تتناغم في تصميم واحد."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 8000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      109,
+      115,
+      122,
+      128,
+      135
+    ],
+    "icon": "palette",
+    "thumbnail": "/images/careers/graphic_designer-thumb.jpg",
+    "majors": [
+      "graphic_design",
+      "digital_media"
+    ],
+    "topSkills": [
+      "visual_design",
+      "creativity",
+      "attention_detail",
+      "arabic_language"
+    ]
+  },
+  {
+    "id": "motion_graphics_designer",
+    "title": {
+      "en": "Motion Graphics Designer",
+      "ar": "مصمّم الموشن جرافيك"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Animates type, graphics and interface elements for broadcast, advertising and product work.",
+      "ar": "يحرّك النصوص والرسومات وعناصر الواجهة للبث والإعلان وأعمال المنتجات."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 10000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      104,
+      108,
+      114,
+      117,
+      122
+    ],
+    "icon": "wand",
+    "thumbnail": "/images/careers/motion_graphics_designer-thumb.jpg",
+    "majors": [
+      "animation",
+      "graphic_design"
+    ],
+    "topSkills": [
+      "creativity",
+      "animation_3d",
+      "visual_design",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "three_d_artist",
+    "title": {
+      "en": "3D Artist",
+      "ar": "فنان ثلاثي الأبعاد"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Builds and textures three-dimensional models for film, games, product visualisation and architectural presentation.",
+      "ar": "يبني النماذج ثلاثية الأبعاد ويكسوها للأفلام والألعاب وعرض المنتجات والعروض المعمارية."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 11000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      104,
+      108,
+      114,
+      118,
+      122
+    ],
+    "icon": "box",
+    "thumbnail": "/images/careers/three_d_artist-thumb.jpg",
+    "majors": [
+      "animation",
+      "game_development"
+    ],
+    "topSkills": [
+      "animation_3d",
+      "creativity",
+      "visual_design",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "animator",
+    "title": {
+      "en": "Animator",
+      "ar": "الرسّام المتحرك"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Creates movement and performance frame by frame or through rigs, in a field with growing Arabic-language children's production.",
+      "ar": "يصنع الحركة والأداء إطارًا بإطار أو عبر الهياكل التحريكية، في مجال ينمو فيه إنتاج محتوى الأطفال باللغة العربية."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 10000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      105,
+      109,
+      115,
+      119,
+      124
+    ],
+    "icon": "clapperboard",
+    "thumbnail": "/images/careers/animator-thumb.jpg",
+    "majors": [
+      "animation",
+      "film_production"
+    ],
+    "topSkills": [
+      "creativity",
+      "animation_3d",
+      "visual_design",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "industrial_designer",
+    "title": {
+      "en": "Industrial / Product Designer",
+      "ar": "المصمّم الصناعي"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Designs physical products so they can be made, used and manufactured economically — form and production constraints together.",
+      "ar": "يصمّم المنتجات المادية لتكون قابلة للتصنيع والاستخدام بكلفة معقولة، جامعًا بين الشكل وقيود الإنتاج."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 12000,
+      "senior": 34000
+    },
+    "growthTrend": [
+      103,
+      106,
+      109,
+      111,
+      114
+    ],
+    "icon": "box",
+    "thumbnail": "/images/careers/industrial_designer-thumb.jpg",
+    "majors": [
+      "industrial_design",
+      "mechanical_engineering"
+    ],
+    "topSkills": [
+      "creativity",
+      "visual_design",
+      "problem_solving",
+      "mechanical_design"
+    ]
+  },
+  {
+    "id": "interior_designer",
+    "title": {
+      "en": "Interior Designer",
+      "ar": "المصمّم الداخلي"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Designs interior space for how it will actually be lived and worked in, coordinating with contractors through to handover.",
+      "ar": "يصمّم الفراغ الداخلي بحسب طريقة استخدامه فعليًا للسكن أو العمل، وينسّق مع المقاولين حتى التسليم."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 10000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      108,
+      117,
+      123,
+      130,
+      138
+    ],
+    "icon": "sofa",
+    "thumbnail": "/images/careers/interior_designer-thumb.jpg",
+    "majors": [
+      "interior_design",
+      "architecture"
+    ],
+    "topSkills": [
+      "spatial_design",
+      "creativity",
+      "visual_design",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "fashion_designer",
+    "title": {
+      "en": "Fashion Designer",
+      "ar": "مصمّم الأزياء"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Designs garments from concept through pattern and fitting, in a market with a strong modest-fashion and occasion-wear segment.",
+      "ar": "يصمّم الملابس من الفكرة إلى الباترون والقياس، في سوق يمتاز بقطاع قوي للأزياء المحتشمة وملابس المناسبات."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 8000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      103,
+      105,
+      108,
+      111,
+      114
+    ],
+    "icon": "shirt",
+    "thumbnail": "/images/careers/fashion_designer-thumb.jpg",
+    "majors": [
+      "fashion_design",
+      "graphic_design"
+    ],
+    "topSkills": [
+      "fashion_textiles",
+      "creativity",
+      "visual_design",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "sound_engineer",
+    "title": {
+      "en": "Sound Engineer",
+      "ar": "مهندس الصوت"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Records, mixes and masters audio for music, film, broadcast and live events, where problems must be solved during the take, not after.",
+      "ar": "يسجّل الصوت ويمزجه ويعالجه للموسيقى والأفلام والبث والفعاليات المباشرة، حيث تُحلّ المشكلات أثناء التسجيل لا بعده."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 9000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      103,
+      109,
+      115,
+      120,
+      123
+    ],
+    "icon": "audio-lines",
+    "thumbnail": "/images/careers/sound_engineer-thumb.jpg",
+    "majors": [
+      "sound_engineering",
+      "film_production"
+    ],
+    "topSkills": [
+      "sound_audio",
+      "attention_detail",
+      "creativity",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "museum_curator",
+    "title": {
+      "en": "Museum Curator",
+      "ar": "أمين المتحف"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Researches, selects and interprets collections, and shapes what visitors understand from an exhibition.",
+      "ar": "يبحث في المقتنيات وينتقيها ويفسّرها، ويشكّل ما يخرج به الزائر من فهم للمعرض."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 12000,
+      "senior": 32000
+    },
+    "growthTrend": [
+      102,
+      104,
+      106,
+      107,
+      109
+    ],
+    "icon": "landmark",
+    "thumbnail": "/images/careers/museum_curator-thumb.jpg",
+    "majors": [
+      "museum_studies",
+      "library_science"
+    ],
+    "topSkills": [
+      "curation_heritage",
+      "research_methods",
+      "writing_docs",
+      "arabic_language"
+    ]
+  },
+  {
+    "id": "heritage_conservation_specialist",
+    "title": {
+      "en": "Heritage Conservation Specialist",
+      "ar": "أخصائي حفظ التراث"
+    },
+    "sector": "media",
+    "shortDescription": {
+      "en": "Stabilises and repairs historic buildings and objects, working to the principle that intervention should be reversible.",
+      "ar": "يثبّت المباني والقطع التاريخية ويرمّمها، وفق مبدأ أن يكون التدخل قابلًا للعكس."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 11000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      101,
+      103,
+      105,
+      108,
+      110
+    ],
+    "icon": "hammer",
+    "thumbnail": "/images/careers/heritage_conservation_specialist-thumb.jpg",
+    "majors": [
+      "museum_studies",
+      "architecture"
+    ],
+    "topSkills": [
+      "attention_detail",
+      "curation_heritage",
+      "research_methods",
+      "writing_docs"
+    ]
+  },
+  {
+    "id": "chef",
+    "title": {
+      "en": "Chef",
+      "ar": "الطاهي"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Runs a kitchen section or an entire kitchen, producing consistent food at volume under time pressure.",
+      "ar": "يدير قسمًا في المطبخ أو المطبخ بأكمله، وينتج طعامًا متسق الجودة بكميات كبيرة تحت ضغط الوقت."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 7000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      107,
+      113,
+      120,
+      128,
+      136
+    ],
+    "icon": "chef-hat",
+    "thumbnail": "/images/careers/chef-thumb.jpg",
+    "majors": [
+      "culinary_arts",
+      "hospitality_management"
+    ],
+    "topSkills": [
+      "culinary",
+      "teamwork",
+      "quality_control",
+      "attention_detail"
+    ]
+  },
+  {
+    "id": "cabin_crew",
+    "title": {
+      "en": "Airline Cabin Crew",
+      "ar": "طاقم الضيافة الجوية"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Responsible for passenger safety first and service second, on a roster that crosses time zones continuously.",
+      "ar": "مسؤول عن سلامة الركاب أولًا وعن الخدمة ثانيًا، وفق جدول عمل يعبر المناطق الزمنية باستمرار."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 8000,
+      "senior": 20000
+    },
+    "growthTrend": [
+      106,
+      115,
+      124,
+      130,
+      137
+    ],
+    "icon": "plane",
+    "thumbnail": "/images/careers/cabin_crew-thumb.jpg",
+    "majors": [
+      "hospitality_management",
+      "aviation_management"
+    ],
+    "topSkills": [
+      "customer_service",
+      "teamwork",
+      "english_language",
+      "emergency_response"
+    ]
+  },
+  {
+    "id": "sports_coach",
+    "title": {
+      "en": "Sports Coach",
+      "ar": "المدرّب الرياضي"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Develops athletes technically and physically, and manages the motivation that determines whether training actually happens.",
+      "ar": "يطوّر الرياضيين تقنيًا وبدنيًا، ويدير الدافعية التي تحدّد ما إذا كان التدريب سيحدث فعلًا."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 8000,
+      "senior": 25000
+    },
+    "growthTrend": [
+      104,
+      110,
+      114,
+      118,
+      123
+    ],
+    "icon": "whistle",
+    "thumbnail": "/images/careers/sports_coach-thumb.jpg",
+    "majors": [
+      "sports_science",
+      "education_secondary"
+    ],
+    "topSkills": [
+      "sports_coaching",
+      "teaching",
+      "leadership",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "fitness_specialist",
+    "title": {
+      "en": "Fitness and Wellness Specialist",
+      "ar": "أخصائي اللياقة والعافية"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Designs and delivers individual training and lifestyle programmes, in a market where preventive health is a growing public priority.",
+      "ar": "يصمّم برامج التدريب الفردي وأنماط الحياة ويقدّمها، في سوق تتصاعد فيه أولوية الصحة الوقائية."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 7000,
+      "senior": 22000
+    },
+    "growthTrend": [
+      107,
+      114,
+      121,
+      128,
+      135
+    ],
+    "icon": "dumbbell",
+    "thumbnail": "/images/careers/fitness_specialist-thumb.jpg",
+    "majors": [
+      "sports_science",
+      "nutrition"
+    ],
+    "topSkills": [
+      "sports_coaching",
+      "customer_service",
+      "teaching",
+      "nutrition_diet"
+    ]
+  },
+  {
+    "id": "agriculture_specialist",
+    "title": {
+      "en": "Agriculture and Food Security Specialist",
+      "ar": "أخصائي الزراعة والأمن الغذائي"
+    },
+    "sector": "energy",
+    "shortDescription": {
+      "en": "Develops food production that works in a desert climate — controlled environments, salt-tolerant crops and water-efficient systems.",
+      "ar": "يطوّر إنتاجًا غذائيًا يصلح لمناخ صحراوي، عبر البيئات المحكومة والمحاصيل المتحملة للملوحة والأنظمة الموفّرة للمياه."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 11000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      105,
+      110,
+      113,
+      116,
+      121
+    ],
+    "icon": "sprout",
+    "thumbnail": "/images/careers/agriculture_specialist-thumb.jpg",
+    "majors": [
+      "agriculture",
+      "environmental_science",
+      "biotechnology"
+    ],
+    "topSkills": [
+      "agriculture_food",
+      "sustainability",
+      "life_sciences",
+      "problem_solving"
+    ]
+  },
+  {
+    "id": "aquaculture_specialist",
+    "title": {
+      "en": "Aquaculture Specialist",
+      "ar": "أخصائي الاستزراع المائي"
+    },
+    "sector": "energy",
+    "shortDescription": {
+      "en": "Farms fish and marine species in controlled systems, managing water quality and stock health as a single problem.",
+      "ar": "يستزرع الأسماك والكائنات البحرية في أنظمة محكومة، ويدير جودة المياه وصحة المخزون بوصفهما مشكلة واحدة."
+    },
+    "demandOutlook": "moderate",
+    "salary": {
+      "entry": 10000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      101,
+      103,
+      106,
+      107,
+      108
+    ],
+    "icon": "fish",
+    "thumbnail": "/images/careers/aquaculture_specialist-thumb.jpg",
+    "majors": [
+      "marine_science",
+      "agriculture",
+      "biology"
+    ],
+    "topSkills": [
+      "agriculture_food",
+      "life_sciences",
+      "sustainability",
+      "quality_control"
+    ]
+  },
+  {
+    "id": "travel_experience_designer",
+    "title": {
+      "en": "Travel Experience Designer",
+      "ar": "مصمّم تجارب السفر"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Designs itineraries and destination experiences, increasingly built around heritage, desert and cultural tourism rather than shopping alone.",
+      "ar": "يصمّم البرامج السياحية وتجارب الوجهات، ويبنيها بصورة متزايدة حول التراث والصحراء والثقافة لا التسوّق وحده."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 11000,
+      "senior": 30000
+    },
+    "growthTrend": [
+      103,
+      108,
+      112,
+      116,
+      119
+    ],
+    "icon": "map-pinned",
+    "thumbnail": "/images/careers/travel_experience_designer-thumb.jpg",
+    "majors": [
+      "tourism_management",
+      "hospitality_management",
+      "event_management"
+    ],
+    "topSkills": [
+      "creativity",
+      "hospitality_ops",
+      "customer_service",
+      "marketing_comm"
+    ]
+  },
+  {
+    "id": "pastry_chef",
+    "title": {
+      "en": "Pastry Chef",
+      "ar": "طاهي المعجنات والحلويات"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Produces desserts, breads and viennoiserie, where recipes behave like chemistry and a small error does not survive the oven.",
+      "ar": "ينتج الحلويات والخبز والمعجنات، حيث تتصرف الوصفات كتفاعلات كيميائية ولا ينجو الخطأ الصغير من الفرن."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 7000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      104,
+      109,
+      113,
+      116,
+      119
+    ],
+    "icon": "cake-slice",
+    "thumbnail": "/images/careers/pastry_chef-thumb.jpg",
+    "majors": [
+      "culinary_arts",
+      "hospitality_management"
+    ],
+    "topSkills": [
+      "culinary",
+      "attention_detail",
+      "creativity",
+      "quality_control"
+    ]
+  },
+  {
+    "id": "restaurant_manager",
+    "title": {
+      "en": "Restaurant Manager",
+      "ar": "مدير المطعم"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Runs a restaurant's floor, staff, cost lines and guest experience, and carries the result of a bad service personally.",
+      "ar": "يدير صالة المطعم وفريقه وبنود التكلفة وتجربة الضيوف، ويتحمّل شخصيًا نتيجة أي خدمة سيئة."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 9000,
+      "senior": 28000
+    },
+    "growthTrend": [
+      108,
+      115,
+      123,
+      130,
+      137
+    ],
+    "icon": "utensils",
+    "thumbnail": "/images/careers/restaurant_manager-thumb.jpg",
+    "majors": [
+      "hospitality_management",
+      "business_administration"
+    ],
+    "topSkills": [
+      "hospitality_ops",
+      "customer_service",
+      "leadership",
+      "teamwork"
+    ]
+  },
+  {
+    "id": "food_safety_officer",
+    "title": {
+      "en": "Food Safety Officer",
+      "ar": "مسؤول سلامة الأغذية"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Inspects kitchens and food businesses against hygiene regulation, and has the authority to stop a service that is unsafe.",
+      "ar": "يفتّش المطابخ ومنشآت الأغذية وفق أنظمة السلامة الصحية، ويملك صلاحية إيقاف أي خدمة غير آمنة."
+    },
+    "demandOutlook": "very_high",
+    "salary": {
+      "entry": 9000,
+      "senior": 24000
+    },
+    "growthTrend": [
+      108,
+      114,
+      120,
+      128,
+      135
+    ],
+    "icon": "clipboard-check",
+    "thumbnail": "/images/careers/food_safety_officer-thumb.jpg",
+    "majors": [
+      "nutrition",
+      "public_health",
+      "agriculture"
+    ],
+    "topSkills": [
+      "quality_control",
+      "attention_detail",
+      "law_policy",
+      "agriculture_food"
+    ]
+  },
+  {
+    "id": "front_office_manager",
+    "title": {
+      "en": "Hotel Front Office Manager",
+      "ar": "مدير مكتب الاستقبال"
+    },
+    "sector": "tourism",
+    "shortDescription": {
+      "en": "Runs reception, reservations and guest relations, and is the person who resolves the complaint before it becomes a review.",
+      "ar": "يدير الاستقبال والحجوزات وعلاقات الضيوف، وهو من يعالج الشكوى قبل أن تتحول إلى تقييم منشور."
+    },
+    "demandOutlook": "high",
+    "salary": {
+      "entry": 9000,
+      "senior": 26000
+    },
+    "growthTrend": [
+      104,
+      109,
+      113,
+      119,
+      123
+    ],
+    "icon": "concierge-bell",
+    "thumbnail": "/images/careers/front_office_manager-thumb.jpg",
+    "majors": [
+      "hospitality_management",
+      "tourism_management"
+    ],
+    "topSkills": [
+      "customer_service",
+      "hospitality_ops",
+      "english_language",
+      "leadership"
+    ]
+  }
+]
