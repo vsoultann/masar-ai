@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import SchemePicker from "@/components/SchemePicker";
 import { useProfile } from "@/lib/store/profile";
 import { switchLocalePath, type Locale } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
@@ -49,7 +50,6 @@ export default function Header() {
 
   const other = t.meta.otherLocale as Locale;
   const links: { href: string; label: string }[] = [
-    { href: `/${locale}`, label: t.nav.home },
     { href: `/${locale}/careers`, label: t.nav.careers },
     { href: `/${locale}/about`, label: t.nav.about },
   ];
@@ -80,13 +80,18 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav aria-label={t.nav.menu} className="hidden md:flex items-center gap-1 mx-auto">
-          {links.map((link) => (
+        {/* The nav grew to eight items in v2 and overflowed at md. The
+            secondary ones appear only from lg; everything stays reachable on
+            small screens through the menu below. */}
+        <nav aria-label={t.nav.menu} className="mx-auto hidden items-center gap-1 md:flex">
+          {links.map((link, index) => (
             <Link
               key={link.href}
               href={link.href}
               aria-current={isActive(link.href) ? "page" : undefined}
               className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                index >= 4 ? "hidden lg:inline-block" : ""
+              } ${
                 isActive(link.href)
                   ? "bg-[var(--surface-3)] text-[var(--ink)]"
                   : "muted hover:bg-[var(--surface-2)]"
@@ -107,6 +112,8 @@ export default function Header() {
             <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
           </button>
 
+          <SchemePicker />
+
           <button
             type="button"
             onClick={() => router.push(switchLocalePath(pathname, other))}
@@ -117,6 +124,9 @@ export default function Header() {
             {t.meta.other}
           </button>
 
+          {/* /login and /register were removed with server auth; linking to
+              them here was a dead 404 on every page. A visitor without a
+              profile starts the assessment, which creates one. */}
           {user ? (
             <div className="hidden sm:flex items-center gap-2">
               <button
@@ -131,14 +141,12 @@ export default function Header() {
               </button>
             </div>
           ) : (
-            <div className="hidden sm:flex items-center gap-2">
-              <Link href={`/${locale}/login`} className="btn btn-ghost !py-2 text-sm">
-                {t.nav.login}
-              </Link>
-              <Link href={`/${locale}/register`} className="btn btn-primary !py-2 text-sm">
-                {t.nav.register}
-              </Link>
-            </div>
+            <Link
+              href={`/${locale}/assessment`}
+              className="btn btn-primary hidden !py-2 text-sm sm:inline-flex"
+            >
+              {t.nav.createProfile}
+            </Link>
           )}
 
           <button
@@ -179,14 +187,9 @@ export default function Header() {
                   {t.nav.logout}
                 </button>
               ) : (
-                <>
-                  <Link href={`/${locale}/login`} className="btn btn-ghost flex-1">
-                    {t.nav.login}
-                  </Link>
-                  <Link href={`/${locale}/register`} className="btn btn-primary flex-1">
-                    {t.nav.register}
-                  </Link>
-                </>
+                <Link href={`/${locale}/assessment`} className="btn btn-primary flex-1">
+                  {t.nav.createProfile}
+                </Link>
               )}
             </div>
           </div>

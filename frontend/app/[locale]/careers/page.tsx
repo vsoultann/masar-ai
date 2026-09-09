@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useState } from "react";
 
@@ -9,7 +9,7 @@ import { EmptyState, ErrorBox, Skeleton } from "@/components/ui";
 import { indexBy, loadCareerIndex, loadSectors } from "@/lib/data/client";
 import { localiseDigits } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
-import { revealContainer, viewportOnce } from "@/lib/motion";
+import { revealContainer } from "@/lib/motion";
 import type { CareerSummary, Demand, Sector } from "@/lib/types";
 
 /**
@@ -160,22 +160,26 @@ function CareersView() {
           <EmptyState message={t.careers.noResults} />
         </div>
       ) : (
+        // `animate`, not `whileInView`: with whileInView + once:true the
+        // container fires once and then stops driving its children, so every
+        // card mounted by a later filter change stayed at the "hidden" variant
+        // — present in the DOM, invisible on screen. And no AnimatePresence
+        // popLayout here: it absolutely-positions exiting children, which drops
+        // them out of grid flow and makes the survivors overlap.
         <motion.div
-          variants={revealContainer(0.04)}
+          key={`${sector}|${demand}|${query}`}
+          variants={revealContainer(0.03)}
           initial="hidden"
-          whileInView="show"
-          viewport={viewportOnce}
+          animate="show"
           className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
-          <AnimatePresence mode="popLayout">
-            {filtered.map((career) => (
-              <CareerCard
-                key={career.id}
-                career={career}
-                sector={sectorsById.get(career.sector)}
-              />
-            ))}
-          </AnimatePresence>
+          {filtered.map((career) => (
+            <CareerCard
+              key={career.id}
+              career={career}
+              sector={sectorsById.get(career.sector)}
+            />
+          ))}
         </motion.div>
       )}
     </div>

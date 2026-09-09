@@ -29,7 +29,7 @@ export default function BackToTop({ label }: { label: string }) {
           whileTap={{ scale: 0.94 }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label={label}
-          className="fixed bottom-6 end-6 z-40 grid h-11 w-11 place-items-center rounded-full bg-[var(--brand)] text-[var(--brand-ink)] shadow-lg"
+          className="float-bottom fixed end-6 z-40 grid h-11 w-11 place-items-center rounded-full bg-[var(--brand)] text-[var(--brand-ink)] shadow-lg"
         >
           <ArrowUp size={18} aria-hidden />
         </motion.button>

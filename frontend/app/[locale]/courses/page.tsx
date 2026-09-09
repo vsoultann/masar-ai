@@ -8,7 +8,7 @@ import { EmptyState, ErrorBox, Skeleton } from "@/components/ui";
 import { loadCourses, loadSkills } from "@/lib/data/client";
 import { localiseDigits } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
-import { revealContainer, viewportOnce } from "@/lib/motion";
+import { revealContainer } from "@/lib/motion";
 import type { Course, Skill } from "@/lib/types";
 
 /** The learning-pathway catalog, browsable without a profile. */
@@ -172,11 +172,14 @@ export default function CoursesPage() {
           <EmptyState message={t.courses.noResults} />
         </div>
       ) : (
+        // Same fix as the careers grid: a filtered list must be driven by
+        // `animate`, or cards added by a later filter change never leave the
+        // hidden variant. The key restarts the stagger when filters change.
         <motion.div
-          variants={revealContainer(0.03)}
+          key={`${skill}|${level}|${cost}|${language}|${query}`}
+          variants={revealContainer(0.02)}
           initial="hidden"
-          whileInView="show"
-          viewport={viewportOnce}
+          animate="show"
           className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
         >
           {filtered.map((course) => (

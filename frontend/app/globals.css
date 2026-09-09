@@ -64,6 +64,73 @@
   color-scheme: dark;
 }
 
+/* ---------------------------------------------------------------------------
+   Colour schemes
+   ---------------------------------------------------------------------------
+   Orthogonal to light/dark: `data-theme` decides the surfaces, `data-scheme`
+   decides the accent. Only the brand tokens are overridden, so a scheme cannot
+   break contrast on text or surfaces — the pairs below are chosen so
+   --brand-ink stays legible on --brand in both themes.
+
+   UAE green is the default and the project's identity; the others exist
+   because a career tool gets used for a long time and a student should be able
+   to pick something they can live with.
+--------------------------------------------------------------------------- */
+:root[data-scheme="gulf"] {
+  --brand: #0b6a8f;
+  --brand-ink: #ffffff;
+  --accent: #00732f;
+}
+[data-theme="dark"][data-scheme="gulf"] {
+  --brand: #47a8cc;
+  --brand-ink: #04161f;
+  --accent: #4fbf87;
+}
+
+:root[data-scheme="sand"] {
+  --brand: #9a7328;
+  --brand-ink: #ffffff;
+  --accent: #0b3d5c;
+}
+[data-theme="dark"][data-scheme="sand"] {
+  --brand: #d8b063;
+  --brand-ink: #221806;
+  --accent: #7cc4e8;
+}
+
+:root[data-scheme="royal"] {
+  --brand: #5b3fd6;
+  --brand-ink: #ffffff;
+  --accent: #9a7328;
+}
+[data-theme="dark"][data-scheme="royal"] {
+  --brand: #a48bf5;
+  --brand-ink: #140a2e;
+  --accent: #d8b063;
+}
+
+:root[data-scheme="sunset"] {
+  --brand: #c2410c;
+  --brand-ink: #ffffff;
+  --accent: #0b3d5c;
+}
+[data-theme="dark"][data-scheme="sunset"] {
+  --brand: #f08a52;
+  --brand-ink: #2a1207;
+  --accent: #7cc4e8;
+}
+
+:root[data-scheme="teal"] {
+  --brand: #0f766e;
+  --brand-ink: #ffffff;
+  --accent: #9a7328;
+}
+[data-theme="dark"][data-scheme="teal"] {
+  --brand: #4fd1c5;
+  --brand-ink: #04211e;
+  --accent: #d8b063;
+}
+
 * {
   border-color: var(--line);
 }
@@ -77,10 +144,15 @@
 html {
   background: var(--surface);
   scroll-behavior: smooth;
+  /* A single wide element must never make the whole page pan sideways on a
+     phone. Wide content (tables, the compare tray, the map) scrolls inside its
+     own container instead. */
+  overflow-x: hidden;
 }
 
 body {
   background: transparent;
+  overflow-x: hidden;
   color: var(--ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -246,5 +318,30 @@ html[lang="ar"] body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+
+/* Anything pinned to the bottom clears the home indicator on notched phones.
+   Without this the compare tray's last row sits under the gesture bar. */
+.pin-bottom {
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+.float-bottom {
+  bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Touch targets. The WCAG target size is 24px and the practical floor is 44px;
+   the icon buttons in the header were 36px, which is fine with a mouse and
+   fiddly with a thumb. */
+@media (pointer: coarse) {
+  .btn,
+  button[aria-label],
+  [role="radio"] {
+    min-height: 44px;
   }
 }

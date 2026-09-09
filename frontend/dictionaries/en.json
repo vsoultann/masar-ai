@@ -32,7 +32,8 @@
     "courses": "Courses",
     "mentor": "Mentor",
     "model": "The model",
-    "createProfile": "Create profile"
+    "createProfile": "Create profile",
+    "colourScheme": "Colour scheme"
   },
   "landing": {
     "eyebrow": "AI Career Guidance System",
@@ -645,5 +646,13 @@
     "allLanguages": "Any language",
     "resultsCount": "courses",
     "noResults": "No courses match your filters."
+  },
+  "schemes": {
+    "uae": "UAE Green",
+    "gulf": "Gulf Blue",
+    "sand": "Desert Sand",
+    "royal": "Royal Violet",
+    "sunset": "Sunset",
+    "teal": "Oasis Teal"
   }
 }

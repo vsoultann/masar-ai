@@ -13,8 +13,16 @@ export default function ThemeScript() {
     var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     document.documentElement.dataset.theme =
       stored === "dark" || stored === "light" ? stored : (prefersDark ? "dark" : "light");
+
+    // The accent scheme is applied here too: setting it in an effect would
+    // repaint every branded element one frame after the page appears.
+    var scheme = localStorage.getItem("masar.scheme");
+    var known = ["uae", "gulf", "sand", "royal", "sunset", "teal"];
+    document.documentElement.dataset.scheme =
+      known.indexOf(scheme) !== -1 ? scheme : "uae";
   } catch (e) {
     document.documentElement.dataset.theme = "light";
+    document.documentElement.dataset.scheme = "uae";
   }
 })();`.trim();
 

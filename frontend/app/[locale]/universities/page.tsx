@@ -11,7 +11,7 @@ import { loadMajors, loadUniversities } from "@/lib/data/client";
 import { localiseDigits } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
 import { haversineKm, studentLocation } from "@/lib/matching/universities";
-import { revealContainer, revealItem, spring, viewportOnce } from "@/lib/motion";
+import { revealContainer, revealItem, spring } from "@/lib/motion";
 import { useProfile } from "@/lib/store/profile";
 import type { Major, University } from "@/lib/types";
 
@@ -253,10 +253,10 @@ export default function UniversitiesPage() {
         </div>
       ) : (
         <motion.div
-          variants={revealContainer(0.04)}
+          key={`${emirate}|${type}|${tuition}|${radius}|${query}`}
+          variants={revealContainer(0.03)}
           initial="hidden"
-          whileInView="show"
-          viewport={viewportOnce}
+          animate="show"
           className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
           {filtered.map(({ university }) => (
@@ -287,7 +287,7 @@ export default function UniversitiesPage() {
             initial={{ y: 90, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: spring }}
             exit={{ y: 90, opacity: 0 }}
-            className="fixed inset-x-0 bottom-0 z-30 border-t bg-[var(--surface)]/97 backdrop-blur"
+            className="pin-bottom fixed inset-x-0 bottom-0 z-30 border-t bg-[var(--surface-translucent)] backdrop-blur-xl"
           >
             <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
               <span className="text-xs font-semibold">

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export type BackgroundTheme = "dunes" | "constellation" | "arabesque";
+export type BackgroundTheme = "dunes" | "constellation" | "arabesque" | "aurora";
 
 /**
  * The full-viewport animated backdrop.
@@ -121,14 +121,18 @@ function dunePalette(mode: "light" | "dark", hour: number): Palette {
   return a[mode];
 }
 
-const STATIC_PALETTES: Record<"light" | "dark", Record<"constellation" | "arabesque", Palette>> = {
+type StaticKind = "constellation" | "arabesque" | "aurora";
+
+const STATIC_PALETTES: Record<"light" | "dark", Record<StaticKind, Palette>> = {
   light: {
     constellation: { top: "#ffffff", bottom: "#eef5f1", mark: "#00732f", accent: "#0b3d5c", ink: "#dfe9e3" },
     arabesque:     { top: "#fffdf8", bottom: "#f3ede0", mark: "#00732f", accent: "#b08b4f", ink: "#e8dcc4" },
+    aurora:        { top: "#f7fbf8", bottom: "#eaf3ee", mark: "#00732f", accent: "#0b3d5c", ink: "#d7e5dc" },
   },
   dark: {
     constellation: { top: "#081014", bottom: "#0f1e26", mark: "#2e9257", accent: "#7cc4e8", ink: "#132029" },
     arabesque:     { top: "#0a0f14", bottom: "#141c22", mark: "#2e9257", accent: "#c9a227", ink: "#101820" },
+    aurora:        { top: "#050a10", bottom: "#0b1620", mark: "#2e9257", accent: "#7cc4e8", ink: "#04080d" },
   },
 };
 
@@ -222,15 +226,18 @@ export default function LivingBackground({
     const paletteFor = (kind: BackgroundTheme, m: "light" | "dark"): Palette =>
       kind === "dunes"
         ? dunePalette(m, new Date().getHours() + new Date().getMinutes() / 60)
-        : STATIC_PALETTES[m][kind];
+        : STATIC_PALETTES[m][kind as StaticKind];
 
     const buildScene = (kind: BackgroundTheme, m: "light" | "dark"): Scene => {
       const palette = paletteFor(kind, m);
       const area = width * height;
       const density = kind === "constellation" ? 15000 : 7000;
-      const count = Math.round(
-        Math.min(area / density, lowPower ? 40 : kind === "constellation" ? 110 : 160),
-      );
+      const count =
+        kind === "aurora"
+          ? (lowPower ? 4 : 6)
+          : Math.round(
+              Math.min(area / density, lowPower ? 40 : kind === "constellation" ? 110 : 160),
+            );
 
       const particles: Particle[] = Array.from({ length: count }, () => ({
         x: Math.random() * width,
@@ -516,10 +523,70 @@ export default function LivingBackground({
       ctx.globalAlpha = 1;
     };
 
+    /**
+     * Slow drifting colour fields — a mesh gradient in motion.
+     *
+     * Built from a few large radial gradients rather than many particles, so it
+     * costs six gradient fills a frame regardless of screen size. `lighter`
+     * composite makes overlaps bloom instead of muddying, which is what gives
+     * it depth; it is reset immediately afterwards because leaving it set would
+     * silently wreck every later draw call on this context.
+     */
+    const drawAurora = (scene: Scene, time: number, alpha: number) => {
+      const p = scene.palette;
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = scene.sky!;
+      ctx.fillRect(0, 0, width, height);
+
+      const hues = [p.mark, p.accent, p.mark, p.accent, p.mark, p.accent];
+      const span = Math.max(width, height);
+
+      ctx.globalCompositeOperation = "lighter";
+      scene.particles.forEach((blob, index) => {
+        // Lissajous drift: two incommensurate frequencies, so the blobs never
+        // fall into a visible repeating pattern.
+        const t = time * 0.00004;
+        const x = width * (0.5 + Math.sin(t * (1 + index * 0.32) + blob.phase) * 0.42);
+        const y = height * (0.5 + Math.cos(t * (0.8 + index * 0.21) + blob.phase * 1.7) * 0.42);
+        const radius = span * (0.28 + Math.sin(t * 2 + index) * 0.06);
+
+        const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
+        const strength = modeRef.current === "dark" ? 0.3 : 0.22;
+        gradient.addColorStop(0, rgba(hues[index % hues.length], strength * alpha));
+        gradient.addColorStop(1, rgba(hues[index % hues.length], 0));
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+      });
+      ctx.globalCompositeOperation = "source-over";
+
+      // A faint star lattice keeps the identity consistent with the other
+      // scenes, so the landing page does not feel like a different product.
+      ctx.globalAlpha = alpha * 0.07;
+      ctx.strokeStyle = p.mark;
+      ctx.lineWidth = 1;
+      const cell = 132;
+      for (let x = (time * 0.004) % cell - cell; x < width + cell; x += cell) {
+        for (let y = 0; y < height + cell; y += cell) {
+          ctx.strokeRect(x + 22, y + 22, cell - 44, cell - 44);
+          ctx.save();
+          ctx.translate(x + cell / 2, y + cell / 2);
+          ctx.rotate(Math.PI / 4);
+          ctx.strokeRect(-(cell - 44) / 2, -(cell - 44) / 2, cell - 44, cell - 44);
+          ctx.restore();
+        }
+      }
+
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = scene.vignette!;
+      ctx.fillRect(0, 0, width, height);
+      ctx.globalAlpha = 1;
+    };
+
     const render = (scene: Scene, time: number, alpha: number) => {
       if (!scene.sky || !scene.vignette) buildGradients(scene);
       if (scene.kind === "dunes") drawDunes(scene, time, alpha);
       else if (scene.kind === "constellation") drawConstellation(scene, time, alpha);
+      else if (scene.kind === "aurora") drawAurora(scene, time, alpha);
       else drawArabesque(scene, time, alpha);
     };
 
@@ -609,7 +676,7 @@ export default function LivingBackground({
   const palette =
     theme === "dunes"
       ? dunePalette(mode, new Date().getHours())
-      : STATIC_PALETTES[mode][theme];
+      : STATIC_PALETTES[mode][theme as StaticKind];
   const staticGradient = `linear-gradient(160deg, ${palette.top}, ${palette.bottom})`;
 
   // Reduced motion: a still gradient, no canvas, no loop.

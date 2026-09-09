@@ -22,7 +22,10 @@ function themeForPath(pathname: string): BackgroundTheme {
   // Drop the /en or /ar segment before matching.
   const rest = pathname.replace(/^\/(en|ar)(?=\/|$)/, "") || "/";
 
-  if (rest === "/" || rest.startsWith("/about")) return "dunes";
+  // The landing page gets the liveliest scene: it is the one screen whose job
+  // is to make an impression before anyone has read a word.
+  if (rest === "/") return "aurora";
+  if (rest.startsWith("/about")) return "dunes";
   if (
     rest.startsWith("/assessment") ||
     rest.startsWith("/onboarding") ||

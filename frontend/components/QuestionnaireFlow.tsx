@@ -1,6 +1,9 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import {
+  ChevronDown, ChevronUp, ChevronsDown, ChevronsUp, Minus,
+} from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { localiseDigits } from "@/lib/i18n";
@@ -32,6 +35,26 @@ import type { Questionnaire } from "@/lib/types";
  */
 
 const ADVANCE_MS = 260;
+
+/**
+ * Icons for the agree/disagree scale.
+ *
+ * Chevrons rather than faces: a smiley reads as "how do you feel", but these
+ * items ask how strongly you agree, and the two are not the same question.
+ * Stacked chevrons also carry the ordering without relying on colour, which
+ * matters because red-to-green is exactly the ramp a colour-blind student
+ * cannot read.
+ *
+ * The ramp is sampled by position, so it degrades correctly for a scale with
+ * three points as well as five.
+ */
+const SCALE_ICONS = [ChevronsDown, ChevronDown, Minus, ChevronUp, ChevronsUp];
+
+function iconFor(position: number, length: number) {
+  if (length <= 1) return SCALE_ICONS[2];
+  const t = position / (length - 1);
+  return SCALE_ICONS[Math.round(t * (SCALE_ICONS.length - 1))];
+}
 
 export default function QuestionnaireFlow({
   questionnaire,
@@ -224,14 +247,20 @@ export default function QuestionnaireFlow({
                 {pick(item, "text")}
               </p>
 
+              {/* One row on every size. Stacking five options vertically on a
+                  phone pushed the buttons below the fold and lost the sense of
+                  a scale; the labels drop out under 400px instead, with the
+                  icon and the accessible name carrying the meaning. */}
               <div
                 role="radiogroup"
                 aria-label={pick(item, "text")}
-                className="mt-6 grid gap-2 sm:grid-cols-5"
+                className="mt-6 grid grid-cols-5 gap-1.5 sm:gap-2"
+                style={{ gridTemplateColumns: `repeat(${scale.length}, minmax(0, 1fr))` }}
               >
                 {scale.map((point, position) => {
                   const selected = current === point.value;
                   const focused = highlight === position;
+                  const Icon = iconFor(position, scale.length);
                   return (
                     <button
                       key={point.value}
@@ -241,7 +270,7 @@ export default function QuestionnaireFlow({
                       aria-label={pick(point, "label")}
                       onClick={() => choose(point.value, position)}
                       onMouseEnter={() => setHighlight(position)}
-                      className={`relative rounded-xl border p-3 text-center text-xs transition-all ${
+                      className={`relative flex min-h-[4.5rem] flex-col items-center justify-center gap-1 rounded-xl border px-1 py-2.5 text-center transition-all sm:min-h-[5.5rem] sm:px-3 ${
                         selected
                           ? "border-[var(--brand)] bg-[var(--brand)] font-semibold text-[var(--brand-ink)]"
                           : focused
@@ -249,10 +278,18 @@ export default function QuestionnaireFlow({
                             : "hover:bg-[var(--surface-2)]"
                       }`}
                     >
-                      <span className="block text-[10px] opacity-60 ltr-nums">
+                      <Icon
+                        size={20}
+                        aria-hidden
+                        className={selected ? "" : "text-[var(--brand)]"}
+                        strokeWidth={selected ? 2.6 : 2}
+                      />
+                      <span className="hidden text-[11px] leading-tight min-[400px]:block">
+                        {pick(point, "label")}
+                      </span>
+                      <span className="text-[10px] opacity-60 ltr-nums">
                         {localiseDigits(position + 1, locale)}
                       </span>
-                      <span className="mt-0.5 block leading-snug">{pick(point, "label")}</span>
                     </button>
                   );
                 })}

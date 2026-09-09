@@ -44,7 +44,7 @@ export default function MentorPanel() {
         type="button"
         onClick={() => setOpen(true)}
         aria-label={t.mentor.title}
-        className="fixed bottom-6 start-6 z-40 grid h-12 w-12 place-items-center rounded-full bg-[var(--brand)] text-[var(--brand-ink)] shadow-lg transition-transform hover:scale-105"
+        className="float-bottom fixed start-6 z-40 grid h-12 w-12 place-items-center rounded-full bg-[var(--brand)] text-[var(--brand-ink)] shadow-lg transition-transform hover:scale-105"
       >
         <MessageCircle size={20} aria-hidden />
       </button>
