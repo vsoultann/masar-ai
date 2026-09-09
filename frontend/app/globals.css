@@ -40,6 +40,11 @@
   --brand: #00732f;
   --brand-ink: #ffffff;
   --accent: #0b3d5c;
+  /* Translucent surfaces let LivingBackground read through the page. The
+     alpha is high enough that body text still clears contrast requirements
+     over the brightest frame either scene produces. */
+  --surface-translucent: rgb(255 255 255 / 0.82);
+  --surface-2-translucent: rgb(248 247 243 / 0.80);
   color-scheme: light;
 }
 
@@ -54,6 +59,8 @@
   --brand: #2e9257;
   --brand-ink: #05140a;
   --accent: #7cc4e8;
+  --surface-translucent: rgb(12 20 24 / 0.80);
+  --surface-2-translucent: rgb(18 30 36 / 0.78);
   color-scheme: dark;
 }
 
@@ -61,12 +68,19 @@
   border-color: var(--line);
 }
 
+
+/* The opaque base lives on <html>, not <body>.
+   LivingBackground is a fixed canvas at z-index -10. With an opaque body
+   background the animation was covered everywhere content did not leave a gap,
+   which is why it read as broken rather than subtle. <html> paints the
+   fallback colour, the canvas paints over it, and page content sits on top. */
 html {
+  background: var(--surface);
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--surface);
+  background: transparent;
   color: var(--ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -90,8 +104,11 @@ html[lang="ar"] body {
 }
 
 @layer components {
+  /* Translucent so the animated backdrop shows through, with a blur behind so
+     text keeps its contrast over whatever is moving underneath. */
   .card {
-    background: var(--surface-2);
+    backdrop-filter: blur(10px) saturate(1.1);
+    background: var(--surface-2-translucent);
     border: 1px solid var(--line);
     border-radius: var(--radius-card);
   }

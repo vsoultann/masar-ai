@@ -168,7 +168,7 @@ export default function LandingPage() {
       </section>
 
       {/* ------------------------------------------------------------ stats */}
-      <section className="border-y bg-[var(--surface-2)]">
+      <section className="border-y bg-[var(--surface-2-translucent)] backdrop-blur-md">
         <motion.dl
           variants={revealContainer(0.08)}
           initial="hidden"
@@ -204,7 +204,7 @@ export default function LandingPage() {
       </section>
 
       {/* ------------------------------------------------------- how it works */}
-      <section className="border-t bg-[var(--surface-2)]">
+      <section className="border-t bg-[var(--surface-2-translucent)] backdrop-blur-md">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <SectionHeading title={t.landing.howTitle} />
           <p className="-mt-2 mb-8 max-w-2xl muted">{t.landing.howSubtitle}</p>
@@ -274,7 +274,7 @@ export default function LandingPage() {
       </section>
 
       {/* ------------------------------------------------------- universities */}
-      <section className="border-y bg-[var(--surface-2)]">
+      <section className="border-y bg-[var(--surface-2-translucent)] backdrop-blur-md">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2">
           <div className="grid grid-cols-2 gap-3">
             {["uaeu", "ku", "aus", "mbru"].map((id, index) => (
@@ -323,7 +323,7 @@ export default function LandingPage() {
       </section>
 
       {/* --------------------------------------------------------------- team */}
-      <section className="border-t bg-[var(--surface-2)]">
+      <section className="border-t bg-[var(--surface-2-translucent)] backdrop-blur-md">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <SectionHeading title={t.landing.teamTitle} />
           <p className="-mt-2 mb-8 max-w-2xl muted">{t.landing.teamSubtitle}</p>
