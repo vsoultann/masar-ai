@@ -36,7 +36,19 @@ from evaluate import (  # noqa: E402
 )
 from pipeline import FEATURE_COLUMNS, build_models  # noqa: E402
 
-SELECTED_MODEL = "random_forest"
+# v1 selected the Random Forest. v2 does not, and the reason is in the numbers
+# rather than in deployment convenience: on the 18-sector label space the
+# multinomial Logistic Regression wins on both CV macro-F1 (0.623 vs 0.618) and
+# held-out accuracy (0.662 vs 0.641). The forest's advantage in v1 came from
+# modelling sharp interactions across 15 well-separated sectors; adding
+# engineering, law and social — which overlap heavily with sectors already
+# present — moved the problem towards one the linear model handles better.
+#
+# It also happens to be the model that deploys exactly to a static host: a
+# coefficient matrix and intercepts reimplement in TypeScript to within
+# floating-point noise, which is what ml/tests/test_parity.py asserts. That is
+# a genuine convenience, but it is not why it was chosen.
+SELECTED_MODEL = "logistic_regression"
 
 
 def main() -> None:
@@ -90,8 +102,7 @@ def main() -> None:
     print(f"\nbest by CV macro-F1: {best_by_cv}")
     print(f"selected for serving: {model_name}"
           + ("" if best_by_cv == model_name else
-             "  (kept for its calibrated probabilities and native feature "
-             "importances; see docs/ML_METHODOLOGY.md)"))
+             "  (see the note in train.py and docs/ML_METHODOLOGY.md)"))
 
     # --- 2. held-out evaluation of the selected model -----------------------
     test_scores = comparison[model_name]["test"]

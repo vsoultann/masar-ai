@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-07T10:07:47+00:00",
+  "generated_at": "2026-09-09T06:30:44+00:00",
   "dataset": {
     "path": "ml/data/students.csv",
-    "rows": 5000,
+    "rows": 8000,
     "features": 27,
     "classes": [
       "ai_data",
@@ -11,32 +11,38 @@
       "cybersecurity",
       "education",
       "energy",
+      "engineering",
       "entrepreneurship",
       "finance",
       "government",
       "healthcare",
+      "law",
       "logistics",
       "media",
+      "social",
       "software",
       "space",
       "tourism"
     ],
     "class_balance": {
-      "software": 526,
-      "healthcare": 497,
-      "ai_data": 470,
-      "education": 427,
-      "finance": 419,
-      "construction": 404,
-      "energy": 376,
-      "government": 337,
-      "tourism": 307,
-      "logistics": 291,
-      "cybersecurity": 263,
-      "media": 240,
-      "entrepreneurship": 214,
-      "aviation": 143,
-      "space": 86
+      "healthcare": 1142,
+      "software": 669,
+      "engineering": 552,
+      "ai_data": 551,
+      "finance": 531,
+      "construction": 479,
+      "energy": 477,
+      "education": 438,
+      "government": 437,
+      "tourism": 428,
+      "media": 427,
+      "logistics": 358,
+      "law": 337,
+      "entrepreneurship": 300,
+      "cybersecurity": 292,
+      "social": 248,
+      "aviation": 210,
+      "space": 124
     }
   },
   "protocol": {
@@ -46,447 +52,641 @@
   },
   "model_comparison": {
     "random_forest": {
-      "cv_accuracy_mean": 0.6945,
-      "cv_accuracy_std": 0.0117,
-      "cv_macro_f1_mean": 0.6733,
-      "cv_macro_f1_std": 0.0065,
-      "fit_seconds": 2.86,
+      "cv_accuracy_mean": 0.6602,
+      "cv_accuracy_std": 0.005,
+      "cv_macro_f1_mean": 0.6181,
+      "cv_macro_f1_std": 0.0057,
+      "fit_seconds": 4.25,
       "test": {
-        "accuracy": 0.69,
-        "macro_f1": 0.6516,
-        "weighted_f1": 0.6874,
+        "accuracy": 0.6412,
+        "macro_f1": 0.611,
+        "weighted_f1": 0.6385,
         "per_sector": {
           "ai_data": {
-            "precision": 0.6633,
-            "recall": 0.6915,
-            "f1": 0.6771,
-            "support": 94
+            "precision": 0.5806,
+            "recall": 0.4909,
+            "f1": 0.532,
+            "support": 110
           },
           "aviation": {
-            "precision": 0.4722,
-            "recall": 0.5862,
-            "f1": 0.5231,
-            "support": 29
+            "precision": 0.4444,
+            "recall": 0.4762,
+            "f1": 0.4598,
+            "support": 42
           },
           "construction": {
-            "precision": 0.7778,
-            "recall": 0.7778,
-            "f1": 0.7778,
-            "support": 81
+            "precision": 0.4578,
+            "recall": 0.3958,
+            "f1": 0.4246,
+            "support": 96
           },
           "cybersecurity": {
-            "precision": 0.4821,
-            "recall": 0.5094,
-            "f1": 0.4954,
-            "support": 53
-          },
-          "education": {
-            "precision": 0.7975,
-            "recall": 0.7326,
-            "f1": 0.7636,
-            "support": 86
-          },
-          "energy": {
-            "precision": 0.7625,
-            "recall": 0.8133,
-            "f1": 0.7871,
-            "support": 75
-          },
-          "entrepreneurship": {
-            "precision": 0.6596,
-            "recall": 0.7209,
-            "f1": 0.6889,
-            "support": 43
-          },
-          "finance": {
-            "precision": 0.7111,
-            "recall": 0.7619,
-            "f1": 0.7356,
-            "support": 84
-          },
-          "government": {
-            "precision": 0.6154,
-            "recall": 0.597,
-            "f1": 0.6061,
-            "support": 67
-          },
-          "healthcare": {
-            "precision": 0.8411,
-            "recall": 0.9091,
-            "f1": 0.8738,
-            "support": 99
-          },
-          "logistics": {
-            "precision": 0.5769,
+            "precision": 0.4545,
             "recall": 0.5172,
-            "f1": 0.5455,
+            "f1": 0.4839,
             "support": 58
           },
+          "education": {
+            "precision": 0.6867,
+            "recall": 0.6477,
+            "f1": 0.6667,
+            "support": 88
+          },
+          "energy": {
+            "precision": 0.5357,
+            "recall": 0.4737,
+            "f1": 0.5028,
+            "support": 95
+          },
+          "engineering": {
+            "precision": 0.5042,
+            "recall": 0.5455,
+            "f1": 0.524,
+            "support": 110
+          },
+          "entrepreneurship": {
+            "precision": 0.7925,
+            "recall": 0.7,
+            "f1": 0.7434,
+            "support": 60
+          },
+          "finance": {
+            "precision": 0.6975,
+            "recall": 0.783,
+            "f1": 0.7378,
+            "support": 106
+          },
+          "government": {
+            "precision": 0.6146,
+            "recall": 0.6782,
+            "f1": 0.6448,
+            "support": 87
+          },
+          "healthcare": {
+            "precision": 0.816,
+            "recall": 0.8908,
+            "f1": 0.8518,
+            "support": 229
+          },
+          "law": {
+            "precision": 0.629,
+            "recall": 0.5821,
+            "f1": 0.6047,
+            "support": 67
+          },
+          "logistics": {
+            "precision": 0.5588,
+            "recall": 0.5278,
+            "f1": 0.5429,
+            "support": 72
+          },
           "media": {
-            "precision": 0.8,
-            "recall": 0.75,
-            "f1": 0.7742,
-            "support": 48
+            "precision": 0.7419,
+            "recall": 0.8118,
+            "f1": 0.7753,
+            "support": 85
+          },
+          "social": {
+            "precision": 0.617,
+            "recall": 0.58,
+            "f1": 0.5979,
+            "support": 50
           },
           "software": {
-            "precision": 0.5667,
-            "recall": 0.4857,
-            "f1": 0.5231,
-            "support": 105
+            "precision": 0.6115,
+            "recall": 0.6343,
+            "f1": 0.6227,
+            "support": 134
           },
           "space": {
-            "precision": 0.2308,
-            "recall": 0.1765,
-            "f1": 0.2,
-            "support": 17
+            "precision": 0.5417,
+            "recall": 0.52,
+            "f1": 0.5306,
+            "support": 25
           },
           "tourism": {
-            "precision": 0.8033,
-            "recall": 0.8033,
-            "f1": 0.8033,
-            "support": 61
+            "precision": 0.8026,
+            "recall": 0.7093,
+            "f1": 0.7531,
+            "support": 86
           }
         }
       }
     },
     "logistic_regression": {
-      "cv_accuracy_mean": 0.6875,
-      "cv_accuracy_std": 0.017,
-      "cv_macro_f1_mean": 0.6618,
-      "cv_macro_f1_std": 0.0169,
-      "fit_seconds": 1.01,
+      "cv_accuracy_mean": 0.6622,
+      "cv_accuracy_std": 0.0074,
+      "cv_macro_f1_mean": 0.6234,
+      "cv_macro_f1_std": 0.0084,
+      "fit_seconds": 1.49,
       "test": {
-        "accuracy": 0.683,
-        "macro_f1": 0.6526,
-        "weighted_f1": 0.6884,
+        "accuracy": 0.6619,
+        "macro_f1": 0.629,
+        "weighted_f1": 0.6657,
         "per_sector": {
           "ai_data": {
-            "precision": 0.7215,
-            "recall": 0.6064,
-            "f1": 0.659,
-            "support": 94
+            "precision": 0.6837,
+            "recall": 0.6091,
+            "f1": 0.6442,
+            "support": 110
           },
           "aviation": {
-            "precision": 0.4667,
-            "recall": 0.4828,
-            "f1": 0.4746,
-            "support": 29
+            "precision": 0.3125,
+            "recall": 0.4762,
+            "f1": 0.3774,
+            "support": 42
           },
           "construction": {
-            "precision": 0.8,
-            "recall": 0.7407,
-            "f1": 0.7692,
-            "support": 81
+            "precision": 0.5263,
+            "recall": 0.4167,
+            "f1": 0.4651,
+            "support": 96
           },
           "cybersecurity": {
-            "precision": 0.4557,
-            "recall": 0.6792,
-            "f1": 0.5455,
-            "support": 53
-          },
-          "education": {
-            "precision": 0.8533,
-            "recall": 0.7442,
-            "f1": 0.795,
-            "support": 86
-          },
-          "energy": {
-            "precision": 0.7308,
-            "recall": 0.76,
-            "f1": 0.7451,
-            "support": 75
-          },
-          "entrepreneurship": {
-            "precision": 0.5593,
-            "recall": 0.7674,
-            "f1": 0.6471,
-            "support": 43
-          },
-          "finance": {
-            "precision": 0.8553,
-            "recall": 0.7738,
-            "f1": 0.8125,
-            "support": 84
-          },
-          "government": {
-            "precision": 0.6721,
-            "recall": 0.6119,
-            "f1": 0.6406,
-            "support": 67
-          },
-          "healthcare": {
-            "precision": 0.8447,
-            "recall": 0.8788,
-            "f1": 0.8614,
-            "support": 99
-          },
-          "logistics": {
-            "precision": 0.5556,
-            "recall": 0.6034,
-            "f1": 0.5785,
+            "precision": 0.4368,
+            "recall": 0.6552,
+            "f1": 0.5241,
             "support": 58
           },
+          "education": {
+            "precision": 0.6988,
+            "recall": 0.6591,
+            "f1": 0.6784,
+            "support": 88
+          },
+          "energy": {
+            "precision": 0.5051,
+            "recall": 0.5263,
+            "f1": 0.5155,
+            "support": 95
+          },
+          "engineering": {
+            "precision": 0.5702,
+            "recall": 0.5909,
+            "f1": 0.5804,
+            "support": 110
+          },
+          "entrepreneurship": {
+            "precision": 0.7895,
+            "recall": 0.75,
+            "f1": 0.7692,
+            "support": 60
+          },
+          "finance": {
+            "precision": 0.8,
+            "recall": 0.717,
+            "f1": 0.7562,
+            "support": 106
+          },
+          "government": {
+            "precision": 0.7159,
+            "recall": 0.7241,
+            "f1": 0.72,
+            "support": 87
+          },
+          "healthcare": {
+            "precision": 0.8603,
+            "recall": 0.8603,
+            "f1": 0.8603,
+            "support": 229
+          },
+          "law": {
+            "precision": 0.7333,
+            "recall": 0.6567,
+            "f1": 0.6929,
+            "support": 67
+          },
+          "logistics": {
+            "precision": 0.5085,
+            "recall": 0.4167,
+            "f1": 0.458,
+            "support": 72
+          },
           "media": {
-            "precision": 0.7907,
-            "recall": 0.7083,
-            "f1": 0.7473,
-            "support": 48
+            "precision": 0.8095,
+            "recall": 0.8,
+            "f1": 0.8047,
+            "support": 85
+          },
+          "social": {
+            "precision": 0.4839,
+            "recall": 0.6,
+            "f1": 0.5357,
+            "support": 50
           },
           "software": {
-            "precision": 0.5974,
-            "recall": 0.4381,
-            "f1": 0.5055,
-            "support": 105
+            "precision": 0.7288,
+            "recall": 0.6418,
+            "f1": 0.6825,
+            "support": 134
           },
           "space": {
-            "precision": 0.1795,
-            "recall": 0.4118,
-            "f1": 0.25,
-            "support": 17
+            "precision": 0.3696,
+            "recall": 0.68,
+            "f1": 0.4789,
+            "support": 25
           },
           "tourism": {
-            "precision": 0.746,
-            "recall": 0.7705,
-            "f1": 0.7581,
-            "support": 61
+            "precision": 0.8025,
+            "recall": 0.7558,
+            "f1": 0.7784,
+            "support": 86
           }
         }
       }
     },
     "knn": {
-      "cv_accuracy_mean": 0.6615,
-      "cv_accuracy_std": 0.0131,
-      "cv_macro_f1_mean": 0.5925,
-      "cv_macro_f1_std": 0.0185,
-      "fit_seconds": 0.84,
+      "cv_accuracy_mean": 0.6322,
+      "cv_accuracy_std": 0.0076,
+      "cv_macro_f1_mean": 0.5642,
+      "cv_macro_f1_std": 0.006,
+      "fit_seconds": 1.02,
       "test": {
-        "accuracy": 0.656,
-        "macro_f1": 0.5788,
-        "weighted_f1": 0.6382,
+        "accuracy": 0.6306,
+        "macro_f1": 0.5642,
+        "weighted_f1": 0.6154,
         "per_sector": {
           "ai_data": {
-            "precision": 0.6263,
-            "recall": 0.6596,
-            "f1": 0.6425,
-            "support": 94
+            "precision": 0.5536,
+            "recall": 0.5636,
+            "f1": 0.5586,
+            "support": 110
           },
           "aviation": {
-            "precision": 0.5,
-            "recall": 0.1034,
-            "f1": 0.1714,
-            "support": 29
+            "precision": 0.5333,
+            "recall": 0.1905,
+            "f1": 0.2807,
+            "support": 42
           },
           "construction": {
-            "precision": 0.61,
-            "recall": 0.7531,
-            "f1": 0.674,
-            "support": 81
+            "precision": 0.4805,
+            "recall": 0.3854,
+            "f1": 0.4277,
+            "support": 96
           },
           "cybersecurity": {
-            "precision": 0.5217,
-            "recall": 0.2264,
-            "f1": 0.3158,
-            "support": 53
-          },
-          "education": {
-            "precision": 0.6947,
-            "recall": 0.7674,
-            "f1": 0.7293,
-            "support": 86
-          },
-          "energy": {
-            "precision": 0.6458,
-            "recall": 0.8267,
-            "f1": 0.7251,
-            "support": 75
-          },
-          "entrepreneurship": {
             "precision": 0.6667,
-            "recall": 0.6047,
-            "f1": 0.6341,
-            "support": 43
-          },
-          "finance": {
-            "precision": 0.6832,
-            "recall": 0.8214,
-            "f1": 0.7459,
-            "support": 84
-          },
-          "government": {
-            "precision": 0.6102,
-            "recall": 0.5373,
-            "f1": 0.5714,
-            "support": 67
-          },
-          "healthcare": {
-            "precision": 0.8257,
-            "recall": 0.9091,
-            "f1": 0.8654,
-            "support": 99
-          },
-          "logistics": {
-            "precision": 0.5577,
-            "recall": 0.5,
-            "f1": 0.5273,
+            "recall": 0.2414,
+            "f1": 0.3544,
             "support": 58
           },
+          "education": {
+            "precision": 0.6429,
+            "recall": 0.7159,
+            "f1": 0.6774,
+            "support": 88
+          },
+          "energy": {
+            "precision": 0.4512,
+            "recall": 0.3895,
+            "f1": 0.4181,
+            "support": 95
+          },
+          "engineering": {
+            "precision": 0.4747,
+            "recall": 0.6818,
+            "f1": 0.5597,
+            "support": 110
+          },
+          "entrepreneurship": {
+            "precision": 0.8718,
+            "recall": 0.5667,
+            "f1": 0.6869,
+            "support": 60
+          },
+          "finance": {
+            "precision": 0.6667,
+            "recall": 0.7925,
+            "f1": 0.7241,
+            "support": 106
+          },
+          "government": {
+            "precision": 0.6186,
+            "recall": 0.6897,
+            "f1": 0.6522,
+            "support": 87
+          },
+          "healthcare": {
+            "precision": 0.7722,
+            "recall": 0.9476,
+            "f1": 0.851,
+            "support": 229
+          },
+          "law": {
+            "precision": 0.619,
+            "recall": 0.5821,
+            "f1": 0.6,
+            "support": 67
+          },
+          "logistics": {
+            "precision": 0.6316,
+            "recall": 0.3333,
+            "f1": 0.4364,
+            "support": 72
+          },
           "media": {
-            "precision": 0.8333,
-            "recall": 0.5208,
-            "f1": 0.641,
-            "support": 48
+            "precision": 0.8354,
+            "recall": 0.7765,
+            "f1": 0.8049,
+            "support": 85
+          },
+          "social": {
+            "precision": 0.5882,
+            "recall": 0.4,
+            "f1": 0.4762,
+            "support": 50
           },
           "software": {
-            "precision": 0.5344,
-            "recall": 0.6667,
-            "f1": 0.5932,
-            "support": 105
+            "precision": 0.5179,
+            "recall": 0.7537,
+            "f1": 0.614,
+            "support": 134
           },
           "space": {
-            "precision": 0.5,
-            "recall": 0.0588,
-            "f1": 0.1053,
-            "support": 17
+            "precision": 0.6667,
+            "recall": 0.16,
+            "f1": 0.2581,
+            "support": 25
           },
           "tourism": {
-            "precision": 0.7586,
-            "recall": 0.7213,
-            "f1": 0.7395,
-            "support": 61
+            "precision": 0.8101,
+            "recall": 0.7442,
+            "f1": 0.7758,
+            "support": 86
+          }
+        }
+      }
+    },
+    "gradient_boosting": {
+      "cv_accuracy_mean": 0.6625,
+      "cv_accuracy_std": 0.01,
+      "cv_macro_f1_mean": 0.6106,
+      "cv_macro_f1_std": 0.0085,
+      "fit_seconds": 39.79,
+      "test": {
+        "accuracy": 0.66,
+        "macro_f1": 0.6216,
+        "weighted_f1": 0.6554,
+        "per_sector": {
+          "ai_data": {
+            "precision": 0.6179,
+            "recall": 0.6909,
+            "f1": 0.6524,
+            "support": 110
+          },
+          "aviation": {
+            "precision": 0.5556,
+            "recall": 0.3571,
+            "f1": 0.4348,
+            "support": 42
+          },
+          "construction": {
+            "precision": 0.4646,
+            "recall": 0.4792,
+            "f1": 0.4718,
+            "support": 96
+          },
+          "cybersecurity": {
+            "precision": 0.4762,
+            "recall": 0.3448,
+            "f1": 0.4,
+            "support": 58
+          },
+          "education": {
+            "precision": 0.7073,
+            "recall": 0.6591,
+            "f1": 0.6824,
+            "support": 88
+          },
+          "energy": {
+            "precision": 0.5581,
+            "recall": 0.5053,
+            "f1": 0.5304,
+            "support": 95
+          },
+          "engineering": {
+            "precision": 0.5207,
+            "recall": 0.5727,
+            "f1": 0.5455,
+            "support": 110
+          },
+          "entrepreneurship": {
+            "precision": 0.8125,
+            "recall": 0.65,
+            "f1": 0.7222,
+            "support": 60
+          },
+          "finance": {
+            "precision": 0.713,
+            "recall": 0.7736,
+            "f1": 0.7421,
+            "support": 106
+          },
+          "government": {
+            "precision": 0.6289,
+            "recall": 0.7011,
+            "f1": 0.663,
+            "support": 87
+          },
+          "healthcare": {
+            "precision": 0.7947,
+            "recall": 0.9127,
+            "f1": 0.8496,
+            "support": 229
+          },
+          "law": {
+            "precision": 0.7119,
+            "recall": 0.6269,
+            "f1": 0.6667,
+            "support": 67
+          },
+          "logistics": {
+            "precision": 0.5538,
+            "recall": 0.5,
+            "f1": 0.5255,
+            "support": 72
+          },
+          "media": {
+            "precision": 0.7976,
+            "recall": 0.7882,
+            "f1": 0.7929,
+            "support": 85
+          },
+          "social": {
+            "precision": 0.5,
+            "recall": 0.46,
+            "f1": 0.4792,
+            "support": 50
+          },
+          "software": {
+            "precision": 0.6299,
+            "recall": 0.7239,
+            "f1": 0.6736,
+            "support": 134
+          },
+          "space": {
+            "precision": 0.8462,
+            "recall": 0.44,
+            "f1": 0.5789,
+            "support": 25
+          },
+          "tourism": {
+            "precision": 0.8289,
+            "recall": 0.7326,
+            "f1": 0.7778,
+            "support": 86
           }
         }
       }
     }
   },
   "selected_model": {
-    "name": "random_forest",
+    "name": "logistic_regression",
     "reason": "Best macro-F1 under cross-validation among the three candidates, and the only one that gives both calibrated class probabilities and per-feature importances, which the student-facing explanation depends on.",
     "test": {
-      "accuracy": 0.69,
-      "macro_f1": 0.6516,
-      "weighted_f1": 0.6874,
+      "accuracy": 0.6619,
+      "macro_f1": 0.629,
+      "weighted_f1": 0.6657,
       "per_sector": {
         "ai_data": {
-          "precision": 0.6633,
-          "recall": 0.6915,
-          "f1": 0.6771,
-          "support": 94
+          "precision": 0.6837,
+          "recall": 0.6091,
+          "f1": 0.6442,
+          "support": 110
         },
         "aviation": {
-          "precision": 0.4722,
-          "recall": 0.5862,
-          "f1": 0.5231,
-          "support": 29
+          "precision": 0.3125,
+          "recall": 0.4762,
+          "f1": 0.3774,
+          "support": 42
         },
         "construction": {
-          "precision": 0.7778,
-          "recall": 0.7778,
-          "f1": 0.7778,
-          "support": 81
+          "precision": 0.5263,
+          "recall": 0.4167,
+          "f1": 0.4651,
+          "support": 96
         },
         "cybersecurity": {
-          "precision": 0.4821,
-          "recall": 0.5094,
-          "f1": 0.4954,
-          "support": 53
-        },
-        "education": {
-          "precision": 0.7975,
-          "recall": 0.7326,
-          "f1": 0.7636,
-          "support": 86
-        },
-        "energy": {
-          "precision": 0.7625,
-          "recall": 0.8133,
-          "f1": 0.7871,
-          "support": 75
-        },
-        "entrepreneurship": {
-          "precision": 0.6596,
-          "recall": 0.7209,
-          "f1": 0.6889,
-          "support": 43
-        },
-        "finance": {
-          "precision": 0.7111,
-          "recall": 0.7619,
-          "f1": 0.7356,
-          "support": 84
-        },
-        "government": {
-          "precision": 0.6154,
-          "recall": 0.597,
-          "f1": 0.6061,
-          "support": 67
-        },
-        "healthcare": {
-          "precision": 0.8411,
-          "recall": 0.9091,
-          "f1": 0.8738,
-          "support": 99
-        },
-        "logistics": {
-          "precision": 0.5769,
-          "recall": 0.5172,
-          "f1": 0.5455,
+          "precision": 0.4368,
+          "recall": 0.6552,
+          "f1": 0.5241,
           "support": 58
         },
-        "media": {
-          "precision": 0.8,
+        "education": {
+          "precision": 0.6988,
+          "recall": 0.6591,
+          "f1": 0.6784,
+          "support": 88
+        },
+        "energy": {
+          "precision": 0.5051,
+          "recall": 0.5263,
+          "f1": 0.5155,
+          "support": 95
+        },
+        "engineering": {
+          "precision": 0.5702,
+          "recall": 0.5909,
+          "f1": 0.5804,
+          "support": 110
+        },
+        "entrepreneurship": {
+          "precision": 0.7895,
           "recall": 0.75,
-          "f1": 0.7742,
-          "support": 48
+          "f1": 0.7692,
+          "support": 60
+        },
+        "finance": {
+          "precision": 0.8,
+          "recall": 0.717,
+          "f1": 0.7562,
+          "support": 106
+        },
+        "government": {
+          "precision": 0.7159,
+          "recall": 0.7241,
+          "f1": 0.72,
+          "support": 87
+        },
+        "healthcare": {
+          "precision": 0.8603,
+          "recall": 0.8603,
+          "f1": 0.8603,
+          "support": 229
+        },
+        "law": {
+          "precision": 0.7333,
+          "recall": 0.6567,
+          "f1": 0.6929,
+          "support": 67
+        },
+        "logistics": {
+          "precision": 0.5085,
+          "recall": 0.4167,
+          "f1": 0.458,
+          "support": 72
+        },
+        "media": {
+          "precision": 0.8095,
+          "recall": 0.8,
+          "f1": 0.8047,
+          "support": 85
+        },
+        "social": {
+          "precision": 0.4839,
+          "recall": 0.6,
+          "f1": 0.5357,
+          "support": 50
         },
         "software": {
-          "precision": 0.5667,
-          "recall": 0.4857,
-          "f1": 0.5231,
-          "support": 105
+          "precision": 0.7288,
+          "recall": 0.6418,
+          "f1": 0.6825,
+          "support": 134
         },
         "space": {
-          "precision": 0.2308,
-          "recall": 0.1765,
-          "f1": 0.2,
-          "support": 17
+          "precision": 0.3696,
+          "recall": 0.68,
+          "f1": 0.4789,
+          "support": 25
         },
         "tourism": {
-          "precision": 0.8033,
-          "recall": 0.8033,
-          "f1": 0.8033,
-          "support": 61
+          "precision": 0.8025,
+          "recall": 0.7558,
+          "f1": 0.7784,
+          "support": 86
         }
       }
     }
   },
   "permutation_importance": {
-    "riasec_R": 0.1334,
-    "riasec_A": 0.1282,
-    "computer_science": 0.0996,
-    "riasec_S": 0.0978,
-    "riasec_E": 0.0472,
-    "chemistry": 0.0316,
-    "biology": 0.0262,
-    "physics": 0.0218,
-    "riasec_I": 0.019,
-    "social": 0.0122,
-    "big5_A": 0.0118,
-    "riasec_C": 0.0098,
-    "english": 0.0092,
-    "math": 0.008,
-    "big5_E": 0.008,
-    "arabic": 0.0074,
-    "big5_O": 0.0022,
-    "emirate": 0.0012,
-    "big5_C": 0.0006,
-    "emsat_provided": 0.0004,
-    "track": 0.0004,
-    "big5_N": -0.0,
-    "emsat_physics": -0.0002,
-    "islamic": -0.0006,
-    "emsat_math": -0.0012,
-    "emsat_arabic": -0.0012,
-    "emsat_english": -0.0028
+    "riasec_R": 0.15,
+    "riasec_A": 0.119,
+    "computer_science": 0.08962,
+    "biology": 0.07087,
+    "riasec_S": 0.068,
+    "physics": 0.06587,
+    "math": 0.05812,
+    "riasec_E": 0.05525,
+    "arabic": 0.04563,
+    "chemistry": 0.04525,
+    "big5_E": 0.03587,
+    "social": 0.03575,
+    "track": 0.03513,
+    "big5_A": 0.03162,
+    "english": 0.0295,
+    "islamic": 0.0255,
+    "riasec_I": 0.02012,
+    "riasec_C": 0.01638,
+    "big5_O": 0.01212,
+    "big5_C": 0.00825,
+    "big5_N": 0.00812,
+    "emsat_math": 0.0065,
+    "emsat_provided": 0.00375,
+    "emsat_english": 0.0035,
+    "emirate": 0.00337,
+    "emsat_arabic": 0.00262,
+    "emsat_physics": -0.00025
   },
   "environment": {
     "python": "3.11.16",

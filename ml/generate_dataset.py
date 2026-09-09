@@ -54,17 +54,26 @@ from pipeline import (  # noqa: E402
 )
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data"
+# The catalogs moved to the app's public directory in v2: static export
+# serves them directly to the browser, so that is the single source of
+# truth and the ML pipeline reads the same files the app does.
+DATA_DIR = ROOT / "frontend" / "public" / "data"
 OUT_DIR = pathlib.Path(__file__).resolve().parent / "data"
 
 # Prior over sectors: relative share of the synthetic cohort.  Larger sectors
 # employ more people, so more students end up there.
+# Healthcare's share rises sharply from v1: it is now 45 of the 184 careers,
+# and a prior that ignored that would train a classifier which almost never
+# predicts the largest sector in the catalog.
 SECTOR_PRIOR: dict[str, float] = {
-    "software": 0.11, "ai_data": 0.09, "healthcare": 0.10, "finance": 0.09,
-    "education": 0.08, "construction": 0.08, "energy": 0.08, "government": 0.07,
-    "logistics": 0.06, "tourism": 0.06, "cybersecurity": 0.05, "media": 0.05,
-    "entrepreneurship": 0.04, "aviation": 0.03, "space": 0.01,
+    "healthcare": 0.150, "software": 0.080, "ai_data": 0.070, "finance": 0.070,
+    "engineering": 0.070, "construction": 0.060, "energy": 0.060,
+    "education": 0.055, "government": 0.055, "media": 0.055, "tourism": 0.055,
+    "logistics": 0.045, "law": 0.040, "cybersecurity": 0.035,
+    "entrepreneurship": 0.035, "social": 0.030, "aviation": 0.025,
+    "space": 0.010,
 }
+assert abs(sum(SECTOR_PRIOR.values()) - 1.0) < 1e-9, "sector prior must sum to 1"
 
 # Population-weighted emirate distribution (approximate published shares).
 EMIRATE_PRIOR = np.array([0.31, 0.38, 0.12, 0.05, 0.01, 0.09, 0.04])
@@ -87,7 +96,7 @@ def sector_ideal_profiles() -> dict[str, dict[str, dict[str, float]]]:
     careers = json.loads((DATA_DIR / "careers.json").read_text(encoding="utf-8"))
     buckets: dict[str, list[dict]] = {}
     for career in careers:
-        buckets.setdefault(career["sector"], []).append(career["profile"])
+        buckets.setdefault(career["sector"], []).append(career["idealProfile"])
 
     ideals: dict[str, dict[str, dict[str, float]]] = {}
     for sector, profiles in buckets.items():
@@ -171,7 +180,7 @@ def generate(n: int, seed: int) -> pd.DataFrame:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("--n", type=int, default=5000, help="number of profiles")
+    parser.add_argument("--n", type=int, default=8000, help="number of profiles")
     parser.add_argument("--seed", type=int, default=42, help="random seed")
     parser.add_argument("--out", type=pathlib.Path, default=OUT_DIR / "students.csv")
     args = parser.parse_args()

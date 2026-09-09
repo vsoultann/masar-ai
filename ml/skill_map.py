@@ -66,8 +66,43 @@ SKILL_WEIGHTS: dict[str, dict[str, float]] = {
     "problem_solving":      {"math": .35, "physics": .20, "riasec_I": .30, "big5_O": .15},
     "aviation_ops":         {"physics": .30, "english": .25, "riasec_R": .20, "big5_C": .25},
     "geospatial_gis":       {"social": .25, "computer_science": .30, "math": .25, "riasec_I": .20},
+    # --- added in v2 -------------------------------------------------------
+    # Same four rules as above. The clinical and allied-health skills lean on
+    # biology and chemistry because that is the only academic evidence we have
+    # for them; the caveat in the module docstring applies with particular
+    # force here, since no school subject measures whether someone can care for
+    # a frightened patient.
+    "patient_care":         {"biology": .30, "riasec_S": .30, "big5_A": .25, "big5_E": .15},
+    "diagnostic_imaging":   {"physics": .35, "biology": .25, "big5_C": .25, "riasec_I": .15},
+    "surgical_skills":      {"biology": .35, "chemistry": .15, "riasec_R": .25, "big5_C": .25},
+    "pharmacology":         {"chemistry": .45, "biology": .30, "riasec_I": .15, "big5_C": .10},
+    "dental_skills":        {"biology": .30, "chemistry": .20, "riasec_R": .30, "big5_C": .20},
+    "lab_diagnostics":      {"chemistry": .40, "biology": .30, "big5_C": .20, "riasec_C": .10},
+    "rehabilitation":       {"biology": .35, "riasec_S": .30, "big5_A": .20, "big5_E": .15},
+    "counselling":          {"social": .25, "riasec_S": .35, "big5_A": .25, "big5_E": .15},
+    "nutrition_diet":       {"biology": .40, "chemistry": .20, "riasec_S": .25, "big5_C": .15},
+    "veterinary_care":      {"biology": .45, "chemistry": .20, "riasec_R": .20, "big5_A": .15},
+    "emergency_response":   {"biology": .20, "riasec_R": .30, "big5_C": .25, "big5_N": .25},
+    "child_development":    {"social": .25, "biology": .20, "riasec_S": .35, "big5_A": .20},
+    "manufacturing_ops":    {"physics": .35, "math": .20, "riasec_R": .30, "big5_C": .15},
+    "quality_control":      {"math": .25, "chemistry": .15, "big5_C": .40, "riasec_C": .20},
+    "hr_people":            {"social": .25, "big5_A": .30, "big5_E": .25, "riasec_S": .20},
+    "sales_negotiation":    {"english": .20, "riasec_E": .35, "big5_E": .30, "social": .15},
+    "journalism_reporting": {"arabic": .25, "english": .25, "riasec_I": .25, "big5_O": .25},
+    "photography_video":    {"riasec_A": .40, "big5_O": .30, "physics": .15, "computer_science": .15},
+    "animation_3d":         {"computer_science": .30, "riasec_A": .35, "big5_O": .25, "math": .10},
+    "sound_audio":          {"physics": .30, "riasec_A": .35, "big5_O": .20, "computer_science": .15},
+    "translation_skill":    {"arabic": .35, "english": .35, "big5_C": .15, "riasec_A": .15},
+    "hospitality_ops":      {"social": .20, "riasec_E": .25, "big5_E": .30, "big5_A": .25},
+    "culinary":             {"chemistry": .15, "riasec_R": .30, "riasec_A": .30, "big5_C": .25},
+    "sports_coaching":      {"biology": .20, "riasec_S": .30, "big5_E": .30, "riasec_R": .20},
+    "curation_heritage":    {"social": .30, "islamic": .15, "riasec_A": .30, "big5_O": .25},
+    "islamic_studies_skill": {"islamic": .50, "arabic": .30, "riasec_I": .10, "big5_C": .10},
+    "fashion_textiles":     {"riasec_A": .45, "big5_O": .30, "riasec_R": .15, "big5_C": .10},
+    "spatial_design":       {"riasec_A": .40, "big5_O": .25, "math": .20, "physics": .15},
+    "maritime_ops":         {"physics": .25, "riasec_R": .35, "big5_C": .25, "social": .15},
+    "agriculture_food":     {"biology": .45, "chemistry": .25, "riasec_R": .20, "big5_C": .10},
 }
-
 # Big Five Neuroticism is the one feature where a *low* score is the asset, so
 # it is inverted before being used (see estimate_skills).
 INVERTED_FEATURES = {"big5_N"}

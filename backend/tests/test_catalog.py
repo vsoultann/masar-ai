@@ -1,6 +1,21 @@
 """Public catalog endpoints and their filters."""
 from __future__ import annotations
 
+import json
+import pathlib
+
+# Sizes are read from the catalogs rather than hardcoded. The v1 versions of
+# these tests asserted 60 careers and 15 sectors, and every one of them broke
+# when the catalog grew -- which told us nothing except that the numbers had
+# changed. What is worth asserting is that the API serves the whole catalog and
+# meets the minimums the brief sets, not a literal that has to be edited each
+# time a career is added.
+DATA = pathlib.Path(__file__).resolve().parents[2] / "frontend" / "public" / "data"
+
+
+def catalog(name: str) -> list[dict]:
+    return json.loads((DATA / name).read_text(encoding="utf-8"))
+
 
 def test_catalog_is_public(client):
     assert client.get("/api/careers").status_code == 200
@@ -9,10 +24,18 @@ def test_catalog_is_public(client):
 
 
 def test_catalog_sizes_match_the_specification(client):
-    assert client.get("/api/careers").json()["total"] == 60
-    assert client.get("/api/courses").json()["total"] == 120
-    assert len(client.get("/api/sectors").json()["sectors"]) == 15
-    assert len(client.get("/api/skills").json()["skills"]) == 40
+    careers = client.get("/api/careers").json()["total"]
+    courses = client.get("/api/courses").json()["total"]
+
+    # The API serves everything in the catalogs...
+    assert careers == len(catalog("careers.json"))
+    assert courses == len(catalog("courses.json"))
+    assert len(client.get("/api/sectors").json()["sectors"]) == len(catalog("sectors.json"))
+    assert len(client.get("/api/skills").json()["skills"]) == len(catalog("skills.json"))
+
+    # ...and the catalogs meet the minimums the brief requires.
+    assert careers >= 140
+    assert courses >= 150
 
 
 def test_every_career_is_fully_bilingual(client):
@@ -50,8 +73,9 @@ def test_search_matches_english_and_arabic(client):
 
 
 def test_sector_filter(client):
-    body = client.get("/api/careers", params={"sector": "ai_data"}).json()
-    assert body["total"] == 4
+    expected = sum(1 for c in catalog("careers.json") if c["sector"] == "ai_data")
+    body = client.get("/api/careers", params={"sector": "ai_data", "limit": 100}).json()
+    assert body["total"] == expected
     assert all(career["sector"] == "ai_data" for career in body["careers"])
 
 
@@ -85,4 +109,4 @@ def test_unknown_career_returns_404(client):
 def test_pagination(client):
     page = client.get("/api/careers", params={"limit": 5, "offset": 10}).json()
     assert page["count"] == 5
-    assert page["total"] == 60
+    assert page["total"] == len(catalog("careers.json"))

@@ -126,8 +126,10 @@ def test_crud_rejects_an_invalid_id_format(client, admin_auth):
 def test_model_endpoint_exposes_metrics(client, admin_auth):
     body = client.get("/api/admin/model", headers=admin_auth).json()
     assert body["model"]["available"] is True
-    assert body["model"]["name"] == "random_forest"
+    assert body["model"]["name"] == "logistic_regression"
     assert body["metrics"]["available"] is True
     selected = body["metrics"]["selected_model"]
     assert 0 < selected["test"]["accuracy"] <= 1
-    assert len(body["metrics"]["model_comparison"]) == 3
+    # Four candidates since v2 added gradient boosting to the comparison.
+    assert set(body["metrics"]["model_comparison"]) == {
+        "random_forest", "logistic_regression", "knn", "gradient_boosting"}

@@ -56,6 +56,45 @@ def load(name: str) -> list[dict]:
     return json.loads((DATA_DIR / name).read_text(encoding="utf-8"))
 
 
+def to_v1_career(record: dict) -> dict:
+    """Flatten a v2 career record into the shape this schema stores.
+
+    The backend's ORM and routers were written against v1's flat field names.
+    v2 restructured the catalog (nested bilingual objects, salary tiers,
+    renamed ideal profile), and rewriting the ORM to match would be work in
+    service of a component that is no longer the runtime.
+
+    An adapter is the proportionate answer: one function, applied at seed time,
+    so the tables, schemas and routers below it are untouched. A v1 record is
+    passed through unchanged, which keeps this safe if the source is ever
+    pointed back at the old catalogs.
+    """
+    if "title_en" in record:
+        return record                      # already v1
+
+    salary = record["salaryAED"]
+    return {
+        "id": record["id"],
+        "title_en": record["title"]["en"],
+        "title_ar": record["title"]["ar"],
+        "sector": record["sector"],
+        "demand": record["demandOutlook"],
+        "description_en": record["shortDescription"]["en"],
+        "description_ar": record["shortDescription"]["ar"],
+        "skills": record["skills"],
+        "profile": record["idealProfile"],
+        "salary_aed": {
+            "min": salary["entry"], "max": salary["senior"], "period": salary["period"],
+            "note_en": salary["note"]["en"], "note_ar": salary["note"]["ar"],
+        },
+        "degrees_en": record["educationPath"]["relatedMajors"],
+        "degrees_ar": record["educationPath"]["relatedMajors"],
+        "employers_en": record["employers"]["en"],
+        "employers_ar": record["employers"]["ar"],
+        "initiatives": record["strategicInitiatives"],
+    }
+
+
 def seed_users(db: Session) -> int:
     created = 0
     for account in DEMO_ACCOUNTS:
@@ -83,7 +122,8 @@ def seed_users(db: Session) -> int:
 
 def seed_careers(db: Session) -> int:
     created = 0
-    for record in load("careers.json"):
+    for raw in load("careers.json"):
+        record = to_v1_career(raw)
         if db.get(Career, record["id"]):
             continue
         data = dict(record)

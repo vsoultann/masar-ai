@@ -185,3 +185,84 @@ It has already paid for itself: on first run it caught a duplicate course id
 between the v1 and v2 catalogs, and eight careers — the whole allied-health
 family plus both chefs — whose majors were taught by no institution in the
 dataset, which would have made "where to study this" silently empty for them.
+
+### D-11 · The deployed model is the Logistic Regression — because it won
+
+**Decision.** `SELECTED_MODEL = "logistic_regression"`. The Random Forest that
+v1 served is kept in the comparison as the offline benchmark.
+
+**Why.** Not deployment convenience. On the 18-sector label space the linear
+model is simply better than the forest, on both metrics:
+
+| model | CV macro-F1 | held-out accuracy |
+|---|---|---|
+| logistic_regression | **0.6234** | **0.6619** |
+| gradient_boosting | 0.6106 | 0.6600 |
+| random_forest | 0.6181 | 0.6412 |
+| knn | 0.5642 | 0.6306 |
+
+The forest's v1 advantage came from modelling sharp interactions across 15
+well-separated sectors. Adding `engineering`, `law` and `social` — which overlap
+heavily with sectors already present — moved the problem towards one the linear
+model handles better. It would be the served model even with a Python backend.
+
+That it also deploys exactly to a static host is a real bonus rather than the
+reason: a coefficient matrix plus intercepts is ~9 KB of JSON, needs no WASM
+runtime, and `matmul + softmax` reproduces `predict_proba` to floating-point
+noise. `model.joblib` fell from 16.6 MB to 8.6 KB as a side effect.
+
+The brief's option (a) — exporting the forest as JSON trees — was rejected on
+size: 300 trees at depth 22 is tens of megabytes of JSON. Option (c), ONNX plus
+`onnxruntime-web`, would have added a multi-megabyte WASM runtime to run a model
+that is worse than the one that fits in 9 KB.
+
+### D-12 · Parity is enforced by a test, not by care
+
+**Decision.** `ml/tests/test_parity.py` runs 50 fixed profiles through the real
+scikit-learn pipeline and writes fixtures; `tests/inference-parity.test.ts`
+replays them through the TypeScript port and asserts agreement at 1e-6 —
+covering probabilities, match scores, every blend component, rank order,
+confidence labels and explanation factors.
+
+**Why.** The app no longer runs the Python model. A silent divergence between
+the two implementations is the most dangerous defect available in this project:
+the model that is trained, evaluated, documented and defended would not be the
+model advising students, and *nothing would fail*. No error, no warning, just
+different advice.
+
+The 50 profiles are not purely random. Three are pinned to the edges a random
+draw would essentially never produce — all grades at the floor, all at the
+ceiling, and a profile with no EmSAT scores at all — because those are exactly
+where a centred cosine collapses (every deviation is zero, the denominator
+vanishes) and where the imputer and `emsat_provided` flag actually do work.
+
+**What it caught immediately.** Explanation ordering diverged on flat profiles:
+`np.argsort` defaults to an unstable quicksort, while `Array.prototype.sort` is
+stable, so tied contributions came out in different orders. Rather than make one
+side imitate an unspecified behaviour of the other, both now break ties on
+dimension index explicitly.
+
+### D-13 · The backend reads the v2 catalogs through an adapter
+
+**Decision.** `DATA_DIR` points at `frontend/public/data`, and `seed.py` gains a
+`to_v1_career()` that flattens a v2 record into the field names the existing ORM
+stores. The `data/*.json` duplicates are deleted and the v1 builder now refuses
+to run standalone.
+
+**Why.** After Phase B there were two catalogs: 184 careers in the app and 60 in
+`data/`, with one shared model trained on the 18-sector label space serving a
+backend whose catalog knew 15. That is precisely the divergence a single source
+of truth exists to prevent.
+
+Rewriting the backend's ORM, schemas and routers to the v2 shape would be
+substantial work in service of a component that is no longer the runtime. One
+adapter function at seed time leaves everything below it untouched, and passes a
+v1 record through unchanged so it stays safe if pointed back at the old files.
+
+**What the failures were worth.** Seven backend tests broke, and only two were
+merely stale literals. `skill_map.py` had no mapping for any of the 30 skills v2
+introduced — so skill-gap analysis was silently blind across the whole of
+healthcare, law and the creative sector. That is a real feature defect the test
+suite caught. Assertions that hardcoded catalog sizes are now derived from the
+catalogs, so they measure the property they claim to rather than a number that
+has to be edited whenever a career is added.

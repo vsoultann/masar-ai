@@ -18,7 +18,8 @@ from typing import Any
 import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import (HistGradientBoostingClassifier,
+                              RandomForestClassifier)
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
@@ -144,7 +145,7 @@ def build_preprocessor() -> ColumnTransformer:
 
 
 def build_models(random_state: int = 42) -> dict[str, Pipeline]:
-    """The three candidate classifiers compared in docs/ML_METHODOLOGY.md."""
+    """The four candidate classifiers compared in docs/ML_METHODOLOGY.md."""
     return {
         "random_forest": Pipeline([
             ("prep", build_preprocessor()),
@@ -159,12 +160,24 @@ def build_models(random_state: int = 42) -> dict[str, Pipeline]:
         ]),
         "logistic_regression": Pipeline([
             ("prep", build_preprocessor()),
+            # multi_class is not passed: it is deprecated in scikit-learn 1.5
+            # and multinomial is already the behaviour for this solver.
             ("clf", LogisticRegression(
                 max_iter=2000, C=1.0, class_weight="balanced",
-                multi_class="multinomial", random_state=random_state)),
+                random_state=random_state)),
         ]),
         "knn": Pipeline([
             ("prep", build_preprocessor()),
             ("clf", KNeighborsClassifier(n_neighbors=25, weights="distance")),
+        ]),
+        # Added in v2. Histogram-based rather than the classic implementation:
+        # with 18 classes and 8,000 rows the exact learner takes minutes per CV
+        # fold, which makes the comparison too slow to rerun casually, and a
+        # comparison nobody reruns stops being a check.
+        "gradient_boosting": Pipeline([
+            ("prep", build_preprocessor()),
+            ("clf", HistGradientBoostingClassifier(
+                max_iter=300, learning_rate=0.08, max_depth=8,
+                l2_regularization=1.0, random_state=random_state)),
         ]),
     }

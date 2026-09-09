@@ -1897,4 +1897,15 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    # Superseded by v2. This module is still the authoritative source for the
+    # 60 v1 careers and 120 v1 courses -- `data/v2/build.py` imports CAREERS,
+    # COURSES and SKILLS from here and upgrades them -- but running it directly
+    # would write a second, stale copy of the catalogs into data/, which is
+    # exactly the divergence v2 removed. Build with:
+    #
+    #     cd data && python -m v2.build
+    raise SystemExit(
+        "This builder is superseded. Run `python -m v2.build` from data/ "
+        "instead; it reuses the content defined here and writes the v2 "
+        "catalogs to frontend/public/data/."
+    )

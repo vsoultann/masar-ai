@@ -38,7 +38,9 @@ def test_sector_probabilities_sum_to_one(client, student_auth):
     # Probabilities are rounded to four decimals for the wire, so the sum can
     # drift by up to 15 * 5e-5.
     assert total == pytest.approx(1.0, abs=1e-3)
-    assert len(body["sector_probabilities"]) == 15
+    # One probability per sector the classifier was trained on.
+    from app import ml_loader
+    assert len(body["sector_probabilities"]) == len(ml_loader.load_bundle()["labels"])
 
 
 def test_recommendations_are_deterministic(client, student_auth):
@@ -112,7 +114,12 @@ def test_learning_path_is_populated_even_for_a_student_with_no_gaps(client, stud
 
 def test_estimated_skills_cover_the_whole_taxonomy(client, student_auth):
     skills = client.get("/api/skills/me", headers=student_auth).json()["skills"]
-    assert len(skills) == 40
+    # "the whole taxonomy" means exactly that: compare against the catalog
+    # rather than a literal, which is what made this break when v2 added 30
+    # skills the estimator now covers.
+    from skill_map import SKILL_WEIGHTS
+    assert len(skills) == len(SKILL_WEIGHTS)
+    assert {s["skill_id"] for s in skills} == set(SKILL_WEIGHTS)
     assert all(0 <= skill["value"] <= 100 for skill in skills)
 
 
