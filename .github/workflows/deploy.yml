@@ -1,0 +1,38 @@
+name: Deploy
+
+# Vercel and Render both watch the repository themselves once connected, so
+# this workflow only fires their deploy hooks for the cases where automatic
+# deploys are switched off. It is a no-op until the secrets are added, rather
+# than a red X on every push.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Trigger hosted deploys
+    runs-on: ubuntu-latest
+    steps:
+      - name: Backend (Render)
+        env:
+          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "RENDER_DEPLOY_HOOK_URL is not set - skipping."
+            echo "Add it in Settings > Secrets and variables > Actions."
+            exit 0
+          fi
+          curl --fail --silent --show-error -X POST "$HOOK"
+          echo "Render deploy triggered."
+
+      - name: Frontend (Vercel)
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "VERCEL_DEPLOY_HOOK_URL is not set - skipping."
+            exit 0
+          fi
+          curl --fail --silent --show-error -X POST "$HOOK"
+          echo "Vercel deploy triggered."

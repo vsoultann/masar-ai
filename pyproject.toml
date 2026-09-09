@@ -1,0 +1,22 @@
+# Lint configuration for the Python side (backend/ and ml/).
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [".venv", "backend/alembic/versions"]
+
+[tool.ruff.lint]
+# Core correctness rules. Style-only families (I/UP/SIM) are deliberately left
+# out: they would rewrite files across the whole project for no behavioural gain.
+select = ["E", "F", "W"]
+ignore = [
+    "E501",   # long lines are caught by the formatter, not the linter
+    "B008",   # FastAPI's Depends() in defaults is the framework's idiom
+]
+
+[tool.ruff.lint.per-file-ignores]
+# These modules extend sys.path before importing the shared ml package, which
+# necessarily puts imports after statements.
+"ml/*.py" = ["E402"]
+"backend/app/ml_loader.py" = ["E402"]
+"backend/app/routers/profile.py" = ["E402"]
+"backend/tests/conftest.py" = ["E402"]

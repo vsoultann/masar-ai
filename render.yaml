@@ -1,0 +1,31 @@
+# Render blueprint. In Render: New > Blueprint > pick this repository.
+#
+# The free plan spins the service down after ~15 minutes of inactivity, so the
+# first request after a quiet period takes 30-60 seconds while the container
+# starts and the model is loaded. Warm it up before a live demo by opening
+# /health once.
+services:
+  - type: web
+    name: masar-ai-api
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      # SQLite on the container's ephemeral disk: it is reseeded on every
+      # deploy, which is what a demo wants. Swap in a Postgres URL for anything
+      # that must survive a restart.
+      - key: DATABASE_URL
+        value: sqlite:////app/backend/masar.db
+      - key: SECRET_KEY
+        generateValue: true
+      - key: AUTO_SEED
+        value: "1"
+      - key: CORS_ORIGINS
+        # Replace with the Vercel URL once the frontend is deployed.
+        value: "http://localhost:3000"
+      - key: ANTHROPIC_API_KEY
+        sync: false

@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    name: Backend (lint, ML, tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r backend/requirements.txt
+
+      - name: Lint
+        run: ruff check backend ml
+
+      - name: Check the committed dataset is reproducible
+        # The CSV in the repo must be regenerable from the committed seed; if it
+        # is not, every number in the docs is unverifiable.
+        run: |
+          python ml/generate_dataset.py --out /tmp/students.csv
+          python - <<'PY'
+          import pandas as pd
+          committed = pd.read_csv("ml/data/students.csv")
+          regenerated = pd.read_csv("/tmp/students.csv")
+          assert committed.equals(regenerated), "ml/data/students.csv is out of date"
+          print(f"dataset reproduced exactly: {len(committed)} rows")
+          PY
+
+      - name: Tests
+        working-directory: backend
+        env:
+          PYTHONPATH: .:../ml
+        run: pytest -q --cov=app --cov-report=term-missing
+
+  frontend:
+    name: Frontend (lint, types, tests, build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+  docker:
+    name: Docker images build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build backend image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: backend/Dockerfile
+          push: false
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build frontend image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./frontend
+          push: false
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

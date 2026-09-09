@@ -103,7 +103,7 @@ def get_recommender(db: Session) -> CareerRecommender:
 def reload_model() -> dict[str, Any]:
     """Re-read the joblib bundle from disk (used by the admin retrain button)."""
     global _recommender
-    bundle = load_bundle(force=True)
+    load_bundle(force=True)
     with _lock:
         _recommender = None
     return model_info()

@@ -1,0 +1,63 @@
+# Brings up the whole stack with:  docker compose up
+#
+# Defaults to SQLite so nothing needs configuring. To run against PostgreSQL
+# instead, start the optional profile:
+#
+#   docker compose --profile postgres up
+#
+# ...which starts the db service and points the API at it.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-sqlite:////app/backend/masar.db}
+      SECRET_KEY: ${SECRET_KEY:-compose-dev-key-change-me}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+      AUTO_SEED: "1"
+      # Optional: set ANTHROPIC_API_KEY in a .env file to enable the live
+      # mentor. Without it the offline mentor is used and everything still works.
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    ports:
+      - "8000:8000"
+    volumes:
+      - api-data:/app/backend
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health').status==200 else 1)"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    ports:
+      - "3000:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+
+  db:
+    image: postgres:16-alpine
+    profiles: ["postgres"]
+    environment:
+      POSTGRES_USER: masar
+      POSTGRES_PASSWORD: masar
+      POSTGRES_DB: masar
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U masar"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  api-data:
+  db-data:

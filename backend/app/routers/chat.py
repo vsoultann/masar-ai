@@ -7,7 +7,6 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from app import ml_loader
-from app.core.config import settings
 from app.core.database import get_db
 from app.models import ChatMessage, Course, StudentProfile, User
 from app.routers.deps import current_profile, current_user

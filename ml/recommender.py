@@ -36,7 +36,6 @@ career's shape", which is the question we actually want answered.
 """
 from __future__ import annotations
 
-import math
 import pathlib
 import sys
 from typing import Any, Iterable
@@ -44,7 +43,7 @@ from typing import Any, Iterable
 import numpy as np
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from pipeline import BIGFIVE, RIASEC, SUBJECTS, profile_to_frame, profile_to_row  # noqa: E402
+from pipeline import SUBJECTS, profile_to_frame, profile_to_row  # noqa: E402
 from skill_map import estimate_skills  # noqa: E402
 
 # Order of the 20-dimensional profile vector.  Fixed: careers and students must
