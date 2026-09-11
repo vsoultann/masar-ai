@@ -193,13 +193,13 @@ Single-host alternative: `docker compose up` behind Caddy or Nginx on any VPS.
 
 | Member | Role |
 |---|---|
-| Mubarak Awad Alamro | Team Lead & Backend |
-| Saif Qais | Frontend & UI/UX |
-| Zayed Saif | ML Engineer |
-| Khaled Mohammed | Database & DevOps |
-| Mansor Buti | QA & Documentation |
+| **Saif Qais Ahmed** | **Group Leader** · Frontend |
+| Khaled Mohammed AlMemari | Database & DevOps |
+| Mansour Buti ALShmasi | QA & Documentation |
+| Mubarak Awad AlAmro | Backend & API |
+| Zayed Saif AlBlooshi | ML Engineer |
 
-**Supervisor:** `[SUPERVISOR NAME]` · **Institution:** `[INSTITUTION NAME]` ·
+**Supervisor:** Hamdy Hersi · **Institution:** Applied Technology School — Al Ain ·
 **Academic year:** 2026
 
 ## License

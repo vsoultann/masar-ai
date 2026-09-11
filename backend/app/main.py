@@ -123,8 +123,12 @@ def meta() -> dict[str, Any]:
         "environment": settings.environment,
         "mentor_mode": settings.mentor_mode,
         "model": ml_loader.model_info(),
-        "team": ["Mubarak Awad Alamro", "Saif Qais", "Zayed Saif",
-                 "Khaled Mohammed", "Mansor Buti"],
+        "team": ["Saif Qais Ahmed", "Khaled Mohammed AlMemari",
+                 "Mansour Buti ALShmasi", "Mubarak Awad AlAmro",
+                 "Zayed Saif AlBlooshi"],
+        "group_leader": "Saif Qais Ahmed",
+        "supervisor": "Hamdy Hersi",
+        "institution": "Applied Technology School — Al Ain",
         "academic_year": "2026",
     }
 

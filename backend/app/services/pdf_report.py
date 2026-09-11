@@ -47,8 +47,10 @@ SAND = colors.HexColor("#E8DCC4")
 INK = colors.HexColor("#111827")
 MUTED = colors.HexColor("#4B5563")
 
-TEAM = ["Mubarak Awad Alamro", "Saif Qais", "Zayed Saif",
-        "Khaled Mohammed", "Mansor Buti"]
+TEAM = ["Saif Qais Ahmed", "Khaled Mohammed AlMemari", "Mansour Buti ALShmasi",
+        "Mubarak Awad AlAmro", "Zayed Saif AlBlooshi"]
+GROUP_LEADER = "Saif Qais Ahmed"
+SUPERVISOR = "Hamdy Hersi"
 
 _fonts_registered = False
 
@@ -85,7 +87,7 @@ def tag_runs(visual: str) -> str:
     """Mark up characters the Arabic face cannot draw so Helvetica draws them.
 
     Noto Naskh Arabic ships Arabic and digits but *no Latin letters at all*.
-    Rendering "Mubarak Awad Alamro" in it silently produced a row of blanks --
+    Rendering "Mubarak Awad AlAmro" in it silently produced a row of blanks --
     the student's own name vanished from their report.  ReportLab performs no
     font fallback, so we do it ourselves: split the already-reordered visual
     string into runs the face supports and runs it does not, and wrap the latter

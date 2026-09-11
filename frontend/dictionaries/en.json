@@ -117,8 +117,8 @@
     "supervisor": "Supervisor",
     "institution": "Institution",
     "academicYear": "Academic year",
-    "roleLead": "Team Lead & Backend",
-    "roleFrontend": "Frontend & UI/UX",
+    "roleLead": "Group Leader & Frontend",
+    "roleBackend": "Backend & API",
     "roleMl": "ML Engineer",
     "roleData": "Database & DevOps",
     "roleQa": "QA & Documentation"

@@ -3,7 +3,7 @@
 import ArabesquePattern from "@/components/ArabesquePattern";
 import { SectionHeading } from "@/components/ui";
 import { useLocale } from "@/lib/locale-context";
-import { TEAM } from "@/lib/team";
+import { ACADEMIC_YEAR, INSTITUTION, SUPERVISOR, TEAM } from "@/lib/team";
 
 /**
  * The problem statement and abstract are reproduced verbatim from the project
@@ -157,15 +157,15 @@ export default function AboutPage() {
           <dl className="mt-6 card grid gap-3 p-5 text-sm sm:grid-cols-3">
             <div>
               <dt className="muted">{t.about.supervisor}</dt>
-              <dd className="mt-0.5 font-semibold">[SUPERVISOR NAME]</dd>
+              <dd className="mt-0.5 font-semibold">{SUPERVISOR}</dd>
             </div>
             <div>
               <dt className="muted">{t.about.institution}</dt>
-              <dd className="mt-0.5 font-semibold">[INSTITUTION NAME]</dd>
+              <dd className="mt-0.5 font-semibold">{INSTITUTION}</dd>
             </div>
             <div>
               <dt className="muted">{t.about.academicYear}</dt>
-              <dd className="mt-0.5 font-semibold ltr-nums">2026</dd>
+              <dd className="mt-0.5 font-semibold ltr-nums">{ACADEMIC_YEAR}</dd>
             </div>
           </dl>
         </section>
