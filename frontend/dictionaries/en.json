@@ -120,7 +120,7 @@
     "roleLead": "Group Leader & Frontend",
     "roleBackend": "Backend & API",
     "roleMl": "ML Engineer",
-    "roleData": "Database & DevOps",
+    "roleCoLead": "Co-Leader & Database & DevOps",
     "roleQa": "QA & Documentation"
   },
   "auth": {

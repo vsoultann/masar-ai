@@ -1,8 +1,8 @@
-/** The five project members, group leader first.
+/** The five project members, group leader first, co-leader second.
  *  `roleKey` indexes into the `about` section of the dictionaries. */
 export const TEAM = [
   { name: "Saif Qais Ahmed", roleKey: "roleLead" },
-  { name: "Khaled Mohammed AlMemari", roleKey: "roleData" },
+  { name: "Khaled Mohammed AlMemari", roleKey: "roleCoLead" },
   { name: "Mansour Buti ALShmasi", roleKey: "roleQa" },
   { name: "Mubarak Awad AlAmro", roleKey: "roleBackend" },
   { name: "Zayed Saif AlBlooshi", roleKey: "roleMl" },

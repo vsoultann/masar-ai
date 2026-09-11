@@ -50,6 +50,7 @@ MUTED = colors.HexColor("#4B5563")
 TEAM = ["Saif Qais Ahmed", "Khaled Mohammed AlMemari", "Mansour Buti ALShmasi",
         "Mubarak Awad AlAmro", "Zayed Saif AlBlooshi"]
 GROUP_LEADER = "Saif Qais Ahmed"
+CO_LEADER = "Khaled Mohammed AlMemari"
 SUPERVISOR = "Hamdy Hersi"
 
 _fonts_registered = False

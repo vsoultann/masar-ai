@@ -127,6 +127,7 @@ def meta() -> dict[str, Any]:
                  "Mansour Buti ALShmasi", "Mubarak Awad AlAmro",
                  "Zayed Saif AlBlooshi"],
         "group_leader": "Saif Qais Ahmed",
+        "co_leader": "Khaled Mohammed AlMemari",
         "supervisor": "Hamdy Hersi",
         "institution": "Applied Technology School — Al Ain",
         "academic_year": "2026",

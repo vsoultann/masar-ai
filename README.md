@@ -194,7 +194,7 @@ Single-host alternative: `docker compose up` behind Caddy or Nginx on any VPS.
 | Member | Role |
 |---|---|
 | **Saif Qais Ahmed** | **Group Leader** · Frontend |
-| Khaled Mohammed AlMemari | Database & DevOps |
+| **Khaled Mohammed AlMemari** | **Co-Leader** · Database & DevOps |
 | Mansour Buti ALShmasi | QA & Documentation |
 | Mubarak Awad AlAmro | Backend & API |
 | Zayed Saif AlBlooshi | ML Engineer |
