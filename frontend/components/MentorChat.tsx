@@ -100,6 +100,7 @@ export default function MentorChat({ compact = false }: { compact?: boolean }) {
     t.mentor.quickWhere,
     t.mentor.quickWeakest,
     t.mentor.quickCompare,
+    t.mentor.quickOutlook,
   ];
 
   return (

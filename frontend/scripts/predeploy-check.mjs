@@ -11,6 +11,12 @@
  *     handler, server action or force-dynamic page either fails the export or,
  *     worse, exports an empty shell.
  *  3. Committed secrets. The repository is public.
+ *  4. Bare <a> tags pointing at an app route. next/link applies basePath;
+ *     a raw anchor does not, so href="/en/universities/x" resolves to
+ *     github.io/en/... instead of github.io/masar-ai/en/... and lands on
+ *     GitHub's own "Site not found" page. That is the bug the map popups
+ *     shipped with, and it is invisible in `next dev` because basePath is
+ *     empty there.
  *
  * Run with --out to additionally scan the built out/ directory for absolute
  * /_next/ references, which is the symptom of a wrong assetPrefix.
@@ -114,6 +120,27 @@ function checkSource(file) {
       problems.push(`${at}  looks like a committed credential`);
     }
   });
+
+  // 4. Internal links on a bare <a>.
+  //
+  // Comments are stripped first: this file's own prose, and the warning
+  // comment in UniversityMap, both name the paths they are warning about.
+  // Crude stripping is fine here -- it can only ever cause a missed catch on a
+  // pathological line, never a false alarm.
+  if (ext === ".tsx" || ext === ".jsx") {
+    const code = text
+      .replace(/\/\*[\s\S]*?\*\//g, "")
+      .replace(/\/\/[^\n]*/g, "");
+    // href={`/...`} or href="/..." -- but not "//host" and not href={asset(...)}.
+    const anchor = /<a\s[^>]*?href=(?:\{`|["'])\/(?!\/)/g;
+    let hit;
+    while ((hit = anchor.exec(code)) !== null) {
+      const line = code.slice(0, hit.index).split("\n").length;
+      problems.push(
+        `${rel}:${line}  <a href="/..."> to an app route -- use next/link, which applies basePath`,
+      );
+    }
+  }
 
   // Route handlers are server-only regardless of contents.
   if (/(^|[\\/])app[\\/].*[\\/]route\.(ts|js)$/.test(rel)) {

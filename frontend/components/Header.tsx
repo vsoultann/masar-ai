@@ -50,16 +50,17 @@ export default function Header() {
   useEffect(() => setOpen(false), [pathname]);
 
   const other = t.meta.otherLocale as Locale;
-  const links: { href: string; label: string }[] = [
-    { href: `/${locale}/careers`, label: t.nav.careers },
-    { href: `/${locale}/about`, label: t.nav.about },
-  ];
+  // Ordered by how often a signed-in student needs them: their own pages first,
+  // then the catalogs, then the mentor. About is deliberately absent -- every
+  // other header link is about the student, and About lives in the footer.
+  const links: { href: string; label: string }[] = [];
+  if (user) {
+    links.push({ href: `/${locale}/dashboard`, label: t.nav.dashboard });
+    links.push({ href: `/${locale}/results`, label: t.nav.results });
+  }
+  links.push({ href: `/${locale}/careers`, label: t.nav.careers });
   links.push({ href: `/${locale}/universities`, label: t.nav.universities });
   links.push({ href: `/${locale}/mentor`, label: t.nav.mentor });
-  if (user) {
-    links.push({ href: `/${locale}/results`, label: t.nav.results });
-    links.push({ href: `/${locale}/dashboard`, label: t.nav.dashboard });
-  }
   if (user?.role === "admin") links.push({ href: `/${locale}/admin`, label: t.nav.admin });
 
   const isActive = (href: string) =>

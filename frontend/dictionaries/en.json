@@ -580,6 +580,7 @@
     "quickWhere": "Where can I study medicine?",
     "quickWeakest": "What are my weakest skills?",
     "quickCompare": "Compare software engineer and data scientist",
+    "quickOutlook": "Is graphic design still in demand?",
     "settings": "Mentor settings",
     "apiKeyLabel": "Anthropic API key (optional)",
     "apiKeyHelp": "Stored only in this browser and sent only to api.anthropic.com. Leave blank to use the offline mentor.",

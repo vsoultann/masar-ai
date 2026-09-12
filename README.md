@@ -13,7 +13,7 @@ Graduation project, 2026.
 [![License: MIT](https://img.shields.io/badge/License-MIT-00732F.svg)](LICENSE)
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-0B3D5C.svg)](https://www.python.org/)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-000000.svg)](https://nextjs.org/)
-[![Tests](https://img.shields.io/badge/tests-89%20backend%20%2B%2024%20frontend-00732F.svg)](#testing)
+[![Tests](https://img.shields.io/badge/tests-89%20backend%20%2B%2056%20frontend-00732F.svg)](#testing)
 
 </div>
 

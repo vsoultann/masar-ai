@@ -103,10 +103,7 @@ export default function LandingPage() {
               </motion.p>
 
               <h1 className="mt-5 text-4xl font-black leading-[1.1] sm:text-5xl lg:text-6xl">
-                <TypedHeadline
-                  phrases={[t.landing.heroLine1, t.landing.heroLine2]}
-                  className="inline-flex flex-wrap items-baseline"
-                />
+                <TypedHeadline phrases={[t.landing.heroLine1, t.landing.heroLine2]} />
               </h1>
 
               <motion.p
