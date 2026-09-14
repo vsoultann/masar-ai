@@ -13,8 +13,8 @@ import { useLocale } from "@/lib/locale-context";
 import { loadModel, recommend } from "@/lib/ml/inference";
 import { popIn, spring } from "@/lib/motion";
 import {
-  applyAnswer, DEEP_SURVEY, emptyScores, QUICK_SURVEY, toStudentProfile,
-  type SurveyScores,
+  applyAnswer, DEEP_LENGTH, drawSurvey, emptyScores, QUICK_LENGTH,
+  toStudentProfile, type SurveyQuestion, type SurveyScores,
 } from "@/lib/survey";
 import type { CareerSummary, Major } from "@/lib/types";
 
@@ -51,11 +51,17 @@ export default function MiniDemo() {
   const [variant, setVariant] = useState<Variant | null>(null);
   const [step, setStep] = useState(0);
   const [scores, setScores] = useState<SurveyScores>(emptyScores);
+  /*
+   * The draw is held in state, not recomputed on render.
+   *
+   * drawSurvey() is random, so calling it inside the render body would reshuffle
+   * the questions on every keystroke and state change -- the student would watch
+   * the question change under them as they answered it.
+   */
+  const [questions, setQuestions] = useState<SurveyQuestion[]>([]);
   const [results, setResults] = useState<Outcome[] | null>(null);
   const [busy, setBusy] = useState(false);
 
-  const questions = variant === "deep" ? DEEP_SURVEY : QUICK_SURVEY;
-  const prompts = variant === "deep" ? t.survey.deep : t.survey.quick;
 
   const answer = async (agree: boolean) => {
     const next = applyAnswer(scores, questions[step], agree);
@@ -107,6 +113,10 @@ export default function MiniDemo() {
     setStep(0);
     setScores(emptyScores());
     setResults(null);
+    // A fresh draw every time, including on "try again" -- answering the same
+    // five questions a second time tells a student nothing they did not
+    // already know.
+    setQuestions(next ? drawSurvey(next === "deep" ? DEEP_LENGTH : QUICK_LENGTH) : []);
   };
 
   /* ------------------------------------------------------------ the picker */
@@ -119,14 +129,14 @@ export default function MiniDemo() {
               id: "quick" as const,
               title: t.landing.demoQuick,
               blurb: t.landing.demoQuickBlurb,
-              count: QUICK_SURVEY.length,
+              count: QUICK_LENGTH,
               time: t.landing.demoQuickTime,
             },
             {
               id: "deep" as const,
               title: t.landing.demoDeep,
               blurb: t.landing.demoDeepBlurb,
-              count: DEEP_SURVEY.length,
+              count: DEEP_LENGTH,
               time: t.landing.demoDeepTime,
             },
           ]
@@ -221,6 +231,8 @@ export default function MiniDemo() {
     );
   }
 
+  if (questions.length === 0) return null;
+
   /* ----------------------------------------------------------- a question */
   /*
    * No AnimatePresence around the question.
@@ -262,7 +274,9 @@ export default function MiniDemo() {
             ))}
           </div>
 
-          <p className="mt-5 text-lg font-semibold leading-relaxed">{prompts[step]}</p>
+          <p className="mt-5 text-lg font-semibold leading-relaxed">
+            {t.survey.pool[questions[step].id as keyof typeof t.survey.pool]}
+          </p>
 
           <div className="mt-5 flex gap-2">
             <motion.button

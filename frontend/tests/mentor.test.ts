@@ -185,6 +185,133 @@ describe("answers", () => {
     expect(result.citations.every((c) => c.kind === "university")).toBe(true);
   });
 
+  /*
+   * The reported failure: asking about majors, careers, salaries, universities
+   * or scholarships "most of the time doesn't answer". It was worse than that
+   * -- it answered confidently, about something else. Two matcher faults, each
+   * pinned below:
+   *
+   *  1. A name filtered down to words longer than three characters made "NLP
+   *     Engineer" match in full on the bare word "engineers".
+   *  2. A unique partial hit was promoted to a match, so the single career in
+   *     184 with "University" in its title answered every question about
+   *     universities.
+   */
+  it("does not answer a question about universities with a job called Lecturer", async () => {
+    const result = await ask("what is the best university in the UAE?");
+    expect(result.intent).toBe("universities");
+    expect(result.citations.map((c) => c.id)).not.toContain("university_lecturer");
+    // There is no defensible "best" in this catalog, and it says so rather
+    // than inventing a ranking.
+    expect(result.text).toMatch(/depends on your subject/i);
+  });
+
+  it("does not answer a question about pay with one arbitrary engineering role", async () => {
+    const result = await ask("how much do engineers make?");
+    expect(result.intent).toBe("salary");
+    // "Engineer" is thirty roles. Offering them beats picking one -- so NLP
+    // Engineer may well appear here, as one option among several. What must
+    // not happen is the old behaviour: it presented as the answer, and the
+    // reply was a paragraph about natural-language processing.
+    expect(result.text).toContain("Which one did you mean?");
+    expect(result.citations.length).toBeGreaterThan(1);
+    expect(result.text).not.toMatch(/natural language|morphology/i);
+  });
+
+  it("answers a salary question about a named career with its actual range", async () => {
+    const result = await ask("how much does a radiologist earn?");
+    expect(result.intent).toBe("salary");
+    expect(result.citations.map((c) => c.id)).toContain("radiologist");
+    expect(result.text).toMatch(/Entry AED [\d,]+/);
+    expect(result.text).toMatch(/Senior AED [\d,]+/);
+  });
+
+  it("ranks by pay only when the question actually asks for a ranking", async () => {
+    const result = await ask("which careers pay the most?");
+    expect(result.intent).toBe("salary");
+    expect(result.text).toContain("highest-paying");
+    expect(result.citations.length).toBeGreaterThan(0);
+  });
+
+  it("answers a question phrased in majors", async () => {
+    const result = await ask("is computer science a good major?");
+    expect(result.intent).toBe("list_majors");
+    // The major, not Computer Vision Engineer, which the word "computer"
+    // used to drag in.
+    expect(result.text).toContain("Computer Science");
+    expect(result.citations.length).toBeGreaterThan(0);
+  });
+
+  it("lists the careers in a named sector", async () => {
+    const result = await ask("what careers are there in finance?");
+    expect(result.intent).toBe("list_sector");
+    expect(result.citations.length).toBeGreaterThan(0);
+    expect(result.citations.every((c) => c.kind === "career")).toBe(true);
+  });
+
+  it("describes an institution named only by its abbreviation", async () => {
+    // "AUS" is three characters, below the matcher's token floor, so it is
+    // matched by containment on the short name instead.
+    const result = await ask("is AUS good for engineering?");
+    expect(result.intent).toBe("universities");
+    expect(result.citations.map((c) => c.id)).toContain("aus");
+  });
+
+  it("lists institutions in a named emirate, and the cheapest ones on request", async () => {
+    const inDubai = await ask("which universities are in Dubai?");
+    expect(inDubai.intent).toBe("universities");
+    expect(inDubai.citations.length).toBeGreaterThan(0);
+
+    const cheap = await ask("cheapest university in the uae");
+    expect(cheap.intent).toBe("universities");
+    expect(cheap.text).toMatch(/least expensive/i);
+  });
+
+  it("answers a where-to-study question phrased as a subject", async () => {
+    // "Medicine" is not a career name and half-matches several medical roles.
+    // The major is the right key, and the answer names which majors it used
+    // rather than silently picking one.
+    const result = await ask("where can I study medicine?");
+    expect(result.intent).toBe("where_to_study");
+    expect(result.citations.every((c) => c.kind === "university")).toBe(true);
+    expect(result.text).toContain("Medicine and Surgery");
+  });
+
+  it("scopes a funding question to the subject it names", async () => {
+    const result = await ask("are there scholarships for nursing?");
+    expect(result.intent).toBe("scholarships");
+    expect(result.text).toContain("Nursing");
+    expect(result.citations.every((c) => c.kind === "scholarship")).toBe(true);
+  });
+
+  it("greets, and says what it can do", async () => {
+    expect((await ask("hi")).intent).toBe("greeting");
+    expect((await ask("what can you do?")).text).toContain("I answer from the catalogs");
+  });
+
+  it("sends an it-depends-on-you question to the assessment, not the help text", async () => {
+    const result = await ask("what careers suit me?");
+    expect(result.intent).toBe("my_matches");
+    expect(result.text).toMatch(/assessment/i);
+    expect(result.text).not.toContain("I answer from the catalogs");
+  });
+
+  it("answers the same five subjects in Arabic", async () => {
+    const cases: [string, string][] = [
+      ["كم راتب المهندس؟", "salary"],
+      ["ما الجامعات في دبي؟", "universities"],
+      ["ما هي المنح للتمريض؟", "scholarships"],
+      ["ما هي التخصصات المؤدية إلى الطب والجراحة؟", "list_majors"],
+      ["هل سيحل الذكاء الاصطناعي محل المحاسبين؟", "ai_impact"],
+    ];
+    for (const [question, intent] of cases) {
+      const result = await answer(question, "ar", null, null);
+      expect(result.intent, question).toBe(intent);
+      // Arabic in, Arabic out — no English leaking through a fallback.
+      expect(result.text, question).toMatch(/[\u0600-\u06FF]/);
+    }
+  });
+
   it("offers the capability list instead of a dead end when nothing matches", async () => {
     const result = await ask("what is the weather in dubai");
     expect(result.text).toContain("I answer from the catalogs");

@@ -1,6 +1,6 @@
 import {
   indexBy, loadCareerIndex, loadCourses, loadMajors, loadResistanceGlossary,
-  loadScholarships, loadSkills, loadUniversities,
+  loadScholarships, loadSectors, loadSkills, loadUniversities,
 } from "@/lib/data/client";
 import { assessEligibility, matchUniversities } from "@/lib/matching/universities";
 import type { Career, Lang, Profile, Scholarship, University } from "@/lib/types";
@@ -25,7 +25,13 @@ import { loadCareers } from "@/lib/data/client";
  */
 
 export type Intent =
+  | "greeting"
+  | "capabilities"
   | "describe_career"
+  | "salary"
+  | "list_majors"
+  | "universities"
+  | "my_matches"
   | "ai_impact"
   | "career_outlook"
   | "scholarships"
@@ -82,6 +88,24 @@ export function normalise(input: string): string {
 const INTENT_PATTERNS: { intent: Intent; patterns: RegExp[] }[] = [
   {
     /*
+     * Anchored to the whole message, not searched inside it. "Hi" is a
+     * greeting; "what is the highest paid job" contains "hi" and is not.
+     */
+    intent: "greeting",
+    patterns: [
+      /^\s*(hi|hey|hello|yo|salam|salaam|assalamu?\s*alaikum|good (morning|evening|afternoon))[\s!.,?]*$/i,
+      /^\s*(مرحبا|اهلا|أهلا|السلام عليكم|هلا|صباح الخير|مساء الخير)[\s!.،؟]*$/,
+    ],
+  },
+  {
+    intent: "capabilities",
+    patterns: [
+      /\b(what can you do|what do you do|how do you work|what are you|who are you|help me with|^help$|your capabilities|what can i ask)\b/i,
+      /(ماذا تستطيع|ما الذي تستطيع|كيف تعمل|من انت|من أنت|بماذا تساعد|ماذا يمكنني ان اسال)/,
+    ],
+  },
+  {
+    /*
      * Ahead of career_outlook, and the two are deliberately different answers.
      *
      * "Is nursing in demand?" is a question about a labour market this catalog
@@ -130,7 +154,7 @@ const INTENT_PATTERNS: { intent: Intent; patterns: RegExp[] }[] = [
      */
     intent: "scholarships",
     patterns: [
-      /\b(scholarship|scholarships|bursary|bursaries|grant|grants|funding|funded|fully[- ]funded|sponsorship|sponsored|financial aid|tuition|afford|pay for|free to study|stipend)\b/i,
+      /\b(scholarship|scholarships|bursary|bursaries|grant|grants|funding|funded|fully[- ]funded|sponsorship|sponsored|financial aid|tuition|afford|pay for|free to study|study for free|for free|stipend)\b/i,
       /(منحه|منحة|منح|بعثه|بعثة|بعثات|تمويل|ممول|ممولة|ابتعاث|مبتعث|رسوم دراسيه|رسوم دراسية|مساعده ماليه|مساعدة مالية|مجانا|مجاني)/,
     ],
   },
@@ -169,6 +193,69 @@ const INTENT_PATTERNS: { intent: Intent; patterns: RegExp[] }[] = [
       /\bstill\b[^?.!]*\b(career|job|valid|viable|worth|relevant|needed|good|useful|safe)\b/i,
       /\b(worth it|worth studying|worth doing|good career|bad career|safe from|take over)\b/i,
       /(مستقبل|الطلب|مطلوب|فرص العمل|نمو|تراجع|يختفي|تختفي|يستبدل|تستبدل|الاتمته|الاتمتة|الأتمتة|جدوى|ما زال|ما زالت|لا يزال|لا تزال|امن وظيفي|أمن وظيفي|مشبع)/,
+    ],
+  },
+  {
+    /*
+     * Before where_to_study and before describe_career, both of which used to
+     * swallow this. "How much do engineers make?" has no institution and no
+     * single named role, and answering it with a description of one arbitrary
+     * engineering job -- which is what happened -- is worse than saying
+     * nothing.
+     */
+    intent: "salary",
+    patterns: [
+      /\b(salary|salaries|wage|wages|income|earn|earns|earning|paid|pay|pays|paying|make money|how much)\b/i,
+      /(راتب|رواتب|اجر|أجر|اجور|أجور|دخل|كم يكسب|كم تكسب|كم يتقاضى|كم الراتب|الاعلى اجرا|الأعلى أجرًا)/,
+    ],
+  },
+  {
+    /*
+     * Majors are the unit a student actually applies in, and the app had no
+     * way to answer a question phrased in them. Ahead of where_to_study
+     * because "what majors should I study?" contains "study".
+     */
+    intent: "list_majors",
+    patterns: [
+      /\b(major|majors|degree|degrees|programme|program|specialisation|specialization|subject to study|what should i study)\b/i,
+      /(تخصص|تخصصات|التخصص|شهاده جامعيه|شهادة جامعية|درجه علميه|درجة علمية|ماذا ادرس|ماذا أدرس)/,
+    ],
+  },
+  {
+    /*
+     * Ahead of where_to_study, which owns the bare word "study". A question
+     * that names an institution word is about institutions: "which
+     * universities are in Dubai" is a list, "tell me about Khalifa
+     * University" is a description, and neither is "where can I study X".
+     */
+    intent: "universities",
+    patterns: [
+      /\b(universit\w*|college|colleges|campus|campuses|institution|institutions)\b/i,
+      /(جامعه|جامعة|جامعات|كليه|كلية|كليات|حرم جامعي)/,
+    ],
+  },
+  {
+    /*
+     * "What should I do?" with a completed profile is the one question the
+     * recommender exists to answer, and the mentor was sending it to the
+     * generic help text.
+     */
+    intent: "my_matches",
+    patterns: [
+      /\b(suit me|suits me|for me|fit me|fits me|right for me|recommend me|what should i (be|do|become)|best career for me|my (results|matches|recommendations))\b/i,
+      /(يناسبني|تناسبني|المناسب لي|ماذا اصبح|ماذا أصبح|ماذا افعل|ماذا أفعل|نتائجي|توصياتي|اقترح لي)/,
+    ],
+  },
+  {
+    /*
+     * Browsing by sector. The intent was declared in v2 and never
+     * implemented, so "what careers are there in finance?" fell through to the
+     * ambiguity reply.
+     */
+    intent: "list_sector",
+    patterns: [
+      /\b(careers? in|jobs? in|roles? in|work in|list (careers|jobs)|what careers|what jobs|which careers|which jobs|options in)\b/i,
+      /(مهن في|وظائف في|ادوار في|أدوار في|ما هي المهن|ما هي الوظائف|قائمه المهن|قائمة المهن|مجالات في)/,
     ],
   },
   {
@@ -254,6 +341,44 @@ function tokenHit(token: string, words: string[]): boolean {
   return words.some((word) => sharesStem(stemmed, stem(word)));
 }
 
+/*
+ * Words that are a job title's *category*, not its identity.
+ *
+ * A question containing one of these has not named anything. The word that
+ * forced this list is "university": exactly one career in 184 has it in its
+ * name, so "what is the best university in the UAE?" was a unique partial
+ * match on "University Lecturer" -- unique enough to be promoted to a full
+ * match, and the student asking which campus to apply to was told what a
+ * lecturer does all day.
+ *
+ * Frequency alone would not have caught that, precisely because the match was
+ * unique. This is a judgement about what the words mean, so it is a list.
+ */
+const GENERIC_NAME_WORDS = new Set([
+  "university", "college", "school", "academy", "institute", "student",
+  "engineer", "engineering", "manager", "management", "officer", "specialist",
+  "technician", "analyst", "scientist", "consultant", "assistant", "adviser",
+  "advisor", "worker", "designer", "developer", "doctor", "teacher", "director",
+  "coordinator", "administrator", "professional", "practitioner", "operator",
+  "senior", "junior", "chief", "head", "general", "national", "international",
+  // Frame words: they belong to the question, not to the thing being asked
+  // about, but they also appear inside catalog names. "What majors should I
+  // study?" partially matched "Islamic Studies Scholar"; "which careers pay
+  // the most?" matched "Academic & Career Counsellor"; both were the only
+  // partial hit, so both were promoted to a confident wrong answer.
+  "career", "careers", "job", "jobs", "study", "studies", "studying", "work",
+  "counsellor", "counselor", "scholar", "academic", "service", "services",
+  "مهنه", "مهنة", "مهن", "وظيفه", "وظيفة", "وظائف", "دراسه", "دراسة", "عمل",
+  "جامعه", "جامعة", "كليه", "كلية", "مهندس", "مدير", "اخصائي", "أخصائي",
+  "فني", "محلل", "عالم", "مستشار", "مساعد", "مصمم", "مطور", "طبيب", "معلم",
+]);
+
+interface Scored {
+  row: Named;
+  score: number;
+  onlyGeneric?: boolean;
+}
+
 export interface Mentions {
   /** Every word of the catalog name is present in the question. */
   named: Named[];
@@ -263,6 +388,22 @@ export interface Mentions {
    * than asking which one the student meant.
    */
   partial: Named[];
+  /**
+   * True when every partial hit landed only on a generic job-title word, so
+   * the question named a *kind* of role rather than a role. The caller must
+   * not promote these to a match, however few of them there are.
+   */
+  partialIsGeneric: boolean;
+  /**
+   * The partials that matched on something other than a generic word.
+   *
+   * `partial` deliberately keeps the generic ones -- "I want to be a designer"
+   * should still surface Graphic Designer as a suggestion. But when the caller
+   * needs to *act* on a near miss rather than offer it, those are noise:
+   * "where can I study medicine?" half-matched Islamic Studies, Maritime
+   * Studies and Museum Studies purely on the word "studies".
+   */
+  partialStrong: Named[];
 }
 
 /**
@@ -276,8 +417,8 @@ export interface Mentions {
 export function rankMentions(question: string, rows: Named[], limit = 2): Mentions {
   const haystack = normalise(question);
   const words = haystack.split(" ").filter(Boolean);
-  const scored: { row: Named; score: number }[] = [];
-  const partial: { row: Named; score: number }[] = [];
+  const scored: Scored[] = [];
+  const partial: Scored[] = [];
 
   for (const row of rows) {
     for (const name of [row.en, row.ar]) {
@@ -288,22 +429,40 @@ export function rankMentions(question: string, rows: Named[], limit = 2): Mentio
         scored.push({ row, score: 100 + candidate.length });
         break;
       }
-      const tokens = candidate.split(" ").filter((token) => token.length > 3);
-      if (tokens.length === 0) continue;
-      const hit = tokens.filter((token) => tokenHit(token, words));
-      if (hit.length === tokens.length) {
+      /*
+       * A full match needs every word of the name, short ones included.
+       *
+       * Filtering the name down to words longer than three characters before
+       * demanding a full match meant "NLP Engineer" was effectively catalogued
+       * as "Engineer" -- "nlp" was dropped, one token remained, and the
+       * question "how much do engineers make?" matched it in full and got a
+       * confident answer about natural-language processing. Short words are
+       * still ignored for *partial* scoring below, where they are noise; here
+       * they are part of the name.
+       */
+      const allTokens = candidate.split(" ").filter(Boolean);
+      const longTokens = allTokens.filter((token) => token.length > 3);
+      if (longTokens.length === 0) continue;
+      if (allTokens.every((token) => tokenHit(token, words))) {
         scored.push({ row, score: 50 + candidate.length });
         break;
       }
+      const hit = longTokens.filter((token) => tokenHit(token, words));
       // A partial hit only counts on a substantial word: "data" matching
       // "Data Scientist" is a lead worth offering, "and" is not.
       if (hit.length > 0 && hit.some((token) => token.length >= 5)) {
-        partial.push({ row, score: hit.length * 10 - candidate.length / 100 });
+        partial.push({
+          row,
+          score: hit.length * 10 - candidate.length / 100,
+          // Carried so the caller can tell a partial worth promoting from one
+          // that merely brushed a generic job-title word.
+          onlyGeneric: hit.every((token) => GENERIC_NAME_WORDS.has(token)),
+        });
       }
     }
   }
 
-  const take = (rank: { row: Named; score: number }[], count: number) => {
+  const take = (rank: Scored[], count: number) => {
     rank.sort((a, b) => b.score - a.score);
     const seen = new Set<string>();
     const picked: Named[] = [];
@@ -317,10 +476,13 @@ export function rankMentions(question: string, rows: Named[], limit = 2): Mentio
   };
 
   const named = take(scored, limit);
+  const notNamed = (row: Named) => !named.some((hit) => hit.id === row.id);
   return {
     named,
     // Anything already matched in full is not also a loose suggestion.
-    partial: take(partial, 6).filter((row) => !named.some((hit) => hit.id === row.id)),
+    partial: take(partial, 6).filter(notNamed),
+    partialIsGeneric: partial.length > 0 && partial.every((row) => row.onlyGeneric === true),
+    partialStrong: take(partial.filter((row) => !row.onlyGeneric), 4).filter(notNamed),
   };
 }
 
@@ -417,6 +579,59 @@ const COPY = {
       "These are indicative figures held in this catalog, not a quotation from an admissions "
       + "office, and they change year to year. The university's own page is the only one that "
       + "can tell you this year's requirement.",
+
+    greeting:
+      "Hello. Ask me about a career, a major, a university, what something pays, how to fund "
+      + "it, or what AI is doing to a profession \u2014 in English or Arabic.",
+    salaryFor: (career: string) => `Indicative pay for ${career}:`,
+    salaryTier: (entry: number, mid: number, senior: number) =>
+      `\u2022 Entry AED ${entry.toLocaleString("en-US")} \u2022 Mid AED ${mid.toLocaleString("en-US")} `
+      + `\u2022 Senior AED ${senior.toLocaleString("en-US")}, per month.`,
+    salaryTopIntro: "The highest-paying careers in the catalog, by senior-level pay:",
+    salaryInSector: (sector: string) => `The best-paid careers in ${sector}:`,
+    salaryLine: (career: string, entry: number, senior: number) =>
+      `\u2022 ${career} \u2014 AED ${entry.toLocaleString("en-US")} rising to ${senior.toLocaleString("en-US")}`,
+    salaryCaveat:
+      "Indicative monthly ranges for the UAE market, held in this catalog. Real offers vary "
+      + "with the employer, the emirate and what you bring. Pay is also the worst single "
+      + "reason to pick a career: these are the same roles you will spend forty years in.",
+
+    majorsFor: (career: string) => `Majors that lead to ${career}:`,
+    majorsTaught: (count: number) =>
+      `Taught by ${count} institution${count === 1 ? "" : "s"} in this catalog.`,
+    majorLeadsTo: (major: string) => `A degree in ${major} leads to careers like:`,
+    majorsGeneral:
+      "There are 116 majors in the catalog. Tell me a career or a subject and I will name the "
+      + "ones that lead to it \u2014 for example \u201cwhat majors lead to data science?\u201d "
+      + "\u2014 or take the assessment and I will rank them against your own profile.",
+
+    uniAbout: (name: string) => `${name}:`,
+    uniFacts: (type: string, emirate: string, established: number) =>
+      `\u2022 ${type} in ${emirate}, established ${established}.`,
+    uniTuition: (band: string) => `\u2022 Tuition: ${band}.`,
+    uniMajors: (count: number) => `\u2022 Offers ${count} majors in this catalog.`,
+    uniSite: (url: string) => `\u2022 ${url}`,
+    uniInEmirate: (emirate: string) => `Institutions in ${emirate}:`,
+    uniCheapest: "The least expensive routes in the catalog:",
+    uniForMajor: (major: string) => `Institutions teaching ${major}:`,
+    uniGeneral:
+      "There are 50 institutions in the catalog. Name one and I will describe it, name an "
+      + "emirate and I will list what is there, or name a subject and I will say who teaches "
+      + "it. There is no \u201cbest\u201d \u2014 the right one depends on your subject, your "
+      + "grades, what you can pay and how far you can travel.",
+
+    sectorIntroList: (sector: string) => `Careers in ${sector}:`,
+    sectorLine: (career: string, demand: string, resistance: number) =>
+      `\u2022 ${career} \u2014 demand ${demand}, AI resistance ${resistance}/100`,
+    sectorGeneral: (sectors: string) =>
+      `Name a sector and I will list its careers. The catalog covers: ${sectors}.`,
+
+    matchesNoProfile:
+      "I cannot answer that one from the catalog \u2014 it depends on you. Take the "
+      + "assessment (about fifteen minutes: your grades, your interests and your personality) "
+      + "and I will rank all 184 careers against your own profile and explain every match.",
+    matchesIntro: "Your strongest matches, from the assessment you completed:",
+    matchesLine: (career: string, match: number) => `\u2022 ${career} \u2014 ${match}% match`,
   },
   ar: {
     salary: (min: number, max: number) =>
@@ -496,6 +711,55 @@ const COPY = {
     admCaveat:
       "هذه أرقام إرشادية محفوظة في هذا الكتالوج، وليست اقتباسًا من مكتب قبول، وهي تتغير من "
       + "سنة إلى أخرى. وصفحة الجامعة نفسها هي الوحيدة التي تخبرك بمتطلب هذا العام.",
+
+    greeting:
+      "أهلًا. اسألني عن مهنة أو تخصص أو جامعة، أو عن الأجور، أو كيف تموّل دراستك، أو عمّا "
+      + "يفعله الذكاء الاصطناعي بمهنة ما — بالعربية أو الإنجليزية.",
+    salaryFor: (career: string) => `الأجر الإرشادي لمهنة ${career}:`,
+    salaryTier: (entry: number, mid: number, senior: number) =>
+      `• البداية ${entry.toLocaleString("en-US")} درهم • المتوسط ${mid.toLocaleString("en-US")} درهم `
+      + `• مع الخبرة ${senior.toLocaleString("en-US")} درهم، شهريًا.`,
+    salaryTopIntro: "أعلى المهن أجرًا في الكتالوج، حسب أجر مرحلة الخبرة:",
+    salaryInSector: (sector: string) => `أعلى المهن أجرًا في قطاع ${sector}:`,
+    salaryLine: (career: string, entry: number, senior: number) =>
+      `• ${career} — من ${entry.toLocaleString("en-US")} إلى ${senior.toLocaleString("en-US")} درهم`,
+    salaryCaveat:
+      "نطاقات شهرية إرشادية للسوق الإماراتي، محفوظة في هذا الكتالوج. وتختلف العروض الفعلية "
+      + "باختلاف جهة العمل والإمارة وما تقدّمه أنت. والأجر أسوأ سبب منفرد لاختيار مهنة: هذه "
+      + "نفسها المهن التي ستقضي فيها أربعين عامًا.",
+
+    majorsFor: (career: string) => `التخصصات المؤدية إلى مهنة ${career}:`,
+    majorsTaught: (count: number) => `تُدرَّس في ${count} مؤسسة في هذا الكتالوج.`,
+    majorLeadsTo: (major: string) => `تؤدي درجة في ${major} إلى مهن مثل:`,
+    majorsGeneral:
+      "يضم الكتالوج 116 تخصصًا. اذكر مهنة أو مادة وسأسمّي التخصصات المؤدية إليها — مثلًا: «ما "
+      + "التخصصات المؤدية إلى علم البيانات؟» — أو أكمل التقييم لأرتّبها وفق ملفك الشخصي.",
+
+    uniAbout: (name: string) => `${name}:`,
+    uniFacts: (type: string, emirate: string, established: number) =>
+      `• ${type} في ${emirate}، تأسست عام ${established}.`,
+    uniTuition: (band: string) => `• الرسوم: ${band}.`,
+    uniMajors: (count: number) => `• تقدّم ${count} تخصصًا في هذا الكتالوج.`,
+    uniSite: (url: string) => `• ${url}`,
+    uniInEmirate: (emirate: string) => `المؤسسات في ${emirate}:`,
+    uniCheapest: "أقل المسارات كلفةً في الكتالوج:",
+    uniForMajor: (major: string) => `المؤسسات التي تُدرّس ${major}:`,
+    uniGeneral:
+      "يضم الكتالوج 50 مؤسسة. اذكر واحدة لأصفها، أو اذكر إمارة لأسرد ما فيها، أو اذكر مادة "
+      + "لأقول من يدرّسها. ولا توجد «الأفضل» — فالأنسب يعتمد على تخصصك ودرجاتك وما تستطيع "
+      + "دفعه وكم تستطيع أن تسافر.",
+
+    sectorIntroList: (sector: string) => `المهن في قطاع ${sector}:`,
+    sectorLine: (career: string, demand: string, resistance: number) =>
+      `• ${career} — الطلب ${demand}، مقاومة الذكاء الاصطناعي ${resistance}/100`,
+    sectorGeneral: (sectors: string) =>
+      `اذكر قطاعًا وسأسرد مهنه. يغطي الكتالوج: ${sectors}.`,
+
+    matchesNoProfile:
+      "لا أستطيع الإجابة عن هذا من الكتالوج — فهو يعتمد عليك أنت. أكمل التقييم (نحو خمس عشرة "
+      + "دقيقة: درجاتك واهتماماتك وشخصيتك) وسأرتّب المهن الـ184 جميعها وفق ملفك وأشرح كل مطابقة.",
+    matchesIntro: "أقوى مطابقاتك، من التقييم الذي أكملته:",
+    matchesLine: (career: string, match: number) => `• ${career} — مطابقة ${match}%`,
   },
 } as const;
 
@@ -525,6 +789,53 @@ const COVERAGE_LABEL: Record<Lang, Record<string, string>> = {
   },
 };
 
+const EMIRATE_LABEL: Record<Lang, Record<string, string>> = {
+  en: {
+    abu_dhabi: "Abu Dhabi", dubai: "Dubai", sharjah: "Sharjah", ajman: "Ajman",
+    umm_al_quwain: "Umm Al Quwain", ras_al_khaimah: "Ras Al Khaimah",
+    fujairah: "Fujairah",
+  },
+  ar: {
+    abu_dhabi: "أبوظبي", dubai: "دبي", sharjah: "الشارقة", ajman: "عجمان",
+    umm_al_quwain: "أم القيوين", ras_al_khaimah: "رأس الخيمة", fujairah: "الفجيرة",
+  },
+};
+
+const INSTITUTION_LABEL: Record<Lang, Record<string, string>> = {
+  en: {
+    federal_public: "Federal public university",
+    local_public: "Emirate public university",
+    private: "Private university",
+    international_branch: "International branch campus",
+    technical: "Technical or specialist academy",
+  },
+  ar: {
+    federal_public: "جامعة اتحادية حكومية",
+    local_public: "جامعة حكومية محلية",
+    private: "جامعة خاصة",
+    international_branch: "فرع جامعي دولي",
+    technical: "أكاديمية تقنية أو متخصصة",
+  },
+};
+
+const TUITION_LABEL: Record<Lang, Record<string, string>> = {
+  en: {
+    free_for_nationals: "free for UAE nationals",
+    public_subsidised: "subsidised public rates",
+    mid: "mid-range",
+    premium: "premium",
+  },
+  ar: {
+    free_for_nationals: "مجانية لمواطني الدولة",
+    public_subsidised: "رسوم حكومية مدعومة",
+    mid: "متوسطة",
+    premium: "مرتفعة",
+  },
+};
+
+/** Cheapest first, for "which university can I actually afford". */
+const TUITION_ORDER = ["free_for_nationals", "public_subsidised", "mid", "premium"];
+
 const AUDIENCE_LABEL: Record<Lang, Record<string, string>> = {
   en: { uae_nationals: "UAE nationals", residents: "residents", all: "open to all" },
   ar: { uae_nationals: "مواطنو الدولة", residents: "المقيمون", all: "مفتوح للجميع" },
@@ -543,8 +854,9 @@ function rankScholarships(
   career: Career | null,
   profile: Profile | null,
   limit = 5,
+  extraMajors: string[] = [],
 ): Scholarship[] {
-  const wanted = new Set(career?.educationPath.relatedMajors ?? []);
+  const wanted = new Set([...(career?.educationPath.relatedMajors ?? []), ...extraMajors]);
   const scored = scholarships.map((scholarship) => {
     let score = 0;
     if (wanted.size > 0) {
@@ -602,7 +914,7 @@ export async function answer(
   skillEstimates: Record<string, number> | null,
 ): Promise<MentorAnswer> {
   const copy = COPY[locale];
-  const intent = detectIntent(question);
+  let intent = detectIntent(question);
 
   const [
     careerIndex, careersFull, universities, skills, courses, majors, scholarships, resistance,
@@ -610,6 +922,7 @@ export async function answer(
     loadCareerIndex(), loadCareers(), loadUniversities(), loadSkills(), loadCourses(),
     loadMajors(), loadScholarships(), loadResistanceGlossary(),
   ]);
+  const sectors = await loadSectors();
 
   const careerNames: Named[] = careerIndex.map((c) => ({ id: c.id, en: c.title.en, ar: c.title.ar }));
   const ranked = rankMentions(question, careerNames, 2);
@@ -644,10 +957,50 @@ export async function answer(
    */
   const mentioned = ranked.named.length > 0
     ? ranked.named
-    : ranked.partial.length === 1
+    : ranked.partial.length === 1 && !ranked.partialIsGeneric
       ? ranked.partial
       : [];
   const partial = mentioned.length > 0 ? [] : ranked.partial;
+  /* Sectors and majors are named in questions as often as careers are. */
+  const sectorNames: Named[] = sectors.map((sector) => ({
+    id: sector.id, en: sector.name_en, ar: sector.name_ar,
+  }));
+  const namedSector = rankMentions(question, sectorNames, 1).named[0]
+    // Sector names are phrases ("Artificial Intelligence & Data"); a student
+    // types one word of one. A bare token hit is enough here because the
+    // eighteen sector names do not collide with each other.
+    ?? sectorNames.find((row) => {
+      const tokens = normalise(row.en).split(" ").filter((t) => t.length > 4);
+      return tokens.some((token) => new RegExp(`\\b${token}`).test(haystack));
+    })
+    ?? null;
+
+  const majorNames: Named[] = majors.map((major) => ({
+    id: major.id, en: major.name.en, ar: major.name.ar,
+  }));
+  const rankedMajors = rankMentions(question, majorNames, 1);
+  /*
+   * Same rule careers get: one near miss is an answer, several are a question.
+   * The case that forces it is "where can I study medicine?" -- the catalog
+   * calls the major "Medicine and Surgery", so the full name is never present,
+   * but nothing else in 116 majors claims the word.
+   */
+  const namedMajor = rankedMajors.named[0] ?? rankedMajors.partialStrong[0] ?? null;
+  /*
+   * "Medicine" is a word two majors legitimately share (Medicine and Surgery,
+   * Veterinary Medicine), so rather than pick one and hope, the institution
+   * answers list who teaches either and name both -- the student can see what
+   * was assumed instead of having to guess at it.
+   */
+  const majorCandidates = rankedMajors.named.length > 0
+    ? rankedMajors.named
+    : rankedMajors.partialStrong.slice(0, 2);
+
+  const namedEmirate = Object.keys(EMIRATE_LABEL.en).find((id) => {
+    const english = EMIRATE_LABEL.en[id].toLowerCase();
+    return haystack.includes(english) || question.includes(EMIRATE_LABEL.ar[id]);
+  }) ?? null;
+
   const careersById = indexBy(careersFull);
   const skillsById = indexBy(skills);
   const majorsById = indexBy(majors);
@@ -656,6 +1009,323 @@ export async function answer(
     const skill = skillsById.get(id);
     return skill ? (locale === "ar" ? skill.name_ar : skill.name_en) : id;
   };
+
+  /*
+   * Naming an institution is itself the signal. "Is AUS good for engineering?"
+   * contains no word the universities pattern looks for, so it fell through to
+   * the ambiguity reply -- while sitting one lookup away from the answer.
+   */
+  if (intent === "unknown" && namedUniversity) intent = "universities";
+
+  const sectorName = (id: string) => {
+    const sector = sectors.find((row) => row.id === id);
+    return sector ? (locale === "ar" ? sector.name_ar : sector.name_en) : id;
+  };
+
+  // --- greeting and capabilities -----------------------------------------
+  if (intent === "greeting") {
+    return { intent, text: copy.greeting, citations: [] };
+  }
+  if (intent === "capabilities") {
+    return { intent, text: copy.help, citations: [] };
+  }
+
+  // --- what fits me ------------------------------------------------------
+  //
+  // The honest answer when there is no profile is not the capability list: it
+  // is "this one depends on you, and here is the fifteen minutes that answers
+  // it". Anything else pretends the catalog knows something it cannot.
+  if (intent === "my_matches") {
+    if (!profile || profile.completedSteps < 4) {
+      return { intent, text: copy.matchesNoProfile, citations: [] };
+    }
+    const saved = profile.savedCareers
+      .map((id) => careersById.get(id))
+      .filter((career): career is NonNullable<typeof career> => career !== undefined)
+      .slice(0, 5);
+    if (saved.length > 0) {
+      return {
+        intent,
+        text: [
+          copy.matchesIntro,
+          ...saved.map((career) => `• ${career.title[locale]}`),
+        ].join("\n"),
+        citations: saved.map((career) => ({
+          kind: "career" as const, id: career.id, label: career.title[locale],
+        })),
+      };
+    }
+    return { intent, text: copy.matchesNoProfile, citations: [] };
+  }
+
+  // --- salary ------------------------------------------------------------
+  if (intent === "salary") {
+    // A named career answers precisely; anything else answers by comparison,
+    // which is what "how much do engineers make" is really asking.
+    const career = mentioned.length > 0 ? careersById.get(mentioned[0].id) : null;
+    if (career) {
+      return {
+        intent,
+        text: [
+          copy.salaryFor(career.title[locale]),
+          copy.salaryTier(career.salaryAED.entry, career.salaryAED.mid, career.salaryAED.senior),
+          career.salaryAED.note[locale],
+          copy.salaryCaveat,
+        ].join("\n\n"),
+        citations: [{ kind: "career", id: career.id, label: career.title[locale] }],
+      };
+    }
+
+    /*
+     * "What is the salary of a nurse?" half-matches several nursing roles, and
+     * "how much do engineers make?" half-matches thirty engineering ones.
+     * Neither is a request for the highest-paid careers in the country, so
+     * offering the options beats answering a question that was not asked. A
+     * superlative ("most", "highest") genuinely is asking for the ranking.
+     */
+    const wantsRanking = /\b(most|highest|top|best paid|best-paying|highest paying)\b/i
+      .test(haystack)
+      || /(اعلى|أعلى|اكثر|أكثر|افضل|أفضل)/.test(question);
+    if (!wantsRanking && !namedSector && partial.length > 0) {
+      return {
+        intent,
+        text: copy.ambiguous,
+        citations: partial.map((row) => ({
+          kind: "career" as const,
+          id: row.id,
+          label: locale === "ar" ? row.ar : row.en,
+        })),
+      };
+    }
+
+    const pool = namedSector
+      ? careersFull.filter((row) => row.sector === namedSector.id)
+      : careersFull;
+    const top = [...pool]
+      .sort((a, b) => b.salaryAED.senior - a.salaryAED.senior)
+      .slice(0, 6);
+    return {
+      intent,
+      text: [
+        namedSector ? copy.salaryInSector(sectorName(namedSector.id)) : copy.salaryTopIntro,
+        top.map((row) =>
+          copy.salaryLine(row.title[locale], row.salaryAED.entry, row.salaryAED.senior)).join("\n"),
+        copy.salaryCaveat,
+      ].join("\n\n"),
+      citations: top.slice(0, 4).map((row) => ({
+        kind: "career" as const, id: row.id, label: row.title[locale],
+      })),
+    };
+  }
+
+  // --- majors ------------------------------------------------------------
+  if (intent === "list_majors") {
+    /*
+     * A named major is checked first, and that ordering matters. "Is computer
+     * science a good major?" names the major exactly, but it also brushes the
+     * word "computer" against Computer Vision Engineer -- and answering with
+     * the career is answering a question nobody asked.
+     */
+    if (namedMajor) {
+      const leadsTo = careersFull
+        .filter((row) => row.educationPath.relatedMajors.includes(namedMajor.id))
+        .slice(0, 6);
+      if (leadsTo.length > 0) {
+        return {
+          intent,
+          text: [
+            copy.majorLeadsTo(locale === "ar" ? namedMajor.ar : namedMajor.en),
+            leadsTo.map((row) =>
+              copy.sectorLine(
+                row.title[locale],
+                DEMAND_LABEL[locale][row.demand] ?? row.demand,
+                row.aiResistance.score,
+              )).join("\n"),
+          ].join("\n\n"),
+          citations: leadsTo.slice(0, 4).map((row) => ({
+            kind: "career" as const, id: row.id, label: row.title[locale],
+          })),
+        };
+      }
+    }
+
+    const career = mentioned.length > 0 ? careersById.get(mentioned[0].id) : null;
+    if (career) {
+      const rows = career.educationPath.relatedMajors
+        .map((id) => majorsById.get(id))
+        .filter((major): major is NonNullable<typeof major> => major !== undefined);
+      const lines = rows.map((major) => {
+        const taught = universities.filter((uni) => uni.majorsOffered.includes(major.id)).length;
+        return `• ${major.name[locale]} — ${copy.majorsTaught(taught)}`;
+      });
+      return {
+        intent,
+        text: [copy.majorsFor(career.title[locale]), lines.join("\n")].join("\n\n"),
+        citations: [{ kind: "career", id: career.id, label: career.title[locale] }],
+      };
+    }
+
+    if (namedSector) {
+      const inSector = careersFull.filter((row) => row.sector === namedSector.id);
+      const majorIds = [...new Set(inSector.flatMap((row) => row.educationPath.relatedMajors))];
+      const rows = majorIds
+        .map((id) => majorsById.get(id))
+        .filter((major): major is NonNullable<typeof major> => major !== undefined)
+        .slice(0, 8);
+      if (rows.length > 0) {
+        return {
+          intent,
+          text: [
+            copy.majorsFor(sectorName(namedSector.id)),
+            rows.map((major) => `• ${major.name[locale]}`).join("\n"),
+          ].join("\n\n"),
+          citations: [],
+        };
+      }
+    }
+
+    return { intent, text: copy.majorsGeneral, citations: [] };
+  }
+
+  // --- universities ------------------------------------------------------
+  if (intent === "universities") {
+    // One named institution: describe it.
+    if (namedUniversity) {
+      const university = universities.find((row) => row.id === namedUniversity.id);
+      if (university) {
+        return {
+          intent,
+          text: [
+            copy.uniAbout(university.name[locale]),
+            [
+              copy.uniFacts(
+                INSTITUTION_LABEL[locale][university.type] ?? university.type,
+                EMIRATE_LABEL[locale][university.emirate] ?? university.emirate,
+                university.established,
+              ),
+              copy.uniTuition(TUITION_LABEL[locale][university.tuitionBand] ?? university.tuitionBand),
+              copy.uniMajors(university.majorsOffered.length),
+              copy.uniSite(university.website),
+            ].join("\n"),
+            university.campusLife[locale],
+          ].join("\n\n"),
+          citations: [
+            { kind: "university", id: university.id, label: university.name[locale] },
+          ],
+        };
+      }
+    }
+
+    // A subject: who teaches it.
+    const careerMajor = mentioned.length > 0
+      ? majorsById.get(careersById.get(mentioned[0].id)?.educationPath.relatedMajors[0] ?? "")
+      : undefined;
+    const targetMajor: { id: string; label: string } | null = namedMajor
+      ? { id: namedMajor.id, label: locale === "ar" ? namedMajor.ar : namedMajor.en }
+      : careerMajor
+        ? { id: careerMajor.id, label: careerMajor.name[locale] }
+        : null;
+    if (targetMajor) {
+      const teaching = universities
+        .filter((row) => row.majorsOffered.includes(targetMajor.id))
+        .filter((row) => !namedEmirate || row.emirate === namedEmirate)
+        .slice(0, 6);
+      if (teaching.length > 0) {
+        return {
+          intent,
+          text: [
+            copy.uniForMajor(targetMajor.label),
+            teaching.map((row) =>
+              `• ${row.name[locale]} — ${EMIRATE_LABEL[locale][row.emirate] ?? row.emirate}`)
+              .join("\n"),
+            copy.admCaveat,
+          ].join("\n\n"),
+          citations: teaching.slice(0, 4).map((row) => ({
+            kind: "university" as const, id: row.id, label: row.name[locale],
+          })),
+        };
+      }
+    }
+
+    // Affordability. "Best" has no answer this catalog can defend, but
+    // "cheapest" does, and it is usually the question underneath.
+    if (/\b(cheap\w*|afford\w*|free|low cost|budget)\b/i.test(haystack)
+      || /(ارخص|أرخص|مجاني|مجانا|تكلفه|تكلفة|ميسور)/.test(question)) {
+      const ranked = [...universities]
+        .filter((row) => !namedEmirate || row.emirate === namedEmirate)
+        .sort((a, b) =>
+          TUITION_ORDER.indexOf(a.tuitionBand) - TUITION_ORDER.indexOf(b.tuitionBand))
+        .slice(0, 6);
+      return {
+        intent,
+        text: [
+          copy.uniCheapest,
+          ranked.map((row) =>
+            `• ${row.name[locale]} — ${TUITION_LABEL[locale][row.tuitionBand] ?? row.tuitionBand}`)
+            .join("\n"),
+          copy.admCaveat,
+        ].join("\n\n"),
+        citations: ranked.slice(0, 4).map((row) => ({
+          kind: "university" as const, id: row.id, label: row.name[locale],
+        })),
+      };
+    }
+
+    // An emirate: list what is there.
+    if (namedEmirate) {
+      const here = universities.filter((row) => row.emirate === namedEmirate).slice(0, 8);
+      if (here.length > 0) {
+        return {
+          intent,
+          text: [
+            copy.uniInEmirate(EMIRATE_LABEL[locale][namedEmirate]),
+            here.map((row) =>
+              `• ${row.name[locale]} — ${INSTITUTION_LABEL[locale][row.type] ?? row.type}`)
+              .join("\n"),
+          ].join("\n\n"),
+          citations: here.slice(0, 4).map((row) => ({
+            kind: "university" as const, id: row.id, label: row.name[locale],
+          })),
+        };
+      }
+    }
+
+    return { intent, text: copy.uniGeneral, citations: [] };
+  }
+
+  // --- careers in a sector -----------------------------------------------
+  if (intent === "list_sector") {
+    if (namedSector) {
+      const inSector = careersFull
+        .filter((row) => row.sector === namedSector.id)
+        .sort((a, b) => b.aiResistance.score - a.aiResistance.score)
+        .slice(0, 8);
+      if (inSector.length > 0) {
+        return {
+          intent,
+          text: [
+            copy.sectorIntroList(sectorName(namedSector.id)),
+            inSector.map((row) =>
+              copy.sectorLine(
+                row.title[locale],
+                DEMAND_LABEL[locale][row.demand] ?? row.demand,
+                row.aiResistance.score,
+              )).join("\n"),
+          ].join("\n\n"),
+          citations: inSector.slice(0, 4).map((row) => ({
+            kind: "career" as const, id: row.id, label: row.title[locale],
+          })),
+        };
+      }
+    }
+    return {
+      intent,
+      text: copy.sectorGeneral(
+        sectors.map((row) => (locale === "ar" ? row.name_ar : row.name_en)).join(listSep(locale)),
+      ),
+      citations: [],
+    };
+  }
 
   // --- AI impact ---------------------------------------------------------
   //
@@ -711,14 +1381,23 @@ export async function answer(
   // --- scholarships ------------------------------------------------------
   if (intent === "scholarships") {
     const career = mentioned.length > 0 ? careersById.get(mentioned[0].id) : null;
-    const picked = rankScholarships(scholarships, career ?? null, profile);
-    const scoped = career
-      ? picked.some((row) =>
-        row.fields.some((field) => career.educationPath.relatedMajors.includes(field)))
-      : false;
+    /*
+     * A funding question is often phrased in subjects rather than job titles --
+     * "are there scholarships for nursing?" -- and "nursing" half-matches
+     * several nursing roles without naming one. The major is the better key:
+     * scholarships are scoped to fields of study in the first place.
+     */
+    const subjectMajors = career ? [] : majorCandidates.map((row) => row.id);
+    const picked = rankScholarships(scholarships, career ?? null, profile, 5, subjectMajors);
+    const wanted = career ? career.educationPath.relatedMajors : subjectMajors;
+    const scoped = wanted.length > 0
+      && picked.some((row) => row.fields.some((field) => wanted.includes(field)));
+    const subject = career
+      ? career.title[locale]
+      : majorCandidates.map((row) => (locale === "ar" ? row.ar : row.en)).join(listSep(locale));
 
-    const intro = career
-      ? (scoped ? copy.schoIntro(career.title[locale]) : copy.schoNone(career.title[locale]))
+    const intro = subject
+      ? (scoped ? copy.schoIntro(subject) : copy.schoNone(subject))
       : copy.schoGeneral;
 
     const lines = picked.map((scholarship) => {
@@ -802,6 +1481,36 @@ export async function answer(
   }
 
   // --- where to study ----------------------------------------------------
+  //
+  // "Where can I study medicine?" names a subject, not a job, and half-matches
+  // several medical careers -- so it used to reach the ambiguity reply. The
+  // major is the better answer to a question phrased in subjects.
+  if (intent === "where_to_study" && mentioned.length === 0 && majorCandidates.length > 0) {
+    const wanted = new Set(majorCandidates.map((row) => row.id));
+    const teaching = universities
+      .filter((row) => row.majorsOffered.some((major) => wanted.has(major)))
+      .filter((row) => !namedEmirate || row.emirate === namedEmirate)
+      .slice(0, 6);
+    if (teaching.length > 0) {
+      return {
+        intent,
+        text: [
+          copy.uniForMajor(
+            majorCandidates.map((row) => (locale === "ar" ? row.ar : row.en))
+              .join(listSep(locale)),
+          ),
+          teaching.map((row) =>
+            `• ${row.name[locale]} — ${EMIRATE_LABEL[locale][row.emirate] ?? row.emirate}`)
+            .join("\n"),
+          copy.admCaveat,
+        ].join("\n\n"),
+        citations: teaching.slice(0, 4).map((row) => ({
+          kind: "university" as const, id: row.id, label: row.name[locale],
+        })),
+      };
+    }
+  }
+
   if (intent === "where_to_study" && mentioned.length > 0) {
     const career = careersById.get(mentioned[0].id);
     if (career) {

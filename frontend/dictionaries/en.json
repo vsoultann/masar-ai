@@ -80,7 +80,7 @@
     "ctaFinalBody": "No cost, no commitment. You can stop after any step and come back later.",
     "viewSector": "View careers",
     "demoTitle": "Two questions in, you will know more than you did",
-    "demoSubtitle": "Both surveys run the real model — the same one behind the full assessment. Pick how much time you have.",
+    "demoSubtitle": "Both surveys run the real model — the same one behind the full assessment — and draw fresh questions every time, so you can run either one twice and learn something new.",
     "demoYes": "That's me",
     "demoNo": "Not really",
     "demoResult": "A taste of your match",
@@ -94,8 +94,8 @@
     "exploreUniversities": "Browse institutions",
     "demoQuick": "Quick check",
     "demoDeep": "Deep dive",
-    "demoQuickBlurb": "Five questions about the kind of work you want to still be doing in ten years.",
-    "demoDeepBlurb": "Ten questions on majors, risk and what you would keep if a machine took the rest.",
+    "demoQuickBlurb": "Five questions, drawn at random, about the kind of work you want to still be doing in ten years.",
+    "demoDeepBlurb": "Ten different questions on majors, risk and what you would keep if a machine took the rest.",
     "demoQuickTime": "about 1 minute",
     "demoDeepTime": "about 3 minutes",
     "demoStart": "Start",
@@ -686,25 +686,30 @@
     "step2": "Choose “Add to Home Screen”"
   },
   "survey": {
-    "quick": [
-      "Ten years in, I would rather be the person who understands why the system works than the person everyone comes to for help.",
-      "I would rather finish a day having repaired or built something real than having made something look better.",
-      "I would rather carry a decision and the blame that comes with it than follow a procedure that is known to work.",
-      "I would choose a major that lets me make things nobody asked for over one with a clear, published career path.",
-      "If software did the technical half of my job tomorrow, the half I would fight to keep is the half with people in it."
-    ],
-    "deep": [
-      "Ten years in, I would rather be the person who understands why the system works than the person everyone comes to for help.",
-      "I would rather finish a day having repaired or built something real than having made something look better.",
-      "I would rather carry a decision and the blame that comes with it than follow a procedure that is known to work.",
-      "I would choose a major that lets me make things nobody asked for over one with a clear, published career path.",
-      "If software did the technical half of my job tomorrow, the half I would fight to keep is the half with people in it.",
-      "I would rather commit to a long qualification now than keep my options open for another two years.",
-      "A field that barely existed ten years ago interests me more than one with fifty years of graduates behind it.",
-      "I would rather be physically where the problem is than analyse it from a desk anywhere in the world.",
-      "I would rather build the organisation than do excellent work inside someone else's.",
-      "I would rather be trusted because my work is always exact than because my work is always interesting."
-    ]
+    "pool": {
+      "ri": "I would rather fix the machine myself than work out why it failed.",
+      "ra": "I would rather build something that works well than something that looks remarkable.",
+      "rs": "I would rather spend my day around equipment than around people who need my help.",
+      "re": "I would rather do the work myself than persuade other people to do it.",
+      "rc": "I would rather be judged on what I built than on how carefully I recorded it.",
+      "ia": "I would rather find the correct answer than the interesting one.",
+      "is": "Ten years in, I would rather be the person who understands why the system works than the person everyone comes to for help.",
+      "ie": "I would rather be the expert in the room than the one who runs it.",
+      "ic": "I would rather question a procedure than follow it exactly.",
+      "as": "I would rather make something people remember than help someone who remembers me.",
+      "ae": "I would rather have my work admired than my ideas adopted.",
+      "ac": "I would choose a major that lets me make things nobody asked for over one with a clear, published career path.",
+      "se": "I would rather be trusted by the team than lead it.",
+      "sc": "I would rather spend an hour with someone who needs help than an hour making the records exact.",
+      "ec": "I would rather carry a decision and the blame that comes with it than follow a procedure that is known to work.",
+      "b_oc": "A field that barely existed ten years ago interests me more than one with fifty years of graduates behind it.",
+      "b_oa": "I would rather argue for an unpopular idea than keep the room comfortable.",
+      "b_oe": "I would rather read deeply about something on my own than talk it through with other people.",
+      "b_ca": "I would rather be trusted because my work is always exact than because I am easy to work with.",
+      "b_cn": "A deadline makes me organised rather than anxious.",
+      "b_ea": "I would rather push a plan through than keep everyone on side.",
+      "b_en": "Presenting to a room of strangers energises me more than it worries me."
+    }
   },
   "resistance": {
     "title": "AI resistance",

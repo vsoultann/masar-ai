@@ -1,20 +1,18 @@
 /**
  * The landing-page surveys: the model, separate from the view.
  *
- * Two lengths, because one length served neither student who arrives on the
- * landing page. The three-question version this replaces was too short to
- * separate 184 careers — the answer it produced was closer to a coin flip than
- * to a recommendation, and a student who liked it had no way to spend two more
- * minutes and get something better.
+ * Two lengths — a five-question quick check and a ten-question deep dive —
+ * drawn at random from a shared pool of 22, so no two runs ask the same set
+ * and the deep dive is never the quick check with five more on the end.
  *
- *   Quick check (5)  one RIASEC dimension pair per question.
- *   Deep dive (10)   the same five, then five that reach into Big Five and the
- *                    remaining RIASEC pairs.
+ * The pool holds each unordered dimension pair exactly once. That is not
+ * tidiness, it is the thing that makes a random draw safe: two questions on the
+ * same pair would ask the student to agree with a statement and its mirror, and
+ * whichever they answered second would look like a contradiction.
  *
- * The questions themselves live in the dictionaries (`survey.quick`,
- * `survey.deep`) because they are content; what lives here is which dimensions
- * each one moves, which is behaviour. The two are kept in the same order and
- * an equal length is asserted by the test suite.
+ * The question *text* lives in the dictionaries under `survey.pool`, keyed by
+ * the same ids used here, because text is content and dimensions are behaviour.
+ * The test suite asserts every id in the pool has text in both languages.
  */
 
 export interface SurveyQuestion {
@@ -28,32 +26,48 @@ export interface SurveyQuestion {
 }
 
 /*
- * Questions 1-5 are the quick check and also the first half of the deep dive,
- * so a student who does both is never asked to contradict themselves.
+ * Fifteen RIASEC questions, one per unordered pair of the six letters, and
+ * seven Big Five questions across distinct trait pairs.
  *
- * No RIASEC pair is repeated inside the first five, and the deep dive's extra
- * questions reach into Big Five and into the pairs the quick check left alone,
- * because a second pass over the same six letters adds confidence without
- * adding information.
+ * Every one is written about *choosing* — a major, a commitment, what you would
+ * keep if a machine took the rest — rather than about liking a school subject.
+ * A student who has decided they "like physics" has not decided anything; one
+ * who knows whether they would rather carry a decision or follow a correct
+ * procedure has.
  */
-export const QUICK_SURVEY: SurveyQuestion[] = [
-  { id: "q1", up: "I", down: "S", axis: "riasec" },
-  { id: "q2", up: "R", down: "A", axis: "riasec" },
-  { id: "q3", up: "E", down: "C", axis: "riasec" },
-  { id: "q4", up: "A", down: "C", axis: "riasec" },
-  { id: "q5", up: "S", down: "I", axis: "riasec" },
+export const SURVEY_POOL: SurveyQuestion[] = [
+  { id: "ri", up: "R", down: "I", axis: "riasec" },
+  { id: "ra", up: "R", down: "A", axis: "riasec" },
+  { id: "rs", up: "R", down: "S", axis: "riasec" },
+  { id: "re", up: "R", down: "E", axis: "riasec" },
+  { id: "rc", up: "R", down: "C", axis: "riasec" },
+  { id: "ia", up: "I", down: "A", axis: "riasec" },
+  { id: "is", up: "I", down: "S", axis: "riasec" },
+  { id: "ie", up: "I", down: "E", axis: "riasec" },
+  { id: "ic", up: "I", down: "C", axis: "riasec" },
+  { id: "as", up: "A", down: "S", axis: "riasec" },
+  { id: "ae", up: "A", down: "E", axis: "riasec" },
+  { id: "ac", up: "A", down: "C", axis: "riasec" },
+  { id: "se", up: "S", down: "E", axis: "riasec" },
+  { id: "sc", up: "S", down: "C", axis: "riasec" },
+  { id: "ec", up: "E", down: "C", axis: "riasec" },
+
+  { id: "b_oc", up: "O", down: "C", axis: "bigfive" },
+  { id: "b_oa", up: "O", down: "A", axis: "bigfive" },
+  { id: "b_oe", up: "O", down: "E", axis: "bigfive" },
+  { id: "b_ca", up: "C", down: "A", axis: "bigfive" },
+  { id: "b_cn", up: "C", down: "N", axis: "bigfive" },
+  { id: "b_ea", up: "E", down: "A", axis: "bigfive" },
+  { id: "b_en", up: "E", down: "N", axis: "bigfive" },
 ];
 
-export const DEEP_SURVEY: SurveyQuestion[] = [
-  ...QUICK_SURVEY,
-  { id: "q6", up: "C", down: "O", axis: "bigfive" },
-  { id: "q7", up: "O", down: "C", axis: "bigfive" },
-  { id: "q8", up: "R", down: "I", axis: "riasec" },
-  { id: "q9", up: "E", down: "S", axis: "riasec" },
-  { id: "q10", up: "C", down: "A", axis: "riasec" },
-];
+export const QUICK_LENGTH = 5;
+export const DEEP_LENGTH = 10;
 
-/** Neutral defaults for everything the survey does not ask about. */
+/** How many of each draw come from the personality pool rather than interests. */
+const BIGFIVE_SHARE: Record<number, number> = { [QUICK_LENGTH]: 1, [DEEP_LENGTH]: 3 };
+
+/** Neutral defaults for everything a given draw does not ask about. */
 export const NEUTRAL_RIASEC = { R: 50, I: 50, A: 50, S: 50, E: 50, C: 50 };
 export const NEUTRAL_BIGFIVE = { O: 55, C: 55, E: 50, A: 55, N: 45 };
 
@@ -64,15 +78,76 @@ export interface SurveyScores {
 
 export const emptyScores = (): SurveyScores => ({ riasec: {}, bigfive: {} });
 
+/** Fisher-Yates, against an injectable source so a test can pin the draw. */
+function shuffle<T>(rows: T[], random: () => number): T[] {
+  const out = [...rows];
+  for (let index = out.length - 1; index > 0; index -= 1) {
+    const swap = Math.floor(random() * (index + 1));
+    [out[index], out[swap]] = [out[swap], out[index]];
+  }
+  return out;
+}
+
+/**
+ * Draws one survey.
+ *
+ * Random, but not carelessly so. Two rules shape the draw:
+ *
+ *  - **A fixed share of personality questions.** A purely random five could
+ *    come out all Big Five, leaving every RIASEC letter at its neutral default
+ *    — and the recommender would then be ranking 184 careers on a profile that
+ *    says nothing about interests at all.
+ *  - **Spread across the letters.** Picking greedily by least-used letter stops
+ *    a draw like RI / RA / RS / RE, which is four questions about how Realistic
+ *    someone is and nothing else. The shuffle still decides which of the
+ *    equally-good candidates is taken, so the set differs every run.
+ */
+export function drawSurvey(
+  length: number,
+  random: () => number = Math.random,
+): SurveyQuestion[] {
+  const wantBigFive = BIGFIVE_SHARE[length] ?? Math.round(length * 0.3);
+  const pick = (pool: SurveyQuestion[], count: number) => {
+    const shuffled = shuffle(pool, random);
+    const used = new Map<string, number>();
+    const chosen: SurveyQuestion[] = [];
+    while (chosen.length < count && chosen.length < shuffled.length) {
+      let best: SurveyQuestion | null = null;
+      let bestCost = Infinity;
+      for (const question of shuffled) {
+        if (chosen.includes(question)) continue;
+        const cost = (used.get(question.up) ?? 0) + (used.get(question.down) ?? 0);
+        if (cost < bestCost) {
+          best = question;
+          bestCost = cost;
+        }
+      }
+      if (!best) break;
+      chosen.push(best);
+      used.set(best.up, (used.get(best.up) ?? 0) + 1);
+      used.set(best.down, (used.get(best.down) ?? 0) + 1);
+    }
+    return chosen;
+  };
+
+  const riasec = SURVEY_POOL.filter((question) => question.axis === "riasec");
+  const bigfive = SURVEY_POOL.filter((question) => question.axis === "bigfive");
+  const drawn = [
+    ...pick(riasec, length - wantBigFive),
+    ...pick(bigfive, wantBigFive),
+  ];
+  // Interleave rather than front-loading all the interest questions, so the
+  // survey does not visibly change subject halfway through.
+  return shuffle(drawn, random);
+}
+
 /**
  * Folds one answer into the running scores.
  *
- * **Averaging, not overwriting.** A later question may touch a dimension an
- * earlier one already moved — q5 raises S, which q1 lowered. Overwriting would
- * mean the last question asked silently cancelled the first, so a student who
- * answered ten questions would end up with exactly the profile of a student who
- * answered only the last five. Averaging keeps both answers in the profile,
- * which is the entire reason for asking ten.
+ * **Averaging, not overwriting.** The pool guarantees no draw repeats a pair,
+ * but a letter can still appear in two different pairs (RI and RS both move R).
+ * Overwriting would mean the later question silently cancelled the earlier one,
+ * so a ten-question run would end up with the profile of a much shorter one.
  */
 export function applyAnswer(
   scores: SurveyScores,
