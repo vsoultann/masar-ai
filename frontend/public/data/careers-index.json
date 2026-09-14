@@ -35,7 +35,11 @@
       "programming",
       "mathematics",
       "statistics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 27,
+      "band": "exposed"
+    }
   },
   {
     "id": "data_scientist",
@@ -73,7 +77,11 @@
       "data_analysis",
       "programming",
       "mathematics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 23,
+      "band": "exposed"
+    }
   },
   {
     "id": "data_engineer",
@@ -110,7 +118,11 @@
       "cloud_infrastructure",
       "systems_design",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 31,
+      "band": "exposed"
+    }
   },
   {
     "id": "ai_ethics_policy_analyst",
@@ -148,7 +160,11 @@
       "research_methods",
       "writing_docs",
       "english_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 38,
+      "band": "exposed"
+    }
   },
   {
     "id": "security_analyst",
@@ -185,7 +201,11 @@
       "attention_detail",
       "networking",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 40,
+      "band": "exposed"
+    }
   },
   {
     "id": "penetration_tester",
@@ -221,7 +241,11 @@
       "problem_solving",
       "networking",
       "programming"
-    ]
+    ],
+    "aiResistance": {
+      "score": 39,
+      "band": "exposed"
+    }
   },
   {
     "id": "security_architect",
@@ -258,7 +282,11 @@
       "systems_design",
       "cloud_infrastructure",
       "networking"
-    ]
+    ],
+    "aiResistance": {
+      "score": 47,
+      "band": "mixed"
+    }
   },
   {
     "id": "digital_forensics_investigator",
@@ -294,7 +322,11 @@
       "cybersecurity",
       "writing_docs",
       "research_methods"
-    ]
+    ],
+    "aiResistance": {
+      "score": 39,
+      "band": "exposed"
+    }
   },
   {
     "id": "software_engineer",
@@ -331,7 +363,11 @@
       "problem_solving",
       "systems_design",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 36,
+      "band": "exposed"
+    }
   },
   {
     "id": "cloud_devops_engineer",
@@ -368,7 +404,11 @@
       "programming",
       "systems_design",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 35,
+      "band": "exposed"
+    }
   },
   {
     "id": "mobile_app_developer",
@@ -405,7 +445,11 @@
       "problem_solving",
       "attention_detail",
       "teamwork"
-    ]
+    ],
+    "aiResistance": {
+      "score": 33,
+      "band": "exposed"
+    }
   },
   {
     "id": "qa_automation_engineer",
@@ -442,7 +486,11 @@
       "programming",
       "problem_solving",
       "writing_docs"
-    ]
+    ],
+    "aiResistance": {
+      "score": 33,
+      "band": "exposed"
+    }
   },
   {
     "id": "renewable_energy_engineer",
@@ -479,7 +527,11 @@
       "physics_reasoning",
       "sustainability",
       "mathematics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 59,
+      "band": "mixed"
+    }
   },
   {
     "id": "petroleum_engineer",
@@ -517,7 +569,11 @@
       "mathematics",
       "energy_systems",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 59,
+      "band": "mixed"
+    }
   },
   {
     "id": "nuclear_engineer",
@@ -554,7 +610,11 @@
       "attention_detail",
       "mathematics",
       "energy_systems"
-    ]
+    ],
+    "aiResistance": {
+      "score": 58,
+      "band": "mixed"
+    }
   },
   {
     "id": "sustainability_consultant",
@@ -590,7 +650,11 @@
       "writing_docs",
       "data_analysis",
       "business_strategy"
-    ]
+    ],
+    "aiResistance": {
+      "score": 52,
+      "band": "mixed"
+    }
   },
   {
     "id": "commercial_pilot",
@@ -627,7 +691,11 @@
       "attention_detail",
       "english_language",
       "teamwork"
-    ]
+    ],
+    "aiResistance": {
+      "score": 70,
+      "band": "resilient"
+    }
   },
   {
     "id": "aeronautical_engineer",
@@ -663,7 +731,11 @@
       "mechanical_design",
       "mathematics",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 69,
+      "band": "resilient"
+    }
   },
   {
     "id": "air_traffic_controller",
@@ -700,7 +772,11 @@
       "aviation_ops",
       "english_language",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 74,
+      "band": "resilient"
+    }
   },
   {
     "id": "avionics_technician",
@@ -737,7 +813,11 @@
       "attention_detail",
       "problem_solving",
       "aviation_ops"
-    ]
+    ],
+    "aiResistance": {
+      "score": 70,
+      "band": "resilient"
+    }
   },
   {
     "id": "satellite_systems_engineer",
@@ -775,7 +855,11 @@
       "physics_reasoning",
       "mathematics",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 58,
+      "band": "mixed"
+    }
   },
   {
     "id": "space_mission_analyst",
@@ -812,7 +896,11 @@
       "physics_reasoning",
       "data_analysis",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 47,
+      "band": "mixed"
+    }
   },
   {
     "id": "remote_sensing_specialist",
@@ -849,7 +937,11 @@
       "data_analysis",
       "attention_detail",
       "research_methods"
-    ]
+    ],
+    "aiResistance": {
+      "score": 44,
+      "band": "exposed"
+    }
   },
   {
     "id": "space_robotics_engineer",
@@ -887,7 +979,11 @@
       "mechanical_design",
       "programming",
       "physics_reasoning"
-    ]
+    ],
+    "aiResistance": {
+      "score": 53,
+      "band": "mixed"
+    }
   },
   {
     "id": "physician",
@@ -923,7 +1019,11 @@
       "clinical_skills",
       "attention_detail",
       "teamwork"
-    ]
+    ],
+    "aiResistance": {
+      "score": 83,
+      "band": "anchored"
+    }
   },
   {
     "id": "registered_nurse",
@@ -959,7 +1059,11 @@
       "teamwork",
       "attention_detail",
       "life_sciences"
-    ]
+    ],
+    "aiResistance": {
+      "score": 82,
+      "band": "anchored"
+    }
   },
   {
     "id": "pharmacist",
@@ -994,7 +1098,11 @@
       "chemistry_lab",
       "life_sciences",
       "clinical_skills"
-    ]
+    ],
+    "aiResistance": {
+      "score": 82,
+      "band": "anchored"
+    }
   },
   {
     "id": "health_informatics_specialist",
@@ -1031,7 +1139,11 @@
       "systems_design",
       "programming",
       "life_sciences"
-    ]
+    ],
+    "aiResistance": {
+      "score": 64,
+      "band": "resilient"
+    }
   },
   {
     "id": "financial_analyst",
@@ -1069,7 +1181,11 @@
       "data_analysis",
       "attention_detail",
       "economics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 27,
+      "band": "exposed"
+    }
   },
   {
     "id": "fintech_product_manager",
@@ -1106,7 +1222,11 @@
       "project_management",
       "finance_accounting",
       "marketing_comm"
-    ]
+    ],
+    "aiResistance": {
+      "score": 36,
+      "band": "exposed"
+    }
   },
   {
     "id": "actuary",
@@ -1144,7 +1264,11 @@
       "statistics",
       "attention_detail",
       "finance_accounting"
-    ]
+    ],
+    "aiResistance": {
+      "score": 26,
+      "band": "exposed"
+    }
   },
   {
     "id": "compliance_officer",
@@ -1182,7 +1306,11 @@
       "law_policy",
       "finance_accounting",
       "writing_docs"
-    ]
+    ],
+    "aiResistance": {
+      "score": 29,
+      "band": "exposed"
+    }
   },
   {
     "id": "hotel_operations_manager",
@@ -1219,7 +1347,11 @@
       "leadership",
       "teamwork",
       "project_management"
-    ]
+    ],
+    "aiResistance": {
+      "score": 66,
+      "band": "resilient"
+    }
   },
   {
     "id": "tourism_experience_designer",
@@ -1256,7 +1388,11 @@
       "marketing_comm",
       "customer_service",
       "arabic_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 60,
+      "band": "resilient"
+    }
   },
   {
     "id": "events_manager",
@@ -1293,7 +1429,11 @@
       "teamwork",
       "leadership",
       "marketing_comm"
-    ]
+    ],
+    "aiResistance": {
+      "score": 61,
+      "band": "resilient"
+    }
   },
   {
     "id": "airline_customer_experience",
@@ -1330,7 +1470,11 @@
       "english_language",
       "teamwork",
       "marketing_comm"
-    ]
+    ],
+    "aiResistance": {
+      "score": 48,
+      "band": "mixed"
+    }
   },
   {
     "id": "civil_engineer",
@@ -1367,7 +1511,11 @@
       "physics_reasoning",
       "mathematics",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 70,
+      "band": "resilient"
+    }
   },
   {
     "id": "architect",
@@ -1404,7 +1552,11 @@
       "creativity",
       "attention_detail",
       "mathematics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 65,
+      "band": "resilient"
+    }
   },
   {
     "id": "quantity_surveyor",
@@ -1441,7 +1593,11 @@
       "finance_accounting",
       "mathematics",
       "writing_docs"
-    ]
+    ],
+    "aiResistance": {
+      "score": 60,
+      "band": "resilient"
+    }
   },
   {
     "id": "urban_planner",
@@ -1478,7 +1634,11 @@
       "sustainability",
       "research_methods",
       "law_policy"
-    ]
+    ],
+    "aiResistance": {
+      "score": 65,
+      "band": "resilient"
+    }
   },
   {
     "id": "supply_chain_analyst",
@@ -1515,7 +1675,11 @@
       "data_analysis",
       "problem_solving",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 61,
+      "band": "resilient"
+    }
   },
   {
     "id": "port_operations_manager",
@@ -1552,7 +1716,11 @@
       "maritime_ops",
       "leadership",
       "project_management"
-    ]
+    ],
+    "aiResistance": {
+      "score": 74,
+      "band": "resilient"
+    }
   },
   {
     "id": "marine_engineer",
@@ -1589,7 +1757,11 @@
       "physics_reasoning",
       "attention_detail",
       "maritime_ops"
-    ]
+    ],
+    "aiResistance": {
+      "score": 72,
+      "band": "resilient"
+    }
   },
   {
     "id": "customs_trade_specialist",
@@ -1626,7 +1798,11 @@
       "law_policy",
       "logistics_ops",
       "english_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 62,
+      "band": "resilient"
+    }
   },
   {
     "id": "public_policy_analyst",
@@ -1663,7 +1839,11 @@
       "research_methods",
       "writing_docs",
       "arabic_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 32,
+      "band": "exposed"
+    }
   },
   {
     "id": "government_digital_services",
@@ -1700,7 +1880,11 @@
       "arabic_language",
       "customer_service",
       "writing_docs"
-    ]
+    ],
+    "aiResistance": {
+      "score": 38,
+      "band": "exposed"
+    }
   },
   {
     "id": "diplomat",
@@ -1737,7 +1921,11 @@
       "arabic_language",
       "english_language",
       "law_policy"
-    ]
+    ],
+    "aiResistance": {
+      "score": 42,
+      "band": "exposed"
+    }
   },
   {
     "id": "statistician_gov",
@@ -1774,7 +1962,11 @@
       "data_analysis",
       "research_methods",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 28,
+      "band": "exposed"
+    }
   },
   {
     "id": "secondary_teacher_stem",
@@ -1811,7 +2003,11 @@
       "public_speaking",
       "mathematics",
       "arabic_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 75,
+      "band": "anchored"
+    }
   },
   {
     "id": "special_education_specialist",
@@ -1849,7 +2045,11 @@
       "teamwork",
       "attention_detail",
       "arabic_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 69,
+      "band": "resilient"
+    }
   },
   {
     "id": "instructional_designer",
@@ -1886,7 +2086,11 @@
       "teaching",
       "arabic_language",
       "creativity"
-    ]
+    ],
+    "aiResistance": {
+      "score": 61,
+      "band": "resilient"
+    }
   },
   {
     "id": "academic_career_counsellor",
@@ -1924,7 +2128,11 @@
       "teaching",
       "public_speaking",
       "customer_service"
-    ]
+    ],
+    "aiResistance": {
+      "score": 73,
+      "band": "resilient"
+    }
   },
   {
     "id": "ux_ui_designer",
@@ -1961,7 +2169,11 @@
       "creativity",
       "teamwork",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 51,
+      "band": "mixed"
+    }
   },
   {
     "id": "digital_content_producer",
@@ -1998,7 +2210,11 @@
       "marketing_comm",
       "arabic_language",
       "visual_design"
-    ]
+    ],
+    "aiResistance": {
+      "score": 42,
+      "band": "exposed"
+    }
   },
   {
     "id": "journalist_editor",
@@ -2035,7 +2251,11 @@
       "arabic_language",
       "english_language",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 55,
+      "band": "mixed"
+    }
   },
   {
     "id": "game_developer",
@@ -2072,7 +2292,11 @@
       "creativity",
       "problem_solving",
       "mathematics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 49,
+      "band": "mixed"
+    }
   },
   {
     "id": "startup_founder",
@@ -2108,7 +2332,11 @@
       "leadership",
       "problem_solving",
       "marketing_comm"
-    ]
+    ],
+    "aiResistance": {
+      "score": 46,
+      "band": "mixed"
+    }
   },
   {
     "id": "product_manager",
@@ -2145,7 +2373,11 @@
       "project_management",
       "leadership",
       "data_analysis"
-    ]
+    ],
+    "aiResistance": {
+      "score": 35,
+      "band": "exposed"
+    }
   },
   {
     "id": "digital_marketing_specialist",
@@ -2182,7 +2414,11 @@
       "creativity",
       "arabic_language",
       "english_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 27,
+      "band": "exposed"
+    }
   },
   {
     "id": "business_analyst",
@@ -2219,7 +2455,11 @@
       "data_analysis",
       "business_strategy",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 33,
+      "band": "exposed"
+    }
   },
   {
     "id": "radiologist",
@@ -2255,7 +2495,11 @@
       "attention_detail",
       "clinical_skills",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 72,
+      "band": "resilient"
+    }
   },
   {
     "id": "radiographer",
@@ -2290,7 +2534,11 @@
       "attention_detail",
       "patient_care",
       "teamwork"
-    ]
+    ],
+    "aiResistance": {
+      "score": 75,
+      "band": "anchored"
+    }
   },
   {
     "id": "sonographer",
@@ -2326,7 +2574,11 @@
       "attention_detail",
       "patient_care",
       "life_sciences"
-    ]
+    ],
+    "aiResistance": {
+      "score": 76,
+      "band": "anchored"
+    }
   },
   {
     "id": "nuclear_medicine_technologist",
@@ -2362,7 +2614,11 @@
       "diagnostic_imaging",
       "chemistry_lab",
       "physics_reasoning"
-    ]
+    ],
+    "aiResistance": {
+      "score": 73,
+      "band": "resilient"
+    }
   },
   {
     "id": "radiation_therapist",
@@ -2398,7 +2654,11 @@
       "patient_care",
       "quality_control",
       "diagnostic_imaging"
-    ]
+    ],
+    "aiResistance": {
+      "score": 79,
+      "band": "anchored"
+    }
   },
   {
     "id": "interventional_radiologist",
@@ -2433,7 +2693,11 @@
       "attention_detail",
       "clinical_skills",
       "surgical_skills"
-    ]
+    ],
+    "aiResistance": {
+      "score": 85,
+      "band": "anchored"
+    }
   },
   {
     "id": "general_surgeon",
@@ -2468,7 +2732,11 @@
       "clinical_skills",
       "attention_detail",
       "emergency_response"
-    ]
+    ],
+    "aiResistance": {
+      "score": 94,
+      "band": "anchored"
+    }
   },
   {
     "id": "cardiac_surgeon",
@@ -2503,7 +2771,11 @@
       "attention_detail",
       "clinical_skills",
       "emergency_response"
-    ]
+    ],
+    "aiResistance": {
+      "score": 94,
+      "band": "anchored"
+    }
   },
   {
     "id": "orthopedic_surgeon",
@@ -2538,7 +2810,11 @@
       "clinical_skills",
       "attention_detail",
       "teamwork"
-    ]
+    ],
+    "aiResistance": {
+      "score": 85,
+      "band": "anchored"
+    }
   },
   {
     "id": "neurosurgeon",
@@ -2573,7 +2849,11 @@
       "attention_detail",
       "clinical_skills",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 88,
+      "band": "anchored"
+    }
   },
   {
     "id": "anesthesiologist",
@@ -2608,7 +2888,11 @@
       "clinical_skills",
       "emergency_response",
       "pharmacology"
-    ]
+    ],
+    "aiResistance": {
+      "score": 87,
+      "band": "anchored"
+    }
   },
   {
     "id": "cardiologist",
@@ -2643,7 +2927,11 @@
       "attention_detail",
       "problem_solving",
       "pharmacology"
-    ]
+    ],
+    "aiResistance": {
+      "score": 83,
+      "band": "anchored"
+    }
   },
   {
     "id": "neurologist",
@@ -2678,7 +2966,11 @@
       "problem_solving",
       "attention_detail",
       "life_sciences"
-    ]
+    ],
+    "aiResistance": {
+      "score": 77,
+      "band": "anchored"
+    }
   },
   {
     "id": "emergency_physician",
@@ -2713,7 +3005,11 @@
       "clinical_skills",
       "problem_solving",
       "teamwork"
-    ]
+    ],
+    "aiResistance": {
+      "score": 91,
+      "band": "anchored"
+    }
   },
   {
     "id": "general_practitioner",
@@ -2748,7 +3044,11 @@
       "patient_care",
       "counselling",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 90,
+      "band": "anchored"
+    }
   },
   {
     "id": "pediatrician",
@@ -2783,7 +3083,11 @@
       "patient_care",
       "child_development",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 95,
+      "band": "anchored"
+    }
   },
   {
     "id": "obgyn",
@@ -2818,7 +3122,11 @@
       "patient_care",
       "attention_detail",
       "surgical_skills"
-    ]
+    ],
+    "aiResistance": {
+      "score": 95,
+      "band": "anchored"
+    }
   },
   {
     "id": "dermatologist",
@@ -2853,7 +3161,11 @@
       "clinical_skills",
       "patient_care",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 84,
+      "band": "anchored"
+    }
   },
   {
     "id": "ophthalmologist",
@@ -2888,7 +3200,11 @@
       "surgical_skills",
       "clinical_skills",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 86,
+      "band": "anchored"
+    }
   },
   {
     "id": "optometrist",
@@ -2923,7 +3239,11 @@
       "patient_care",
       "clinical_skills",
       "customer_service"
-    ]
+    ],
+    "aiResistance": {
+      "score": 85,
+      "band": "anchored"
+    }
   },
   {
     "id": "psychiatrist",
@@ -2959,7 +3279,11 @@
       "clinical_skills",
       "pharmacology",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 85,
+      "band": "anchored"
+    }
   },
   {
     "id": "clinical_psychologist",
@@ -2994,7 +3318,11 @@
       "patient_care",
       "research_methods",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 79,
+      "band": "anchored"
+    }
   },
   {
     "id": "dentist",
@@ -3029,7 +3357,11 @@
       "attention_detail",
       "patient_care",
       "surgical_skills"
-    ]
+    ],
+    "aiResistance": {
+      "score": 90,
+      "band": "anchored"
+    }
   },
   {
     "id": "orthodontist",
@@ -3064,7 +3396,11 @@
       "dental_skills",
       "patient_care",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 87,
+      "band": "anchored"
+    }
   },
   {
     "id": "dental_hygienist",
@@ -3100,7 +3436,11 @@
       "attention_detail",
       "dental_skills",
       "customer_service"
-    ]
+    ],
+    "aiResistance": {
+      "score": 88,
+      "band": "anchored"
+    }
   },
   {
     "id": "nurse_practitioner",
@@ -3135,7 +3475,11 @@
       "clinical_skills",
       "attention_detail",
       "pharmacology"
-    ]
+    ],
+    "aiResistance": {
+      "score": 95,
+      "band": "anchored"
+    }
   },
   {
     "id": "midwife",
@@ -3171,7 +3515,11 @@
       "clinical_skills",
       "attention_detail",
       "counselling"
-    ]
+    ],
+    "aiResistance": {
+      "score": 90,
+      "band": "anchored"
+    }
   },
   {
     "id": "paramedic",
@@ -3207,7 +3555,11 @@
       "teamwork",
       "patient_care",
       "clinical_skills"
-    ]
+    ],
+    "aiResistance": {
+      "score": 87,
+      "band": "anchored"
+    }
   },
   {
     "id": "physiotherapist",
@@ -3242,7 +3594,11 @@
       "patient_care",
       "attention_detail",
       "life_sciences"
-    ]
+    ],
+    "aiResistance": {
+      "score": 90,
+      "band": "anchored"
+    }
   },
   {
     "id": "occupational_therapist",
@@ -3277,7 +3633,11 @@
       "patient_care",
       "counselling",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 91,
+      "band": "anchored"
+    }
   },
   {
     "id": "speech_therapist",
@@ -3312,7 +3672,11 @@
       "rehabilitation",
       "patient_care",
       "counselling"
-    ]
+    ],
+    "aiResistance": {
+      "score": 88,
+      "band": "anchored"
+    }
   },
   {
     "id": "audiologist",
@@ -3347,7 +3711,11 @@
       "patient_care",
       "rehabilitation",
       "physics_reasoning"
-    ]
+    ],
+    "aiResistance": {
+      "score": 86,
+      "band": "anchored"
+    }
   },
   {
     "id": "medical_lab_scientist",
@@ -3384,7 +3752,11 @@
       "attention_detail",
       "chemistry_lab",
       "quality_control"
-    ]
+    ],
+    "aiResistance": {
+      "score": 65,
+      "band": "resilient"
+    }
   },
   {
     "id": "pathologist",
@@ -3420,7 +3792,11 @@
       "lab_diagnostics",
       "life_sciences",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 72,
+      "band": "resilient"
+    }
   },
   {
     "id": "genetic_counselor",
@@ -3456,7 +3832,11 @@
       "life_sciences",
       "attention_detail",
       "research_methods"
-    ]
+    ],
+    "aiResistance": {
+      "score": 76,
+      "band": "anchored"
+    }
   },
   {
     "id": "dietitian",
@@ -3491,7 +3871,11 @@
       "counselling",
       "life_sciences",
       "teaching"
-    ]
+    ],
+    "aiResistance": {
+      "score": 87,
+      "band": "anchored"
+    }
   },
   {
     "id": "epidemiologist",
@@ -3526,7 +3910,11 @@
       "statistics",
       "data_analysis",
       "life_sciences"
-    ]
+    ],
+    "aiResistance": {
+      "score": 59,
+      "band": "mixed"
+    }
   },
   {
     "id": "clinical_pharmacologist",
@@ -3562,7 +3950,11 @@
       "attention_detail",
       "research_methods",
       "life_sciences"
-    ]
+    ],
+    "aiResistance": {
+      "score": 70,
+      "band": "resilient"
+    }
   },
   {
     "id": "biomedical_engineer",
@@ -3597,7 +3989,11 @@
       "problem_solving",
       "life_sciences",
       "quality_control"
-    ]
+    ],
+    "aiResistance": {
+      "score": 71,
+      "band": "resilient"
+    }
   },
   {
     "id": "prosthetist",
@@ -3633,7 +4029,11 @@
       "rehabilitation",
       "patient_care",
       "mechanical_design"
-    ]
+    ],
+    "aiResistance": {
+      "score": 79,
+      "band": "anchored"
+    }
   },
   {
     "id": "veterinarian",
@@ -3668,7 +4068,11 @@
       "clinical_skills",
       "life_sciences",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 89,
+      "band": "anchored"
+    }
   },
   {
     "id": "structural_engineer",
@@ -3704,7 +4108,11 @@
       "attention_detail",
       "physics_reasoning",
       "mathematics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 70,
+      "band": "resilient"
+    }
   },
   {
     "id": "construction_project_manager",
@@ -3740,7 +4148,11 @@
       "leadership",
       "teamwork",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 74,
+      "band": "resilient"
+    }
   },
   {
     "id": "mechanical_engineer",
@@ -3776,7 +4188,11 @@
       "physics_reasoning",
       "problem_solving",
       "mathematics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 66,
+      "band": "resilient"
+    }
   },
   {
     "id": "electrical_engineer",
@@ -3811,7 +4227,11 @@
       "physics_reasoning",
       "mathematics",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 68,
+      "band": "resilient"
+    }
   },
   {
     "id": "mechatronics_engineer",
@@ -3847,7 +4267,11 @@
       "mechanical_design",
       "problem_solving",
       "systems_design"
-    ]
+    ],
+    "aiResistance": {
+      "score": 63,
+      "band": "resilient"
+    }
   },
   {
     "id": "chemical_engineer",
@@ -3884,7 +4308,11 @@
       "problem_solving",
       "physics_reasoning",
       "mathematics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 68,
+      "band": "resilient"
+    }
   },
   {
     "id": "industrial_engineer",
@@ -3919,7 +4347,11 @@
       "quality_control",
       "problem_solving",
       "data_analysis"
-    ]
+    ],
+    "aiResistance": {
+      "score": 61,
+      "band": "resilient"
+    }
   },
   {
     "id": "environmental_engineer",
@@ -3955,7 +4387,11 @@
       "problem_solving",
       "chemistry_lab",
       "data_analysis"
-    ]
+    ],
+    "aiResistance": {
+      "score": 65,
+      "band": "resilient"
+    }
   },
   {
     "id": "water_resources_engineer",
@@ -3991,7 +4427,11 @@
       "problem_solving",
       "civil_structures",
       "physics_reasoning"
-    ]
+    ],
+    "aiResistance": {
+      "score": 63,
+      "band": "resilient"
+    }
   },
   {
     "id": "hvac_engineer",
@@ -4026,7 +4466,11 @@
       "energy_systems",
       "physics_reasoning",
       "quality_control"
-    ]
+    ],
+    "aiResistance": {
+      "score": 68,
+      "band": "resilient"
+    }
   },
   {
     "id": "geomatics_engineer",
@@ -4062,7 +4506,11 @@
       "attention_detail",
       "mathematics",
       "data_analysis"
-    ]
+    ],
+    "aiResistance": {
+      "score": 59,
+      "band": "mixed"
+    }
   },
   {
     "id": "ai_research_scientist",
@@ -4099,7 +4547,11 @@
       "mathematics",
       "research_methods",
       "statistics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 42,
+      "band": "exposed"
+    }
   },
   {
     "id": "computer_vision_engineer",
@@ -4135,7 +4587,11 @@
       "programming",
       "mathematics",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 28,
+      "band": "exposed"
+    }
   },
   {
     "id": "nlp_engineer",
@@ -4171,7 +4627,11 @@
       "programming",
       "arabic_language",
       "mathematics"
-    ]
+    ],
+    "aiResistance": {
+      "score": 27,
+      "band": "exposed"
+    }
   },
   {
     "id": "robotics_engineer",
@@ -4207,7 +4667,11 @@
       "problem_solving",
       "programming",
       "mechanical_design"
-    ]
+    ],
+    "aiResistance": {
+      "score": 56,
+      "band": "mixed"
+    }
   },
   {
     "id": "cloud_architect",
@@ -4243,7 +4707,11 @@
       "systems_design",
       "problem_solving",
       "networking"
-    ]
+    ],
+    "aiResistance": {
+      "score": 42,
+      "band": "exposed"
+    }
   },
   {
     "id": "network_engineer",
@@ -4279,7 +4747,11 @@
       "problem_solving",
       "attention_detail",
       "systems_design"
-    ]
+    ],
+    "aiResistance": {
+      "score": 40,
+      "band": "exposed"
+    }
   },
   {
     "id": "database_administrator",
@@ -4315,7 +4787,11 @@
       "systems_design",
       "problem_solving",
       "data_analysis"
-    ]
+    ],
+    "aiResistance": {
+      "score": 33,
+      "band": "exposed"
+    }
   },
   {
     "id": "blockchain_developer",
@@ -4351,7 +4827,11 @@
       "problem_solving",
       "systems_design",
       "cybersecurity"
-    ]
+    ],
+    "aiResistance": {
+      "score": 33,
+      "band": "exposed"
+    }
   },
   {
     "id": "it_support_specialist",
@@ -4386,7 +4866,11 @@
       "problem_solving",
       "teamwork",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 43,
+      "band": "exposed"
+    }
   },
   {
     "id": "systems_analyst",
@@ -4422,7 +4906,11 @@
       "writing_docs",
       "teamwork",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 34,
+      "band": "exposed"
+    }
   },
   {
     "id": "solar_engineer",
@@ -4458,7 +4946,11 @@
       "sustainability",
       "electronics",
       "physics_reasoning"
-    ]
+    ],
+    "aiResistance": {
+      "score": 61,
+      "band": "resilient"
+    }
   },
   {
     "id": "nuclear_plant_operator",
@@ -4494,7 +4986,11 @@
       "energy_systems",
       "quality_control",
       "emergency_response"
-    ]
+    ],
+    "aiResistance": {
+      "score": 66,
+      "band": "resilient"
+    }
   },
   {
     "id": "process_engineer_oil_gas",
@@ -4530,7 +5026,11 @@
       "chemistry_lab",
       "problem_solving",
       "quality_control"
-    ]
+    ],
+    "aiResistance": {
+      "score": 59,
+      "band": "mixed"
+    }
   },
   {
     "id": "aircraft_maintenance_engineer",
@@ -4566,7 +5066,11 @@
       "quality_control",
       "aviation_ops",
       "mechanical_design"
-    ]
+    ],
+    "aiResistance": {
+      "score": 74,
+      "band": "resilient"
+    }
   },
   {
     "id": "aviation_operations_manager",
@@ -4602,7 +5106,11 @@
       "project_management",
       "leadership",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 65,
+      "band": "resilient"
+    }
   },
   {
     "id": "astrophysicist",
@@ -4638,7 +5146,11 @@
       "mathematics",
       "research_methods",
       "data_analysis"
-    ]
+    ],
+    "aiResistance": {
+      "score": 46,
+      "band": "mixed"
+    }
   },
   {
     "id": "meteorologist",
@@ -4674,7 +5186,11 @@
       "data_analysis",
       "statistics",
       "research_methods"
-    ]
+    ],
+    "aiResistance": {
+      "score": 32,
+      "band": "exposed"
+    }
   },
   {
     "id": "accountant",
@@ -4709,7 +5225,11 @@
       "attention_detail",
       "english_language",
       "data_analysis"
-    ]
+    ],
+    "aiResistance": {
+      "score": 28,
+      "band": "exposed"
+    }
   },
   {
     "id": "auditor",
@@ -4745,7 +5265,11 @@
       "finance_accounting",
       "writing_docs",
       "research_methods"
-    ]
+    ],
+    "aiResistance": {
+      "score": 32,
+      "band": "exposed"
+    }
   },
   {
     "id": "forensic_accountant",
@@ -4781,7 +5305,11 @@
       "finance_accounting",
       "research_methods",
       "data_analysis"
-    ]
+    ],
+    "aiResistance": {
+      "score": 31,
+      "band": "exposed"
+    }
   },
   {
     "id": "investment_banker",
@@ -4817,7 +5345,11 @@
       "business_strategy",
       "economics",
       "sales_negotiation"
-    ]
+    ],
+    "aiResistance": {
+      "score": 41,
+      "band": "exposed"
+    }
   },
   {
     "id": "insurance_underwriter",
@@ -4853,7 +5385,11 @@
       "statistics",
       "data_analysis",
       "finance_accounting"
-    ]
+    ],
+    "aiResistance": {
+      "score": 30,
+      "band": "exposed"
+    }
   },
   {
     "id": "islamic_banking_specialist",
@@ -4890,7 +5426,11 @@
       "islamic_studies_skill",
       "attention_detail",
       "arabic_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 42,
+      "band": "exposed"
+    }
   },
   {
     "id": "economist",
@@ -4926,7 +5466,11 @@
       "statistics",
       "data_analysis",
       "research_methods"
-    ]
+    ],
+    "aiResistance": {
+      "score": 34,
+      "band": "exposed"
+    }
   },
   {
     "id": "management_consultant",
@@ -4962,7 +5506,11 @@
       "problem_solving",
       "public_speaking",
       "writing_docs"
-    ]
+    ],
+    "aiResistance": {
+      "score": 43,
+      "band": "exposed"
+    }
   },
   {
     "id": "hr_specialist",
@@ -4999,7 +5547,11 @@
       "teamwork",
       "law_policy",
       "writing_docs"
-    ]
+    ],
+    "aiResistance": {
+      "score": 50,
+      "band": "mixed"
+    }
   },
   {
     "id": "marketing_manager",
@@ -5035,7 +5587,11 @@
       "business_strategy",
       "creativity",
       "leadership"
-    ]
+    ],
+    "aiResistance": {
+      "score": 38,
+      "band": "exposed"
+    }
   },
   {
     "id": "supply_chain_manager",
@@ -5071,7 +5627,11 @@
       "project_management",
       "leadership",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 72,
+      "band": "resilient"
+    }
   },
   {
     "id": "lawyer",
@@ -5107,7 +5667,11 @@
       "writing_docs",
       "arabic_language",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 65,
+      "band": "resilient"
+    }
   },
   {
     "id": "legal_counsel",
@@ -5142,7 +5706,11 @@
       "attention_detail",
       "writing_docs",
       "english_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 52,
+      "band": "mixed"
+    }
   },
   {
     "id": "judge",
@@ -5178,7 +5746,11 @@
       "attention_detail",
       "arabic_language",
       "writing_docs"
-    ]
+    ],
+    "aiResistance": {
+      "score": 69,
+      "band": "resilient"
+    }
   },
   {
     "id": "paralegal",
@@ -5214,7 +5786,11 @@
       "writing_docs",
       "law_policy",
       "arabic_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 44,
+      "band": "exposed"
+    }
   },
   {
     "id": "police_officer",
@@ -5251,7 +5827,11 @@
       "teamwork",
       "arabic_language",
       "law_policy"
-    ]
+    ],
+    "aiResistance": {
+      "score": 70,
+      "band": "resilient"
+    }
   },
   {
     "id": "firefighter",
@@ -5287,7 +5867,11 @@
       "teamwork",
       "attention_detail",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 76,
+      "band": "anchored"
+    }
   },
   {
     "id": "civil_defence_specialist",
@@ -5323,7 +5907,11 @@
       "attention_detail",
       "teamwork",
       "law_policy"
-    ]
+    ],
+    "aiResistance": {
+      "score": 62,
+      "band": "resilient"
+    }
   },
   {
     "id": "military_officer",
@@ -5359,7 +5947,11 @@
       "teamwork",
       "emergency_response",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 75,
+      "band": "anchored"
+    }
   },
   {
     "id": "customs_officer",
@@ -5396,7 +5988,11 @@
       "law_policy",
       "arabic_language",
       "logistics_ops"
-    ]
+    ],
+    "aiResistance": {
+      "score": 56,
+      "band": "mixed"
+    }
   },
   {
     "id": "urban_governance_specialist",
@@ -5433,7 +6029,11 @@
       "writing_docs",
       "data_analysis",
       "public_speaking"
-    ]
+    ],
+    "aiResistance": {
+      "score": 38,
+      "band": "exposed"
+    }
   },
   {
     "id": "primary_teacher",
@@ -5468,7 +6068,11 @@
       "child_development",
       "arabic_language",
       "teamwork"
-    ]
+    ],
+    "aiResistance": {
+      "score": 83,
+      "band": "anchored"
+    }
   },
   {
     "id": "university_lecturer",
@@ -5504,7 +6108,11 @@
       "teaching",
       "writing_docs",
       "public_speaking"
-    ]
+    ],
+    "aiResistance": {
+      "score": 72,
+      "band": "resilient"
+    }
   },
   {
     "id": "curriculum_designer",
@@ -5540,7 +6148,11 @@
       "teaching",
       "creativity",
       "arabic_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 53,
+      "band": "mixed"
+    }
   },
   {
     "id": "social_worker",
@@ -5577,7 +6189,11 @@
       "arabic_language",
       "teamwork",
       "writing_docs"
-    ]
+    ],
+    "aiResistance": {
+      "score": 61,
+      "band": "resilient"
+    }
   },
   {
     "id": "translator",
@@ -5612,7 +6228,11 @@
       "arabic_language",
       "english_language",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 29,
+      "band": "exposed"
+    }
   },
   {
     "id": "librarian",
@@ -5648,7 +6268,11 @@
       "research_methods",
       "curation_heritage",
       "arabic_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 42,
+      "band": "exposed"
+    }
   },
   {
     "id": "islamic_scholar",
@@ -5684,7 +6308,11 @@
       "arabic_language",
       "writing_docs",
       "research_methods"
-    ]
+    ],
+    "aiResistance": {
+      "score": 67,
+      "band": "resilient"
+    }
   },
   {
     "id": "broadcast_presenter",
@@ -5720,7 +6348,11 @@
       "arabic_language",
       "english_language",
       "journalism_reporting"
-    ]
+    ],
+    "aiResistance": {
+      "score": 53,
+      "band": "mixed"
+    }
   },
   {
     "id": "content_creator",
@@ -5756,7 +6388,11 @@
       "marketing_comm",
       "photography_video",
       "writing_docs"
-    ]
+    ],
+    "aiResistance": {
+      "score": 41,
+      "band": "exposed"
+    }
   },
   {
     "id": "video_editor",
@@ -5792,7 +6428,11 @@
       "photography_video",
       "creativity",
       "sound_audio"
-    ]
+    ],
+    "aiResistance": {
+      "score": 40,
+      "band": "exposed"
+    }
   },
   {
     "id": "cinematographer",
@@ -5828,7 +6468,11 @@
       "creativity",
       "attention_detail",
       "visual_design"
-    ]
+    ],
+    "aiResistance": {
+      "score": 59,
+      "band": "mixed"
+    }
   },
   {
     "id": "film_director",
@@ -5864,7 +6508,11 @@
       "leadership",
       "photography_video",
       "project_management"
-    ]
+    ],
+    "aiResistance": {
+      "score": 66,
+      "band": "resilient"
+    }
   },
   {
     "id": "photographer",
@@ -5900,7 +6548,11 @@
       "creativity",
       "attention_detail",
       "visual_design"
-    ]
+    ],
+    "aiResistance": {
+      "score": 53,
+      "band": "mixed"
+    }
   },
   {
     "id": "graphic_designer",
@@ -5936,7 +6588,11 @@
       "creativity",
       "attention_detail",
       "arabic_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 40,
+      "band": "exposed"
+    }
   },
   {
     "id": "motion_graphics_designer",
@@ -5972,7 +6628,11 @@
       "animation_3d",
       "visual_design",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 34,
+      "band": "exposed"
+    }
   },
   {
     "id": "three_d_artist",
@@ -6008,7 +6668,11 @@
       "creativity",
       "visual_design",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 34,
+      "band": "exposed"
+    }
   },
   {
     "id": "animator",
@@ -6044,7 +6708,11 @@
       "animation_3d",
       "visual_design",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 41,
+      "band": "exposed"
+    }
   },
   {
     "id": "industrial_designer",
@@ -6080,7 +6748,11 @@
       "visual_design",
       "problem_solving",
       "mechanical_design"
-    ]
+    ],
+    "aiResistance": {
+      "score": 46,
+      "band": "mixed"
+    }
   },
   {
     "id": "interior_designer",
@@ -6116,7 +6788,11 @@
       "creativity",
       "visual_design",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 59,
+      "band": "mixed"
+    }
   },
   {
     "id": "fashion_designer",
@@ -6152,7 +6828,11 @@
       "creativity",
       "visual_design",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 44,
+      "band": "exposed"
+    }
   },
   {
     "id": "sound_engineer",
@@ -6188,7 +6868,11 @@
       "attention_detail",
       "creativity",
       "teamwork"
-    ]
+    ],
+    "aiResistance": {
+      "score": 56,
+      "band": "mixed"
+    }
   },
   {
     "id": "museum_curator",
@@ -6224,7 +6908,11 @@
       "research_methods",
       "writing_docs",
       "arabic_language"
-    ]
+    ],
+    "aiResistance": {
+      "score": 63,
+      "band": "resilient"
+    }
   },
   {
     "id": "heritage_conservation_specialist",
@@ -6260,7 +6948,11 @@
       "curation_heritage",
       "research_methods",
       "writing_docs"
-    ]
+    ],
+    "aiResistance": {
+      "score": 60,
+      "band": "resilient"
+    }
   },
   {
     "id": "chef",
@@ -6296,7 +6988,11 @@
       "teamwork",
       "quality_control",
       "attention_detail"
-    ]
+    ],
+    "aiResistance": {
+      "score": 68,
+      "band": "resilient"
+    }
   },
   {
     "id": "cabin_crew",
@@ -6332,7 +7028,11 @@
       "teamwork",
       "english_language",
       "emergency_response"
-    ]
+    ],
+    "aiResistance": {
+      "score": 69,
+      "band": "resilient"
+    }
   },
   {
     "id": "sports_coach",
@@ -6368,7 +7068,11 @@
       "teaching",
       "leadership",
       "teamwork"
-    ]
+    ],
+    "aiResistance": {
+      "score": 83,
+      "band": "anchored"
+    }
   },
   {
     "id": "fitness_specialist",
@@ -6404,7 +7108,11 @@
       "customer_service",
       "teaching",
       "nutrition_diet"
-    ]
+    ],
+    "aiResistance": {
+      "score": 79,
+      "band": "anchored"
+    }
   },
   {
     "id": "agriculture_specialist",
@@ -6441,7 +7149,11 @@
       "sustainability",
       "life_sciences",
       "problem_solving"
-    ]
+    ],
+    "aiResistance": {
+      "score": 58,
+      "band": "mixed"
+    }
   },
   {
     "id": "aquaculture_specialist",
@@ -6478,7 +7190,11 @@
       "life_sciences",
       "sustainability",
       "quality_control"
-    ]
+    ],
+    "aiResistance": {
+      "score": 61,
+      "band": "resilient"
+    }
   },
   {
     "id": "travel_experience_designer",
@@ -6515,7 +7231,11 @@
       "hospitality_ops",
       "customer_service",
       "marketing_comm"
-    ]
+    ],
+    "aiResistance": {
+      "score": 65,
+      "band": "resilient"
+    }
   },
   {
     "id": "pastry_chef",
@@ -6551,7 +7271,11 @@
       "attention_detail",
       "creativity",
       "quality_control"
-    ]
+    ],
+    "aiResistance": {
+      "score": 63,
+      "band": "resilient"
+    }
   },
   {
     "id": "restaurant_manager",
@@ -6587,7 +7311,11 @@
       "customer_service",
       "leadership",
       "teamwork"
-    ]
+    ],
+    "aiResistance": {
+      "score": 74,
+      "band": "resilient"
+    }
   },
   {
     "id": "food_safety_officer",
@@ -6624,7 +7352,11 @@
       "attention_detail",
       "law_policy",
       "agriculture_food"
-    ]
+    ],
+    "aiResistance": {
+      "score": 61,
+      "band": "resilient"
+    }
   },
   {
     "id": "front_office_manager",
@@ -6660,6 +7392,10 @@
       "hospitality_ops",
       "english_language",
       "leadership"
-    ]
+    ],
+    "aiResistance": {
+      "score": 70,
+      "band": "resilient"
+    }
   }
 ]

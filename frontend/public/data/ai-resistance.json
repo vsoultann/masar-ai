@@ -1,0 +1,228 @@
+{
+  "basis": {
+    "en": "A structural index derived from this catalog's skill weights, work settings, licensing and training length — not a labour-market forecast.",
+    "ar": "مؤشر بنيوي مشتقّ من أوزان المهارات وبيئات العمل والترخيص وطول التأهيل في هذا الكتالوج — وليس تنبؤًا بسوق العمل."
+  },
+  "method": {
+    "en": "Every career starts at 50 — as exposed as an average job — and moves on six components: what the work is made of (the weighted skill mix), where it has to happen, whether a licensed human carries legal responsibility for it, whether the outcome depends on another person agreeing, how long the training route is, and whether the thing the job produces is a file. Each component's contribution is shown on the career page, so the score can be checked rather than believed. It answers a narrow question — how much of this job is the kind of work machines are currently good at — and not the broad one students usually mean, which is whether the job will exist in twenty years. No one can answer that, and a number that pretended to would be worse than no number.",
+    "ar": "تبدأ كل مهنة من 50 — أي بقدر تعرّض الوظيفة المتوسطة — ثم تتحرك وفق ستة عناصر: مما يتكوّن العمل (مزيج المهارات المرجّح)، وأين يجب أن يجري، وهل يتحمّل إنسان مرخَّص مسؤولية قانونية عنه، وهل تتوقف النتيجة على قبول شخص آخر، وكم يطول مسار التأهيل، وهل ما تنتجه المهنة ملف رقمي. ويُعرض إسهام كل عنصر في صفحة المهنة، كي يُتحقَّق من الدرجة لا أن تُصدَّق. وهو يجيب عن سؤال ضيّق — ما مقدار ما في هذه المهنة من عمل تتقنه الآلات اليوم — لا عن السؤال الواسع الذي يقصده الطلبة عادةً، وهو هل ستبقى المهنة بعد عشرين عامًا. لا أحد يستطيع الإجابة عن ذلك، ورقمٌ يدّعي الإجابة أسوأ من لا رقم."
+  },
+  "bands": {
+    "anchored": {
+      "label": {
+        "en": "Anchored",
+        "ar": "راسخ"
+      },
+      "summary": {
+        "en": "Most of this role is work that has to be done by a person, in a place, who can be held responsible for it. AI changes the tooling around it rather than the job itself.",
+        "ar": "معظم هذا الدور عمل يجب أن يؤديه إنسان، في مكان محدّد، ويمكن مساءلته عنه. يغيّر الذكاء الاصطناعي الأدوات المحيطة به لا العمل نفسه."
+      }
+    },
+    "resilient": {
+      "label": {
+        "en": "Resilient",
+        "ar": "صامد"
+      },
+      "summary": {
+        "en": "The routine and documentary parts of this role are already being automated, but its core — the judgement, the presence or the responsibility — is not the kind of thing current systems can take over.",
+        "ar": "تُؤتمت بالفعل الأجزاء الروتينية والتوثيقية من هذا الدور، لكن جوهره — الحكم أو الحضور أو المسؤولية — ليس مما تستطيع الأنظمة الحالية تولّيه."
+      }
+    },
+    "mixed": {
+      "label": {
+        "en": "Mixed",
+        "ar": "متفاوت"
+      },
+      "summary": {
+        "en": "This role splits roughly in half. A substantial part of it is work current systems do well, and the part that is left is where the career goes — so what you specialise in matters more here than in most jobs.",
+        "ar": "ينقسم هذا الدور إلى نصفين تقريبًا. جزء كبير منه عمل تتقنه الأنظمة الحالية، والجزء المتبقي هو حيث يتجه المسار — لذا فإن ما تتخصّص فيه هنا أهم منه في معظم المهن."
+      }
+    },
+    "exposed": {
+      "label": {
+        "en": "Exposed",
+        "ar": "معرّض"
+      },
+      "summary": {
+        "en": "Much of what this role produces is the kind of output current systems generate directly. That does not mean the job disappears — it means the entry level thins first, and the work that remains sits further up, in direction and responsibility.",
+        "ar": "كثير مما ينتجه هذا الدور من النوع الذي تولّده الأنظمة الحالية مباشرة. لا يعني ذلك اختفاء المهنة — بل أن المستوى المبتدئ يتقلّص أولًا، ويرتفع العمل المتبقي نحو التوجيه والمسؤولية."
+      }
+    }
+  },
+  "groups": {
+    "code": {
+      "exposed": {
+        "en": "Writing, completing and refactoring routine code — models now produce working implementations from a description faster than a person can type them",
+        "ar": "كتابة الشيفرة الاعتيادية وإكمالها وإعادة هيكلتها — تنتج النماذج اليوم تنفيذًا عاملًا انطلاقًا من وصف نصي أسرع مما يكتبه الإنسان"
+      },
+      "protected": {
+        "en": "Deciding what should be built and why, and owning the failure when a system behaves correctly and still does the wrong thing",
+        "ar": "تقرير ما الذي ينبغي بناؤه ولماذا، وتحمّل المسؤولية حين يعمل النظام كما صُمّم ويؤدي مع ذلك إلى نتيجة خاطئة"
+      }
+    },
+    "desk_synthesis": {
+      "exposed": {
+        "en": "First drafts, summaries, translations and routine correspondence — this is the task current models were built for and the one they do most cheaply",
+        "ar": "المسودات الأولى والملخصات والترجمة والمراسلات الاعتيادية — وهي المهمة التي بُنيت لها النماذج الحالية وتؤديها بأقل كلفة"
+      },
+      "protected": {
+        "en": "Knowing what is worth saying to this particular audience, and standing behind it when it is contested",
+        "ar": "معرفة ما يستحق أن يُقال لهذا الجمهور تحديدًا، والدفاع عنه حين يُعترض عليه"
+      }
+    },
+    "data": {
+      "exposed": {
+        "en": "Cleaning, joining and summarising structured data, and producing the standard charts and reports that follow from it",
+        "ar": "تنظيف البيانات المهيكلة ودمجها وتلخيصها، وإنتاج الرسوم والتقارير المعيارية المترتبة عليها"
+      },
+      "protected": {
+        "en": "Choosing the question the data is meant to answer, and recognising when the answer it gives is an artefact of how it was collected",
+        "ar": "اختيار السؤال الذي يُفترض أن تجيب عنه البيانات، وإدراك متى تكون الإجابة نتيجةً لطريقة الجمع لا للواقع"
+      }
+    },
+    "visual": {
+      "exposed": {
+        "en": "Generating concepts, variations and finished assets from a brief — the volume of production work that used to fill a junior's week",
+        "ar": "توليد المفاهيم والبدائل والأصول النهائية انطلاقًا من موجز — أي حجم العمل الإنتاجي الذي كان يملأ أسبوع المصمّم المبتدئ"
+      },
+      "protected": {
+        "en": "Art direction: holding a coherent point of view across a body of work, and defending a choice a client did not ask for",
+        "ar": "الإدارة الفنية: الحفاظ على رؤية متماسكة عبر مجموعة أعمال، والدفاع عن خيار لم يطلبه العميل"
+      }
+    },
+    "routine_admin": {
+      "exposed": {
+        "en": "Reconciliation, scheduling, classification and the rule-following parts of compliance — high-volume, well-specified, already largely software",
+        "ar": "التسويات والجدولة والتصنيف والأجزاء القائمة على القواعد في الامتثال — عمل كبير الحجم ومحدّد بدقة وقد صار في معظمه برمجيًا"
+      },
+      "protected": {
+        "en": "Judgement at the exception, where the rule does not fit the case and someone has to sign for the decision",
+        "ar": "الحكم عند الاستثناء، حيث لا تنطبق القاعدة على الحالة ويتعيّن على شخص أن يوقّع على القرار"
+      }
+    },
+    "diagnostic_pattern": {
+      "exposed": {
+        "en": "First-pass detection and triage on images and specimens — a genuinely strong machine task, and already deployed as a second reader",
+        "ar": "الكشف الأولي والفرز على الصور والعينات — مهمة تتفوّق فيها الآلة فعليًا، وتُستخدم بالفعل كقارئ ثانٍ"
+      },
+      "protected": {
+        "en": "Correlating the finding with the patient in front of you, and carrying the clinical and legal responsibility for the call",
+        "ar": "ربط النتيجة بالمريض الماثل أمامك، وتحمّل المسؤولية السريرية والقانونية عن القرار"
+      }
+    },
+    "hands_on": {
+      "exposed": {
+        "en": "Planning, documentation and the paperwork around the procedure — the parts that happen on a screen rather than on the patient, the plant or the plate",
+        "ar": "التخطيط والتوثيق والأعمال الورقية المحيطة بالإجراء — أي الأجزاء التي تجري على الشاشة لا على المريض أو المنشأة أو الطبق"
+      },
+      "protected": {
+        "en": "The procedure itself. This is skilled physical work in an unforgiving environment, and robotics — not language models — is its constraint",
+        "ar": "الإجراء نفسه. هذا عمل بدني ماهر في بيئة لا تحتمل الخطأ، وقيده هو الروبوتات لا النماذج اللغوية"
+      }
+    },
+    "human_relationship": {
+      "exposed": {
+        "en": "Preparation, note-taking, record-keeping and routine follow-up messages",
+        "ar": "التحضير وتدوين الملاحظات وحفظ السجلات ورسائل المتابعة الاعتيادية"
+      },
+      "protected": {
+        "en": "The relationship itself — this work only succeeds if another person trusts the human doing it, which is a constraint on deployment, not on capability",
+        "ar": "العلاقة ذاتها — لا ينجح هذا العمل إلا إذا وثق شخص آخر بالإنسان الذي يؤديه، وهو قيد على التطبيق لا على القدرة"
+      }
+    },
+    "persuasion_authority": {
+      "exposed": {
+        "en": "Research, briefing packs, first-draft arguments and meeting summaries",
+        "ar": "البحث وحزم الإحاطة والحجج في مسوّدتها الأولى وملخصات الاجتماعات"
+      },
+      "protected": {
+        "en": "Standing in the room with the authority to commit, and being the party the other side holds to the agreement",
+        "ar": "الحضور في القاعة بصلاحية الالتزام، وأن تكون الطرف الذي يُحاسبه الطرف الآخر على الاتفاق"
+      }
+    },
+    "physical_judgement": {
+      "exposed": {
+        "en": "Calculation, modelling, drawing production and code-compliance checking",
+        "ar": "الحسابات والنمذجة وإنتاج الرسومات والتحقق من مطابقة الأكواد الهندسية"
+      },
+      "protected": {
+        "en": "Signing the design. A stamped drawing carries personal liability for what happens if it is wrong, and liability does not transfer to a model",
+        "ar": "التوقيع على التصميم. يحمل المخطط المختوم مسؤولية شخصية عمّا يحدث إن كان خاطئًا، والمسؤولية لا تنتقل إلى نموذج"
+      }
+    },
+    "creative_direction": {
+      "exposed": {
+        "en": "Idea volume — a model will produce a hundred plausible directions before you finish describing the brief",
+        "ar": "كمّ الأفكار — سينتج النموذج مئة اتجاه معقول قبل أن تنتهي من وصف الموجز"
+      },
+      "protected": {
+        "en": "Taste and editing: choosing the one direction that is right for this context, which is a judgement about people rather than about options",
+        "ar": "الذائقة والتحرير: اختيار الاتجاه الصحيح لهذا السياق تحديدًا، وهو حكم على الناس لا على الخيارات"
+      }
+    },
+    "inquiry": {
+      "exposed": {
+        "en": "Literature review, background synthesis and the first pass at a method",
+        "ar": "مراجعة الأدبيات وتجميع الخلفية والمحاولة الأولى لصياغة المنهج"
+      },
+      "protected": {
+        "en": "Framing a question no one has asked yet, and being accountable for what is concluded from a weak result",
+        "ar": "صياغة سؤال لم يطرحه أحد بعد، وتحمّل المسؤولية عمّا يُستنتج من نتيجة ضعيفة"
+      }
+    },
+    "language_context": {
+      "exposed": {
+        "en": "Straight translation and routine bilingual production, including Arabic — machine translation is no longer the weak point it was",
+        "ar": "الترجمة المباشرة والإنتاج ثنائي اللغة الاعتيادي، بما في ذلك العربية — لم تعد الترجمة الآلية نقطة الضعف التي كانت عليها"
+      },
+      "protected": {
+        "en": "Register, dialect and cultural judgement: knowing what a phrase will mean to this audience in this country",
+        "ar": "المستوى اللغوي واللهجة والحكم الثقافي: معرفة ما ستعنيه العبارة لهذا الجمهور في هذا البلد"
+      }
+    }
+  },
+  "drivers": {
+    "skills": {
+      "en": "What the work is made of",
+      "ar": "مما يتكوّن العمل"
+    },
+    "presence": {
+      "en": "Where it has to happen",
+      "ar": "أين يجب أن يجري"
+    },
+    "accountability": {
+      "en": "Licensed responsibility",
+      "ar": "المسؤولية المهنية المرخّصة"
+    },
+    "human": {
+      "en": "Another person has to agree",
+      "ar": "اشتراط قبول شخص آخر"
+    },
+    "training": {
+      "en": "Depth of the training route",
+      "ar": "عمق مسار التأهيل"
+    },
+    "digital": {
+      "en": "Output is a file",
+      "ar": "المُخرَج ملف رقمي"
+    }
+  },
+  "thresholds": [
+    {
+      "from": 75,
+      "band": "anchored"
+    },
+    {
+      "from": 60,
+      "band": "resilient"
+    },
+    {
+      "from": 45,
+      "band": "mixed"
+    },
+    {
+      "from": 0,
+      "band": "exposed"
+    }
+  ]
+}

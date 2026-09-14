@@ -266,3 +266,72 @@ healthcare, law and the creative sector. That is a real feature defect the test
 suite caught. Assertions that hardcoded catalog sizes are now derived from the
 catalogs, so they measure the property they claim to rather than a number that
 has to be edited whenever a career is added.
+
+### D-14 · AI resistance is a structural index, not a forecast
+
+**Decision.** Every career carries `aiResistance`: a 0–100 score, a band, both
+sides of the exposure, and a `drivers` array holding each component's signed
+contribution. It is derived in `data/v2/ai_resistance.py` from fields the app
+already renders — the weighted skill mix, the work environments, whether the
+role is licensed, how long the training route is — and the shared copy is
+written once to `ai-resistance.json` rather than repeated into 184 records.
+
+**Why the derivation, rather than authored scores.** A hand-assigned number per
+career is unauditable: nobody can tell whether "radiologist: 72" came from
+reasoning or from a mood, and it drifts out of agreement with the rest of the
+record the first time a skill weight changes. Deriving it means the score cannot
+contradict the data displayed beside it, and the breakdown on the career page
+adds up to the score, so a student who disagrees can disagree with a specific
+component rather than with a vibe.
+
+**Why the question is narrowed.** Students ask "will this job exist in 2040?".
+Nothing in this catalog can answer that and nothing else can either. The index
+answers "how much of this job is the kind of work machines are currently good
+at", which is a different and answerable question, and the UI states that
+difference next to the number every time it is shown — because a number this
+quotable will be screenshotted without its context unless the context is inside
+the screenshot.
+
+**Two things the model deliberately refuses to do.** It never renders a low
+score as a warning: software engineering scores 36, which is a real fact about
+the shape of the work and not advice to avoid the field. And it uses amber, not
+red, at the exposed end — red reads as "don't", and the honest reading is "go in
+with your eyes open".
+
+**What it caught.** Filling the exposure model exposed a gap in the catalog
+itself: `SECTOR_LICENSING` only covered healthcare and law, so pilots, engineers,
+teachers and ships' officers were all recorded as carrying no professional
+licence. Since a licence is the clearest signal in the catalog that a named human
+is legally responsible for the work, those roles were being scored as if nobody
+had to sign anything. The real UAE regulators — GCAA, the municipality engineer
+registers, the Teacher Licensing System, and maritime certification — are now in
+the table, which fixed both the index and the licensing section of ~80 career
+pages.
+
+The build asserts the index still discriminates: at least three bands present and
+at least 30 points of spread. A model that collapsed into one band would put an
+identical badge on every card, which is noise wearing the costume of data.
+
+### D-15 · Scholarships carry a coverage *band*, and never an amount
+
+**Decision.** `data/v2/scholarships.py` holds 37 UAE funding routes. The schema
+has no field for an award value and no field for a deadline. It carries a
+coverage band, an indicative eligibility shape, the provider's official URL, and
+— for sponsorships — the service commitment attached.
+
+**Why no amounts.** Award values, quotas and cut-offs change every intake, and
+several of these programmes open and close by announcement rather than on a
+calendar. A figure in this repository would be stale before the first cohort read
+it, and a stale figure a student plans around is worse than no figure: it is the
+one kind of error on this page that could cost someone a year. So the record
+describes the *kind* of programme, and the official page — linked on every card —
+is the only thing that claims to know this year's terms. This is the same
+standard `universities.py` already applies to admission thresholds.
+
+**Why the obligation is never folded into the coverage.** "Fully sponsored" and
+"full tuition" look alike on a card and are completely different decisions: one
+of them commits several years of your working life to a single employer. That can
+be an excellent trade, and plenty of students should take it — but knowingly. The
+validator fails the build on any `sponsored_with_bond` record that does not state
+its commitment, which makes it the one claim in this catalog that cannot be
+omitted by accident.

@@ -160,6 +160,32 @@ SECTOR_LICENSING: dict[str, list[dict]] = {
         {"en": "the relevant emirate's legal affairs department",
          "ar": "دائرة الشؤون القانونية في الإمارة المعنية"},
     ],
+    # Added with the AI-resistance index, which reads this field: a licence is
+    # the clearest signal in the catalog that a named human carries legal
+    # responsibility for the work, and leaving aviation, engineering, teaching
+    # and seafaring unlicensed scored them as if no one had to sign anything.
+    # These are the UAE regulators that actually issue the licence to practise.
+    "aviation": [
+        {"en": "the General Civil Aviation Authority (GCAA)",
+         "ar": "الهيئة العامة للطيران المدني"},
+    ],
+    "engineering": [
+        {"en": "the emirate's municipality engineer register",
+         "ar": "سجل المهندسين لدى بلدية الإمارة"},
+        {"en": "the Society of Engineers – UAE", "ar": "جمعية المهندسين – الإمارات"},
+    ],
+    "construction": [
+        {"en": "the emirate's municipality engineer register",
+         "ar": "سجل المهندسين لدى بلدية الإمارة"},
+        {"en": "the Society of Engineers – UAE", "ar": "جمعية المهندسين – الإمارات"},
+    ],
+    "education": [
+        {"en": "the UAE Teacher Licensing System", "ar": "نظام ترخيص المعلمين في الدولة"},
+    ],
+    "logistics": [
+        {"en": "the Ministry of Energy and Infrastructure (maritime certification)",
+         "ar": "وزارة الطاقة والبنية التحتية (الشهادات البحرية)"},
+    ],
 }
 
 

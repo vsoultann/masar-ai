@@ -1,0 +1,2440 @@
+[
+  {
+    "id": "moe_national",
+    "name": {
+      "en": "National Higher Education Scholarships",
+      "ar": "بعثات التعليم العالي الوطنية"
+    },
+    "provider": {
+      "en": "Ministry of Education",
+      "ar": "وزارة التربية والتعليم"
+    },
+    "kind": "government",
+    "audience": "uae_nationals",
+    "coverage": "full_plus_stipend",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "artificial_intelligence",
+      "audiology",
+      "biomedical_sciences",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "criminology",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "electrical_engineering",
+      "health_informatics",
+      "homeland_security",
+      "international_relations",
+      "law",
+      "mathematics",
+      "mechanical_engineering",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "military_science",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "physics",
+      "physiotherapy",
+      "political_science",
+      "prosthetics_orthotics",
+      "public_administration",
+      "public_health",
+      "public_policy",
+      "radiation_therapy",
+      "radiography",
+      "social_work",
+      "software_engineering",
+      "speech_therapy"
+    ],
+    "about": {
+      "en": "The federal scholarship route for Emirati students, covering study inside the UAE and, for a smaller number of places, at universities abroad. Selection weighs the high-school average, EmSAT results and the national priority of the field applied for.",
+      "ar": "المسار الاتحادي للبعث للطلبة الإماراتيين، ويشمل الدراسة داخل الدولة وعددًا أقل من المقاعد في جامعات خارجها. يُرجّح الاختيار المعدل الثانوي ونتائج الإمسات والأولوية الوطنية للتخصص المتقدَّم إليه."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 90,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Open to UAE nationals. Fields on the national priority list are funded first, and the priority list is reissued — check it for the year you apply. Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "مفتوح لمواطني الدولة. تُموَّل التخصصات المدرجة على قائمة الأولويات الوطنية أولًا، وتُحدَّث القائمة سنويًا — راجعها للعام الذي تتقدّم فيه. إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [],
+    "website": "https://www.moe.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "presidential_affairs",
+    "name": {
+      "en": "Overseas Study Scholarships",
+      "ar": "بعثات الدراسة في الخارج"
+    },
+    "provider": {
+      "en": "Ministry of Presidential Affairs",
+      "ar": "وزارة شؤون الرئاسة"
+    },
+    "kind": "government",
+    "audience": "uae_nationals",
+    "coverage": "full_plus_stipend",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "artificial_intelligence",
+      "audiology",
+      "biomedical_sciences",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "criminology",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "economics",
+      "electrical_engineering",
+      "health_informatics",
+      "homeland_security",
+      "international_relations",
+      "law",
+      "mathematics",
+      "mechanical_engineering",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "military_science",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "physics",
+      "physiotherapy",
+      "political_science",
+      "prosthetics_orthotics",
+      "public_administration",
+      "public_health",
+      "public_policy",
+      "radiation_therapy",
+      "radiography",
+      "social_work",
+      "software_engineering",
+      "speech_therapy"
+    ],
+    "about": {
+      "en": "Long-running scholarships sending Emirati students to universities abroad, with living costs and travel covered alongside tuition. Highly selective, and placement depends on securing an offer from a recognised institution.",
+      "ar": "بعثات قائمة منذ سنوات تُوفد الطلبة الإماراتيين إلى جامعات خارج الدولة، وتغطي نفقات المعيشة والسفر إلى جانب الرسوم الدراسية. تنافسية للغاية، ويتوقف الابتعاث على الحصول على قبول من مؤسسة معترف بها."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 92,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [],
+    "website": "https://www.mopa.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "sandooq_al_watan",
+    "name": {
+      "en": "Sandooq Al Watan Education Programmes",
+      "ar": "برامج صندوق الوطن التعليمية"
+    },
+    "provider": {
+      "en": "Sandooq Al Watan",
+      "ar": "صندوق الوطن"
+    },
+    "kind": "foundation",
+    "audience": "uae_nationals",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "artificial_intelligence",
+      "audiology",
+      "biomedical_sciences",
+      "computer_science",
+      "curriculum_design",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "entrepreneurship_major",
+      "game_development",
+      "health_informatics",
+      "information_systems",
+      "interaction_design",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "network_engineering",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "physiotherapy",
+      "prosthetics_orthotics",
+      "public_health",
+      "radiation_therapy",
+      "radiography",
+      "robotics",
+      "software_engineering",
+      "special_education",
+      "speech_therapy"
+    ],
+    "about": {
+      "en": "A national fund backing education and capability-building for Emiratis, running study support, upskilling programmes and partnerships with universities rather than a single fixed scholarship.",
+      "ar": "صندوق وطني يدعم التعليم وبناء القدرات للمواطنين، ويدير برامج دعم دراسي وتأهيل وشراكات مع الجامعات بدلًا من منحة واحدة ثابتة."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 80,
+      "trackRequired": [],
+      "notes": {
+        "en": "Programmes are announced individually rather than run on one annual cycle. Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "تُعلَن البرامج فرادى ولا تسير على دورة سنوية واحدة. إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [],
+    "website": "https://www.sandooqalwatan.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "adek_abu_dhabi",
+    "name": {
+      "en": "Abu Dhabi Student Support and Scholarships",
+      "ar": "دعم الطلبة والمنح في أبوظبي"
+    },
+    "provider": {
+      "en": "Department of Education and Knowledge (ADEK)",
+      "ar": "دائرة التعليم والمعرفة (أبوظبي)"
+    },
+    "kind": "government",
+    "audience": "uae_nationals",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "artificial_intelligence",
+      "audiology",
+      "biomedical_sciences",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "curriculum_design",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "electrical_engineering",
+      "health_informatics",
+      "mathematics",
+      "mechanical_engineering",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "physics",
+      "physiotherapy",
+      "prosthetics_orthotics",
+      "public_health",
+      "radiation_therapy",
+      "radiography",
+      "software_engineering",
+      "special_education",
+      "speech_therapy"
+    ],
+    "about": {
+      "en": "Abu Dhabi's education authority funds scholarship and student-support schemes for Emirati students in the emirate, including places at partner universities and support for high-achieving school leavers.",
+      "ar": "تموّل هيئة التعليم في أبوظبي برامج منح ودعم للطلبة الإماراتيين في الإمارة، وتشمل مقاعد لدى جامعات شريكة ودعمًا للمتفوقين من خريجي الثانوية."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 85,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "uaeu",
+      "ku",
+      "zu_ad",
+      "nyuad",
+      "sorbonne_ad"
+    ],
+    "website": "https://www.adek.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "ksa_dubai_hamdan",
+    "name": {
+      "en": "Hamdan Bin Rashid Al Maktoum Awards for Distinguished Academic Performance",
+      "ar": "جوائز حمدان بن راشد آل مكتوم للأداء التعليمي المتميز"
+    },
+    "provider": {
+      "en": "Hamdan Bin Rashid Al Maktoum Foundation",
+      "ar": "مؤسسة حمدان بن راشد آل مكتوم"
+    },
+    "kind": "foundation",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "dubai",
+    "fields": [
+      "audiology",
+      "biomedical_sciences",
+      "curriculum_design",
+      "dentistry",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "health_informatics",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "physiotherapy",
+      "prosthetics_orthotics",
+      "public_health",
+      "radiation_therapy",
+      "radiography",
+      "special_education",
+      "speech_therapy"
+    ],
+    "about": {
+      "en": "A Dubai foundation that recognises outstanding students, teachers and researchers, with awards and study support concentrated in education and the medical sciences.",
+      "ar": "مؤسسة في دبي تكرّم المتميزين من الطلبة والمعلمين والباحثين، وتتركّز جوائزها ودعمها الدراسي في التعليم والعلوم الطبية."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 88,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [],
+    "website": "https://www.hbrf.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "ku_merit",
+    "name": {
+      "en": "Khalifa University Scholarships",
+      "ar": "منح جامعة خليفة"
+    },
+    "provider": {
+      "en": "Khalifa University of Science and Technology",
+      "ar": "جامعة خليفة للعلوم والتكنولوجيا"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "full_plus_stipend",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "aerospace_engineering",
+      "artificial_intelligence",
+      "biomedical_engineering",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "electrical_engineering",
+      "mathematics",
+      "mechanical_engineering",
+      "medicine",
+      "nuclear_engineering",
+      "petroleum_engineering",
+      "physics",
+      "robotics",
+      "software_engineering"
+    ],
+    "about": {
+      "en": "Khalifa University has historically admitted strong undergraduates onto a funded basis, with tuition covered and support toward living costs, and funds research assistantships at master's and doctoral level. Admission and the award are decided together.",
+      "ar": "دأبت جامعة خليفة على قبول الطلبة المتفوقين في المرحلة الجامعية ضمن مقاعد مموّلة تغطي الرسوم وتدعم نفقات المعيشة، كما تموّل مساعدات بحثية في الماجستير والدكتوراه. ويُبَتّ في القبول والمنحة معًا."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 90,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "ku"
+    ],
+    "website": "https://www.ku.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "mbzuai_funded",
+    "name": {
+      "en": "MBZUAI Fully Funded Study",
+      "ar": "الدراسة الممولة بالكامل في جامعة محمد بن زايد للذكاء الاصطناعي"
+    },
+    "provider": {
+      "en": "Mohamed bin Zayed University of Artificial Intelligence",
+      "ar": "جامعة محمد بن زايد للذكاء الاصطناعي"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "full_plus_stipend",
+    "levels": [
+      "postgraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "artificial_intelligence",
+      "computer_science",
+      "data_science",
+      "mathematics",
+      "robotics",
+      "software_engineering",
+      "statistics"
+    ],
+    "about": {
+      "en": "A graduate-only university dedicated to artificial intelligence. Admitted students have been funded on a full basis — tuition, accommodation and a monthly stipend — which makes it one of the few routes into a research career with no tuition cost at all.",
+      "ar": "جامعة للدراسات العليا فقط متخصصة في الذكاء الاصطناعي. جرى تمويل الطلبة المقبولين تمويلًا كاملًا يشمل الرسوم والسكن ومخصصًا شهريًا، ما يجعلها من المسارات القليلة إلى مهنة بحثية دون أي كلفة دراسية."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": null,
+      "trackRequired": [],
+      "notes": {
+        "en": "Master's and PhD only — there is no undergraduate route here. Plan a bachelor's in computing or mathematics first. Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "ماجستير ودكتوراه فقط — لا يوجد مسار للبكالوريوس هنا. خطّط لدرجة جامعية في الحوسبة أو الرياضيات أولًا. إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "mbzuai"
+    ],
+    "website": "https://mbzuai.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "nyuad_aid",
+    "name": {
+      "en": "NYU Abu Dhabi Financial Aid and Scholarships",
+      "ar": "المساعدات المالية والمنح في جامعة نيويورك أبوظبي"
+    },
+    "provider": {
+      "en": "New York University Abu Dhabi",
+      "ar": "جامعة نيويورك أبوظبي"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "full_plus_stipend",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "animation",
+      "artificial_intelligence",
+      "biology",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "criminology",
+      "cybersecurity_major",
+      "data_science",
+      "digital_media",
+      "economics",
+      "electrical_engineering",
+      "fashion_design",
+      "film_production",
+      "graphic_design",
+      "homeland_security",
+      "industrial_design",
+      "interior_design",
+      "international_relations",
+      "journalism",
+      "law",
+      "mass_communication",
+      "mathematics",
+      "mechanical_engineering",
+      "military_science",
+      "museum_studies",
+      "photography",
+      "physics",
+      "political_science",
+      "psychology",
+      "public_administration",
+      "public_policy",
+      "social_work",
+      "software_engineering",
+      "sound_engineering"
+    ],
+    "about": {
+      "en": "Admission is need-blind for the strongest applicants and the university has met demonstrated financial need, so a place is not decided by what a family can pay. Extremely competitive, and the application is a holistic one rather than a score cut-off.",
+      "ar": "القبول لا ينظر إلى القدرة المالية بالنسبة لأقوى المتقدمين، وقد التزمت الجامعة بتغطية الحاجة المالية المثبتة، فلا يتحدد المقعد بما تستطيع الأسرة دفعه. المنافسة شديدة، والتقديم شامل لا يقوم على حدّ أدنى من الدرجات."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 92,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "nyuad"
+    ],
+    "website": "https://nyuad.nyu.edu",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "uaeu_chancellor",
+    "name": {
+      "en": "UAEU Merit and Chancellor's Scholarships",
+      "ar": "منح التفوق ومنحة المدير في جامعة الإمارات"
+    },
+    "provider": {
+      "en": "United Arab Emirates University",
+      "ar": "جامعة الإمارات العربية المتحدة"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "full_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "accounting",
+      "artificial_intelligence",
+      "audiology",
+      "biomedical_sciences",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "curriculum_design",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "economics",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "electrical_engineering",
+      "finance",
+      "health_informatics",
+      "human_resources",
+      "islamic_finance",
+      "marketing",
+      "mathematics",
+      "mechanical_engineering",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "physics",
+      "physiotherapy",
+      "prosthetics_orthotics",
+      "public_health",
+      "radiation_therapy",
+      "radiography",
+      "software_engineering",
+      "special_education",
+      "speech_therapy",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "The national university is free for UAE nationals, and runs merit awards and graduate assistantships that open the same route to expatriate students with a strong record.",
+      "ar": "الجامعة الوطنية مجانية لمواطني الدولة، وتقدّم منح تفوّق ومساعدات دراسات عليا تفتح المسار نفسه أمام الطلبة الوافدين ذوي السجل القوي."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 90,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "uaeu"
+    ],
+    "website": "https://www.uaeu.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "zu_scholarships",
+    "name": {
+      "en": "Zayed University Scholarships",
+      "ar": "منح جامعة زايد"
+    },
+    "provider": {
+      "en": "Zayed University",
+      "ar": "جامعة زايد"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "full_tuition",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "accounting",
+      "animation",
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "curriculum_design",
+      "cybersecurity_major",
+      "data_science",
+      "digital_media",
+      "economics",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "fashion_design",
+      "film_production",
+      "finance",
+      "game_development",
+      "graphic_design",
+      "human_resources",
+      "industrial_design",
+      "information_systems",
+      "interaction_design",
+      "interior_design",
+      "islamic_finance",
+      "journalism",
+      "marketing",
+      "mass_communication",
+      "museum_studies",
+      "network_engineering",
+      "photography",
+      "psychology",
+      "robotics",
+      "software_engineering",
+      "sound_engineering",
+      "special_education",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "Free for UAE nationals, with merit scholarships for expatriate students on both the Dubai and Abu Dhabi campuses. Strong in communication, design, education and business.",
+      "ar": "مجانية لمواطني الدولة، مع منح تفوّق للطلبة الوافدين في حرمي دبي وأبوظبي. قوية في الاتصال والتصميم والتربية وإدارة الأعمال."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 85,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "zu_ad",
+      "zu_dubai"
+    ],
+    "website": "https://www.zu.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "hct_nationals",
+    "name": {
+      "en": "Higher Colleges of Technology Places",
+      "ar": "مقاعد كليات التقنية العليا"
+    },
+    "provider": {
+      "en": "Higher Colleges of Technology",
+      "ar": "كليات التقنية العليا"
+    },
+    "kind": "university",
+    "audience": "uae_nationals",
+    "coverage": "free_for_nationals",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "accounting",
+      "artificial_intelligence",
+      "aviation_management",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "education_primary",
+      "electrical_engineering",
+      "finance",
+      "game_development",
+      "health_informatics",
+      "human_resources",
+      "information_systems",
+      "interaction_design",
+      "islamic_finance",
+      "marketing",
+      "mechanical_engineering",
+      "network_engineering",
+      "nursing",
+      "robotics",
+      "software_engineering",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "The applied federal system, free to UAE nationals across seven campuses. The most accessible funded route in the country: entry thresholds are lower than the research universities and the programmes are built around employment.",
+      "ar": "المنظومة التطبيقية الاتحادية، مجانية لمواطني الدولة في سبعة حرم جامعية. أيسر المسارات الممولة في الدولة: عتبات القبول أدنى من الجامعات البحثية والبرامج مبنية على التوظيف."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 70,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "hct_abu_dhabi",
+      "hct_dubai",
+      "hct_sharjah",
+      "hct_al_ain",
+      "hct_ras_al_khaimah",
+      "hct_fujairah",
+      "hct_madinat_zayed",
+      "hct_ruwais"
+    ],
+    "website": "https://www.hct.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "aus_merit",
+    "name": {
+      "en": "AUS Merit and Need-Based Awards",
+      "ar": "منح التفوق والمساعدة المالية في الجامعة الأمريكية بالشارقة"
+    },
+    "provider": {
+      "en": "American University of Sharjah",
+      "ar": "الجامعة الأمريكية في الشارقة"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "sharjah",
+    "fields": [
+      "accounting",
+      "animation",
+      "architecture",
+      "artificial_intelligence",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "digital_media",
+      "economics",
+      "electrical_engineering",
+      "fashion_design",
+      "film_production",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "industrial_design",
+      "interior_design",
+      "international_relations",
+      "islamic_finance",
+      "journalism",
+      "marketing",
+      "mass_communication",
+      "mathematics",
+      "mechanical_engineering",
+      "museum_studies",
+      "photography",
+      "physics",
+      "software_engineering",
+      "sound_engineering",
+      "supply_chain",
+      "urban_planning"
+    ],
+    "about": {
+      "en": "Awards scaled to the high-school average and to financial need, renewable on a maintained university GPA. Architecture, engineering and design are the flagship programmes.",
+      "ar": "منح تتدرّج بحسب المعدل الثانوي والحاجة المالية، وتُجدَّد بشرط الحفاظ على معدل جامعي محدد. العمارة والهندسة والتصميم هي البرامج الرائدة."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 88,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "aus"
+    ],
+    "website": "https://www.aus.edu",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "sharjah_univ_awards",
+    "name": {
+      "en": "University of Sharjah Scholarships",
+      "ar": "منح جامعة الشارقة"
+    },
+    "provider": {
+      "en": "University of Sharjah",
+      "ar": "جامعة الشارقة"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "sharjah",
+    "fields": [
+      "architecture",
+      "artificial_intelligence",
+      "audiology",
+      "biomedical_sciences",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "electrical_engineering",
+      "health_informatics",
+      "islamic_studies",
+      "law",
+      "mathematics",
+      "mechanical_engineering",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "physics",
+      "physiotherapy",
+      "prosthetics_orthotics",
+      "public_health",
+      "radiation_therapy",
+      "radiography",
+      "sharia_law",
+      "software_engineering",
+      "speech_therapy"
+    ],
+    "about": {
+      "en": "A broad award system covering academic excellence, financial hardship, Quran memorisation and sports, across one of the largest programme ranges in the country.",
+      "ar": "منظومة منح واسعة تشمل التفوق الدراسي والحالة المادية وحفظ القرآن الكريم والرياضة، ضمن واحدة من أوسع قوائم البرامج في الدولة."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 85,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "sharjah_univ"
+    ],
+    "website": "https://www.sharjah.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "sorbonne_ad_merit",
+    "name": {
+      "en": "Sorbonne Abu Dhabi Excellence Scholarships",
+      "ar": "منح التميز في جامعة السوربون أبوظبي"
+    },
+    "provider": {
+      "en": "Sorbonne University Abu Dhabi",
+      "ar": "جامعة السوربون أبوظبي"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "economics",
+      "international_relations",
+      "journalism",
+      "law",
+      "mass_communication",
+      "museum_studies",
+      "political_science",
+      "sociology",
+      "translation"
+    ],
+    "about": {
+      "en": "A French public university's Abu Dhabi campus, awarding excellence scholarships against the French and international curricula it teaches in. Unusually strong in law, humanities and languages rather than engineering.",
+      "ar": "حرم أبوظبي لجامعة فرنسية حكومية، تمنح منح تميز وفق المناهج الفرنسية والدولية التي تدرّسها. قوية بشكل لافت في القانون والعلوم الإنسانية واللغات أكثر منها في الهندسة."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 85,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "sorbonne_ad"
+    ],
+    "website": "https://www.sorbonne.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "mbru_health",
+    "name": {
+      "en": "MBRU Medical and Health Sciences Scholarships",
+      "ar": "منح كليات الطب والعلوم الصحية في جامعة محمد بن راشد"
+    },
+    "provider": {
+      "en": "Mohammed Bin Rashid University of Medicine and Health Sciences",
+      "ar": "جامعة محمد بن راشد للطب والعلوم الصحية"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "dubai",
+    "fields": [
+      "audiology",
+      "biomedical_sciences",
+      "dentistry",
+      "health_informatics",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "physiotherapy",
+      "prosthetics_orthotics",
+      "public_health",
+      "radiation_therapy",
+      "radiography",
+      "speech_therapy"
+    ],
+    "about": {
+      "en": "Dubai's dedicated health-sciences university, with scholarship support for medicine, dentistry and the allied health programmes, and a hospital network attached for clinical placement.",
+      "ar": "جامعة دبي المتخصصة في العلوم الصحية، مع دعم بالمنح لبرامج الطب وطب الأسنان والعلوم الصحية المساندة، وشبكة مستشفيات ملحقة للتدريب السريري."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 90,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "mbru"
+    ],
+    "website": "https://www.mbru.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "ajman_merit",
+    "name": {
+      "en": "Ajman University Merit Scholarships",
+      "ar": "منح التفوق في جامعة عجمان"
+    },
+    "provider": {
+      "en": "Ajman University",
+      "ar": "جامعة عجمان"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "ajman",
+    "fields": [
+      "accounting",
+      "animation",
+      "architecture",
+      "artificial_intelligence",
+      "audiology",
+      "biomedical_sciences",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "digital_media",
+      "economics",
+      "electrical_engineering",
+      "fashion_design",
+      "film_production",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "human_resources",
+      "industrial_design",
+      "interior_design",
+      "islamic_finance",
+      "journalism",
+      "law",
+      "marketing",
+      "mass_communication",
+      "mathematics",
+      "mechanical_engineering",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "museum_studies",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "photography",
+      "physics",
+      "physiotherapy",
+      "prosthetics_orthotics",
+      "public_health",
+      "radiation_therapy",
+      "radiography",
+      "software_engineering",
+      "sound_engineering",
+      "speech_therapy",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "Tiered tuition discounts keyed to the high-school average, plus sibling and alumni reductions. One of the more predictable award structures — the tier is published rather than negotiated.",
+      "ar": "خصومات على الرسوم متدرجة حسب المعدل الثانوي، إضافة إلى خصومات للإخوة والخريجين. من أوضح هياكل المنح — إذ تُنشر الشرائح ولا يجري التفاوض عليها."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 80,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "ajman_univ"
+    ],
+    "website": "https://www.ajman.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "aurak_merit",
+    "name": {
+      "en": "AURAK Scholarships",
+      "ar": "منح الجامعة الأمريكية في رأس الخيمة"
+    },
+    "provider": {
+      "en": "American University of Ras Al Khaimah",
+      "ar": "الجامعة الأمريكية في رأس الخيمة"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "ras_al_khaimah",
+    "fields": [
+      "accounting",
+      "architecture",
+      "artificial_intelligence",
+      "biotechnology",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "electrical_engineering",
+      "environmental_science",
+      "finance",
+      "human_resources",
+      "islamic_finance",
+      "marketing",
+      "mathematics",
+      "mechanical_engineering",
+      "physics",
+      "software_engineering",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "Merit and hardship awards at a government-backed American-curriculum university in the northern emirates, where the cost base is lower than Dubai or Abu Dhabi to begin with.",
+      "ar": "منح تفوّق ومنح حالة مادية في جامعة مدعومة حكوميًا تتبع المنهج الأمريكي في الإمارات الشمالية، حيث تكون الكلفة أساسًا أقل منها في دبي أو أبوظبي."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 80,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "aurak"
+    ],
+    "website": "https://aurak.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "branch_campus_merit",
+    "name": {
+      "en": "International Branch Campus Scholarships",
+      "ar": "منح الفروع الجامعية الدولية"
+    },
+    "provider": {
+      "en": "UK, Australian and Indian branch campuses",
+      "ar": "الفروع البريطانية والأسترالية والهندية"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "dubai",
+    "fields": [
+      "accounting",
+      "animation",
+      "artificial_intelligence",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "digital_media",
+      "economics",
+      "electrical_engineering",
+      "fashion_design",
+      "film_production",
+      "finance",
+      "graphic_design",
+      "human_resources",
+      "industrial_design",
+      "interior_design",
+      "islamic_finance",
+      "journalism",
+      "law",
+      "marketing",
+      "mass_communication",
+      "mathematics",
+      "mechanical_engineering",
+      "museum_studies",
+      "photography",
+      "physics",
+      "psychology",
+      "software_engineering",
+      "sound_engineering",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "Heriot-Watt, Birmingham, Middlesex, Manipal, BITS Pilani and the other Dubai branch campuses each run academic-excellence scholarships, typically a percentage off tuition renewable on results. The award is usually decided at offer stage, not applied for later.",
+      "ar": "تدير فروع هيريوت وات وبرمنغهام وميدلسكس ومانيبال وبيتس بيلاني وغيرها في دبي منحًا للتفوق الأكاديمي، وهي عادةً نسبة خصم على الرسوم تُجدَّد بحسب النتائج. ويُبَتّ في المنحة عند تقديم عرض القبول لا بطلب لاحق."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 85,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "hw_dubai",
+      "birmingham_dubai",
+      "middlesex_dubai",
+      "manipal_dubai",
+      "bits_dubai",
+      "amity_dubai",
+      "cud"
+    ],
+    "website": "https://www.khda.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "adnoc_sponsorship",
+    "name": {
+      "en": "ADNOC Scholarship and Sponsorship Programme",
+      "ar": "برنامج المنح والابتعاث في أدنوك"
+    },
+    "provider": {
+      "en": "ADNOC",
+      "ar": "أدنوك"
+    },
+    "kind": "employer",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "artificial_intelligence",
+      "chemical_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "electrical_engineering",
+      "environmental_engineering",
+      "game_development",
+      "geology",
+      "industrial_engineering",
+      "information_systems",
+      "interaction_design",
+      "materials_engineering",
+      "mechanical_engineering",
+      "mechatronics",
+      "network_engineering",
+      "nuclear_engineering",
+      "petroleum_engineering",
+      "robotics",
+      "software_engineering"
+    ],
+    "about": {
+      "en": "Sponsored study for Emirati students in the disciplines the group hires into, with tuition and a monthly allowance, internships during study and a job at the end of it.",
+      "ar": "ابتعاث مموّل للطلبة الإماراتيين في التخصصات التي توظّف فيها المجموعة، مع تغطية الرسوم ومخصص شهري وتدريب أثناء الدراسة ووظيفة عند التخرج."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 85,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "Sponsorship carries a commitment to work for the group for a set period after graduation. Read the length of that commitment before signing.",
+      "ar": "يترتب على الابتعاث التزام بالعمل لدى المجموعة لمدة محددة بعد التخرج. اطّلع على مدة هذا الالتزام قبل التوقيع."
+    },
+    "relatedUniversities": [
+      "ku",
+      "adnoc_academy",
+      "uaeu"
+    ],
+    "website": "https://www.adnoc.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "enec_energy_pioneers",
+    "name": {
+      "en": "Energy Pioneers Scholarship",
+      "ar": "منحة روّاد الطاقة"
+    },
+    "provider": {
+      "en": "Emirates Nuclear Energy Corporation (ENEC)",
+      "ar": "مؤسسة الإمارات للطاقة النووية"
+    },
+    "kind": "employer",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "chemical_engineering",
+      "electrical_engineering",
+      "industrial_engineering",
+      "materials_engineering",
+      "mechanical_engineering",
+      "nuclear_engineering",
+      "physics"
+    ],
+    "about": {
+      "en": "Sponsored study for Emirati students heading into the nuclear energy programme, one of the few routes in the region into nuclear engineering with employment attached.",
+      "ar": "ابتعاث مموّل للطلبة الإماراتيين المتجهين إلى برنامج الطاقة النووية، وهو من المسارات القليلة في المنطقة إلى الهندسة النووية مع ارتباط بالتوظيف."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 85,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "A service commitment follows graduation, as with other national-programme sponsorships.",
+      "ar": "يعقب التخرجَ التزامٌ بالخدمة، شأن سائر ابتعاثات البرامج الوطنية."
+    },
+    "relatedUniversities": [
+      "ku"
+    ],
+    "website": "https://www.enec.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "emirates_cadet",
+    "name": {
+      "en": "Emirates National Cadet Pilot Programme",
+      "ar": "برنامج طيارو الإمارات الوطنيون"
+    },
+    "provider": {
+      "en": "Emirates Group",
+      "ar": "مجموعة الإمارات"
+    },
+    "kind": "employer",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "dubai",
+    "fields": [
+      "aerospace_engineering",
+      "air_traffic_management",
+      "aircraft_maintenance",
+      "aviation_management",
+      "pilot_training"
+    ],
+    "about": {
+      "en": "Fully sponsored flight training for Emirati cadets, from zero hours to a commercial licence and a first officer's seat. Selection is by aptitude testing, assessment days and a Class 1 medical rather than by academic average alone.",
+      "ar": "تدريب طيران مموّل بالكامل للمتدربين الإماراتيين، من الصفر حتى رخصة الطيران التجاري ومقعد مساعد الطيار. الاختيار عبر اختبارات القدرات وأيام التقييم والفحص الطبي من الفئة الأولى، لا بالمعدل الأكاديمي وحده."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": null,
+      "trackRequired": [],
+      "notes": {
+        "en": "Entry is by aptitude, assessment and medical rather than a percentage. Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "القبول عبر القدرات والتقييم والفحص الطبي لا عبر نسبة مئوية. إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "Sponsored cadets commit to fly for the airline for a fixed period. Failing the medical at any stage ends the route, so treat it as one option, never the only one.",
+      "ar": "يلتزم المتدربون المبتعثون بالطيران لدى الناقل لمدة محددة. ويؤدي عدم اجتياز الفحص الطبي في أي مرحلة إلى إنهاء المسار، فتعامل معه كخيار من عدة خيارات لا كخيار وحيد."
+    },
+    "relatedUniversities": [
+      "eau"
+    ],
+    "website": "https://www.emiratesgroupcareers.com",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "etihad_cadet",
+    "name": {
+      "en": "Etihad Cadet Pilot Programme",
+      "ar": "برنامج الاتحاد لتأهيل الطيارين"
+    },
+    "provider": {
+      "en": "Etihad Aviation Group",
+      "ar": "مجموعة الاتحاد للطيران"
+    },
+    "kind": "employer",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "aerospace_engineering",
+      "air_traffic_management",
+      "aircraft_maintenance",
+      "aviation_management",
+      "pilot_training"
+    ],
+    "about": {
+      "en": "Abu Dhabi's sponsored route to an airline flight deck, training Emirati cadets through the airline's own academy. Same shape as the Emirates programme: aptitude and medical first, academics second.",
+      "ar": "مسار أبوظبي المموّل إلى قمرة قيادة الطائرة، ويدرّب المتدربين الإماراتيين عبر أكاديمية الناقل. بنية مماثلة لبرنامج الإمارات: القدرات والفحص الطبي أولًا، ثم الجانب الأكاديمي."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": null,
+      "trackRequired": [],
+      "notes": {
+        "en": "Entry is by aptitude, assessment and medical rather than a percentage. Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "القبول عبر القدرات والتقييم والفحص الطبي لا عبر نسبة مئوية. إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "A service commitment to the airline follows qualification.",
+      "ar": "يعقب التأهيلَ التزامٌ بالخدمة لدى الناقل."
+    },
+    "relatedUniversities": [],
+    "website": "https://www.etihad.com",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "mubadala_programmes",
+    "name": {
+      "en": "Mubadala Development and Study Programmes",
+      "ar": "برامج مبادلة للتطوير والدراسة"
+    },
+    "provider": {
+      "en": "Mubadala Investment Company",
+      "ar": "شركة مبادلة للاستثمار"
+    },
+    "kind": "employer",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "accounting",
+      "aerospace_engineering",
+      "artificial_intelligence",
+      "business_administration",
+      "chemical_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "electrical_engineering",
+      "environmental_engineering",
+      "finance",
+      "game_development",
+      "geology",
+      "human_resources",
+      "industrial_engineering",
+      "information_systems",
+      "interaction_design",
+      "islamic_finance",
+      "marketing",
+      "materials_engineering",
+      "mechanical_engineering",
+      "mechatronics",
+      "network_engineering",
+      "nuclear_engineering",
+      "petroleum_engineering",
+      "robotics",
+      "software_engineering",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "Sponsorship and graduate development schemes across the group's portfolio — aerospace, semiconductors, energy, healthcare and technology — aimed at Emirati students and early graduates.",
+      "ar": "برامج ابتعاث وتطوير للخريجين عبر محفظة المجموعة — الفضاء وأشباه الموصلات والطاقة والرعاية الصحية والتقنية — وتستهدف الطلبة الإماراتيين وحديثي التخرج."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 85,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "Sponsored places carry a service commitment to a group company.",
+      "ar": "تترتب على المقاعد المموّلة التزامات بالخدمة لدى إحدى شركات المجموعة."
+    },
+    "relatedUniversities": [],
+    "website": "https://www.mubadala.com",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "dewa_sponsorship",
+    "name": {
+      "en": "DEWA Scholarship and Sponsorship",
+      "ar": "منح وابتعاث هيئة كهرباء ومياه دبي"
+    },
+    "provider": {
+      "en": "Dubai Electricity and Water Authority",
+      "ar": "هيئة كهرباء ومياه دبي"
+    },
+    "kind": "employer",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "dubai",
+    "fields": [
+      "architecture",
+      "civil_engineering",
+      "computer_engineering",
+      "construction_management",
+      "cybersecurity_major",
+      "electrical_engineering",
+      "environmental_engineering",
+      "industrial_engineering",
+      "mechanical_engineering",
+      "quantity_surveying",
+      "structural_engineering",
+      "water_resources"
+    ],
+    "about": {
+      "en": "Sponsored engineering study for Emirati students entering Dubai's utility, with placement into the authority's own graduate scheme. A stable, infrastructure-side route rather than a corporate one.",
+      "ar": "ابتعاث هندسي مموّل للطلبة الإماراتيين المتجهين إلى مرفق دبي، مع التحاق ببرنامج الخريجين لدى الهيئة. مسار بنية تحتية مستقر لا مسار شركات."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 80,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "A service commitment follows graduation.",
+      "ar": "يعقب التخرجَ التزامٌ بالخدمة."
+    },
+    "relatedUniversities": [],
+    "website": "https://www.dewa.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "etisalat_du_graduate",
+    "name": {
+      "en": "Telecom Graduate and Sponsorship Programmes",
+      "ar": "برامج الاتصالات للخريجين والابتعاث"
+    },
+    "provider": {
+      "en": "e& and du",
+      "ar": "اتصالات من e& ودو"
+    },
+    "kind": "employer",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "artificial_intelligence",
+      "business_administration",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "electrical_engineering",
+      "game_development",
+      "information_systems",
+      "interaction_design",
+      "marketing",
+      "network_engineering",
+      "robotics",
+      "software_engineering"
+    ],
+    "about": {
+      "en": "The national telecom operators run Emiratisation-led sponsorship and graduate schemes in networks, cybersecurity, data and the commercial functions around them.",
+      "ar": "يدير مشغّلا الاتصالات الوطنيان برامج ابتعاث وخريجين ضمن التوطين في الشبكات والأمن السيبراني والبيانات والوظائف التجارية المرتبطة بها."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 80,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "Sponsored study is tied to employment with the operator.",
+      "ar": "يرتبط الابتعاث بالعمل لدى المشغّل."
+    },
+    "relatedUniversities": [
+      "etisalat_academy"
+    ],
+    "website": "https://www.eand.com",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "banking_finance_sponsorship",
+    "name": {
+      "en": "Banking and Finance Sponsorships",
+      "ar": "ابتعاث القطاع المصرفي والمالي"
+    },
+    "provider": {
+      "en": "Emirates Institute of Finance and UAE banks",
+      "ar": "معهد الإمارات المالي والبنوك الوطنية"
+    },
+    "kind": "employer",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "accounting",
+      "actuarial_science",
+      "business_administration",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "finance",
+      "human_resources",
+      "islamic_finance",
+      "marketing",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "The sector's national training institute and the major banks sponsor Emirati students into banking, Islamic finance, risk and compliance, usually with a job at the end.",
+      "ar": "يبتعث المعهد الوطني للقطاع والبنوك الكبرى الطلبة الإماراتيين إلى الصيرفة والتمويل الإسلامي وإدارة المخاطر والامتثال، وعادةً مع وظيفة عند التخرج."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 80,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "Sponsored places are tied to employment with the sponsoring bank.",
+      "ar": "ترتبط المقاعد المموّلة بالعمل لدى البنك الراعي."
+    },
+    "relatedUniversities": [
+      "eif"
+    ],
+    "website": "https://www.eif.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "uae_space_agency",
+    "name": {
+      "en": "UAE Space Sector Scholarships",
+      "ar": "منح قطاع الفضاء الإماراتي"
+    },
+    "provider": {
+      "en": "UAE Space Agency and MBRSC",
+      "ar": "وكالة الإمارات للفضاء ومركز محمد بن راشد للفضاء"
+    },
+    "kind": "sector",
+    "audience": "uae_nationals",
+    "coverage": "full_plus_stipend",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "aerospace_engineering",
+      "astronomy",
+      "electrical_engineering",
+      "mechanical_engineering",
+      "meteorology",
+      "physics",
+      "space_engineering"
+    ],
+    "about": {
+      "en": "Scholarships, research placements and training programmes feeding the national space programme — satellite engineering, remote sensing, planetary science and mission operations. A small number of places against a very specific national need.",
+      "ar": "منح وفرص بحثية وبرامج تدريب تغذّي برنامج الفضاء الوطني — هندسة الأقمار الصناعية والاستشعار عن بُعد وعلوم الكواكب وعمليات المهام. عدد مقاعد صغير مقابل حاجة وطنية محددة جدًا."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 88,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "ku",
+      "uaeu",
+      "aurak"
+    ],
+    "website": "https://www.space.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "rabdan_security",
+    "name": {
+      "en": "Rabdan Academy Sponsored Programmes",
+      "ar": "البرامج المموّلة في أكاديمية ربدان"
+    },
+    "provider": {
+      "en": "Rabdan Academy",
+      "ar": "أكاديمية ربدان"
+    },
+    "kind": "sector",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "criminology",
+      "homeland_security",
+      "military_science",
+      "paramedic_science",
+      "public_administration",
+      "public_policy",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "The safety, security and emergency-preparedness academy, with places sponsored by the entities its graduates join — policing, civil defence, defence and crisis management.",
+      "ar": "أكاديمية السلامة والأمن والاستعداد للطوارئ، ومقاعدها ممولة من الجهات التي يلتحق بها الخريجون — الشرطة والدفاع المدني والدفاع وإدارة الأزمات."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 75,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "Most places are tied to service with the sponsoring entity.",
+      "ar": "ترتبط معظم المقاعد بالخدمة لدى الجهة الراعية."
+    },
+    "relatedUniversities": [
+      "rabdan"
+    ],
+    "website": "https://www.ra.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "police_academy",
+    "name": {
+      "en": "Policing and Civil Defence Sponsored Study",
+      "ar": "الدراسة المموّلة في الشرطة والدفاع المدني"
+    },
+    "provider": {
+      "en": "UAE police academies",
+      "ar": "أكاديميات الشرطة في الدولة"
+    },
+    "kind": "sector",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "criminology",
+      "cybersecurity_major",
+      "homeland_security",
+      "law",
+      "military_science",
+      "paramedic_science",
+      "psychology"
+    ],
+    "about": {
+      "en": "Cadet routes that pay a salary from the first year rather than charging tuition, combining a degree with service training. Entry includes fitness and medical assessment.",
+      "ar": "مسارات للطلبة الضباط تدفع راتبًا من السنة الأولى بدل تحصيل رسوم، وتجمع بين الدرجة العلمية والتدريب الخدمي. ويشمل القبول تقييمًا للياقة والفحص الطبي."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 75,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "These are employment routes with a service commitment, not grants.",
+      "ar": "هذه مسارات توظيف مرتبطة بالتزام خدمة، وليست منحًا."
+    },
+    "relatedUniversities": [],
+    "website": "https://www.moi.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "maritime_cadet",
+    "name": {
+      "en": "Maritime Cadet Sponsorship",
+      "ar": "ابتعاث الضباط البحريين"
+    },
+    "provider": {
+      "en": "Abu Dhabi Maritime Academy and UAE shipping operators",
+      "ar": "أكاديمية أبوظبي البحرية ومشغّلو الشحن في الدولة"
+    },
+    "kind": "sector",
+    "audience": "all",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "geomatics",
+      "marine_engineering",
+      "marine_science",
+      "maritime_studies",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "Deck and engine cadetships sponsored by shipping and port operators, with sea time built into the qualification. An under-subscribed route into a licensed profession with a global labour market.",
+      "ar": "برامج تدريب لضباط سطح ومحركات ممولة من شركات الشحن ومشغّلي الموانئ، مع فترة إبحار مدمجة في المؤهل. مسار قليل الإقبال إلى مهنة مرخّصة ذات سوق عمل عالمية."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 70,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "Cadetships carry a commitment to sail with the sponsoring operator.",
+      "ar": "ترتبط برامج التدريب بالتزام الإبحار مع المشغّل الراعي."
+    },
+    "relatedUniversities": [
+      "khalifa_maritime"
+    ],
+    "website": "https://www.admaritimeacademy.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "teaching_fellowship",
+    "name": {
+      "en": "Teacher Preparation Scholarships",
+      "ar": "منح إعداد المعلمين"
+    },
+    "provider": {
+      "en": "Emirates College for Advanced Education and the Ministry of Education",
+      "ar": "كلية الإمارات للتعليم العالي ووزارة التربية والتعليم"
+    },
+    "kind": "sector",
+    "audience": "uae_nationals",
+    "coverage": "full_plus_stipend",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "abu_dhabi",
+    "fields": [
+      "curriculum_design",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "special_education"
+    ],
+    "about": {
+      "en": "Funded teacher-preparation places for Emirati students, with a school placement attached. Teaching is a declared national shortage, so this is one of the more reliably available funded routes.",
+      "ar": "مقاعد ممولة لإعداد المعلمين الإماراتيين، مع تكليف مدرسي مرتبط بها. والتعليم نقص وطني معلن، ما يجعل هذا من المسارات الممولة الأكثر توافرًا."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 75,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "ecae",
+      "uaeu",
+      "zu_ad"
+    ],
+    "website": "https://www.ecae.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "health_workforce",
+    "name": {
+      "en": "Health Workforce Scholarships",
+      "ar": "منح الكوادر الصحية"
+    },
+    "provider": {
+      "en": "UAE health authorities and hospital groups",
+      "ar": "الجهات الصحية والمجموعات الاستشفائية في الدولة"
+    },
+    "kind": "sector",
+    "audience": "uae_nationals",
+    "coverage": "sponsored_with_bond",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "audiology",
+      "biomedical_sciences",
+      "dentistry",
+      "health_informatics",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "physiotherapy",
+      "prosthetics_orthotics",
+      "public_health",
+      "radiation_therapy",
+      "radiography",
+      "speech_therapy"
+    ],
+    "about": {
+      "en": "The health authorities and the large hospital groups fund nursing, medicine and allied health study for Emirati students, with clinical placement and employment attached. Nursing in particular is a standing national priority.",
+      "ar": "تموّل الجهات الصحية والمجموعات الاستشفائية الكبرى دراسة التمريض والطب والعلوم الصحية المساندة للطلبة الإماراتيين، مع تدريب سريري وتوظيف. والتمريض تحديدًا أولوية وطنية دائمة."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 85,
+      "trackRequired": [
+        "advanced",
+        "elite"
+      ],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": {
+      "en": "Sponsored study is normally tied to a service period in the funding system.",
+      "ar": "يرتبط الابتعاث عادةً بفترة خدمة داخل المنظومة المموِّلة."
+    },
+    "relatedUniversities": [
+      "mbru",
+      "uaeu",
+      "gmu",
+      "rakmhsu"
+    ],
+    "website": "https://www.mohap.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "creative_industries",
+    "name": {
+      "en": "Creative and Cultural Sector Grants",
+      "ar": "منح القطاع الإبداعي والثقافي"
+    },
+    "provider": {
+      "en": "UAE cultural authorities and media zones",
+      "ar": "الجهات الثقافية والمناطق الإعلامية في الدولة"
+    },
+    "kind": "sector",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "animation",
+      "architecture",
+      "digital_media",
+      "fashion_design",
+      "film_production",
+      "graphic_design",
+      "industrial_design",
+      "interior_design",
+      "journalism",
+      "library_science",
+      "mass_communication",
+      "museum_studies",
+      "photography",
+      "sound_engineering"
+    ],
+    "about": {
+      "en": "Cultural authorities, film commissions and the media free zones fund study, residencies and production grants in design, film, heritage and the visual arts. Selection is usually on portfolio rather than on grades.",
+      "ar": "تموّل الجهات الثقافية ولجان الأفلام والمناطق الإعلامية الحرة الدراسة والإقامات الفنية ومنح الإنتاج في التصميم والسينما والتراث والفنون البصرية. والاختيار عادةً بالملف الفني لا بالدرجات."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": null,
+      "trackRequired": [],
+      "notes": {
+        "en": "Portfolio-assessed rather than percentage-assessed. Start building the portfolio in grade 11. Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "يُقيَّم بالملف الفني لا بالنسبة المئوية. ابدأ ببناء الملف في الصف الحادي عشر. إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [],
+    "website": "https://www.mcy.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "need_based_hardship",
+    "name": {
+      "en": "Need-Based and Hardship Support",
+      "ar": "الدعم على أساس الحاجة والحالة المادية"
+    },
+    "provider": {
+      "en": "Most UAE universities",
+      "ar": "معظم جامعات الدولة"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "accounting",
+      "animation",
+      "artificial_intelligence",
+      "audiology",
+      "biomedical_sciences",
+      "business_administration",
+      "chemical_engineering",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "criminology",
+      "curriculum_design",
+      "cybersecurity_major",
+      "data_science",
+      "dentistry",
+      "digital_media",
+      "economics",
+      "education_primary",
+      "education_secondary",
+      "educational_counselling",
+      "electrical_engineering",
+      "fashion_design",
+      "film_production",
+      "finance",
+      "graphic_design",
+      "health_informatics",
+      "homeland_security",
+      "human_resources",
+      "industrial_design",
+      "interior_design",
+      "international_relations",
+      "islamic_finance",
+      "journalism",
+      "law",
+      "marketing",
+      "mass_communication",
+      "mathematics",
+      "mechanical_engineering",
+      "medical_laboratory",
+      "medicine",
+      "midwifery",
+      "military_science",
+      "museum_studies",
+      "nursing",
+      "nutrition",
+      "occupational_therapy",
+      "optometry",
+      "paramedic_science",
+      "pharmacy",
+      "photography",
+      "physics",
+      "physiotherapy",
+      "political_science",
+      "prosthetics_orthotics",
+      "public_administration",
+      "public_health",
+      "public_policy",
+      "radiation_therapy",
+      "radiography",
+      "social_work",
+      "software_engineering",
+      "sound_engineering",
+      "special_education",
+      "speech_therapy",
+      "supply_chain"
+    ],
+    "about": {
+      "en": "Nearly every institution in the country holds a hardship or need-based fund, and it is the least applied-for money in the system because students assume they will not qualify. Ask the admissions office directly — this is not always advertised on the website.",
+      "ar": "تحتفظ كل مؤسسة تقريبًا في الدولة بصندوق للحالات المادية أو الحاجة، وهو أقل التمويل طلبًا في المنظومة لأن الطلبة يفترضون أنهم لن يستوفوا الشروط. اسأل مكتب القبول مباشرة — فهذا لا يُعلن دائمًا على الموقع."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": null,
+      "trackRequired": [],
+      "notes": {
+        "en": "Assessed on family circumstances, not on your average. A refusal one year does not bar an application the next. Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "يُقيَّم بظروف الأسرة لا بمعدلك. ولا يمنع الرفض في سنة من التقديم في السنة التالية. إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [],
+    "website": "https://www.khda.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "postgrad_assistantship",
+    "name": {
+      "en": "Graduate Teaching and Research Assistantships",
+      "ar": "مساعدات التدريس والبحث للدراسات العليا"
+    },
+    "provider": {
+      "en": "Research universities in the UAE",
+      "ar": "الجامعات البحثية في الدولة"
+    },
+    "kind": "university",
+    "audience": "all",
+    "coverage": "full_plus_stipend",
+    "levels": [
+      "postgraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "artificial_intelligence",
+      "biology",
+      "biotechnology",
+      "chemical_engineering",
+      "chemistry",
+      "civil_engineering",
+      "computer_engineering",
+      "computer_science",
+      "cybersecurity_major",
+      "data_science",
+      "economics",
+      "electrical_engineering",
+      "environmental_science",
+      "mathematics",
+      "mechanical_engineering",
+      "physics",
+      "psychology",
+      "software_engineering",
+      "statistics"
+    ],
+    "about": {
+      "en": "The standard way a master's or PhD is paid for anywhere in the world, and it exists here too: the department waives tuition and pays a stipend in exchange for teaching or research work. Applied for through the department, not the scholarships office.",
+      "ar": "الطريقة المعتادة لتمويل الماجستير أو الدكتوراه في العالم، وهي قائمة هنا أيضًا: يعفي القسم من الرسوم ويدفع مخصصًا مقابل عمل تدريسي أو بحثي. ويُقدَّم الطلب عبر القسم لا عبر مكتب المنح."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": null,
+      "trackRequired": [],
+      "notes": {
+        "en": "Decided by a supervisor who wants you on their project, so contact academics directly and early. Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "يقرّرها مشرف يرغب في انضمامك إلى مشروعه، لذا تواصل مع الأكاديميين مباشرة وفي وقت مبكر. إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "ku",
+      "uaeu",
+      "mbzuai",
+      "aus",
+      "sharjah_univ"
+    ],
+    "website": "https://www.ku.ac.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "hospitality_tourism",
+    "name": {
+      "en": "Hospitality and Tourism Industry Scholarships",
+      "ar": "منح قطاع الضيافة والسياحة"
+    },
+    "provider": {
+      "en": "UAE hospitality groups and tourism authorities",
+      "ar": "مجموعات الضيافة وهيئات السياحة في الدولة"
+    },
+    "kind": "sector",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate"
+    ],
+    "emirate": "dubai",
+    "fields": [
+      "business_administration",
+      "culinary_arts",
+      "event_management",
+      "hospitality_management",
+      "marketing",
+      "sports_science",
+      "tourism_management"
+    ],
+    "about": {
+      "en": "Hotel groups, tourism authorities and the specialist academies fund study in hospitality, culinary arts and event management, usually with paid placement inside the business from the first year. Entry thresholds are among the lowest of any funded route in the country.",
+      "ar": "تموّل المجموعات الفندقية وهيئات السياحة والأكاديميات المتخصصة الدراسة في الضيافة وفنون الطهي وإدارة الفعاليات، وعادةً مع تدريب مدفوع داخل المنشأة من السنة الأولى. وعتبات القبول من أدنى ما يوجد بين المسارات الممولة في الدولة."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 70,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "eahm",
+      "ecc_culinary",
+      "hct_dubai"
+    ],
+    "website": "https://www.visitdubai.com",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  },
+  {
+    "id": "agri_food_security",
+    "name": {
+      "en": "Food Security and Agriculture Scholarships",
+      "ar": "منح الأمن الغذائي والزراعة"
+    },
+    "provider": {
+      "en": "UAE food security and environment authorities",
+      "ar": "جهات الأمن الغذائي والبيئة في الدولة"
+    },
+    "kind": "sector",
+    "audience": "all",
+    "coverage": "partial_tuition",
+    "levels": [
+      "undergraduate",
+      "postgraduate"
+    ],
+    "emirate": "all",
+    "fields": [
+      "agriculture",
+      "biotechnology",
+      "environmental_engineering",
+      "environmental_science",
+      "nutrition",
+      "veterinary",
+      "water_resources"
+    ],
+    "about": {
+      "en": "Food security is a declared national priority and the agricultural sciences are chronically under-subscribed, so funded places in agri-tech, veterinary science and water resources compete against far fewer applicants than medicine or engineering do.",
+      "ar": "الأمن الغذائي أولوية وطنية معلنة، والعلوم الزراعية يقل الإقبال عليها باستمرار، لذا تتنافس المقاعد الممولة في التقنية الزراعية والعلوم البيطرية وموارد المياه أمام عدد أقل بكثير من المتقدمين مقارنةً بالطب أو الهندسة."
+    },
+    "eligibility": {
+      "minHighSchoolPercent": 75,
+      "trackRequired": [],
+      "notes": {
+        "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+        "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+      }
+    },
+    "obligation": null,
+    "relatedUniversities": [
+      "uaeu",
+      "aurak",
+      "sharjah_univ"
+    ],
+    "website": "https://www.moccae.gov.ae",
+    "indicative": {
+      "en": "Indicative only — terms, coverage and deadlines change every intake. Confirm with the provider before you plan around this.",
+      "ar": "إرشادي فقط — تتغيّر الشروط والتغطية والمواعيد في كل دورة قبول. يُرجى التأكد من الجهة المانحة قبل البناء على هذه المعلومات."
+    }
+  }
+]

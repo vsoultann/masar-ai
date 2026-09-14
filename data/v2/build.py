@@ -23,6 +23,7 @@ OUT = ROOT / "frontend" / "public" / "data"
 
 sys.path.insert(0, str(HERE))
 
+from v2 import ai_resistance                                # noqa: E402
 from v2 import compose                                      # noqa: E402
 from v2.careers_base import NEW_CAREERS                     # noqa: E402
 from v2.courses import NEW_COURSES                          # noqa: E402
@@ -30,6 +31,7 @@ from v2.initiatives import NEW_INITIATIVES                  # noqa: E402
 from v2.majors import MAJORS                                # noqa: E402
 from v2.mapping import (DEGREE_TO_MAJOR, SECTOR_DEFAULTS, SECTOR_LICENSING,  # noqa: E402
                         V1_EXTRA_MAJORS, V1_EXTRA_SKILLS)
+from v2.scholarships import SCHOLARSHIPS                    # noqa: E402
 from v2.sectors import SECTORS                              # noqa: E402
 from v2.skills import NEW_SKILLS                            # noqa: E402
 from v2.universities import UNIVERSITIES                    # noqa: E402
@@ -255,7 +257,7 @@ def build_career(career: dict, all_careers: list[dict],
         sector=career["sector"], initiatives_en=inits_en, initiatives_ar=inits_ar,
     )
 
-    return {
+    record = {
         "id": cid,
         "title": {"en": career["title_en"], "ar": career["title_ar"]},
         "sector": career["sector"],
@@ -297,6 +299,12 @@ def build_career(career: dict, all_careers: list[dict],
         "demand": career["demand"],
     }
 
+    # Derived last, because it reads the assembled record rather than the
+    # authored row: every input it uses is a field the UI already renders, so
+    # the score can never disagree with the data shown beside it.
+    record["aiResistance"] = ai_resistance.assess(record)
+    return record
+
 
 def write(name: str, payload) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
@@ -317,6 +325,15 @@ def main() -> None:
     assert len(ALL_MAJORS) >= 70, f"need >= 70 majors, have {len(ALL_MAJORS)}"
     assert len(UNIVERSITIES) >= 45, f"need >= 45 institutions, have {len(UNIVERSITIES)}"
     assert any(c["id"] == "radiologist" for c in careers), "radiologist is required"
+    assert len(SCHOLARSHIPS) >= 24, f"need >= 24 scholarships, have {len(SCHOLARSHIPS)}"
+
+    # The exposure index is only useful if it separates careers. A build where
+    # every score lands in one band means the model has stopped discriminating
+    # and the badge on every card would be noise.
+    bands = {c["aiResistance"]["band"] for c in careers}
+    assert len(bands) >= 3, f"AI-resistance collapsed into {bands}"
+    scores = [c["aiResistance"]["score"] for c in careers]
+    assert max(scores) - min(scores) >= 30, "AI-resistance spread is too narrow"
 
     # The full catalog is ~1.4 MB. Card grids, filters and search need about a
     # fifteenth of that, and making /careers download every long description in
@@ -335,6 +352,13 @@ def main() -> None:
             "thumbnail": c["media"]["thumbnail"],
             "majors": c["educationPath"]["relatedMajors"],
             "topSkills": [s["skill"] for s in c["requiredSkills"][:4]],
+            # Score and band only. The breakdown, the phrasing and the audit
+            # trail live in the full record -- a card shows a badge, and the
+            # index must not grow a paragraph of prose per career to serve it.
+            "aiResistance": {
+                "score": c["aiResistance"]["score"],
+                "band": c["aiResistance"]["band"],
+            },
         }
         for c in careers
     ]
@@ -348,6 +372,8 @@ def main() -> None:
     write("skills.json", ALL_SKILLS)
     write("sectors.json", ALL_SECTORS)
     write("initiatives.json", ALL_INITIATIVES)
+    write("scholarships.json", SCHOLARSHIPS)
+    write("ai-resistance.json", ai_resistance.glossary())
 
     riasec, bigfive = V1.build_questionnaires()
     write("questionnaire_riasec.json", riasec)
