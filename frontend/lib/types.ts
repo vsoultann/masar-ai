@@ -16,6 +16,86 @@ export interface Bilingual {
 
 export type Demand = "very_high" | "high" | "moderate";
 
+/* ----------------------------------------------------------- AI resistance */
+
+/** Bands run exposed -> anchored. The thresholds live in the glossary. */
+export type ResistanceBand = "exposed" | "mixed" | "resilient" | "anchored";
+
+/**
+ * One career's exposure to automation.
+ *
+ * Carries the number and the *keys* that select the copy -- the phrasing is
+ * identical across all 184 careers and lives in ai-resistance.json, because
+ * repeating it per career added half a megabyte to a file phones download.
+ */
+export interface AiResistance {
+  score: number;
+  band: ResistanceBand;
+  /** Phrasing groups for "what AI already does here", in the role's weight order. */
+  exposedGroups: string[];
+  /** Phrasing groups for "what holds". */
+  protectedGroups: string[];
+  /** Skill ids worth building to move the score up. */
+  hedgeSkills: string[];
+  /** The audit trail: each component's signed contribution to the score. */
+  drivers: { id: string; effect: number }[];
+}
+
+/** The shared copy behind every aiResistance block. */
+export interface AiResistanceGlossary {
+  basis: Bilingual;
+  method: Bilingual;
+  bands: Record<ResistanceBand, { label: Bilingual; summary: Bilingual }>;
+  groups: Record<string, { exposed: Bilingual; protected: Bilingual }>;
+  drivers: Record<string, Bilingual>;
+  thresholds: { from: number; band: ResistanceBand }[];
+}
+
+/* ------------------------------------------------------------ scholarships */
+
+export type ScholarshipKind =
+  | "government"
+  | "university"
+  | "employer"
+  | "foundation"
+  | "sector";
+
+export type ScholarshipAudience = "uae_nationals" | "residents" | "all";
+
+export type ScholarshipCoverage =
+  | "full_plus_stipend"
+  | "full_tuition"
+  | "free_for_nationals"
+  | "partial_tuition"
+  | "sponsored_with_bond";
+
+export type StudyLevel = "undergraduate" | "postgraduate";
+
+export interface Scholarship {
+  id: string;
+  name: Bilingual;
+  provider: Bilingual;
+  kind: ScholarshipKind;
+  audience: ScholarshipAudience;
+  coverage: ScholarshipCoverage;
+  levels: StudyLevel[];
+  /** An emirate id, or "all" for a nationwide programme. */
+  emirate: string;
+  fields: string[];
+  about: Bilingual;
+  eligibility: {
+    /** null where selection is by aptitude, portfolio or need rather than a score. */
+    minHighSchoolPercent: number | null;
+    trackRequired: string[];
+    notes: Bilingual;
+  };
+  /** What the programme asks for in return — a service bond, typically. */
+  obligation: Bilingual | null;
+  relatedUniversities: string[];
+  website: string;
+  indicative: Bilingual;
+}
+
 export interface Sector {
   id: string;
   name_en: string;
@@ -99,6 +179,7 @@ export interface Career {
   /** Flat skill weights, kept for the ML pipeline. */
   skills: Record<string, number>;
   demand: Demand;
+  aiResistance: AiResistance;
 }
 
 /** The lightweight record card grids use, from careers-index.json. */
@@ -114,6 +195,8 @@ export interface CareerSummary {
   thumbnail: string | null;
   majors: string[];
   topSkills: string[];
+  /** Score and band only — a card shows a badge, not the breakdown. */
+  aiResistance: Pick<AiResistance, "score" | "band">;
 }
 
 export interface Course {

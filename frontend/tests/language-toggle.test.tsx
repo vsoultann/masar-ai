@@ -91,7 +91,13 @@ describe("language toggle", () => {
   it("orders the navigation from the student outwards", () => {
     renderHeader("en");
     const labels = navHrefs();
-    expect(labels).toEqual(["/en/careers", "/en/universities", "/en/mentor"]);
+    expect(labels).toEqual([
+      "/en/careers",
+      "/en/universities",
+      // Scholarships follows universities: the two are one decision.
+      "/en/scholarships",
+      "/en/mentor",
+    ]);
   });
 
   it("puts the student's own pages first once signed in", () => {
@@ -103,6 +109,7 @@ describe("language toggle", () => {
       "/en/results",
       "/en/careers",
       "/en/universities",
+      "/en/scholarships",
       "/en/mentor",
     ]);
   });

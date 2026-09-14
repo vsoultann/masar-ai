@@ -102,7 +102,10 @@ export default function LandingPage() {
                 {t.landing.eyebrow}
               </motion.p>
 
-              <h1 className="mt-5 text-4xl font-black leading-[1.1] sm:text-5xl lg:text-6xl">
+              {/* The gradient clips the whole subtree's glyphs, so the typed
+                  text inherits it as it appears, character by character. The
+                  caret keeps its own solid brand fill and stays visible. */}
+              <h1 className="text-gradient mt-5 text-4xl font-black leading-[1.1] sm:text-5xl lg:text-6xl">
                 <TypedHeadline phrases={[t.landing.heroLine1, t.landing.heroLine2]} />
               </h1>
 
@@ -180,7 +183,7 @@ export default function LandingPage() {
             { value: 2, label: t.landing.statsLanguages },
           ].map((stat) => (
             <motion.div key={stat.label} variants={revealItem}>
-              <dt className="text-3xl font-black sm:text-4xl">
+              <dt className="display text-gradient text-3xl font-black sm:text-4xl">
                 <CountUp value={stat.value} />
               </dt>
               <dd className="mt-1 text-sm muted">{stat.label}</dd>
@@ -193,7 +196,10 @@ export default function LandingPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="text-2xl font-black sm:text-3xl">{t.landing.demoTitle}</h2>
+            <p className="eyebrow">{t.landing.eyebrow}</p>
+            <h2 className="text-gradient mt-1 text-2xl font-black sm:text-3xl">
+              {t.landing.demoTitle}
+            </h2>
             <p className="mt-3 max-w-md leading-relaxed muted">{t.landing.demoSubtitle}</p>
           </div>
           <MiniDemo />
@@ -356,7 +362,9 @@ export default function LandingPage() {
 
       {/* ---------------------------------------------------------- final CTA */}
       <section className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
-        <h2 className="text-3xl font-black sm:text-4xl">{t.landing.ctaFinalTitle}</h2>
+        <h2 className="text-gradient text-3xl font-black sm:text-4xl">
+          {t.landing.ctaFinalTitle}
+        </h2>
         <p className="mx-auto mt-4 max-w-xl leading-relaxed muted">{t.landing.ctaFinalBody}</p>
         <Link href={startHref} className="btn btn-primary mt-7 px-6 py-3 text-base">
           {t.landing.ctaPrimary}

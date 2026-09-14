@@ -22,3 +22,32 @@ Object.defineProperty(window, "matchMedia", {
 
 window.scrollTo = vi.fn();
 Element.prototype.scrollIntoView = vi.fn();
+
+/*
+ * jsdom has no IntersectionObserver, and framer-motion's whileInView needs one.
+ * The stub reports every observed element as immediately in view, which is the
+ * right default for a test: a reveal-on-scroll element that never fires would
+ * stay at its "hidden" variant and be invisible to every query in the suite.
+ */
+class ImmediateIntersectionObserver implements IntersectionObserver {
+  readonly root = null;
+  readonly rootMargin = "";
+  readonly thresholds: readonly number[] = [];
+
+  constructor(private readonly callback: IntersectionObserverCallback) {}
+
+  observe(target: Element) {
+    this.callback(
+      [{ isIntersecting: true, target } as IntersectionObserverEntry],
+      this,
+    );
+  }
+
+  unobserve() {}
+  disconnect() {}
+  takeRecords(): IntersectionObserverEntry[] {
+    return [];
+  }
+}
+
+vi.stubGlobal("IntersectionObserver", ImmediateIntersectionObserver);

@@ -2,8 +2,8 @@
 
 import { asset } from "@/lib/paths";
 import type {
-  Career, CareerSummary, Course, Initiative, Major, Questionnaire,
-  Sector, Skill, University,
+  AiResistanceGlossary, Career, CareerSummary, Course, Initiative, Major,
+  Questionnaire, Scholarship, Sector, Skill, University,
 } from "@/lib/types";
 
 /**
@@ -51,6 +51,9 @@ export const loadMajors = () => loadJson<Major[]>("majors.json");
 export const loadSectors = () => loadJson<Sector[]>("sectors.json");
 export const loadSkills = () => loadJson<Skill[]>("skills.json");
 export const loadInitiatives = () => loadJson<Initiative[]>("initiatives.json");
+export const loadScholarships = () => loadJson<Scholarship[]>("scholarships.json");
+export const loadResistanceGlossary = () =>
+  loadJson<AiResistanceGlossary>("ai-resistance.json");
 export const loadRiasec = () => loadJson<Questionnaire>("questionnaire_riasec.json");
 export const loadBigFive = () => loadJson<Questionnaire>("questionnaire_bigfive.json");
 

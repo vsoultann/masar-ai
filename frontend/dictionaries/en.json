@@ -34,7 +34,8 @@
     "model": "The model",
     "createProfile": "Create profile",
     "colourScheme": "Colour scheme",
-    "uiStyle": "Interface style"
+    "uiStyle": "Interface style",
+    "scholarships": "Scholarships"
   },
   "landing": {
     "eyebrow": "AI Career Guidance System",
@@ -42,7 +43,7 @@
     "subtitle": "Masar analyses your school grades, EmSAT scores, interests and personality, and returns ten ranked careers in the UAE job market — each with a plain explanation of why, the skills you still need, and a learning plan to get there.",
     "ctaPrimary": "Start free assessment",
     "ctaSecondary": "Browse careers",
-    "demoNote": "Prefer to look first? Try the demo account student@masar.ae / Demo@1234",
+    "demoNote": "Five answers is not an assessment. The full one takes fifteen minutes and uses your grades and personality too.",
     "statsCareers": "careers",
     "statsCourses": "courses",
     "statsSectors": "UAE strategic sectors",
@@ -78,13 +79,8 @@
     "ctaFinalTitle": "Your path starts with fifteen minutes",
     "ctaFinalBody": "No cost, no commitment. You can stop after any step and come back later.",
     "viewSector": "View careers",
-    "demoTitle": "Try it in three questions",
-    "demoSubtitle": "This runs the real model — the same one behind the full assessment.",
-    "demoQuestions": [
-      "I would rather understand why something works than organise a team around it.",
-      "I would rather build or repair something physical than design how it looks.",
-      "I would rather lead and persuade people than follow a careful procedure."
-    ],
+    "demoTitle": "Two questions in, you will know more than you did",
+    "demoSubtitle": "Both surveys run the real model — the same one behind the full assessment. Pick how much time you have.",
     "demoYes": "That's me",
     "demoNo": "Not really",
     "demoResult": "A taste of your match",
@@ -95,7 +91,19 @@
     "statsLanguages": "languages",
     "statsMentor": "mentor",
     "exploreCareers": "Explore all careers",
-    "exploreUniversities": "Browse institutions"
+    "exploreUniversities": "Browse institutions",
+    "demoQuick": "Quick check",
+    "demoDeep": "Deep dive",
+    "demoQuickBlurb": "Five questions about the kind of work you want to still be doing in ten years.",
+    "demoDeepBlurb": "Ten questions on majors, risk and what you would keep if a machine took the rest.",
+    "demoQuickTime": "about 1 minute",
+    "demoDeepTime": "about 3 minutes",
+    "demoStart": "Start",
+    "demoSwitch": "Choose a different survey",
+    "demoResultDeep": "Your three closest matches",
+    "demoQuestionOf": "Question",
+    "demoNoteDeep": "Ten answers still is not an assessment — but it is close enough to be worth arguing with. The full one adds your grades and EmSAT.",
+    "demoMajors": "Majors that lead here"
   },
   "about": {
     "title": "About Masar AI",
@@ -283,7 +291,11 @@
     "salarySenior": "Senior",
     "save": "Save career",
     "saved": "Saved",
-    "growth": "Demand trend"
+    "growth": "Demand trend",
+    "aiResistance": "AI resistance",
+    "sortDefault": "Best match",
+    "sortResistance": "Most AI-resistant",
+    "sortSalary": "Highest salary"
   },
   "admin": {
     "title": "Admin panel",
@@ -511,7 +523,9 @@
       "public_subsidised": "Publicly subsidised",
       "mid": "Mid-range",
       "premium": "Premium"
-    }
+    },
+    "scholarshipsHere": "Funding that applies here",
+    "seeAllScholarships": "All scholarships"
   },
   "results": {
     "title": "Your career matches",
@@ -586,7 +600,10 @@
     "apiKeyHelp": "Stored only in this browser and sent only to api.anthropic.com. Leave blank to use the offline mentor.",
     "apiKeySave": "Save key",
     "apiKeyClear": "Remove key",
-    "noAnswer": "I could not find that in the catalogs. Try naming a career, a university or a subject."
+    "noAnswer": "I could not find that in the catalogs. Try naming a career, a university or a subject.",
+    "quickScholarship": "What scholarships could pay for medicine?",
+    "quickAdmission": "What are the admission requirements for Khalifa University?",
+    "quickAiImpact": "Will AI replace graphic designers?"
   },
   "model": {
     "title": "About the model",
@@ -667,5 +684,100 @@
     "body": "Install it as an app: full screen, and your profile stays on this device.",
     "step1": "Tap the Share button in Safari",
     "step2": "Choose “Add to Home Screen”"
+  },
+  "survey": {
+    "quick": [
+      "Ten years in, I would rather be the person who understands why the system works than the person everyone comes to for help.",
+      "I would rather finish a day having repaired or built something real than having made something look better.",
+      "I would rather carry a decision and the blame that comes with it than follow a procedure that is known to work.",
+      "I would choose a major that lets me make things nobody asked for over one with a clear, published career path.",
+      "If software did the technical half of my job tomorrow, the half I would fight to keep is the half with people in it."
+    ],
+    "deep": [
+      "Ten years in, I would rather be the person who understands why the system works than the person everyone comes to for help.",
+      "I would rather finish a day having repaired or built something real than having made something look better.",
+      "I would rather carry a decision and the blame that comes with it than follow a procedure that is known to work.",
+      "I would choose a major that lets me make things nobody asked for over one with a clear, published career path.",
+      "If software did the technical half of my job tomorrow, the half I would fight to keep is the half with people in it.",
+      "I would rather commit to a long qualification now than keep my options open for another two years.",
+      "A field that barely existed ten years ago interests me more than one with fifty years of graduates behind it.",
+      "I would rather be physically where the problem is than analyse it from a desk anywhere in the world.",
+      "I would rather build the organisation than do excellent work inside someone else's.",
+      "I would rather be trusted because my work is always exact than because my work is always interesting."
+    ]
+  },
+  "resistance": {
+    "title": "AI resistance",
+    "subtitle": "How much of this job is the kind of work machines are currently good at.",
+    "scoreOf": "out of 100",
+    "bandExposed": "Exposed",
+    "bandMixed": "Mixed",
+    "bandResilient": "Resilient",
+    "bandAnchored": "Anchored",
+    "exposedTitle": "What AI already does here",
+    "protectedTitle": "What it does not",
+    "hedgeTitle": "What raises your score",
+    "hedgeBody": "These are the capabilities this index scores highest. Building them inside this career moves you toward the resilient part of it.",
+    "driversTitle": "How the score was reached",
+    "driversBody": "Every career starts at 50 and moves on six components. Nothing here is hidden — add the rows up and you get the score.",
+    "baseline": "Baseline",
+    "methodTitle": "What this number is, and what it is not",
+    "notForecast": "Not a forecast",
+    "scaleLow": "More exposed",
+    "scaleHigh": "More anchored",
+    "filterAll": "Any AI resistance",
+    "filterExposed": "Exposed (under 45)",
+    "filterMixed": "Mixed (45–59)",
+    "filterResilient": "Resilient (60–74)",
+    "filterAnchored": "Anchored (75+)",
+    "higherThan": "More resistant than {percent}% of careers here."
+  },
+  "scholarships": {
+    "title": "Scholarships and funding",
+    "subtitle": "Every route to paying for university in the UAE that this catalog holds — government scholarships, university awards, employer sponsorship and the money almost nobody applies for.",
+    "search": "Search scholarships",
+    "searchPlaceholder": "Provider, field or programme…",
+    "resultsCount": "{count} programmes",
+    "noResults": "No programme matches those filters.",
+    "allKinds": "All providers",
+    "allCoverage": "All coverage",
+    "allAudiences": "Anyone",
+    "allLevels": "All levels",
+    "kindGovernment": "Government",
+    "kindUniversity": "University",
+    "kindEmployer": "Employer",
+    "kindFoundation": "Foundation",
+    "kindSector": "Sector programme",
+    "coverageFullPlusStipend": "Full + living costs",
+    "coverageFullTuition": "Full tuition",
+    "coverageFreeForNationals": "Free for nationals",
+    "coveragePartialTuition": "Partial tuition",
+    "coverageSponsoredWithBond": "Sponsored, with a commitment",
+    "audienceUaeNationals": "UAE nationals",
+    "audienceResidents": "Residents",
+    "audienceAll": "Open to all",
+    "levelUndergraduate": "Undergraduate",
+    "levelPostgraduate": "Postgraduate",
+    "provider": "Provider",
+    "covers": "Covers",
+    "openTo": "Open to",
+    "fields": "Fields",
+    "eligibility": "Indicative eligibility",
+    "minAverage": "Typical high-school average",
+    "trackRequired": "Track",
+    "noThreshold": "Not decided by a percentage",
+    "obligation": "What it asks in return",
+    "officialSite": "Official page",
+    "emirateAll": "Nationwide",
+    "matchBody": "Matched against your emirate, your track and your recommended majors.",
+    "matchNoProfile": "Complete the assessment and this page will sort itself around your results.",
+    "howToTitle": "Three things students get wrong about this",
+    "howTo1Title": "Apply before you are sure you qualify",
+    "howTo1Body": "Need-based funds are the least applied-for money in the system, because students assume they will not qualify and never ask. The cost of asking is an email.",
+    "howTo2Title": "A bond is a decision, not a discount",
+    "howTo2Body": "Employer sponsorship pays for everything and commits years of your life to one organisation. That can be an excellent trade — but make it knowingly, and read the length.",
+    "howTo3Title": "Postgraduate study is usually funded",
+    "howTo3Body": "Master's and PhD places are routinely paid for by the department through assistantships. Ask the academic, not the scholarships office.",
+    "indicativeWarning": "Every record here is indicative. Terms and deadlines change every intake — confirm on the provider's own page before planning around it."
   }
 }

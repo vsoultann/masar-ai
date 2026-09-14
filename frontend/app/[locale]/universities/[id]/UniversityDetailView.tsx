@@ -7,12 +7,14 @@ import { useEffect, useState } from "react";
 
 import SmartImage from "@/components/SmartImage";
 import { Chip, ErrorBox, Loading, SectionHeading, Skeleton } from "@/components/ui";
-import { indexBy, loadMajors, loadUniversity } from "@/lib/data/client";
+import {
+  indexBy, loadMajors, loadScholarships, loadUniversity,
+} from "@/lib/data/client";
 import { localiseDigits } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
 import { assessEligibility, haversineKm, studentLocation } from "@/lib/matching/universities";
 import { useProfile } from "@/lib/store/profile";
-import type { Major, University } from "@/lib/types";
+import type { Major, Scholarship, University } from "@/lib/types";
 
 const UniversityMap = dynamic(() => import("@/components/UniversityMap"), {
   ssr: false,
@@ -30,17 +32,19 @@ export default function UniversityDetailView() {
 
   const [university, setUniversity] = useState<University | null>(null);
   const [majors, setMajors] = useState<Map<string, Major>>(new Map());
+  const [scholarships, setScholarships] = useState<Scholarship[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!id) return;
     let cancelled = false;
-    Promise.all([loadUniversity(id), loadMajors()])
-      .then(([found, majorRows]) => {
+    Promise.all([loadUniversity(id), loadMajors(), loadScholarships()])
+      .then(([found, majorRows, scholarshipRows]) => {
         if (cancelled) return;
         if (!found) setError(t.errors.notFound);
         else setUniversity(found);
         setMajors(indexBy(majorRows));
+        setScholarships(scholarshipRows);
       })
       .catch(() => {
         if (!cancelled) setError(t.common.error);
@@ -68,6 +72,22 @@ export default function UniversityDetailView() {
       </div>
     );
   }
+
+  const offered = new Set(university.majorsOffered);
+  const relevantFunding = scholarships
+    .filter(
+      (scholarship) =>
+        scholarship.relatedUniversities.includes(university.id)
+        || scholarship.fields.some((field) => offered.has(field)),
+    )
+    // Named-institution programmes first: "this applies to you here" is a
+    // stronger claim than "this covers a subject taught here".
+    .sort((a, b) => {
+      const named = (row: Scholarship) =>
+        (row.relatedUniversities.includes(university.id) ? 1 : 0);
+      return named(b) - named(a);
+    })
+    .slice(0, 4);
 
   const you = studentLocation(profile);
   const distanceKm = you ? haversineKm(you, university.coordinates) : null;
@@ -195,6 +215,45 @@ export default function UniversityDetailView() {
         <p className="mt-2 text-xs muted">{university.admission.notes[locale]}</p>
         <p className="mt-1 text-xs muted">{t.universities.indicativeWarning}</p>
       </section>
+
+      {/* --- funding ------------------------------------------------------- */}
+      {/* Directly under the admission table, because a student who has just
+          read a tuition band and a minimum average is deciding affordability
+          and eligibility in the same breath. Two ways in: a programme that
+          names this institution, or one scoped to a subject it teaches. */}
+      {relevantFunding.length > 0 && (
+        <section className="mt-10">
+          <SectionHeading title={t.universities.scholarshipsHere} />
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {relevantFunding.map((scholarship) => (
+              <li key={scholarship.id} className="card p-4">
+                <p className="text-sm font-bold">{scholarship.name[locale]}</p>
+                <p className="mt-0.5 text-xs muted">{scholarship.provider[locale]}</p>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  <Chip tone="brand">
+                    {lookup(
+                      {
+                        full_plus_stipend: t.scholarships.coverageFullPlusStipend,
+                        full_tuition: t.scholarships.coverageFullTuition,
+                        free_for_nationals: t.scholarships.coverageFreeForNationals,
+                        partial_tuition: t.scholarships.coveragePartialTuition,
+                        sponsored_with_bond: t.scholarships.coverageSponsoredWithBond,
+                      },
+                      scholarship.coverage,
+                    )}
+                  </Chip>
+                  {scholarship.obligation && (
+                    <Chip tone="warn">{t.scholarships.obligation}</Chip>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+          <Link href={`/${locale}/scholarships`} className="btn btn-ghost mt-3 text-sm">
+            {t.universities.seeAllScholarships}
+          </Link>
+        </section>
+      )}
 
       <section className="mt-10">
         <SectionHeading title={t.universities.allMajors} />

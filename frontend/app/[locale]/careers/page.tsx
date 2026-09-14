@@ -10,7 +10,7 @@ import { indexBy, loadCareerIndex, loadSectors } from "@/lib/data/client";
 import { localiseDigits } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
 import { revealContainer } from "@/lib/motion";
-import type { CareerSummary, Demand, Sector } from "@/lib/types";
+import type { CareerSummary, Demand, ResistanceBand, Sector } from "@/lib/types";
 
 /**
  * The careers explorer: browsable without a profile, as the brief requires.
@@ -31,6 +31,8 @@ function CareersView() {
   // Seeded from ?sector= so the landing page's sector tiles deep-link here.
   const [sector, setSector] = useState(searchParams?.get("sector") ?? "");
   const [demand, setDemand] = useState("");
+  const [band, setBand] = useState("");
+  const [sort, setSort] = useState<"default" | "resistance" | "salary">("default");
 
   useEffect(() => {
     let cancelled = false;
@@ -53,9 +55,10 @@ function CareersView() {
   const filtered = useMemo(() => {
     if (!careers) return [];
     const needle = query.trim().toLowerCase();
-    return careers.filter((career) => {
+    const matched = careers.filter((career) => {
       if (sector && career.sector !== sector) return false;
       if (demand && career.demandOutlook !== demand) return false;
+      if (band && career.aiResistance.band !== band) return false;
       if (!needle) return true;
       // Search both languages regardless of the active one: students often
       // know a career's name in English but are reading the Arabic site.
@@ -66,9 +69,21 @@ function CareersView() {
         || career.shortDescription.ar.includes(needle)
       );
     });
-  }, [careers, query, sector, demand]);
 
-  const hasFilters = Boolean(query || sector || demand);
+    // "default" keeps the catalog's own order, which is the sector grouping a
+    // browsing student expects. Sorting is a deliberate act, not the default.
+    if (sort === "resistance") {
+      return [...matched].sort(
+        (a, b) => b.aiResistance.score - a.aiResistance.score,
+      );
+    }
+    if (sort === "salary") {
+      return [...matched].sort((a, b) => b.salary.entry - a.salary.entry);
+    }
+    return matched;
+  }, [careers, query, sector, demand, band, sort]);
+
+  const hasFilters = Boolean(query || sector || demand || band || sort !== "default");
 
   if (error) {
     return (
@@ -81,11 +96,11 @@ function CareersView() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <header>
-        <h1 className="text-2xl font-black sm:text-3xl">{t.careers.title}</h1>
+        <h1 className="text-gradient text-2xl font-black sm:text-3xl">{t.careers.title}</h1>
         <p className="mt-2 max-w-2xl muted">{t.careers.subtitle}</p>
       </header>
 
-      <div className="card mt-6 grid gap-3 p-4 sm:grid-cols-[2fr_1fr_1fr]">
+      <div className="card mt-6 grid gap-3 p-4 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_1fr]">
         <label className="block">
           <span className="mb-1 block text-xs font-semibold">{t.careers.search}</span>
           <input
@@ -126,6 +141,36 @@ function CareersView() {
             <option value="moderate">{t.common.moderate}</option>
           </select>
         </label>
+
+        <label className="block">
+          <span className="mb-1 block text-xs font-semibold">{t.careers.aiResistance}</span>
+          <select
+            value={band}
+            onChange={(event) => setBand(event.target.value as ResistanceBand | "")}
+            className="w-full rounded-lg border bg-[var(--surface)] px-3 py-2 text-sm"
+          >
+            <option value="">{t.resistance.filterAll}</option>
+            <option value="anchored">{t.resistance.filterAnchored}</option>
+            <option value="resilient">{t.resistance.filterResilient}</option>
+            <option value="mixed">{t.resistance.filterMixed}</option>
+            <option value="exposed">{t.resistance.filterExposed}</option>
+          </select>
+        </label>
+
+        <label className="block">
+          <span className="mb-1 block text-xs font-semibold">{t.careers.sortDefault}</span>
+          <select
+            value={sort}
+            onChange={(event) =>
+              setSort(event.target.value as "default" | "resistance" | "salary")
+            }
+            className="w-full rounded-lg border bg-[var(--surface)] px-3 py-2 text-sm"
+          >
+            <option value="default">{t.careers.sortDefault}</option>
+            <option value="resistance">{t.careers.sortResistance}</option>
+            <option value="salary">{t.careers.sortSalary}</option>
+          </select>
+        </label>
       </div>
 
       <div className="mt-4 flex items-center justify-between gap-3">
@@ -142,6 +187,8 @@ function CareersView() {
               setQuery("");
               setSector("");
               setDemand("");
+              setBand("");
+              setSort("default");
             }}
           >
             {t.careers.clearFilters}
@@ -167,7 +214,7 @@ function CareersView() {
         // popLayout here: it absolutely-positions exiting children, which drops
         // them out of grid flow and makes the survivors overlap.
         <motion.div
-          key={`${sector}|${demand}|${query}`}
+          key={`${sector}|${demand}|${band}|${sort}|${query}`}
           variants={revealContainer(0.03)}
           initial="hidden"
           animate="show"

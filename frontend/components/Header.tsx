@@ -60,6 +60,9 @@ export default function Header() {
   }
   links.push({ href: `/${locale}/careers`, label: t.nav.careers });
   links.push({ href: `/${locale}/universities`, label: t.nav.universities });
+  // Straight after universities: the two are one decision, and a student who
+  // has just seen a tuition band is exactly the student who needs this next.
+  links.push({ href: `/${locale}/scholarships`, label: t.nav.scholarships });
   links.push({ href: `/${locale}/mentor`, label: t.nav.mentor });
   if (user?.role === "admin") links.push({ href: `/${locale}/admin`, label: t.nav.admin });
 
