@@ -87,14 +87,31 @@ No API keys are needed. Nothing in this project requires a paid service to run.
   across a 40-skill taxonomy, as a radar chart and a prioritised list.
 - **Learning roadmap** — specific courses from a 120-course catalog across Now → 6 → 12 →
   24 months, mixing free and paid, Arabic and English, global and UAE providers.
-- **AI virtual mentor** — answers career questions in either language. Uses the Anthropic
-  API when `ANTHROPIC_API_KEY` is set and a local retrieval engine otherwise, so a demo
-  never depends on a network call.
+- **AI-resistance index** — every career carries a 0–100 structural exposure score with the
+  full breakdown beside it: what AI already does in that role, what it does not, the six
+  components that produced the number, and the skills that raise it. Derived from the
+  catalog's own skill weights, work settings, licensing and training length — so it can be
+  audited, and it is labelled a structural index rather than a forecast everywhere it
+  appears. Filterable and sortable in the careers explorer.
+- **Scholarships and funding** — 37 UAE funding routes: federal and emirate scholarships,
+  university awards, employer sponsorship and sector programmes, each with its coverage
+  band, indicative eligibility, and — where one exists — the service commitment it carries,
+  stated on the card rather than buried. Sorted around the student's emirate, track and
+  saved careers once they have a profile.
+- **AI virtual mentor** — answers career questions in either language, including "will AI
+  replace this job?", "what scholarships could pay for medicine?" and "what are the
+  admission requirements for Khalifa University?". Uses the Anthropic API when
+  `ANTHROPIC_API_KEY` is set and a local retrieval engine otherwise, so a demo never
+  depends on a network call.
 - **Bilingual PDF report** — the full profile, recommendations, gaps and roadmap, with
   correct Arabic shaping and RTL layout.
 - **Admin panel** — statistics, anonymised student list, catalog CRUD, model metrics and a
   retrain button.
-- **Public careers explorer** — browse, search and filter all 60 careers without an account.
+- **Public careers explorer** — browse, search and filter all 184 careers without an
+  account, by sector, demand or AI resistance.
+- **Two landing-page surveys** — a five-question quick check and a ten-question deep dive,
+  both running the real model rather than a mock. The questions are about choosing: a
+  major, a commitment, what you would keep if a machine took the rest.
 
 ## How the recommendation works
 
@@ -158,7 +175,8 @@ masar-ai/
 ├── ml/               feature schema · dataset generator · train · evaluate · recommender
 │   ├── data/         students.csv (committed, reproducible)
 │   └── artifacts/    model.joblib · metrics.json · figures
-├── data/             careers.json · courses.json · skills.json · questionnaires
+├── data/             catalog builders — careers · courses · skills · universities
+│   └── v2/           scholarships.py · ai_resistance.py · compose.py · build.py
 ├── scripts/          setup.sh · setup.ps1 · run_dev.sh
 └── .github/workflows CI and deploy
 ```
@@ -167,14 +185,21 @@ masar-ai/
 
 ```bash
 cd backend && PYTHONPATH=.:../ml ../.venv/bin/python -m pytest    # 89 tests
-cd frontend && npm test                                           # 24 tests
+cd frontend && npm test                                           # 73 tests
 ```
 
 Backend coverage includes auth and role enforcement, the wizard and its validation, the
 recommendation endpoint, skill-gap arithmetic, roadmap construction, PDF generation
 (including that the Arabic font is embedded), catalog CRUD, dataset determinism and model
-loading. Frontend coverage includes dictionary key parity, the language toggle and the
-onboarding wizard.
+loading. Frontend coverage includes dictionary key parity, the language toggle, the
+onboarding wizard, the landing surveys (run end to end against the real model bundle) and
+the mentor's intent routing — including that a question about AI is separated from a
+question about demand, and that a funding question is not answered with a list of campuses.
+
+`npm run build` runs `scripts/validate-data.mjs` first, which fails the build on a broken
+id reference anywhere in the catalogs, on an AI-resistance breakdown whose components do
+not sum to the score it displays, and on a sponsorship recorded without the commitment it
+carries.
 
 ## Deployment
 
