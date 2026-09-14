@@ -118,7 +118,7 @@ S("moe_national", "National Higher Education Scholarships",
   "government", "uae_nationals", "full_plus_stipend",
   ["undergraduate", "postgraduate"], "all", STEM_CORE + HEALTH_FIELDS + PUBLIC_FIELDS,
   90, ["advanced", "elite"],
-  "https://www.moe.gov.ae",
+  "https://www.moe.gov.ae/En/Pages/Default.aspx",
   "The federal scholarship route for Emirati students, covering study inside the UAE and, "
   "for a smaller number of places, at universities abroad. Selection weighs the high-school "
   "average, EmSAT results and the national priority of the field applied for.",
@@ -137,7 +137,7 @@ S("presidential_affairs", "Overseas Study Scholarships",
   ["undergraduate", "postgraduate"], "all",
   STEM_CORE + HEALTH_FIELDS + PUBLIC_FIELDS + ["law", "economics"],
   92, ["advanced", "elite"],
-  "https://www.mopa.ae",
+  "https://diwan.gov.ae/en/",
   "Long-running scholarships sending Emirati students to universities abroad, with living "
   "costs and travel covered alongside tuition. Highly selective, and placement depends on "
   "securing an offer from a recognised institution.",
@@ -254,7 +254,7 @@ S("uaeu_chancellor", "UAEU Merit and Chancellor's Scholarships",
   ["undergraduate", "postgraduate"], "abu_dhabi",
   STEM_CORE + HEALTH_FIELDS + BUSINESS_FIELDS + EDUCATION_FIELDS,
   90, ["advanced", "elite"],
-  "https://www.uaeu.ac.ae",
+  "https://www.uaeu.ac.ae/en/",
   "The national university is free for UAE nationals, and runs merit awards and graduate "
   "assistantships that open the same route to expatriate students with a strong record.",
   "الجامعة الوطنية مجانية لمواطني الدولة، وتقدّم منح تفوّق ومساعدات دراسات عليا تفتح المسار "
@@ -268,7 +268,7 @@ S("zu_scholarships", "Zayed University Scholarships",
   ["undergraduate"], "all",
   BUSINESS_FIELDS + CREATIVE_FIELDS + EDUCATION_FIELDS + COMPUTING + ["psychology"],
   85, [],
-  "https://www.zu.ac.ae",
+  "https://www.zu.ac.ae/main/en/index",
   "Free for UAE nationals, with merit scholarships for expatriate students on both the Dubai "
   "and Abu Dhabi campuses. Strong in communication, design, education and business.",
   "مجانية لمواطني الدولة، مع منح تفوّق للطلبة الوافدين في حرمي دبي وأبوظبي. قوية في الاتصال "
@@ -284,7 +284,7 @@ S("hct_nationals", "Higher Colleges of Technology Places",
                                  "mechanical_engineering", "electrical_engineering",
                                  "aviation_management", "supply_chain"],
   70, [],
-  "https://www.hct.ac.ae",
+  "https://hct.ac.ae/en/",
   "The applied federal system, free to UAE nationals across seven campuses. The most "
   "accessible funded route in the country: entry thresholds are lower than the research "
   "universities and the programmes are built around employment.",
@@ -390,7 +390,7 @@ S("branch_campus_merit", "International Branch Campus Scholarships",
   ["undergraduate", "postgraduate"], "dubai",
   STEM_CORE + BUSINESS_FIELDS + CREATIVE_FIELDS + ["psychology", "law"],
   85, [],
-  "https://www.khda.gov.ae",
+  "https://u.ae/en/information-and-services/education/higher-education",
   "Heriot-Watt, Birmingham, Middlesex, Manipal, BITS Pilani and the other Dubai branch "
   "campuses each run academic-excellence scholarships, typically a percentage off tuition "
   "renewable on results. The award is usually decided at offer stage, not applied for later.",
@@ -427,7 +427,7 @@ S("enec_energy_pioneers", "Energy Pioneers Scholarship",
   ["nuclear_engineering", "mechanical_engineering", "electrical_engineering",
    "chemical_engineering", "physics", "industrial_engineering", "materials_engineering"],
   85, ["advanced", "elite"],
-  "https://www.enec.gov.ae",
+  "https://www.enec.ae/",
   "Sponsored study for Emirati students heading into the nuclear energy programme, one of "
   "the few routes in the region into nuclear engineering with employment attached.",
   "ابتعاث مموّل للطلبة الإماراتيين المتجهين إلى برنامج الطاقة النووية، وهو من المسارات القليلة "
@@ -603,7 +603,7 @@ S("maritime_cadet", "Maritime Cadet Sponsorship",
   "sector", "all", "sponsored_with_bond",
   ["undergraduate"], "abu_dhabi", MARITIME_FIELDS,
   70, [],
-  "https://www.admaritimeacademy.ae",
+  "https://www.admaritime.ae/",
   "Deck and engine cadetships sponsored by shipping and port operators, with sea time built "
   "into the qualification. An under-subscribed route into a licensed profession with a global "
   "labour market.",
@@ -634,7 +634,7 @@ S("health_workforce", "Health Workforce Scholarships",
   "sector", "uae_nationals", "sponsored_with_bond",
   ["undergraduate", "postgraduate"], "all", HEALTH_FIELDS,
   85, ["advanced", "elite"],
-  "https://www.mohap.gov.ae",
+  "https://mohap.gov.ae/en/home",
   "The health authorities and the large hospital groups fund nursing, medicine and allied "
   "health study for Emirati students, with clinical placement and employment attached. "
   "Nursing in particular is a standing national priority.",
@@ -651,7 +651,7 @@ S("creative_industries", "Creative and Cultural Sector Grants",
   ["undergraduate", "postgraduate"], "all",
   CREATIVE_FIELDS + ["museum_studies", "architecture", "library_science"],
   None, [],
-  "https://www.mcy.gov.ae",
+  "https://dct.gov.ae/en/default.aspx",
   "Cultural authorities, film commissions and the media free zones fund study, residencies "
   "and production grants in design, film, heritage and the visual arts. Selection is usually "
   "on portfolio rather than on grades.",
@@ -670,7 +670,7 @@ S("need_based_hardship", "Need-Based and Hardship Support",
   sorted(set(STEM_CORE + BUSINESS_FIELDS + HEALTH_FIELDS + EDUCATION_FIELDS
              + CREATIVE_FIELDS + PUBLIC_FIELDS)),
   None, [],
-  "https://www.khda.gov.ae",
+  "https://u.ae/en/information-and-services/education/higher-education",
   "Nearly every institution in the country holds a hardship or need-based fund, and it is the "
   "least applied-for money in the system because students assume they will not qualify. Ask "
   "the admissions office directly — this is not always advertised on the website.",
@@ -730,7 +730,7 @@ S("agri_food_security", "Food Security and Agriculture Scholarships",
   ["agriculture", "environmental_science", "biotechnology", "veterinary",
    "environmental_engineering", "water_resources", "nutrition"],
   75, [],
-  "https://www.moccae.gov.ae",
+  "https://www.moccae.gov.ae/en/home",
   "Food security is a declared national priority and the agricultural sciences are chronically "
   "under-subscribed, so funded places in agri-tech, veterinary science and water resources "
   "compete against far fewer applicants than medicine or engineering do.",

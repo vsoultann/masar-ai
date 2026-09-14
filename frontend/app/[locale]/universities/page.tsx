@@ -295,7 +295,7 @@ export default function UniversitiesPage() {
             exit={{ y: 90, opacity: 0 }}
             className="pin-bottom fixed inset-x-0 bottom-0 z-30 border-t bg-[var(--surface-translucent)] backdrop-blur-xl"
           >
-            <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
+            <div className="clears-floating mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
               <span className="text-xs font-semibold">
                 {t.universities.compareTray} ({localiseDigits(compared.length, locale)}/
                 {localiseDigits(MAX_COMPARE, locale)})
@@ -322,7 +322,7 @@ export default function UniversitiesPage() {
             </div>
 
             {compared.length >= 2 && (
-              <div className="mx-auto max-w-6xl overflow-x-auto px-4 pb-4 sm:px-6">
+              <div className="clears-floating mx-auto max-w-6xl overflow-x-auto px-4 pb-4 sm:px-6">
                 <table className="w-full min-w-[36rem] text-start text-xs">
                   <thead>
                     <tr className="text-start muted">

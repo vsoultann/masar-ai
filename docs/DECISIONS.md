@@ -335,3 +335,51 @@ be an excellent trade, and plenty of students should take it — but knowingly. 
 validator fails the build on any `sponsored_with_bond` record that does not state
 its commitment, which makes it the one claim in this catalog that cannot be
 omitted by accident.
+
+### D-16 · Campus photographs: real ones where they exist, generated art elsewhere
+
+**Decision.** `scripts/harvest_campus_photos.py` sources freely-licensed
+photographs of the institutions from Wikimedia Commons, writes the attribution
+into `data/v2/campus_photo_credits.json`, and the builder attaches both the
+image paths and the credit to the university record. An institution with no
+entry keeps the generated `CampusArt`, and `media.hero` is `null` rather than a
+path to a file that is not there.
+
+**Why not simply download fifty photographs.** Two reasons, and the second is
+the one that decided the shape of the script.
+
+The first is licensing. A graduation project that ships copyrighted
+photographs has a legal problem, not a nicer-looking universities page. Only
+public domain, CC0, CC BY and CC BY-SA are accepted, and because CC BY and
+CC BY-SA are *conditional on attribution*, the credit travels with the image
+into the UI — `SmartImage` renders it over the photograph. An uncredited CC BY
+image is simply an unlicensed one.
+
+The second is that a photograph makes a claim a drawing does not. Searching
+Commons for "United Arab Emirates University campus" returns, in its first five
+results, photographs of Heriot-Watt Dubai and Troy University Sharjah. Shipping
+one of those on the UAEU card would be worse than shipping nothing: a generated
+illustration is obviously an illustration, and a photograph of the wrong campus
+is a false statement about a real institution that a student might travel to.
+
+So a file has to be *proved* to be of the right place, by one of two kinds of
+evidence: it sits in a Commons category named for the institution, or it was
+photographed within 1.2 km of the campus *and* its filename names the
+institution. Proximity alone is not enough — a geosearch around Zayed
+University Dubai returns a supermarket and somebody's balcony.
+
+**What the rules rejected, which is the interesting part.** Successive passes
+caught: a photograph of a motorway attached to Zayed University, because
+"dhabi" counted as a distinguishing word; Dubai International Airport attached
+to the University of Dubai; a NASA photograph of the Earth taken from the ISS,
+which sits in the University of Sharjah's Commons category; a massage parlour
+in Ajman; and a group of named climate-health experts standing at Gulf Medical
+University. Each one passed a rule that looked reasonable when it was written.
+Hence `--write` being opt-in and the match report being printed first: the
+script proposes, a person disposes.
+
+**The honest outcome.** Commons coverage of UAE higher education is thin, so
+this yields real photographs for a minority of the fifty and generated artwork
+for the rest. That is the correct result rather than a shortfall — the
+alternative was not "fifty photographs", it was "fifty photographs, some of
+which are of the wrong building".

@@ -12,7 +12,23 @@ by travel distance and to place a map pin, not survey data.
 No logos, crests or brand imagery are shipped -- see docs/DECISIONS.md.
 """
 
+import json
+import pathlib
+
 from v2.majors import MAJOR_IDS
+
+# --- Campus photographs ---------------------------------------------------
+# Written by scripts/harvest_campus_photos.py, which only ever records a file
+# it could prove is of the right institution and whose licence permits
+# redistribution. An institution with no entry here keeps the generated
+# artwork, and that is the intended outcome rather than a gap to be filled with
+# something approximate: a drawn campus reads as a drawing, while a photograph
+# of the wrong university reads as a fact.
+_CREDITS_FILE = pathlib.Path(__file__).with_name("campus_photo_credits.json")
+PHOTO_CREDITS: dict[str, dict] = (
+    json.loads(_CREDITS_FILE.read_text(encoding="utf-8"))
+    if _CREDITS_FILE.exists() else {}
+)
 
 # --- Major bundles -------------------------------------------------------
 # Institutions offer overlapping families; naming the families keeps the rows
@@ -42,6 +58,33 @@ MEDIA = ["mass_communication", "journalism", "graphic_design", "digital_media"]
 LAW = ["law", "sharia_law"]
 
 UNIVERSITIES: list[dict] = []
+
+
+def _media(uid: str) -> dict:
+    """Photo paths only where a photo actually exists.
+
+    Pointing `hero` at a file that is not in the repository made every card
+    issue a request that 404s before falling back -- fifty of them on the
+    universities page. The fallback still exists for a file that goes missing
+    later; it just is not the normal path any more.
+    """
+    credit = PHOTO_CREDITS.get(uid)
+    if not credit:
+        return {"hero": None, "thumbnail": None, "gallery": [], "credit": None}
+    return {
+        "hero": f"/images/universities/{uid}.jpg",
+        "thumbnail": f"/images/universities/{uid}-thumb.jpg",
+        "gallery": [],
+        # CC BY and CC BY-SA are conditional on attribution, so this travels
+        # with the image into the UI rather than living in a credits page
+        # nobody opens.
+        "credit": {
+            "source": credit["source"],
+            "license": credit["license"],
+            "url": credit["url"],
+            "author": credit.get("author") or "",
+        },
+    }
 
 
 def U(uid, en, ar, short_en, short_ar, utype, emirate, city, lat, lng,
@@ -76,19 +119,14 @@ def U(uid, en, ar, short_en, short_ar, utype, emirate, city, lat, lng,
         },
         "tuitionBand": tuition,
         "campusLife": {"en": life_en, "ar": life_ar},
-        "media": {
-            "hero": f"/images/universities/{uid}.jpg",
-            "thumbnail": f"/images/universities/{uid}-thumb.jpg",
-            "gallery": [],
-            "credit": None,
-        },
+        "media": _media(uid),
     })
 
 
 # ============================ Abu Dhabi =================================
 U("uaeu", "United Arab Emirates University", "جامعة الإمارات العربية المتحدة",
   "UAEU", "جامعة الإمارات", "federal_public", "abu_dhabi", "al_ain",
-  24.2039, 55.6764, "https://www.uaeu.ac.ae", 1976, ["en", "ar"],
+  24.2039, 55.6764, "https://www.uaeu.ac.ae/en/", 1976, ["en", "ar"],
   ENG_WIDE + COMPUTING + BUSINESS + MEDICAL + SCIENCE + EDUCATION + LAW +
   ["agriculture", "veterinary", "nutrition", "environmental_science", "geology",
    "translation", "islamic_studies", "psychology", "sociology",
@@ -124,7 +162,7 @@ U("mbzuai", "Mohamed bin Zayed University of Artificial Intelligence", "جامع
 
 U("zu_ad", "Zayed University — Abu Dhabi", "جامعة زايد — أبوظبي",
   "Zayed University", "جامعة زايد", "federal_public", "abu_dhabi", "abu_dhabi_city",
-  24.4093, 54.5089, "https://www.zu.ac.ae", 1998, ["en", "ar"],
+  24.4093, 54.5089, "https://www.zu.ac.ae/main/en/index", 1998, ["en", "ar"],
   BUSINESS + COMPUTING + MEDIA + EDUCATION +
   ["public_administration", "international_relations", "psychology",
    "interior_design", "graphic_design", "tourism_management", "sociology"],
@@ -251,7 +289,7 @@ for _cid, _campus_en, _campus_ar, _emirate, _city, _lat, _lng in _HCT_CAMPUSES:
       f"Higher Colleges of Technology — {_campus_en}", f"كليات التقنية العليا — {_campus_ar}",
       f"HCT {_campus_en}", f"كليات التقنية — {_campus_ar}",
       "federal_public", _emirate, _city, _lat, _lng,
-      "https://www.hct.ac.ae", 1988, ["en"],
+      "https://hct.ac.ae/en/", 1988, ["en"],
       _HCT_MAJORS, 70, {"english": 1100, "math": 700}, ["general", "advanced", "elite"],
       "public_subsidised",
       "Applied, employment-focused federal college. Programmes are built around work placements, and the campus network means most students can study close to home.",
@@ -262,7 +300,7 @@ for _cid, _campus_en, _campus_ar, _emirate, _city, _lat, _lng in _HCT_CAMPUSES:
 # ============================== Dubai ===================================
 U("zu_dubai", "Zayed University — Dubai", "جامعة زايد — دبي",
   "Zayed University", "جامعة زايد", "federal_public", "dubai", "dubai_city",
-  25.1195, 55.3903, "https://www.zu.ac.ae", 1998, ["en", "ar"],
+  25.1195, 55.3903, "https://www.zu.ac.ae/main/en/index", 1998, ["en", "ar"],
   BUSINESS + COMPUTING + MEDIA + EDUCATION +
   ["public_administration", "psychology", "interior_design", "tourism_management"],
   75, {"english": 1100, "math": 700}, ["general", "advanced", "elite"],
@@ -439,7 +477,7 @@ U("sharjah_univ", "University of Sharjah", "جامعة الشارقة",
 
 U("alqasimia", "Al Qasimia University", "جامعة القاسمية",
   "AQU", "القاسمية", "local_public", "sharjah", "sharjah_city",
-  25.2951, 55.4735, "https://alqasimia.ac.ae", 2013, ["ar", "en"],
+  25.2951, 55.4735, "https://www.alqasimia.ac.ae/en/Pages/default.aspx", 2013, ["ar", "en"],
   ["islamic_studies", "sharia_law", "translation", "education_primary",
    "business_administration", "law"],
   70, {"english": 900}, ["general", "advanced", "elite"],
@@ -580,7 +618,7 @@ U("adsg", "Abu Dhabi School of Government", "مدرسة أبوظبي للحكو�
 
 U("khalifa_maritime", "Abu Dhabi Maritime Academy", "أكاديمية أبوظبي البحرية",
   "ADMA", "البحرية", "technical", "abu_dhabi", "abu_dhabi_city",
-  24.5028, 54.3826, "https://www.ports.ae", 2010, ["en"],
+  24.5028, 54.3826, "https://www.admaritime.ae/", 2010, ["en"],
   ["maritime_studies", "marine_engineering", "supply_chain", "marine_science"],
   65, {"english": 1000, "math": 700, "physics": 700}, ["general", "advanced", "elite"],
   "public_subsidised",

@@ -8,25 +8,30 @@ import Logo from "@/components/Logo";
 import SchemePicker from "@/components/SchemePicker";
 import { useProfile } from "@/lib/store/profile";
 import { switchLocalePath, type Locale } from "@/lib/i18n";
+import { resolveTheme, setTheme, type Theme } from "@/lib/theme";
 import { useLocale } from "@/lib/locale-context";
 
 function useTheme() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setThemeState] = useState<Theme>("light");
+  const pathname = usePathname();
 
+  /*
+   * Re-read on every navigation, not only on mount.
+   *
+   * The header remounts when the locale changes, and it used to read
+   * `data-theme` off the document at that moment — which was precisely the
+   * moment React had just stripped the attribute. The icon then showed the
+   * wrong state until the next click. Reading the resolved value instead of
+   * the DOM attribute makes the header agree with ThemeKeeper by construction.
+   */
   useEffect(() => {
-    const current = document.documentElement.dataset.theme;
-    setTheme(current === "dark" ? "dark" : "light");
-  }, []);
+    setThemeState(resolveTheme());
+  }, [pathname]);
 
   const toggle = () => {
-    const next = theme === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem("masar.theme", next);
-    } catch {
-      /* storage can be unavailable; the toggle still works for this session */
-    }
+    const next: Theme = theme === "dark" ? "light" : "dark";
     setTheme(next);
+    setThemeState(next);
   };
 
   return { theme, toggle };

@@ -60,6 +60,7 @@ export default function SmartImage({
   icon,
   rounded = true,
   art,
+  credit,
 }: {
   /** Path under /public, or null when the team has not supplied a photo. */
   src?: string | null;
@@ -76,6 +77,15 @@ export default function SmartImage({
    * missing image on a card that should show a place or a job.
    */
   art?: ArtSpec;
+  /**
+   * Attribution for the photograph, rendered over it.
+   *
+   * Not optional in spirit: every photograph this project ships is CC BY or
+   * CC BY-SA, and those licences are conditional on crediting the photographer.
+   * An uncredited CC BY image is simply an unlicensed one. It renders only when
+   * the real photo renders — a generated fallback has nobody to credit.
+   */
+  credit?: { source: string; license: string; url: string; author?: string } | null;
 }) {
   const [failed, setFailed] = useState(false);
   const key = seed ?? alt;
@@ -148,7 +158,7 @@ export default function SmartImage({
     );
   }
 
-  return (
+  const image = (
     // A plain <img> rather than next/image: the optimizer is a server feature
     // and images are already `unoptimized` under static export, so next/image
     // would add weight without adding anything.
@@ -164,5 +174,32 @@ export default function SmartImage({
       } ${className}`}
       style={{ aspectRatio: aspect, width: "100%" }}
     />
+  );
+
+  if (!credit) return image;
+
+  return (
+    <div className={`relative ${rounded ? "rounded-[var(--radius-card)] overflow-hidden" : ""}`}>
+      {image}
+      {/* Bottom-right, small, and over a gradient rather than a solid bar:
+          the credit is a legal requirement, not a caption anyone came to
+          read, so it has to be present and legible without competing with
+          the photograph. */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent p-1.5 pt-6">
+        <p className="text-end text-[10px] leading-tight text-white/85">
+          <a
+            href={credit.url}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="pointer-events-auto underline decoration-white/40 underline-offset-2"
+          >
+            {credit.author ? `${credit.author} · ` : ""}
+            {credit.source}
+          </a>
+          {" · "}
+          {credit.license}
+        </p>
+      </div>
+    </div>
   );
 }

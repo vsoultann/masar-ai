@@ -467,6 +467,38 @@ html[lang="ar"] .eyebrow {
   bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
 }
 
+/* --------------------------------------------------------------------------
+   Fixed elements colliding with each other
+   --------------------------------------------------------------------------
+   The mentor button and Back-to-top are fixed at z-40; the universities
+   compare tray is fixed at z-30. So the mentor button rendered *over* the
+   tray and covered the first column of the comparison table — "Majors
+   offered" was unreadable behind it.
+
+   Lifting the buttons above the tray is not the fix: the tray grows to a
+   comparison table several hundred pixels tall, and a button floating in the
+   middle of the screen is worse than one in the corner. Instead the tray
+   reserves the corners the buttons occupy, so nothing is ever laid out
+   underneath them.
+
+   The gutter is only applied where a floating button actually sits. Below
+   640px Back-to-top is the only one on screen at that height, and taking two
+   full gutters out of a phone's width would squeeze the tray's own content.
+-------------------------------------------------------------------------- */
+.clears-floating {
+  padding-inline-start: 4.75rem;
+  padding-inline-end: 4.75rem;
+}
+
+@media (max-width: 639px) {
+  .clears-floating {
+    /* One row of chips can wrap above the buttons instead; what must not
+       happen is text rendering directly beneath them. */
+    padding-inline: 1rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
 /* Touch targets. The WCAG target size is 24px and the practical floor is 44px;
    the icon buttons in the header were 36px, which is fine with a mouse and
    fiddly with a thumb. */

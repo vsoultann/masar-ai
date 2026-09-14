@@ -12,6 +12,7 @@ import { LocaleProvider } from "@/lib/locale-context";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MentorPanel from "@/components/MentorPanel";
+import ThemeKeeper from "@/components/ThemeKeeper";
 import ThemeScript from "@/components/ThemeScript";
 
 import "../globals.css";
@@ -125,6 +126,7 @@ export default async function LocaleLayout({
         }
       >
         <ThemeScript />
+        <ThemeKeeper />
         <LocaleProvider locale={typed} dictionary={dictionary}>
           <MotionProvider>
               <BackgroundForRoute />

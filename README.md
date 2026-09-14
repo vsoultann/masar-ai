@@ -198,8 +198,20 @@ question about demand, and that a funding question is not answered with a list o
 
 `npm run build` runs `scripts/validate-data.mjs` first, which fails the build on a broken
 id reference anywhere in the catalogs, on an AI-resistance breakdown whose components do
-not sum to the score it displays, and on a sponsorship recorded without the commitment it
-carries.
+not sum to the score it displays, on a sponsorship recorded without the commitment it
+carries, and on a campus photograph shipped without the attribution its licence requires.
+
+Two scripts need the network, so they run on demand rather than in CI:
+
+```bash
+cd frontend && npm run check:links        # every outbound URL in the catalogs
+python scripts/harvest_campus_photos.py   # report only; --write to download
+```
+
+`check:links` exists for the redirect rather than the 404 — a ministry that quietly
+starts forwarding to a login page still returns 200. It found `ports.ae`, listed against
+the Abu Dhabi Maritime Academy, being served by a domain squatter, and eight English
+links landing on Arabic pages.
 
 ## Deployment
 

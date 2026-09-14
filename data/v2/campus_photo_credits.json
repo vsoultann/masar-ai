@@ -1,0 +1,74 @@
+{
+  "adu": {
+    "author": "Emad Alsharif 88",
+    "evidence": "category:Abu Dhabi University",
+    "file": "File:Abu Dhabi University Al Ain Campus.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_University_Al_Ain_Campus.jpg"
+  },
+  "aus": {
+    "author": "Gureni",
+    "evidence": "category:American University of Sharjah",
+    "file": "File:American University of Sharjah (33).jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:American_University_of_Sharjah_(33).jpg"
+  },
+  "eahm": {
+    "author": "Flayas",
+    "evidence": "category:The Emirates Academy of Hospitality Management",
+    "file": "File:Library EAHM.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Library_EAHM.jpg"
+  },
+  "gmu": {
+    "author": "Shaj.pre",
+    "evidence": "category:Gulf Medical University",
+    "file": "File:Gulf Medical University.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Gulf_Medical_University.jpg"
+  },
+  "nyuad": {
+    "author": "110603Ldj.",
+    "evidence": "category:New York University Abu Dhabi",
+    "file": "File:NYUAD Library.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:NYUAD_Library.jpg"
+  },
+  "sharjah_univ": {
+    "author": "Catboy69",
+    "evidence": "category:University of Sharjah",
+    "file": "File:University of Sharjah Campus.jpg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:University_of_Sharjah_Campus.jpg"
+  },
+  "skyline": {
+    "author": "Mahmoud Farrag",
+    "evidence": "geo+name",
+    "file": "File:Skyline University College In Sharjah. كلية الافق بالشارقة - panoramio.jpg",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Skyline_University_College_In_Sharjah._%D9%83%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%A7%D9%81%D9%82_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D9%82%D8%A9_-_panoramio.jpg"
+  },
+  "uaeu": {
+    "author": "ted bongiovanni from Glen Ridge, NJ, United States of America",
+    "evidence": "geo+name",
+    "file": "File:United Arab Emirates University (9717029334).jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:United_Arab_Emirates_University_(9717029334).jpg"
+  }
+}

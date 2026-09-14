@@ -17,7 +17,7 @@
  * matching feature.
  */
 
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 const DATA = join(process.cwd(), "public", "data");
@@ -206,6 +206,31 @@ for (const university of universities) {
         && Number.isFinite(university.coordinates?.lng), `${at}: bad coordinates`);
   check(university.name?.ar?.trim(), `${at}: missing Arabic name`);
   check(/^https:\/\//.test(university.website ?? ""), `${at}: website must be https`);
+}
+
+// --- campus photographs ---------------------------------------------------
+// Two failure modes, both of which reach the user looking like a bug rather
+// than like a missing file:
+//   a path to an image that is not in the repo renders as a broken request
+//   before the fallback catches it, and a CC BY photo shipped without its
+//   attribution is a licence breach, not a styling choice.
+for (const university of universities) {
+  const at = `university ${university.id}`;
+  const { hero, thumbnail, credit } = university.media;
+
+  check(Boolean(hero) === Boolean(thumbnail),
+        `${at}: has one of hero/thumbnail but not the other`);
+  check(Boolean(hero) === Boolean(credit),
+        `${at}: a photograph without a credit, or a credit without a photograph`);
+
+  for (const path of [hero, thumbnail].filter(Boolean)) {
+    check(existsSync(join(process.cwd(), "public", path)),
+          `${at}: media points at ${path}, which is not in the repository`);
+  }
+  if (credit) {
+    check(credit.source && credit.license && /^https:\/\//.test(credit.url ?? ""),
+          `${at}: incomplete photo credit`);
+  }
 }
 
 // --- the check that actually protects a feature ---------------------------
