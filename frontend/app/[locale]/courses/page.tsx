@@ -83,7 +83,7 @@ export default function CoursesPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <header>
-        <h1 className="text-2xl font-black sm:text-3xl">{t.nav.courses}</h1>
+        <h1 className="text-gradient text-2xl font-black sm:text-3xl">{t.nav.courses}</h1>
         <p className="mt-2 max-w-2xl muted">{t.courses.subtitle}</p>
       </header>
 

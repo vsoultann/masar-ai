@@ -186,7 +186,7 @@ export default function AssessmentPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
-      <h1 className="text-2xl font-black">{t.wizard.title}</h1>
+      <h1 className="text-gradient text-2xl font-black">{t.wizard.title}</h1>
       <p className="mt-1.5 text-sm muted">{t.wizard.subtitle}</p>
 
       {/* progress */}

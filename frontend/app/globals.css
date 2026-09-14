@@ -17,10 +17,16 @@
   --color-gulf: #0b3d5c;
   --color-gulf-light: #14567e;
 
-  --font-sans: var(--font-latin), "Inter", system-ui, -apple-system, "Segoe UI",
-    sans-serif;
+  --font-sans: var(--font-latin), "Plus Jakarta Sans", system-ui, -apple-system,
+    "Segoe UI", sans-serif;
   --font-arabic: var(--font-arabic), "Tajawal", "Noto Naskh Arabic", system-ui,
     sans-serif;
+  /* Headings. Kept as separate tokens so a heading can never silently fall
+     back to the body face when next/font has not loaded yet. */
+  --font-display: var(--font-display), "Space Grotesk", "Plus Jakarta Sans",
+    system-ui, sans-serif;
+  --font-display-arabic: var(--font-display-arabic), "Noto Kufi Arabic",
+    "Cairo", system-ui, sans-serif;
 
   --radius-card: 0.875rem;
 }
@@ -45,6 +51,18 @@
      over the brightest frame either scene produces. */
   --surface-translucent: rgb(255 255 255 / 0.82);
   --surface-2-translucent: rgb(248 247 243 / 0.80);
+
+  /* AI-resistance bands.
+     Deliberately NOT derived from --brand: the band is a property of the
+     career, not of the colour scheme the student picked, and a badge that
+     changed meaning when someone chose the "sunset" palette would be useless.
+     Amber rather than red at the exposed end -- an exposed career is a career
+     to go into with your eyes open, not a career to avoid, and red would say
+     the second thing. Each value clears 4.5:1 on --surface-2. */
+  --band-exposed: #b45309;
+  --band-mixed: #52525b;
+  --band-resilient: #0f766e;
+  --band-anchored: #1d4ed8;
   color-scheme: light;
 }
 
@@ -61,6 +79,10 @@
   --accent: #7cc4e8;
   --surface-translucent: rgb(12 20 24 / 0.80);
   --surface-2-translucent: rgb(18 30 36 / 0.78);
+  --band-exposed: #fbbf24;
+  --band-mixed: #a1a1aa;
+  --band-resilient: #5eead4;
+  --band-anchored: #93c5fd;
   color-scheme: dark;
 }
 
@@ -163,6 +185,116 @@ body {
 html[lang="ar"] body {
   font-family: var(--font-arabic);
   line-height: 1.85;
+}
+
+/* --------------------------------------------------------------------------
+   Headings
+   --------------------------------------------------------------------------
+   The display face is applied here rather than per component, so a heading
+   added anywhere in the app inherits the identity without anyone remembering
+   a class. Tighter tracking because Space Grotesk is drawn loose by default
+   and reads soft at display sizes without it.
+-------------------------------------------------------------------------- */
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Kufi is already tightly fitted and Arabic must never be letter-spaced --
+   it breaks the joins between letters. */
+html[lang="ar"] :is(h1, h2, h3, .display) {
+  font-family: var(--font-display-arabic);
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+/* Tabular figures everywhere a number is compared to another number. */
+.ltr-nums,
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   Colour on text
+   --------------------------------------------------------------------------
+   Both gradient stops are tokens that already have to be legible as text on
+   their own (--brand is used for links and --accent for secondary headings),
+   in every theme and every colour scheme. So a gradient between them cannot
+   land on an illegible colour at any point along its length, whichever of the
+   twelve theme x scheme combinations is active -- which is the reason the
+   gradient is built from tokens rather than from literal hues.
+
+   `color` is set first and only replaced inside @supports, so a browser
+   without background-clip:text shows solid brand text rather than nothing.
+-------------------------------------------------------------------------- */
+.text-gradient,
+.text-gradient-alt {
+  color: var(--brand);
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .text-gradient,
+  .text-gradient-alt {
+    background-image: linear-gradient(
+      100deg,
+      var(--brand) 0%,
+      var(--accent) 52%,
+      var(--brand) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* Without this the descenders of a clipped gradient get cropped. */
+    padding-block-end: 0.06em;
+  }
+
+  .text-gradient-alt {
+    background-image: linear-gradient(
+      100deg,
+      var(--accent) 0%,
+      var(--brand) 55%,
+      var(--accent) 100%
+    );
+  }
+}
+
+/* Gradient text is decoration. Under forced-colours it must fall back to the
+   system colour or it disappears entirely. */
+@media (forced-colors: active) {
+  .text-gradient,
+  .text-gradient-alt {
+    background-image: none;
+    color: CanvasText;
+  }
+}
+
+/* A short coloured rule under a section heading -- the cheapest way to get
+   colour onto a page without tinting the text a reader has to parse. */
+.heading-rule::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  margin-block-start: 0.5rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+}
+
+/* An eyebrow above a heading: small, uppercase, and the one place a saturated
+   accent can sit on a large surface without competing with body text. */
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+html[lang="ar"] .eyebrow {
+  font-family: var(--font-display-arabic);
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 /* --------------------------------------------------------------------------

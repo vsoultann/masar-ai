@@ -73,7 +73,7 @@ export default function ModelPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
       <header>
-        <h1 className="text-2xl font-black sm:text-3xl">{t.model.title}</h1>
+        <h1 className="text-gradient text-2xl font-black sm:text-3xl">{t.model.title}</h1>
         <p className="mt-2 max-w-2xl muted">{t.model.subtitle}</p>
       </header>
 

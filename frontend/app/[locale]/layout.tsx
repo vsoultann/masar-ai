@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cairo, Inter } from "next/font/google";
+import { Cairo, Noto_Kufi_Arabic, Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import { notFound } from "next/navigation";
 
 import BackgroundForRoute from "@/components/background/BackgroundForRoute";
@@ -19,16 +19,42 @@ import "../globals.css";
 /** Empty in development, "/masar-ai" in production. Set in next.config.mjs. */
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-// Cairo covers Arabic and Latin; Inter carries the Latin UI. Both are self-
-// hosted by next/font, so the app has no runtime dependency on Google Fonts.
-const inter = Inter({
+/*
+ * Four faces, two per script, and the pairing is the point.
+ *
+ * Inter was the safe choice and it made the app look like every other dashboard
+ * on the internet. The brief for a graduation project is to be recognisable, so
+ * headings now run in Space Grotesk -- a geometric grotesque with enough quirks
+ * in its numerals and its `g` that a reader can name the page from a thumbnail
+ * -- over Plus Jakarta Sans for body text, which carries more character than
+ * Inter at the same legibility.
+ *
+ * Arabic is not an afterthought here: Noto Kufi Arabic is the Arabic answer to
+ * a geometric grotesque, so an Arabic heading reads as the *same* design
+ * decision rather than as a fallback, and Cairo stays for Arabic body text
+ * where Naskh-adjacent forms are easier over long passages.
+ *
+ * All four are self-hosted by next/font, so the app still has no runtime
+ * dependency on Google Fonts and works offline.
+ */
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-latin",
+  display: "swap",
+});
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
   display: "swap",
 });
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
   variable: "--font-arabic",
+  display: "swap",
+});
+const kufi = Noto_Kufi_Arabic({
+  subsets: ["arabic"],
+  variable: "--font-display-arabic",
   display: "swap",
 });
 
@@ -92,7 +118,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={typed} dir={dir} suppressHydrationWarning>
-      <body className={`${inter.variable} ${cairo.variable}`}>
+      <body
+        className={
+          `${jakarta.variable} ${spaceGrotesk.variable} `
+          + `${cairo.variable} ${kufi.variable}`
+        }
+      >
         <ThemeScript />
         <LocaleProvider locale={typed} dictionary={dictionary}>
           <MotionProvider>

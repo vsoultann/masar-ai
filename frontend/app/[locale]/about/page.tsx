@@ -94,7 +94,7 @@ export default function AboutPage() {
           <ArabesquePattern opacity={0.06} />
         </div>
         <div className="relative mx-auto max-w-4xl px-4 py-14 sm:px-6">
-          <h1 className="text-3xl font-black sm:text-4xl">{t.about.title}</h1>
+          <h1 className="text-gradient text-3xl font-black sm:text-4xl">{t.about.title}</h1>
           <p className="mt-3 muted">{t.brand.tagline}</p>
         </div>
       </section>
