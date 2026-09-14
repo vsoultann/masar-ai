@@ -32,11 +32,39 @@ const ask = (question: string, locale: "en" | "ar" = "en") =>
 
 describe("intent detection", () => {
   it("reads a question about a career's future as an outlook question", () => {
-    expect(detectIntent("Is graphic design still a valid career after the AI revolution?"))
-      .toBe("career_outlook");
-    expect(detectIntent("Will AI replace radiologists?")).toBe("career_outlook");
     expect(detectIntent("what is the job outlook for nurses")).toBe("career_outlook");
+    expect(detectIntent("is nursing still in demand")).toBe("career_outlook");
     expect(detectIntent("هل ما زال التصميم الجرافيكي مهنة لها مستقبل؟")).toBe("career_outlook");
+  });
+
+  /*
+   * The AI form of the question is a different intent from the demand form,
+   * and gets a different answer: the exposure breakdown rather than the demand
+   * rating. Both used to land on career_outlook, which meant "will AI replace
+   * radiologists?" was answered with a demand rating and a paragraph declining
+   * to speculate -- technically honest, and not what was asked.
+   */
+  it("separates a question about AI from a question about demand", () => {
+    expect(detectIntent("Will AI replace radiologists?")).toBe("ai_impact");
+    expect(detectIntent("Is graphic design still a valid career after the AI revolution?"))
+      .toBe("ai_impact");
+    expect(detectIntent("is accounting safe from automation")).toBe("ai_impact");
+    expect(detectIntent("هل سيحل الذكاء الاصطناعي محل المحاسبين؟")).toBe("ai_impact");
+  });
+
+  it("reads funding questions as funding questions, not as where-to-study", () => {
+    // "scholarship ... to study X" contains "study", which where_to_study owns.
+    expect(detectIntent("what scholarships are there to study medicine?")).toBe("scholarships");
+    expect(detectIntent("how can I afford university")).toBe("scholarships");
+    expect(detectIntent("is there funding for engineering")).toBe("scholarships");
+    expect(detectIntent("ما هي المنح المتاحة للطب؟")).toBe("scholarships");
+  });
+
+  it("reads threshold questions as admission questions", () => {
+    expect(detectIntent("what are the admission requirements for Khalifa University?"))
+      .toBe("admission_requirements");
+    expect(detectIntent("what do i need to get into medicine")).toBe("admission_requirements");
+    expect(detectIntent("ما شروط القبول في جامعة الإمارات؟")).toBe("admission_requirements");
   });
 
   it("does not steal questions that merely name an AI career", () => {
@@ -78,8 +106,10 @@ describe("answers", () => {
   it("answers the reported question with what the catalog actually holds", async () => {
     const result = await ask("Is graphic design still a valid career after the AI revolution?");
 
-    expect(result.intent).toBe("career_outlook");
+    expect(result.intent).toBe("ai_impact");
     expect(result.citations.map((c) => c.id)).toContain("graphic_designer");
+    // The demand rating is still in the answer: a student asking about AI is
+    // asking about the future of the job, and the rating is half of that.
     expect(result.text).toContain("Demand rating");
     // The exact reply the feedback screenshot captured, which must not return.
     expect(result.text).not.toContain("Name a career and I will describe it");
@@ -91,6 +121,56 @@ describe("answers", () => {
     const result = await ask("هل ما زال التصميم الجرافيكي مهنة لها مستقبل؟", "ar");
     expect(result.intent).toBe("career_outlook");
     expect(result.citations.map((c) => c.id)).toContain("graphic_designer");
+  });
+
+  it("answers an AI question with the exposure breakdown, both sides of it", async () => {
+    const result = await ask("Will AI replace radiologists?");
+
+    expect(result.intent).toBe("ai_impact");
+    expect(result.citations.map((c) => c.id)).toContain("radiologist");
+    expect(result.text).toMatch(/AI resistance for .*: \d+\/100/);
+    // Both halves, always. An answer that lists only what AI can do is a
+    // scare, and one that lists only what it cannot is a reassurance; the
+    // point of the index is that every career has some of each.
+    expect(result.text).toContain("What AI already does in this role:");
+    expect(result.text).toContain("What it does not:");
+    expect(result.text).toMatch(/not a forecaster/i);
+  });
+
+  it("names funding routes, and says which ones carry a commitment", async () => {
+    const result = await ask("what scholarships could pay for medicine?");
+
+    expect(result.intent).toBe("scholarships");
+    expect(result.citations.length).toBeGreaterThan(0);
+    expect(result.citations.every((c) => c.kind === "scholarship")).toBe(true);
+    // The one thing this answer must never hide.
+    expect(result.text).toMatch(/indicative/i);
+  });
+
+  it("gives a named institution's indicative admission requirements", async () => {
+    const result = await ask("what are the admission requirements for Khalifa University?");
+
+    expect(result.intent).toBe("admission_requirements");
+    expect(result.citations.map((c) => c.id)).toContain("ku");
+    expect(result.text).toContain("Minimum high-school average");
+    expect(result.text).toMatch(/indicative/i);
+  });
+
+  it("falls back to the institutions that teach a career when none is named", async () => {
+    const result = await ask("what do I need to get into dentistry?");
+
+    expect(result.intent).toBe("admission_requirements");
+    expect(result.citations.every((c) => c.kind === "university")).toBe(true);
+    expect(result.citations.length).toBeGreaterThan(0);
+  });
+
+  it("offers the options rather than a dead end when a subject is ambiguous", async () => {
+    // "nursing" half-matches several nursing roles, so no single career is
+    // named in full. Telling the student to name a career would be pedantry:
+    // they named a subject.
+    const result = await ask("what do I need to get into nursing?");
+    expect(result.citations.length).toBeGreaterThan(0);
+    expect(result.text).not.toContain("Name a university");
   });
 
   it("still describes a career when asked plainly", async () => {

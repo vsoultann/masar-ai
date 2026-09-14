@@ -96,6 +96,9 @@ export default function MentorChat({ compact = false }: { compact?: boolean }) {
   };
 
   const quickReplies = [
+    t.mentor.quickAiImpact,
+    t.mentor.quickScholarship,
+    t.mentor.quickAdmission,
     t.mentor.quickWhatIs,
     t.mentor.quickWhere,
     t.mentor.quickWeakest,
@@ -139,7 +142,12 @@ export default function MentorChat({ compact = false }: { compact?: boolean }) {
                             ? `/${locale}/universities/${citation.id}`
                             : citation.kind === "career"
                               ? `/${locale}/careers/${citation.id}`
-                              : `/${locale}/courses`
+                              : citation.kind === "scholarship"
+                                // No per-scholarship route: the catalog is
+                                // small enough that the filtered list is a
+                                // better landing than 37 near-identical pages.
+                                ? `/${locale}/scholarships`
+                                : `/${locale}/courses`
                         }
                       >
                         <Chip tone="accent">{citation.label}</Chip>
