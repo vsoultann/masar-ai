@@ -88,6 +88,10 @@ def _media(uid: str) -> dict:
             # whole point of the sourcing rules is that an image must not claim
             # to be something it is not.
             "kind": credit.get("kind", "campus"),
+            # The emirate, when the photograph is of the emirate rather than
+            # of the immediate area. The badge names it instead of claiming
+            # "nearby" about somewhere two hundred kilometres away.
+            "place": credit.get("place"),
         },
     }
 
