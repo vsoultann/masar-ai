@@ -267,51 +267,6 @@ suite caught. Assertions that hardcoded catalog sizes are now derived from the
 catalogs, so they measure the property they claim to rather than a number that
 has to be edited whenever a career is added.
 
-### D-14 · AI resistance is a structural index, not a forecast
-
-**Decision.** Every career carries `aiResistance`: a 0–100 score, a band, both
-sides of the exposure, and a `drivers` array holding each component's signed
-contribution. It is derived in `data/v2/ai_resistance.py` from fields the app
-already renders — the weighted skill mix, the work environments, whether the
-role is licensed, how long the training route is — and the shared copy is
-written once to `ai-resistance.json` rather than repeated into 184 records.
-
-**Why the derivation, rather than authored scores.** A hand-assigned number per
-career is unauditable: nobody can tell whether "radiologist: 72" came from
-reasoning or from a mood, and it drifts out of agreement with the rest of the
-record the first time a skill weight changes. Deriving it means the score cannot
-contradict the data displayed beside it, and the breakdown on the career page
-adds up to the score, so a student who disagrees can disagree with a specific
-component rather than with a vibe.
-
-**Why the question is narrowed.** Students ask "will this job exist in 2040?".
-Nothing in this catalog can answer that and nothing else can either. The index
-answers "how much of this job is the kind of work machines are currently good
-at", which is a different and answerable question, and the UI states that
-difference next to the number every time it is shown — because a number this
-quotable will be screenshotted without its context unless the context is inside
-the screenshot.
-
-**Two things the model deliberately refuses to do.** It never renders a low
-score as a warning: software engineering scores 36, which is a real fact about
-the shape of the work and not advice to avoid the field. And it uses amber, not
-red, at the exposed end — red reads as "don't", and the honest reading is "go in
-with your eyes open".
-
-**What it caught.** Filling the exposure model exposed a gap in the catalog
-itself: `SECTOR_LICENSING` only covered healthcare and law, so pilots, engineers,
-teachers and ships' officers were all recorded as carrying no professional
-licence. Since a licence is the clearest signal in the catalog that a named human
-is legally responsible for the work, those roles were being scored as if nobody
-had to sign anything. The real UAE regulators — GCAA, the municipality engineer
-registers, the Teacher Licensing System, and maritime certification — are now in
-the table, which fixed both the index and the licensing section of ~80 career
-pages.
-
-The build asserts the index still discriminates: at least three bands present and
-at least 30 points of spread. A model that collapsed into one band would put an
-identical badge on every card, which is noise wearing the costume of data.
-
 ### D-15 · Scholarships carry a coverage *band*, and never an amount
 
 **Decision.** `data/v2/scholarships.py` holds 37 UAE funding routes. The schema
@@ -383,3 +338,68 @@ this yields real photographs for a minority of the fifty and generated artwork
 for the rest. That is the correct result rather than a shortfall — the
 alternative was not "fifty photographs", it was "fifty photographs, some of
 which are of the wrong building".
+
+### D-17 · AI resistance was built, shipped, and then removed
+
+**Decision.** The per-career AI-exposure index described in the original D-14 is
+gone: the derivation module, the career-page panel, the card badges, the
+explorer filter, the mentor intent and the catalog fields.
+
+**Why it is recorded rather than quietly deleted.** It was a substantial piece
+of work and it was removed on request, not because it was broken — the scores
+separated careers sensibly, the breakdown added up, and the copy was careful
+about what the number did and did not claim. What it did not survive was the
+page. Every card grew a second pill next to the demand badge, and a student
+scanning a grid of 184 careers was reading two competing ratings before they
+had read the job title.
+
+That is worth writing down because the lesson is not "the index was wrong". It
+is that a defensible number is not automatically a number worth showing, and
+that the cost of a feature is paid on every screen it appears on rather than
+once where it is implemented.
+
+Two things it left behind that were kept, because both were real fixes to the
+catalog rather than to the index: the UAE licensing bodies added to
+`SECTOR_LICENSING` (GCAA, the municipality engineer registers, the Teacher
+Licensing System and maritime certification), and the mentor's matcher
+corrections that the index's tests exposed.
+
+### D-18 · Every institution has an image, and every image says what it is
+
+**Decision.** Three tiers, and the tier is recorded on the record rather than
+inferred:
+
+| `kind` | What it is | How it is labelled |
+|---|---|---|
+| `campus` | A photograph of this institution, proved by category, geotag or filename | Nothing — it is what the card claims |
+| `surroundings` | A free photograph within 10 km of the campus | A "Nearby area" badge on the image |
+| `surroundings` + `place` | The emirate's main city, for a campus with nothing within 10 km | Badged with the emirate: "Abu Dhabi" |
+
+**Why the tiers rather than a single "best effort".** Eleven of the fifty
+institutions have a photograph of themselves on Wikimedia Commons. The other
+thirty-nine do not, and no amount of searching changes that — the pictures have
+not been taken, or have not been freely licensed. The request was for every
+institution to have a photograph, and the surrounding landscape was explicitly
+part of it, so the gap is filled with the area. What the gap must not be filled
+with is an *unlabelled* area photograph, because a picture of Al Ain on a card
+headed "United Arab Emirates University" is a photograph of a campus that does
+not exist.
+
+Hence the badge, and hence `place`: Ruwais has nothing within ten kilometres,
+so its card shows Abu Dhabi city and says "Abu Dhabi". "Nearby" would have been
+a two-hundred-kilometre lie, and a label has to survive being read literally.
+
+**Two bugs this found, both silent.**
+
+Wikimedia's geosearch refuses a radius over ten kilometres by returning an
+empty result rather than an error. Two of the three search rings were no-ops
+for a whole run and the only symptom was slightly worse coverage. The cap is
+now a named constant and every caller is clamped to it.
+
+The filter that rejects photographs of people and things rather than places
+missed `ISS053-E-127299 — View of United Arab Emirates`, because `\biss\b` does
+not match `ISS053`: there is no word boundary after the letters. Two cards
+briefly showed the neighbourhood from four hundred kilometres up. Both the
+pattern and the earlier NASA-photograph case came from the same source — a
+Commons category or geotag is a claim about *subject matter*, not about
+framing.

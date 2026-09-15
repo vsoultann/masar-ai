@@ -178,52 +178,7 @@
       "problem_solving": 80,
       "english_language": 70
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 27,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "inquiry",
-        "data"
-      ],
-      "protectedGroups": [
-        "code",
-        "inquiry"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -7.3
-        },
-        {
-          "id": "digital",
-          "effect": -7.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "data_scientist",
@@ -397,52 +352,7 @@
       "writing_docs": 65,
       "problem_solving": 80
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 23,
-      "band": "exposed",
-      "exposedGroups": [
-        "data",
-        "code",
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "data",
-        "code"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -9.4
-        },
-        {
-          "id": "skills",
-          "effect": -8.7
-        },
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "data_engineer",
@@ -609,51 +519,7 @@
       "attention_detail": 80,
       "problem_solving": 75
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 31,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "data"
-      ],
-      "protectedGroups": [
-        "code",
-        "data"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -6.1
-        },
-        {
-          "id": "digital",
-          "effect": -4.4
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "ai_ethics_policy_analyst",
@@ -828,51 +694,7 @@
       "english_language": 80,
       "arabic_language": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 38,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "language_context",
-        "code"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "digital",
-          "effect": -3.4
-        },
-        {
-          "id": "skills",
-          "effect": -2.8
-        },
-        {
-          "id": "human",
-          "effect": 2.6
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "security_analyst",
@@ -1040,51 +862,7 @@
       "problem_solving": 80,
       "writing_docs": 60
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 40,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "code",
-        "data"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": -4.8
-        },
-        {
-          "id": "digital",
-          "effect": -3.4
-        },
-        {
-          "id": "presence",
-          "effect": -2.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "penetration_tester",
@@ -1250,50 +1028,7 @@
       "creativity": 70,
       "writing_docs": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 39,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "creativity",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": -4.5
-        },
-        {
-          "id": "digital",
-          "effect": -4.0
-        },
-        {
-          "id": "presence",
-          "effect": -2.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "security_architect",
@@ -1460,50 +1195,7 @@
       "leadership": 70,
       "writing_docs": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 47,
-      "band": "mixed",
-      "exposedGroups": [
-        "code",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "human",
-          "effect": 2.9
-        },
-        {
-          "id": "presence",
-          "effect": -2.3
-        },
-        {
-          "id": "digital",
-          "effect": -1.9
-        },
-        {
-          "id": "skills",
-          "effect": -1.7
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "digital_forensics_investigator",
@@ -1669,50 +1361,7 @@
       "writing_docs": 80,
       "research_methods": 75
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 39,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "code"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "law_policy",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": -4.7
-        },
-        {
-          "id": "digital",
-          "effect": -3.9
-        },
-        {
-          "id": "presence",
-          "effect": -2.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "software_engineer",
@@ -1879,50 +1528,7 @@
       "english_language": 70,
       "attention_detail": 75
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 36,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -3.1
-        },
-        {
-          "id": "digital",
-          "effect": -2.6
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "cloud_devops_engineer",
@@ -2089,50 +1695,7 @@
       "problem_solving": 80,
       "attention_detail": 75
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 35,
-      "band": "exposed",
-      "exposedGroups": [
-        "code"
-      ],
-      "protectedGroups": [
-        "code",
-        "inquiry"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -4.5
-        },
-        {
-          "id": "digital",
-          "effect": -2.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "mobile_app_developer",
@@ -2298,51 +1861,7 @@
       "creativity": 60,
       "attention_detail": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 33,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "visual"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "creativity",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "digital",
-          "effect": -4.6
-        },
-        {
-          "id": "skills",
-          "effect": -3.7
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "qa_automation_engineer",
@@ -2508,50 +2027,7 @@
       "systems_design": 60,
       "teamwork": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 33,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "systems_design",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -4.4
-        },
-        {
-          "id": "digital",
-          "effect": -4.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "renewable_energy_engineer",
@@ -2719,49 +2195,7 @@
       "project_management": 70,
       "problem_solving": 75
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 59,
-      "band": "mixed",
-      "exposedGroups": [
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "project_management",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "skills",
-          "effect": 2.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "petroleum_engineer",
@@ -2929,50 +2363,7 @@
       "problem_solving": 80,
       "project_management": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 59,
-      "band": "mixed",
-      "exposedGroups": [
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "skills",
-          "effect": 2.6
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "nuclear_engineer",
@@ -3139,50 +2530,7 @@
       "problem_solving": 80,
       "chemistry_lab": 65
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 58,
-      "band": "mixed",
-      "exposedGroups": [
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "skills",
-          "effect": 1.7
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "sustainability_consultant",
@@ -3348,50 +2696,7 @@
       "public_speaking": 70,
       "research_methods": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 52,
-      "band": "mixed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "data"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "digital",
-          "effect": -4.4
-        },
-        {
-          "id": "human",
-          "effect": 3.0
-        },
-        {
-          "id": "skills",
-          "effect": -2.9
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "commercial_pilot",
@@ -3563,50 +2868,7 @@
       "english_language": 90,
       "problem_solving": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 70,
-      "band": "resilient",
-      "exposedGroups": [
-        "language_context"
-      ],
-      "protectedGroups": [
-        "physical_judgement",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.3
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 2.1
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "aeronautical_engineer",
@@ -3777,49 +3039,7 @@
       "attention_detail": 85,
       "problem_solving": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 69,
-      "band": "resilient",
-      "exposedGroups": [
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "systems_design",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.3
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 0.6
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "air_traffic_controller",
@@ -3990,51 +3210,7 @@
       "teamwork": 80,
       "public_speaking": 60
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 74,
-      "band": "resilient",
-      "exposedGroups": [
-        "language_context"
-      ],
-      "protectedGroups": [
-        "physical_judgement",
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.3
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 3.3
-        },
-        {
-          "id": "human",
-          "effect": 2.3
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "avionics_technician",
@@ -4205,50 +3381,7 @@
       "english_language": 70,
       "networking": 55
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 70,
-      "band": "resilient",
-      "exposedGroups": [
-        "language_context",
-        "code"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.3
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 1.5
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "satellite_systems_engineer",
@@ -4416,49 +3549,7 @@
       "attention_detail": 88,
       "problem_solving": 82
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 58,
-      "band": "mixed",
-      "exposedGroups": [
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 5.3
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": 0.7
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "space_mission_analyst",
@@ -4625,52 +3716,7 @@
       "research_methods": 80,
       "attention_detail": 85
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 47,
-      "band": "mixed",
-      "exposedGroups": [
-        "inquiry",
-        "data",
-        "code"
-      ],
-      "protectedGroups": [
-        "inquiry",
-        "data"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": -5.7
-        },
-        {
-          "id": "presence",
-          "effect": 5.3
-        },
-        {
-          "id": "digital",
-          "effect": -4.1
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "remote_sensing_specialist",
@@ -4838,51 +3884,7 @@
       "research_methods": 70,
       "attention_detail": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 44,
-      "band": "exposed",
-      "exposedGroups": [
-        "data",
-        "code"
-      ],
-      "protectedGroups": [
-        "data",
-        "inquiry"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -6.9
-        },
-        {
-          "id": "skills",
-          "effect": -6.4
-        },
-        {
-          "id": "presence",
-          "effect": 5.3
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "space_robotics_engineer",
@@ -5050,49 +4052,7 @@
       "physics_reasoning": 88,
       "problem_solving": 85
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 53,
-      "band": "mixed",
-      "exposedGroups": [
-        "code"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 5.3
-        },
-        {
-          "id": "digital",
-          "effect": -4.0
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": -0.7
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "physician",
@@ -5277,52 +4237,7 @@
       "public_speaking": 65,
       "arabic_language": 70
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 83,
-      "band": "anchored",
-      "exposedGroups": [
-        "inquiry",
-        "hands_on"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 5.6
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 2.3
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "registered_nurse",
@@ -5501,51 +4416,7 @@
       "customer_service": 75,
       "arabic_language": 70
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 82,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "skills",
-          "effect": 4.8
-        },
-        {
-          "id": "human",
-          "effect": 3.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "pharmacist",
@@ -5722,51 +4593,7 @@
       "customer_service": 70,
       "research_methods": 60
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 82,
-      "band": "anchored",
-      "exposedGroups": [
-        "data",
-        "hands_on"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "skills",
-          "effect": 4.2
-        },
-        {
-          "id": "human",
-          "effect": 2.9
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "health_informatics_specialist",
@@ -5952,51 +4779,7 @@
       "writing_docs": 70,
       "clinical_skills": 50
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 64,
-      "band": "resilient",
-      "exposedGroups": [
-        "data",
-        "code",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "cybersecurity",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "digital",
-          "effect": -6.1
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "skills",
-          "effect": -4.8
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "financial_analyst",
@@ -6163,52 +4946,7 @@
       "writing_docs": 70,
       "attention_detail": 85
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 27,
-      "band": "exposed",
-      "exposedGroups": [
-        "routine_admin",
-        "data",
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "routine_admin",
-        "data"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": -8.3
-        },
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "digital",
-          "effect": -6.6
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "fintech_product_manager",
@@ -6374,51 +5112,7 @@
       "leadership": 75,
       "data_analysis": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 36,
-      "band": "exposed",
-      "exposedGroups": [
-        "routine_admin",
-        "desk_synthesis",
-        "data"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "digital",
-          "effect": -6.1
-        },
-        {
-          "id": "human",
-          "effect": 3.2
-        },
-        {
-          "id": "skills",
-          "effect": -2.9
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "actuary",
@@ -6584,52 +5278,7 @@
       "attention_detail": 92,
       "programming": 60
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 26,
-      "band": "exposed",
-      "exposedGroups": [
-        "inquiry",
-        "data",
-        "routine_admin"
-      ],
-      "protectedGroups": [
-        "inquiry",
-        "data"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": -8.2
-        },
-        {
-          "id": "digital",
-          "effect": -8.2
-        },
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "compliance_officer",
@@ -6795,51 +5444,7 @@
       "data_analysis": 70,
       "english_language": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 29,
-      "band": "exposed",
-      "exposedGroups": [
-        "routine_admin",
-        "desk_synthesis",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "skills",
-          "effect": -7.2
-        },
-        {
-          "id": "digital",
-          "effect": -6.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "hotel_operations_manager",
@@ -7006,50 +5611,7 @@
       "teamwork": 85,
       "english_language": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 66,
-      "band": "resilient",
-      "exposedGroups": [
-        "language_context"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "business_strategy",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "human",
-          "effect": 7.2
-        },
-        {
-          "id": "presence",
-          "effect": 4.7
-        },
-        {
-          "id": "skills",
-          "effect": 4.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "tourism_experience_designer",
@@ -7215,51 +5777,7 @@
       "arabic_language": 75,
       "public_speaking": 70
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 60,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "public_speaking",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "human",
-          "effect": 6.3
-        },
-        {
-          "id": "presence",
-          "effect": 4.7
-        },
-        {
-          "id": "digital",
-          "effect": -2.4
-        },
-        {
-          "id": "skills",
-          "effect": 1.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "events_manager",
@@ -7426,50 +5944,7 @@
       "teamwork": 85,
       "attention_detail": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 61,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "sales_negotiation",
-        "public_speaking",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "human",
-          "effect": 6.4
-        },
-        {
-          "id": "presence",
-          "effect": 4.7
-        },
-        {
-          "id": "skills",
-          "effect": 2.4
-        },
-        {
-          "id": "digital",
-          "effect": -2.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "airline_customer_experience",
@@ -7636,51 +6111,7 @@
       "teamwork": 80,
       "writing_docs": 65
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 48,
-      "band": "mixed",
-      "exposedGroups": [
-        "language_context",
-        "desk_synthesis",
-        "data"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -5.8
-        },
-        {
-          "id": "skills",
-          "effect": -5.0
-        },
-        {
-          "id": "presence",
-          "effect": 4.7
-        },
-        {
-          "id": "human",
-          "effect": 3.9
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "civil_engineer",
@@ -7856,49 +6287,7 @@
       "attention_detail": 85,
       "problem_solving": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 70,
-      "band": "resilient",
-      "exposedGroups": [
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "project_management",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": 1.6
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "architect",
@@ -8074,51 +6463,7 @@
       "project_management": 65,
       "attention_detail": 80
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 65,
-      "band": "resilient",
-      "exposedGroups": [
-        "visual",
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "digital",
-          "effect": -2.5
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": -1.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "quantity_surveyor",
@@ -8293,51 +6638,7 @@
       "writing_docs": 75,
       "project_management": 75
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 60,
-      "band": "resilient",
-      "exposedGroups": [
-        "routine_admin",
-        "inquiry",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "digital",
-          "effect": -4.3
-        },
-        {
-          "id": "skills",
-          "effect": -3.7
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "urban_planner",
@@ -8513,50 +6814,7 @@
       "writing_docs": 75,
       "public_speaking": 70
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 65,
-      "band": "resilient",
-      "exposedGroups": [
-        "data",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "digital",
-          "effect": -4.5
-        },
-        {
-          "id": "human",
-          "effect": 3.0
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": -1.5
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "supply_chain_analyst",
@@ -8728,52 +6986,7 @@
       "business_strategy": 65,
       "attention_detail": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 61,
-      "band": "resilient",
-      "exposedGroups": [
-        "routine_admin",
-        "data",
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "routine_admin",
-        "data"
-      ],
-      "hedgeSkills": [
-        "business_strategy",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 8.2
-        },
-        {
-          "id": "skills",
-          "effect": -4.0
-        },
-        {
-          "id": "digital",
-          "effect": -2.4
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "port_operations_manager",
@@ -8951,51 +7164,7 @@
       "attention_detail": 80,
       "maritime_ops": 90
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 74,
-      "band": "resilient",
-      "exposedGroups": [
-        "routine_admin"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "persuasion_authority",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 8.2
-        },
-        {
-          "id": "skills",
-          "effect": 4.1
-        },
-        {
-          "id": "human",
-          "effect": 2.9
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "marine_engineer",
@@ -9172,51 +7341,7 @@
       "attention_detail": 85,
       "maritime_ops": 85
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 72,
-      "band": "resilient",
-      "exposedGroups": [
-        "physical_judgement",
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 8.2
-        },
-        {
-          "id": "skills",
-          "effect": 4.9
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "customs_trade_specialist",
@@ -9394,52 +7519,7 @@
       "arabic_language": 75,
       "maritime_ops": 55
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 62,
-      "band": "resilient",
-      "exposedGroups": [
-        "routine_admin",
-        "language_context",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 8.2
-        },
-        {
-          "id": "skills",
-          "effect": -3.0
-        },
-        {
-          "id": "digital",
-          "effect": -1.8
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "public_policy_analyst",
@@ -9605,51 +7685,7 @@
       "data_analysis": 70,
       "arabic_language": 82
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 32,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "inquiry",
-        "data"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "skills",
-          "effect": -5.6
-        },
-        {
-          "id": "digital",
-          "effect": -4.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "government_digital_services",
@@ -9815,50 +7851,7 @@
       "arabic_language": 85,
       "data_analysis": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 38,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "data"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "systems_design",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "digital",
-          "effect": -4.0
-        },
-        {
-          "id": "skills",
-          "effect": -3.6
-        },
-        {
-          "id": "human",
-          "effect": 3.4
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "diplomat",
@@ -10024,50 +8017,7 @@
       "english_language": 90,
       "research_methods": 70
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 42,
-      "band": "exposed",
-      "exposedGroups": [
-        "language_context",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "human",
-          "effect": 3.5
-        },
-        {
-          "id": "digital",
-          "effect": -2.2
-        },
-        {
-          "id": "skills",
-          "effect": -1.9
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "statistician_gov",
@@ -10233,52 +8183,7 @@
       "mathematics": 85,
       "attention_detail": 88
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 28,
-      "band": "exposed",
-      "exposedGroups": [
-        "data",
-        "inquiry",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "data",
-        "inquiry"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "skills",
-          "effect": -7.3
-        },
-        {
-          "id": "digital",
-          "effect": -6.5
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "secondary_teacher_stem",
@@ -10449,50 +8354,7 @@
       "arabic_language": 75,
       "attention_detail": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 75,
-      "band": "anchored",
-      "exposedGroups": [
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 7.5
-        },
-        {
-          "id": "presence",
-          "effect": 5.4
-        },
-        {
-          "id": "skills",
-          "effect": 3.5
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "special_education_specialist",
@@ -10663,50 +8525,7 @@
       "arabic_language": 80,
       "writing_docs": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 69,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 5.4
-        },
-        {
-          "id": "human",
-          "effect": 3.8
-        },
-        {
-          "id": "skills",
-          "effect": 2.5
-        },
-        {
-          "id": "digital",
-          "effect": -1.9
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "instructional_designer",
@@ -10877,51 +8696,7 @@
       "project_management": 70,
       "arabic_language": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 61,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis",
-        "visual"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 5.4
-        },
-        {
-          "id": "digital",
-          "effect": -4.4
-        },
-        {
-          "id": "human",
-          "effect": 3.5
-        },
-        {
-          "id": "skills",
-          "effect": -2.5
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "academic_career_counsellor",
@@ -11093,50 +8868,7 @@
       "arabic_language": 85,
       "customer_service": 75
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 73,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "counselling",
-        "project_management"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 5.4
-        },
-        {
-          "id": "digital",
-          "effect": -2.0
-        },
-        {
-          "id": "skills",
-          "effect": 1.8
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "ux_ui_designer",
@@ -11302,51 +9034,7 @@
       "teamwork": 75,
       "writing_docs": 60
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 51,
-      "band": "mixed",
-      "exposedGroups": [
-        "visual",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 8.3
-        },
-        {
-          "id": "digital",
-          "effect": -4.4
-        },
-        {
-          "id": "skills",
-          "effect": -3.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "digital_content_producer",
@@ -11512,51 +9200,7 @@
       "arabic_language": 85,
       "data_analysis": 55
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 42,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "visual",
-        "data"
-      ],
-      "protectedGroups": [
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": -8.4
-        },
-        {
-          "id": "presence",
-          "effect": 8.3
-        },
-        {
-          "id": "digital",
-          "effect": -8.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "journalist_editor",
@@ -11722,50 +9366,7 @@
       "attention_detail": 85,
       "public_speaking": 65
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 55,
-      "band": "mixed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 8.3
-        },
-        {
-          "id": "skills",
-          "effect": -3.8
-        },
-        {
-          "id": "human",
-          "effect": 2.6
-        },
-        {
-          "id": "digital",
-          "effect": -2.5
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "game_developer",
@@ -11931,51 +9532,7 @@
       "physics_reasoning": 70,
       "problem_solving": 85
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 49,
-      "band": "mixed",
-      "exposedGroups": [
-        "code",
-        "inquiry",
-        "visual"
-      ],
-      "protectedGroups": [
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 8.3
-        },
-        {
-          "id": "skills",
-          "effect": -4.5
-        },
-        {
-          "id": "digital",
-          "effect": -4.4
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "startup_founder",
@@ -12142,50 +9699,7 @@
       "problem_solving": 88,
       "public_speaking": 80
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 46,
-      "band": "mixed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "routine_admin"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "sales_negotiation",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "human",
-          "effect": 6.8
-        },
-        {
-          "id": "digital",
-          "effect": -3.9
-        },
-        {
-          "id": "skills",
-          "effect": 1.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "product_manager",
@@ -12351,50 +9865,7 @@
       "leadership": 80,
       "writing_docs": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 35,
-      "band": "exposed",
-      "exposedGroups": [
-        "data",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "sales_negotiation",
-        "public_speaking",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "digital",
-          "effect": -6.1
-        },
-        {
-          "id": "skills",
-          "effect": -3.8
-        },
-        {
-          "id": "human",
-          "effect": 3.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "digital_marketing_specialist",
@@ -12561,51 +10032,7 @@
       "arabic_language": 80,
       "english_language": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 27,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "language_context",
-        "data"
-      ],
-      "protectedGroups": [
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -8.0
-        },
-        {
-          "id": "digital",
-          "effect": -6.6
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "business_analyst",
@@ -12772,50 +10199,7 @@
       "teamwork": 78,
       "attention_detail": 82
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 33,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "data"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "digital",
-          "effect": -4.6
-        },
-        {
-          "id": "skills",
-          "effect": -4.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "radiologist",
@@ -13001,50 +10385,7 @@
       "research_methods": 60,
       "english_language": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 72,
-      "band": "resilient",
-      "exposedGroups": [
-        "diagnostic_pattern",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.9
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "skills",
-          "effect": 0.2
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "radiographer",
@@ -13223,50 +10564,7 @@
       "teamwork": 70,
       "english_language": 65
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 75,
-      "band": "anchored",
-      "exposedGroups": [
-        "diagnostic_pattern",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 3.5
-        },
-        {
-          "id": "skills",
-          "effect": 1.8
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "sonographer",
@@ -13446,49 +10744,7 @@
       "problem_solving": 70,
       "teamwork": 65
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 76,
-      "band": "anchored",
-      "exposedGroups": [
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 3.5
-        },
-        {
-          "id": "skills",
-          "effect": 3.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "nuclear_medicine_technologist",
@@ -13668,51 +10924,7 @@
       "physics_reasoning": 72,
       "quality_control": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 73,
-      "band": "resilient",
-      "exposedGroups": [
-        "diagnostic_pattern",
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.1
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 3.0
-        },
-        {
-          "id": "skills",
-          "effect": 1.3
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "radiation_therapist",
@@ -13891,50 +11103,7 @@
       "counselling": 65,
       "quality_control": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 79,
-      "band": "anchored",
-      "exposedGroups": [
-        "data",
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "counselling",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.8
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 6.3
-        },
-        {
-          "id": "skills",
-          "effect": 3.2
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "interventional_radiologist",
@@ -14113,49 +11282,7 @@
       "problem_solving": 85,
       "emergency_response": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 85,
-      "band": "anchored",
-      "exposedGroups": [
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 11.8
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 6.9
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 2.7
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "general_surgeon",
@@ -14334,52 +11461,7 @@
       "teamwork": 78,
       "leadership": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 94,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 11.9
-        },
-        {
-          "id": "presence",
-          "effect": 11.8
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 5.9
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "cardiac_surgeon",
@@ -14558,52 +11640,7 @@
       "leadership": 78,
       "teamwork": 82
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 94,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 11.9
-        },
-        {
-          "id": "presence",
-          "effect": 11.8
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 6.1
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "orthopedic_surgeon",
@@ -14782,51 +11819,7 @@
       "rehabilitation": 65,
       "teamwork": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 85,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 11.8
-        },
-        {
-          "id": "skills",
-          "effect": 9.6
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "neurosurgeon",
@@ -15005,50 +11998,7 @@
       "emergency_response": 82,
       "research_methods": 65
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 88,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 11.8
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 8.6
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 3.1
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "anesthesiologist",
@@ -15227,51 +12177,7 @@
       "problem_solving": 85,
       "teamwork": 82
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 87,
-      "band": "anchored",
-      "exposedGroups": [
-        "data",
-        "hands_on"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 11.8
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 8.1
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 3.4
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "cardiologist",
@@ -15450,50 +12356,7 @@
       "pharmacology": 80,
       "counselling": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 83,
-      "band": "anchored",
-      "exposedGroups": [
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "counselling",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 5.2
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 2.6
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "neurologist",
@@ -15672,49 +12535,7 @@
       "diagnostic_imaging": 70,
       "research_methods": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 77,
-      "band": "anchored",
-      "exposedGroups": [
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "skills",
-          "effect": 1.8
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "emergency_physician",
@@ -15892,52 +12713,7 @@
       "attention_detail": 82,
       "leadership": 75
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 91,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.8
-        },
-        {
-          "id": "skills",
-          "effect": 9.2
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 6.6
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "general_practitioner",
@@ -16115,51 +12891,7 @@
       "attention_detail": 78,
       "arabic_language": 70
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 90,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 8.4
-        },
-        {
-          "id": "human",
-          "effect": 6.9
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "pediatrician",
@@ -16338,51 +13070,7 @@
       "attention_detail": 82,
       "arabic_language": 68
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 95,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "counselling",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 11.2
-        },
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "obgyn",
@@ -16561,51 +13249,7 @@
       "counselling": 75,
       "attention_detail": 85
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 95,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "counselling",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 14.2
-        },
-        {
-          "id": "presence",
-          "effect": 11.8
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "dermatologist",
@@ -16783,50 +13427,7 @@
       "problem_solving": 75,
       "pharmacology": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 84,
-      "band": "anchored",
-      "exposedGroups": [
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 6.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 3.4
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "ophthalmologist",
@@ -17005,50 +13606,7 @@
       "problem_solving": 78,
       "patient_care": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 86,
-      "band": "anchored",
-      "exposedGroups": [
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 11.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 7.4
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 3.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "optometrist",
@@ -17226,51 +13784,7 @@
       "customer_service": 70,
       "problem_solving": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 85,
-      "band": "anchored",
-      "exposedGroups": [
-        "data",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 6.8
-        },
-        {
-          "id": "skills",
-          "effect": 6.7
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "psychiatrist",
@@ -17450,51 +13964,7 @@
       "arabic_language": 75,
       "research_methods": 65
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 85,
-      "band": "anchored",
-      "exposedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 6.4
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 3.8
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "clinical_psychologist",
@@ -17673,49 +14143,7 @@
       "writing_docs": 70,
       "patient_care": 80
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 79,
-      "band": "anchored",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "human",
-          "effect": 7.2
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "skills",
-          "effect": 2.9
-        },
-        {
-          "id": "digital",
-          "effect": -1.9
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "dentist",
@@ -17893,51 +14321,7 @@
       "customer_service": 70,
       "problem_solving": 72
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 90,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "skills",
-          "effect": 9.9
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 6.3
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "orthodontist",
@@ -18115,51 +14499,7 @@
       "problem_solving": 78,
       "customer_service": 72
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 87,
-      "band": "anchored",
-      "exposedGroups": [
-        "data",
-        "hands_on"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 6.9
-        },
-        {
-          "id": "human",
-          "effect": 6.2
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "dental_hygienist",
@@ -18338,51 +14678,7 @@
       "teaching": 65,
       "teamwork": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 88,
-      "band": "anchored",
-      "exposedGroups": [
-        "human_relationship",
-        "data"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "teaching",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "skills",
-          "effect": 9.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "nurse_practitioner",
@@ -18561,52 +14857,7 @@
       "attention_detail": 85,
       "leadership": 70
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 95,
-      "band": "anchored",
-      "exposedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "hands_on",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "counselling",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 11.5
-        },
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "midwife",
@@ -18785,51 +15036,7 @@
       "attention_detail": 85,
       "arabic_language": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 90,
-      "band": "anchored",
-      "exposedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 11.2
-        },
-        {
-          "id": "presence",
-          "effect": 10.8
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "paramedic",
@@ -19009,51 +15216,7 @@
       "patient_care": 85,
       "attention_detail": 80
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 87,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "skills",
-          "effect": 10.1
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 7.1
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "physiotherapist",
@@ -19232,51 +15395,7 @@
       "teaching": 72,
       "attention_detail": 78
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 90,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "teaching",
-        "counselling",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 10.9
-        },
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "occupational_therapist",
@@ -19455,52 +15574,7 @@
       "problem_solving": 78,
       "child_development": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 91,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship",
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "creativity",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 12.5
-        },
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "speech_therapist",
@@ -19679,51 +15753,7 @@
       "patient_care": 85,
       "attention_detail": 80
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 88,
-      "band": "anchored",
-      "exposedGroups": [
-        "language_context",
-        "hands_on"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 10.8
-        },
-        {
-          "id": "presence",
-          "effect": 9.4
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "audiologist",
@@ -19901,50 +15931,7 @@
       "rehabilitation": 78,
       "counselling": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 86,
-      "band": "anchored",
-      "exposedGroups": [
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "counselling",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 7.7
-        },
-        {
-          "id": "human",
-          "effect": 6.8
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "medical_lab_scientist",
@@ -20124,50 +16111,7 @@
       "life_sciences": 82,
       "problem_solving": 70
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 65,
-      "band": "resilient",
-      "exposedGroups": [
-        "diagnostic_pattern",
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 6.6
-        },
-        {
-          "id": "skills",
-          "effect": -0.9
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "pathologist",
@@ -20347,50 +16291,7 @@
       "diagnostic_imaging": 65,
       "problem_solving": 82
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 72,
-      "band": "resilient",
-      "exposedGroups": [
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "data",
-        "diagnostic_pattern"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.1
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "skills",
-          "effect": -2.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "genetic_counselor",
@@ -20569,49 +16470,7 @@
       "attention_detail": 82,
       "writing_docs": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 76,
-      "band": "anchored",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 3.7
-        },
-        {
-          "id": "digital",
-          "effect": -1.9
-        },
-        {
-          "id": "skills",
-          "effect": 0.3
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "dietitian",
@@ -20790,51 +16649,7 @@
       "teaching": 72,
       "arabic_language": 70
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 87,
-      "band": "anchored",
-      "exposedGroups": [
-        "human_relationship",
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "project_management"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.7
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 8.1
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "epidemiologist",
@@ -21013,50 +16828,7 @@
       "writing_docs": 78,
       "law_policy": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 59,
-      "band": "mixed",
-      "exposedGroups": [
-        "data",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "law_policy",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "digital",
-          "effect": -6.7
-        },
-        {
-          "id": "skills",
-          "effect": -5.9
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "clinical_pharmacologist",
@@ -21236,50 +17008,7 @@
       "life_sciences": 85,
       "writing_docs": 72
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 70,
-      "band": "resilient",
-      "exposedGroups": [
-        "diagnostic_pattern",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.1
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "skills",
-          "effect": -2.1
-        },
-        {
-          "id": "digital",
-          "effect": -1.9
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "biomedical_engineer",
@@ -21459,49 +17188,7 @@
       "quality_control": 80,
       "project_management": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 71,
-      "band": "resilient",
-      "exposedGroups": [
-        "data"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.1
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 2.2
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "prosthetist",
@@ -21681,52 +17368,7 @@
       "creativity": 70,
       "problem_solving": 78
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 79,
-      "band": "anchored",
-      "exposedGroups": [
-        "data",
-        "hands_on"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship",
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "creativity",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.6
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 7.3
-        },
-        {
-          "id": "human",
-          "effect": 3.4
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "veterinarian",
@@ -21904,51 +17546,7 @@
       "patient_care": 70,
       "problem_solving": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 89,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 11.8
-        },
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 2.8
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "structural_engineer",
@@ -22124,49 +17722,7 @@
       "problem_solving": 85,
       "project_management": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 70,
-      "band": "resilient",
-      "exposedGroups": [
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "project_management",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": 1.6
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "construction_project_manager",
@@ -22342,51 +17898,7 @@
       "teamwork": 85,
       "finance_accounting": 65
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 74,
-      "band": "resilient",
-      "exposedGroups": [
-        "routine_admin"
-      ],
-      "protectedGroups": [
-        "persuasion_authority",
-        "human_relationship",
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "sales_negotiation",
-        "public_speaking",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "skills",
-          "effect": 4.3
-        },
-        {
-          "id": "human",
-          "effect": 3.6
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "digital",
-          "effect": -1.7
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "mechanical_engineer",
@@ -22562,50 +18074,7 @@
       "quality_control": 72,
       "project_management": 62
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 66,
-      "band": "resilient",
-      "exposedGroups": [
-        "inquiry",
-        "data"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "skills",
-          "effect": 0.4
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "electrical_engineer",
@@ -22780,49 +18249,7 @@
       "attention_detail": 85,
       "problem_solving": 82
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 68,
-      "band": "resilient",
-      "exposedGroups": [
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "skills",
-          "effect": 2.2
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "mechatronics_engineer",
@@ -22998,50 +18425,7 @@
       "problem_solving": 85,
       "quality_control": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 63,
-      "band": "resilient",
-      "exposedGroups": [
-        "code",
-        "data"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "digital",
-          "effect": -2.1
-        },
-        {
-          "id": "skills",
-          "effect": -0.6
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "chemical_engineer",
@@ -23218,50 +18602,7 @@
       "problem_solving": 85,
       "sustainability": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 68,
-      "band": "resilient",
-      "exposedGroups": [
-        "inquiry",
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.1
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 0.3
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "industrial_engineer",
@@ -23436,50 +18777,7 @@
       "problem_solving": 85,
       "logistics_ops": 72
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 61,
-      "band": "resilient",
-      "exposedGroups": [
-        "data",
-        "routine_admin"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "skills",
-          "effect": -2.2
-        },
-        {
-          "id": "digital",
-          "effect": -2.1
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "environmental_engineer",
@@ -23655,51 +18953,7 @@
       "law_policy": 65,
       "problem_solving": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 65,
-      "band": "resilient",
-      "exposedGroups": [
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "physical_judgement",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "law_policy",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "digital",
-          "effect": -2.2
-        },
-        {
-          "id": "skills",
-          "effect": 1.4
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "water_resources_engineer",
@@ -23875,49 +19129,7 @@
       "geospatial_gis": 70,
       "problem_solving": 82
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 63,
-      "band": "resilient",
-      "exposedGroups": [
-        "data"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "digital",
-          "effect": -4.0
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": -0.6
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "hvac_engineer",
@@ -24092,49 +19304,7 @@
       "quality_control": 75,
       "project_management": 65
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 68,
-      "band": "resilient",
-      "exposedGroups": [
-        "data"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "skills",
-          "effect": 2.6
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "geomatics_engineer",
@@ -24310,50 +19480,7 @@
       "civil_structures": 60,
       "problem_solving": 72
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 59,
-      "band": "mixed",
-      "exposedGroups": [
-        "data",
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "digital",
-          "effect": -4.6
-        },
-        {
-          "id": "skills",
-          "effect": -3.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "ai_research_scientist",
@@ -24521,52 +19648,7 @@
       "statistics": 88,
       "writing_docs": 78
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 42,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "inquiry",
-        "data"
-      ],
-      "protectedGroups": [
-        "code",
-        "inquiry"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -8.3
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "presence",
-          "effect": 4.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "computer_vision_engineer",
@@ -24733,52 +19815,7 @@
       "problem_solving": 85,
       "systems_design": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 28,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "inquiry",
-        "data"
-      ],
-      "protectedGroups": [
-        "code",
-        "inquiry"
-      ],
-      "hedgeSkills": [
-        "systems_design",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "digital",
-          "effect": -6.8
-        },
-        {
-          "id": "skills",
-          "effect": -6.4
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "nlp_engineer",
@@ -24945,52 +19982,7 @@
       "data_analysis": 78,
       "research_methods": 72
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 27,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "inquiry",
-        "data"
-      ],
-      "protectedGroups": [
-        "code",
-        "language_context"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -7.3
-        },
-        {
-          "id": "digital",
-          "effect": -6.8
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "robotics_engineer",
@@ -25158,49 +20150,7 @@
       "machine_learning": 70,
       "problem_solving": 88
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 56,
-      "band": "mixed",
-      "exposedGroups": [
-        "code"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "systems_design",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.1
-        },
-        {
-          "id": "digital",
-          "effect": -4.1
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": -0.9
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "cloud_architect",
@@ -25367,50 +20317,7 @@
       "problem_solving": 85,
       "business_strategy": 70
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 42,
-      "band": "exposed",
-      "exposedGroups": [
-        "code"
-      ],
-      "protectedGroups": [
-        "code",
-        "inquiry"
-      ],
-      "hedgeSkills": [
-        "cybersecurity",
-        "business_strategy",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": -1.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "network_engineer",
@@ -25577,50 +20484,7 @@
       "attention_detail": 85,
       "cloud_infrastructure": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 40,
-      "band": "exposed",
-      "exposedGroups": [
-        "code"
-      ],
-      "protectedGroups": [
-        "code",
-        "inquiry"
-      ],
-      "hedgeSkills": [
-        "cybersecurity",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -1.5
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "database_administrator",
@@ -25787,51 +20651,7 @@
       "problem_solving": 80,
       "programming": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 33,
-      "band": "exposed",
-      "exposedGroups": [
-        "data",
-        "code"
-      ],
-      "protectedGroups": [
-        "data",
-        "code"
-      ],
-      "hedgeSkills": [
-        "cybersecurity",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -4.3
-        },
-        {
-          "id": "digital",
-          "effect": -4.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "blockchain_developer",
@@ -25998,52 +20818,7 @@
       "problem_solving": 85,
       "finance_accounting": 60
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 33,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "inquiry",
-        "routine_admin"
-      ],
-      "protectedGroups": [
-        "code",
-        "inquiry"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -4.4
-        },
-        {
-          "id": "digital",
-          "effect": -4.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "it_support_specialist",
@@ -26209,50 +20984,7 @@
       "attention_detail": 78,
       "english_language": 72
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 43,
-      "band": "exposed",
-      "exposedGroups": [
-        "code",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "human",
-          "effect": 3.7
-        },
-        {
-          "id": "training",
-          "effect": -3.0
-        },
-        {
-          "id": "skills",
-          "effect": 0.4
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "systems_analyst",
@@ -26419,50 +21151,7 @@
       "teamwork": 82,
       "problem_solving": 82
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 34,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "data"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "business_strategy",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "digital",
-          "effect": -4.2
-        },
-        {
-          "id": "skills",
-          "effect": -3.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "solar_engineer",
@@ -26629,50 +21318,7 @@
       "project_management": 70,
       "problem_solving": 78
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 61,
-      "band": "resilient",
-      "exposedGroups": [
-        "physical_judgement",
-        "inquiry"
-      ],
-      "protectedGroups": [
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "project_management",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "skills",
-          "effect": 4.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "nuclear_plant_operator",
@@ -26837,51 +21483,7 @@
       "physics_reasoning": 82,
       "teamwork": 82
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 66,
-      "band": "resilient",
-      "exposedGroups": [
-        "data"
-      ],
-      "protectedGroups": [
-        "physical_judgement",
-        "hands_on",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 7.8
-        },
-        {
-          "id": "skills",
-          "effect": 4.4
-        },
-        {
-          "id": "human",
-          "effect": 3.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "process_engineer_oil_gas",
@@ -27048,50 +21650,7 @@
       "project_management": 70,
       "sustainability": 60
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 59,
-      "band": "mixed",
-      "exposedGroups": [
-        "data"
-      ],
-      "protectedGroups": [
-        "physical_judgement",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 6.7
-        },
-        {
-          "id": "skills",
-          "effect": 2.5
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "aircraft_maintenance_engineer",
@@ -27262,50 +21821,7 @@
       "electronics": 75,
       "teamwork": 78
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 74,
-      "band": "resilient",
-      "exposedGroups": [
-        "data"
-      ],
-      "protectedGroups": [
-        "physical_judgement",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 11.2
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 3.7
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "aviation_operations_manager",
@@ -27477,51 +21993,7 @@
       "problem_solving": 82,
       "teamwork": 82
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 65,
-      "band": "resilient",
-      "exposedGroups": [
-        "routine_admin"
-      ],
-      "protectedGroups": [
-        "physical_judgement",
-        "persuasion_authority",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "sales_negotiation",
-        "public_speaking",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 5.1
-        },
-        {
-          "id": "human",
-          "effect": 3.3
-        },
-        {
-          "id": "presence",
-          "effect": -2.3
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "astrophysicist",
@@ -27687,52 +22159,7 @@
       "programming": 78,
       "writing_docs": 78
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 46,
-      "band": "mixed",
-      "exposedGroups": [
-        "inquiry",
-        "data",
-        "code"
-      ],
-      "protectedGroups": [
-        "inquiry",
-        "data"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": -7.6
-        },
-        {
-          "id": "digital",
-          "effect": -6.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "presence",
-          "effect": 4.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "meteorologist",
@@ -27899,51 +22326,7 @@
       "geospatial_gis": 75,
       "writing_docs": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 32,
-      "band": "exposed",
-      "exposedGroups": [
-        "data",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "inquiry",
-        "data"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -7.3
-        },
-        {
-          "id": "presence",
-          "effect": -2.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "accountant",
@@ -28108,52 +22491,7 @@
       "english_language": 72,
       "problem_solving": 65
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 28,
-      "band": "exposed",
-      "exposedGroups": [
-        "routine_admin",
-        "language_context",
-        "data"
-      ],
-      "protectedGroups": [
-        "routine_admin",
-        "data"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": -7.9
-        },
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "digital",
-          "effect": -6.5
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "auditor",
@@ -28319,51 +22657,7 @@
       "research_methods": 75,
       "english_language": 75
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 32,
-      "band": "exposed",
-      "exposedGroups": [
-        "routine_admin",
-        "desk_synthesis",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "law_policy",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "skills",
-          "effect": -6.0
-        },
-        {
-          "id": "digital",
-          "effect": -4.5
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "forensic_accountant",
@@ -28531,51 +22825,7 @@
       "data_analysis": 82,
       "writing_docs": 80
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 31,
-      "band": "exposed",
-      "exposedGroups": [
-        "routine_admin",
-        "data",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "law_policy",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "skills",
-          "effect": -6.9
-        },
-        {
-          "id": "digital",
-          "effect": -6.4
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "investment_banker",
@@ -28741,51 +22991,7 @@
       "attention_detail": 85,
       "english_language": 85
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 41,
-      "band": "exposed",
-      "exposedGroups": [
-        "routine_admin",
-        "inquiry",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "public_speaking",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "human",
-          "effect": 3.2
-        },
-        {
-          "id": "digital",
-          "effect": -2.3
-        },
-        {
-          "id": "skills",
-          "effect": -2.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "insurance_underwriter",
@@ -28953,50 +23159,7 @@
       "law_policy": 70,
       "problem_solving": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 30,
-      "band": "exposed",
-      "exposedGroups": [
-        "data",
-        "routine_admin"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "law_policy",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "digital",
-          "effect": -6.6
-        },
-        {
-          "id": "skills",
-          "effect": -5.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "islamic_banking_specialist",
@@ -29163,51 +23326,7 @@
       "attention_detail": 85,
       "english_language": 75
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 42,
-      "band": "exposed",
-      "exposedGroups": [
-        "routine_admin",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "law_policy",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "human",
-          "effect": 3.5
-        },
-        {
-          "id": "digital",
-          "effect": -2.3
-        },
-        {
-          "id": "skills",
-          "effect": -1.8
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "economist",
@@ -29375,51 +23494,7 @@
       "writing_docs": 82,
       "law_policy": 72
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 34,
-      "band": "exposed",
-      "exposedGroups": [
-        "inquiry",
-        "data",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "law_policy",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "skills",
-          "effect": -6.9
-        },
-        {
-          "id": "digital",
-          "effect": -6.5
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "management_consultant",
@@ -29586,50 +23661,7 @@
       "problem_solving": 88,
       "leadership": 78
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 43,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "data"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "human",
-          "effect": 6.3
-        },
-        {
-          "id": "digital",
-          "effect": -4.2
-        },
-        {
-          "id": "skills",
-          "effect": -0.4
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "hr_specialist",
@@ -29797,50 +23829,7 @@
       "counselling": 70,
       "arabic_language": 75
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 50,
-      "band": "mixed",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "counselling",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "human",
-          "effect": 6.9
-        },
-        {
-          "id": "skills",
-          "effect": 3.3
-        },
-        {
-          "id": "digital",
-          "effect": -2.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "marketing_manager",
@@ -30007,51 +23996,7 @@
       "leadership": 80,
       "arabic_language": 72
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 38,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "data"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "sales_negotiation",
-        "public_speaking",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "digital",
-          "effect": -4.5
-        },
-        {
-          "id": "human",
-          "effect": 3.2
-        },
-        {
-          "id": "skills",
-          "effect": -1.8
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "supply_chain_manager",
@@ -30223,50 +24168,7 @@
       "sales_negotiation": 75,
       "problem_solving": 82
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 72,
-      "band": "resilient",
-      "exposedGroups": [
-        "routine_admin",
-        "data"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "sales_negotiation",
-        "public_speaking",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "human",
-          "effect": 6.2
-        },
-        {
-          "id": "digital",
-          "effect": -2.1
-        },
-        {
-          "id": "skills",
-          "effect": 1.2
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "lawyer",
@@ -30438,49 +24340,7 @@
       "research_methods": 82,
       "attention_detail": 88
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 65,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 4.2
-        },
-        {
-          "id": "human",
-          "effect": 3.2
-        },
-        {
-          "id": "digital",
-          "effect": -2.2
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": -1.3
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "legal_counsel",
@@ -30650,50 +24510,7 @@
       "sales_negotiation": 80,
       "english_language": 85
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 52,
-      "band": "mixed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "sales_negotiation",
-        "business_strategy",
-        "leadership",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "human",
-          "effect": 3.1
-        },
-        {
-          "id": "digital",
-          "effect": -2.2
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": -1.8
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "judge",
@@ -30860,50 +24677,7 @@
       "research_methods": 85,
       "islamic_studies_skill": 75
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 69,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 6.6
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 2.8
-        },
-        {
-          "id": "skills",
-          "effect": -2.2
-        },
-        {
-          "id": "digital",
-          "effect": -2.1
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "paralegal",
@@ -31074,50 +24848,7 @@
       "arabic_language": 82,
       "english_language": 78
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 44,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "skills",
-          "effect": -4.5
-        },
-        {
-          "id": "digital",
-          "effect": -2.3
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "police_officer",
@@ -31285,52 +25016,7 @@
       "attention_detail": 82,
       "arabic_language": 85
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 70,
-      "band": "resilient",
-      "exposedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "human",
-          "effect": 6.3
-        },
-        {
-          "id": "skills",
-          "effect": 6.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "firefighter",
@@ -31496,52 +25182,7 @@
       "patient_care": 65,
       "leadership": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 76,
-      "band": "anchored",
-      "exposedGroups": [
-        "hands_on",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "skills",
-          "effect": 9.4
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": -3.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "civil_defence_specialist",
@@ -31708,51 +25349,7 @@
       "writing_docs": 72,
       "teamwork": 82
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 62,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "human",
-          "effect": 3.7
-        },
-        {
-          "id": "skills",
-          "effect": 2.9
-        },
-        {
-          "id": "digital",
-          "effect": -1.9
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "military_officer",
@@ -31915,52 +25512,7 @@
       "public_speaking": 75,
       "attention_detail": 82
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 75,
-      "band": "anchored",
-      "exposedGroups": [
-        "persuasion_authority",
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "persuasion_authority",
-        "human_relationship",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "public_speaking",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 8.8
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "customs_officer",
@@ -32130,51 +25682,7 @@
       "english_language": 75,
       "teamwork": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 56,
-      "band": "mixed",
-      "exposedGroups": [
-        "routine_admin",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "persuasion_authority",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "skills",
-          "effect": -0.9
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "urban_governance_specialist",
@@ -32342,50 +25850,7 @@
       "public_speaking": 75,
       "sustainability": 75
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 38,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "data"
-      ],
-      "protectedGroups": [
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "digital",
-          "effect": -6.4
-        },
-        {
-          "id": "skills",
-          "effect": -3.3
-        },
-        {
-          "id": "human",
-          "effect": 3.2
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "primary_teacher",
@@ -32555,51 +26020,7 @@
       "creativity": 75,
       "teamwork": 78
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 83,
-      "band": "anchored",
-      "exposedGroups": [
-        "human_relationship",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "creativity",
-        "counselling",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 9.5
-        },
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 5.4
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "university_lecturer",
@@ -32767,51 +26188,7 @@
       "english_language": 85,
       "problem_solving": 78
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 72,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "human",
-          "effect": 6.6
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "presence",
-          "effect": 3.2
-        },
-        {
-          "id": "digital",
-          "effect": -2.2
-        },
-        {
-          "id": "skills",
-          "effect": -0.1
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "curriculum_designer",
@@ -32982,50 +26359,7 @@
       "arabic_language": 80,
       "project_management": 72
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 53,
-      "band": "mixed",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "accountability",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "human",
-          "effect": 3.5
-        },
-        {
-          "id": "digital",
-          "effect": -2.4
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "skills",
-          "effect": -0.8
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "social_worker",
@@ -33194,50 +26528,7 @@
       "teamwork": 82,
       "attention_detail": 75
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 61,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "law_policy",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "human",
-          "effect": 3.8
-        },
-        {
-          "id": "digital",
-          "effect": -2.0
-        },
-        {
-          "id": "skills",
-          "effect": 1.9
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "translator",
@@ -33404,51 +26695,7 @@
       "attention_detail": 92,
       "research_methods": 65
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 29,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "language_context"
-      ],
-      "protectedGroups": [
-        "desk_synthesis",
-        "language_context"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -8.5
-        },
-        {
-          "id": "skills",
-          "effect": -8.1
-        },
-        {
-          "id": "digital",
-          "effect": -4.5
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "librarian",
@@ -33611,50 +26858,7 @@
       "teaching": 70,
       "arabic_language": 80
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 42,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "teaching",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": -7.8
-        },
-        {
-          "id": "human",
-          "effect": 2.9
-        },
-        {
-          "id": "digital",
-          "effect": -2.0
-        },
-        {
-          "id": "skills",
-          "effect": -0.9
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "islamic_scholar",
@@ -33820,50 +27024,7 @@
       "public_speaking": 80,
       "teaching": 78
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 67,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "teaching",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "presence",
-          "effect": 3.2
-        },
-        {
-          "id": "digital",
-          "effect": -2.2
-        },
-        {
-          "id": "skills",
-          "effect": 1.6
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "broadcast_presenter",
@@ -34029,51 +27190,7 @@
       "english_language": 80,
       "attention_detail": 70
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 53,
-      "band": "mixed",
-      "exposedGroups": [
-        "language_context",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "persuasion_authority",
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "creativity",
-        "leadership",
-        "sales_negotiation",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "human",
-          "effect": 4.0
-        },
-        {
-          "id": "presence",
-          "effect": -1.2
-        },
-        {
-          "id": "skills",
-          "effect": 0.1
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "content_creator",
@@ -34240,51 +27357,7 @@
       "arabic_language": 78,
       "sales_negotiation": 65
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 41,
-      "band": "exposed",
-      "exposedGroups": [
-        "desk_synthesis",
-        "visual"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "sales_negotiation",
-        "leadership",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -4.5
-        },
-        {
-          "id": "skills",
-          "effect": -4.4
-        },
-        {
-          "id": "presence",
-          "effect": -3.0
-        },
-        {
-          "id": "human",
-          "effect": 2.7
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "video_editor",
@@ -34451,50 +27524,7 @@
       "animation_3d": 60,
       "teamwork": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 40,
-      "band": "exposed",
-      "exposedGroups": [
-        "visual"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -3.6
-        },
-        {
-          "id": "skills",
-          "effect": -3.0
-        },
-        {
-          "id": "presence",
-          "effect": -3.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "cinematographer",
@@ -34661,51 +27691,7 @@
       "attention_detail": 85,
       "leadership": 70
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 59,
-      "band": "mixed",
-      "exposedGroups": [
-        "visual"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 8.3
-        },
-        {
-          "id": "human",
-          "effect": 2.7
-        },
-        {
-          "id": "digital",
-          "effect": -2.1
-        },
-        {
-          "id": "skills",
-          "effect": -0.4
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "film_director",
@@ -34872,51 +27858,7 @@
       "project_management": 78,
       "writing_docs": 75
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 66,
-      "band": "resilient",
-      "exposedGroups": [
-        "visual",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "sales_negotiation",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 8.3
-        },
-        {
-          "id": "human",
-          "effect": 6.5
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "digital",
-          "effect": -2.0
-        },
-        {
-          "id": "skills",
-          "effect": 1.4
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "photographer",
@@ -35083,51 +28025,7 @@
       "customer_service": 70,
       "marketing_comm": 65
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 53,
-      "band": "mixed",
-      "exposedGroups": [
-        "visual",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 8.3
-        },
-        {
-          "id": "skills",
-          "effect": -4.3
-        },
-        {
-          "id": "digital",
-          "effect": -3.9
-        },
-        {
-          "id": "human",
-          "effect": 2.8
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "graphic_designer",
@@ -35294,51 +28192,7 @@
       "arabic_language": 72,
       "teamwork": 72
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 40,
-      "band": "exposed",
-      "exposedGroups": [
-        "visual",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -4.4
-        },
-        {
-          "id": "skills",
-          "effect": -3.3
-        },
-        {
-          "id": "presence",
-          "effect": -2.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "motion_graphics_designer",
@@ -35505,49 +28359,7 @@
       "attention_detail": 82,
       "sound_audio": 60
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 34,
-      "band": "exposed",
-      "exposedGroups": [
-        "visual"
-      ],
-      "protectedGroups": [
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": -6.7
-        },
-        {
-          "id": "digital",
-          "effect": -6.4
-        },
-        {
-          "id": "presence",
-          "effect": -3.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "three_d_artist",
@@ -35714,50 +28526,7 @@
       "programming": 55,
       "problem_solving": 70
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 34,
-      "band": "exposed",
-      "exposedGroups": [
-        "visual",
-        "code"
-      ],
-      "protectedGroups": [
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -6.4
-        },
-        {
-          "id": "skills",
-          "effect": -6.1
-        },
-        {
-          "id": "presence",
-          "effect": -3.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "animator",
@@ -35923,50 +28692,7 @@
       "arabic_language": 60,
       "teamwork": 72
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 41,
-      "band": "exposed",
-      "exposedGroups": [
-        "visual"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -4.7
-        },
-        {
-          "id": "skills",
-          "effect": -3.4
-        },
-        {
-          "id": "presence",
-          "effect": -1.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "industrial_designer",
@@ -36136,51 +28862,7 @@
       "manufacturing_ops": 65,
       "project_management": 65
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 46,
-      "band": "mixed",
-      "exposedGroups": [
-        "visual"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "physical_judgement",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -2.4
-        },
-        {
-          "id": "presence",
-          "effect": -2.3
-        },
-        {
-          "id": "skills",
-          "effect": 0.8
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "interior_designer",
@@ -36347,50 +29029,7 @@
       "customer_service": 75,
       "attention_detail": 80
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 59,
-      "band": "mixed",
-      "exposedGroups": [
-        "visual"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 8.3
-        },
-        {
-          "id": "human",
-          "effect": 3.0
-        },
-        {
-          "id": "digital",
-          "effect": -2.3
-        },
-        {
-          "id": "skills",
-          "effect": -0.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "fashion_designer",
@@ -36558,51 +29197,7 @@
       "attention_detail": 82,
       "sales_negotiation": 60
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 44,
-      "band": "exposed",
-      "exposedGroups": [
-        "visual",
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "sales_negotiation",
-        "leadership",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "digital",
-          "effect": -4.1
-        },
-        {
-          "id": "skills",
-          "effect": -3.3
-        },
-        {
-          "id": "human",
-          "effect": 2.4
-        },
-        {
-          "id": "presence",
-          "effect": -1.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "sound_engineer",
@@ -36769,51 +29364,7 @@
       "teamwork": 75,
       "problem_solving": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 56,
-      "band": "mixed",
-      "exposedGroups": [
-        "visual"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship",
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 8.3
-        },
-        {
-          "id": "digital",
-          "effect": -2.6
-        },
-        {
-          "id": "skills",
-          "effect": 0.8
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "museum_curator",
@@ -36977,50 +29528,7 @@
       "public_speaking": 72,
       "project_management": 72
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 63,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "public_speaking",
-        "project_management",
-        "leadership",
-        "sales_negotiation"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "training",
-          "effect": 5.0
-        },
-        {
-          "id": "human",
-          "effect": 2.9
-        },
-        {
-          "id": "digital",
-          "effect": -2.2
-        },
-        {
-          "id": "skills",
-          "effect": -0.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "heritage_conservation_specialist",
@@ -37186,51 +29694,7 @@
       "civil_structures": 60,
       "writing_docs": 72
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 60,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "hands_on",
-        "physical_judgement"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.6
-        },
-        {
-          "id": "training",
-          "effect": 2.0
-        },
-        {
-          "id": "digital",
-          "effect": -2.0
-        },
-        {
-          "id": "skills",
-          "effect": 0.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "chef",
@@ -37395,51 +29859,7 @@
       "leadership": 72,
       "attention_detail": 85
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 68,
-      "band": "resilient",
-      "exposedGroups": [
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "human_relationship",
-        "creative_direction"
-      ],
-      "hedgeSkills": [
-        "creativity",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.6
-        },
-        {
-          "id": "skills",
-          "effect": 5.2
-        },
-        {
-          "id": "human",
-          "effect": 2.8
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "cabin_crew",
@@ -37600,50 +30020,7 @@
       "arabic_language": 70,
       "attention_detail": 78
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 69,
-      "band": "resilient",
-      "exposedGroups": [
-        "language_context"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 11.4
-        },
-        {
-          "id": "human",
-          "effect": 7.0
-        },
-        {
-          "id": "skills",
-          "effect": 3.8
-        },
-        {
-          "id": "training",
-          "effect": -3.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "sports_coach",
@@ -37808,52 +30185,7 @@
       "teamwork": 85,
       "rehabilitation": 60
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 83,
-      "band": "anchored",
-      "exposedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "counselling",
-        "sales_negotiation",
-        "public_speaking",
-        "project_management"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 13.5
-        },
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "fitness_specialist",
@@ -38018,49 +30350,7 @@
       "customer_service": 82,
       "patient_care": 65
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 79,
-      "band": "anchored",
-      "exposedGroups": [
-        "human_relationship"
-      ],
-      "protectedGroups": [
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "counselling",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "skills",
-          "effect": 12.9
-        },
-        {
-          "id": "presence",
-          "effect": 10.2
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "training",
-          "effect": -3.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "agriculture_specialist",
@@ -38228,49 +30518,7 @@
       "research_methods": 75,
       "problem_solving": 78
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 58,
-      "band": "mixed",
-      "exposedGroups": [
-        "data"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.6
-        },
-        {
-          "id": "digital",
-          "effect": -1.9
-        },
-        {
-          "id": "skills",
-          "effect": 0.6
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "aquaculture_specialist",
@@ -38437,50 +30685,7 @@
       "lab_diagnostics": 65,
       "problem_solving": 75
     },
-    "demand": "moderate",
-    "aiResistance": {
-      "score": 61,
-      "band": "resilient",
-      "exposedGroups": [
-        "data",
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.6
-        },
-        {
-          "id": "skills",
-          "effect": 1.0
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "moderate"
   },
   {
     "id": "travel_experience_designer",
@@ -38648,50 +30853,7 @@
       "curation_heritage": 70,
       "customer_service": 82
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 65,
-      "band": "resilient",
-      "exposedGroups": [
-        "desk_synthesis"
-      ],
-      "protectedGroups": [
-        "creative_direction",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "project_management",
-        "leadership",
-        "sales_negotiation",
-        "public_speaking"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "human",
-          "effect": 6.9
-        },
-        {
-          "id": "skills",
-          "effect": 3.0
-        },
-        {
-          "id": "digital",
-          "effect": -2.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "pastry_chef",
@@ -38856,52 +31018,7 @@
       "teamwork": 75,
       "fashion_textiles": 20
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 63,
-      "band": "resilient",
-      "exposedGroups": [
-        "data",
-        "visual"
-      ],
-      "protectedGroups": [
-        "hands_on",
-        "creative_direction",
-        "human_relationship"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.6
-        },
-        {
-          "id": "skills",
-          "effect": 3.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   },
   {
     "id": "restaurant_manager",
@@ -39067,51 +31184,7 @@
       "finance_accounting": 60,
       "teamwork": 85
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 74,
-      "band": "resilient",
-      "exposedGroups": [
-        "routine_admin"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "sales_negotiation",
-        "public_speaking",
-        "counselling",
-        "teaching"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 9.2
-        },
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "skills",
-          "effect": 7.5
-        },
-        {
-          "id": "digital",
-          "effect": -1.7
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "food_safety_officer",
@@ -39279,51 +31352,7 @@
       "attention_detail": 95,
       "lab_diagnostics": 55
     },
-    "demand": "very_high",
-    "aiResistance": {
-      "score": 61,
-      "band": "resilient",
-      "exposedGroups": [
-        "data",
-        "diagnostic_pattern"
-      ],
-      "protectedGroups": [
-        "persuasion_authority",
-        "hands_on"
-      ],
-      "hedgeSkills": [
-        "leadership",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "presence",
-          "effect": 10.1
-        },
-        {
-          "id": "skills",
-          "effect": 1.3
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "human",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "very_high"
   },
   {
     "id": "front_office_manager",
@@ -39488,49 +31517,6 @@
       "arabic_language": 70,
       "problem_solving": 75
     },
-    "demand": "high",
-    "aiResistance": {
-      "score": 70,
-      "band": "resilient",
-      "exposedGroups": [
-        "language_context"
-      ],
-      "protectedGroups": [
-        "human_relationship",
-        "persuasion_authority"
-      ],
-      "hedgeSkills": [
-        "problem_solving",
-        "sales_negotiation",
-        "public_speaking",
-        "counselling"
-      ],
-      "drivers": [
-        {
-          "id": "human",
-          "effect": 9.0
-        },
-        {
-          "id": "presence",
-          "effect": 7.2
-        },
-        {
-          "id": "skills",
-          "effect": 4.2
-        },
-        {
-          "id": "accountability",
-          "effect": 0.0
-        },
-        {
-          "id": "training",
-          "effect": 0.0
-        },
-        {
-          "id": "digital",
-          "effect": -0.0
-        }
-      ]
-    }
+    "demand": "high"
   }
 ]

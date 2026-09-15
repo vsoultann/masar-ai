@@ -86,10 +86,18 @@ NOT_A_PHOTO = re.compile(
 NOT_A_PLACE = re.compile(
     r"graduation|ceremon|conference|summit|forum|award|signing|delegation"
     r"|portrait|professor|\bdr\b|speech|speaker|panel|meeting|visit|students?"
-    r"\b|group|team|astronaut|\biss\b|earth|satellite|space station|logo"
+    # "ISS053-E-127299 - View of United Arab Emirates" is a photograph taken
+    # from orbit. \biss\b does not match "ISS053" -- there is no word boundary
+    # after the letters -- so it reached two cards as a picture of the
+    # neighbourhood. It is a picture of the neighbourhood, from 400 km up.
+    r"\b|group|team|astronaut|\biss\d|\biss\b|earth|satellite|space station"
+    r"|from space|orbit|logo"
     r"|experts?\b|and others?\b|opens?\b|opening|launch|inaugurat|minister"
     r"|sheikh|excellency|president|chancellor|rector|staff|faculty|interview"
-    r"|workshop|lecture|seminar|graduates?\b|alumni",
+    r"|workshop|lecture|seminar|graduates?\b|alumni|participat|exhibit"
+    r"|defence|defense|vehicle|armou?red|truck|aircraft|drone|museum"
+    r"|discuss\w*|speaks?\b|talks?\b|announc\w*|explain\w*|shares?\b"
+    r"|receiv\w*|meets?\b|welcom\w*|honou?r\w*|journey|appoint\w*",
     re.IGNORECASE,
 )
 
@@ -98,6 +106,24 @@ NOT_A_PLACE = re.compile(
 # be standing at a university. A filename that opens with a list of personal
 # names is describing who is in the picture, not where it was taken.
 NAMED_PEOPLE = re.compile(r"\b[A-Z][a-z]+ [A-Z][a-z]+\s*(,|\band\b)", re.UNICODE)
+
+# An institution or a named facility. Fine as the subject of a campus
+# photograph, wrong as a stand-in for "the area around this campus".
+NAMED_BUILDING = re.compile(
+    r"universit|college|institute|academy|\bschool\b|hospital|clinic|campus",
+    re.IGNORECASE,
+)
+
+# The main city of each emirate, for the last-resort tier.
+EMIRATE_CENTRE = {
+    "abu_dhabi": (24.4539, 54.3773),
+    "dubai": (25.2048, 55.2708),
+    "sharjah": (25.3463, 55.4209),
+    "ajman": (25.4052, 55.5136),
+    "umm_al_quwain": (25.5647, 55.5532),
+    "ras_al_khaimah": (25.7895, 55.9432),
+    "fujairah": (25.1288, 56.3265),
+}
 
 # Files that are photographs of a place, ranked up.
 PLACE_HINT = re.compile(
@@ -159,7 +185,56 @@ def distinctive(name: str) -> list[str]:
     return [w for w in words if len(w) >= 4 and w not in GENERIC_NAME]
 
 
-def named_for(title: str, name: str, short: str) -> bool:
+def flat_name(value: str) -> str:
+    """Lowercased, punctuation-free, with any campus suffix removed."""
+    head = re.split(r"[-\u2013\u2014]", value)[0]
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 ]", " ", head.lower())).strip()
+
+
+# Words that may sit in front of an institution's name without changing whose
+# name it is. Anything else in that position means the name is the tail of a
+# longer one.
+LEAD_IN = {
+    "file", "the", "at", "in", "of", "to", "from", "near", "inside", "outside",
+    "new", "old", "main", "a", "an", "and", "on", "by", "for", "image", "photo",
+}
+
+
+def is_tail_of_longer_name(title: str, name: str) -> bool:
+    """True when this institution's name is only the tail of a different one.
+
+    The collision that forces this: "Training Sessions at the American
+    University of Dubai" contains "university of dubai", so it matched the
+    University of Dubai -- a different institution a few kilometres from the
+    American University *in* Dubai the photograph is actually of.
+
+    Comparing catalog names against one another does not catch it, because the
+    catalog spells that institution "in Dubai" and the filename spells it "of
+    Dubai". Position does catch it. A title is about this institution when its
+    name stands on its own, and about a different one when the name is the tail
+    of something longer -- "American University of Dubai" ends with "University
+    of Dubai" the way "South Sudan" ends with "Sudan". So the word immediately
+    before the match has to be a harmless lead-in rather than another part of a
+    proper name.
+    """
+    cleaned = re.sub(r"^file\s*:?\s*", "", title, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\.[a-z0-9]{2,4}$", "", cleaned, flags=re.IGNORECASE)
+    haystack = flat_name(cleaned)
+    mine = flat_name(name)
+    if not mine or mine not in haystack:
+        return False
+
+    index = haystack.find(mine)
+    while index != -1:
+        before = haystack[:index].strip().split()
+        if not before or before[-1] in LEAD_IN or before[-1].isdigit():
+            return False  # it stands on its own at least once
+        index = haystack.find(mine, index + 1)
+    return True
+
+
+def named_for(title: str, name: str, short: str,
+               allow_abbreviation: bool = True) -> bool:
     """Does this file's title say it is of this institution?
 
     Three ways, in order of how much they prove:
@@ -167,7 +242,14 @@ def named_for(title: str, name: str, short: str) -> bool:
       the full name, verbatim -- which is the only evidence available for
         "United Arab Emirates University", every word of which is a generic
         or a place name;
-      the abbreviation as a standalone word -- "AUS", "UAEU", "NYUAD".
+      the abbreviation as a standalone word -- "AUS", "UAEU", "NYUAD" -- but
+        only where something else has already fixed the location, because a
+        three-letter abbreviation collides with the entire world. A free-text
+        Commons search for "ATA" returns the Petroglyph Museum of Cholpon-Ata
+        in Kyrgyzstan; "KIC" returns a star from the Kepler Input Catalog;
+        "AAU" returns Aalborg University in Copenhagen. Within a few kilometres
+        of the right campus those collisions are impossible, which is why the
+        geosearch path may use an abbreviation and the search path may not.
 
     A single distinguishing word used to count too, and it was far too weak.
     It attached "Sharjah University Street" to HCT Sharjah, "Umm Al Quwain -
@@ -187,7 +269,8 @@ def named_for(title: str, name: str, short: str) -> bool:
 
     if flat(name) and flat(name) in haystack:
         return True
-    if short and len(short) >= 3 and re.search(rf"\b{re.escape(short.lower())}\b", haystack):
+    if (allow_abbreviation and short and len(short) >= 3
+            and re.search(rf"\b{re.escape(short.lower())}\b", haystack)):
         return True
     return False
 
@@ -232,7 +315,33 @@ def file_info(title: str) -> dict | None:
     return None
 
 
-def geosearch(lat: float, lng: float, radius: int = 1200) -> list[dict]:
+def search_commons(term: str, limit: int = 25) -> list[str]:
+    """Free-text file search, which is only safe behind the name check.
+
+    Searching for "United Arab Emirates University campus" returns photographs
+    of Heriot-Watt Dubai and Troy University Sharjah in its first five results,
+    which is why this was left out of the first version. But the same strict
+    rule the geosearch path uses -- the filename must carry the institution's
+    full name or its abbreviation -- makes the search safe *and* turns out to
+    be where most of the coverage actually is: MBZUAI, Khawarizmi and ECAE all
+    have properly-named photographs on Commons that sit in no category and
+    carry no coordinates, so neither of the other two paths could see them.
+    """
+    data = api("commons.wikimedia.org", {
+        "action": "query", "list": "search", "srsearch": f"{term} filetype:bitmap",
+        "srnamespace": 6, "srlimit": limit,
+    })
+    return [hit["title"] for hit in data.get("query", {}).get("search", [])]
+
+
+# Commons refuses ggsradius above 10 km — and refuses it silently, with an
+# empty result rather than an error. Two rings of this were no-ops for an
+# entire run before anyone noticed, which is why the cap is a named constant
+# and every caller is clamped to it rather than trusted to remember.
+MAX_GEO_RADIUS = 10000
+
+
+def geosearch(lat: float, lng: float, radius: int = 4000) -> list[dict]:
     """Files photographed at this place.
 
     The reason this exists alongside the category lookup: UAEU has no Commons
@@ -243,7 +352,8 @@ def geosearch(lat: float, lng: float, radius: int = 1200) -> list[dict]:
     """
     data = api("commons.wikimedia.org", {
         "action": "query", "generator": "geosearch",
-        "ggscoord": f"{lat}|{lng}", "ggsradius": radius, "ggslimit": 40,
+        "ggscoord": f"{lat}|{lng}", "ggsradius": min(radius, MAX_GEO_RADIUS),
+        "ggslimit": 40,
         "ggsnamespace": 6, "prop": "imageinfo",
         "iiprop": "url|extmetadata|size|mime", "iiurlwidth": 1600,
     })
@@ -290,7 +400,7 @@ def acceptable(info: dict) -> bool:
     return True
 
 
-def pick_photo(university: dict) -> dict | None:
+def pick_photo(university: dict, others: list[str] | None = None) -> dict | None:
     """A photograph that is provably of this institution, or nothing.
 
     Two independent kinds of evidence are accepted, and one of them is
@@ -315,6 +425,11 @@ def pick_photo(university: dict) -> dict | None:
     short = university["shortName"]["en"]
     candidates: list[dict] = []
 
+    def is_of_this_place(title: str, allow_abbreviation: bool = True) -> bool:
+        if is_tail_of_longer_name(title, name):
+            return False
+        return named_for(title, name, short, allow_abbreviation=allow_abbreviation)
+
     # 1. Curated category, verified by how closely its name matches.
     for guess in (name, short):
         category = f"Category:{guess}"
@@ -328,6 +443,8 @@ def pick_photo(university: dict) -> dict | None:
                 continue
             # Provenance says it belongs to this institution; this says it is a
             # photograph of somewhere rather than of someone or something.
+            if is_tail_of_longer_name(title, name):
+                continue
             if not (PLACE_HINT.search(title) or named_for(title, name, short)):
                 continue
             info = file_info(title)
@@ -343,9 +460,95 @@ def pick_photo(university: dict) -> dict | None:
         for info in geosearch(coordinates["lat"], coordinates["lng"]):
             if NOT_A_PLACE.search(info["title"]) or NAMED_PEOPLE.search(info["title"]):
                 continue
-            if acceptable(info) and named_for(info["title"], name, short):
+            if acceptable(info) and is_of_this_place(info["title"]):
                 info["evidence"] = "geo+name"
                 candidates.append(info)
+
+    # 3. Named for the institution anywhere on Commons.
+    if not candidates:
+        # The full name only. Querying the abbreviation is what dragged in the
+        # museum, the star and the Danish university.
+        for term in (name,):
+            for title in search_commons(term):
+                if (NOT_A_PHOTO.search(title) or NOT_A_PLACE.search(title)
+                        or NAMED_PEOPLE.search(title)):
+                    continue
+                if not is_of_this_place(title, allow_abbreviation=False):
+                    continue
+                info = file_info(title)
+                if acceptable(info):
+                    info["evidence"] = "search+name"
+                    candidates.append(info)
+            if candidates:
+                break
+
+    # 4. The surroundings.
+    #
+    # Eleven of fifty institutions have a photograph of themselves on Commons,
+    # and no amount of filtering changes that -- the pictures do not exist. But
+    # a student choosing where to spend four years is also asking what the
+    # place is like, so for the rest this takes the best free photograph of the
+    # area around the campus.
+    #
+    # It is recorded as `surroundings` rather than as a campus photograph, and
+    # the UI labels it that way, because the entire point of the rules above is
+    # that a photograph must not claim to be something it is not. A picture of
+    # Al Ain captioned "Al Ain" is true; the same picture captioned "United
+    # Arab Emirates University" is not.
+    if not candidates:
+        coordinates = university["coordinates"]
+        nearby = []
+        # Three rings. Most campuses are in a city with plenty of free
+        # photography; Ruwais, Ras Al Khaimah and the technical academies are
+        # not, and for those the honest unit of "around here" is the town
+        # rather than the street.
+        for radius in (3000, 6000, MAX_GEO_RADIUS):
+            for info in geosearch(coordinates["lat"], coordinates["lng"], radius=radius):
+                if NOT_A_PLACE.search(info["title"]) or NAMED_PEOPLE.search(info["title"]):
+                    continue
+                # A neutral view of the area, not somebody else's building.
+                # Without this, Amity Dubai got a photograph captioned "Fakeeh
+                # University Hospital Dubai" — true of the neighbourhood and
+                # misleading on the card.
+                if NAMED_BUILDING.search(info["title"]):
+                    continue
+                if any(is_tail_of_longer_name(info["title"], other) or
+                       flat_name(other) in flat_name(info["title"])
+                       for other in (others or []) if flat_name(other) != flat_name(name)):
+                    continue
+                if acceptable(info):
+                    info["evidence"] = "surroundings"
+                    nearby.append(info)
+            if nearby:
+                break
+        if nearby:
+            nearby.sort(key=lambda c: (
+                0 if PLACE_HINT.search(c["title"]) else 1,
+                -(c["width"] * c["height"]),
+            ))
+            return nearby[0]
+
+    # 5. The emirate.
+    #
+    # Four institutions sit somewhere with no free photography at all within
+    # thirty kilometres -- Ruwais is a remote industrial town, and the northern
+    # technical academies are much the same. Rather than leave those four as
+    # the only cards with no photograph, this falls back to the emirate's main
+    # city and records *which* place it is, so the badge reads "Abu Dhabi"
+    # rather than "Nearby area". Two hundred kilometres is not nearby, and the
+    # label has to survive being read literally.
+    if not candidates:
+        centre = EMIRATE_CENTRE.get(university["emirate"])
+        if centre:
+            for info in geosearch(centre[0], centre[1], radius=MAX_GEO_RADIUS):
+                if NOT_A_PLACE.search(info["title"]) or NAMED_PEOPLE.search(info["title"]):
+                    continue
+                if NAMED_BUILDING.search(info["title"]):
+                    continue
+                if acceptable(info) and PLACE_HINT.search(info["title"]):
+                    info["evidence"] = "emirate"
+                    info["place"] = university["emirate"]
+                    return info
 
     if not candidates:
         return None
@@ -381,6 +584,7 @@ def main() -> None:
     args = parser.parse_args()
 
     universities = json.loads(DATA.read_text(encoding="utf-8"))
+    all_names = [u["name"]["en"] for u in universities]
     if args.only:
         universities = [u for u in universities if u["id"] == args.only]
 
@@ -399,9 +603,9 @@ def main() -> None:
             found += 1
             continue
 
-        info = pick_photo(university)
+        info = pick_photo(university, all_names)
         if not info:
-            print(f"  - {uid:22} no free photograph found — keeps generated art")
+            print(f"  - {uid:22} nothing free, not even nearby — keeps generated art")
             continue
 
         found += 1
@@ -423,6 +627,15 @@ def main() -> None:
                 "licenseUrl": info["licence_url"],
                 "url": info["descriptionurl"],
                 "evidence": info["evidence"],
+                # "campus" means a photograph of this institution;
+                # "surroundings" means the area around it, and the UI says so.
+                "kind": ("campus" if info["evidence"] in
+                         ("category", "geo+name", "search+name")
+                         or info["evidence"].startswith("category:")
+                         else "surroundings"),
+                # Which place the photograph is of, when it is not the campus.
+                # The UI labels the badge with this rather than guessing.
+                "place": info.get("place"),
             }
         time.sleep(0.3)
 

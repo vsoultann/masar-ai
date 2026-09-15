@@ -1,6 +1,6 @@
 import {
-  indexBy, loadCareerIndex, loadCourses, loadMajors, loadResistanceGlossary,
-  loadScholarships, loadSectors, loadSkills, loadUniversities,
+  indexBy, loadCareerIndex, loadCourses, loadMajors, loadScholarships,
+  loadSectors, loadSkills, loadUniversities,
 } from "@/lib/data/client";
 import { assessEligibility, matchUniversities } from "@/lib/matching/universities";
 import type { Career, Lang, Profile, Scholarship, University } from "@/lib/types";
@@ -32,7 +32,6 @@ export type Intent =
   | "list_majors"
   | "universities"
   | "my_matches"
-  | "ai_impact"
   | "career_outlook"
   | "scholarships"
   | "admission_requirements"
@@ -102,48 +101,6 @@ const INTENT_PATTERNS: { intent: Intent; patterns: RegExp[] }[] = [
     patterns: [
       /\b(what can you do|what do you do|how do you work|what are you|who are you|help me with|^help$|your capabilities|what can i ask)\b/i,
       /(ماذا تستطيع|ما الذي تستطيع|كيف تعمل|من انت|من أنت|بماذا تساعد|ماذا يمكنني ان اسال)/,
-    ],
-  },
-  {
-    /*
-     * Ahead of career_outlook, and the two are deliberately different answers.
-     *
-     * "Is nursing in demand?" is a question about a labour market this catalog
-     * only rates. "Will AI replace nurses?" is a question about the *shape of
-     * the work*, which the catalog can actually speak to, because the exposure
-     * index is derived from the skill weights and work settings it holds. So
-     * the AI form of the question gets the breakdown and the outlook form gets
-     * the rating, and neither pretends to be the other.
-     *
-     * Both halves are required to open this intent: a mention of machines AND
-     * a word about displacement or the future. That is what keeps "what does
-     * an AI engineer do?" -- where "AI" is part of a job title in this catalog
-     * -- out of it.
-     */
-    intent: "ai_impact",
-    patterns: [
-      new RegExp(
-        String.raw`\b(ai|a\.i\.|artificial intelligence|machine learning|automation`
-        + String.raw`|automated|robots?|chatgpt|llms?|machines?)\b[\s\S]{0,60}`
-        + String.raw`\b(replace[drs]?|replacing|take over|takeover|kill|destroy|end`
-        + String.raw`|obsolete|redundant|safe|survive|resist\w*|future|threat\w*`
-        + String.raw`|risk|impact|affect\w*|disrupt\w*|revolution|proof|still)\b`,
-        "i",
-      ),
-      new RegExp(
-        String.raw`\b(replace[drs]?|replacing|take over|automat\w*|obsolete|redundant`
-        + String.raw`|safe from|threat\w*|proof)\b[\s\S]{0,60}`
-        + String.raw`\b(ai|a\.i\.|artificial intelligence|machine learning|robots?`
-        + String.raw`|chatgpt|llms?|machines?|automation)\b`,
-        "i",
-      ),
-      // "محل" on its own, because Arabic splits the verb from it: a student
-      // writes "هل سيحل الذكاء الاصطناعي محل المحاسبين" and the two halves of
-      // "يحل محل" end up either side of the subject. Bare محل is a common noun
-      // ("shop"), which is why it only counts within 60 characters of a
-      // mention of machines.
-      /(الذكاء الاصطناعي|الاتمته|الاتمتة|الأتمتة|الروبوت|الالات|الآلات)[\s\S]{0,60}(محل|يستبدل|تستبدل|يلغي|تلغي|مستقبل|خطر|تهديد|امن|أمن|يقاوم|تقاوم|يصمد|تصمد|ينهي|تنهي)/,
-      /(يحل|تحل|سيحل|ستحل|يستبدل|تستبدل|خطر|تهديد|مستقبل)[\s\S]{0,60}(الذكاء الاصطناعي|الاتمته|الاتمتة|الأتمتة|الروبوت|الالات|الآلات)/,
     ],
   },
   {
@@ -510,6 +467,8 @@ const COPY = {
       "Name a career and I will start — for example “what does a radiologist do?”",
     ].join("\n"),
     ambiguous: "Several careers match that. Which one did you mean?",
+    closestMatch: (career: string) => `The closest match is ${career}.`,
+    otherMatches: "Other roles matched what you asked too — they are linked below.",
     outlookIntro: (career: string) => `Here is what the catalog records about demand for ${career}:`,
     outlookDemand: (label: string) => `• Demand rating in the UAE catalog: ${label}.`,
     outlookTrend: (from: number, to: number, percent: number) =>
@@ -529,20 +488,6 @@ const COPY = {
     compareDiffers: (career: string, skills: string) => `${career} additionally needs ${skills}.`,
     coursesIntro: "Given your gaps, start with these:",
     sectorIntro: (sector: string) => `Careers in ${sector}:`,
-
-    aiIntro: (career: string, score: number, band: string) =>
-      `AI resistance for ${career}: ${score}/100 — ${band}.`,
-    aiExposed: "What AI already does in this role:",
-    aiProtected: "What it does not:",
-    aiHedge: (skills: string) =>
-      `Building ${skills} inside this career moves you toward the part of it that holds.`,
-    aiCaveat:
-      "That score is a structural index over this site's own data — the role's skill "
-      + "weights, where the work happens, whether it is licensed, how long the training is. "
-      + "It answers \u201chow much of this job is the kind of work machines are good at "
-      + "today\u201d, which is a narrower question than the one you asked. I am a lookup over "
-      + "this catalog, not a forecaster: I cannot tell you whether this job exists in 2040, "
-      + "and neither can anyone selling you a number that says they can.",
 
     schoIntro: (subject: string) => `Funding routes that cover ${subject}:`,
     schoGeneral: "The funding routes in the catalog, widest first:",
@@ -621,8 +566,8 @@ const COPY = {
       + "grades, what you can pay and how far you can travel.",
 
     sectorIntroList: (sector: string) => `Careers in ${sector}:`,
-    sectorLine: (career: string, demand: string, resistance: number) =>
-      `\u2022 ${career} \u2014 demand ${demand}, AI resistance ${resistance}/100`,
+    sectorLine: (career: string, demand: string) =>
+      `\u2022 ${career} \u2014 demand ${demand}`,
     sectorGeneral: (sectors: string) =>
       `Name a sector and I will list its careers. The catalog covers: ${sectors}.`,
 
@@ -649,6 +594,8 @@ const COPY = {
       "اذكر اسم مهنة لنبدأ — مثلًا: «ماذا يعمل أخصائي الأشعة؟»",
     ].join("\n"),
     ambiguous: "هناك عدة مهن تطابق ذلك. أيها تقصد؟",
+    closestMatch: (career: string) => `أقرب تطابق هو ${career}.`,
+    otherMatches: "طابقت أدوار أخرى ما سألت عنه أيضًا، وهي مرتبطة أدناه.",
     outlookIntro: (career: string) => `هذا ما يسجّله الكتالوج عن الطلب على مهنة ${career}:`,
     outlookDemand: (label: string) => `• تصنيف الطلب في كتالوج الإمارات: ${label}.`,
     outlookTrend: (from: number, to: number, percent: number) =>
@@ -667,19 +614,6 @@ const COPY = {
     compareDiffers: (career: string, skills: string) => `وتحتاج ${career} إضافةً إلى ${skills}.`,
     coursesIntro: "بالنظر إلى فجواتك، ابدأ بهذه الدورات:",
     sectorIntro: (sector: string) => `مهن في قطاع ${sector}:`,
-
-    aiIntro: (career: string, score: number, band: string) =>
-      `مقاومة الذكاء الاصطناعي لمهنة ${career}: ${score}/100 — ${band}.`,
-    aiExposed: "ما يؤديه الذكاء الاصطناعي في هذا الدور بالفعل:",
-    aiProtected: "وما لا يؤديه:",
-    aiHedge: (skills: string) =>
-      `بناء ${skills} داخل هذه المهنة ينقلك نحو الجزء الصامد منها.`,
-    aiCaveat:
-      "هذه الدرجة مؤشر بنيوي مبني على بيانات هذا الموقع نفسه — أوزان مهارات الدور، وأين يجري "
-      + "العمل، وهل هو مرخَّص، وكم يطول التأهيل. وهي تجيب عن سؤال: ما مقدار ما في هذه المهنة "
-      + "من عمل تتقنه الآلات اليوم، وهو سؤال أضيق مما سألت. أنا بحث في هذا الكتالوج ولست أداة "
-      + "تنبؤ: لا أستطيع إخبارك إن كانت هذه المهنة ستبقى عام 2040، ولا يستطيع ذلك من يبيعك "
-      + "رقمًا يزعم أنه يستطيع.",
 
     schoIntro: (subject: string) => `مسارات التمويل التي تشمل ${subject}:`,
     schoGeneral: "مسارات التمويل في الكتالوج، الأوسع أولًا:",
@@ -750,8 +684,8 @@ const COPY = {
       + "دفعه وكم تستطيع أن تسافر.",
 
     sectorIntroList: (sector: string) => `المهن في قطاع ${sector}:`,
-    sectorLine: (career: string, demand: string, resistance: number) =>
-      `• ${career} — الطلب ${demand}، مقاومة الذكاء الاصطناعي ${resistance}/100`,
+    sectorLine: (career: string, demand: string) =>
+      `• ${career} — الطلب ${demand}`,
     sectorGeneral: (sectors: string) =>
       `اذكر قطاعًا وسأسرد مهنه. يغطي الكتالوج: ${sectors}.`,
 
@@ -917,10 +851,10 @@ export async function answer(
   let intent = detectIntent(question);
 
   const [
-    careerIndex, careersFull, universities, skills, courses, majors, scholarships, resistance,
+    careerIndex, careersFull, universities, skills, courses, majors, scholarships,
   ] = await Promise.all([
     loadCareerIndex(), loadCareers(), loadUniversities(), loadSkills(), loadCourses(),
-    loadMajors(), loadScholarships(), loadResistanceGlossary(),
+    loadMajors(), loadScholarships(),
   ]);
   const sectors = await loadSectors();
 
@@ -955,9 +889,30 @@ export async function answer(
    * that word. Asking "which one did you mean?" with one option would be
    * pedantry. Two or more and the question goes back to the student.
    */
+  /*
+   * Answer, then offer the alternatives. Never interrogate.
+   *
+   * This used to promote a near miss only when there was exactly one, and ask
+   * "which one did you mean?" otherwise. Asked about "graphic designer" it
+   * replied with a question; told "no, just answer me yourself" it replied
+   * with its own capability list. That is a chatbot arguing with someone who
+   * came for help.
+   *
+   * rankMentions already sorts by how well each row matched, so the top one is
+   * the best answer available. It is used, and the runners-up are attached as
+   * citations -- which the UI renders as links, so the student who meant the
+   * other one is a single click away rather than a turn of conversation away.
+   */
+  /*
+   * Whether a career was named outright, as opposed to reached through a loose
+   * word. It matters downstream: questions phrased in *subjects* ("where can I
+   * study medicine?", "scholarships for nursing?") should be answered through
+   * the major, and a weak career partial must not outrank that.
+   */
+  const namedInFull = ranked.named.length > 0;
   const mentioned = ranked.named.length > 0
     ? ranked.named
-    : ranked.partial.length === 1 && !ranked.partialIsGeneric
+    : ranked.partial.length > 0 && !ranked.partialIsGeneric
       ? ranked.partial
       : [];
   const partial = mentioned.length > 0 ? [] : ranked.partial;
@@ -1087,15 +1042,25 @@ export async function answer(
       .test(haystack)
       || /(اعلى|أعلى|اكثر|أكثر|افضل|أفضل)/.test(question);
     if (!wantsRanking && !namedSector && partial.length > 0) {
-      return {
-        intent,
-        text: copy.ambiguous,
-        citations: partial.map((row) => ({
-          kind: "career" as const,
-          id: row.id,
-          label: locale === "ar" ? row.ar : row.en,
-        })),
-      };
+      const best = careersById.get(partial[0].id);
+      if (best) {
+        return {
+          intent,
+          text: [
+            copy.closestMatch(best.title[locale]),
+            copy.salaryTier(
+              best.salaryAED.entry, best.salaryAED.mid, best.salaryAED.senior,
+            ),
+            partial.length > 1 ? copy.otherMatches : "",
+            copy.salaryCaveat,
+          ].filter(Boolean).join("\n\n"),
+          citations: partial.map((row) => ({
+            kind: "career" as const,
+            id: row.id,
+            label: locale === "ar" ? row.ar : row.en,
+          })),
+        };
+      }
     }
 
     const pool = namedSector
@@ -1139,7 +1104,6 @@ export async function answer(
               copy.sectorLine(
                 row.title[locale],
                 DEMAND_LABEL[locale][row.demand] ?? row.demand,
-                row.aiResistance.score,
               )).join("\n"),
           ].join("\n\n"),
           citations: leadsTo.slice(0, 4).map((row) => ({
@@ -1298,7 +1262,7 @@ export async function answer(
     if (namedSector) {
       const inSector = careersFull
         .filter((row) => row.sector === namedSector.id)
-        .sort((a, b) => b.aiResistance.score - a.aiResistance.score)
+        .sort((a, b) => b.salaryAED.senior - a.salaryAED.senior)
         .slice(0, 8);
       if (inSector.length > 0) {
         return {
@@ -1309,7 +1273,6 @@ export async function answer(
               copy.sectorLine(
                 row.title[locale],
                 DEMAND_LABEL[locale][row.demand] ?? row.demand,
-                row.aiResistance.score,
               )).join("\n"),
           ].join("\n\n"),
           citations: inSector.slice(0, 4).map((row) => ({
@@ -1327,67 +1290,18 @@ export async function answer(
     };
   }
 
-  // --- AI impact ---------------------------------------------------------
-  //
-  // The one question in this app that a catalog can answer better than an
-  // opinion can. The score is derived from fields the student can see on the
-  // same career page, the breakdown is included so they can disagree with it
-  // specifically rather than vaguely, and the closing paragraph states the
-  // limit of the claim rather than trailing off into confidence.
-  if (intent === "ai_impact" && mentioned.length > 0) {
-    const career = careersById.get(mentioned[0].id);
-    if (career) {
-      const separator = listSep(locale);
-      const index = career.aiResistance;
-      const band = resistance.bands[index.band];
-      const trend = career.growthTrend;
-      const first = trend[0];
-      const last = trend[trend.length - 1];
-      const percent = first > 0 ? Math.round(((last - first) / first) * 100) : 0;
-
-      const sections = [
-        copy.aiIntro(career.title[locale], index.score, band.label[locale]),
-        band.summary[locale],
-        [
-          copy.aiExposed,
-          ...index.exposedGroups.map(
-            (group) => `• ${resistance.groups[group]?.exposed[locale] ?? group}`,
-          ),
-        ].join("\n"),
-        [
-          copy.aiProtected,
-          ...index.protectedGroups.map(
-            (group) => `• ${resistance.groups[group]?.protected[locale] ?? group}`,
-          ),
-        ].join("\n"),
-        copy.aiHedge(index.hedgeSkills.map(skillName).join(separator)),
-        // The demand rating too: a student asking about AI is asking about the
-        // future of the job, and the rating is the other half of that answer.
-        [
-          copy.outlookDemand(DEMAND_LABEL[locale][career.demand] ?? career.demand),
-          copy.outlookTrend(first, last, percent),
-        ].join("\n"),
-        copy.aiCaveat,
-      ];
-
-      return {
-        intent,
-        text: sections.join("\n\n"),
-        citations: [{ kind: "career", id: career.id, label: career.title[locale] }],
-      };
-    }
-  }
-
   // --- scholarships ------------------------------------------------------
   if (intent === "scholarships") {
-    const career = mentioned.length > 0 ? careersById.get(mentioned[0].id) : null;
+    const career = namedInFull && mentioned.length > 0
+      ? careersById.get(mentioned[0].id)
+      : null;
     /*
      * A funding question is often phrased in subjects rather than job titles --
      * "are there scholarships for nursing?" -- and "nursing" half-matches
      * several nursing roles without naming one. The major is the better key:
      * scholarships are scoped to fields of study in the first place.
      */
-    const subjectMajors = career ? [] : majorCandidates.map((row) => row.id);
+    const subjectMajors = namedInFull ? [] : majorCandidates.map((row) => row.id);
     const picked = rankScholarships(scholarships, career ?? null, profile, 5, subjectMajors);
     const wanted = career ? career.educationPath.relatedMajors : subjectMajors;
     const scoped = wanted.length > 0
@@ -1485,7 +1399,7 @@ export async function answer(
   // "Where can I study medicine?" names a subject, not a job, and half-matches
   // several medical careers -- so it used to reach the ambiguity reply. The
   // major is the better answer to a question phrased in subjects.
-  if (intent === "where_to_study" && mentioned.length === 0 && majorCandidates.length > 0) {
+  if (intent === "where_to_study" && !namedInFull && majorCandidates.length > 0) {
     const wanted = new Set(majorCandidates.map((row) => row.id));
     const teaching = universities
       .filter((row) => row.majorsOffered.some((major) => wanted.has(major)))
@@ -1685,16 +1599,36 @@ export async function answer(
   // A near miss is worth offering. "Is graphic design still a career?" once
   // landed here and got "name a career and I will describe it", which is both
   // wrong — the question named one — and a dead end.
+  /*
+   * A loose match still gets a real answer.
+   *
+   * Only generic-word hits reach here now ("I want to be a designer"), and the
+   * honest response to that is to describe the closest role and show the other
+   * candidates as links -- not to bounce the question back.
+   */
   if (partial.length > 0) {
-    return {
-      intent: "unknown",
-      text: copy.ambiguous,
-      citations: partial.map((row) => ({
-        kind: "career" as const,
-        id: row.id,
-        label: locale === "ar" ? row.ar : row.en,
-      })),
-    };
+    const best = careersById.get(partial[0].id);
+    if (best) {
+      return {
+        intent: "describe_career",
+        text: [
+          copy.closestMatch(best.title[locale]),
+          best.shortDescription[locale],
+          best.dayInTheLife[locale],
+          copy.route(
+            best.educationPath.minimumQualification[locale],
+            best.educationPath.typicalYears,
+          ),
+          copy.salary(best.salaryAED.entry, best.salaryAED.senior),
+          partial.length > 1 ? copy.otherMatches : "",
+        ].filter(Boolean).join("\n\n"),
+        citations: partial.map((row) => ({
+          kind: "career" as const,
+          id: row.id,
+          label: locale === "ar" ? row.ar : row.en,
+        })),
+      };
+    }
   }
 
   return { intent: "unknown", text: copy.help, citations: [] };

@@ -6,7 +6,6 @@ import { useState } from "react";
 
 import CareerArt from "@/components/art/CareerArt";
 import MatchRing from "@/components/MatchRing";
-import { ResistanceBadge } from "@/components/ui";
 import { indexBy, loadCareerIndex, loadMajors } from "@/lib/data/client";
 import { localiseDigits } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
@@ -186,12 +185,6 @@ export default function MiniDemo() {
                 >
                   {outcome.career.title[locale]}
                 </Link>
-                <div className="mt-1.5 flex flex-wrap items-center gap-2">
-                  <ResistanceBadge
-                    value={outcome.career.aiResistance.score}
-                    band={outcome.career.aiResistance.band}
-                  />
-                </div>
                 {deep && outcome.majors.length > 0 && (
                   <p className="mt-1.5 text-xs leading-relaxed muted">
                     <span className="font-semibold">{t.landing.demoMajors}:</span>{" "}

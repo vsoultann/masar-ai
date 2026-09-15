@@ -13,9 +13,21 @@ import { scoreQuestionnaire } from "@/lib/scoring";
 import { emptyProfile, useProfile } from "@/lib/store/profile";
 import type { Profile, Questionnaire } from "@/lib/types";
 
+/*
+ * The six core subjects, and only those.
+ *
+ * The wizard used to ask for nine, including Islamic studies, social studies
+ * and computer science. Those are not taken by every student on every MOE
+ * track, so the form asked most people for marks they did not have and then
+ * accepted the blanks silently. Six subjects everyone sits is a form that can
+ * reasonably be made mandatory, which is the point.
+ *
+ * The model still has features for the other three; the inference pipeline
+ * imputes a missing grade, exactly as it already did whenever a student left
+ * one of them blank. Nothing needs retraining.
+ */
 const SUBJECTS = [
-  "arabic", "english", "math", "physics", "chemistry",
-  "biology", "islamic", "social", "computer_science",
+  "math", "physics", "biology", "chemistry", "english", "arabic",
 ] as const;
 const EMSAT_SUBJECTS = ["english", "math", "physics", "arabic"] as const;
 const EMIRATES = [
@@ -64,6 +76,8 @@ export default function AssessmentPage() {
   // step 2
   const [grades, setGrades] = useState<Record<string, string>>({});
   const [emsat, setEmsat] = useState<Record<string, string>>({});
+  const [gradeErrors, setGradeErrors] = useState<Record<string, string>>({});
+  const [emsatErrors, setEmsatErrors] = useState<Record<string, string>>({});
   // steps 3 and 4
   const [riasec, setRiasec] = useState<Questionnaire | null>(null);
   const [bigfive, setBigfive] = useState<Questionnaire | null>(null);
@@ -167,6 +181,48 @@ export default function AssessmentPage() {
     },
     [createProfile, updateProfile, locale, router, t.common.error, t.wizard.saved],
   );
+
+  /**
+   * Grades must be complete and in range before step 2 will advance.
+   *
+   * Previously a blank was filtered out on submit and the student went
+   * through with nothing entered — the recommender then ran on an entirely
+   * imputed academic profile and returned ten careers with the confidence of
+   * a real answer. Refusing to continue is the honest behaviour: the
+   * recommendation is only worth what went into it.
+   *
+   * EmSAT stays optional, because it genuinely is — a grade 10 or 11 student
+   * has not sat it. What is not optional is that a score they *do* type sits
+   * on the real 500–1500 band.
+   */
+  const validateGrades = useCallback(() => {
+    const badGrades: Record<string, string> = {};
+    for (const subject of SUBJECTS) {
+      const raw = (grades[subject] ?? "").trim();
+      if (raw === "") {
+        badGrades[subject] = t.errors.required;
+        continue;
+      }
+      const value = Number(raw);
+      if (!Number.isFinite(value) || value < 0 || value > 100) {
+        badGrades[subject] = t.errors.gradeRange;
+      }
+    }
+
+    const badEmsat: Record<string, string> = {};
+    for (const subject of EMSAT_SUBJECTS) {
+      const raw = (emsat[subject] ?? "").trim();
+      if (raw === "") continue;
+      const value = Number(raw);
+      if (!Number.isFinite(value) || value < 500 || value > 1500) {
+        badEmsat[subject] = t.errors.emsatRange;
+      }
+    }
+
+    setGradeErrors(badGrades);
+    setEmsatErrors(badEmsat);
+    return Object.keys(badGrades).length === 0 && Object.keys(badEmsat).length === 0;
+  }, [grades, emsat, t.errors.required, t.errors.gradeRange, t.errors.emsatRange]);
 
   const riasecDone = riasec ? Object.keys(riasecAnswers).length >= riasec.items.length : false;
   const bigfiveDone = bigfive ? Object.keys(bigfiveAnswers).length >= bigfive.items.length : false;
@@ -374,8 +430,14 @@ export default function AssessmentPage() {
       {step === 2 && (
         <form
           className="card mt-6 space-y-6 p-6"
+          noValidate
           onSubmit={(event) => {
             event.preventDefault();
+            if (!validateGrades()) {
+              setError(t.wizard.s2Incomplete);
+              return;
+            }
+            setError(null);
             const numericGrades = Object.fromEntries(
               Object.entries(grades)
                 .filter(([, value]) => value !== "")
@@ -393,26 +455,64 @@ export default function AssessmentPage() {
             <legend className="text-sm font-bold">{t.wizard.s2Legend}</legend>
             <p className="mt-1 text-xs muted">{t.wizard.s2Help}</p>
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
-              {SUBJECTS.map((subject) => (
-                <div key={subject}>
-                  <label htmlFor={`grade-${subject}`} className="mb-1 block text-xs font-medium">
-                    {t.subjects[subject]}
-                  </label>
-                  <input
-                    id={`grade-${subject}`}
-                    type="number"
-                    min={0}
-                    max={100}
-                    inputMode="numeric"
-                    dir="ltr"
-                    value={grades[subject] ?? ""}
-                    onChange={(event) =>
-                      setGrades((current) => ({ ...current, [subject]: event.target.value }))
-                    }
-                    className="field"
-                  />
-                </div>
-              ))}
+              {SUBJECTS.map((subject) => {
+                const invalid = Boolean(gradeErrors[subject]);
+                return (
+                  <div key={subject}>
+                    {/* The asterisk sits outside the <label>, not inside it.
+                        Inside, it becomes part of the label's text, which
+                        breaks every lookup by label text — including the ones
+                        the test suite uses — and adds a spoken "star" to the
+                        field's name. `required` on the input is what actually
+                        tells assistive technology the field is mandatory; this
+                        is decoration for everyone else. */}
+                    <div className="mb-1 flex items-baseline gap-1">
+                      <label
+                        htmlFor={`grade-${subject}`}
+                        className="block text-xs font-medium"
+                      >
+                        {t.subjects[subject]}
+                      </label>
+                      <span aria-hidden="true" className="text-[11px] text-[var(--color-uae-red-muted)]">
+                        *
+                      </span>
+                    </div>
+                    <input
+                      id={`grade-${subject}`}
+                      type="number"
+                      required
+                      min={0}
+                      max={100}
+                      inputMode="numeric"
+                      dir="ltr"
+                      aria-invalid={invalid}
+                      aria-describedby={invalid ? `grade-${subject}-error` : undefined}
+                      value={grades[subject] ?? ""}
+                      onChange={(event) => {
+                        setGrades((current) => ({ ...current, [subject]: event.target.value }));
+                        // Clear this field's error as soon as it is touched:
+                        // leaving it up while someone types reads as the form
+                        // arguing with them.
+                        setGradeErrors((current) => {
+                          if (!current[subject]) return current;
+                          const next = { ...current };
+                          delete next[subject];
+                          return next;
+                        });
+                      }}
+                      className={`field ${invalid ? "border-[var(--color-uae-red-muted)]" : ""}`}
+                    />
+                    {invalid && (
+                      <p
+                        id={`grade-${subject}-error`}
+                        className="mt-1 text-[11px] text-[var(--color-uae-red-muted)] dark:text-red-400"
+                      >
+                        {gradeErrors[subject]}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </fieldset>
 
@@ -422,26 +522,45 @@ export default function AssessmentPage() {
             </legend>
             <p className="mt-1 text-xs muted">{t.wizard.emsatHelp}</p>
             <div className="mt-4 grid gap-3 sm:grid-cols-4">
-              {EMSAT_SUBJECTS.map((subject) => (
-                <div key={subject}>
-                  <label htmlFor={`emsat-${subject}`} className="mb-1 block text-xs font-medium">
-                    {t.subjects[subject]}
-                  </label>
-                  <input
-                    id={`emsat-${subject}`}
-                    type="number"
-                    min={500}
-                    max={1500}
-                    inputMode="numeric"
-                    dir="ltr"
-                    value={emsat[subject] ?? ""}
-                    onChange={(event) =>
-                      setEmsat((current) => ({ ...current, [subject]: event.target.value }))
-                    }
-                    className="field"
-                  />
-                </div>
-              ))}
+              {EMSAT_SUBJECTS.map((subject) => {
+                const invalid = Boolean(emsatErrors[subject]);
+                return (
+                  <div key={subject}>
+                    <label htmlFor={`emsat-${subject}`} className="mb-1 block text-xs font-medium">
+                      {t.subjects[subject]}
+                    </label>
+                    <input
+                      id={`emsat-${subject}`}
+                      type="number"
+                      min={500}
+                      max={1500}
+                      inputMode="numeric"
+                      dir="ltr"
+                      aria-invalid={invalid}
+                      aria-describedby={invalid ? `emsat-${subject}-error` : undefined}
+                      value={emsat[subject] ?? ""}
+                      onChange={(event) => {
+                        setEmsat((current) => ({ ...current, [subject]: event.target.value }));
+                        setEmsatErrors((current) => {
+                          if (!current[subject]) return current;
+                          const next = { ...current };
+                          delete next[subject];
+                          return next;
+                        });
+                      }}
+                      className={`field ${invalid ? "border-[var(--color-uae-red-muted)]" : ""}`}
+                    />
+                    {invalid && (
+                      <p
+                        id={`emsat-${subject}-error`}
+                        className="mt-1 text-[11px] text-[var(--color-uae-red-muted)] dark:text-red-400"
+                      >
+                        {emsatErrors[subject]}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </fieldset>
 

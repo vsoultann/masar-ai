@@ -2,7 +2,6 @@
 
 import { useLocale } from "@/lib/locale-context";
 import { localiseDigits } from "@/lib/i18n";
-import type { ResistanceBand } from "@/lib/types";
 
 export function Loading({ label }: { label?: string }) {
   const { t } = useLocale();
@@ -71,96 +70,6 @@ export function DemandBadge({ demand }: { demand: string }) {
     >
       {t.careers.demand}: {label}
     </span>
-  );
-}
-
-/* ------------------------------------------------------------ AI resistance */
-
-/** The band tokens, keyed the same way the catalog names them. */
-export const BAND_COLOR: Record<ResistanceBand, string> = {
-  exposed: "var(--band-exposed)",
-  mixed: "var(--band-mixed)",
-  resilient: "var(--band-resilient)",
-  anchored: "var(--band-anchored)",
-};
-
-export function useBandLabel(): (band: ResistanceBand) => string {
-  const { t } = useLocale();
-  return (band) =>
-    ({
-      exposed: t.resistance.bandExposed,
-      mixed: t.resistance.bandMixed,
-      resilient: t.resistance.bandResilient,
-      anchored: t.resistance.bandAnchored,
-    })[band];
-}
-
-/**
- * The score as a card badge.
- *
- * Carries the number *and* the band word on purpose. "68" alone means nothing
- * to a student on a first visit, and a colour alone is not readable to anyone
- * who cannot distinguish the four hues -- so neither is ever the only channel.
- */
-export function ResistanceBadge({
-  value,
-  band,
-  showLabel = true,
-}: {
-  value: number;
-  band: ResistanceBand;
-  showLabel?: boolean;
-}) {
-  const { locale, t } = useLocale();
-  const label = useBandLabel()(band);
-  const color = BAND_COLOR[band];
-  return (
-    <span
-      className="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[11px] font-semibold"
-      style={{ background: `color-mix(in oklab, ${color} 14%, transparent)`, color }}
-      title={`${t.resistance.title}: ${value}/100 — ${label}`}
-    >
-      <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full" style={{ background: color }} />
-      <span className="ltr-nums">{localiseDigits(value, locale)}</span>
-      {showLabel && <span className="font-medium opacity-90">{label}</span>}
-      <span className="sr-only">{t.resistance.title}</span>
-    </span>
-  );
-}
-
-/** The 0-100 scale with the career's position marked, and both ends named. */
-export function ResistanceScale({ value, band }: { value: number; band: ResistanceBand }) {
-  const { locale, t } = useLocale();
-  const percent = Math.max(0, Math.min(100, value));
-  return (
-    <div>
-      <div
-        role="meter"
-        aria-valuenow={value}
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-label={t.resistance.title}
-        className="relative h-2.5 w-full rounded-full"
-        style={{
-          background:
-            "linear-gradient(90deg, var(--band-exposed), var(--band-mixed) 45%,"
-            + " var(--band-resilient) 70%, var(--band-anchored))",
-        }}
-      >
-        <span
-          aria-hidden="true"
-          className="absolute top-1/2 h-4 w-1.5 -translate-y-1/2 rounded-full border-2 border-[var(--surface)] bg-[var(--ink)] shadow"
-          style={{ insetInlineStart: `calc(${percent}% - 3px)` }}
-        />
-      </div>
-      <div className="mt-1.5 flex justify-between text-[11px] muted">
-        <span>{t.resistance.scaleLow}</span>
-        <span className="ltr-nums font-semibold" style={{ color: BAND_COLOR[band] }}>
-          {localiseDigits(value, locale)} {t.resistance.scoreOf}
-        </span>
-        <span>{t.resistance.scaleHigh}</span>
-      </div>
-    </div>
   );
 }
 

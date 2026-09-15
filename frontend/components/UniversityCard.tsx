@@ -51,6 +51,9 @@ export default function UniversityCard({
       <Link href={`/${locale}/universities/${institution.id}`} className="block">
         <SmartImage
           src={institution.media.thumbnail}
+          credit={institution.media.credit}
+          areaLabel={t.universities.areaPhoto}
+          placeLabel={(place) => lookup(t.emirates, place)}
           alt={institution.name[locale]}
           seed={institution.id}
           aspect="16 / 9"

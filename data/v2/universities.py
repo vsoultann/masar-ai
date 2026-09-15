@@ -83,6 +83,11 @@ def _media(uid: str) -> dict:
             "license": credit["license"],
             "url": credit["url"],
             "author": credit.get("author") or "",
+            # "campus" is a photograph of this institution; "surroundings" is
+            # the area around it. The UI labels the second kind, because the
+            # whole point of the sourcing rules is that an image must not claim
+            # to be something it is not.
+            "kind": credit.get("kind", "campus"),
         },
     }
 

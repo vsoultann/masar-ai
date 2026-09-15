@@ -52,17 +52,6 @@
   --surface-translucent: rgb(255 255 255 / 0.82);
   --surface-2-translucent: rgb(248 247 243 / 0.80);
 
-  /* AI-resistance bands.
-     Deliberately NOT derived from --brand: the band is a property of the
-     career, not of the colour scheme the student picked, and a badge that
-     changed meaning when someone chose the "sunset" palette would be useless.
-     Amber rather than red at the exposed end -- an exposed career is a career
-     to go into with your eyes open, not a career to avoid, and red would say
-     the second thing. Each value clears 4.5:1 on --surface-2. */
-  --band-exposed: #b45309;
-  --band-mixed: #52525b;
-  --band-resilient: #0f766e;
-  --band-anchored: #1d4ed8;
   color-scheme: light;
 }
 
@@ -79,10 +68,6 @@
   --accent: #7cc4e8;
   --surface-translucent: rgb(12 20 24 / 0.80);
   --surface-2-translucent: rgb(18 30 36 / 0.78);
-  --band-exposed: #fbbf24;
-  --band-mixed: #a1a1aa;
-  --band-resilient: #5eead4;
-  --band-anchored: #93c5fd;
   color-scheme: dark;
 }
 

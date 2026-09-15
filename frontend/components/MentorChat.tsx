@@ -96,7 +96,6 @@ export default function MentorChat({ compact = false }: { compact?: boolean }) {
   };
 
   const quickReplies = [
-    t.mentor.quickAiImpact,
     t.mentor.quickScholarship,
     t.mentor.quickAdmission,
     t.mentor.quickWhatIs,

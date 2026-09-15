@@ -37,21 +37,6 @@ describe("intent detection", () => {
     expect(detectIntent("هل ما زال التصميم الجرافيكي مهنة لها مستقبل؟")).toBe("career_outlook");
   });
 
-  /*
-   * The AI form of the question is a different intent from the demand form,
-   * and gets a different answer: the exposure breakdown rather than the demand
-   * rating. Both used to land on career_outlook, which meant "will AI replace
-   * radiologists?" was answered with a demand rating and a paragraph declining
-   * to speculate -- technically honest, and not what was asked.
-   */
-  it("separates a question about AI from a question about demand", () => {
-    expect(detectIntent("Will AI replace radiologists?")).toBe("ai_impact");
-    expect(detectIntent("Is graphic design still a valid career after the AI revolution?"))
-      .toBe("ai_impact");
-    expect(detectIntent("is accounting safe from automation")).toBe("ai_impact");
-    expect(detectIntent("هل سيحل الذكاء الاصطناعي محل المحاسبين؟")).toBe("ai_impact");
-  });
-
   it("reads funding questions as funding questions, not as where-to-study", () => {
     // "scholarship ... to study X" contains "study", which where_to_study owns.
     expect(detectIntent("what scholarships are there to study medicine?")).toBe("scholarships");
@@ -106,10 +91,8 @@ describe("answers", () => {
   it("answers the reported question with what the catalog actually holds", async () => {
     const result = await ask("Is graphic design still a valid career after the AI revolution?");
 
-    expect(result.intent).toBe("ai_impact");
+    expect(result.intent).toBe("career_outlook");
     expect(result.citations.map((c) => c.id)).toContain("graphic_designer");
-    // The demand rating is still in the answer: a student asking about AI is
-    // asking about the future of the job, and the rating is half of that.
     expect(result.text).toContain("Demand rating");
     // The exact reply the feedback screenshot captured, which must not return.
     expect(result.text).not.toContain("Name a career and I will describe it");
@@ -121,20 +104,6 @@ describe("answers", () => {
     const result = await ask("هل ما زال التصميم الجرافيكي مهنة لها مستقبل؟", "ar");
     expect(result.intent).toBe("career_outlook");
     expect(result.citations.map((c) => c.id)).toContain("graphic_designer");
-  });
-
-  it("answers an AI question with the exposure breakdown, both sides of it", async () => {
-    const result = await ask("Will AI replace radiologists?");
-
-    expect(result.intent).toBe("ai_impact");
-    expect(result.citations.map((c) => c.id)).toContain("radiologist");
-    expect(result.text).toMatch(/AI resistance for .*: \d+\/100/);
-    // Both halves, always. An answer that lists only what AI can do is a
-    // scare, and one that lists only what it cannot is a reassurance; the
-    // point of the index is that every career has some of each.
-    expect(result.text).toContain("What AI already does in this role:");
-    expect(result.text).toContain("What it does not:");
-    expect(result.text).toMatch(/not a forecaster/i);
   });
 
   it("names funding routes, and says which ones carry a commitment", async () => {
@@ -206,16 +175,34 @@ describe("answers", () => {
     expect(result.text).toMatch(/depends on your subject/i);
   });
 
-  it("does not answer a question about pay with one arbitrary engineering role", async () => {
+  /*
+   * "Engineer" is thirty roles. The mentor used to reply "which one did you
+   * mean?", which reads as a chatbot arguing with someone who came for help —
+   * and when told "no, just answer me yourself" it produced its own capability
+   * list. It now answers for the closest match, says that is what it did, and
+   * links the rest so the student who meant a different one is one click away.
+   */
+  it("answers a broad question and links the alternatives", async () => {
     const result = await ask("how much do engineers make?");
     expect(result.intent).toBe("salary");
-    // "Engineer" is thirty roles. Offering them beats picking one -- so NLP
-    // Engineer may well appear here, as one option among several. What must
-    // not happen is the old behaviour: it presented as the answer, and the
-    // reply was a paragraph about natural-language processing.
-    expect(result.text).toContain("Which one did you mean?");
+    expect(result.text).toMatch(/closest match is/i);
+    expect(result.text).toMatch(/Entry AED [\d,]+/);
+    // The alternatives are offered as links, not as a question.
     expect(result.citations.length).toBeGreaterThan(1);
-    expect(result.text).not.toMatch(/natural language|morphology/i);
+    expect(result.text).not.toContain("Which one did you mean?");
+  });
+
+  it("never bounces a plainly-phrased question back as a question", async () => {
+    for (const question of [
+      "Can you tell me about graphic designer",
+      "i want to be a designer",
+      "tell me about being an engineer",
+    ]) {
+      const result = await ask(question);
+      expect(result.text, question).not.toContain("Which one did you mean?");
+      expect(result.text, question).not.toContain("I answer from the catalogs");
+      expect(result.citations.length, question).toBeGreaterThan(0);
+    }
   });
 
   it("answers a salary question about a named career with its actual range", async () => {
@@ -302,7 +289,6 @@ describe("answers", () => {
       ["ما الجامعات في دبي؟", "universities"],
       ["ما هي المنح للتمريض؟", "scholarships"],
       ["ما هي التخصصات المؤدية إلى الطب والجراحة؟", "list_majors"],
-      ["هل سيحل الذكاء الاصطناعي محل المحاسبين؟", "ai_impact"],
     ];
     for (const [question, intent] of cases) {
       const result = await answer(question, "ar", null, null);

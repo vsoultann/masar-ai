@@ -103,7 +103,8 @@
     "demoResultDeep": "Your three closest matches",
     "demoQuestionOf": "Question",
     "demoNoteDeep": "Ten answers still is not an assessment — but it is close enough to be worth arguing with. The full one adds your grades and EmSAT.",
-    "demoMajors": "Majors that lead here"
+    "demoMajors": "Majors that lead here",
+    "supervisorLabel": "Supervisor"
   },
   "about": {
     "title": "About Masar AI",
@@ -174,8 +175,8 @@
     "grade12": "Grade 12",
     "graduate": "Graduated",
     "s2Title": "Your grades",
-    "s2Legend": "Subject grades out of 100",
-    "s2Help": "Enter your most recent grade for each subject. Leave a subject blank if you do not take it.",
+    "s2Legend": "Core subject grades, out of 100",
+    "s2Help": "Enter your most recent grade for all six. Every one is required — the recommendation is built from them, and a missing subject quietly weakens it.",
     "emsatTitle": "EmSAT scores (optional)",
     "emsatHelp": "Scores are on the official 500–1500 band. Leave blank if you have not sat the test.",
     "s3Title": "Your interests",
@@ -189,7 +190,8 @@
     "mustAnswerAll": "Please answer every statement before continuing.",
     "questionOf": "Question",
     "keyboardHint": "Use ← → to move, 1–5 to choose, Enter to confirm, Backspace to go back.",
-    "firstUnanswered": "Jump to first unanswered"
+    "firstUnanswered": "Jump to first unanswered",
+    "s2Incomplete": "Fill in every subject before continuing."
   },
   "dashboard": {
     "title": "Your dashboard",
@@ -292,10 +294,9 @@
     "save": "Save career",
     "saved": "Saved",
     "growth": "Demand trend",
-    "aiResistance": "AI resistance",
     "sortDefault": "Best match",
-    "sortResistance": "Most AI-resistant",
-    "sortSalary": "Highest salary"
+    "sortSalary": "Highest salary",
+    "viewCareer": "View career"
   },
   "admin": {
     "title": "Admin panel",
@@ -525,7 +526,8 @@
       "premium": "Premium"
     },
     "scholarshipsHere": "Funding that applies here",
-    "seeAllScholarships": "All scholarships"
+    "seeAllScholarships": "All scholarships",
+    "areaPhoto": "Nearby area"
   },
   "results": {
     "title": "Your career matches",
@@ -602,8 +604,7 @@
     "apiKeyClear": "Remove key",
     "noAnswer": "I could not find that in the catalogs. Try naming a career, a university or a subject.",
     "quickScholarship": "What scholarships could pay for medicine?",
-    "quickAdmission": "What are the admission requirements for Khalifa University?",
-    "quickAiImpact": "Will AI replace graphic designers?"
+    "quickAdmission": "What are the admission requirements for Khalifa University?"
   },
   "model": {
     "title": "About the model",
@@ -693,7 +694,7 @@
       "re": "I would rather do the work myself than persuade other people to do it.",
       "rc": "I would rather be judged on what I built than on how carefully I recorded it.",
       "ia": "I would rather find the correct answer than the interesting one.",
-      "is": "Ten years in, I would rather be the person who understands why the system works than the person everyone comes to for help.",
+      "is": "10 years in, I would rather be the person who understands why the system works than the person everyone comes to for help.",
       "ie": "I would rather be the expert in the room than the one who runs it.",
       "ic": "I would rather question a procedure than follow it exactly.",
       "as": "I would rather make something people remember than help someone who remembers me.",
@@ -710,32 +711,6 @@
       "b_ea": "I would rather push a plan through than keep everyone on side.",
       "b_en": "Presenting to a room of strangers energises me more than it worries me."
     }
-  },
-  "resistance": {
-    "title": "AI resistance",
-    "subtitle": "How much of this job is the kind of work machines are currently good at.",
-    "scoreOf": "out of 100",
-    "bandExposed": "Exposed",
-    "bandMixed": "Mixed",
-    "bandResilient": "Resilient",
-    "bandAnchored": "Anchored",
-    "exposedTitle": "What AI already does here",
-    "protectedTitle": "What it does not",
-    "hedgeTitle": "What raises your score",
-    "hedgeBody": "These are the capabilities this index scores highest. Building them inside this career moves you toward the resilient part of it.",
-    "driversTitle": "How the score was reached",
-    "driversBody": "Every career starts at 50 and moves on six components. Nothing here is hidden — add the rows up and you get the score.",
-    "baseline": "Baseline",
-    "methodTitle": "What this number is, and what it is not",
-    "notForecast": "Not a forecast",
-    "scaleLow": "More exposed",
-    "scaleHigh": "More anchored",
-    "filterAll": "Any AI resistance",
-    "filterExposed": "Exposed (under 45)",
-    "filterMixed": "Mixed (45–59)",
-    "filterResilient": "Resilient (60–74)",
-    "filterAnchored": "Anchored (75+)",
-    "higherThan": "More resistant than {percent}% of careers here."
   },
   "scholarships": {
     "title": "Scholarships and funding",

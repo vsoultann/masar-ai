@@ -5,6 +5,7 @@ import { useState } from "react";
 import CampusArt from "@/components/art/CampusArt";
 import CareerArt from "@/components/art/CareerArt";
 import { asset } from "@/lib/paths";
+import type { PhotoCredit } from "@/lib/types";
 
 /**
  * An image that is never broken.
@@ -61,6 +62,8 @@ export default function SmartImage({
   rounded = true,
   art,
   credit,
+  areaLabel,
+  placeLabel,
 }: {
   /** Path under /public, or null when the team has not supplied a photo. */
   src?: string | null;
@@ -85,7 +88,12 @@ export default function SmartImage({
    * An uncredited CC BY image is simply an unlicensed one. It renders only when
    * the real photo renders — a generated fallback has nobody to credit.
    */
-  credit?: { source: string; license: string; url: string; author?: string } | null;
+  credit?: PhotoCredit | null;
+  /** Shown over a photograph that is of the area rather than the subject.
+      Pass a resolver so the badge can name the emirate when the photograph is
+      of the emirate: "200 km away" and "nearby" are not the same claim. */
+  areaLabel?: string;
+  placeLabel?: (place: string) => string;
 }) {
   const [failed, setFailed] = useState(false);
   const key = seed ?? alt;
@@ -181,6 +189,16 @@ export default function SmartImage({
   return (
     <div className={`relative ${rounded ? "rounded-[var(--radius-card)] overflow-hidden" : ""}`}>
       {image}
+      {/* An area photograph says so, on the image.
+          Thirty-three of the fifty institutions have no free photograph of
+          themselves anywhere, and a picture of Al Ain is a useful answer to
+          "what is it like there" — but only while it is labelled as Al Ain.
+          Unlabelled, it is a photograph of a campus that does not exist. */}
+      {areaLabel && credit?.kind === "surroundings" && (
+        <span className="absolute start-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-semibold text-white/90">
+          {credit.place && placeLabel ? placeLabel(credit.place) : areaLabel}
+        </span>
+      )}
       {/* Bottom-right, small, and over a gradient rather than a solid bar:
           the credit is a legal requirement, not a caption anyone came to
           read, so it has to be present and legible without competing with

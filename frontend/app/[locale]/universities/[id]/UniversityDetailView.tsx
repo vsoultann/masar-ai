@@ -155,6 +155,8 @@ export default function UniversityDetailView() {
         <SmartImage
           src={university.media.hero}
           credit={university.media.credit}
+          areaLabel={t.universities.areaPhoto}
+          placeLabel={(place) => lookup(t.emirates, place)}
           alt={university.name[locale]}
           seed={university.id}
           aspect="16 / 10"

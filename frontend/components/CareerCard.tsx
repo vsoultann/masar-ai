@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import SmartImage from "@/components/SmartImage";
 import Sparkline from "@/components/Sparkline";
-import { DemandBadge, ResistanceBadge } from "@/components/ui";
+import { DemandBadge } from "@/components/ui";
 import { localiseDigits } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
 import { cardHover, revealItem } from "@/lib/motion";
@@ -58,16 +58,7 @@ export default function CareerCard({
               )}
               <h3 className="mt-1 text-base font-bold leading-snug">{title}</h3>
             </div>
-            {/* Stacked, not inline: two pills side by side wrap badly at the
-                narrowest card width and the second one ends up alone on a
-                line looking like an error. */}
-            <div className="flex shrink-0 flex-col items-end gap-1">
-              <DemandBadge demand={career.demandOutlook} />
-              <ResistanceBadge
-                value={career.aiResistance.score}
-                band={career.aiResistance.band}
-              />
-            </div>
+            <DemandBadge demand={career.demandOutlook} />
           </div>
 
           <p className="mt-2 line-clamp-3 text-sm leading-relaxed muted">

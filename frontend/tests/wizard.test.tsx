@@ -46,6 +46,28 @@ vi.mock("@/lib/data/client", () => ({
   loadBigFive: vi.fn(async () => questionnaire("bigfive", 25)),
 }));
 
+/** The six core subjects the wizard now asks for, in the order it renders them. */
+const CORE_SUBJECTS: [string, string][] = [
+  ["math", "Mathematics"],
+  ["physics", "Physics"],
+  ["biology", "Biology"],
+  ["chemistry", "Chemistry"],
+  ["english", "English"],
+  ["arabic", "Arabic"],
+];
+
+/** Fills every required grade, which step 2 will not advance without. */
+async function fillGrades(
+  user: ReturnType<typeof userEvent.setup>,
+  marks: Record<string, string> = {},
+) {
+  for (const [id, label] of CORE_SUBJECTS) {
+    const field = await screen.findByLabelText(label, { selector: `#grade-${id}` });
+    await user.clear(field);
+    await user.type(field, marks[id] ?? "80");
+  }
+}
+
 function renderWizard(locale: "en" | "ar" = "en") {
   return render(
     <LocaleProvider locale={locale} dictionary={getDictionary(locale)}>
@@ -142,16 +164,83 @@ describe("assessment wizard", () => {
     seed({ completedSteps: 1 });
     renderWizard();
 
-    // "Mathematics" labels both a subject grade and an EmSAT score.
-    const maths = await screen.findByLabelText("Mathematics", { selector: "#grade-math" });
-    await user.type(maths, "92");
+    await fillGrades(user, { math: "92" });
     await user.click(screen.getByRole("button", { name: /save and continue/i }));
 
     await waitFor(() => {
       const stored = useProfile.getState().profile;
-      expect(stored?.grades).toEqual({ math: 92 });
+      expect(stored?.grades.math).toBe(92);
+      // EmSAT is genuinely optional — a grade 10 or 11 student has not sat it.
       expect(stored?.emsat).toEqual({});
     });
+  });
+
+  /*
+   * The rule the reported bug asked for: an unanswered or out-of-range mark
+   * must not let you continue. Before this, a blank was silently dropped on
+   * submit and the student went through with nothing entered — the recommender
+   * then ran on an entirely imputed academic profile and returned ten careers
+   * with the confidence of a real answer.
+   */
+  it("refuses to continue while any subject is blank", async () => {
+    const user = userEvent.setup();
+    seed({ completedSteps: 1 });
+    renderWizard();
+
+    const maths = await screen.findByLabelText("Mathematics", { selector: "#grade-math" });
+    await user.type(maths, "92");
+    await user.click(screen.getByRole("button", { name: /save and continue/i }));
+
+    expect(await screen.findByText("Fill in every subject before continuing."))
+      .toBeInTheDocument();
+    // Still on step 2, and nothing was written.
+    expect(screen.getAllByText("This field is required.").length).toBe(5);
+    expect(useProfile.getState().profile?.completedSteps).toBe(1);
+  });
+
+  it("refuses a mark outside 0-100, and an EmSAT score off its band", async () => {
+    const user = userEvent.setup();
+    seed({ completedSteps: 1 });
+    renderWizard();
+
+    await fillGrades(user, { physics: "140" });
+    const emsatMaths = await screen.findByLabelText("Mathematics", { selector: "#emsat-math" });
+    await user.type(emsatMaths, "120");
+    await user.click(screen.getByRole("button", { name: /save and continue/i }));
+
+    expect(await screen.findByText("Enter a number between 0 and 100.")).toBeInTheDocument();
+    expect(screen.getByText("EmSAT scores are between 500 and 1500.")).toBeInTheDocument();
+    expect(useProfile.getState().profile?.completedSteps).toBe(1);
+  });
+
+  it("clears a field's error as soon as it is corrected", async () => {
+    const user = userEvent.setup();
+    seed({ completedSteps: 1 });
+    renderWizard();
+
+    await user.click(await screen.findByRole("button", { name: /save and continue/i }));
+    expect(screen.getAllByText("This field is required.")).toHaveLength(6);
+
+    const maths = await screen.findByLabelText("Mathematics", { selector: "#grade-math" });
+    await user.type(maths, "88");
+    // Leaving the error up while someone types reads as the form arguing.
+    await waitFor(() =>
+      expect(screen.getAllByText("This field is required.")).toHaveLength(5));
+  });
+
+  it("asks for the six core subjects and nothing else", async () => {
+    seed({ completedSteps: 1 });
+    renderWizard();
+    await screen.findByLabelText("Mathematics", { selector: "#grade-math" });
+
+    for (const [id] of CORE_SUBJECTS) {
+      expect(document.querySelector(`#grade-${id}`), id).not.toBeNull();
+    }
+    // Islamic studies, social studies and computer science are not taken on
+    // every MOE track, so asking for them made a mandatory form impossible.
+    for (const dropped of ["islamic", "social", "computer_science"]) {
+      expect(document.querySelector(`#grade-${dropped}`), dropped).toBeNull();
+    }
   });
 
   it("resumes at the step after the last completed one", async () => {
@@ -227,9 +316,7 @@ describe("assessment wizard", () => {
     // Jump back to step 2 via the progress control.
     await user.click(screen.getByRole("button", { name: /your grades/i }));
 
-    const maths = await screen.findByLabelText("Mathematics", { selector: "#grade-math" });
-    await user.clear(maths);
-    await user.type(maths, "95");
+    await fillGrades(user, { math: "95" });
     await user.click(screen.getByRole("button", { name: /save and continue/i }));
 
     await waitFor(() => {

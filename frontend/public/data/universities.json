@@ -111,7 +111,8 @@
         "source": "Wikimedia Commons",
         "license": "CC BY-SA 2.0",
         "url": "https://commons.wikimedia.org/wiki/File:United_Arab_Emirates_University_(9717029334).jpg",
-        "author": "ted bongiovanni from Glen Ridge, NJ, United States of America"
+        "author": "ted bongiovanni from Glen Ridge, NJ, United States of America",
+        "kind": "campus"
       }
     }
   },
@@ -196,10 +197,16 @@
       "ar": "جامعة بحثية ذات ثقل هندسي كبير، تضم مختبرات في الروبوتات والطاقة النووية وأنظمة الفضاء، ومسارات قوية للدراسات العليا."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/ku.jpg",
+      "thumbnail": "/images/universities/ku-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_Yas_Island_-_hotel_entrance_-_panoramio.jpg",
+        "author": "Ghassan Mroue",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -258,10 +265,16 @@
       "ar": "معهد متخصص في الذكاء الاصطناعي يركز على الدراسات العليا؛ يلتحق به الطلبة عادةً بعد درجة جامعية أولى، مع برامج تواصل وبحث متاحة للمتفوقين."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/mbzuai.jpg",
+      "thumbnail": "/images/universities/mbzuai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_International_Airport_(30012035073).jpg",
+        "author": "Thomas Woodtli from Zürich, Switzerland",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -343,10 +356,16 @@
       "ar": "جامعة اتحادية ذات حضور قوي في الاتصال وإدارة الأعمال والتربية، مع تركيز معروف على تأهيل الخريجين لسوق العمل."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/zu_ad.jpg",
+      "thumbnail": "/images/universities/zu_ad-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_Gate_City_-_Abu_Dhabi_-_United_Arab_Emirates_-_panoramio.jpg",
+        "author": "Xiaotong Gao",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -440,7 +459,8 @@
         "source": "Wikimedia Commons",
         "license": "CC BY-SA 4.0",
         "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_University_Al_Ain_Campus.jpg",
-        "author": "Emad Alsharif 88"
+        "author": "Emad Alsharif 88",
+        "kind": "campus"
       }
     }
   },
@@ -526,7 +546,8 @@
         "source": "Wikimedia Commons",
         "license": "CC BY-SA 4.0",
         "url": "https://commons.wikimedia.org/wiki/File:NYUAD_Library.jpg",
-        "author": "110603Ldj."
+        "author": "110603Ldj.",
+        "kind": "campus"
       }
     }
   },
@@ -595,10 +616,16 @@
       "ar": "برامج في العلوم الإنسانية والقانون والإدارة وفق النموذج الفرنسي في جزيرة الريم، مع دراسة اللغة الفرنسية ضمن معظم البرامج."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/sorbonne_ad.jpg",
+      "thumbnail": "/images/universities/sorbonne_ad-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_-_2011-03-21_-_Die_im_Bau_befindlichen_Nation_Towers_werden_in_wenigen_Tagen_auf_einer_H%C3%B6he_von_ca._202_Metern_mit_einer_Br%C3%BCcke_verbunden_sei_-_panoramio.jpg",
+        "author": "giggel",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -659,10 +686,16 @@
       "ar": "متخصصة في السلامة والأمن والدفاع والتأهب للطوارئ، ببرامج مصمّمة للمهنيين العاملين وخريجي الثانوية على حد سواء."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/rabdan.jpg",
+      "thumbnail": "/images/universities/rabdan-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Abudhabi_City_Views_-_panoramio_(3).jpg",
+        "author": "Jaseem Hamza",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -721,10 +754,16 @@
       "ar": "أكاديمية تقنية تغذّي قطاع الطاقة الوطني، تجمع بين الدراسة النظرية والتدريب داخل المنشآت مع مسار توظيف قوي."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/adnoc_academy.jpg",
+      "thumbnail": "/images/universities/adnoc_academy-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Thander_storm_-_panoramio.jpg",
+        "author": "greeeen2008",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -786,10 +825,16 @@
       "ar": "كلية متخصصة في إعداد المعلمين مع تدريب ميداني في المدارس منذ السنة الأولى."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/ecae.jpg",
+      "thumbnail": "/images/universities/ecae-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_Golf_Course_Bridge_View.jpg",
+        "author": "Yourusernamewillbepublic2",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -857,10 +902,16 @@
       "ar": "كلية تطبيقية بأعداد طلابية صغيرة وتركيز مهني موجّه نحو التوظيف."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/kic.jpg",
+      "thumbnail": "/images/universities/kic-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Khawarizmi_International_College.jpg",
+        "author": "Sokaniwaal",
+        "kind": "campus"
+      }
     }
   },
   {
@@ -939,10 +990,16 @@
       "ar": "جامعة خاصة لها حرمان في العين وأبوظبي، وتشتهر ببرامج الصيدلة والقانون."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/aau_alain.jpg",
+      "thumbnail": "/images/universities/aau_alain-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Al_Dewan_Building_By_Eng._Fadi_Fayyadh_Al_Toubeh_-_panoramio.jpg",
+        "author": "Fadi Fayad Al Taoba",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1023,10 +1080,16 @@
       "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hct_abu_dhabi.jpg",
+      "thumbnail": "/images/universities/hct_abu_dhabi-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:UAE_Public_Library_work_times.jpg",
+        "author": "Ayratayrat",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1107,10 +1170,16 @@
       "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hct_al_ain.jpg",
+      "thumbnail": "/images/universities/hct_al_ain-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Al_Jahili_Fort_Towers.jpg",
+        "author": "Jeff2rado",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1191,10 +1260,16 @@
       "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hct_madinat_zayed.jpg",
+      "thumbnail": "/images/universities/hct_madinat_zayed-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Madinat_Zayed_-_United_Arab_Emirates_1_-_panoramio.jpg",
+        "author": "Rizwan Ullah Wazir",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1275,10 +1350,16 @@
       "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hct_ruwais.jpg",
+      "thumbnail": "/images/universities/hct_ruwais-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Thander_storm_-_panoramio.jpg",
+        "author": "greeeen2008",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1359,10 +1440,16 @@
       "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hct_dubai.jpg",
+      "thumbnail": "/images/universities/hct_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Ras_Al_Khor_Wildlife_Sanctuary_with_Dubai_Skyline_2.jpg",
+        "author": "Florian Kriechbaumer",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1443,10 +1530,16 @@
       "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hct_sharjah.jpg",
+      "thumbnail": "/images/universities/hct_sharjah-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Great_Gate_Palace_%D8%A8%D9%88%D8%A7%D8%A8%D8%A9_%D9%82%D8%B5%D8%B1_%D9%83%D8%A8%D9%8A%D8%B1_-_panoramio.jpg",
+        "author": "Mahmoud Farrag",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1527,10 +1620,16 @@
       "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hct_fujairah.jpg",
+      "thumbnail": "/images/universities/hct_fujairah-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:WAY_TO_FUJAIRAH_FORT_AFTER_MAIN_ENTRANCE.jpg",
+        "author": "SHUHAIB MUSTHAFA",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1611,10 +1710,16 @@
       "ar": "كلية اتحادية تطبيقية موجّهة نحو التوظيف. تُبنى البرامج حول التدريب العملي، وتتيح شبكة الفروع لمعظم الطلبة الدراسة قرب مكان سكنهم."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hct_ras_al_khaimah.jpg",
+      "thumbnail": "/images/universities/hct_ras_al_khaimah-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Serenity_sundays.jpg",
+        "author": "Axlxya",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1694,10 +1799,16 @@
       "ar": "الحرم الجامعي في دبي التابع للجامعة الاتحادية، في المدينة الأكاديمية، بالتخصصات ذاتها في الاتصال والأعمال والتربية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/zu_dubai.jpg",
+      "thumbnail": "/images/universities/zu_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Emirates_-_panoramio_(71).jpg",
+        "author": "Андрей Бобровский",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1767,10 +1878,16 @@
       "ar": "جامعة متخصصة في الطب والعلوم الصحية في مدينة دبي الطبية، مع تدريب في المستشفيات التعليمية منذ مراحل مبكرة من البرنامج."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/mbru.jpg",
+      "thumbnail": "/images/universities/mbru-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Ravindran_Raghavan_(Malaysia).jpg",
+        "author": "Clicks311",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1844,10 +1961,16 @@
       "ar": "جامعة خاصة تتبع المنهج الأمريكي في الصفوح، معروفة ببرامج العمارة والتصميم والاتصال."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/aud.jpg",
+      "thumbnail": "/images/universities/aud-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:IBM_building_in_the_Dubai_Internet_City.jpg",
+        "author": "Nowitscorrect",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1916,10 +2039,16 @@
       "ar": "جامعة تركّز على الأعمال وتقنية المعلومات بجوار المدينة الأكاديمية بدبي، ببرامج أعمال معتمدة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/ud.jpg",
+      "thumbnail": "/images/universities/ud-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:UAE-Oman_16.08.2009_05-19-06.jpg",
+        "author": "Simisa",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -1997,10 +2126,16 @@
       "ar": "الحرم الجامعي في دبي للجامعة الاسكتلندية، وأقوى برامجه في البيئة العمرانية والهندسة والعلوم الاكتوارية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hw_dubai.jpg",
+      "thumbnail": "/images/universities/hw_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:IBM_building_in_the_Dubai_Internet_City.jpg",
+        "author": "Nowitscorrect",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -2076,10 +2211,16 @@
       "ar": "حرم جامعي بريطاني المنهج في مجمع دبي للمعرفة، بتنوع واسع في البرامج الإنسانية والإبداعية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/middlesex_dubai.jpg",
+      "thumbnail": "/images/universities/middlesex_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Middlesex_University_Dubai_Campus.jpg",
+        "author": "Hafees.a",
+        "kind": "campus"
+      }
     }
   },
   {
@@ -2147,10 +2288,16 @@
       "ar": "فرع لمعهد هندسي هندي في المدينة الأكاديمية الدولية بدبي، بمسار قبول تنافسي."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/bits_dubai.jpg",
+      "thumbnail": "/images/universities/bits_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:BITS_Pilani,_Dubai_Campus_.jpg",
+        "author": "Shamsheer22",
+        "kind": "campus"
+      }
     }
   },
   {
@@ -2225,10 +2372,16 @@
       "ar": "جامعة كندية المنهج على شارع الشيخ زايد، تقدّم برامج في التصميم والأعمال والصحة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/cud.jpg",
+      "thumbnail": "/images/universities/cud-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Dubai_building_shadow_(Unsplash).jpg",
+        "author": "RKTKN rktkn",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -2298,10 +2451,16 @@
       "ar": "حرم جامعي هندي النشأة في المدينة الأكاديمية الدولية بدبي، ببرامج في الأعمال وتقنية المعلومات والتقنية الحيوية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/amity_dubai.jpg",
+      "thumbnail": "/images/universities/amity_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Parking_-_panoramio_(31).jpg",
+        "author": "wilhelmtittes",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -2375,10 +2534,16 @@
       "ar": "حرم جامعي واسع في المدينة الأكاديمية الدولية بدبي يغطي الهندسة والتصميم والإعلام."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/manipal_dubai.jpg",
+      "thumbnail": "/images/universities/manipal_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Parking_-_panoramio_(31).jpg",
+        "author": "wilhelmtittes",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -2458,10 +2623,16 @@
       "ar": "حرم جامعي لمجموعة راسل في المدينة الأكاديمية الدولية بدبي، يمنح الدرجات ذاتها الممنوحة في الجامعة الأم بالمملكة المتحدة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/birmingham_dubai.jpg",
+      "thumbnail": "/images/universities/birmingham_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Emirates_-_panoramio_(71).jpg",
+        "author": "Андрей Бобровский",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -2523,10 +2694,16 @@
       "ar": "جامعة متخصصة في الطيران مرتبطة بقطاع الطيران في دبي، تغطي الهندسة والعمليات ومسارات التدريب على الطيران."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/eau.jpg",
+      "thumbnail": "/images/universities/eau-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Se%C3%B1al_de_la_Puerta_B1,_Aeropuerto_Internacional_de_Dubai.jpg",
+        "author": "ProtoplasmaKid",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -2596,10 +2773,16 @@
       "ar": "جامعة تعتمد التعلّم المدمج والإلكتروني أولًا، ومناسبة للطلبة الذين يجمعون بين الدراسة والعمل أو الالتزامات الأسرية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hbmsu.jpg",
+      "thumbnail": "/images/universities/hbmsu-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Russian_dwarf_hamster.jpg",
+        "author": "TravelPhotosNL",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -2698,7 +2881,8 @@
         "source": "Wikimedia Commons",
         "license": "CC BY-SA 4.0",
         "url": "https://commons.wikimedia.org/wiki/File:American_University_of_Sharjah_(33).jpg",
-        "author": "Gureni"
+        "author": "Gureni",
+        "kind": "campus"
       }
     }
   },
@@ -2820,7 +3004,8 @@
         "source": "Wikimedia Commons",
         "license": "CC0",
         "url": "https://commons.wikimedia.org/wiki/File:University_of_Sharjah_Campus.jpg",
-        "author": "Catboy69"
+        "author": "Catboy69",
+        "kind": "campus"
       }
     }
   },
@@ -2881,10 +3066,16 @@
       "ar": "جامعة تعتمد العربية أولًا وتركّز على الدراسات الإسلامية والشريعة واللغة العربية، وتضم طلبة من جنسيات متعددة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/alqasimia.jpg",
+      "thumbnail": "/images/universities/alqasimia-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Great_Gate_Palace_%D8%A8%D9%88%D8%A7%D8%A8%D8%A9_%D9%82%D8%B5%D8%B1_%D9%83%D8%A8%D9%8A%D8%B1_-_panoramio.jpg",
+        "author": "Mahmoud Farrag",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -2954,7 +3145,8 @@
         "source": "Wikimedia Commons",
         "license": "CC BY 3.0",
         "url": "https://commons.wikimedia.org/wiki/File:Skyline_University_College_In_Sharjah._%D9%83%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%A7%D9%81%D9%82_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D9%82%D8%A9_-_panoramio.jpg",
-        "author": "Mahmoud Farrag"
+        "author": "Mahmoud Farrag",
+        "kind": "campus"
       }
     }
   },
@@ -3040,10 +3232,16 @@
       "ar": "جامعة خاصة عريقة تضم كليات طب الأسنان والصيدلة والهندسة في حرم جامعي واحد متقارب."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/ajman_univ.jpg",
+      "thumbnail": "/images/universities/ajman_univ-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Al_Jerf_2_-_Ajman_-_United_Arab_Emirates_-_panoramio.jpg",
+        "author": "log-011",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -3122,7 +3320,8 @@
         "source": "Wikimedia Commons",
         "license": "CC BY-SA 4.0",
         "url": "https://commons.wikimedia.org/wiki/File:Gulf_Medical_University.jpg",
-        "author": "Shaj.pre"
+        "author": "Shaj.pre",
+        "kind": "campus"
       }
     }
   },
@@ -3192,10 +3391,16 @@
       "ar": "جامعة خاصة صغيرة تقدّم برامج في الأعمال وتقنية المعلومات والتصميم برسوم في المتناول."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/cua.jpg",
+      "thumbnail": "/images/universities/cua-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Nesto_Hypermarket.jpg",
+        "author": "Hamza Izourane",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -3265,10 +3470,16 @@
       "ar": "جامعة الإمارة، صغيرة الحجم وذات توجّه محلي، تخدم طلبة الإمارات الشمالية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/uaq_univ.jpg",
+      "thumbnail": "/images/universities/uaq_univ-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Ramadan_2023_(cropped).jpg",
+        "author": "Adilakv",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -3337,10 +3548,16 @@
       "ar": "جامعة للعلوم الصحية في الإمارات الشمالية، مع تدريب سريري في مستشفيات رأس الخيمة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/rakmhsu.jpg",
+      "thumbnail": "/images/universities/rakmhsu-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Sunrise_Behind_the_Jabal_jais.jpg",
+        "author": "Aliraza521",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -3418,10 +3635,16 @@
       "ar": "جامعة تتبع المنهج الأمريكي ببرامج في الهندسة والأعمال والآداب في حرم جامعي هادئ."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/aurak.jpg",
+      "thumbnail": "/images/universities/aurak-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Al_Nadiyah_-_Ras_al_Khaimah_-_United_Arab_Emirates_-_panoramio_(1).jpg",
+        "author": "Bin Al Stroker",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -3491,10 +3714,16 @@
       "ar": "جامعة الإمارة على الساحل الشرقي، تتيح لطلبة الفجيرة خيارًا محليًا في الأعمال وتقنية المعلومات والقانون."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/uof.jpg",
+      "thumbnail": "/images/universities/uof-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:WAY_TO_FUJAIRAH_FORT_AFTER_MAIN_ENTRANCE.jpg",
+        "author": "SHUHAIB MUSTHAFA",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -3555,10 +3784,16 @@
       "ar": "معهد للمصارف والتمويل يدرّب جزءًا كبيرًا من الكوادر الوطنية في القطاع، وله فروع في الشارقة وأبوظبي ودبي."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/eif.jpg",
+      "thumbnail": "/images/universities/eif-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Sharjah_Library._-_panoramio.jpg",
+        "author": "Mahmoud Farrag",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -3617,10 +3852,16 @@
       "ar": "معهد تدريب في الاتصالات وتقنية المعلومات، موجّه نحو الشهادات المهنية ودخول القطاع أكثر من الدرجات الطويلة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/etisalat_academy.jpg",
+      "thumbnail": "/images/universities/etisalat_academy-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:International_City_-_Spain_Building_by_fadi_fayyadh_al_toubeh_-_panoramio.jpg",
+        "author": "Fadi Fayad Al Taoba",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -3679,10 +3920,16 @@
       "ar": "مدرسة تدريب للقطاع الحكومي وليست جامعة تمنح درجات: برامج مهنية قصيرة لمهن الخدمة العامة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/adsg.jpg",
+      "thumbnail": "/images/universities/adsg-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Skyline_Abu_Dhabi_I_(260477643).jpeg",
+        "author": "Madlen Steiner",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -3741,10 +3988,16 @@
       "ar": "أكاديمية تدريب بحري تغطي مسارات الملاحة والهندسة وعمليات الموانئ، مع تدريب بحري ميداني."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/khalifa_maritime.jpg",
+      "thumbnail": "/images/universities/khalifa_maritime-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_night_skyline_(37001006072).jpg",
+        "author": "Groman123",
+        "kind": "surroundings"
+      }
     }
   },
   {
@@ -3810,7 +4063,8 @@
         "source": "Wikimedia Commons",
         "license": "CC BY-SA 4.0",
         "url": "https://commons.wikimedia.org/wiki/File:Library_EAHM.jpg",
-        "author": "Flayas"
+        "author": "Flayas",
+        "kind": "campus"
       }
     }
   },
@@ -3866,10 +4120,16 @@
       "ar": "مدرسة مهنية لفنون الطهي تقدّم برامج المطبخ الاحترافي ومسارات التلمذة الصناعية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/ecc_culinary.jpg",
+      "thumbnail": "/images/universities/ecc_culinary-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Dubai_-_from_left,_The_Bay_Gate_-_One_Business_Bay_-_The_Prism_Tower_-_The_Regal_Tower_-_silent_unknown_tower_-_Iris_Bay_-_%D9%85%D9%86_%D8%A7%D9%84%D9%8A%D8%B3%D8%A7%D8%B1,_%D8%A8%D9%88%D8%A7%D8%A8%D8%A9_%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D8%AC_-_panoramio.jpg",
+        "author": "giggel",
+        "kind": "surroundings"
+      }
     }
   }
 ]

@@ -14,7 +14,7 @@ import { loadCareerIndex, loadSectors } from "@/lib/data/client";
 import { useLocale } from "@/lib/locale-context";
 import { cardHover, revealContainer, revealItem, viewportOnce } from "@/lib/motion";
 import { useProfile } from "@/lib/store/profile";
-import { TEAM } from "@/lib/team";
+import { SUPERVISOR, TEAM } from "@/lib/team";
 import type { CareerSummary, Sector } from "@/lib/types";
 
 /**
@@ -131,9 +131,13 @@ export default function LandingPage() {
               </motion.div>
             </div>
 
-            {/* Drifting artwork cards. Purely decorative, so they are hidden
-                from assistive technology and frozen under reduced motion. */}
-            <div aria-hidden className="relative hidden h-[26rem] lg:block">
+            {/* Drifting career cards.
+                They were decorative and aria-hidden, which made six obvious
+                affordances do nothing when clicked — the commonest way a
+                landing page teaches someone that nothing on it is real. They
+                are links now: they lift and brighten on hover and go to the
+                career. Still frozen under reduced motion. */}
+            <div className="relative hidden h-[26rem] lg:block">
               {floaters.map((career, index) => {
                 const angle = (index / floaters.length) * Math.PI * 2;
                 const x = Math.cos(angle) * 120;
@@ -141,7 +145,7 @@ export default function LandingPage() {
                 return (
                   <motion.div
                     key={career.id}
-                    className="absolute left-1/2 top-1/2 w-52 overflow-hidden rounded-xl border shadow-xl"
+                    className="absolute left-1/2 top-1/2 w-52"
                     style={{ marginLeft: x - 104, marginTop: y - 66 }}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{
@@ -154,11 +158,30 @@ export default function LandingPage() {
                       scale: { delay: 0.1 * index },
                       y: { duration: 6 + index, repeat: Infinity, ease: "easeInOut" },
                     }}
+                    whileHover={reduced ? undefined : { scale: 1.06, zIndex: 10 }}
                   >
-                    <CareerArt sector={career.sector} seed={career.id} className="h-28 w-full" />
-                    <p className="truncate bg-[var(--surface)] px-3 py-2 text-xs font-semibold">
-                      {career.title[locale]}
-                    </p>
+                    <Link
+                      href={`/${locale}/careers/${career.id}`}
+                      className="group block overflow-hidden rounded-xl border shadow-xl transition-[border-color,box-shadow] hover:border-[var(--brand)] hover:shadow-2xl focus-visible:border-[var(--brand)]"
+                    >
+                      <div className="relative">
+                        <CareerArt
+                          sector={career.sector}
+                          seed={career.id}
+                          className="h-28 w-full"
+                        />
+                        {/* Appears on hover so the card reads as a link before
+                            it is clicked, not after. */}
+                        <span className="absolute inset-0 grid place-items-center bg-black/45 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                          <span className="rounded-full bg-[var(--brand)] px-3 py-1 text-[11px] font-bold text-[var(--brand-ink)]">
+                            {t.careers.viewCareer}
+                          </span>
+                        </span>
+                      </div>
+                      <p className="truncate bg-[var(--surface)] px-3 py-2 text-xs font-semibold group-hover:text-[var(--brand)]">
+                        {career.title[locale]}
+                      </p>
+                    </Link>
                   </motion.div>
                 );
               })}
@@ -336,8 +359,30 @@ export default function LandingPage() {
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5"
+            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
           >
+            {/* The supervisor first, and deliberately not styled like a member:
+                accent border, accent initials and a bold accent role line, so
+                the distinction is visible before anyone reads the label. */}
+            <motion.li
+              variants={revealItem}
+              className="card border-[var(--accent)]/45 p-5 text-center"
+              style={{ background: "color-mix(in oklab, var(--accent) 7%, transparent)" }}
+            >
+              <span
+                aria-hidden
+                className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[var(--accent)]/15 text-lg font-black text-[var(--accent)]"
+              >
+                {SUPERVISOR.split(" ").slice(0, 2).map((part) => part[0]).join("")}
+              </span>
+              <h3 className="mt-3 text-sm font-black leading-tight text-[var(--accent)]">
+                {SUPERVISOR}
+              </h3>
+              <p className="mt-1 text-xs font-bold uppercase tracking-wide text-[var(--accent)]">
+                {t.landing.supervisorLabel}
+              </p>
+            </motion.li>
+
             {TEAM.map((member) => (
               <motion.li key={member.name} variants={revealItem} className="card p-5 text-center">
                 <span

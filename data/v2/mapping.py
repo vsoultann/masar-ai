@@ -160,11 +160,10 @@ SECTOR_LICENSING: dict[str, list[dict]] = {
         {"en": "the relevant emirate's legal affairs department",
          "ar": "دائرة الشؤون القانونية في الإمارة المعنية"},
     ],
-    # Added with the AI-resistance index, which reads this field: a licence is
-    # the clearest signal in the catalog that a named human carries legal
-    # responsibility for the work, and leaving aviation, engineering, teaching
-    # and seafaring unlicensed scored them as if no one had to sign anything.
     # These are the UAE regulators that actually issue the licence to practise.
+    # Added while building something else that read this field, and kept when
+    # that was removed: aviation, engineering, teaching and seafaring really
+    # are licensed professions here, and the catalog said they were not.
     "aviation": [
         {"en": "the General Civil Aviation Authority (GCAA)",
          "ar": "الهيئة العامة للطيران المدني"},

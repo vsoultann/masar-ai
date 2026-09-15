@@ -16,41 +16,6 @@ export interface Bilingual {
 
 export type Demand = "very_high" | "high" | "moderate";
 
-/* ----------------------------------------------------------- AI resistance */
-
-/** Bands run exposed -> anchored. The thresholds live in the glossary. */
-export type ResistanceBand = "exposed" | "mixed" | "resilient" | "anchored";
-
-/**
- * One career's exposure to automation.
- *
- * Carries the number and the *keys* that select the copy -- the phrasing is
- * identical across all 184 careers and lives in ai-resistance.json, because
- * repeating it per career added half a megabyte to a file phones download.
- */
-export interface AiResistance {
-  score: number;
-  band: ResistanceBand;
-  /** Phrasing groups for "what AI already does here", in the role's weight order. */
-  exposedGroups: string[];
-  /** Phrasing groups for "what holds". */
-  protectedGroups: string[];
-  /** Skill ids worth building to move the score up. */
-  hedgeSkills: string[];
-  /** The audit trail: each component's signed contribution to the score. */
-  drivers: { id: string; effect: number }[];
-}
-
-/** The shared copy behind every aiResistance block. */
-export interface AiResistanceGlossary {
-  basis: Bilingual;
-  method: Bilingual;
-  bands: Record<ResistanceBand, { label: Bilingual; summary: Bilingual }>;
-  groups: Record<string, { exposed: Bilingual; protected: Bilingual }>;
-  drivers: Record<string, Bilingual>;
-  thresholds: { from: number; band: ResistanceBand }[];
-}
-
 /* ------------------------------------------------------------ scholarships */
 
 export type ScholarshipKind =
@@ -179,7 +144,6 @@ export interface Career {
   /** Flat skill weights, kept for the ML pipeline. */
   skills: Record<string, number>;
   demand: Demand;
-  aiResistance: AiResistance;
 }
 
 /** The lightweight record card grids use, from careers-index.json. */
@@ -195,8 +159,6 @@ export interface CareerSummary {
   thumbnail: string | null;
   majors: string[];
   topSkills: string[];
-  /** Score and band only — a card shows a badge, not the breakdown. */
-  aiResistance: Pick<AiResistance, "score" | "band">;
 }
 
 export interface Course {
@@ -254,8 +216,20 @@ export interface University {
     hero: string | null;
     thumbnail: string | null;
     gallery: string[];
-    credit: { source: string; license: string; url: string } | null;
+    credit: PhotoCredit | null;
   };
+}
+
+/** Attribution for a shipped photograph. CC BY is conditional on it. */
+export interface PhotoCredit {
+  source: string;
+  license: string;
+  url: string;
+  author?: string;
+  /** "surroundings" means the area near the campus, not the campus itself. */
+  kind?: "campus" | "surroundings";
+  /** Emirate id when the photograph is of the emirate rather than the area. */
+  place?: string | null;
 }
 
 export interface QuestionnaireItem {

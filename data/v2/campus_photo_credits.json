@@ -1,4 +1,35 @@
 {
+  "aau_alain": {
+    "author": "Fadi Fayad Al Taoba",
+    "evidence": "surroundings",
+    "file": "File:Al Dewan Building By Eng. Fadi Fayyadh Al Toubeh - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Al_Dewan_Building_By_Eng._Fadi_Fayyadh_Al_Toubeh_-_panoramio.jpg"
+  },
+  "adnoc_academy": {
+    "author": "greeeen2008",
+    "evidence": "surroundings",
+    "file": "File:Thander storm - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "place": null,
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Thander_storm_-_panoramio.jpg"
+  },
+  "adsg": {
+    "author": "Madlen Steiner",
+    "evidence": "surroundings",
+    "file": "File:Skyline Abu Dhabi I (260477643).jpeg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Skyline_Abu_Dhabi_I_(260477643).jpeg"
+  },
   "adu": {
     "author": "Emad Alsharif 88",
     "evidence": "category:Abu Dhabi University",
@@ -7,6 +38,56 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_University_Al_Ain_Campus.jpg"
+  },
+  "ajman_univ": {
+    "author": "log-011",
+    "evidence": "surroundings",
+    "file": "File:Al Jerf 2 - Ajman - United Arab Emirates - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Al_Jerf_2_-_Ajman_-_United_Arab_Emirates_-_panoramio.jpg"
+  },
+  "alqasimia": {
+    "author": "Mahmoud Farrag",
+    "evidence": "surroundings",
+    "file": "File:Great Gate Palace بوابة قصر كبير - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Great_Gate_Palace_%D8%A8%D9%88%D8%A7%D8%A8%D8%A9_%D9%82%D8%B5%D8%B1_%D9%83%D8%A8%D9%8A%D8%B1_-_panoramio.jpg"
+  },
+  "amity_dubai": {
+    "author": "wilhelmtittes",
+    "evidence": "surroundings",
+    "file": "File:Parking - panoramio (31).jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Parking_-_panoramio_(31).jpg"
+  },
+  "aud": {
+    "author": "Nowitscorrect",
+    "evidence": "surroundings",
+    "file": "File:IBM building in the Dubai Internet City.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:IBM_building_in_the_Dubai_Internet_City.jpg"
+  },
+  "aurak": {
+    "author": "Bin Al Stroker",
+    "evidence": "surroundings",
+    "file": "File:Al Nadiyah - Ras al Khaimah - United Arab Emirates - panoramio (1).jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Al_Nadiyah_-_Ras_al_Khaimah_-_United_Arab_Emirates_-_panoramio_(1).jpg"
   },
   "aus": {
     "author": "Gureni",
@@ -17,6 +98,45 @@
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:American_University_of_Sharjah_(33).jpg"
   },
+  "birmingham_dubai": {
+    "author": "Андрей Бобровский",
+    "evidence": "surroundings",
+    "file": "File:Emirates - panoramio (71).jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Emirates_-_panoramio_(71).jpg"
+  },
+  "bits_dubai": {
+    "author": "Shamsheer22",
+    "evidence": "search+name",
+    "file": "File:BITS Pilani, Dubai Campus .jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:BITS_Pilani,_Dubai_Campus_.jpg"
+  },
+  "cua": {
+    "author": "Hamza Izourane",
+    "evidence": "surroundings",
+    "file": "File:Nesto Hypermarket.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Nesto_Hypermarket.jpg"
+  },
+  "cud": {
+    "author": "RKTKN rktkn",
+    "evidence": "surroundings",
+    "file": "File:Dubai building shadow (Unsplash).jpg",
+    "kind": "surroundings",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Dubai_building_shadow_(Unsplash).jpg"
+  },
   "eahm": {
     "author": "Flayas",
     "evidence": "category:The Emirates Academy of Hospitality Management",
@@ -25,6 +145,56 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Library_EAHM.jpg"
+  },
+  "eau": {
+    "author": "ProtoplasmaKid",
+    "evidence": "surroundings",
+    "file": "File:Señal de la Puerta B1, Aeropuerto Internacional de Dubai.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Se%C3%B1al_de_la_Puerta_B1,_Aeropuerto_Internacional_de_Dubai.jpg"
+  },
+  "ecae": {
+    "author": "Yourusernamewillbepublic2",
+    "evidence": "surroundings",
+    "file": "File:Abu Dhabi Golf Course Bridge View.jpg",
+    "kind": "surroundings",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_Golf_Course_Bridge_View.jpg"
+  },
+  "ecc_culinary": {
+    "author": "giggel",
+    "evidence": "surroundings",
+    "file": "File:Dubai - from left, The Bay Gate - One Business Bay - The Prism Tower - The Regal Tower - silent unknown tower - Iris Bay - من اليسار, بوابة الخليج - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Dubai_-_from_left,_The_Bay_Gate_-_One_Business_Bay_-_The_Prism_Tower_-_The_Regal_Tower_-_silent_unknown_tower_-_Iris_Bay_-_%D9%85%D9%86_%D8%A7%D9%84%D9%8A%D8%B3%D8%A7%D8%B1,_%D8%A8%D9%88%D8%A7%D8%A8%D8%A9_%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D8%AC_-_panoramio.jpg"
+  },
+  "eif": {
+    "author": "Mahmoud Farrag",
+    "evidence": "surroundings",
+    "file": "File:Sharjah Library. - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Sharjah_Library._-_panoramio.jpg"
+  },
+  "etisalat_academy": {
+    "author": "Fadi Fayad Al Taoba",
+    "evidence": "surroundings",
+    "file": "File:International City - Spain Building by fadi fayyadh al toubeh - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:International_City_-_Spain_Building_by_fadi_fayyadh_al_toubeh_-_panoramio.jpg"
   },
   "gmu": {
     "author": "Shaj.pre",
@@ -35,6 +205,176 @@
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Gulf_Medical_University.jpg"
   },
+  "hbmsu": {
+    "author": "TravelPhotosNL",
+    "evidence": "surroundings",
+    "file": "File:Russian dwarf hamster.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Russian_dwarf_hamster.jpg"
+  },
+  "hct_abu_dhabi": {
+    "author": "Ayratayrat",
+    "evidence": "surroundings",
+    "file": "File:UAE Public Library work times.jpg",
+    "kind": "surroundings",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:UAE_Public_Library_work_times.jpg"
+  },
+  "hct_al_ain": {
+    "author": "Jeff2rado",
+    "evidence": "surroundings",
+    "file": "File:Al Jahili Fort Towers.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Al_Jahili_Fort_Towers.jpg"
+  },
+  "hct_dubai": {
+    "author": "Florian Kriechbaumer",
+    "evidence": "surroundings",
+    "file": "File:Ras Al Khor Wildlife Sanctuary with Dubai Skyline 2.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Ras_Al_Khor_Wildlife_Sanctuary_with_Dubai_Skyline_2.jpg"
+  },
+  "hct_fujairah": {
+    "author": "SHUHAIB MUSTHAFA",
+    "evidence": "surroundings",
+    "file": "File:WAY TO FUJAIRAH FORT AFTER MAIN ENTRANCE.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:WAY_TO_FUJAIRAH_FORT_AFTER_MAIN_ENTRANCE.jpg"
+  },
+  "hct_madinat_zayed": {
+    "author": "Rizwan Ullah Wazir",
+    "evidence": "surroundings",
+    "file": "File:Madinat Zayed - United Arab Emirates 1 - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Madinat_Zayed_-_United_Arab_Emirates_1_-_panoramio.jpg"
+  },
+  "hct_ras_al_khaimah": {
+    "author": "Axlxya",
+    "evidence": "surroundings",
+    "file": "File:Serenity sundays.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "place": null,
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Serenity_sundays.jpg"
+  },
+  "hct_ruwais": {
+    "author": "greeeen2008",
+    "evidence": "surroundings",
+    "file": "File:Thander storm - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "place": null,
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Thander_storm_-_panoramio.jpg"
+  },
+  "hct_sharjah": {
+    "author": "Mahmoud Farrag",
+    "evidence": "surroundings",
+    "file": "File:Great Gate Palace بوابة قصر كبير - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Great_Gate_Palace_%D8%A8%D9%88%D8%A7%D8%A8%D8%A9_%D9%82%D8%B5%D8%B1_%D9%83%D8%A8%D9%8A%D8%B1_-_panoramio.jpg"
+  },
+  "hw_dubai": {
+    "author": "Nowitscorrect",
+    "evidence": "surroundings",
+    "file": "File:IBM building in the Dubai Internet City.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:IBM_building_in_the_Dubai_Internet_City.jpg"
+  },
+  "khalifa_maritime": {
+    "author": "Groman123",
+    "evidence": "surroundings",
+    "file": "File:Abu Dhabi night skyline (37001006072).jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_night_skyline_(37001006072).jpg"
+  },
+  "kic": {
+    "author": "Sokaniwaal",
+    "evidence": "search+name",
+    "file": "File:Khawarizmi International College.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Khawarizmi_International_College.jpg"
+  },
+  "ku": {
+    "author": "Ghassan Mroue",
+    "evidence": "surroundings",
+    "file": "File:Abu Dhabi Yas Island - hotel entrance - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_Yas_Island_-_hotel_entrance_-_panoramio.jpg"
+  },
+  "manipal_dubai": {
+    "author": "wilhelmtittes",
+    "evidence": "surroundings",
+    "file": "File:Parking - panoramio (31).jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Parking_-_panoramio_(31).jpg"
+  },
+  "mbru": {
+    "author": "Clicks311",
+    "evidence": "surroundings",
+    "file": "File:Ravindran Raghavan (Malaysia).jpg",
+    "kind": "surroundings",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Ravindran_Raghavan_(Malaysia).jpg"
+  },
+  "mbzuai": {
+    "author": "Thomas Woodtli from Zürich, Switzerland",
+    "evidence": "surroundings",
+    "file": "File:Abu Dhabi International Airport (30012035073).jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_International_Airport_(30012035073).jpg"
+  },
+  "middlesex_dubai": {
+    "author": "Hafees.a",
+    "evidence": "search+name",
+    "file": "File:Middlesex University Dubai Campus.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Middlesex_University_Dubai_Campus.jpg"
+  },
   "nyuad": {
     "author": "110603Ldj.",
     "evidence": "category:New York University Abu Dhabi",
@@ -43,6 +383,28 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:NYUAD_Library.jpg"
+  },
+  "rabdan": {
+    "author": "Jaseem Hamza",
+    "evidence": "emirate",
+    "file": "File:Abudhabi City Views - panoramio (3).jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "place": "abu_dhabi",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abudhabi_City_Views_-_panoramio_(3).jpg"
+  },
+  "rakmhsu": {
+    "author": "Aliraza521",
+    "evidence": "surroundings",
+    "file": "File:Sunrise Behind the Jabal jais.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "place": null,
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Sunrise_Behind_the_Jabal_jais.jpg"
   },
   "sharjah_univ": {
     "author": "Catboy69",
@@ -62,6 +424,16 @@
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Skyline_University_College_In_Sharjah._%D9%83%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%A7%D9%81%D9%82_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D9%82%D8%A9_-_panoramio.jpg"
   },
+  "sorbonne_ad": {
+    "author": "giggel",
+    "evidence": "surroundings",
+    "file": "File:Abu Dhabi - 2011-03-21 - Die im Bau befindlichen Nation Towers werden in wenigen Tagen auf einer Höhe von ca. 202 Metern mit einer Brücke verbunden sei - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_-_2011-03-21_-_Die_im_Bau_befindlichen_Nation_Towers_werden_in_wenigen_Tagen_auf_einer_H%C3%B6he_von_ca._202_Metern_mit_einer_Br%C3%BCcke_verbunden_sei_-_panoramio.jpg"
+  },
   "uaeu": {
     "author": "ted bongiovanni from Glen Ridge, NJ, United States of America",
     "evidence": "geo+name",
@@ -70,5 +442,55 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:United_Arab_Emirates_University_(9717029334).jpg"
+  },
+  "uaq_univ": {
+    "author": "Adilakv",
+    "evidence": "surroundings",
+    "file": "File:Ramadan 2023 (cropped).jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Ramadan_2023_(cropped).jpg"
+  },
+  "ud": {
+    "author": "Simisa",
+    "evidence": "surroundings",
+    "file": "File:UAE-Oman 16.08.2009 05-19-06.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:UAE-Oman_16.08.2009_05-19-06.jpg"
+  },
+  "uof": {
+    "author": "SHUHAIB MUSTHAFA",
+    "evidence": "surroundings",
+    "file": "File:WAY TO FUJAIRAH FORT AFTER MAIN ENTRANCE.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:WAY_TO_FUJAIRAH_FORT_AFTER_MAIN_ENTRANCE.jpg"
+  },
+  "zu_ad": {
+    "author": "Xiaotong Gao",
+    "evidence": "surroundings",
+    "file": "File:Abu Dhabi Gate City - Abu Dhabi - United Arab Emirates - panoramio.jpg",
+    "kind": "surroundings",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_Gate_City_-_Abu_Dhabi_-_United_Arab_Emirates_-_panoramio.jpg"
+  },
+  "zu_dubai": {
+    "author": "Андрей Бобровский",
+    "evidence": "surroundings",
+    "file": "File:Emirates - panoramio (71).jpg",
+    "kind": "surroundings",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Emirates_-_panoramio_(71).jpg"
   }
 }

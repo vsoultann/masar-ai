@@ -7,9 +7,7 @@ import { useEffect, useMemo, useState } from "react";
 import CountUp from "@/components/CountUp";
 import MatchRing from "@/components/MatchRing";
 import { SectorDistribution } from "@/components/charts";
-import {
-  Chip, EmptyState, ErrorBox, ResistanceBadge, SectionHeading,
-} from "@/components/ui";
+import { Chip, EmptyState, ErrorBox, SectionHeading } from "@/components/ui";
 import { indexBy, loadCareerIndex, loadSectors } from "@/lib/data/client";
 import { useLocale } from "@/lib/locale-context";
 import { loadModel, recommend, type RecommendationResult } from "@/lib/ml/inference";
@@ -218,14 +216,6 @@ export default function ResultsPage() {
                                 ? t.results.confidenceModerate
                                 : t.results.confidenceLow}
                           </Chip>
-                          {/* The results page is where a student decides what
-                              to do next, so the exposure score belongs beside
-                              the match — a 94% match to an exposed career is a
-                              real thing to know before acting on it. */}
-                          <ResistanceBadge
-                            value={career.aiResistance.score}
-                            band={career.aiResistance.band}
-                          />
                         </div>
 
                         <p className="mt-1 line-clamp-2 text-sm muted">
