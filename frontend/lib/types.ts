@@ -262,11 +262,29 @@ export interface Profile {
   gradeLevel: string | null;
   track: string | null;
   grades: Record<string, number>;
+  /**
+   * EmSAT is no longer collected — step 2 asks for SAT and IELTS instead — but
+   * the field stays so a profile saved before that change still loads, and so
+   * the university eligibility check can keep using scores a student already
+   * entered.
+   */
   emsat: Record<string, number>;
+  /** SAT total, 400–1600. Optional: plenty of applicants never sit it. */
+  sat: number | null;
+  /** IELTS overall band, 4.0–9.0. Optional: not every institution asks for it. */
+  ielts: number | null;
   riasec: Record<string, number>;
   bigfive: Record<string, number>;
   riasecAnswers: Record<string, number>;
   bigfiveAnswers: Record<string, number>;
+  /**
+   * The item ids drawn for this student, persisted so closing the tab does not
+   * reshuffle the questionnaire underneath a half-finished answer set. Empty
+   * on a profile saved before the questionnaires were shortened; the wizard
+   * draws on first sight of the step.
+   */
+  riasecItems: string[];
+  bigfiveItems: string[];
   completedSteps: number;
   savedCareers: string[];
   savedUniversities: string[];

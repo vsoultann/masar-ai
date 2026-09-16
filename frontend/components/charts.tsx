@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Cell,
   Legend,
+  LabelList,
   PolarAngleAxis,
   PolarGrid,
   PolarRadiusAxis,
@@ -35,9 +36,20 @@ import { useLocale } from "@/lib/locale-context";
  * Deriving a `dataKey` from the UI language would make the key language
  * dependent, which is a bug waiting for the first person who renames a label.
  */
-const GREEN = "#00732f";
-const BLUE = "#0b3d5c";
-const SAND = "#b08d3f";
+/*
+ * Categorical slots, in fixed order, read from CSS so light and dark each get
+ * their own validated step. Never cycled: a sixth series folds into "other"
+ * rather than reusing slot 1, and a hue always belongs to the same entity —
+ * Openness is the same colour on every chart that shows it.
+ */
+const VIZ = [
+  "var(--viz-1)",
+  "var(--viz-2)",
+  "var(--viz-3)",
+  "var(--viz-4)",
+  "var(--viz-5)",
+] as const;
+const FALLBACK = "var(--viz-4)";
 
 const axisStyle = { fontSize: 11, fill: "var(--ink-2)" };
 
@@ -95,8 +107,8 @@ export function RiasecRadar({ scores }: { scores: Record<string, number> }) {
         <PolarRadiusAxis domain={[0, 100]} tick={{ ...axisStyle, fontSize: 9 }} />
         <Radar
           dataKey="value"
-          stroke={GREEN}
-          fill={GREEN}
+          stroke={VIZ[0]}
+          fill={VIZ[0]}
           fillOpacity={0.35}
           isAnimationActive={animate}
         />
@@ -109,18 +121,43 @@ export function RiasecRadar({ scores }: { scores: Record<string, number> }) {
 export function BigFiveBars({ scores }: { scores: Record<string, number> }) {
   const { t } = useLocale();
   const animate = !usePrefersReducedMotion();
-  const data = (["O", "C", "E", "A", "N"] as const).map((code) => ({
+  const data = (["O", "C", "E", "A", "N"] as const).map((code, index) => ({
     trait: t.bigfive[code],
     value: Math.round(scores[code] ?? 0),
+    fill: VIZ[index],
   }));
+  /*
+   * A colour per trait, not a colour per value.
+   *
+   * Shading a single series darker-where-bigger would double-encode the bar
+   * height and tell the reader nothing new. These five are *entities* —
+   * Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism —
+   * each pinned to a fixed slot, so a trait keeps its colour across every
+   * chart and every reload.
+   *
+   * The number sits on the bar because four of the five light-mode hues fall
+   * below 3:1 against the chart surface. That is the relief rule: a palette
+   * chosen for separation owes the reader a non-colour channel.
+   */
   return (
     <ChartFrame>
-      <BarChart data={data} margin={{ top: 8, right: 8, bottom: 8, left: 0 }}>
+      <BarChart data={data} margin={{ top: 16, right: 8, bottom: 8, left: 0 }}>
         <CartesianGrid strokeDasharray="3 3" stroke="var(--line)" vertical={false} />
         <XAxis dataKey="trait" tick={axisStyle} interval={0} height={50} angle={-18} dy={12} />
         <YAxis domain={[0, 100]} tick={axisStyle} width={32} />
         <Tooltip contentStyle={tooltipStyle} cursor={{ fill: "var(--surface-3)" }} />
-        <Bar dataKey="value" fill={BLUE} radius={[4, 4, 0, 0]} isAnimationActive={animate} />
+        <Bar dataKey="value" radius={[4, 4, 0, 0]} isAnimationActive={animate}>
+          <LabelList
+            dataKey="value"
+            position="top"
+            style={{ fill: "var(--ink-2)", fontSize: 11, fontWeight: 700 }}
+          />
+          {data.map((row) => (
+            /* 2px of surface between neighbours rather than a stroke around
+               each bar — a border would read as part of the mark. */
+            <Cell key={row.trait} fill={row.fill} stroke="var(--surface-2)" strokeWidth={2} />
+          ))}
+        </Bar>
       </BarChart>
     </ChartFrame>
   );
@@ -163,8 +200,8 @@ export function SkillGapChart({ data }: { data: GapDatum[] }) {
           <Radar
             name={requiredLabel}
             dataKey="required"
-            stroke={BLUE}
-            fill={BLUE}
+            stroke={VIZ[0]}
+            fill={VIZ[0]}
             fillOpacity={0.15}
             strokeDasharray="4 3"
             isAnimationActive={animate}
@@ -172,8 +209,8 @@ export function SkillGapChart({ data }: { data: GapDatum[] }) {
           <Radar
             name={currentLabel}
             dataKey="current"
-            stroke={GREEN}
-            fill={GREEN}
+            stroke={VIZ[1]}
+            fill={VIZ[1]}
             fillOpacity={0.4}
             isAnimationActive={animate}
           />
@@ -195,14 +232,14 @@ export function SkillGapChart({ data }: { data: GapDatum[] }) {
         <Bar
           name={currentLabel}
           dataKey="current"
-          fill={GREEN}
+          fill={VIZ[0]}
           radius={[0, 4, 4, 0]}
           isAnimationActive={animate}
         />
         <Bar
           name={requiredLabel}
           dataKey="required"
-          fill={BLUE}
+          fill={VIZ[1]}
           radius={[0, 4, 4, 0]}
           isAnimationActive={animate}
         />
@@ -226,7 +263,7 @@ export function SectorDistribution({
         <Tooltip contentStyle={tooltipStyle} cursor={{ fill: "var(--surface-3)" }} />
         <Bar dataKey="value" radius={[0, 4, 4, 0]} isAnimationActive={animate}>
           {data.map((row) => (
-            <Cell key={row.name} fill={row.color || SAND} />
+            <Cell key={row.name} fill={row.color || FALLBACK} />
           ))}
         </Bar>
       </BarChart>
@@ -258,21 +295,21 @@ export function ModelComparisonChart({
         <Bar
           name={t.admin.cvAccuracy}
           dataKey="cv"
-          fill={GREEN}
+          fill={VIZ[0]}
           radius={[4, 4, 0, 0]}
           isAnimationActive={animate}
         />
         <Bar
           name={t.admin.cvF1}
           dataKey="f1"
-          fill={BLUE}
+          fill={VIZ[1]}
           radius={[4, 4, 0, 0]}
           isAnimationActive={animate}
         />
         <Bar
           name={t.admin.testAccuracy}
           dataKey="test"
-          fill={SAND}
+          fill={VIZ[2]}
           radius={[4, 4, 0, 0]}
           isAnimationActive={animate}
         />

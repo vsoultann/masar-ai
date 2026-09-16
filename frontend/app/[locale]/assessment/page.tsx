@@ -9,6 +9,7 @@ import { ErrorBox, Loading } from "@/components/ui";
 import { loadBigFive, loadRiasec } from "@/lib/data/client";
 import { localiseDigits } from "@/lib/i18n";
 import { useLocale } from "@/lib/locale-context";
+import { drawQuestionnaire, narrowTo } from "@/lib/questionnaire";
 import { scoreQuestionnaire } from "@/lib/scoring";
 import { emptyProfile, useProfile } from "@/lib/store/profile";
 import type { Profile, Questionnaire } from "@/lib/types";
@@ -29,13 +30,34 @@ import type { Profile, Questionnaire } from "@/lib/types";
 const SUBJECTS = [
   "math", "physics", "biology", "chemistry", "english", "arabic",
 ] as const;
-const EMSAT_SUBJECTS = ["english", "math", "physics", "arabic"] as const;
+/*
+ * SAT and IELTS replaced EmSAT here.
+ *
+ * Both stay optional, and for different reasons: a grade 10 or 11 student has
+ * not sat the SAT yet, and plenty of UAE programmes never ask for IELTS at all.
+ * What is not optional is that a score someone *does* type sits on the real
+ * scale — a 9.5 IELTS band or a 2000 SAT is a typo, and silently storing it
+ * would put a number in the profile that cannot exist.
+ */
+const SAT_RANGE = [400, 1600] as const;
+const IELTS_RANGE = [4, 9] as const;
 const EMIRATES = [
   "abu_dhabi", "dubai", "sharjah", "ajman",
   "umm_al_quwain", "ras_al_khaimah", "fujairah",
 ] as const;
 const TRACKS = ["general", "advanced", "elite"] as const;
 const TOTAL_STEPS = 4;
+
+/*
+ * Ten statements each, drawn from the thirty-item RIASEC inventory and the
+ * twenty-five-item Big Five.
+ *
+ * Fifty-five statements was the single longest thing in the product and the
+ * commonest place to give up. Ten per instrument is short enough to finish and,
+ * because the draw is stratified by dimension, still scores every letter and
+ * every trait rather than leaving some at a neutral default.
+ */
+const QUESTIONNAIRE_LENGTH = 10;
 
 /**
  * The four-step assessment.
@@ -48,6 +70,61 @@ const TOTAL_STEPS = 4;
  * profile; asking someone to register an account before an anonymous,
  * device-local questionnaire would be friction with nothing behind it.
  */
+/**
+ * One optional standardised-test score.
+ *
+ * SAT and IELTS are the same control with different bounds, and writing it
+ * twice invites the two copies to drift — which is how the EmSAT block ended
+ * up validating a range the label did not mention.
+ */
+function OptionalScore({
+  id, label, value, onChange, min, max, step, error, clearError,
+}: {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (next: string) => void;
+  min: number;
+  max: number;
+  step: number;
+  error?: string;
+  clearError: () => void;
+}) {
+  const invalid = Boolean(error);
+  return (
+    <div>
+      <label htmlFor={`test-${id}`} className="mb-1 block text-xs font-medium">
+        {label}
+      </label>
+      <input
+        id={`test-${id}`}
+        type="number"
+        min={min}
+        max={max}
+        step={step}
+        inputMode="decimal"
+        dir="ltr"
+        aria-invalid={invalid}
+        aria-describedby={invalid ? `test-${id}-error` : undefined}
+        value={value}
+        onChange={(event) => {
+          onChange(event.target.value);
+          clearError();
+        }}
+        className={`field ${invalid ? "border-[var(--color-uae-red-muted)]" : ""}`}
+      />
+      {invalid && (
+        <p
+          id={`test-${id}-error`}
+          className="mt-1 text-[11px] text-[var(--color-uae-red-muted)] dark:text-red-400"
+        >
+          {error}
+        </p>
+      )}
+    </div>
+  );
+}
+
 export default function AssessmentPage() {
   const { locale, t } = useLocale();
   const router = useRouter();
@@ -75,9 +152,10 @@ export default function AssessmentPage() {
   const [track, setTrack] = useState("general");
   // step 2
   const [grades, setGrades] = useState<Record<string, string>>({});
-  const [emsat, setEmsat] = useState<Record<string, string>>({});
+  const [sat, setSat] = useState("");
+  const [ielts, setIelts] = useState("");
   const [gradeErrors, setGradeErrors] = useState<Record<string, string>>({});
-  const [emsatErrors, setEmsatErrors] = useState<Record<string, string>>({});
+  const [testErrors, setTestErrors] = useState<Record<string, string>>({});
   // steps 3 and 4
   const [riasec, setRiasec] = useState<Questionnaire | null>(null);
   const [bigfive, setBigfive] = useState<Questionnaire | null>(null);
@@ -114,9 +192,8 @@ export default function AssessmentPage() {
     setGrades(
       Object.fromEntries(Object.entries(stored.grades ?? {}).map(([k, v]) => [k, String(v)])),
     );
-    setEmsat(
-      Object.fromEntries(Object.entries(stored.emsat ?? {}).map(([k, v]) => [k, String(v)])),
-    );
+    setSat(stored.sat === null || stored.sat === undefined ? "" : String(stored.sat));
+    setIelts(stored.ielts === null || stored.ielts === undefined ? "" : String(stored.ielts));
     setRiasecAnswers(stored.riasecAnswers ?? {});
     setBigfiveAnswers(stored.bigfiveAnswers ?? {});
     // Resume where the student stopped rather than restarting at step 1.
@@ -191,9 +268,10 @@ export default function AssessmentPage() {
    * a real answer. Refusing to continue is the honest behaviour: the
    * recommendation is only worth what went into it.
    *
-   * EmSAT stays optional, because it genuinely is — a grade 10 or 11 student
-   * has not sat it. What is not optional is that a score they *do* type sits
-   * on the real 500–1500 band.
+   * SAT and IELTS stay optional, because they genuinely are — a grade 10 or
+   * 11 student has sat neither, and plenty of UAE programmes never ask for
+   * IELTS. What is not optional is that a score they *do* type sits on the
+   * real scale.
    */
   const validateGrades = useCallback(() => {
     const badGrades: Record<string, string> = {};
@@ -209,23 +287,65 @@ export default function AssessmentPage() {
       }
     }
 
-    const badEmsat: Record<string, string> = {};
-    for (const subject of EMSAT_SUBJECTS) {
-      const raw = (emsat[subject] ?? "").trim();
-      if (raw === "") continue;
-      const value = Number(raw);
-      if (!Number.isFinite(value) || value < 500 || value > 1500) {
-        badEmsat[subject] = t.errors.emsatRange;
-      }
-    }
+    const badTests: Record<string, string> = {};
+    const checkOptional = (
+      key: string, raw: string, [min, max]: readonly [number, number], message: string,
+    ) => {
+      const value = raw.trim();
+      if (value === "") return;
+      const parsed = Number(value);
+      if (!Number.isFinite(parsed) || parsed < min || parsed > max) badTests[key] = message;
+    };
+    checkOptional("sat", sat, SAT_RANGE, t.errors.satRange);
+    checkOptional("ielts", ielts, IELTS_RANGE, t.errors.ieltsRange);
 
     setGradeErrors(badGrades);
-    setEmsatErrors(badEmsat);
-    return Object.keys(badGrades).length === 0 && Object.keys(badEmsat).length === 0;
-  }, [grades, emsat, t.errors.required, t.errors.gradeRange, t.errors.emsatRange]);
+    setTestErrors(badTests);
+    return Object.keys(badGrades).length === 0 && Object.keys(badTests).length === 0;
+  }, [grades, sat, ielts, t.errors.required, t.errors.gradeRange,
+      t.errors.satRange, t.errors.ieltsRange]);
 
-  const riasecDone = riasec ? Object.keys(riasecAnswers).length >= riasec.items.length : false;
-  const bigfiveDone = bigfive ? Object.keys(bigfiveAnswers).length >= bigfive.items.length : false;
+  /*
+   * The drawn subset, held on the profile.
+   *
+   * Drawn once, the first time the student reaches the step, and then reused —
+   * a fresh draw on every mount would change the questions under a
+   * half-finished run and make "answer every statement" impossible to satisfy.
+   * Starting the assessment over clears the ids, so the next run is a new ten.
+   */
+  useEffect(() => {
+    if (!hydrated || !riasec || !bigfive) return;
+    const stored = useProfile.getState().profile;
+    if (!stored) return;
+    const patch: Partial<Profile> = {};
+    if ((stored.riasecItems ?? []).length === 0) {
+      patch.riasecItems = drawQuestionnaire(riasec, QUESTIONNAIRE_LENGTH);
+    }
+    if ((stored.bigfiveItems ?? []).length === 0) {
+      patch.bigfiveItems = drawQuestionnaire(bigfive, QUESTIONNAIRE_LENGTH);
+    }
+    if (Object.keys(patch).length > 0) updateProfile(patch);
+  }, [hydrated, riasec, bigfive, profileId, updateProfile]);
+
+  /*
+   * Null until the draw exists, not "the full inventory until the draw exists".
+   *
+   * narrowTo falls back to the whole instrument for an empty id list, which is
+   * right for a stale saved profile and wrong for the single frame between
+   * mount and the effect above: the student saw statement 1 of 30 and then
+   * watched it swap for a different statement as the draw landed.
+   */
+  const riasecIds = profile?.riasecItems ?? [];
+  const bigfiveIds = profile?.bigfiveItems ?? [];
+  const riasecDrawn = riasec && riasecIds.length > 0 ? narrowTo(riasec, riasecIds) : null;
+  const bigfiveDrawn = bigfive && bigfiveIds.length > 0 ? narrowTo(bigfive, bigfiveIds) : null;
+
+  const riasecDone = riasecDrawn
+    ? Object.keys(riasecAnswers).length >= riasecDrawn.items.length
+    : false;
+  const bigfiveDone = bigfiveDrawn
+    ? Object.keys(bigfiveAnswers).length >= bigfiveDrawn.items.length
+    : false;
 
   const stepTitles = useMemo(
     () => [t.wizard.s1Title, t.wizard.s2Title, t.wizard.s3Title, t.wizard.s4Title],
@@ -443,12 +563,12 @@ export default function AssessmentPage() {
                 .filter(([, value]) => value !== "")
                 .map(([key, value]) => [key, Number(value)]),
             );
-            const numericEmsat = Object.fromEntries(
-              Object.entries(emsat)
-                .filter(([, value]) => value !== "")
-                .map(([key, value]) => [key, Number(value)]),
+            const optional = (raw: string) =>
+              raw.trim() === "" ? null : Number(raw);
+            void save(
+              { grades: numericGrades, sat: optional(sat), ielts: optional(ielts) },
+              3,
             );
-            void save({ grades: numericGrades, emsat: numericEmsat }, 3);
           }}
         >
           <fieldset>
@@ -517,50 +637,38 @@ export default function AssessmentPage() {
           </fieldset>
 
           <fieldset>
-            <legend className="text-sm font-bold">
-              {t.wizard.emsatTitle}
-            </legend>
-            <p className="mt-1 text-xs muted">{t.wizard.emsatHelp}</p>
-            <div className="mt-4 grid gap-3 sm:grid-cols-4">
-              {EMSAT_SUBJECTS.map((subject) => {
-                const invalid = Boolean(emsatErrors[subject]);
-                return (
-                  <div key={subject}>
-                    <label htmlFor={`emsat-${subject}`} className="mb-1 block text-xs font-medium">
-                      {t.subjects[subject]}
-                    </label>
-                    <input
-                      id={`emsat-${subject}`}
-                      type="number"
-                      min={500}
-                      max={1500}
-                      inputMode="numeric"
-                      dir="ltr"
-                      aria-invalid={invalid}
-                      aria-describedby={invalid ? `emsat-${subject}-error` : undefined}
-                      value={emsat[subject] ?? ""}
-                      onChange={(event) => {
-                        setEmsat((current) => ({ ...current, [subject]: event.target.value }));
-                        setEmsatErrors((current) => {
-                          if (!current[subject]) return current;
-                          const next = { ...current };
-                          delete next[subject];
-                          return next;
-                        });
-                      }}
-                      className={`field ${invalid ? "border-[var(--color-uae-red-muted)]" : ""}`}
-                    />
-                    {invalid && (
-                      <p
-                        id={`emsat-${subject}-error`}
-                        className="mt-1 text-[11px] text-[var(--color-uae-red-muted)] dark:text-red-400"
-                      >
-                        {emsatErrors[subject]}
-                      </p>
-                    )}
-                  </div>
-                );
-              })}
+            <legend className="text-sm font-bold">{t.wizard.satTitle}</legend>
+            <p className="mt-1 text-xs muted">{t.wizard.satHelp}</p>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              <OptionalScore
+                id="sat"
+                label={t.wizard.satLabel}
+                value={sat}
+                onChange={setSat}
+                min={SAT_RANGE[0]}
+                max={SAT_RANGE[1]}
+                step={10}
+                error={testErrors.sat}
+                clearError={() => setTestErrors(({ sat: _drop, ...rest }) => rest)}
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend className="text-sm font-bold">{t.wizard.ieltsTitle}</legend>
+            <p className="mt-1 text-xs muted">{t.wizard.ieltsHelp}</p>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              <OptionalScore
+                id="ielts"
+                label={t.wizard.ieltsLabel}
+                value={ielts}
+                onChange={setIelts}
+                min={IELTS_RANGE[0]}
+                max={IELTS_RANGE[1]}
+                step={0.5}
+                error={testErrors.ielts}
+                clearError={() => setTestErrors(({ ielts: _drop, ...rest }) => rest)}
+              />
             </div>
           </fieldset>
 
@@ -576,9 +684,10 @@ export default function AssessmentPage() {
       )}
 
       {/* --------------------------------------------------------- steps 3 & 4 */}
-      {step === 3 && riasec && (
+      {step === 3 && !riasecDrawn && <Loading />}
+      {step === 3 && riasecDrawn && (
         <QuestionnaireFlow
-          questionnaire={riasec}
+          questionnaire={riasecDrawn}
           answers={riasecAnswers}
           setAnswers={setRiasecAnswers}
           legend={t.wizard.s3Legend}
@@ -591,7 +700,9 @@ export default function AssessmentPage() {
               {
                 riasecAnswers,
                 // Scored here because there is no server to score it.
-                riasec: riasec ? scoreQuestionnaire(riasecAnswers, riasec.items) : {},
+                riasec: riasecDrawn
+                  ? scoreQuestionnaire(riasecAnswers, riasecDrawn.items)
+                  : {},
               },
               4,
             )
@@ -600,9 +711,10 @@ export default function AssessmentPage() {
         />
       )}
 
-      {step === 4 && bigfive && (
+      {step === 4 && !bigfiveDrawn && <Loading />}
+      {step === 4 && bigfiveDrawn && (
         <QuestionnaireFlow
-          questionnaire={bigfive}
+          questionnaire={bigfiveDrawn}
           answers={bigfiveAnswers}
           setAnswers={setBigfiveAnswers}
           legend={t.wizard.s4Legend}
@@ -614,7 +726,9 @@ export default function AssessmentPage() {
             void save(
               {
                 bigfiveAnswers,
-                bigfive: bigfive ? scoreQuestionnaire(bigfiveAnswers, bigfive.items) : {},
+                bigfive: bigfiveDrawn
+                  ? scoreQuestionnaire(bigfiveAnswers, bigfiveDrawn.items)
+                  : {},
               },
               5,
             )

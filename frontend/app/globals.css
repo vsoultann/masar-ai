@@ -52,6 +52,28 @@
   --surface-translucent: rgb(255 255 255 / 0.82);
   --surface-2-translucent: rgb(248 247 243 / 0.80);
 
+  /* ------------------------------------------------------------------ viz
+     Categorical chart slots, assigned in fixed order and never cycled.
+
+     The old chart palette was three dull tones lifted from the brand — a dark
+     navy, a dark green and a muddy sand — which made every bar look like every
+     other bar. These are the validated categorical hues, checked with the
+     data-viz validator against this app's own chart surface rather than
+     eyeballed: in light mode all five clear the lightness band, the chroma
+     floor, colour-blind separation (worst adjacent ΔE 9.1) and the
+     normal-vision floor (19.6). Contrast against the light surface is below
+     3:1 for four of the five, so charts using them carry visible value labels
+     — that is the relief rule, not an optional nicety.
+
+     Deliberately NOT derived from --brand: a chart series is an identity, and
+     a series that changed hue when a student picked a different accent scheme
+     would be a series that means nothing. */
+  --viz-1: #2a78d6;
+  --viz-2: #eb6834;
+  --viz-3: #1baf7a;
+  --viz-4: #eda100;
+  --viz-5: #e87ba4;
+
   color-scheme: light;
 }
 
@@ -68,6 +90,15 @@
   --accent: #7cc4e8;
   --surface-translucent: rgb(12 20 24 / 0.80);
   --surface-2-translucent: rgb(18 30 36 / 0.78);
+
+  /* The same five hues re-stepped for the dark surface, and validated as a set
+     against it — not an automatic lightening of the light values. All five
+     clear 3:1 here, so dark mode needs no relief. */
+  --viz-1: #3987e5;
+  --viz-2: #d95926;
+  --viz-3: #199e70;
+  --viz-4: #c98500;
+  --viz-5: #d55181;
   color-scheme: dark;
 }
 
@@ -162,7 +193,36 @@ body {
   overflow-x: hidden;
   color: var(--ink);
   font-family: var(--font-sans);
+  /*
+   * 500 rather than the 400 default.
+   *
+   * Plus Jakarta Sans at 400 goes thin on a dark surface, which is most of this
+   * app -- the light text on a dark ground loses weight the way white-on-black
+   * always does. One step up reads as solid in both themes without tipping
+   * body copy into looking emphasised.
+   */
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
+}
+
+/* The secondary ink is already a step down in contrast; leaving it at 500 as
+   well makes captions and helper text read as body copy. */
+.muted,
+small,
+figcaption {
+  font-weight: 450;
+}
+
+/* Everything that was already marked as emphasis moves up with it, so the
+   hierarchy keeps the same distance rather than collapsing toward the new
+   body weight. */
+strong,
+b,
+th,
+label,
+legend,
+.btn {
+  font-weight: 700;
 }
 
 /* Arabic gets its own face and a slightly looser line height: Naskh forms sit
@@ -182,7 +242,15 @@ html[lang="ar"] body {
 -------------------------------------------------------------------------- */
 h1, h2, h3, .display {
   font-family: var(--font-display);
+  font-weight: 800;
   letter-spacing: -0.02em;
+}
+
+/* Arabic display faces have no 800; asking for one makes the browser
+   synthesise a smeared bold. Kufi's own 700 is heavier than the Latin 700
+   anyway. */
+html[lang="ar"] :is(h1, h2, h3, .display) {
+  font-weight: 700;
 }
 
 /* Kufi is already tightly fitted and Arabic must never be letter-spaced --

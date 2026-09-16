@@ -68,6 +68,23 @@ async function fillGrades(
   }
 }
 
+/**
+ * The statement currently on screen.
+ *
+ * Steps 3 and 4 now draw ten items at random from the full inventory, so no
+ * test may assume "Statement 1" comes first — only that exactly one statement
+ * is visible and that answering it moves to a different one.
+ */
+function visibleStatement(): string | null {
+  for (let index = 1; index <= 30; index += 1) {
+    if (screen.queryByText(`Statement ${index}`)) return `Statement ${index}`;
+  }
+  return null;
+}
+
+/** The ids the wizard drew for this profile, in the order it will ask them. */
+const drawnRiasec = () => useProfile.getState().profile?.riasecItems ?? [];
+
 function renderWizard(locale: "en" | "ar" = "en") {
   return render(
     <LocaleProvider locale={locale} dictionary={getDictionary(locale)}>
@@ -159,7 +176,7 @@ describe("assessment wizard", () => {
     expect(within(city).getAllByRole("option")).toHaveLength(5);
   });
 
-  it("marks EmSAT as optional and only stores the scores that were entered", async () => {
+  it("marks the standardised tests optional and stores only what was entered", async () => {
     const user = userEvent.setup();
     seed({ completedSteps: 1 });
     renderWizard();
@@ -170,8 +187,9 @@ describe("assessment wizard", () => {
     await waitFor(() => {
       const stored = useProfile.getState().profile;
       expect(stored?.grades.math).toBe(92);
-      // EmSAT is genuinely optional — a grade 10 or 11 student has not sat it.
-      expect(stored?.emsat).toEqual({});
+      // Genuinely optional — a grade 10 or 11 student has sat neither.
+      expect(stored?.sat).toBeNull();
+      expect(stored?.ielts).toBeNull();
     });
   });
 
@@ -198,19 +216,38 @@ describe("assessment wizard", () => {
     expect(useProfile.getState().profile?.completedSteps).toBe(1);
   });
 
-  it("refuses a mark outside 0-100, and an EmSAT score off its band", async () => {
+  it("refuses a mark outside 0-100, and a SAT or IELTS score off its scale", async () => {
     const user = userEvent.setup();
     seed({ completedSteps: 1 });
     renderWizard();
 
     await fillGrades(user, { physics: "140" });
-    const emsatMaths = await screen.findByLabelText("Mathematics", { selector: "#emsat-math" });
-    await user.type(emsatMaths, "120");
+    await user.type(await screen.findByLabelText("SAT total"), "2000");
+    await user.type(screen.getByLabelText("IELTS overall band"), "9.5");
     await user.click(screen.getByRole("button", { name: /save and continue/i }));
 
     expect(await screen.findByText("Enter a number between 0 and 100.")).toBeInTheDocument();
-    expect(screen.getByText("EmSAT scores are between 500 and 1500.")).toBeInTheDocument();
+    expect(screen.getByText("SAT totals are between 400 and 1600.")).toBeInTheDocument();
+    expect(screen.getByText("IELTS bands are between 4.0 and 9.0.")).toBeInTheDocument();
     expect(useProfile.getState().profile?.completedSteps).toBe(1);
+  });
+
+  it("stores SAT and IELTS when given, and leaves them null when not", async () => {
+    const user = userEvent.setup();
+    seed({ completedSteps: 1 });
+    renderWizard();
+
+    await fillGrades(user);
+    await user.type(await screen.findByLabelText("SAT total"), "1380");
+    await user.click(screen.getByRole("button", { name: /save and continue/i }));
+
+    await waitFor(() => {
+      const stored = useProfile.getState().profile;
+      expect(stored?.sat).toBe(1380);
+      // Both are optional, and for different reasons: a grade 10 student has
+      // not sat the SAT, and plenty of UAE programmes never ask for IELTS.
+      expect(stored?.ielts).toBeNull();
+    });
   });
 
   it("clears a field's error as soon as it is corrected", async () => {
@@ -246,8 +283,9 @@ describe("assessment wizard", () => {
   it("resumes at the step after the last completed one", async () => {
     seed({ completedSteps: 2 });
     renderWizard();
-    // Step 3 is the RIASEC questionnaire.
-    expect(await screen.findByText("Statement 1")).toBeInTheDocument();
+    // Step 3 is the RIASEC questionnaire — which statement it opens on is a
+    // property of the draw, not of the resume.
+    await waitFor(() => expect(visibleStatement()).not.toBeNull());
   });
 
   it("shows one statement at a time and advances after an answer", async () => {
@@ -255,50 +293,86 @@ describe("assessment wizard", () => {
     seed({ completedSteps: 2 });
     renderWizard();
 
-    // Only the current statement is on screen, not all thirty.
-    expect(await screen.findByText("Statement 1")).toBeInTheDocument();
-    expect(screen.queryByText("Statement 2")).not.toBeInTheDocument();
+    // Exactly one statement is on screen, not the whole inventory.
+    await waitFor(() => expect(visibleStatement()).not.toBeNull());
+    const first = visibleStatement();
+    expect(
+      Array.from({ length: 30 }, (_, i) => screen.queryByText(`Statement ${i + 1}`))
+        .filter(Boolean),
+    ).toHaveLength(1);
 
     await user.click(screen.getByRole("radio", { name: "Neutral" }));
 
-    // Selecting auto-advances, so statement 2 replaces statement 1.
-    expect(await screen.findByText("Statement 2")).toBeInTheDocument();
-    expect(screen.queryByText("Statement 1")).not.toBeInTheDocument();
+    // Selecting auto-advances, so a different statement replaces it.
+    await waitFor(() => expect(visibleStatement()).not.toBe(first));
+    expect(screen.queryByText(first as string)).not.toBeInTheDocument();
+  });
+
+  it("draws ten statements, not the whole inventory", async () => {
+    seed({ completedSteps: 2 });
+    renderWizard();
+
+    // Fifty-five statements across the two instruments was the longest thing
+    // in the product and the commonest place to give up.
+    await waitFor(() => expect(drawnRiasec()).toHaveLength(10));
+    expect(new Set(drawnRiasec()).size).toBe(10);
+  });
+
+  it("keeps the same ten when the student comes back to finish", async () => {
+    seed({ completedSteps: 2 });
+    const { unmount } = renderWizard();
+    await waitFor(() => expect(drawnRiasec()).toHaveLength(10));
+    const first = [...drawnRiasec()];
+    unmount();
+
+    // Re-drawing on resume would change the questions under a half-finished
+    // run and make "answer every statement" unsatisfiable.
+    renderWizard();
+    await waitFor(() => expect(drawnRiasec()).toHaveLength(10));
+    expect(drawnRiasec()).toEqual(first);
   });
 
   it("answers from the keyboard: arrows move, digits pick, Backspace goes back", async () => {
     const user = userEvent.setup();
     seed({ completedSteps: 2 });
     renderWizard();
-    await screen.findByText("Statement 1");
+    // Wait for the draw, then read the order it actually produced.
+    await waitFor(() => expect(drawnRiasec()).toHaveLength(10));
+    await waitFor(() => expect(visibleStatement()).not.toBeNull());
+    const first = visibleStatement();
+    const firstId = drawnRiasec()[0];
 
     // "2" picks the second scale point directly and advances.
     await user.keyboard("2");
-    expect(await screen.findByText("Statement 2")).toBeInTheDocument();
+    await waitFor(() => expect(visibleStatement()).not.toBe(first));
 
     // Backspace returns to the previous statement, with its answer intact.
     await user.keyboard("{Backspace}");
-    expect(await screen.findByText("Statement 1")).toBeInTheDocument();
+    await waitFor(() => expect(visibleStatement()).toBe(first));
     const scale = useProfile.getState().profile?.riasecAnswers ?? {};
-    expect(scale.riasec_1).toBe(3);   // the fixture's second point
+    expect(scale[firstId]).toBe(3);   // the fixture's second point
 
     // Arrow + Enter selects the highlighted option.
     await user.keyboard("{ArrowRight}{Enter}");
     await waitFor(() => {
-      expect(useProfile.getState().profile?.riasecAnswers.riasec_1).toBe(5);
+      expect(useProfile.getState().profile?.riasecAnswers[firstId]).toBe(5);
     });
   });
 
   it("keeps the finish button disabled until every statement is answered", async () => {
     const user = userEvent.setup();
-    // 29 of 30 answered: the flow resumes on the one remaining gap.
-    const answers = Object.fromEntries(
-      Array.from({ length: 29 }, (_, i) => [`riasec_${i + 1}`, 3]),
-    );
-    seed({ completedSteps: 2, riasecAnswers: answers });
+    // The draw is pinned here rather than left to chance: the component reads
+    // its answers into local state once on mount, so they have to be in the
+    // profile before it renders.
+    const drawn = Array.from({ length: 10 }, (_, i) => `riasec_${i + 1}`);
+    seed({
+      completedSteps: 2,
+      riasecItems: drawn,
+      riasecAnswers: Object.fromEntries(drawn.slice(0, 9).map((id) => [id, 3])),
+    });
     renderWizard();
 
-    expect(await screen.findByText("Statement 30")).toBeInTheDocument();
+    await waitFor(() => expect(visibleStatement()).not.toBeNull());
     const submit = screen.getByRole("button", { name: /save and continue/i });
     expect(submit).toBeDisabled();
 
@@ -312,7 +386,8 @@ describe("assessment wizard", () => {
     seed({ completedSteps: 4, grades: { math: 60 } });
     renderWizard();
 
-    await screen.findByText("Statement 1");   // resumes at step 4's questionnaire
+    // Resumes at step 4's questionnaire.
+    await waitFor(() => expect(visibleStatement()).not.toBeNull());
     // Jump back to step 2 via the progress control.
     await user.click(screen.getByRole("button", { name: /your grades/i }));
 
