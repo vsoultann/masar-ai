@@ -14,8 +14,10 @@
  * `cache: "no-store"`. If they disagree, the page running in the browser is
  * older than the one deployed, and `BuildVersionCheck` reloads once.
  *
- * The id is the commit SHA where one is available and the build timestamp
- * otherwise, so a local build still produces a changing value.
+ * The id is the commit SHA where one is available, and a timestamp otherwise.
+ * It is committed because CI typechecks before it builds, so the import has to
+ * resolve from a clean checkout; CI then overwrites it with the SHA it is
+ * actually deploying.
  */
 
 import { execSync } from "node:child_process";
@@ -32,7 +34,13 @@ function commitSha() {
   }
 }
 
-const id = `${commitSha() ?? "local"}-${Date.now().toString(36)}`;
+/*
+ * The commit alone where there is one, so rebuilding the same commit produces
+ * the same id and the committed copy of this file does not churn on every
+ * build. A timestamp is only needed for the case with no commit to name.
+ */
+const sha = commitSha();
+const id = sha ?? `local-${Date.now().toString(36)}`;
 const dir = join(process.cwd(), "public");
 mkdirSync(dir, { recursive: true });
 writeFileSync(join(dir, "build-id.json"), `${JSON.stringify({ id }, null, 2)}\n`);
