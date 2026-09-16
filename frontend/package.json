@@ -5,7 +5,7 @@
   "description": "Masar AI - bilingual career guidance for UAE students",
   "scripts": {
     "dev": "next dev -p 3000",
-    "build": "node scripts/validate-data.mjs && next build && node scripts/predeploy-check.mjs --out",
+    "build": "node scripts/stamp-build.mjs && node scripts/validate-data.mjs && next build && node scripts/predeploy-check.mjs --out",
     "start": "node scripts/serve-out.mjs",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",

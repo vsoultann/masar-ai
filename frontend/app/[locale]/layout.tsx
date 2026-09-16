@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import BackgroundForRoute from "@/components/background/BackgroundForRoute";
 import BackToTop from "@/components/BackToTop";
+import BuildVersionCheck from "@/components/BuildVersionCheck";
 import InstallPrompt from "@/components/InstallPrompt";
 import MotionProvider from "@/components/MotionProvider";
 import ScrollProgress from "@/components/ScrollProgress";
@@ -127,6 +128,7 @@ export default async function LocaleLayout({
       >
         <ThemeScript />
         <ThemeKeeper />
+        <BuildVersionCheck />
         <LocaleProvider locale={typed} dictionary={dictionary}>
           <MotionProvider>
               <BackgroundForRoute />
