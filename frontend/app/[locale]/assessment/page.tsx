@@ -197,7 +197,11 @@ export default function AssessmentPage() {
     setRiasecAnswers(stored.riasecAnswers ?? {});
     setBigfiveAnswers(stored.bigfiveAnswers ?? {});
     // Resume where the student stopped rather than restarting at step 1.
-    setStep(Math.min(TOTAL_STEPS, (stored.completedSteps ?? 0) + 1));
+    // A brand-new profile has nothing to resume, and must not undo a step the
+    // student just chose from the progress bar.
+    if ((stored.completedSteps ?? 0) > 0) {
+      setStep(Math.min(TOTAL_STEPS, stored.completedSteps + 1));
+    }
   }, [hydrated, profileId]);
 
   /**
@@ -219,6 +223,22 @@ export default function AssessmentPage() {
     if (!hydrated || Object.keys(bigfiveAnswers).length === 0) return;
     updateProfile({ bigfiveAnswers });
   }, [bigfiveAnswers, hydrated, updateProfile]);
+
+  /**
+   * Jumps to a step from the progress bar.
+   *
+   * The questionnaire draw is stored on the profile, so a student who skips
+   * straight to step 3 or 4 before saving anything has no profile to hold it
+   * and would sit on "Loading…" forever. Create the same empty profile `save`
+   * would, so every step can be opened from the bar.
+   */
+  const goToStep = useCallback(
+    (number: number) => {
+      if (!useProfile.getState().profile) createProfile(emptyProfile("").fullName);
+      setStep(number);
+    },
+    [createProfile],
+  );
 
   /**
    * Applies one step's data and advances.
@@ -375,7 +395,7 @@ export default function AssessmentPage() {
             <li key={title}>
               <button
                 type="button"
-                onClick={() => setStep(number)}
+                onClick={() => goToStep(number)}
                 aria-current={active ? "step" : undefined}
                 className={`w-full rounded-lg border p-2.5 text-start transition-colors ${
                   active
