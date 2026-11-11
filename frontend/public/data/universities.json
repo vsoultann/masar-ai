@@ -198,10 +198,17 @@
       "ar": "جامعة بحثية ذات ثقل هندسي كبير، تضم مختبرات في الروبوتات والطاقة النووية وأنظمة الفضاء، ومسارات قوية للدراسات العليا."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/ku.jpg",
+      "thumbnail": "/images/universities/ku-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© Khalifa University",
+        "url": "https://www.ku.ac.ae",
+        "author": "Khalifa University",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -601,10 +608,17 @@
       "ar": "برامج في العلوم الإنسانية والقانون والإدارة وفق النموذج الفرنسي في جزيرة الريم، مع دراسة اللغة الفرنسية ضمن معظم البرامج."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/sorbonne_ad.jpg",
+      "thumbnail": "/images/universities/sorbonne_ad-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© Sorbonne AD",
+        "url": "https://www.sorbonne.ae",
+        "author": "Sorbonne AD",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -665,10 +679,17 @@
       "ar": "متخصصة في السلامة والأمن والدفاع والتأهب للطوارئ، ببرامج مصمّمة للمهنيين العاملين وخريجي الثانوية على حد سواء."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/rabdan.jpg",
+      "thumbnail": "/images/universities/rabdan-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© Rabdan",
+        "url": "https://www.ra.ac.ae",
+        "author": "Rabdan",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -1794,10 +1815,17 @@
       "ar": "جامعة متخصصة في الطب والعلوم الصحية في مدينة دبي الطبية، مع تدريب في المستشفيات التعليمية منذ مراحل مبكرة من البرنامج."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/mbru.jpg",
+      "thumbnail": "/images/universities/mbru-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© MBRU",
+        "url": "https://www.mbru.ac.ae",
+        "author": "MBRU",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -1871,10 +1899,17 @@
       "ar": "جامعة خاصة تتبع المنهج الأمريكي في الصفوح، معروفة ببرامج العمارة والتصميم والاتصال."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/aud.jpg",
+      "thumbnail": "/images/universities/aud-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© AUD",
+        "url": "https://www.aud.edu",
+        "author": "AUD",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -2024,10 +2059,17 @@
       "ar": "الحرم الجامعي في دبي للجامعة الاسكتلندية، وأقوى برامجه في البيئة العمرانية والهندسة والعلوم الاكتوارية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/hw_dubai.jpg",
+      "thumbnail": "/images/universities/hw_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© Heriot-Watt Dubai",
+        "url": "https://www.hw.ac.uk/dubai",
+        "author": "Heriot-Watt Dubai",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -2266,10 +2308,17 @@
       "ar": "جامعة كندية المنهج على شارع الشيخ زايد، تقدّم برامج في التصميم والأعمال والصحة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/cud.jpg",
+      "thumbnail": "/images/universities/cud-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© CUD",
+        "url": "https://www.cud.ac.ae",
+        "author": "CUD",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -2339,10 +2388,17 @@
       "ar": "حرم جامعي هندي النشأة في المدينة الأكاديمية الدولية بدبي، ببرامج في الأعمال وتقنية المعلومات والتقنية الحيوية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/amity_dubai.jpg",
+      "thumbnail": "/images/universities/amity_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© Amity Dubai",
+        "url": "https://www.amityuniversity.ae",
+        "author": "Amity Dubai",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -3335,10 +3391,17 @@
       "ar": "جامعة الإمارة، صغيرة الحجم وذات توجّه محلي، تخدم طلبة الإمارات الشمالية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/uaq_univ.jpg",
+      "thumbnail": "/images/universities/uaq_univ-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© UAQU",
+        "url": "https://uaqu.ac.ae",
+        "author": "UAQU",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -3407,10 +3470,17 @@
       "ar": "جامعة للعلوم الصحية في الإمارات الشمالية، مع تدريب سريري في مستشفيات رأس الخيمة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/rakmhsu.jpg",
+      "thumbnail": "/images/universities/rakmhsu-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© RAKMHSU",
+        "url": "https://www.rakmhsu.ac.ae",
+        "author": "RAKMHSU",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {

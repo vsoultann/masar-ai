@@ -17,6 +17,22 @@
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:SAAU1.jpg"
   },
+  "amity_dubai": {
+    "author": "Amity Dubai",
+    "evidence": "official-website",
+    "file": "https://amityuniversity.ae/images-cache/zYkhDQWYjTIMJ0rGlQ0FgLqcfGnTnQDRzreGs0th___800w.webp?ext=webp&path=storage%2Fmedia%2FzYkhDQWYjTIMJ0rGlQ0FgLqcfGnTnQDRzreGs0th.webp",
+    "license": "© Amity Dubai",
+    "source": "Official website",
+    "url": "https://www.amityuniversity.ae"
+  },
+  "aud": {
+    "author": "AUD",
+    "evidence": "official-website",
+    "file": "https://www.aud.edu/media/1218/parent-cover.jpg",
+    "license": "© AUD",
+    "source": "Official website",
+    "url": "https://www.aud.edu"
+  },
   "aurak": {
     "author": "Janilletapil",
     "evidence": "manual-review",
@@ -52,6 +68,14 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:BITS_Pilani,_Dubai_Campus_.jpg"
+  },
+  "cud": {
+    "author": "CUD",
+    "evidence": "official-website",
+    "file": "https://www.cud.ac.ae/sites/default/files/media/remote/2026/campus_001.png",
+    "license": "© CUD",
+    "source": "Official website",
+    "url": "https://www.cud.ac.ae"
   },
   "eahm": {
     "author": "Flayas",
@@ -89,6 +113,14 @@
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Gulf_Medical_University.jpg"
   },
+  "hw_dubai": {
+    "author": "Heriot-Watt Dubai",
+    "evidence": "official-website",
+    "file": "https://www.hw.ac.uk/image-library/studentLifeBanners/Life-in-Campus/Dubai.x063438f0.jpg?w=640&h=480&fit=crop&q=75&f=webp",
+    "license": "© Heriot-Watt Dubai",
+    "source": "Official website",
+    "url": "https://www.hw.ac.uk/dubai"
+  },
   "kic": {
     "author": "Sokaniwaal",
     "evidence": "search+name",
@@ -97,6 +129,22 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Khawarizmi_International_College.jpg"
+  },
+  "ku": {
+    "author": "Khalifa University",
+    "evidence": "official-website",
+    "file": "https://www.ku.ac.ae/wp-content/uploads/2025/04/Web-Banner-Ranking-1.jpg",
+    "license": "© Khalifa University",
+    "source": "Official website",
+    "url": "https://www.ku.ac.ae"
+  },
+  "mbru": {
+    "author": "MBRU",
+    "evidence": "official-website",
+    "file": "https://www.mbru.ac.ae/wp-content/uploads/MBRU-Building-Web-banner-1440x480-copy.jpg",
+    "license": "© MBRU",
+    "source": "Official website",
+    "url": "https://www.mbru.ac.ae"
   },
   "middlesex_dubai": {
     "author": "Hafees.a",
@@ -116,6 +164,22 @@
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:NYUAD_Library.jpg"
   },
+  "rabdan": {
+    "author": "Rabdan",
+    "evidence": "official-website",
+    "file": "https://www.ra.ac.ae/rabdanassets/host/PageInformationSectionImages/85f6b4660e69ffb4ca7a3a0d094d0a3a.jpg",
+    "license": "© Rabdan",
+    "source": "Official website",
+    "url": "https://www.ra.ac.ae"
+  },
+  "rakmhsu": {
+    "author": "RAKMHSU",
+    "evidence": "official-website",
+    "file": "https://www.rakmhsu.ac.ae/assets/img/breadcrumbs/about-us-breadcrumb.jpg?v=1786070720",
+    "license": "© RAKMHSU",
+    "source": "Official website",
+    "url": "https://www.rakmhsu.ac.ae"
+  },
   "sharjah_univ": {
     "author": "Catboy69",
     "evidence": "category:University of Sharjah",
@@ -134,6 +198,14 @@
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Skyline_University_College_In_Sharjah._%D9%83%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%A7%D9%81%D9%82_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D9%82%D8%A9_-_panoramio.jpg"
   },
+  "sorbonne_ad": {
+    "author": "Sorbonne AD",
+    "evidence": "official-website",
+    "file": "https://www.sorbonne.ae/uploaded/2025/Jul/JYcaOHFlmxVC4pDwuZfb0vIFZZXWIPSEHjswnJ5N.jpg",
+    "license": "© Sorbonne AD",
+    "source": "Official website",
+    "url": "https://www.sorbonne.ae"
+  },
   "uaeu": {
     "author": "ted bongiovanni from Glen Ridge, NJ, United States of America",
     "evidence": "geo+name",
@@ -142,6 +214,14 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:United_Arab_Emirates_University_(9717029334).jpg"
+  },
+  "uaq_univ": {
+    "author": "UAQU",
+    "evidence": "official-website",
+    "file": "https://uaqu.ac.ae/images/new_camp_27_11_22.jpg",
+    "license": "© UAQU",
+    "source": "Official website",
+    "url": "https://uaqu.ac.ae"
   },
   "uof": {
     "author": "Jpbowen",
