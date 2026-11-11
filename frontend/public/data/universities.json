@@ -2996,10 +2996,17 @@
       "ar": "جامعة تعتمد العربية أولًا وتركّز على الدراسات الإسلامية والشريعة واللغة العربية، وتضم طلبة من جنسيات متعددة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/alqasimia.jpg",
+      "thumbnail": "/images/universities/alqasimia-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Official website",
+        "license": "© AQU",
+        "url": "https://www.alqasimia.ac.ae/en/Pages/default.aspx",
+        "author": "AQU",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
