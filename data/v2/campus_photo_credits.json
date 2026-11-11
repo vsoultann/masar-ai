@@ -8,6 +8,24 @@
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Abu_Dhabi_University_Al_Ain_Campus.jpg"
   },
+  "ajman_univ": {
+    "author": "Therealmau",
+    "evidence": "manual-review",
+    "file": "File:SAAU1.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:SAAU1.jpg"
+  },
+  "aurak": {
+    "author": "Janilletapil",
+    "evidence": "manual-review",
+    "file": "File:AURAK Campus.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:AURAK_Campus.jpg"
+  },
   "aus": {
     "author": "Gureni",
     "evidence": "category:American University of Sharjah",
@@ -16,6 +34,15 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:American_University_of_Sharjah_(33).jpg"
+  },
+  "birmingham_dubai": {
+    "author": "Hopkins Architects",
+    "evidence": "manual-review",
+    "file": "File:University of Birmingham Dubai.jpg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:University_of_Birmingham_Dubai.jpg"
   },
   "bits_dubai": {
     "author": "Shamsheer22",
@@ -34,6 +61,24 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Library_EAHM.jpg"
+  },
+  "eau": {
+    "author": "ManiDousti",
+    "evidence": "manual-review",
+    "file": "File:Emirates aviation university main campus entrance.jpg",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Emirates_aviation_university_main_campus_entrance.jpg"
+  },
+  "ecae": {
+    "author": "MarcomECAE",
+    "evidence": "manual-review",
+    "file": "File:ECAE.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:ECAE.jpg"
   },
   "gmu": {
     "author": "Shaj.pre",
@@ -97,5 +142,23 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:United_Arab_Emirates_University_(9717029334).jpg"
+  },
+  "uof": {
+    "author": "Jpbowen",
+    "evidence": "manual-review",
+    "file": "File:University of Fujairah main entrance.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:University_of_Fujairah_main_entrance.jpg"
+  },
+  "zu_dubai": {
+    "author": "Ahmed J",
+    "evidence": "manual-review",
+    "file": "File:ZU Dubai Campus.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:ZU_Dubai_Campus.jpg"
   }
 }

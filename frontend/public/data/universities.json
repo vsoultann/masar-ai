@@ -792,10 +792,17 @@
       "ar": "كلية متخصصة في إعداد المعلمين مع تدريب ميداني في المدارس منذ السنة الأولى."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/ecae.jpg",
+      "thumbnail": "/images/universities/ecae-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:ECAE.jpg",
+        "author": "MarcomECAE",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -1707,10 +1714,17 @@
       "ar": "الحرم الجامعي في دبي التابع للجامعة الاتحادية، في المدينة الأكاديمية، بالتخصصات ذاتها في الاتصال والأعمال والتربية."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/zu_dubai.jpg",
+      "thumbnail": "/images/universities/zu_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:ZU_Dubai_Campus.jpg",
+        "author": "Ahmed J",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -2485,10 +2499,17 @@
       "ar": "حرم جامعي لمجموعة راسل في المدينة الأكاديمية الدولية بدبي، يمنح الدرجات ذاتها الممنوحة في الجامعة الأم بالمملكة المتحدة."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/birmingham_dubai.jpg",
+      "thumbnail": "/images/universities/birmingham_dubai-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:University_of_Birmingham_Dubai.jpg",
+        "author": "Hopkins Architects",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -2550,10 +2571,17 @@
       "ar": "جامعة متخصصة في الطيران مرتبطة بقطاع الطيران في دبي، تغطي الهندسة والعمليات ومسارات التدريب على الطيران."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/eau.jpg",
+      "thumbnail": "/images/universities/eau-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Emirates_aviation_university_main_campus_entrance.jpg",
+        "author": "ManiDousti",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -3073,10 +3101,17 @@
       "ar": "جامعة خاصة عريقة تضم كليات طب الأسنان والصيدلة والهندسة في حرم جامعي واحد متقارب."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/ajman_univ.jpg",
+      "thumbnail": "/images/universities/ajman_univ-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:SAAU1.jpg",
+        "author": "Therealmau",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -3453,10 +3488,17 @@
       "ar": "جامعة تتبع المنهج الأمريكي ببرامج في الهندسة والأعمال والآداب في حرم جامعي هادئ."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/aurak.jpg",
+      "thumbnail": "/images/universities/aurak-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:AURAK_Campus.jpg",
+        "author": "Janilletapil",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
@@ -3526,10 +3568,17 @@
       "ar": "جامعة الإمارة على الساحل الشرقي، تتيح لطلبة الفجيرة خيارًا محليًا في الأعمال وتقنية المعلومات والقانون."
     },
     "media": {
-      "hero": null,
-      "thumbnail": null,
+      "hero": "/images/universities/uof.jpg",
+      "thumbnail": "/images/universities/uof-thumb.jpg",
       "gallery": [],
-      "credit": null
+      "credit": {
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:University_of_Fujairah_main_entrance.jpg",
+        "author": "Jpbowen",
+        "kind": "campus",
+        "place": null
+      }
     }
   },
   {
